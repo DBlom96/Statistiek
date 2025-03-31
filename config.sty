@@ -1,0 +1,51 @@
+% Configuration settings for the exam
+\usepackage[a4paper, margin=1in]{geometry} % Adjust the margins
+\usepackage{graphicx} % Required for inserting images
+\usepackage[dutch]{babel}
+\usepackage{booktabs}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{palatino}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{marginnote}
+
+% Answer visibility toggle
+\newif\ifprintanswers
+\printanswerstrue % Set to false to hide answers
+% \printanswersfalse % Uncomment to hide answers
+
+% Define answer formatting
+\newcommand{\answer}[1]{%
+  \ifprintanswers
+    {\color{green!50!black}#1}%
+  \else
+    {}%
+  \fi
+}
+
+% Define points formatting
+\newcommand{\points}[1]{%
+  \ifprintanswers
+    \marginnote{\small{(#1pt)}}%
+  \else
+    {}%
+  \fi
+}
+
+% Define question counter
+\newcounter{question}
+\newcounter{subquestion}[question]
+\renewcommand{\thequestion}{\arabic{question}}
+\renewcommand{\thesubquestion}{\thequestion.\alph{subquestion}}
+
+\newcommand{\question}[1]{%
+  \stepcounter{question}
+  \noindent\textbf{Question \thequestion:} #1\par
+}
+
+\newcommand{\subquestion}[1]{%
+  \stepcounter{subquestion}
+  \noindent\textbf{(\thesubquestion)} #1\par
+}
+
+\RequirePackage{../../statistics-macros}

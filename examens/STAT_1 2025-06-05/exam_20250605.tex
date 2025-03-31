@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{pdfpages}
+
+% Importeer configuratie-instellingen
+\RequirePackage{../../config}
+
+% Begin van het document
+\begin{document}
+
+% FMW-specifiek titelblad voordat het examen begint
+\includepdf{../../FMW_titelblad_20250523.pdf}
+
+\title{Tentamen statistiek}
+\author{Nederlandse Defensie Academie}
+\date{\today}
+\maketitle
+
+% Include questions from external files
+\section*{Vragen}
+
+\input{q1.tex}
+\input{q2.tex}
+% Add more question files as needed
+
+\end{document}

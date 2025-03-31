@@ -1,0 +1,55 @@
+% Kansrekening en statistiek macros
+\newcommand{\E}[1]{\mathbb{E}[#1]} % Verwachtingswaarde
+\newcommand{\Var}[1]{\text{Var}(#1)} % Variantie
+\newcommand{\Cov}[2]{\text{Cov}(#1, #2)} % Covariantie
+\newcommand{\prob}[1]{\mathbb{P}(#1)} % Kans
+\newcommand{\pdf}[1]{f_{#1}(x)} % Kansdichtheidsfunctie
+\newcommand{\pmf}[1]{p_{#1}(x)} % Kansmassafunctie
+\newcommand{\cdf}[1]{F_{#1}(x)} % Cumulatieve verdelingsfunctie
+
+% Kansverdelingen
+\newcommand{\normal}[2]{\textrm{N}(#1, #2)} % Normale verdeling met \mu=#1 en \sigma=#2
+\newcommand{\uniform}[2]{\textrm{Uniform}(#1, #2)} % Uniforme verdeling U(a, b)
+\newcommand{\binomial}[2]{\textrm{Binomiaal}(#1, #2)} % Binomiale verdeling
+\newcommand{\poisson}[1]{\textrm{Poisson}(#1)} % Poisson verdeling
+\newcommand{\exponential}[1]{\textrm{Exponentieel}(#1)} % Exponentiele verdeling
+
+% Schatten en betrouwbaarheidsintervallen
+\newcommand{\ci}[4]{#1 \pm #2 \times \frac{#3}{\sqrt{#4}}} % Formule voor betrouwbaarheidsintervallen
+\newcommand{\zscore}[1]{z_{#1}} % Z-score
+\newcommand{\tstat}[1]{t_{#1}} % t-statistic
+
+% Hypothesetoetsen
+\newcommand{\Hnull}{H_{0}} % Nulhypothese
+\newcommand{\Halt}{H_{1}} % Alternatieve hypothese
+\newcommand{\pval}{p\text{-waarde}} % p-waarde
+\newcommand{\teststat}{T} % Toetsingsgrootheid
+\newcommand{\reject}{\text{verwerp} \Hnull}
+\newcommand{\fail}{\text{accepteer} \Hnull}
+
+% EXAMPLE USAGE:
+% \[
+% \begin{aligned}
+%     \Hnull &: \mu = 0, \quad \Halt : \mu > 0 \\
+%     \text{Toetsingsgrootheid} &: \teststat = \frac{\bar{X} - \mu_0}{\se{X}} \sim t_{n-1} \\
+%     \text{Beslissing} &: \text{Als } \pval < 0.05, verwerp \reject, \text{ otherwise } \failtoreject.
+% \end{aligned}
+% \]
+
+\newcommand{\indep}{\perp\!\!\!\perp} % Onafhankelijkheidssymbool
+\newcommand{\given}{\,|\,} % Gegeven symbool
+\newcommand{\vect}[1]{\mathbf{#1}} % Dikgedrukte vectors
+\newcommand{\mat}[1]{\mathbf{#1}} % Dikgedrukte matrices
+
+% Graphical calculator macros
+% Define common macros
+\newcommand{\chisq}{\chi^2}
+\DeclareMathOperator{\invt}{InvT}
+\DeclareMathOperator{\invnorm}{InvNorm}
+\DeclareMathOperator{\normalcdf}{normalcdf}
+\DeclareMathOperator{\tcdf}{tcdf}
+\DeclareMathOperator{\binomcdf}{binomcdf}
+\DeclareMathOperator{\poissoncdf}{poissoncdf}
+\DeclareMathOperator{\binompdf}{binompdf}
+\DeclareMathOperator{\poissonpdf}{poissonpdf}
+\DeclareMathOperator{\normalpdf}{normalpdf}
