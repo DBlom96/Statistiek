@@ -1,14 +1,60 @@
 % Configuration settings for the exam
 \usepackage[a4paper, margin=1in]{geometry} % Adjust the margins
-\usepackage{graphicx} % Required for inserting images
+
+% TOP MATTER
+\usepackage{authblk} % more flexible formatting of author / address
+
+% ENCODINGS, FONTS AND LANGUAGE
 \usepackage[dutch]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{charter}                
+\usepackage[defaultsans]{cantarell} % cantarell fonts
+
+% MATHEMATICS
+\usepackage{amsmath, amssymb, amsfonts, amsthm, eurosym}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{mathtools}
+
+% TABLES, ARRAYS AND MATRICES
+\usepackage{array}
+\usepackage{bigstrut}
+\usepackage{blkarray}
 \usepackage{booktabs}
-\usepackage{amsmath, amssymb, amsfonts}
-\usepackage{palatino}
-\usepackage{xcolor}
-\usepackage{tikz}
-\usepackage{marginnote}
 \usepackage{enumitem}
+\usepackage{gauss}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+% define tables with fixed column width
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% COLOR AND GRAPHICS
+\usepackage[table, dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[many]{tcolorbox} % Boxed environments
+\usepackage{tikz}
+\colorlet{highlight}{green!70!black}
+
+% HEADERS AND FOOTERS
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+
+% REFERENCES
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{url}
+
+% EXAM-SPECIFIC PACKAGES
+\usepackage{marginnote}
+
 
 % Answer visibility toggle
 \newif\ifprintanswers
@@ -18,7 +64,9 @@
 % Define answer formatting
 \newcommand{\answer}[1]{%
   \ifprintanswers
-    {\color{green!50!black}#1}%
+    \begin{tcolorbox}[breakable, colback=blue!5, colframe=blue!40, title=Uitwerking]
+      #1
+    \end{tcolorbox}%
   \else
     {}%
   \fi
@@ -50,3 +98,4 @@
 }
 
 \RequirePackage{./styles/statistics-macros}
+\graphicspath{{./figures/}}
