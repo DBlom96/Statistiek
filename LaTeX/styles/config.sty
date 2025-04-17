@@ -8,6 +8,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{marginnote}
+\usepackage{enumitem}
 
 % Answer visibility toggle
 \newif\ifprintanswers
@@ -38,9 +39,9 @@
 \renewcommand{\thequestion}{\arabic{question}}
 \renewcommand{\thesubquestion}{\thequestion.\alph{subquestion}}
 
-\newcommand{\question}[1]{%
+\newcommand{\question}[2]{%
   \stepcounter{question}
-  \noindent\textbf{Question \thequestion:} #1\par
+  \noindent\textbf{Opdracht #1:} #2\par
 }
 
 \newcommand{\subquestion}[1]{%
@@ -48,4 +49,4 @@
   \noindent\textbf{(\thesubquestion)} #1\par
 }
 
-\RequirePackage{../../LaTeX/statistics-macros}
+\RequirePackage{./styles/statistics-macros}

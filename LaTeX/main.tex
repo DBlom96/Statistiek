@@ -1,0 +1,20 @@
+\documentclass[12pt]{article}
+
+% Laad stijlen via relatieve paden
+\usepackage{./styles/config}
+\usepackage{./styles/statistics-macros}
+
+\title{Statistiek: huiswerkopgaven}
+\author{Dr. ir. D.A.M.P. Blom}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% Invoegen van alle weken
+\foreach \i in {01, 02, 03, 04, 05, 06, 08, 09, 10, 11, 12, 13}
+{
+    \input{./huiswerk/week\i}
+}
+
+\end{document}
