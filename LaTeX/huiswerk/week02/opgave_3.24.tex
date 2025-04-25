@@ -1,0 +1,36 @@
+\question{3.24}{In een fabriek wordt de kwaliteit gecontroleerd van de uitgaande producten.
+De employ\'e die de controle verrichtte, blijkt 1\% van alle goede producten af te keuren en verder keurt hij 5\% van alle slechte producten goed.
+De totale productie bestaat voor 90\% uit goede producten.}
+\begin{enumerate}[label=(\alph*)]
+    \item Bereken de kans dat een willekeurig product goed is en wordt goedgekeurd.
+    \answer{
+        We zetten de relatieve frequenties even in een tabel:
+        \begin{center}
+            \resizebox{0.95\textwidth}{!}{
+                \begin{tabular}{c|cc|c}
+                    \toprule
+                        & Goedgekeurd & Afgekeurd & \textbf{Totaal}\\
+                    \midrule 
+                        Goed product & 99\% van 90\% = 89,1\% & 1\% van 90\% = 0,9\% & 90\% \\
+                        Slecht product & 5\% van 10\% = 0,5\% & 95\% van 10\% = 9,5\% & 10\% \\
+                    \midrule
+                        \textbf{Totaal} & 89,6\% & 10,4\% & 100\% \\
+                    \bottomrule
+                \end{tabular}
+            }
+        \end{center}
+        Aflezen uit de cel voor ``goed product'' en ``goedgekeurd'' geeft een kans van $89,1\%\rightarrow 0,891$.
+    }
+    
+    \item Hoe groot is de kans dat de controleur voor een willekeurig product de verkeerde beslissing neemt?
+    \answer{
+        Deze kans kunnen we opnieuw aflezen uit de tabel, namelijk de som van de cellen (``goed product'', ``afgekeurd'') en (``slecht product'', ``goedgekeurd'').
+        Dit geeft een kans van $0,9\% + 0,5\% = 1,4\%\rightarrow 0,014$.
+    }
+
+    \item Hoe groot is het percentage goedgekeurde producten dat de fabriek verlaat?
+    \answer{
+        Deze kans kunnen we opnieuw aflezen uit de tabel, namelijk het kolomtotaal voor de kolom ``goedgekeurd''.
+        Hieruit volgt dat 89,6\% van de producten wordt goedgekeurd.
+    }
+\end{enumerate}

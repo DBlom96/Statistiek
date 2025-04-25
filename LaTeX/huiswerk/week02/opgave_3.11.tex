@@ -1,0 +1,61 @@
+\question{3.11}{Bij een exameninstituut voor rijexamens zijn drie examinatoren in dienst: Dirk, Judith en Ilse.
+Van alle kandidaten doet 40\% examen bij Dirk, 40\% doet examen bij Judith en 20\% bij Ilse. Bekend is dat het slagingspercentage voor de drie examinatoren verschilt.
+Dat is 40\% bij Dirk, 60\% bij Judith en 70\% bij Ilse.}
+\begin{enumerate}[label=(\alph*)]
+    \item Kandidaat Peter van der Meer gaat rijexamen doen bij een van de drie examinatoren. Hoe groot is de kans dat hij slaagt?
+    \answer{
+        Definieer de gebeurtenissen 
+        \begin{itemize}
+            \item $S = \{\text{Peter slaagt}\}$
+            \item $J = \{\text{Peter doet examen bij Judith}\}$
+            \item $I = \{\text{Peter doet examen bij Ilse}\}$
+        \end{itemize}
+        Uit de vraag volgt dan dat $P(D)=0,4, P(J)=0,4$ en $P(I)=0,2$, evenals de conditionele kansen $P(S|D)=0,4$, $P(S|J)=0,6$ en $P(S|I)=0,7$.
+        In dat geval is de kans dat Peter slaagt gelijk aan
+        \begin{align*}
+            P(S)    &= P(S|D)\cdot P(D) + P(S|J) \cdot P(J) + P(S|I) \cdot P(I) \\
+                    &= 0,4 \cdot 0,4 + 0,6 \cdot 0,4 + 0,7 \cdot 0,2 \\
+                    &= 0,54
+        \end{align*}
+        Peter slaagt dus met $54\%$ kans voor zijn rijexamen.
+    }
+    
+    \item Kandidaat Peter blijkt geslaagd te zijn. Hoe groot is de kans dat hij examen heeft afgelegd bij Ilse?
+    \answer{
+        In dit geval willen we de kans $P(I|S)$ bepalen. Uit de regel van Bayes volgt dan:
+        \[
+            P(I|S) = \frac{P(S|I)\cdot P(I)}{P(S)} = \frac{0,7 \cdot 0,2}{0,54} \approx 0,2593
+        \]
+        Met 25,93\% kans heeft Peter zijn examen afgelegd bij Ilse, gegeven dat hij is geslaagd.
+    }
+\end{enumerate}
+Sommige gezakte kandidaten dienen een klacht in over het examen. 
+Op basis van ervaring weten we dat 10\% van de gezakten van examinator Dirk een klacht indient.
+Bij Judith is dat 6\% en bij Ilse is dat 3\%.
+\begin{enumerate}[label=(\alph*)]
+    \setcounter{enumi}{3}
+    \item Er komt een klacht binnen over het examen zonder vermelding van de naam van de examinator.
+    Hoe groot is de kans dat de klacht over Dirk gaat?
+    \answer{
+        De relatieve frequenties van combinaties van examinatoren en al dan niet geslaagd zijn zijn als volgt:
+        \begin{center}
+            \begin{tabular}{c|cc|c}
+                \toprule
+                    Examinator & wel geslaagd & niet geslaagd & \textbf{Totaal}\\
+                \midrule 
+                    Dirk & 40\% van 40\% = 16\% & 60\% van 40\% = 24\% & 40\% \\
+                    Judith & 60\% van 40\% = 24\% & 40\% van 40\% = 16\% & 40\% \\
+                    Ilse & 70\% van 20\% = 14\% & 30\% van 20\% = 6\% & 20\% \\
+                \midrule
+                    \textbf{Totaal} & 54\% & 46\% & 100\% \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Het percentage deelnemers dat zakt en een klacht over Dirk instuurt is dus 10\% van 24\% = 2,4\%.
+        Daarnaast is het percentage deelnemers dat zake en een klacht instuurt (over alle examinatoren) gelijk aan
+        \[
+            0,1 \cdot 0,24 + 0,06 \cdot 0,16 + 0,03 \cdot 0,06 = 0,0354 \rightarrow 3,54\%
+        \]
+        De kans dat een klacht over Dirk gaat is dus gelijk aan $\frac{2,4}{3,54} \approx 0,68 \rightarrow 68\%$.
+    }
+\end{enumerate}

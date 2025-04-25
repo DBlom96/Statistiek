@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.16)  18 APR 2025 14:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.16)  25 APR 2025 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -917,104 +917,41 @@ Package hyperref Info: Link coloring OFF on input line 11.
  [1
 
 
-{C:/Users/danny/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (huiswerk/week01.tex [2
+{C:/Users/danny/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (huiswerk/week03.tex [2
 
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+] (huiswerk/week03/opgave_4.14.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (C:\Users\danny\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\danny\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3] [4] [5]
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 137.
+)
+<./figures/opg4.14a_1.png, id=16, 447.3513pt x 327.3831pt>
+File: ./figures/opg4.14a_1.png Graphic file (type png)
+<use ./figures/opg4.14a_1.png>
+Package pdftex.def Info: ./figures/opg4.14a_1.png  used on input line 38.
+(pdftex.def)             Requested size: 447.3502pt x 327.3823pt.
+<./figures/opg4.14a_2.png, id=18, 555.7563pt x 327.3831pt>
+File: ./figures/opg4.14a_2.png Graphic file (type png)
+<use ./figures/opg4.14a_2.png>
+Package pdftex.def Info: ./figures/opg4.14a_2.png  used on input line 38.
+(pdftex.def)             Requested size: 555.75494pt x 327.3823pt.
+ [3 <./figures/opg4.14a_1.png>] [4 <./figures/opg4.14a_2.png>]) (huiswerk/week03/opgave_4.15.tex
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 30.
  (C:\Users\danny\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
-)
-<./figures/opg1.7c.png, id=78, 400.3758pt x 327.3831pt>
-File: ./figures/opg1.7c.png Graphic file (type png)
-<use ./figures/opg1.7c.png>
-Package pdftex.def Info: ./figures/opg1.7c.png  used on input line 172.
-(pdftex.def)             Requested size: 400.3748pt x 327.3823pt.
- [6] [7 <./figures/opg1.7c.png>]
-<./figures/opg1.7f.png, id=101, 496.4949pt x 393.8715pt>
-File: ./figures/opg1.7f.png Graphic file (type png)
-<use ./figures/opg1.7f.png>
-Package pdftex.def Info: ./figures/opg1.7f.png  used on input line 243.
-(pdftex.def)             Requested size: 496.49368pt x 393.87053pt.
+) [5]) (huiswerk/week03/opgave_4.16.tex [6]) (huiswerk/week03/opgave_4.17.tex
+<./figures/opg4.17a.png, id=56, 411.2163pt x 327.3831pt>
+File: ./figures/opg4.17a.png Graphic file (type png)
+<use ./figures/opg4.17a.png>
+Package pdftex.def Info: ./figures/opg4.17a.png  used on input line 15.
+(pdftex.def)             Requested size: 411.21529pt x 327.3823pt.
+ [7]
+Underfull \vbox (badness 1895) has occurred while \output is active []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-<./figures/opg1.15a.png, id=108, 508.7808pt x 338.2236pt>
-File: ./figures/opg1.15a.png Graphic file (type png)
-<use ./figures/opg1.15a.png>
-Package pdftex.def Info: ./figures/opg1.15a.png  used on input line 293.
-(pdftex.def)             Requested size: 508.77956pt x 338.22278pt.
- [9 <./figures/opg1.7f.png>]
-<./figures/opg1.15b.png, id=116, 508.7808pt x 338.2236pt>
-File: ./figures/opg1.15b.png Graphic file (type png)
-<use ./figures/opg1.15b.png>
-Package pdftex.def Info: ./figures/opg1.15b.png  used on input line 309.
-(pdftex.def)             Requested size: 508.77956pt x 338.22278pt.
- [10 <./figures/opg1.15a.png> <./figures/opg1.15b.png>]
-Overfull \hbox (12.88965pt too wide) in paragraph at lines 326--326
-\T1/bch/b/n/12 Opdracht 2.m2: \T1/bch/m/n/12 Het ge-mid-delde maand-in-ko-men van een groep van 15 net-afgestudeerde
- []
-
-[11] [12] [13] [14] [15]
-Overfull \hbox (18.12686pt too wide) detected at line 607
-[]
- []
-
-[16]) (huiswerk/week02.tex [17] [18
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
-[]\T1/bch/m/n/12 Definieer de ge-beur-te-nis-sen $\OML/cmm/m/it/12 S \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f[]g$\T1/bch/m/n/12 , $\OML/cmm/m/it/12 D \OT1/cmr/m/n/12 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
-\OMS/cmsy/m/n/12 f[]g$\T1/bch/m/n/12 , $\OML/cmm/m/it/12 J \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f[]g$
- []
-
-
-Underfull \hbox (badness 1694) in paragraph at lines 21--21
-\T1/bch/m/n/12 en $\OML/cmm/m/it/12 I \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f[]g$\T1/bch/m/n/12 . Uit de vraag volgt dan dat
- []
-
-[19]
-Overfull \hbox (3.76048pt too wide) in paragraph at lines 83--83
- [] 
- []
-
-
-Underfull \vbox (badness 1137) has occurred while \output is active []
-
- [20] [21] [22]
-<./figures/opg4.4a.png, id=241, 417.7206pt x 330.2739pt>
-File: ./figures/opg4.4a.png Graphic file (type png)
-<use ./figures/opg4.4a.png>
-Package pdftex.def Info: ./figures/opg4.4a.png  used on input line 240.
-(pdftex.def)             Requested size: 417.71957pt x 330.27307pt.
- [23]
-<./figures/opg4.4b.png, id=253, 508.0581pt x 330.2739pt>
-File: ./figures/opg4.4b.png Graphic file (type png)
-<use ./figures/opg4.4b.png>
-Package pdftex.def Info: ./figures/opg4.4b.png  used on input line 262.
-(pdftex.def)             Requested size: 508.05685pt x 330.27307pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24 <./figures/opg4.4a.png>]
-Underfull \vbox (badness 5652) has occurred while \output is active []
-
- [25 <./figures/opg4.4b.png>] [26] [27] [28] [29]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30] [31]) [32] (main.aux)
+ [8 <./figures/opg4.17a.png>]) (huiswerk/week03/opgave_4.18.tex [9] [10] [11])) [12] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1023,17 +960,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31402 strings out of 474486
- 627369 string characters out of 5743754
- 1950542 words of memory out of 5000000
- 52960 multiletter control sequences out of 15000+600000
- 599282 words of font info for 80 fonts, out of 8000000 for 9000
+ 31190 strings out of 474486
+ 625743 string characters out of 5743754
+ 1949542 words of memory out of 5000000
+ 52886 multiletter control sequences out of 15000+600000
+ 590156 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,14n,108p,523b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on main.pdf (32 pages, 346188 bytes).
+ 104i,12n,108p,523b,1186s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on main.pdf (12 pages, 218299 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 182 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

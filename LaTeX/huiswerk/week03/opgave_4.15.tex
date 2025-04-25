@@ -1,0 +1,48 @@
+\question{4.15}{Gegeven is een continue kansvariabele $X$ die alleen waarden kan aannemen op een bepaald gedeelte van de $x$-as.}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Verifieer voor de volgende twee gevallen of de geformuleerde functie $f$ als kansdichtheid kan dienen?
+    \begin{enumerate}
+        \item $f(x) = \begin{cases} 0,20, & \text{ voor } 5 \le x \le 10 \\ 0, & \text{ elders.} \end{cases}$
+        \item $f(x) = \begin{cases} \frac{2}{5}x-2, & \text{ voor } 5 \le x \le 10 \\ 0, & \text{ elders.} \end{cases}$
+    \end{enumerate}
+    \answer{
+        Een functie $f$ kan dienen als kansdichtheid als aan twee voorwaarden is voldaan:
+        \begin{itemize}
+            \item $f(x) \ge 0$ voor alle waarden van $x$.
+            \item De oppervlakte ingesloten door de grafiek van $f$ en de $x$-as is gelijk aan 1: $\int_{\infty}^{\infty} f(x) = 1$
+        \end{itemize}
+        Voor het eerste geval zien we direct aan de definitie van de functie dat aan de eerste voorwaarde is voldaan, aangezien $f(x) = 0$ of $f(x) = 0,20$ voor elke waarde van $x$.
+        Met de grafische rekenmachine checken we dat verder geldt:
+        \[
+            \int_{\infty}^{\infty} f(x) = \int_{5}^{10} 0,20 = \text{fnInt}(0.20; X; 5; 10) = 1
+        \]
+        Omdat de eerste functie aan beide voorwaarden voldoet, zou deze als kansdichtheidsfunctie kunnen dienen.
+
+        Voor het tweede geval geldt dat het een stijgende lineaire functie is (de richtingsco\"effici\"ent $\frac{2}{5}$ is groter dan $0$), dus de minimale waarde op
+        het interval $5 \le x \le 10$ wordt aangenomen in $x=5$: hier is de functiewaarde $f(5) = \frac{2}{5}\cdot 5 - 2 = 0$. 
+        Er volgt dus dat aan de eerste voorwaarde is voldaan, aangezien $f(x) = 0$ (voor $x < 5$ en $x > 10$) of $f(x) \ge 0$ (voor $5 \le X \le 10$).
+        Met de grafische rekenmachine checken we dat verder geldt:
+        \[
+            \int_{\infty}^{\infty} f(x) = \int_{5}^{10} \frac{2}{5}x-2 = \text{fnInt}(\frac{2}{5}X-2; X; 5; 10) = 5
+        \]
+        Omdat niet aan de tweede voorwaarde is voldaan, zou dit tweede geval niet als kansdichtheidsfunctie kunnen dienen.
+    }
+    
+    \item Bereken voor de gegevens bij vraag (a) de verdelingsfunctie $F(x)$ van de betreffende variabele.
+    \answer{
+        De kansverdelingsfunctie behorend bij functie 1 uit (a) is
+        \[
+            F(x) = P(X\le x) = \int_{-\infty}^{y} f(y) dy. 
+        \]
+        de oppervlakte onder de grafiek van $f$, tot en met de waarde $x$ 
+        Als $x\le 5$ is dat $0$, omdat $f(x)=0$ voor $x \le 5$. 
+        Als $5 \le x \le 10$ is dit en rechthoek met breedte $x-5$ en hoogte $0,2$, dus $F(x)=0,2(x-5)$.
+        Als $x\ge 10$ is dat de oppervlakte van de rechthoek van $5$ tot $10$ met hoogte $0,2$, en 
+        daarboven komt er niets bij, dus dan is $F(x)=1$ 
+        Met primitiveren: 
+        \[
+            F(x) = \int_{-\infty}^{y} f(y) dy = \begin{cases} 0, & \text{ als } x < 5 \\ 0,2(x-5), & \text{ als } 5 \le x \le 10 \\ 1, & \text{ als } x > 10 \end{cases}
+        \]
+    }
+\end{enumerate}

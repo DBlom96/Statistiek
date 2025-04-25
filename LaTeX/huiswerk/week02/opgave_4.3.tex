@@ -1,0 +1,31 @@
+\question{4.3}{Gegeven is dat een kansvariabele $X$ alleen de waarden 10, 20, 30 en 40 kan aannemen.}
+\begin{enumerate}[label=(\alph*)]
+    \item Verifieer voor de volgende vier gevallen of de geformuleerde waarden van $f(k)$ zodanig 
+    zijn dat $f$ als een kansfunctie kan worden beschouwd.
+    \begin{enumerate}[label=(\Alph*)]
+        \item $f(10) = 0,30$; $f(20) = 0,40$; $f(30) = 0,10$ en $f(40) = 0,10$.
+        \item $f(10) = 0,50$; $f(20) = 0,30$; $f(30) = 0,30$ en $f(40) = 0,10$.
+        \item $f(10) = 0,05$; $f(20) = 0,05$; $f(30) = 0,10$ en $f(40) = 0,80$. 
+        \item $f(10) = 0,00$; $f(20) = 0,00$; $f(30) = 1,00$ en $f(40) = 0,00$. 
+    \end{enumerate}
+    \answer{
+        Om een kansfunctie te zijn moeten alle waarden voor $f(k)$ kansen zijn, dus getallen tussen $0$ en 
+        $1$. Verder moet de som van alle kansen gelijk zijn aan $1$. Dit is alleen het geval voor $C$ en $D$.
+    }
+
+    \item Kansen kunnen ook worden weergegeven door de cumulatieve kansfunctie 
+    (verdelingsfunctie) $F(k)$. Geef voor de kansfunctie zoals beschreven bij punt $C$ de verstrekte 
+    informatie weer door middel van $F(k)$. 
+    \answer{
+        We beschreven $F$, de cumulatieve verdelingsfunctie (CDF), door middel van een tabel:
+        \begin{center}
+            \begin{tabular}{ccccc}
+                \toprule
+                    {\bfseries Uitkomst $k$} & $10$ & $20$ & $30$ & $40$\\
+                \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+                    $F(k) = P(X\le k)$ & $0,05$ & $0,10$ & $0,20$ & $1,00$\\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+\end{enumerate}

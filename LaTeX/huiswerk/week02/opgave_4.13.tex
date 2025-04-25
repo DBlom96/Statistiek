@@ -1,0 +1,79 @@
+\question{4.13}{In een bedrijf staat een aantal machines opgesteld die soms vanwege een storing moeten worden stilgelegd.
+Op grond van ervaring is vastgesteld dat het aantal storingen $X$ per week in de kanstabel wordt beschreven.}
+
+\begin{center}
+    \begin{tabular}{cc}
+        \toprule
+            {\bfseries Aantal storingen ($k$)} & {\bfseries $P(X=k)$} \\        
+        \cmidrule{1-1} \cmidrule{2-2}
+            $0$ & $0,50$ \\
+            $1$ & $0,26$ \\
+            $2$ & $0,12$ \\
+            $3$ & $0,08$ \\
+            $4$ & $0,04$ \\
+        \cmidrule{1-1} \cmidrule{2-2}
+            Totaal & $1,00$ \\ 
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Bereken het verwachte aantal storingen per week.
+        
+        \answer{
+            Het verwachte aantal storingen per week berekenen we als volgt:
+            \begin{align*}
+                E[X]    &= \sum_k k \cdot P(X=k) \\
+                        &= 0 \cdot P(X=0) + \ldots + 4 \cdot P(X=4) \\
+                        &= 0 \cdot 0,50 + 1 \cdot 0,26 + 2 \cdot 0,12 + 3 \cdot 0,08 + 4 \cdot 0,04 \\
+                        &= 0,9
+            \end{align*}
+        }
+
+        \item Bereken de variantie van het aantal storingen per week.
+        \answer{
+            Het variantie van het aantal storingen per week berekenen we als volgt:
+            \begin{align*}
+                Var(X)    &= \sum_k (k-E[X])^2 \cdot P(X=k) \\
+                        &= (0-0,9)^2 \cdot P(X=0) + \ldots + (4-0,9)^2 \cdot P(X=4) \\
+                        &= (0-0,9)^2 \cdot 0,50 + \ldots + (4-0,9)^2 \cdot 0,04 \\
+                        &= 0,81 \cdot 0,50 + \ldots + 9,61 \cdot 0,04 \\
+                        &\approx 1,29 
+            \end{align*}
+        }
+
+        \item Bereken het verwachte aantal storingen per jaar (=50 weken).
+        \answer{
+            We kunnen het aantal storingen in 50 weken zien als de som $X_{\text{som}}$ van 50 onderling onafhankelijke kansvariabelen $X_1$, $X_2$, \ldots $X_{50}$.
+            Aangezien de verwachtingswaarde een lineaire functie is, geldt er dat:
+            \begin{align*}
+                E[X_{\text{som}}]=E[X_{1} + X_2 + \ldots + X_{50}]    &= E[X_1] + E[X_2] + \ldots + E[X_{50}]\\
+                                                    &= 0,9 + 0,9 + \ldots + 0,9 \\
+                                                    &= 50 \cdot 0,9 = 45
+            \end{align*}
+        }
+
+        \item Een storing kost het bedrijf aan reparatie en gemiste productie \euro 500 per geval. Bereken de verwachte storingskosten per jaar.
+        \answer{
+            De verwachte storingskosten per jaar berekenen we simpelweg door het verwachte aantal storingen per jaar te vermenigvuldigen met de kosten per storing,
+            oftewel $45 \cdot $ \euro $500 =$ \euro $22500$.
+        }
+
+        \item Bereken de standaarddeviatie van het aantal storingen per jaar.
+        \answer{
+            Aangezien de wekelijkse aantallen storingen onderling onafhankelijke kansvariabelen zijn, geldt
+            \begin{align*}
+                \Var{X_{\text{som}}}    &= \Var{X_1 + X_2 + \ldots + X_{50}}    \\
+                                        &= \Var{X_1} + \Var{X_2} + \ldots + \Var{X_{50}} \\
+                                        &= 1,29 + 1,29 + \ldots + 1,29 \\
+                                        &= 50 \cdot 1,29 \\
+                                        &= 64,5
+            \end{align*}
+
+            De standaarddeviatie van het aantal storingen per jaar vinden we door de wortel hiervan te nemen:
+            \[
+                \sigma(X_{\text{som}}) = \sqrt{\Var{X_{\text{som}}}} = \sqrt{64,5} \approx 8,03
+            \]
+        }
+
+    \end{enumerate}

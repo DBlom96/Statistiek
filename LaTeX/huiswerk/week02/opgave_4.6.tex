@@ -1,0 +1,50 @@
+\question{4.6}{Bij een schoolreisje worden vier bussen gebruikt met elk een eigen chauffeur. Van de in totaal 130 leerlingen 
+hebben deze bussen respectievelijk 45, 35, 30 en 20 leerlingen vervoerd.}
+    
+    \begin{enumerate}[label=(\alph*)]
+        \item Op basis van toeval kiest men \'e\'en van de vier chauffeurs. Men vraagt aan de chauffeur hoe groot $X$ is, het aantal leerlingen in zijn bus.
+        Bereken $E[X]$.
+        \answer{
+            $X$ is het aantal leerlingen in de bus van een willekeurige chauffeur. De onderliggende kansverdeling is dan
+            
+            \begin{center}
+                \begin{tabular}{ccccc}
+                    \toprule
+                        {\bfseries Aantal leerlingen $k$} & $20$ & $30$ & $35$ & $45$\\
+                    \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+                        $P(X=k)$ & $0,25$ & $0,25$ & $0,25$ & $0,25$\\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+
+            Het is immers zo dat ieder van de vier chauffeurs gekozen wordt met kans $\frac{1}{4}$.
+            De verwachtingswaarde $E[X]$ is dan
+            \[
+               E[X] = \sum_k k \cdot P(X=k) = 20 \cdot 0,25 + 30 \cdot 0,25 + 35 \cdot 0,25 + 45 \cdot 0,25 = 32,5.
+            \] 
+        }
+
+        \item Op basis van toeval kiest men \'e\'en van de 130 leerlingen en vraagt aan hem of haar hoeveel leerlingen $Y$ er in de bus zaten waarmee deze leerling werd vervoerd.
+        Bereken $E[Y]$.
+        \answer{
+            $X$ is het aantal leerlingen in de bus van een willekeurige leerling. 
+            Het totaal aantal leerlingen is $20+30+35+45=130$. 
+            De onderliggende kansverdeling is dan
+            
+            \begin{center}
+                \begin{tabular}{ccccc}
+                    \toprule
+                        {\bfseries Aantal leerlingen $k$} & $20$ & $30$ & $35$ & $45$\\
+                    \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+                        $P(Y=k)$ & $\frac{20}{130}$ & $\frac{30}{130}$ & $\frac{35}{130}$ & $\frac{45}{130}$\\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+
+            Het is immers zo dat de kans op een uitkomst evenredig is met het aantal leerlingen dat in een bus met een aantal leerlingen zit.
+            De verwachtingswaarde $E[Y]$ is dan
+            \[
+               E[Y] = \sum_k k \cdot P(Y=k) = 20 \cdot \frac{20}{130} + 30 \cdot \frac{30}{130}  + 35 \cdot \frac{35}{130} + 45 \cdot \frac{45}{130} = 35.
+            \]
+        }
+\end{enumerate}

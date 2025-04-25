@@ -1,0 +1,61 @@
+\question{2.9}{Een groep van 10 studenten behaalde de volgende scores bij een examen:
+    \[
+        45, 60, 82, 32, 25, 75, 65, 66, 70, 80
+    \]
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Bereken het rekenkundig gemiddelde, de mediaan en de standaarddeviatie voor deze gegevens.
+    \answer{
+        Het rekenkundig gemiddelde wordt berekend met:
+        \[
+        \samplemean = \frac{\sum x_i}{n} = \frac{45 + 60 + \ldots + 80}{10} = \frac{600}{10} = 60
+        \]
+
+        De mediaan wordt gevonden door eerst de scores te sorteren:
+        \[
+        25, 32, 45, 60, 65, 66, 70, 75, 80, 82
+        \]
+        Omdat er een even aantal scores is, bekijken we het gemiddelde van de middelste twee waarden:
+        \[
+        \text{Mediaan} = \frac{x_{5} + x_{6}}{2} = \frac{65 + 66}{2} = 65.5
+        \]
+
+        Omdat we te maken hebben met een steekproef, wordt de variantie berekend met:
+        \begin{align*}
+            \samplevar  &= \frac{1}{n-1}\cdot \sum (x_i - \samplemean)^2 \\
+                        &= \frac{1}{10-1} \cdot \left( (45-60)^2 + (60-60)^2 + \ldots + (80-60)^2 \right) \\
+                        &= \frac{1}{9} \cdot 3504 \\
+                        &= \frac{3504}{9}
+        \end{align*}
+        De standaarddeviatie vinden we door de wortel uit de variantie te nemen:
+        \[
+            \samplestd = \sqrt{\samplevar} = \sqrt{\frac{3750}{9}} \approx 19.7315
+        \]
+    }
+
+    \item Er wordt besloten alle studenten 10 punten extra te geven. Wat is het gevolg van deze maatregel voor de bij vraag (a) berekende maatstaven.
+    \answer{
+        \textbf{Rekenkundig gemiddelde:} als alle scores met 10 worden verhoogd, dan wordt het rekenkundig gemiddelde ook met 10 verhoogd.
+
+        \textbf{Mediaan:} als alle scores met 10 worden verhoogd, dan geldt dit specifiek ook voor de middelste twee scores (merk op dat de volgorde gelijk blijft!).
+        De mediaan is het gemiddelde van de twee middelste scores, dus de mediaan wordt ook verhoogd met 10
+
+        \textbf{Standaarddeviatie}: als alle scores met 10 worden verhoogd, dan blijft de spreiding van de scores gelijk, alleen met 10 naar rechts verschoven.
+        De standaarddeviatie blijft in dat geval dus hetzelfde.
+    }
+
+    \item In plaats van 10 punten voor iedereen erbij (vraag b) wordt besloten de kandidaten allemaal een 10\% hogere score te geven dan zij oorspronkelijk gehaald hebben. Wat is de invloed van deze maatregel op de onder a berekende grootheden?
+    \answer{
+        \textbf{Rekenkundig gemiddelde:} als alle scores met 10\% worden verhoogd, dan wordt het rekenkundig gemiddelde ook met 10\% verhoogd.
+
+        \textbf{Mediaan:} als alle scores met 10\% worden verhoogd, dan geldt dit specifiek ook voor de middelste twee scores (merk op dat de volgorde gelijk blijft!).
+        De mediaan is het gemiddelde van de twee middelste scores, dus de mediaan wordt ook verhoogd met 10\%
+
+        \textbf{Standaarddeviatie}: als alle scores met 10\% worden verhoogd, dan wordt de spreiding van de scores groter.
+        Merk op dat voor elke term $(x_i - \samplemean)^2$ in de formule van de variantie in deze nieuwe situatie moet worden vervangen door 
+        \[
+            (1.1\cdot x_i - 1.1 \cdot \samplemean)^2 = \left( 1.1 \cdot (x_i-\samplemean)^2\right) = 1.1^2 \cdot (x_i-\samplemean)^2 = 1.21 \cdot (x_i-\samplemean)^2
+        \]
+        De variantie stijgt dus met een factor $1.21$, en de standaarddeviatie met een factor $\sqrt{1.21}=1.1$ (10\%).
+    }
+\end{enumerate}      

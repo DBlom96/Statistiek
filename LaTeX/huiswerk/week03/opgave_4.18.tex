@@ -1,0 +1,149 @@
+\question{4.18}{Antiekhandelaar Lauwen overweegt op een veiling een fraaie Friese staartklok te kopen. Bekend is dat deze klok een bedrag zal moeten opleveren tussen \euro 20 000 en \euro 30 000.
+Een concurrent van Lauwen wil eveneens een (onbekend) bod $X$ doen, waarvan de hoogte mag worden beschouwd als een trekking uit een rechthoekige kansverdeling tussen 20 000 en 30 000.
+Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we ervan uitgaan dat beide partijen nooit exact hetzelfde bod zullen doen.
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Veronderstel dat Lauwen \euro 23 000 biedt. Hoe groot is de kans dat hij daarmee in het bezit komt van de klok?
+    \answer{
+        Lauwen komt enkel en alleen in bezit van de klok als het bod $X \sim Uniform(20 000; 30 000)$ van zijn concurrent lager is dan \euro 23 000.
+        De kans hierop is gelijk aan
+        \[
+            P(X \le 23 000) = \frac{23 000 - 20 000}{30 000 - 20 000} = \frac{3 000}{10 000} = 0,3
+        \]
+    }
+    
+    \item Veronderstel Lauwen biedt \euro 28 000 respectievelijk \euro 30 000. Hoe groot is dan de kans op aankoop van de klok?
+    \answer{
+        Als Lauwen een bod van \euro 28 000 doet, is de kans op aankoop gelijk aan 
+        \[
+            P(X \le 28 000) = \frac{28 000 - 20 000}{30 000 - 20 000} = \frac{8 000}{10 000} = 0,8
+        \]
+        Als Lauwen een bod van \euro 30 000 doet, is de kans op aankoop gelijk aan $1$, want dit is de bovengrens van het bod $X$ wat de concurrent gaat uitbrengen.
+    }
+
+    \item Er is een klant aan wie Lauwen de klok voor een bedrag van \euro 31 000 onmiddellijk kan verkopen. Hoeveel bedraagt de verwachte winst voor Lauwen bij de biedingen die bij de vragen $a$ en $b$ worden overwogen? 
+    \answer{
+        Als Lauwen een bod van \euro 23 000 doet, is de kans op aankoop gelijk aan $0,3$.
+        In het geval dat hij de concurrent overtreft ($X < 23 000$), is de winst gelijk aan $31 000 - 23 000 = 8 000$ euro.
+        In het geval dat hij de concurrent niet overtreft ($X > 23 000$), is de winst gelijk aan $0$, want dan kan hij de klok niet doorverkopen.
+        Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
+        \begin{center}
+            \begin{tabular}{ccc}
+                \toprule
+                    {\bfseries winst $k$ (in euro)} & $0$ & $8 000$\\
+                \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                    {\bfseries $f(k)=P(W=k)$} & $0,3$ & $0,7$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        
+        De verwachte winst is in dat geval gelijk aan 
+        \begin{align*}
+            E[W]    &= 0 \cdot P(W=0) + 8 000 \cdot P(W = 8 000) \\
+                    &= 0 \cdot 0,3 + 8 000 \cdot 0,7 \\
+                    &= 5 600
+        \end{align*}
+
+        Op een zelfde manier kun je de verwachte winst bepalen in het geval van boden van respectievelijk\euro 28 000 en \euro 30 000:
+        \begin{itemize}
+            \item Wanneer het bod gelijk is aan \euro 28 000, is de kans op aankoop gelijk aan $P(X<28 000) = 0,3$.
+            In dat geval is de winst gelijk aan $31 000 - 28 000 = 3 000$ euro, en anders $0$ euro. 
+            Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
+            \begin{center}
+                \begin{tabular}{ccc}
+                    \toprule
+                        {\bfseries winst $k$ (in euro)} & $0$ & $3 000$\\
+                    \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                        {\bfseries $f(k)=P(W=k)$} & $0,8$ & $0,2$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+            De verwachte winst is in dat geval gelijk aan 
+            \begin{align*}
+                E[W]    &= 0 \cdot P(W=0) + 3 000 \cdot P(W = 3 000) \\
+                        &= 0 \cdot 0,8 + 3 000 \cdot 0,2 \\
+                        &= 600
+            \end{align*}
+            
+            \item Wanneer het bod gelijk is aan \euro 30 000, is de kans op aankoop gelijk aan $P(X<30 000) = 1$
+            Als hij de concurrent overtreft ($X < 30 000$), is de winst, en dus ook de verwachte winst, gelijk aan $31 000 - 30 000 = 1 000$ euro.
+        \end{itemize}
+    }
+
+    \item Noem het bedrag dat Lauwen gaat bieden $B$. Bij welke bieding $B$ is de verwachte verkoopwinst zo hoog mogelijk?
+    \answer{
+        Stel dat Lauwen een bedrag van $B$ euro gaat bieden. In dat geval is de kans op aankoop gegeven door $P(X < B)$, de kans dat het concurrerende bod $X$ wordt overtroffen.
+        Deze kans -- in termen van $B$ -- is gelijk aan
+        \[
+            P(X < B) = \frac{B-20 000}{30 000 - 20 000} = \frac{B-20 000}{10 000}
+        \]
+        Als $X < B$, dan koopt Lauwen de klok aan, en kan daar dan $31 000 - B$ euro winst op maken.
+        Als $X > B$, dan wordt Lauwen overtroffen en is zijn winst $0$ euro.
+        Dit gebeurt met kans $P(X > B) = 1 - P(X < B) = 1 - \frac{B-20 000}{10 000} = \frac{30 000 - B}{10 000}$.
+        Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
+            \begin{center}
+                \begin{tabular}{ccc}
+                    \toprule
+                        {\bfseries winst $k$ (in euro)} & $0$ & $31 000 - B$\\
+                    \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                        {\bfseries $f(k)=P(W=k)$} & $\frac{B-20 000}{10 000}$ & $\frac{30 000 - B}{10 000}$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+            De verwachte winst is in dat geval gelijk aan 
+            \begin{align*}
+                E[W]    &= 0 \cdot P(W=0) + (31 000 - B) \cdot P(W = 31 000 - B) \\
+                        &= 0 \cdot \frac{30 000 - B}{10 000} + (31 000 - B) \cdot \frac{B-20 000}{10 000}  \\
+                        &= \frac{(31 000 - B)\cdot(B - 20 000)}{10 000} \\
+                        &= \frac{620 000 000 + 51 000\cdot B-B^2}{10 000} \\
+                        &= 62 000 + 5,1\cdot B-\frac{1}{10000}\cdot B^2
+            \end{align*}
+            We vinden de optimale waarde voor $B$ door de afgeleide naar $B$ te nemen (exponent naar voren halen en exponent met 1 verminderen) en gelijk te stellen aan 0:
+            \[
+                \frac{d}{dB}(E[W]) = 5,1 - \frac{2}{10000}\cdot B = 0 \rightarrow B = 5,1 \cdot \frac{10 000}{2} = 25 500
+            \]
+            Invullen van $B = 25 500$ geeft een verwachte winst van 
+            \[
+                E[W] = 62 000 + 5,1\cdot 25 500-\frac{1}{10000}\cdot (25 500)^2 = 3 025.
+            \]
+    }
+
+    \item Veronderstel dat de klant niet \euro 31 000 maar \euro $Y$ wenst te betalen. Geef aan hoe het optimale bod $B$ afhangt van de gekozen $Y$. 
+    \answer{
+        In dat geval is bij aankoop de winst niet gelijk aan $31 000 - B$, maar gelijk aan $Y - B$.
+        Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
+        \begin{center}
+            \begin{tabular}{ccc}
+                \toprule
+                    {\bfseries winst $k$ (in euro)} & $0$ & $Y - B$\\
+                \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                    {\bfseries $f(k)=P(W=k)$} & $\frac{B-20 000}{10 000}$ & $\frac{30 000 - B}{10 000}$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        De verwachte winst is in dat geval gelijk aan 
+        \begin{align*}
+            E[W]    &= 0 \cdot P(W=0) + (31 000 - B) \cdot P(W = Y - B) \\
+                    &= 0 \cdot \frac{30 000 - B}{10 000} + (Y - B) \cdot \frac{B-20 000}{10 000}  \\
+                    &= \frac{(Y - B)\cdot(B - 20 000)}{10 000} \\
+                    &= \frac{20 000Y + (Y + 20 000)B - B^2}{10 000} \\
+                    &= 2Y + \frac{Y + 20 000}{10 000} B - \frac{1}{10 000}B^2
+        \end{align*}
+        We vinden de optimale waarde voor $B$ door de afgeleide naar $B$ te nemen (zie in dit geval $Y$ als een vaststaand getal, niet een variabele) en gelijk te stellen aan 0:
+        \begin{align*}
+            \frac{d}{dB}(E[W]) = \frac{Y + 20 000}{10 000} - \frac{2}{10000} B = 0 \\
+            \rightarrow B = \frac{Y + 20 000}{10 000} \cdot \frac{10 000}{2} = \frac{Y + 20 000}{2}
+        \end{align*}
+        Merk op dat deze optimale waarde voor $B$ precies in het midden tussen $20 000$ en $Y$ ligt.
+        Invullen van $B = \frac{Y+20 000}{2}$ geeft een verwachte winst van 
+        \begin{align*}
+            E[W]    &= \frac{(Y - B)\cdot(B - 20 000)}{10 000} \\
+                    &= \frac{\frac{Y-20 000}{2} \cdot \frac{Y-20 000}{2}}{10 000} \\
+                    &= \frac{(Y - 20 000)^2}{40 000}
+        \end{align*}
+        Als $Y > 40 000$, dan kun je in plaats van $B = \frac{Y+20 000}{2} > 30 000$ beter kiezen voor een bod van $B = 30 000$, omdat je dan toch al verzekerd bent van de aankoop.
+        
+    }
+
+
+\end{enumerate}

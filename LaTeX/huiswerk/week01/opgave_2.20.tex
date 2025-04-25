@@ -1,0 +1,127 @@
+\question{2.20}{Bij een onderzoek in opdracht van Horeca Nederland werd onderzocht hoeveel geld mensen uitgeven aan eten buiten de deur. 
+    Twee groepen werden onderscheiden, namelijk studenten die zelfstandig wonen en afgestudeerden met minstens twee jaar werkervaring.
+    De resultaten waren als volgt:
+}
+
+
+\begin{center}
+    \begin{tabular}{c}
+        \toprule
+            \textbf{Uitgaven voor 30 studenten (euro per maand)} \\
+        \midrule
+            $72, 51, 146, 30, 28, 88, 92, 47, 52, 68, 80, 34, 28, 105, 76, 93, 55, 40, 62, 37,$ \\
+            $88, 30, 122, 46, 35, 29, 77, 40, 71, 57$ \\
+        \midrule
+            \textbf{Uitgaven voor 40 afgestudeerden (euro per maand)} \\
+        \midrule
+            $88, 130, 255, 56, 0, 38, 167, 188, 132, 147, 78, 80, 40, 170, 280, 46, 174, 182,$ \\
+            $75, 89, 103, 230, 380, 57, 55, 90, 96, 102, 78, 69, 53, 160, 195, 245, 60, 94,$ \\
+            $145, 115, 225, 71$ \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Bereken voor beide groepen het gemiddelde en de mediaan
+    \answer{
+        Het gemiddelde wordt berekend als:
+        \[
+        \samplemean = \frac{\sum x_i}{n}
+        \]
+        Voor de groep studenten is het gemiddelde gelijk aan:
+        \[
+        \samplemean_{\text{studenten}} = \frac{72 + 51 + \dots + 57}{30} \approx 62,6333.
+        \]
+        Voor de groep afgestudeerden is het gemiddelde gelijk aan:
+        \[
+        \samplemean_{\text{afgestudeerden}} = \frac{88 + 130 + \dots + 71}{40} \approx 125,9500.
+        \]
+
+        Aangezien voor beide groepen geldt dat het aantal waarnemingen even is, bekijken we het gemiddelde van de twee middelste waarden.
+        Voor de groep studenten is de gesorteerde lijst van waarnemingen gelijk aan:
+        \begin{align*}
+            &28, 28, 29, 30, 30, 34, 35, 37, 40, 40, 46, 47, 51, 52, 55, 57, 62, 68, 71, 72, 76, 77, 80 \\
+            &88, 88, 92, 93, 105, 122, 146
+        \end{align*}
+        De mediaan is gelijk aan het gemiddelde van de twee middelste waarden, oftewel:
+        \[
+            \text{Mediaan}_{\text{studenten}} = \frac{55+57}{2} = 56.
+        \]
+        Voor de groep afgestudeerden is de gesorteerde lijst van waarnemingen gelijk aan:
+        \begin{align*}
+            &0, 38, 40, 46, 53, 55, 56, 57, 60, 69, 71, 75, 78, 78, 80, 88, 89, 90, 94, 96, 102, \\
+            &103, 115, 130, 132, 145, 147, 160, 167, 170, 174, 182, 188, 195, 225, 230, 245, \\
+            &255, 280, 380
+        \end{align*}
+        De mediaan is gelijk aan het gemiddelde van de twee middelste waarden, oftewel:
+        \[
+            \text{Mediaan}_{\text{afgestudeerden}} = \frac{96+102}{2} = 99.
+        \]
+    }
+
+    \item Bereken voor beide groepen de standaarddeviatie.
+    \answer{
+        De variantie wordt berekend als
+        \[
+            \samplevar = \frac{1}{n-1}\cdot \sum (x_i - \samplemean)^2
+        \]
+        Voor de groep studenten is de variantie gelijk aan
+        \begin{align*}
+            \samplevar_{\text{studenten}}   &= \frac{1}{30-1} \cdot \left((72 - 62,6333)^2 + \ldots + (57-62,6333)^2\right)\\                               
+                                            &\approx 896,5161.
+        \end{align*}
+        De standaarddeviatie is de wortel uit de variantie, oftewel
+        \[
+            s_{\text{studenten}} = \sqrt{\samplevar_{\text{studenten}}} = \sqrt{896,5161} \approx 29,9419.
+        \]
+
+        Voor de groep afgestudeerden is de variantie gelijk aan
+        \begin{align*}
+            \samplevar_{\text{afgestudeerden}}   &= \frac{1}{40-1} \cdot ((88 - 125,9500)^2 + (130-125,9500)^2 + \ldots \\
+                                                 & \qquad + (71-125,9500)^2) \\                               
+                                                 &\approx 6255,9974.
+        \end{align*}
+        De standaarddeviatie is de wortel uit de variantie, oftewel
+        \[
+            s_{\text{afgestudeerden}} = \sqrt{\samplevar_{\text{afgestudeerden}}} = \sqrt{6255,9974} \approx 79,0949.
+        \]
+    }
+
+    \item Bepaal voor beide groepen een boxplot. Zijn er uitbijters?
+    \answer{
+        De interkwartielafstand (interquartile range) \( IQR \) wordt berekend als:
+        \[
+        IQR = Q_3 - Q_1
+        \]
+        Voor studenten:
+        \[
+        Q_1 = 37, \quad Q_3 = 80 \Rightarrow IQR_{\text{studenten}} = 43
+        \]
+        Voor afgestudeerden:
+        \[
+        Q_1 = 70, \quad Q_3 = 172 \Rightarrow IQR_{\text{afgestudeerden}} = 102
+        \]
+
+        Uitbijters worden gedefinieerd als waarden buiten:
+        \[
+        [Q_1 - 1,5 \times IQR, Q_3 + 1,5 \times IQR]
+        \]
+        Voor studenten:
+        \[
+        [37 - 1,5 \times 43, 80 + 1,5 \times 43] = [-27,5, 144,5] \quad \text{Geen uitbijters}
+        \]
+        Voor afgestudeerden:
+        \[
+        [70 - 1,5 \times 102, 172 + 1,5 \times 102] = [-83, 325] \quad \text{Uitbijters: 380}
+        \]
+    }
+
+    \item Schrijf een korte notitie waarin het verschil wordt toegelicht tussen beide groepen.
+    \answer{
+        Afgestudeerden geven gemiddeld significant meer geld uit aan eten buiten de deur dan studenten. 
+        Dit verschil kan worden verklaard door hun hogere inkomen, stabiliteit en veranderde eetgewoonten.
+        Daarnaast is de spreiding bij afgestudeerden aanzienlijk groter, wat betekent dat sommige individuen zeer hoge uitgaven hebben.
+        De boxplot-analyse bevestigt dat er een uitbijter in de groep van afgestudeerden aanwezig is (380 euro),
+        wat mogelijk iemand is met uitzonderlijke uitgavenpatronen.
+    }
+\end{enumerate}

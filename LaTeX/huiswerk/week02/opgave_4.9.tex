@@ -1,0 +1,59 @@
+\question{4.9}{Een huiseigenaar in Amsterdam besluit drie kamers te huur aan te bieden via Airbnb.
+Het dagelijks aantal verhuurde kamers op een willekeurige dag kan worden weergegeven door de kansvariabele $X$, zoals weergegeven in de tabel:}
+
+\begin{center}
+    \begin{tabular}{cc}
+        \toprule
+            {\bfseries Aantal boekingen} & {\bfseries $P(X=k)$}\\
+        \cmidrule{1-1} \cmidrule{2-2}
+            $0$ & $0,50$ \\
+            $1$ & $0,25$ \\
+            $2$ & $0,15$ \\
+            $3$ & $0,10$ \\
+        \cmidrule{1-1} \cmidrule{2-2}
+            {\bfseries Totaal} & $1,00$\\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Hoe groot is de kans dat op een willekeurige dag minstens twee kamers zijn verhuurd.
+        \answer{
+            We berekenen deze kans als volgt:
+            \begin{align*}
+                P(X\ge 2)   &= P(X=2) + P(X=3) \\
+                            &= 0,15 + 0,10 \\
+                            &= 0,25
+            \end{align*}
+        }
+
+        \item De aantallen boekingen op twee opeenvolgende dagen kan men beschouwen als onderling onafhankelijke kansvariabelen.
+        Maak een kanstabel voor de variabele $X_{\text{som}}$ waarmee het totaal aantal boeking per twee dagen wordt aangegeven.
+        Hoe groot is de kans dat in twee dagen meer dan 3 boekingen plaatsvinden?
+        \answer{
+            De kanstabel voor de somvariabele $X_{\text{som}}$ ziet er als volgt uit:
+            \begin{center}
+                \begin{tabular}{cc}
+                    \toprule
+                        {\bfseries Aantal boekingen} & {\bfseries $P(X_{\text{som}}=k)$}\\
+                    \cmidrule{1-1} \cmidrule{2-2}
+                        $0$ & $0,25$ \\
+                        $1$ & $0,25$ \\
+                        $2$ & $0,2125$ \\
+                        $3$ & $0,175$ \\
+                        $4$ & $0,0725$ \\
+                        $5$ & $0,03$ \\
+                        $6$ & $0,01$ \\
+                    \cmidrule{1-1} \cmidrule{2-2}
+                        {\bfseries Totaal} & $1,00$\\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+            De kans dat er in twee dagen meer dan 3 boekingen plaatsvinden is dus gelijk aangeeft
+            \begin{align*}
+                P(X_{\text{som}} > 3)   &= P(X_{\text{som}}= 4) + P(X_{\text{som}}= 5) + P(X_{\text{som}}= 6) \\
+                                        &= 0,0725 + 0,03 + 0,01 \\
+                                        &= 0,1125
+            \end{align*}
+        }
+\end{enumerate}

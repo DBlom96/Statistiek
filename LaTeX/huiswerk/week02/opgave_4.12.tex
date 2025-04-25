@@ -1,0 +1,76 @@
+\question{4.12}{Een doe-het-zelfzaak verhuurt apparaten waarmee oud behang van een muur kan worden afgestoomd. 
+De vraag per dag naar dergelijke apparaten kan worden weergegeven door een kansvariabele $X$ die de volgende waarden aanneemt:}
+
+\begin{center}
+    \begin{tabular}{ccccc}
+        \toprule
+            {\bfseries Aantal gevraagde machines ($k$)} & $0$ & $1$ & $2$ & $3$ \\        
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+            {\bfseries $P(X=k)$} & $0,20$ & $0,35$ & $0,25$ & $0,20$ \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Bereken de verwachtingswaarde van het aantal gevraagde machines.
+        \answer{
+            We berekenen deze verwachtingswaarde van het aantal gevraagde machines $X$ als volgt:
+            \begin{align*}
+                E[X]    &= \sum_k k \cdot P(X=k) \\
+                        &= 0 \cdot P(X=0) + \ldots + 3 \cdot P(X=3) \\
+                        &= 0 \cdot 0,20 + 1 \cdot 0,35 + 2 \cdot 0,25 + 3 \cdot 0,20 \\
+                        &= 1,45
+            \end{align*}
+        }
+
+        \item De bedrijfsleiding vraagt zich af hoeveel machines in voorraad moeten worden gehouden om aan de (onzekere) vraag te kunnen voldoen.
+        Het beschikbaar hebben van zo'n apparaat kost 4 euro per dag, terwijl de huurprijs 6 euro per dag bedraagt.
+        Bereken de opbrengst per dag $Y$ indien twee apparaten beschikbaar zijn bij de verschillende waarden van $X$.
+        Doe dit ook bij drie beschikbare apparaten. Bereken voor beide gevallen de verwachtingswaarde van $Y$.
+        Welke beslissing levert de hoogste verwachtingswaarde. 
+        \answer{
+            Indien er twee apparaten beschikbaar zijn, beschrijft de volgende tabel de opbrengsten per dag.
+            De opbrengsten zijn berekend op basis van opbrengst is huurinkomsten minus beschikbaarheidskosten.
+
+            \begin{center}
+                \begin{tabular}{ccccc}
+                    \toprule
+                        {\bfseries Aantal gevraagde machines ($k$)} & $0$ & $1$ & $2$ & $3$ \\        
+                        \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+                        {\bfseries Opbrengst $\ell$} & $-8$ & $-2$ & $4$ & $4$ \\        
+                        \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+                        {\bfseries $P(X=k)$} & $0,20$ & $0,35$ & $0,25$ & $0,20$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+            De verwachte opbrengst bij twee beschikbare apparaten is dus
+            \begin{align*}
+                E[Y]    &= \sum_\ell \ell \cdot P(X=k) \\
+                        &=  -8 \cdot P(X=0) + \ldots + 4 \cdot P(X=3) \\
+                        &= -8 \cdot 0,20 + -2 \cdot 0,35 + 4 \cdot 0,25 + 4 \cdot 0,20 \\
+                        &= -0,5
+            \end{align*}
+
+            Indien er drie apparaten beschikbaar zijn, beschrijft de volgende tabel de opbrengsten per dag.
+
+            \begin{center}
+                \begin{tabular}{ccccc}
+                    \toprule
+                        {\bfseries Aantal gevraagde machines ($k$)} & $0$ & $1$ & $2$ & $3$ \\        
+                        \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+                        {\bfseries Opbrengst $\ell$} & $-12$ & $-6$ & $0$ & $6$ \\        
+                        \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
+                        {\bfseries $P(X=k)$} & $0,20$ & $0,35$ & $0,25$ & $0,20$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+            De verwachte opbrengst bij twee beschikbare apparaten is dus
+            \begin{align*}
+                E[Y]    &= \sum_\ell \ell \cdot P(X=k) \\
+                        &=  -12 \cdot P(X=0) + \ldots + 6 \cdot P(X=3) \\
+                        &= -12 \cdot 0,20 + -6 \cdot 0,35 + 0 \cdot 0,25 + 6 \cdot 0,20 \\
+                        &= -3,3
+            \end{align*}
+            De beslissing om twee apparaten beschikbaar te hebben levert dus naar verwachting de hoogste opbrengst op.
+        }
+\end{enumerate}
