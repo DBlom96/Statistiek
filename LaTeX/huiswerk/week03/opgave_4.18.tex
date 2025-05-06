@@ -5,7 +5,7 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
 \begin{enumerate}[label=(\alph*)]
     \item Veronderstel dat Lauwen \euro 23 000 biedt. Hoe groot is de kans dat hij daarmee in het bezit komt van de klok?
     \answer{
-        Lauwen komt enkel en alleen in bezit van de klok als het bod $X \sim Uniform(20 000; 30 000)$ van zijn concurrent lager is dan \euro 23 000.
+        Lauwen komt enkel en alleen in bezit van de klok als het bod $X \sim \text{Uniform}(20 000; 30 000)$ van zijn concurrent lager is dan \euro 23 000.
         De kans hierop is gelijk aan
         \[
             P(X \le 23 000) = \frac{23 000 - 20 000}{30 000 - 20 000} = \frac{3 000}{10 000} = 0,3
@@ -32,7 +32,7 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
                 \toprule
                     {\bfseries winst $k$ (in euro)} & $0$ & $8 000$\\
                 \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                    {\bfseries $f(k)=P(W=k)$} & $0,3$ & $0,7$ \\
+                    {\bfseries $f(k)=P(W=k)$} & $0,7$ & $0,3$ \\
                 \bottomrule
             \end{tabular}
         \end{center}
@@ -40,13 +40,13 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
         De verwachte winst is in dat geval gelijk aan 
         \begin{align*}
             E[W]    &= 0 \cdot P(W=0) + 8 000 \cdot P(W = 8 000) \\
-                    &= 0 \cdot 0,3 + 8 000 \cdot 0,7 \\
-                    &= 5 600
+                    &= 0 \cdot 0,7 + 8 000 \cdot 0,3 \\
+                    &= 2 400
         \end{align*}
 
-        Op een zelfde manier kun je de verwachte winst bepalen in het geval van boden van respectievelijk\euro 28 000 en \euro 30 000:
+        Op een zelfde manier kun je de verwachte winst bepalen in het geval van boden van respectievelijk \euro 28 000 en \euro 30 000:
         \begin{itemize}
-            \item Wanneer het bod gelijk is aan \euro 28 000, is de kans op aankoop gelijk aan $P(X<28 000) = 0,3$.
+            \item Wanneer het bod gelijk is aan \euro 28 000, is de kans op aankoop gelijk aan $P(X<28 000) = 0,8$.
             In dat geval is de winst gelijk aan $31 000 - 28 000 = 3 000$ euro, en anders $0$ euro. 
             Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
             \begin{center}
@@ -54,25 +54,29 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
                     \toprule
                         {\bfseries winst $k$ (in euro)} & $0$ & $3 000$\\
                     \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                        {\bfseries $f(k)=P(W=k)$} & $0,8$ & $0,2$ \\
+                        {\bfseries $f(k)=P(W=k)$} & $0,2$ & $0,8$ \\
                     \bottomrule
                 \end{tabular}
             \end{center}
-            De verwachte winst is in dat geval gelijk aan 
+            De verwachte winst (in euro) is in dat geval gelijk aan 
             \begin{align*}
                 E[W]    &= 0 \cdot P(W=0) + 3 000 \cdot P(W = 3 000) \\
-                        &= 0 \cdot 0,8 + 3 000 \cdot 0,2 \\
-                        &= 600
+                        &= 0 \cdot 0,2 + 3 000 \cdot 0,8 \\
+                        &= 2 400
             \end{align*}
             
-            \item Wanneer het bod gelijk is aan \euro 30 000, is de kans op aankoop gelijk aan $P(X<30 000) = 1$
+            \item Wanneer het bod gelijk is aan \euro 30 000, is de kans op aankoop gelijk aan $P(X<30 000) = 1$.
             Als hij de concurrent overtreft ($X < 30 000$), is de winst, en dus ook de verwachte winst, gelijk aan $31 000 - 30 000 = 1 000$ euro.
         \end{itemize}
     }
 
     \item Noem het bedrag dat Lauwen gaat bieden $B$. Bij welke bieding $B$ is de verwachte verkoopwinst zo hoog mogelijk?
     \answer{
-        Stel dat Lauwen een bedrag van $B$ euro gaat bieden. In dat geval is de kans op aankoop gegeven door $P(X < B)$, de kans dat het concurrerende bod $X$ wordt overtroffen.
+        Stel dat Lauwen een bedrag van $B$ euro gaat bieden.
+        We kunnen aannemen dat $20 000 \le B \le 30 000$. 
+        Als $B < 20 000$, dan wordt Lauwen altijd overboden door zijn concurrent.
+        Als $B > 30 000$, dan is zijn winst kleiner dan bij $B = 30 000$, terwijl in dat geval de concurrent al sowieso wordt overboden.
+        De kans op aankoop is altijd gegeven door $P(X < B)$, de kans dat het concurrerende bod $X$ wordt overtroffen.
         Deze kans -- in termen van $B$ -- is gelijk aan
         \[
             P(X < B) = \frac{B-20 000}{30 000 - 20 000} = \frac{B-20 000}{10 000}
@@ -86,25 +90,25 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
                     \toprule
                         {\bfseries winst $k$ (in euro)} & $0$ & $31 000 - B$\\
                     \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                        {\bfseries $f(k)=P(W=k)$} & $\frac{B-20 000}{10 000}$ & $\frac{30 000 - B}{10 000}$ \\
+                        {\bfseries $f(k)=P(W=k)$} & $\frac{30 000 - B}{10 000}$ & $\frac{B-20 000}{10 000}$\\
                     \bottomrule
                 \end{tabular}
             \end{center}
-            De verwachte winst is in dat geval gelijk aan 
+            De verwachte winst (in euro) is in dat geval gelijk aan 
             \begin{align*}
                 E[W]    &= 0 \cdot P(W=0) + (31 000 - B) \cdot P(W = 31 000 - B) \\
-                        &= 0 \cdot \frac{30 000 - B}{10 000} + (31 000 - B) \cdot \frac{B-20 000}{10 000}  \\
+                        &= 0 \cdot \left(\frac{30 000 - B}{10 000}\right) + (31 000 - B) \cdot \left(\frac{B-20 000}{10 000}\right) \\
                         &= \frac{(31 000 - B)\cdot(B - 20 000)}{10 000} \\
-                        &= \frac{620 000 000 + 51 000\cdot B-B^2}{10 000} \\
-                        &= 62 000 + 5,1\cdot B-\frac{1}{10000}\cdot B^2
+                        &= \frac{-620 000 000 + 51 000\cdot B-B^2}{10 000} \\
+                        &= -62 000 + 5,1\cdot B-\frac{1}{10000}\cdot B^2
             \end{align*}
             We vinden de optimale waarde voor $B$ door de afgeleide naar $B$ te nemen (exponent naar voren halen en exponent met 1 verminderen) en gelijk te stellen aan 0:
             \[
                 \frac{d}{dB}(E[W]) = 5,1 - \frac{2}{10000}\cdot B = 0 \rightarrow B = 5,1 \cdot \frac{10 000}{2} = 25 500
             \]
-            Invullen van $B = 25 500$ geeft een verwachte winst van 
+            Invullen van $B = 25 500$ geeft een verwachte winst (in euro) van 
             \[
-                E[W] = 62 000 + 5,1\cdot 25 500-\frac{1}{10000}\cdot (25 500)^2 = 3 025.
+                E[W] = -62 000 + 5,1\cdot 25 500-\frac{1}{10000}\cdot (25 500)^2 = 3 025.
             \]
     }
 
@@ -117,11 +121,11 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
                 \toprule
                     {\bfseries winst $k$ (in euro)} & $0$ & $Y - B$\\
                 \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                    {\bfseries $f(k)=P(W=k)$} & $\frac{B-20 000}{10 000}$ & $\frac{30 000 - B}{10 000}$ \\
+                    {\bfseries $f(k)=P(W=k)$} & $\frac{30 000 - B}{10 000}$ & $\frac{B-20 000}{10 000}$ \\
                 \bottomrule
             \end{tabular}
         \end{center}
-        De verwachte winst is in dat geval gelijk aan 
+        De verwachte winst (in euro) is in dat geval gelijk aan 
         \begin{align*}
             E[W]    &= 0 \cdot P(W=0) + (31 000 - B) \cdot P(W = Y - B) \\
                     &= 0 \cdot \frac{30 000 - B}{10 000} + (Y - B) \cdot \frac{B-20 000}{10 000}  \\
@@ -135,7 +139,7 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
             \rightarrow B = \frac{Y + 20 000}{10 000} \cdot \frac{10 000}{2} = \frac{Y + 20 000}{2}
         \end{align*}
         Merk op dat deze optimale waarde voor $B$ precies in het midden tussen $20 000$ en $Y$ ligt.
-        Invullen van $B = \frac{Y+20 000}{2}$ geeft een verwachte winst van 
+        Invullen van $B = \frac{Y+20 000}{2}$ geeft een verwachte winst (in euro) van 
         \begin{align*}
             E[W]    &= \frac{(Y - B)\cdot(B - 20 000)}{10 000} \\
                     &= \frac{\frac{Y-20 000}{2} \cdot \frac{Y-20 000}{2}}{10 000} \\

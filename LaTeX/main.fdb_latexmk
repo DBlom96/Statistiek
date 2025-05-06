@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1745839286.67628 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1745839289.10046 0
+["pdflatex"] 1746537423.32886 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1746537425.91534 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1745839284 124356 d80fb265b13695b80413c9c8d049619c ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1743424562 24286510 e52fb5f6c18f310f7dba2f66d16ee221 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -220,12 +220,12 @@
   "figures/opg4.17a.png" 1745839221 21692 9c329b19896ce89ba0196d4a28346089 ""
   "huiswerk/week03.tex" 1745839221 204 630d03f9c141d463feb0ddf90b8459d1 ""
   "huiswerk/week03/opgave_4.14.tex" 1745839221 4302 0ee6faa485a963c126996355f19f08e8 ""
-  "huiswerk/week03/opgave_4.15.tex" 1745839221 3113 2c9f4f7f1f5ca0dd1471c485d53018bc ""
-  "huiswerk/week03/opgave_4.16.tex" 1745839221 1385 6061b783b6b6a6025db5809400cd671a ""
-  "huiswerk/week03/opgave_4.17.tex" 1745839221 2411 b009f7e340e287a5cc349d6a49722ab0 ""
-  "huiswerk/week03/opgave_4.18.tex" 1745839222 9080 b123ed227d0562790d97962bbf987f0d ""
-  "main.aux" 1745839288 299 9484fcbf366542cadf4b851c402a8e40 "pdflatex"
-  "main.out" 1745839288 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "huiswerk/week03/opgave_4.15.tex" 1746537277 3129 3b6a2f79fd53aa5b9cceb3c921dae89b ""
+  "huiswerk/week03/opgave_4.16.tex" 1746537384 1391 34f20b7e8cbd4e39f19e3340730663b2 ""
+  "huiswerk/week03/opgave_4.17.tex" 1746537422 2417 fd51121b35421f62c7d6cbc53c08b19e ""
+  "huiswerk/week03/opgave_4.18.tex" 1746537190 9452 c77f0a47d6b13798a8e277c2d4c8e6e8 ""
+  "main.aux" 1746537425 299 9484fcbf366542cadf4b851c402a8e40 "pdflatex"
+  "main.out" 1746537425 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1745839222 696 6bcfa8bb96901506ff0813c825d4350d ""
   "styles/config.sty" 1745839222 2546 d2436a033916d762063ee3049c4caa0f ""
   "styles/statistics-macros.sty" 1745304507 2546 6c8b868b232fe9059ec63290771c600a ""

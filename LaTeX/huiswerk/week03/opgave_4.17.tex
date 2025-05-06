@@ -22,8 +22,8 @@ door een continue kansvariabele $X$ (in uren) met de volgende kansdichtheid:
         \]
         De kans dat een student op een willekeurige dag tussen 200 en 260 minuten oefent, oftewel tussen $\frac{10}{3}$ en $\frac{13}{3}$ uur oefent, is gelijk aan
         \begin{align*}
-            P(\frac{10}{3} \le X \le 4\frac{1}{3}) &= \int_{\frac{10}{3}}^{\frac{13}{3}} f(x) dx \\
-                                                   &= \int_{\frac{10}{3}}^{4,00} 0,40 dx + \int_{4,00}^{\frac{13}{3}} 0,6 dx \\
+            P(\frac{10}{3} \le X \le \frac{13}{3}) &= \int_{\frac{10}{3}}^{\frac{13}{3}} f(x)\ dx \\
+                                                   &= \int_{\frac{10}{3}}^{4,00} 0,40\ dx + \int_{4,00}^{\frac{13}{3}} 0,6\ dx \\
                                                    &= \textrm{fnInt}(0.40; X; 10/3; 4.00) + \textrm{fnInt}(0.60; X; 4.00; 13/3) \\
                                                    &\approx 0,4667
         \end{align*}
@@ -33,8 +33,8 @@ door een continue kansvariabele $X$ (in uren) met de volgende kansdichtheid:
     \answer{
         De verwachtingswaarde van de dagelijkse studietijd berekenen we met de algemene formule voor continue kansverdelingen:
         \begin{align*}
-            E[X]    &= \int_{-\infty}^{\infty} x \cdot f(x) dx \\
-                    &= \int_{3,00}^{4,00} x \cdot 0,40 dx + \int_{4,00}^{5,00} x \cdot 0,60 dx \\
+            E[X]    &= \int_{-\infty}^{\infty} x \cdot f(x)\ dx \\
+                    &= \int_{3,00}^{4,00} x \cdot 0,40\ dx + \int_{4,00}^{5,00} x \cdot 0,60\ dx \\
                     &= \textrm{fnInt}(0.40X; X; 3.00; 4.00) + \textrm{fnInt}(0.60X; X; 4.00; 5.00) \\
                     &= 4,1
         \end{align*}

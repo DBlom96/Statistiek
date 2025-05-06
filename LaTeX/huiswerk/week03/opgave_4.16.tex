@@ -8,13 +8,13 @@
     \answer{
         De verwachtingswaarde berekenen met de algemene formule voor continue kansverdelingen, namelijk:
         \[
-            E[X] = \int_{-\infty}^{\infty} x \cdot f(x) dx = \int_{0}^{5} x \cdot 0,2 dx = \textrm{fnInt}(0.2\cdot X; X; 0, 5) = 2,5.
+            E[X] = \int_{-\infty}^{\infty} x \cdot f(x)\ dx = \int_{0}^{5} x \cdot 0,2\ dx = \textrm{fnInt}(0.2\cdot X; X; 0; 5) = 2,5.
         \]
         Ook voor de variantie gebruiken we de algemene formule voor continue kansverdelingen, namelijk:
         \begin{align*}
-            \Var{X} &= \int_{-\infty}^{\infty} (x - E[X])^2 \cdot f(x) dx \\
-                    &= \int_{0}^{5} (x-2,5)^2 \cdot 0,2 dx \\
-                    &= \textrm{fnInt}(0.2(X-2.5)^2; X; 0, 5) \\
+            \Var{X} &= \int_{-\infty}^{\infty} (x - E[X])^2 \cdot f(x)\ dx \\
+                    &= \int_{0}^{5} (x-2,5)^2 \cdot 0,2\ dx \\
+                    &= \textrm{fnInt}(0.2(X-2.5)^2; X; 0; 5) \\
                     &\approx 2,0833.
         \end{align*}
     }
@@ -23,7 +23,7 @@
     \answer{
         De kans op \'e\'en keer een trekking groter dan 4 is gelijk aan 
         \[
-            P(X\ge 4) = \int_{4}^{\infty} f(x) dx = \int_{4}^{5} 0,2 dx = \textrm{fnInt}(0.2; X; 4; 5) = 0.2
+            P(X\ge 4) = \int_{4}^{\infty} f(x)\ dx = \int_{4}^{5} 0,2\ dx = \textrm{fnInt}(0.2; X; 4; 5) = 0.2
         \]
         De kans op tweemaal een trekking groter dan 4 is dan gelijk aan $0,2 \cdot 0,2 = 0,04$.
     }
