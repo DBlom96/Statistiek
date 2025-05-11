@@ -4,5 +4,9 @@
 }
 
 \answer{
-    
+    Het aantal studenten dat slaagt bij een bepaald tentamen is een binomiaal verdeelde kansvariabele $X$ met parameters $n = 150$ (aantal willekeurig gekozen studenten) en $p=0,6$ (de succeskans, kans op slagen).
+    De kans dat meer dan 100 studenten voor het tentamen slagen is gelijk aan 
+    \[
+        P(X>100) = P(X \ge 101) = 1 - P(X \le 100) = 1 - \text{binomcdf}(n=150; p=0,6; k=100) \approx 0,0389.
+    \]
 }

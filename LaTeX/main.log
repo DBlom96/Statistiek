@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.3.31)  6 MAY 2025 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.3.31)  8 MAY 2025 15:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -920,63 +920,41 @@ Package hyperref Info: Link coloring OFF on input line 11.
 [1
 
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (huiswerk/week03.tex
+{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (huiswerk/week04.tex
 
 [2
 
-] (huiswerk/week03/opgave_4.14.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+] (huiswerk/week04/opgave_6.4.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./figures/opg4.14a_1.png, id=16, 447.3513pt x 327.3831pt>
-File: ./figures/opg4.14a_1.png Graphic file (type png)
-<use ./figures/opg4.14a_1.png>
-Package pdftex.def Info: ./figures/opg4.14a_1.png  used on input line 38.
-(pdftex.def)             Requested size: 447.3502pt x 327.3823pt.
-<./figures/opg4.14a_2.png, id=18, 555.7563pt x 327.3831pt>
-File: ./figures/opg4.14a_2.png Graphic file (type png)
-<use ./figures/opg4.14a_2.png>
-Package pdftex.def Info: ./figures/opg4.14a_2.png  used on input line 38.
-(pdftex.def)             Requested size: 555.75494pt x 327.3823pt.
 
+[3]) (huiswerk/week04/opgave_6.5.tex) (huiswerk/week04/opgave_6.6.tex
 
-[3 <./figures/opg4.14a_1.png>]
+[4]) (huiswerk/week04/opgave_6.7.tex
 
-[4 <./figures/opg4.14a_2.png>]) (huiswerk/week03/opgave_4.15.tex
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 30.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
-File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
-)
+[5]) (huiswerk/week04/opgave_6.8.tex
+Overfull \hbox (85.84528pt too wide) detected at line 12
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X > \OT1/cmr/m/n/12 100) = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 101) = 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^T \OT1/cmr/m/n/12 100) = 1 \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = 150; \OML/cmm/m/it/12 p \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 6; \OML/cmm/m/it/12 k \OT1/cmr/m/n/12 = 100) \OMS/cmsy/m/n/12 ^^Y \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0389\OML/cmm/m/it/12 :
+ []
 
-[5]) (huiswerk/week03/opgave_4.16.tex
+) (huiswerk/week04/opgave_6.10.tex
 
-[6]) (huiswerk/week03/opgave_4.17.tex
-<./figures/opg4.17a.png, id=56, 411.2163pt x 327.3831pt>
-File: ./figures/opg4.17a.png Graphic file (type png)
-<use ./figures/opg4.17a.png>
-Package pdftex.def Info: ./figures/opg4.17a.png  used on input line 15.
-(pdftex.def)             Requested size: 411.21529pt x 327.3823pt.
-
+[6]) (huiswerk/week04/opgave_6.12.tex
 
 [7]
-Underfull \vbox (badness 1895) has occurred while \output is active []
+Overfull \hbox (2.79037pt too wide) in paragraph at lines 19--26
+[]\T1/bch/m/n/12 De ge-meente be-sluit ex-tra in-vor-de-rings-maat-re-ge-len te ne-men voor de niet-betalers
+ []
 
+) (huiswerk/week04/opgave_6.14.tex))
 
-
-[8 <./figures/opg4.17a.png>]) (huiswerk/week03/opgave_4.18.tex
-
-[9]
-
-[10]
-
-[11]))
-
-[12] (main.aux)
+[8] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
@@ -985,17 +963,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31266 strings out of 473901
- 627014 string characters out of 5726389
- 1950908 words of memory out of 5000000
- 53549 multiletter control sequences out of 15000+600000
- 590156 words of font info for 74 fonts, out of 8000000 for 9000
+ 31238 strings out of 473901
+ 626575 string characters out of 5726389
+ 1940908 words of memory out of 5000000
+ 53516 multiletter control sequences out of 15000+600000
+ 592769 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,12n,115p,525b,1207s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on main.pdf (12 pages, 218087 bytes).
+ 113i,12n,115p,525b,1196s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (8 pages, 125982 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

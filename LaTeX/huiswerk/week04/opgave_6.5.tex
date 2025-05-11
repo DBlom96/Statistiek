@@ -6,21 +6,36 @@ Bepaal met behulp van de tabel van de binomiale verdeling de kans dat de volgend
 \begin{enumerate}[label=(\alph*)]
     \item precies 10
     \answer{
-
+        Het aantal mensen in een steekproef van 15 personen met een of meer creditcards is een binomiaal verdeelde kansvariabele $X$ met parameters $n = 15$ (aantal personen) en $p = 0,7$ (succeskans / kans dat we iemand hebben gekozen die een of meer creditcards heeft).
+        De kans dat precies 10 van de 15 mensen een of meer creditcards heeft is gelijk aan
+        \[
+            P(X=10) = \text{binompdf}(n=15; p=0,7; k=10) \approx 0,2016
+        \]
     }
 
     \item precies 15
     \answer{
-
+        De kans dat alle 15 mensen in de steekproef een of meer creditcards heeft is gelijk aan
+        \[
+            P(X=15) = \text{binompdf}(n=15; p=0,7; k=15) \approx 0,0047
+        \]
     }
 
     \item meer dan 9
     \answer{
-
+        De kans dat meer dan 9 (dus minstens 10) van de 15 mensen in de steekproef een of meer creditcards heeft is gelijk aan
+        \begin{align*}
+            P(X > 9) = P(X \ge 10)  &= 1 - P(X \le 9) \\
+                                    &= 1 - \text{binomcdf}(n=15; p=0,7; k=9) \\
+                                    &\approx 0,7216
+        \end{align*}
     }
 
     \item minder dan 12
     \answer{
-        
+        De kans dat minder dan 12 (dus hoogstens 11) van de 15 mensen in de steekproef een of meer creditcards heeft is gelijk aan
+        \[
+            P(X < 12) = P(X \le 11) = \text{binomcdf}(n=15; p=0,7; k=11) \approx 0,7031
+        \]
     }
 \end{enumerate}

@@ -9,11 +9,19 @@
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat hiervan precies 8 donoren bloedgroep $A$ hebben?
     \answer{
-
+        Het aantal bloeddonoren met bloedgroep $A$ uit een groep van 30 donoren is een binomiaal verdeelde kansvariabele $X$ met parameters $n = 30$ (aantal donoren) en $p = 0,44$ (succeskans / kans op bloedgroep $A$).
+        De kans dat precies 8 van de 30 donoren bloedgroep $A$ hebben is gelijk aan
+        \[
+            P(X=8) = \text{binompdf}(n=30; p=0,44; k=8) \approx 0,0237
+        \]
     }
 
     \item Hoe groot is de kans dat \emph{binnen} de groep van 8 mensen met bloedgroep $A$ er twee zijn met bloedgroep $A-$?
     \answer{
-        
+        Het aantal donoren met bloedgroep $A-$ binnen een groep van 8 donoren met bloedgroep $A$ is een binomiaal verdeelde kansvariabele $Y$ met parameters $n=8$ en $p = \frac{36}{36+8}=\frac{36}{44}$.
+        De kans dat precies twee donoren binnen deze groep bloedgroep $A-$ heeft is gelijk aan
+        \[
+            P(Y=2) = \text{binompdf}(n = 8; p = \frac{36}{44}; k=2) \approx 0,0007
+        \]
     }
 \end{enumerate}

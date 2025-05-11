@@ -5,16 +5,27 @@ Een kandidaat die volstrekt niet weet wat hij moet antwoorden, kruist naar wille
 \begin{enumerate}[label=(\alph*)]
     \item Bereken de kans op respectievelijk nul, \'e\'en of twee antwoorden goed.
     \answer{
-
+        Laat $X$ de kansvariabele zijn die het aantal juiste antwoorden telt.
+        Dan geldt dat $X$ binomiaal verdeeld is met parameters $n=10$ (aantal ``kansexperimenten'', oftewel aantal examenvragen) en $p=\frac{1}{3}$ (succeskans / kans op het juiste antwoord)
+        De kansen op respectievelijk nul, \'e\'en of twee antwoorden goed zijn gelijk aan
+        \begin{align*}
+            P(X=0) = \text{binompdf}(n=10; p = \frac{1}{3}; k=0) &\approx 0,0174 \\
+            P(X=1) = \text{binompdf}(n=10; p = \frac{1}{3}; k=1) &\approx 0,0870 \\
+            P(X=2) = \text{binompdf}(n=10; p = \frac{1}{3}; k=2) &\approx 0,1955 \\
+        \end{align*}
     }
 
     \item Bereken de kans dat hij minstens zes antwoorden goed heeft.
     \answer{
-
+        De kans dat hij minstens zes antwoorden goed heeft is gelijk aan
+        \[
+            P(X \ge 6) = 1 - P(X \le 5) = 1 - \text{binomcdf}(n=10; p=\frac{1}{3}; k=5) \approx 0,0762
+        \]
     }
 
     \item Bereken de verwachtingswaarde van het aantal goede antwoorden.
     \answer{
-
+        De verwachtingswaarde van een binomiaal verdeelde kansvariabele $X \sim \text{Bin}(n; p)$ is gelijk aan $E[X]=n\cdot p$.
+        Aangezien in dit geval geldt dat $n=10$ en $p=\frac{1}{3}$, is de verwachtingswaarde van het aantal correcte antwoorden gelijk aan $E[X]=10\cdot \frac{1}{3} = \frac{10}{3}$.
     }
 \end{enumerate}
