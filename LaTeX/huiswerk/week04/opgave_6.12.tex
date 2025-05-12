@@ -8,20 +8,43 @@
     \item Bereken voor de dag met 800 parkeerbonnen de verwachtingswaarde en de standaarddeviatie van het aantal directe betalers.
     Stel dat voor deze specifieke dag op de uiterste betaaldatum 520 bekeurden hun boete hebben voldaan, is dat dan uitzonderlijk gegeven de betaalkans van 75\%?
     \answer{
-
+        Het aantal directe betalers kan worden ge\"interpreteerd als een binomiaal verdeelde kansvariabele met parameters $n = 800$ (aantal parkeerbonnen) en $p = 0,75$ (kans op directe betaling).
+        De verwachtingswaarde $E[X]$ en standaarddeviatie $\sigma(X)$ van deze kansvariabele zijn gelijk aan
+        \begin{align*}
+            E[X] &= n \cdot p = 800 \cdot 0,75 = 600 \\
+            \sigma(X) &= \sqrt{n\cdot p \cdot (1-p)} = \sqrt{800 \cdot 0,75 \cdot (1 - 0,75)} \approx 12,2474
+        \end{align*}
+        Om te bepalen om 520 directe betalers een uitzonderlijk aantal is, bepalen we de kans op hoogstens 520 directe betalers (merk op dat 520 een aantal standaarddeviaties onder de verwachtingswaarde ligt).
+        \[
+            P(X \le 520) = \text{binomcdf}(n=800; p=0,75; k=520) = 1,9170 * 10^{-10}
+        \]
+        Aangezien deze kans extreem klein is, is een aantal van 520 directe betalers uitzonderlijk laag.
     }
 
     \item Wat is het verwachte bedrag dat binnenkomt van een dag met 800 bekeurden en wat is de standaarddeviatie?
     \answer{
-        
+        Het bedrag dat binnenkomt op een dag met 800 bekeurden is een kansvariabele $B = 40\cdot X$.
+        Het verwachte bedrag dat binnenkomt is dus gelijk aan
+        \[
+            E[B] = E[40\cdot B] = 40 \cdot E[B] = 40 \cdot 600 = \text{\euro}24 000,
+        \]
+        en de standaarddeviatie is dus gelijk aan
+        \[
+            \sigma(B) = \sigma(40 \cdot B) = 40 \cdot \sigma(B) = 40 \cdot 12,2474 \approx \text{\euro}489,90
+        \]
     }
-
-    \item De gemeente besluit extra invorderingsmaatregelen te nemen voor de niet-betalers van de boete.
+    
+    \item De gemeente besluit extra invorderingsmaatregelen te nemen voor de niet- betalers van de boete.
     Zo'n actie kost 5 euro per niet-betaalde parkeerbon.
-    De boet is nu verhoogd naar 52 euro.
+    De boete is nu verhoogd naar 52 euro.
     Bekend is dat van deze groep 60\% daarna betaalt.
     Maak een kosten-batenanalyse van de extra maatregel.
     \answer{
-        
+        Stel dat deze extra maatregel ingevoerd zou worden.
+        Naar verwachting zijn er 600 directe betalers en dus 200 niet-directe betalers die deze maatregel gaan ervaren.
+        Het aantal betalers in tweede instantie, na intreding van de maatregel, is een binomiaal verdeelde kansvariabele $Y$ met parameters $n = 200$ en $p = 0,60$.
+        De verwachte opbrengst van deze groep is dus $200 \cdot 0,6 \cdot \text{\euro} 52 = \text{\euro} 6240$.
+        De verwachte kosten van deze maatregel zijn gelijk aan $200 \cdot \text{\euro} 5 = \text{\euro} 1000$.
+        Naar verwachting is het dus financieel zeer aantrekkelijk om de maatregel door te voeren.
     }
 \end{enumerate}

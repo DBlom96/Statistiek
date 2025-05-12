@@ -6,21 +6,22 @@
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat na een vlucht alle vier de motoren nog functioneren? En drie van de vier?
     \answer{
-        Het aantal motoren dat na een vlucht nog functioneren is een binomiaal verdeelde kansvariabele met parameters $n = 4$ (aantal motoren) en $p=1-0,005=0,995$ (succeskans, kans dat een motor nog functioneert).
-        De kans dat alle vier de motoren nog functioneren is gelijk aan
+        Het aantal motoren dat tijdens een vlucht uitvalt is een binomiaal verdeelde kansvariabele met parameters $n = 4$ (aantal motoren) en $p=0,005$ (in dit geval is het opnieuw vreemd om van een ``succeskans'' te spreken, kans op uitval van een motor).
+        De kans dat alle vier de motoren nog functioneren -- oftewel dat er geen een is uitgevallen -- is gelijk aan
         \[
-            P(X=4) = \text{binompdf}(n=4; p=0,995; k=4) \approx 0,9801.
+            P(X=0) = \text{binompdf}(n=4; p=0,005; k=0) \approx 0,9801.
         \]
-
     }
 
     \item Bereken de kans dat het vliegtuig neerstort?
     \answer{
-        Een vliegtuig stort neer als meer dan twee van de vier motoren uitvallen, oftewel dat maximaal \'e\'en motor nog functioneert.
-        De kans dat hoogstens \'e\'en motor nog functioneert na een vlucht is gelijk aan
-        \[
-            P(X \le 1) = \text{binomcdf}(n=4; p=0,995; k=1) \approx 4,9813 * 10^{-7}
-        \]
+        Een vliegtuig stort neer als strikt meer dan twee van de vier motoren uitvallen.
+        De kans dat meer dan twee motoren uitvallen tijdens een vlucht is gelijk aan
+        \begin{align*}
+            P(X > 2) = P(X \ge 3)   &=1 - P(X \le 2) \\
+                                    &=1 - \text{binomcdf}(n=4; p=0,005; k=2) \\
+                                    &\approx 4,9813 * 10^{-7}
+        \end{align*}
     }
 
     \item Van de motoren zijn er twee bevestigd aan de linkervleugel en twee aan de rechtervleugel.
@@ -29,14 +30,16 @@
     Bereken opnieuw de kans dat vliegtuig neerstort.
     Geef commentaar op het verschil met het antwoord op vraag b.
     \answer{
-        We kunnen in dit geval de situatie het best opsplitsen in twee binomiaal verdeelde kansvariabelen $X_{L}$ en $X_{R}$ die het aantal nog functionerende motoren telt aan respectievelijk de linker- en rechtervleugel.
-        Deze binomiaal verdeelde kansvariabelen hebben parameters $n = 2$ en $p = 0,995$.
-        Een vliegtuig stort alleen neer als \'e\'en van beide kansvariabelen een waarde van 0 aanneemt.
+        We kunnen in dit geval de situatie het best opsplitsen in twee binomiaal verdeelde kansvariabelen $X_{L}$ en $X_{R}$ die het aantal uitgevallen motoren telt aan respectievelijk de linker- en rechtervleugel.
+        Deze binomiaal verdeelde kansvariabelen hebben parameters $n = 2$ en $p = 0,005$.
+        Een vliegtuig stort neer als minstens \'e\'en van beide kansvariabelen de waarde van 2 aanneemt (beide motoren aan deze vleugel vallen uit).
         Dit gebeurt met kans
         \begin{align*}
-            P(X_{L} = 0 \text{ of } X_{R}=0)    &= 1 - P(X_{L} \ge 1 \text{ en } X_{R} \ge 1) \\
-                                                &= 1 - P(X_{L} \ge 1)\cdot P(X_{R} \ge 2) \\
-                                                &= 1 - \text{binomcdf}
+            P(X_{L} = 2 \text{ of } X_{R}=2)    &= 1 - P(X_{L} \le 1 \text{ en } X_{R} \le 1) \\
+                                                &= 1 - P(X_{L} \le 1)\cdot P(X_{R} \le 1) \\
+                                                &= 1 - \text{binomcdf}(n=2; p=0,005; k=1)^2 \\
+                                                &\approx 4,9999 * 10^{-5}
         \end{align*}
+        Zoals je ziet is deze kans groter dan de kans die we bij (b) hebben berekend. De reden hiervoor is dat bij (b) het geval op twee uitvallende motoren aan eenzelfde vleugel niet is meegenomen als scenario waarbij het vliegtuig zal neerstorten. 
     }
 \end{enumerate}
