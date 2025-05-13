@@ -1,0 +1,15 @@
+\question{5.m3}{Voor de populatie van mannelijke economiestudenten is bekend dat het lichaamsgewicht kan worden beschreven door middel van een normaal verdeelde kansvariabele $X$ met $\mu=75$ kilogram en een standaarddeviatie van $6$ kilogram.
+Hieruit volgt dat het percentage studenten van deze populatie dat een gewicht van meer dan $85$ kilogram heeft ongeveer bedraagt:}
+\begin{enumerate}[label=(\alph*)]
+    \item $95,2$
+    \item $66$
+    \item $34$
+    \item $4,8$
+\end{enumerate}
+\answer{Om dit percentage te berekenen, maken we gebruik van de functie \text{normalcdf} op de grafische rekenmachine.
+In het bijzonder geldt namelijk dat de kans op een gewicht van meer dan $85$ kilogram gelijk is aan:
+\[
+    P(X > 85) = \text{normalcdf}(a=85; b=10^{10}; \mu=75; \sigma=6) \approx 0,0478.
+\]
+Met ongeveer $4,78\%$ kans heeft een economiestudent een gewicht van meer dan $85$ kilogram. Het juiste antwoord is dus (d).
+}

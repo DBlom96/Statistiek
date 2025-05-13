@@ -1,0 +1,24 @@
+\question{5.m5}{Voor een speerwerper geldt dat het resultaat van een worp $X$ kan worden beschreven door een normale verdeling met $\mu=61$ meter en $\sigma=3$ meter.
+De speerwerper doet drie pogingen, waarvoor mag worden verondersteld dat de worpresultaten kunnen worden beschouwd als onderling onafhankelijke kansvariabelen.
+De kans dat het gemiddelde resultaat van de drie worpen minder is dan 59 meter, is ongeveer gelijk aan ...}
+\begin{enumerate}[label=(\alph*)]
+    \item $0,35$.
+    \item $0,255$.
+    \item $0,125$.
+    \item $0,745$.
+\end{enumerate}
+\answer{Aangezien de originele verdeling de normale verdeling is, volgt uit de centrale limietstelling dat de kansverdeling van het gemiddelde $\overline{X}$ van deze drie worpen van de speerwerper gelijk is aan de normale verdeling met verwachtingswaarde $\mu = 61$ meter en standaarddeviatie $\frac{\sigma}{\sqrt{3}} = \sqrt{3}$ meter.
+De kans dat het gemiddelde resultaat van de drie worpen minder is dan 59 meter is gelijk aan:
+\[
+    P(\overline{X} \le 59) = \text{normalcdf}(a=-10^{10}; b=59; \mu=61; \sigma=\sqrt{3}) \approx 0,1241.
+\]
+Het juiste antwoord is dus (c).
+In de grafische rekenmachine kun je in het functiescherm het volgende invullen:
+\begin{align*}
+    y_1 &= \text{normalcdf}(-10^{10}; 15,5; x; 9) \\
+    y_2 &= 0,3085
+\end{align*}
+De optie intersect (2nd-TRACE-5) geeft in dat geval een snijpunt voor $x = 20,0010$.
+Dit betekent dat $\mu$ een waarde van ongeveer 20 heeft.
+Het juiste antwoord is dus (c).
+}

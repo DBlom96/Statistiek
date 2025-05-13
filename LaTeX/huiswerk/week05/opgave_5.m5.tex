@@ -1,0 +1,22 @@
+\question{5.m5}{Van een normaal verdeelde kansvariabele $X$ is gegeven dat deze een standaarddeviatie heeft die gelijk is aan 9.
+Verder is gegeven dat $P(X < 15,5) = 0,3085$.
+De waarde van $\mu$ van deze variabele is dan ...}
+\begin{enumerate}[label=(\alph*)]
+    \item $16$
+    \item $17$
+    \item $20$
+    \item $11$
+\end{enumerate}
+\answer{In dit geval willen we bepalen wat de waarde van $\mu$ is zodanig dat geldt:
+\[
+    \text{normalcdf}(a=-10^{10}; b=15,5; \mu=?; \sigma=9) = 0,3085.
+\]
+In de grafische rekenmachine kun je in het functiescherm het volgende invullen:
+\begin{align*}
+    y_1 &= \text{normalcdf}(-10^{10}; 15,5; x; 9) \\
+    y_2 &= 0,3085
+\end{align*}
+De optie intersect (2nd-TRACE-5) geeft in dat geval een snijpunt voor $x = 20,0010$.
+Dit betekent dat $\mu$ een waarde van ongeveer 20 heeft.
+Het juiste antwoord is dus (c).
+}

@@ -1,0 +1,18 @@
+\question{5.m4}{Het aantal jaarlijkse reiskilometers aan woon-werkverkeer per auto is voor de werknemers van een groot concern nauwkeurig geregistreerd.
+Het bleek hierbij dat dit aantal goed kon worden beschreven door een normale verdeling met $\mu=8 000$ kilometer en $\sigma = 2 500$.
+Op basis van deze verdeling kan worden vastgesteld dat de $10\%$ werknemers die het grootste aantal woon-werkkilometers maken, per jaar per persoon meer reizen dan ongeveer ...}
+\begin{enumerate}[label=(\alph*)]
+    \item $8 000$ km.
+    \item $10 500$ km.
+    \item $11 200$ km.
+    \item $12 100$ km.
+\end{enumerate}
+\answer{In dit geval willen we een grenswaarde berekenen, dus moeten we gebruik maken van de functie \text{invNorm} op de grafische rekenmachine.
+Noteer met $X$ de normaal verdeelde kansvariabele die het aantal woon-werkkilometers van een willekeurige werknemer beschrijft. 
+In het bijzonder geldt dat de grenswaarde $g$ van het aantal kilometers zodat $10\%$ van de werknemers meer dan $g$ km per persoon per jaar reizen gelijk is aan:
+\begin{align*}
+    P(X > g) = 0,10 \rightarrow g   &= \text{invNorm}(opp=1 - 0,10=0,90; \mu=8 000; \sigma= 2 500) \\
+                                    &\approx 11204\ km.
+\end{align*}
+Het juiste antwoord is dus (c).
+}
