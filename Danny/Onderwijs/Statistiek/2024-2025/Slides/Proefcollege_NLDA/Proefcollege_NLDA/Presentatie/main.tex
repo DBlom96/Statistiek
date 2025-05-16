@@ -1,0 +1,168 @@
+\documentclass{beamer}
+\RequirePackage{preamble}
+
+\title{Presentatie KMA}
+\date[26-03-2024]{March 26th, 2024}
+\author[Danny Blom]{Danny Blom}
+
+\usetheme{kep}
+
+\newcommand{\hospitals}{\mathcal{H}}
+\newcommand{\exchanges}{\mathcal{E}}
+
+\begin{document}
+              
+\begin{frame}
+    \maketitle 
+\end{frame}
+
+\begin{frame}{Kidney exchange}
+    \input{./TeX-files/VoorbeeldKidneyExchange.tex}
+    \vskip6cm%
+    \onslide<+->{
+        Hoe kies je `exchanges' om het aantal transplantaties te maximaliseren?
+    }
+\end{frame}
+
+\begin{frame}{Een breed en divers onderzoeksveld}
+    \input{./TeX-files/clouds.tex}
+\end{frame}
+
+\begin{frame}{Samenwerkingen in kidney exchange}
+\vspace{-3cm}%
+\textbf{Realiteit:} veel \emph{kidney exchange programmas} worden door een individueel ziekenhuis / transplantatiecentrum beheerd.
+\vskip5pt%
+
+\onslide<4->{
+    \textbf{Idee: } samenvoegen van pools van verschillende programma's!
+}
+
+\onslide<2->
+{
+
+    \vskip10pt%
+    \input{./TeX-files/Collaboration.tex}
+}
+
+\end{frame}
+
+\begin{frame}{Issues van samengevoegde pools}
+	\vspace{1ex}
+	\begin{itemize}
+		\item Ziekenhuizen hebben conflicterende doelen
+		\begin{itemize}
+			\item bv., voornamelijk ge\"interesseerd in hun eigen pati\"enten
+		\end{itemize}
+		\item Mogelijk minder transplantaties voor een ziekenhuis na samenvoeging
+	\end{itemize}
+	\vspace{.5cm}
+	\begin{enumerate}
+		\item Onafhankelijke authoriteit: voorstel van exchanges
+		\item Ziekenhuizen: voorstel accepteren / aanpassen
+	\end{enumerate}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.7]{./Figures/Pictures/PartialReject.pdf}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}{Nieuw samenwerkingsmodel}	
+\textbf{Idee:} voorstel van exchanges dat ieder ziekenhuis zal accepteren
+\vspace{1.5cm}
+\begin{enumerate}
+	\setlength\itemsep{2em}
+	\item Multi-objective optimization
+	\begin{enumerate}[(a)]
+		\item maximaliseer het aantal transplantaties binnen de pool van ieder ziekenhuis
+		\item maximaliseer het totaal aantal transplantaties
+
+	\end{enumerate}
+	\item Exact optimization
+	\begin{enumerate}[(a)]
+		\item maximaliseer het totaal aantal transplant
+		\item zodanig dat geen enkel ziekenhuis het voorstel wil aanpassen
+	\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Implementatie \& resultaten}
+	\begin{itemize}
+		\setlength\itemsep{1em}
+		\item Multi-objective optimization
+		\begin{itemize}
+			\item Losse MILPs voor ieder ziekenhuis
+			\item Voeg beperkingen toe die optimaliteit van het primaire doel forceren
+		\end{itemize}
+		\item Exact optimization: twee-staps optimalisatie
+		\begin{itemize}
+			\item MIBLP formulering
+			\item Cutting plane algoritme op de \emph{high-point relaxation}
+		\end{itemize}
+		\item Beide algoritmes ge\"implementeerd in C++ / CPLEX
+		\item Significant meer transplantaties (tot wel 15\% voor realistische programma's)
+		\item Schaalbaar algoritme
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \Huge\centering Vragen? 
+\end{frame}
+
+\begin{frame}{Twee-staps optimalisatiemodel}
+	\textbf{Parameters:}
+	\begin{itemize}
+		\item $\hospitals$ \hfill ziekenhuis
+		\item $V^{h}$ \hfill incompatibele paren van ziekenhuis $h \in \hospitals$
+		\item $\exchanges$ \hfill exchanges
+		\item $\exchanges^{h}$ \hfill exchanges binnen de pool van ziekenhuis $h$
+		\item $\exchanges^{0}$ \hfill exchanges verspreid over meerdere pools
+		\item $w_{e}, w_{e}^{h}$ \hfill waarde van exchange $e$ / voor ziekenhuis $h$
+	\end{itemize}
+	\vspace{1cm}
+	\textbf{Variabelen:}
+	\begin{itemize}
+		\item $x_{e} \in \{0,1\}$ \hfill OA selecteert exchange $e$ wel of niet?
+		\item $y_{e}^{h} \in \{0,1\}$ \hfill Ziekenhuis $h$ selecteert exchange $e$ wel of niet?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Twee-staps optimalisatiemodel}
+\vspace{1.5ex}
+{\small
+	\textbf{Stap 1}
+	\begin{align}
+		z^{*} = \max_{\vec{x}}~& \sum_{e \in \exchanges} w_{e} x_{e}		 							& \label{obj:upper-level} 				 					\\
+		\textrm{s.t.}~& \sum_{e \in \exchanges(v)} y_{e}^{h} 			 \le 1, 					& v \in V \label{con:upper-level:packing} 					\\
+		~& \sum_{e \in \exchanges} w_{e}^{h} x_{e} \ge \Phi^{h}(\vec{x}), & h \in \hospitals \label{con:upper-level:shared} \\
+		~&y_{e}^{h}	\in \{0,1\}. & e \in \exchanges, h \in \hospitals \label{var:upper-level}										
+	\end{align}
+
+	\textbf{Stap 2:}
+	\begin{align}
+		\Phi^{h}(\vec{x}) = \max_{\vec{y}}~& \sum_{e \in \exchanges} w_{e}^{h} y_{e}^{h} & \label{obj:lower-level} \\
+		\textrm{s.t.}~& \sum_{e \in \exchanges(v)} y_{e}^{h} \le 1, & v \in V \label{con:lower-level:packing} \\
+		~& y_{e}^{h} \le x_{e}, & e \in \exchanges^{0} \label{con:lower-level:shared} \\
+		~&y_{e}^{h}	\in \{0,1\}. & e \in \exchanges, h \in \hospitals \label{var:lower-level}										
+	\end{align}
+}
+	
+\end{frame}
+
+\begin{frame}{MILP reformulering}
+
+	$\beta(S^{h})$: \hfill max. waarde van exchanges van de subpool $S^{h} \subseteq V^{h}$
+	\vfill\textbf{Reformulering}
+	\begin{align}
+		z^{*} = \max_{\vec{x}}~& \sum_{e \in \exchanges} w_{e} x_{e} & \label{obj:single-level} \\
+		\textrm{s.t.}~& \sum_{e \in \exchanges(v)} x_{e} \le 1, & v \in V \label{con:single-level:packing} 					\\
+		~& \sum_{e \in \bigcup\limits_{v \in S^{h}} \exchanges(v)} w_{e}^{h} x_{e} \ge \beta(S^{h}), & h \in \hospitals, S^{h} \subseteq V^{h} \label{con:single-level:subsets} \\
+		~&x_{e}	\in \{0,1\}. & e \in \exchanges \label{var:single-level}										
+	\end{align}
+\end{frame}
+
+\begin{frame}
+	\Huge\centering Vragen? 
+\end{frame}
+\end{document}

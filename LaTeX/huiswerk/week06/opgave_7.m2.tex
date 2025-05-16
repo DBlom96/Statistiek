@@ -1,0 +1,15 @@
+\question{7.m2}{Het aantal noodlandingen op een bepaalde luchthaven mag worden beschouwd als een kansvariabele met een Poissonverdeling waarbij $\mu=0,5$ per maand.
+De kans dat in een willekeurige periode van zes maanden precies drie noodlandingen plaatsvinden, bedraagt dus $\ldots$}
+\begin{enumerate}[label=(\alph*)]
+    \item $1,000$.
+    \item $0,224$.
+    \item $0,013$.
+    \item ongeveer $0,455$.
+\end{enumerate}
+\answer{We bekijken een interval van zes maanden met een tijdseenheid van een maand, dus $t=6$.
+Het aantal noodlandingen in zes maanden kan dus worden beschouwd als een Poissonverdeelde kansvariabele $X \sim \text{Poisson}(\lambda=0,5\cdot 6) = \text{Poisson}(\lambda=3)$}
+De kans op precies drie noodlandingen in zes maanden is gelijk aan
+\[
+    P(X=3) = \poissonpdf(\lambda=3; k=3) \approx 0,2240.
+\]
+Het juiste antwoord is dus (b).

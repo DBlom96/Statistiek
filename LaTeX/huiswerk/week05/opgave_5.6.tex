@@ -1,15 +1,50 @@
-\question{5.6}{De gewichten van appels uit een grote partij blijken normaal verdeeld te zijn met $\mu=100$ g en $\sigma=20$ g.
-We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel appels bevatten.
-}
+\question{5.6}{De gewichten van appels uit een grote partij blijken normaal verdeeld te zijn met $\mu=100$ gram en $\sigma=20$ gram.
+We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel appels bevatten.}
 
 \begin{enumerate}[label=(\alph*)]
     \item Wat is de klassengrens van de $20\%$ appels met het geringste gewicht?
     \answer{
-
+        Laat $X$ de normaal verdeelde kansvariabele zijn die het gewicht van een appel uit een grote partij meet.
+        Er geldt dus $X \sim N(\mu=100; \sigma=20)$.
+        Je wilt de appels opdelen in vijf gewichtsklassen die elk evenveel appels bevatten, d.w.z. dat de kans dat een appel in een bepaalde gewichtsklasse zit moet gelijk zijn voor elke gewichtsklasse. 
+        Er zijn vijf klassen dus die kans is telkens $\frac{1}{5}=0,2$.
+        De klasse met de $20\%$ lichtste appels loopt van $-\infty$ tot $g_1$ voor een bepaald gewicht $g_1$ en er geldt $P(X<g_1)=0,2$.
+        Dat betekent dus dat
+        \[
+            g_1 = \invnorm(opp=0,2; \mu=100; \sigma=20) \approx 83,1676 \text{ g}.
+        \]
     }
 
     \item Bepaal ook de andere klassengrenzen?
     \answer{
+        Om de overige klassengrenzen te bepalen, gebruiken we soortgelijke berekeningen.
+        Voor de tweede klassegrens $g_2$ geldt 
+        \[
+            P(g_1 < X < g_2) = 0,2
+        \]
+        Omdat voor $g_1$ geldt dat $P(X < g_1) = 0,2$, geldt nu dat:
+        \[
+            P(X < g_2) = P(X < g_1) + P(g_1 < X < g_2) = 0,2 + 0,2 = 0,4.
+        \]
+        We kunnen de tweede klassegrens dus bepalen als volgt:
+        \[
+            g_2 = \invnorm(opp=0,4; \mu=100; \sigma=20) \approx 94,9331 \text{ g}.
+        \]
+        Op een soortgelijke manier vinden we $g_3$ en $g_4$:
+        \begin{align*}
+            g_3 &= \invnorm(opp=0,6; \mu=100; \sigma=20) \approx 105,0669 \text{ g}. \\
+            g_4 &= \invnorm(opp=0,8; \mu=100; \sigma=20) \approx 116,8324 \text{ g}.
+        \end{align*}
 
+        \textbf{LET OP:} de eerste klasse loopt van $-\infty$ tot $g_1$.
+        Aangezien appels geen negatief gewicht kunnen hebben lijkt dit raar.
+        Dit is echter een gevolg van de aanname dat we met een normale verdeling werken, die alle re\"ele getallen als uitkomst kan hebben.
+        De kans op een appel met een negatief gewicht is echter bijzonder klein.
+        De $z$-score is gelijk aan $z = \frac{0-100}{20} = -5$, dus
+        \begin{align*}
+            P(X < 0)    &= P(Z < -5) \\
+                        &=\text{normalcdf}(a=-10^10; b=-5; \mu=0;\sigma=1) \\
+                        &= 2,8711 \cdot 10^{-7}
+        \end{align*}
     }
 \end{enumerate}

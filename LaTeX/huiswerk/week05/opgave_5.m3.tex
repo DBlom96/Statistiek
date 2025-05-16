@@ -6,10 +6,17 @@ Hieruit volgt dat het percentage studenten van deze populatie dat een gewicht va
     \item $34$
     \item $4,8$
 \end{enumerate}
-\answer{Om dit percentage te berekenen, maken we gebruik van de functie \text{normalcdf} op de grafische rekenmachine.
-In het bijzonder geldt namelijk dat de kans op een gewicht van meer dan $85$ kilogram gelijk is aan:
+\answer{Om dit percentage te berekenen, berekenen we eerst de $z$-score behorende bij $x = 85$:
 \[
-    P(X > 85) = \text{normalcdf}(a=85; b=10^{10}; \mu=75; \sigma=6) \approx 0,0478.
+    z = \frac{x-\mu}{\sigma} = \frac{85-75}{6} \approx 1,6667
 \]
+
+maken we gebruik van de functie \text{normalcdf} op de grafische rekenmachine.
+In het bijzonder geldt namelijk dat de kans op een gewicht van meer dan $85$ kilogram gelijk is aan:
+\begin{align*}
+    P(X > 85)   &= P(Z > 1,6667) \\
+                &= \text{normalcdf}(a=1,6667; b=10^{10}; \mu=0; \sigma=1) \\
+                &\approx 0,0478.
+\end{align*}
 Met ongeveer $4,78\%$ kans heeft een economiestudent een gewicht van meer dan $85$ kilogram. Het juiste antwoord is dus (d).
 }

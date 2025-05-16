@@ -1,0 +1,59 @@
+\question{5.12}{De tijd die een vertegenwoordiger nodig heeft voor het bezoeken van een klant wordt weergegeven door de kansvariabele $X$.
+Op grond van ervaring is bekend dat $X$ normaal verdeeld is met $\mu = 45$ minuten en $\sigma=10$ minuten (in de tijdsduur $X$ is ook de reistijd opgenomen).
+De tijdsduren van bezoeken zijn onderling onafhankelijk.}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Hoe groot is de kans dat een willekeurig bezoek meer dan 60 minuten vergt?
+    \answer{
+        Gegeven is dat de tijdsduur $X \sim N(\mu=45; \sigma=10)$.
+        De kans dat een willekeurig bezoek meer dan $60$ minuten vergt is dus $P(X > 60)$.
+
+        De $z$-score van $x=60$ gegeven $X \sim N(\mu=45; \sigma=10)$ is gelijk aan:
+        \[
+            z = \frac{x-\mu}{\sigma}=\frac{60-45}{10} = 1,5.
+        \]
+        
+        Hierdoor geldt dus
+        \begin{align*}
+            P(X > 60)   &= P(Z > 1,5) \\
+                        &= \normalcdf(a=1,5; b=10^{10}; \mu=0; \sigma=1) \\
+                        &\approx 0,0668.
+        \end{align*}
+        Met $6,68\%$ kans vergt een willekeurig bezoek meer dan 60 minuten.
+    }
+    
+    \item Hoe groot is de kans dat acht bezoeken meer dan $6\frac{1}{2}$ uur vergen?
+    \answer{
+        Laat nu $X_i$ de kansvariabelen zijn die de tijd van het bezoek aan klant $i = 1,2,\ldots,8$ meet.
+        Volgens de centrale limietstelling geldt dat de som $\sum X = X_1 + X_2 + \ldots + X_8$ normaal verdeeld is met gemiddelde $n \cdot \mu = 8 \cdot 45 = 360$ minuten en standaardafwijking $\sigma \cdot \sqrt{n} = 10 \cdot \sqrt{8} \approx 28,2843$.
+
+        De $z$-score van $x = 390$ ($6\frac{1}{2}$ uur $=$ $390$ minuten) gegeven $\sum X \sim N(360; 28,2843)$ is gelijk aan
+        \[
+            z = \frac{x-\mu}{\sigma} = \frac{390-360}{28,2843} \approx 1,0607
+        \]
+        De kans dat acht bezoeken meer dan $6\frac{1}{2}$ uur vergen is gelijk aan:
+        \begin{align*}
+            P(\sum X > 390)     &= P(Z > 1,0607) \\
+                                &= \normalcdf(a=1,0607; b=10^{10}; \mu=0; \sigma=1) \\
+                                &\approx 0,1444
+        \end{align*}
+        Met $14,44\%$ kans zullen de acht bezoeken in totaal meer dan $6\frac{1}{2}$ uur vergen.
+    }
+
+    \item De vertegenwoordiger moet op een zekere dag tien klanten bezoeken. Hoeveel tijd $T$ moet hij reserveren om met $95\%$ kans de tien bezoeken binnen de tijdsduur $T$ te kunnen afhandelen?
+    \answer{
+        Laat nu $X_i$ de kansvariabelen zijn die de tijd van het bezoek aan klant $i = 1,2,\ldots,10$ meet.
+        Volgens de centrale limietstelling geldt dat de som $\sum X = X_1 + X_2 + \ldots + X_8$ normaal verdeeld is met gemiddelde $n \cdot \mu = 10 \cdot 45 = 450$ minuten en standaardafwijking $\sigma \cdot \sqrt{n} = 10 \cdot \sqrt{10} \approx 31,6228$.
+
+        We willen nu de grens $T$ berekenen waarvoor geldt dat $P(\sum X \le T) = 0,95$.
+        De bijbehorende $z$-score is
+        \[
+            P(Z\le z) = 0,95 \rightarrow z = \invnorm(opp=0,95; \mu=0; \sigma=1) \approx 1,6449.
+        \]
+        Terugrekenen naar de bijbehorende uitkomst $T$ voor de kansverdeling $N(450; 31,6228)$ van $\sum X$ geeft:
+        \[
+            T = \mu + z \cdot \sigma = 450 + 1,6449 \cdot 31,2668 \approx 502,0148.
+        \]
+        De vertegenwoordiger moet meer dan $8$ uur en $22$ minuten reserveren om de tien bezoeken mete $95\%$ kans binnen de tijd af te kunnen handelen.
+    }
+\end{enumerate}

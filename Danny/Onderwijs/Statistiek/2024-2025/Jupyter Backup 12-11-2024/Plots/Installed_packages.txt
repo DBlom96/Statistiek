@@ -1,0 +1,14 @@
+Go to [+] button on the top.
+Go to "Terminal"
+Create a new environment with "create-env <environment name>"
+Activate environment with "source activate <environment name>"
+Install packages that you need for your purposes with "conda install <package name>"
+
+Installed packages:
+- numpy
+- pandas
+- matplotlib
+- gurobipy
+- pytest
+- seaborn
+- sklearn

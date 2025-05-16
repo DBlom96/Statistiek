@@ -1,0 +1,31 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[overlay, remember picture,scale=0.9]
+        \tikzstyle{arc}=[-stealth, dashed, thin, shorten >=2pt, shorten <=2pt];
+        \tikzstyle{arcbend}=[arc, bend right=10];
+        \tikzstyle{usedarc}=[arc, solid, very thick];
+        \tikzstyle{usedarcbend}=[usedarc, bend right=10];
+        
+        \tikzstyle{bluenode}=[draw=blue, fill=blue!30, circle];
+        \tikzstyle{rednode}=[draw=red, fill=red!30, circle];
+        
+        % BLUE AND RED VERTICES, AND INTERNAL ARCS
+        \onslide<+->{
+            % \node (bluehospital) at ($(current page.north west)+(.3\paperwidth, -4.5)$) {\includegraphics[scale=0.8]{Figures/Pictures/blue_hospital.pdf}};
+            % \node (redhospital) at ($(current page.north west)+(0.7\paperwidth, -4.5)$) {\includegraphics[scale=0.8]{Figures/Pictures/red_hospital.pdf}};
+            \node (bluehospital) at (-1, 0) {\includegraphics[scale=0.8]{Figures/Pictures/blue_hospital.pdf}};
+            \node[right of=bluehospital] (redhospital) at (1,0) {\includegraphics[scale=0.8]{Figures/Pictures/red_hospital.pdf}};
+
+            \node[bluenode, label=left:{$p_{1}$}] (v1) at ($(bluehospital)-(0,2)$) {};
+            \node[bluenode, label=left:{$p_{2}$}] (v2) at ($(bluehospital)-(0,4)$) {};
+            \node[rednode, label=right:{$p_{A}$}] (vA) at ($(redhospital)-(0,2)$) {};
+            \node[rednode, label=right:{$p_{B}$}] (vB) at ($(redhospital)-(0,4)$) {};
+
+            \draw[arcbend] (v1) to (v2);
+            \draw[arcbend] (v2) to (v1);
+            \draw[arc] (vA) to (vB);
+            \draw[arc] (vB) to (v1);
+            \draw[arc] (v1) to (vA);
+        }   
+    \end{tikzpicture}
+\end{figure}

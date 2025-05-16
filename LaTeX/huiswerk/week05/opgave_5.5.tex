@@ -4,15 +4,41 @@ Deze kan worden beschouwd als een normaal verdeelde variabele $X$ met $\mu=120$ 
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat een servicebeurt meer dan 150 minuten vergt?
     \answer{
-
+        De $z$-score die hoort bij een uitkomst van $x=150$ minuten is gelijk aan:
+        \[
+            z = \frac{x-\mu}{\sigma} = \frac{150 - 120}{20} = 1,5
+        \]
+        De kans dat een servicebeurt meer dan 150 minuten vergt is dan gelijk aan:
+        \begin{align*}
+            P(X > 150)  &= P(Z > 1,5) \\
+                        &= \text{normalcdf}(a=1,5; b=10^{10}; \mu=0;\sigma=1) \\
+                        &\approx 0,0668
+        \end{align*}
     }
 
     \item Een klant komt zijn auto brengen voor service.
     De werkzaamheden gaan onmiddellijk beginnen.
-    De garagehouder zegt tegen de klant: ``Komt u over $X$ minuten maar terug.''.
-    Hoe groot moet $X$ worden gekozen als we eisen dat de klant minder dan $5\%$ kans wil hebben dat hij nog moet wachten als hij zich na $X$ minuten weer meldt bij de garage?
+    De garagehouder zegt tegen de klant: ``Komt u over $x$ minuten maar terug''.
+    Hoe groot moet $x$ worden gekozen als we eisen dat de klant minder dan $5\%$ kans wil hebben dat hij nog moet wachten als hij zich na $X$ minuten weer meldt bij de garage?
     En hoe zit dat bij $1\%$ kans?
     \answer{
-
+        De klant heeft minder dan $5\%$ kans om nog te moeten wachten als hij terugkomt bij de garage na $x$ minuten als geldt:
+        \[
+            P(X > x) < 0,05 \rightarrow P(X \le x) > 1 - 0,05 = 0,95
+        \]
+        We willen dus een grenswaarde bepalen, en dat kunnen we doen met de functie InvNorm:
+        \[
+            x = \text{InvNorm}(opp=0,95; \mu=120; \sigma=20) \approx 152,8971 \text{ minuten}.
+        \]  
+        In het geval van minder dan $1\%$ is de berekening op een soortgelijke manier te maken, namelijk:
+        \[
+            P(X > x) < 0,01 \rightarrow P(X \le x) > 1 - 0,01 = 0,99 
+        \]
+        We willen dus een grenswaarde bepalen, en dat kunnen we doen met de functie InvNorm:
+        \[
+            x = \text{InvNorm}(opp=0,99; \mu=120; \sigma=20) \approx 166,5270 \text{ minuten}.
+        \]  
     }
+    
+
 \end{enumerate}

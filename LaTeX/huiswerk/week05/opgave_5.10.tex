@@ -6,12 +6,21 @@ Het $98$-ste percentiel van een verdeling is het punt op de $x$-as waarboven zic
 \begin{enumerate}[label=(\alph*)]
     \item Welke $x$-waarde geeft hier het $98$-ste percentiel aan?
     \answer{
-
+        Gegeven is dat de hoeveelheid cholesterol (in mg) per buisje bloed wordt gegeven door $X \sim N(\mu=5,20; \sigma=0,9)$.
+        Percentielen kunnen we berekenen met behulp van de functie InvNorm.
+        Voor het $98$-ste percentiel gebruiken we als oppervlakte $0,98$:
+        \[
+            x = \invnorm(opp=0,98; \mu=5,20; \sigma=0,9) \approx 7,0484 \text{ mg.}
+        \]
     }
 
     \item Hoeveel standaarddeviaties ligt dat punt verwijderd van het gemiddelde van $5,20$ mg.
     \answer{
-
+        Om te bepalen hoeveel standaarddeviaties $x$ verwijderd ligt van het gemiddelde $5,20$ mg, moeten we de $z$-score berekenen:
+        \[
+            z = \frac{x-\mu}{\sigma} = \frac{7,0484 - 5,20}{0,9} \approx 2,0537.
+        \]
+        De waarde $x \approx 7,0484$ mg ligt dus meer dan 2 standaarddeviaties boven het gemiddelde $\mu=5,20$ mg.
     }
 
     \item In een gemeente wordt een bevolkingsonderzoek gehouden naar het cholesterolgehalte.
@@ -19,13 +28,21 @@ Het $98$-ste percentiel van een verdeling is het punt op de $x$-as waarboven zic
     Mensen met een cholesterolwaarde boven het $98$-ste percentiel worden voor nader onderzoek opgeroepen.
     Hoeveel personen krijgt naar verwachting een oproep?
     \answer{
-
+        Per definitie van percentielen, geldt dat $2\%$ van de bevolking een cholesterolwaarde heeft boven het $98$-ste percentiel.
+        In een groep van $8 500$ personen verwacht je dus dat $0,02 \cdot 8500 = 170$ mensen een oproep zullen krijgen.
     }
 
     \item Voor een willekeurig persoon uit de groep $50$-plussers bepalen we het cholesterolgehalte.
     Noem deze uitkomst $y$.
-    Wat is het twee-sigmagebied voor $Y$? en het drie-sigmagebied?
+    Wat is het twee-sigmagebied voor $y$? en het drie-sigmagebied?
     \answer{
-
+        Het twee-sigmagebied voor $y$ is het gebied tot maximaal 2 standaarddeviaties van het gemiddelde, oftewel het interval tussen $\mu - 2 \cdot \sigma$ en $\mu + 2 \cdot \sigma$.
+        Er geldt dat:
+        \begin{align*}
+            \mu - 2 \cdot \sigma &= 5,20 - 2 \cdot 0,9 = 3,40 \\
+            \mu + 2 \cdot \sigma &= 5,20 + 2 \cdot 0,9 = 7,00 \\
+        \end{align*}
+        Het twee-sigmagebied loopt dus van $3,40$ tot $7,00$.
+        Op een soortgelijke manier vinden we dat het drie-sigmagebied loopt van $2,50$ tot $7,90$.
     }
 \end{enumerate}

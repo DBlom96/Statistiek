@@ -1,0 +1,142 @@
+\def\xcoords{{2.0, 4.5, 3.5, 7.0, 5.2, 3.5, 1.7, 4.0, 7.0}}
+\def\ycoords{{7.2, 6.9, 9.0, 9.5, 5.6, 4.7, 2.9, 1.8, 3.8}}
+\def\labelpos{{225, 80, 90, 45, 285, 180, 225, 270, 315}}
+\def\scale{0.5}
+\def\offset{8}
+
+\begin{center}
+    \begin{tikzpicture}[remember picture]
+    \tikzstyle{vertex} = [circle, draw=blue, fill=blue!30]
+    \tikzstyle{arc} = [very thin, draw, dashed, -stealth]
+    \tikzstyle{arcbend} = [arc, bend right = 10]
+    \tikzstyle{usedarc} = [arc, very thick, solid]
+    \tikzstyle{usedarcbend}=[usedarc, bend right=10]   
+    \tikzstyle{cross} = [cross out, draw=red, 
+         minimum size=2*(#1-\pgflinewidth), 
+         inner sep=0pt, outer sep=0pt]
+        
+    % Draw instance with proposed solution
+    \foreach \i/\j in {1/225, 2/80, 3/90, 4/0, 5/285, 6/170, 7/225, 8/270, 9/315}
+    {
+        \node[vertex, label=\j{\small $p_{\i}$}] (v\i) at (\xcoords[\i-1],\scale * \ycoords[\i-1]) {};
+    }
+
+    \onslide<1>{
+        % Draw arcs
+        \foreach \i/\j in {2/4, 2/6, 3/1, 3/2, 4/3, 4/5, 4/9, 5/8, 5/9, 6/5, 8/6, 9/8}
+        {
+            \draw[arc] (v\i) to (v\j);
+        }
+        
+        % Draw bending arcs
+        \foreach \i/\j in {1/2, 1/7, 2/1, 2/5, 5/2, 7/1, 7/8, 8/7}
+        {
+            \draw[arcbend] (v\i) to (v\j);
+        }
+        
+        % Draw used straight arcs
+        \foreach \i/\j in {2/4, 4/3, 3/2, 5/8, 8/6, 6/5}
+        {
+            \draw[usedarc, ultra thick] (v\i) to (v\j);
+        }
+        
+        % Draw used bending arcs
+        \foreach \i/\j in {1/7, 7/1}
+        {
+            \draw[usedarcbend, ultra thick] (v\i) to (v\j);
+        }
+    }
+
+    \onslide<2>
+    {
+        % Draw arcs
+        \foreach \i/\j in {2/6, 3/1, 4/5, 4/9, 5/8, 5/9, 6/5, 8/6, 9/8}
+        {
+            \draw[arc] (v\i) to (v\j);
+        }
+        
+        % Draw bending arcs
+        \foreach \i/\j in {1/2, 2/1, 2/5, 5/2, 7/8, 8/7}
+        {
+            \draw[arcbend] (v\i) to (v\j);
+        }
+        
+        Draw removed used straight arcs
+        \foreach \i/\j in {2/4, 4/3, 3/2, 5/8, 8/6, 6/5}
+        {
+            \ifnum\i=4
+                \draw[usedarc, very thin] (v\i) -- (v\j) node[midway, cross=5pt, ultra thick, sloped] {};
+            \else
+                \draw[usedarc, very thin] (v\i) to (v\j);
+            \fi
+        }
+        
+        % Draw removed used bending arcs
+        \foreach \i/\j in {1/7, 7/1}
+        {
+            \draw[usedarcbend, very thin] (v\i) to (v\j);
+        }
+        
+        % Draw remaining used arcs
+        \foreach \i/\j in {5/8, 6/5, 8/6}
+        {
+            \draw[usedarc, ultra thick] (v\i) to (v\j);
+        }
+        
+        % Draw node crosses
+        \node[cross=5pt, ultra thick] (cross1) at (v1) {};
+    }
+
+    \onslide<3>
+    {
+        % Draw arcs
+        \foreach \i/\j in {2/6, 3/1, 4/5, 4/9, 5/8, 5/9, 6/5, 8/6, 9/8}
+        {
+            \draw[arc] (v\i) to (v\j);
+        }
+        
+        % Draw bending arcs
+        \foreach \i/\j in {1/2, 2/1, 2/5, 5/2, 7/8, 8/7}
+        {
+            \draw[arcbend] (v\i) to (v\j);
+        }
+        
+        Draw removed used straight arcs
+        \foreach \i/\j in {2/4, 4/3, 3/2, 5/8, 8/6, 6/5}
+        {
+            \ifnum\i=4
+                \draw[usedarc, very thin] (v\i) -- (v\j) node[midway, cross=5pt, ultra thick, sloped] {};
+            \else
+                \draw[usedarc, very thin] (v\i) to (v\j);
+            \fi
+        }
+        
+        % Draw removed used bending arcs
+        \foreach \i/\j in {1/7, 7/1}
+        {
+            \draw[usedarcbend, very thin] (v\i) to (v\j);
+        }
+        
+        % Draw remaining used arcs
+        \foreach \i/\j in {5/8, 6/5, 8/6}
+        {
+            \draw[usedarc, very thin] (v\i) to (v\j);
+        }
+        
+        % Draw node crosses
+        \node[cross=5pt, ultra thick] (cross1) at (v1) {};
+
+        % Draw alternative solution arcs
+        \foreach \i/\j in {5/2, 7/8, 8/7}
+        {
+            \draw[usedarcbend, ultra thick, purple!90] (v\i) to (v\j);
+        }
+        
+        % Draw remaining used arcs
+        \foreach \i/\j in {2/6, 6/5}
+        {
+            \draw[usedarc, ultra thick, purple!90] (v\i) to (v\j);
+        }
+    }
+    \end{tikzpicture}
+\end{center}
