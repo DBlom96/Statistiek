@@ -55,6 +55,14 @@
 % EXAM-SPECIFIC PACKAGES
 \usepackage{marginnote}
 
+% Counters
+\newcounter{question}
+\newcounter{subquestion}[question]
+
+\newcommand{\question}[2]{%
+  \stepcounter{question}
+  \noindent\textbf{Opdracht #1:} #2\par
+}
 
 % Answer visibility toggle
 \newif\ifprintanswers
@@ -81,16 +89,11 @@
   \fi
 }
 
-% Define question counter
-\newcounter{question}
-\newcounter{subquestion}[question]
+
 \renewcommand{\thequestion}{\arabic{question}}
 \renewcommand{\thesubquestion}{\thequestion.\alph{subquestion}}
 
-\newcommand{\question}[2]{%
-  \stepcounter{question}
-  \noindent\textbf{Opdracht #1:} #2\par
-}
+
 
 \newcommand{\subquestion}[1]{%
   \stepcounter{subquestion}

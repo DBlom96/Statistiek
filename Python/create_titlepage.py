@@ -7,17 +7,17 @@ import comtypes.client
 import locale
 
 # Load template
-doc = Document(fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\FMW_titelblad.docx")
+doc = Document(fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\tentamenvoorblad.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
-vaknaam = "Statistiek (deel 2)"
-vakcode = "STA"
+vaknaam = "Statistiek (deel 2) -- derde kans"
+vakcode = "STA#2"
 datum = "20250523"
+tentamentijd = "10:00-13:00"
 examinator = "Dr. ir. D.A.M.P. Blom"
-peer_review = ""
+peer_review = "Dr. J.B.M. Melissen"
 aantal_opgaven = "4"
 aantal_paginas = "4"
-tentamentijd = "13:30-16:30"
 
 formatted_date = datetime.strptime(datum, "%Y%m%d").strftime("%d %B %Y")
 print(formatted_date)
@@ -29,12 +29,12 @@ pdf_path = fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\FMW_titelblad_{d
 replacements = {
     "{{vaknaam}}": vaknaam,
     "{{datum}}": str(formatted_date),
-    "{{examinator_naam}}": examinator,
-    "{{peer_review}}": peer_review,
-    "{{num_opgaves}}": aantal_opgaven,
+    "{{examinator_naam}}": examinator,    
+    "{{num_paginas}}": aantal_paginas,
     "{{vakcode}}": vakcode,
     "{{tentamentijd}}": tentamentijd,
-    "{{num_paginas}}": aantal_paginas
+    "{{peer_review}}": peer_review,
+    "{{num_opgaves}}": aantal_opgaven
 }
 
 def replace_text(paragraphs):
@@ -42,11 +42,11 @@ def replace_text(paragraphs):
         for key, value in replacements.items():
             if key in para.text:
                 para.text = para.text.replace(key, value)
-                para.alignment = WD_ALIGN_VERTICAL.CENTER # Align text to center
+                para.alignment = WD_ALIGN_VERTICAL.TOP # Align text to center
 
                 for run in para.runs:
                     run.font.name = "Arial"
-                    run.font.size = Pt(12)
+                    run.font.size = Pt(14)
 
 replace_text(doc.paragraphs)
 
@@ -55,7 +55,7 @@ for table in doc.tables:
     for row in table.rows:
         for cell in row.cells:
             replace_text(cell.paragraphs)
-            cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+            cell.vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
 # Save the filled document
 doc.save(doc_path)
