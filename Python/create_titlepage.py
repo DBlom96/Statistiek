@@ -10,7 +10,7 @@ import locale
 doc = Document(fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\FMW_titelblad.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
-vaknaam = "Statistiek (deel 1)"
+vaknaam = "Statistiek (deel 2)"
 vakcode = "STA"
 datum = "20250523"
 examinator = "Dr. ir. D.A.M.P. Blom"
