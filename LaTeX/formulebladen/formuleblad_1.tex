@@ -1,0 +1,148 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,a4paper,dutch]{article} % document type and language
+
+\usepackage[centering,noheadfoot,margin=1in]{geometry}
+\usepackage[dutch]{babel}
+\usepackage{palatino}  
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{bm}
+\setlength{\parindent}{0cm} 
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+
+\title{Formuleblad Statistiek deel 1 (2024-2025)}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+Gegeven is een steekproef van $n$ observaties $x_1, x_2, \ldots, x_n$ uit een populatie met $N$ elementen (waarbij $N >> n$).
+
+\textbf{Steekproefgemiddelde:}
+\[
+    \overline{x} = \frac{\sum_{i} x_i}{n} %= \frac{x_1 + x_2 + \ldots + x_n}{n}
+\]
+
+\textbf{Steekproefvariantie:}
+\begin{align}
+    s^2 &= \frac{\sum_{i} (x_i-\overline{x})^2}{n} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
+    s^2 &= \frac{\sum_{i} x_i^2 - n \cdot \overline{x}^2}{n} \hfill \tag{optie 2}
+\end{align}
+\textbf{Merk op:} als de steekproef gebruikt wordt om de populatievariantie te \underline{schatten}, delen door $n-1$.
+\vspace{.5cm}
+
+\textbf{Rekenregels kansrekening:}
+\begin{align*}
+    P(A \text{ \'of } B)    &= P(A) + P(B) - P(A \text{ en } B) \tag{optelregel}\\
+    P(B)                    &= 1 - P(\text{niet } B) \tag{complementregel}\\
+    P(A \text{ gegeven } B)                &= \frac{P(A \text{ en } B)}{P(B)} \tag{conditionele kansen}\\
+\end{align*}
+
+\textbf{Discrete en continue kansverdelingen:}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{m{3.8cm}|m{6cm}|m{5.7cm}}
+        \toprule
+                                                            & \textbf{Discrete kansvariabelen}  & \textbf{Continue kansvariabelen} \\ 
+        \midrule
+            \textbf{Uitkomstenruimte:}                      & Eindig / aftelbaar oneindig   & Overaftelbaar oneindig \\
+        \midrule
+            \textbf{Toepassingen:}                          & Tellen / categoriseren        & Meten \\
+        \midrule
+            \textbf{Kansbegrip:}                            & Kansfunctie $p(k) = P(X=k)$   & Kansdichtheidsfunctie $f(x)$ \\
+        \midrule
+            \textbf{CDF:}                                   & $F(k) = P(X \le k) = \sum_{\ell:\ell\le k} p(\ell)$ & $F(x) = P(X \le x) = \int_{-\infty}^{x} f(y)\ dy$ \\
+        \midrule
+            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum_{k} k \cdot P(X=k)$ & $E[X] = \int_{x} x \cdot f(x)\ dx$\\
+        \midrule
+            \textbf{Variantie:}                             & $\text{Var}(X) = \sum_{k} (k - E[X])^2 \cdot P(X=k)$   & $\text{Var}(X) = \int_{x} (x - E[X])^2 \cdot f(x)\ dx$ \\    
+        \midrule
+            \textbf{Standaardafwijking:}                    & $\sigma(X) = \sqrt{\text{Var}(X)}$   & $\sigma(X) = \sqrt{\text{Var}(X)}$ \\
+        \bottomrule
+    \end{tabular}
+% \caption{Discrete and Continuous Probability Distributions with Mean and Variance}
+% \label{tab:prob_dist}
+\end{table}
+
+\newpage
+\textbf{Verwachtingswaarde en variantie van veelgebruikte kansverdelingen:}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|p{4.5cm}|c|c|c}
+        \toprule
+            \textbf{Verdeling} & {\bfseries Kans(dichtheids)functie} & \textbf{CDF} & $E(X)$ & $\textrm{Var}(X)$ \\ 
+        \midrule
+            \multicolumn{5}{c}{\textbf{Discreet}} \\ 
+        \midrule
+            Uniform($a, b$) & $p(k) = \frac{1}{b-a+1}$ \newline $(k=a,a+1,\ldots,b)$ & $F(k) = \begin{cases} 
+            0 & x < a \\
+            \frac{k - a + 1}{b-a+1} & a \leq k < b \\
+            1 & k \geq b
+            \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a+1)^2-1}{12}$ \\ 
+        \midrule
+            Bernoulli($p$) & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
+            0 & k < 0 \\
+            1-p & k=0 \\
+            1 & k \geq 1
+            \end{cases}$ & $p$ & $p(1-p)$ \\ 
+        \midrule
+            Binomiaal($n,p$) & $p(k) = \binom{n}{k}p^k(1-p)^{n-k}$ & $F(k) = \sum\limits_{i=0}^k \binom{n}{i}p^i(1-p)^{n-i}$ & $np$ & $np(1-p)$ \\ 
+        \midrule
+            % Geo($p$) & $P(X=k) = (1-p)^{k-1}\cdot p$ & $F(k) = \sum_{i=1}^k(1-p)^{k-1}\cdot p$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\ \midrule
+            Poisson($\lambda$) & $p(k) = e^{-\lambda}\cdot \frac{\lambda^k}{k!}$ & $F(k) = \sum\limits_{i=0}^k e^{-\lambda} \cdot \frac{\lambda^i}{i!}$ & $\lambda$ & $\lambda$ \\ 
+        \midrule
+            \multicolumn{5}{c}{\textbf{Continuous}} \\ 
+        \midrule
+            Uniform($a, b$) & $f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b \\ 0, & \text{elders.} \end{cases}$ & $F(x) = \begin{cases} 
+            0, & x < a \\
+            \frac{x-a}{b-a}, & a \leq x < b \\ 1, & x \geq b \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
+        \midrule
+            $N(\mu, \sigma)$ & $f(x) = \frac{1}{\sigma\cdot\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$ & $F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)$ & $\mu$ & $\sigma^2$ \\ 
+        \midrule
+            Exponentieel($\lambda$) & $f(x) = \lambda e^{-\lambda x}$, $x \geq 0$ & $F(x) = \begin{cases} 1 - e^{-\lambda x}, & x \geq 0 \\ 0, & x < 0 \end{cases}$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% \textbf{Covariance:}
+% \[
+%     Cov(X, Y) = E[(X-E[X])\cdot(Y-E[Y])] = E[X\cdot Y] - E[X]E[Y]
+% \]
+
+% \textbf{Correlation coefficient:}
+% \[
+%     \rho(X, Y) = \frac{Cov(X,Y)}{\sqrt{Var(X) \cdot Var(Y)}}
+% \]
+
+% \textbf{Variance of error terms:}
+% \[ \hat{\sigma}^2 = \frac{1}{n-2}\sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^2 = \frac{\sum_{i=1}^{n} y_{i}^2 - \hat{\beta}_{0}\cdot \sum_{i=1}^{n} y_{i} - \hat{\beta}_{1}\cdot \sum_{i=1}^{n} x_{i}y_{i}}{n-2}\]
+
+% \textbf{Coefficients of regression line:}
+
+% Given a sample of $n$ observations $(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)$, the regression line $\hat{y} = \hat{\beta}_0 + \hat{\beta}_{1}\cdot x$ satisfies:
+% \begin{itemize}
+%     \item $\hat{\beta}_{1} = \frac{\sum_{i=1}^{n}x_iy_i - n \cdot \overline{x} \cdot \overline{y}}{\sum_{i=1}^{n} x_{i}^2 - n \cdot \overline{x}^2}$
+%     \item $\hat{\beta}_{0} = \overline{y} - \hat{\beta}_{1} \cdot \overline{x}$
+% \end{itemize}
+
+% \textbf{Sample correlation coefficient:}
+% \[ r(X, Y) = \frac{Cov(X, Y)}{\sqrt{s_{X}^2\cdot s_{Y}^2}} = \frac{\sum_{i=1}^{n}(x_{i}-\overline{x})\cdot(y_{i} - \overline{y})}{\sqrt{\sum_{i=1}^{n}(x_{i}-\overline{x})^2 \cdot \sum_{i=1}^{n}(y_{i}-\overline{y})^2}} = \frac{\sum_{i=1}^{n}x_{i}y_{i} - n \cdot \overline{x}\cdot \overline{y}}{\sqrt{\left(\sum_{i=1}^{n}x_{i}^2-n\cdot \overline{x}^2\right) \cdot \left(\sum_{i=1}^{n}y_{i}^2-n\cdot \overline{y}^2\right)}}\]
+
+% \textbf{Likelihood function:}
+% \[ L(x_1, x_2, \ldots, x_n; \theta) = f(x_1; \theta)\cdot f(x_2; \theta)\cdot\ldots\cdot f(x_n; \theta)\]
+
+% \textbf{Minimum sample size with given accuracy $E$:}
+% \[ n \ge \left(\frac{z_{\frac{\alpha}{2}} \cdot \sigma}{E}\right)^2\]
+
+% \textbf{Minimum sample size for bounding type II error $\beta$}
+% \[ n \ge \frac{(z_{\frac{\alpha}{2}}+z_{\beta})^2 \cdot \sigma^2}{\delta^2}\]
+
+
+
+\end{document}
