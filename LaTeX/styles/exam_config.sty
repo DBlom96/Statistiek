@@ -23,7 +23,7 @@
 
 % Solution Toggle (to show/hide solutions)
 \newif\ifshowanswers
-\showanswersfalse % Toggle this to hide / show solutions
+\showanswerstrue % Toggle this to hide / show solutions
 
 % Rubric command
 \newcommand{\rubric}[1]{%
@@ -36,7 +36,7 @@
 \newcommand{\solution}[1]{%
     \ifshowanswers
         \begin{tcolorbox}[breakable, colback=blue!5, colframe=blue!40, title=Uitwerking]
-            #1
+            {\color{green!50!black} #1}
         \end{tcolorbox}
     \fi
 }
