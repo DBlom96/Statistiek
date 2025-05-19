@@ -1,0 +1,20 @@
+\question{7.m5}{
+    Bij een landelijk bingospelletje is de kans op het winnen van een prijs $0,001$.
+    In een zaal vanwaaruit een directe televisie-uitzending plaatsvindt, bevinden zich $1 500$ mensen.
+    De kans dat zich in die zaal meer dan \'e\'en prijswinnaar bevindt, is gelijk aan $\ldots$
+}
+\begin{enumerate}[label=(\alph*)]
+    \item $0,592$.
+    \item ongeveer $0,50$.
+    \item $0,409$.
+    \item $0,442$.
+\end{enumerate}
+\answer{
+    Het aantal winnaars in de zaal kan worden beschreven door een binomiaal verdeelde kansvariabele $X$ met $n=1 500$ en $p=0,001$.
+    Deze verdeling kan worden benaderd met de Poissonverdeling met $\mu = n \cdot p = 1 500 \cdot 0,001 = 1,5$.
+    De kans dat zich in de zaal meer dan \'e'\'en prijswinnaar bevindt is gelijk aan
+    \[
+        P(X > 1) = 1 - P(X \le 1) = 1 - \poissoncdf(\lambda=1,5; k=1) \approx 0,4422.
+    \]
+    Het juiste antwoord is dus (d).
+}
