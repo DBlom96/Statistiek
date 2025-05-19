@@ -1,0 +1,26 @@
+\question{7.10}{
+    Bij een bepaald soort chirurgische ingreep is de kans op het optreden van een bepaalde, zeer zeldzame complicatie gelijk aan $0,002$.
+    In een ziekenhuis worden per jaar $400$ van dergelijke ingrepen uitgevoerd.    
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Hoe groot is de kans dat in een willekeurig jaar meer dan \'e\'enmaal een dergelijke complicatie wordt geconstateerd?
+    \answer{
+        Laat $X$ de kansvariabele zijn die het aantal ingrepen telt waarbij de zeer zeldzame complicatie wordt geconstateerd.
+        Deze kansvariabele is binomiaal verdeeld met $n=400$ en $p=0,002$.
+        Aangezien de succeskans zeer klein is, kan deze kansvariabele $X$ benaderd worden met een Poissonverdeling met $\mu = n \cdot p = 400 \cdot 0,002 = 0,8$.
+        De kans dat meer dan \'e\'enmaal in een willekeurig de complicatie wordt geconstateerd is gelijk aan
+        \[
+            P(X > 1) = 1 - P(X \le 1) = 1 - \poissoncdf(\lambda=0,8; k=1) \approx 0,1912
+        \]
+    }
+
+    \item Landelijk worden per jaar $18 000$ van dergelijke ingrepen uitgevoerd.
+    Hoe groot is de kans dat in een willekeurig jaar minder dan $30$ keer de bedoelde complicatie optreedt?
+    \answer{
+        In dit geval kunnen we de kansvariabele $X$ benaderen met een Poissonverdeling met parameter $\mu = 18 000 \cdot 0,002 = 36$.
+        De kans dat in een willekeurig jaar minder dan $30$ keer de bedoelde complicatie optreedt is dus gelijk aan
+        \[
+            P(X < 30) = P(X \le 29) = \poissoncdf(\lambda=36; k=29) \approx 0,1379
+        \]
+    }
+\end{enumerate}

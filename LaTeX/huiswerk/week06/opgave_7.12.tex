@@ -1,0 +1,63 @@
+\question{7.12}{
+    Het aantal schepen $K$ dat per dag in een bepaalde haven aankomt, is te beschouwen als een variabele met een Poissonverdeling waarvoor geldt $\mu=2\frac{1}{2}$.
+    Per dag kunnen vier schepen worden afgehandeld in de haven.
+    Als zich meer dan vier schepen melden, dan worden de overige schepen doorgestuurd naar een andere haven.   
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Hoe groot is de kans dat op een zekere dag \'e\'en of meer schepen worden doorgestuurd?
+    \answer{
+        Laat $K$ de kansvariabele zijn die het aantal binnenlopende schepen telt op een willekeurige dag.
+        Dan geldt dat $K$ een Poissonverdeling volgt met parameter $\mu = 2\frac{1}{2}$.
+
+        De situatie waarin een of meer schepen moeten worden doorverwezen vindt plaats als er meer dan vier schepen binnenlopen.
+        Dit gebeurt met een kans van
+        \[
+            P(X > 4) = 1 - P(X \le 4) = 1 - \poissoncdf(\lambda=2\frac{1}{2}; k=4) \approx 0,1088.
+        \]
+    }
+
+    \item Wat is het verwachte aantal schepen dat per dag worden doorgestuurd?
+    \answer{
+        Merk op dat het aantal schepen dat per dag moet worden doorgestuurd gelijk is aan het verwachte aantal binnenkomende schepen ($\mu=2\frac{1}{2}$) minus 
+        het verwachte aantal dat kan worden afgehandeld.
+        
+        We berekenen eerst het verwachte aantal dat kan worden afgehandeld.
+        Dit aantal is begrensd van boven door $4$, omdat in het geval van meer schepen er schepen naar andere havens moeten uitwijken.
+        Laat $Y$ het aantal schepen zijn dat op een willekeurige dag wordt afgehandeld, de kansverdeling hiervan wordt gegeven door
+        \begin{center}
+            \begin{tabular}{cc}
+                \toprule
+                    {\bfseries Aantal schepen $k$} & $P(Y=k)$\\
+                \cmidrule{1-1} \cmidrule{2-2}
+                    $0$ & $P(X=0) = \poissonpdf(\lambda=2\frac{1}{2}; k=0) \approx 0,0821$ \\
+                    $1$ & $P(X=1) = \poissonpdf(\lambda=2\frac{1}{2}; k=1) \approx 0,2052$ \\
+                    $2$ & $P(X=2) = \poissonpdf(\lambda=2\frac{1}{2}; k=2) \approx 0,2565$ \\
+                    $3$ & $P(X=3) = \poissonpdf(\lambda=2\frac{1}{2}; k=3) \approx 0,2138$ \\
+                    $4$ & $P(X \ge 4) = 1-\poissoncdf(\lambda=2\frac{1}{2}; k=3) \approx 0,2424$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Het verwachte aantal schepen dat wordt afgehandeld is gelijk aan verwachtingswaarde van deze kansvariabele $Y$, oftewel:
+        \begin{align*}
+            E[Y]    &= 0 \cdot P(Y=0) + 1 \cdot P(Y=1) + 2 \cdot P(Y=2) + 3 \cdot P(Y = 3) + 4 \cdot P(Y = 4) \\
+                    &\approx 0 \cdot 0,0821 + 1 \cdot 0,2052 + 2 \cdot 0,2565 + 3 \cdot 0,2138 + 4 \cdot 0,2424 \\
+                    &\approx 2,3292
+        \end{align*}
+        Het verwachte aantal schepen dat moet worden doorgestuurd is dus gelijk aan $2,3292 - 2 = 0,3292$.
+    }
+
+    \item Hoe groot moet de capaciteit van de haven worden om een kans kleiner dan $0,01$ te hebben dat op een willekeurige dag een of meer schepen worden doorgestuurd?
+    \answer{
+        Om deze capaciteit $C$ te bepalen, moeten we de volgende ongelijkheid oplossen:
+        \[
+            P(X > C) = 1 - P(X \le C) = 1 - \poissoncdf(\lambda=2,5; k=C) < 0,01.
+        \]
+        Merk op dat zodra $C$ groter wordt, de kans $P(X > C)$ steeds kleiner wordt.
+        Via een tabel in de grafische rekenmachine, of trial-and-error, vinden we:
+        \begin{align*}
+            k = 6: & 1 - \poissoncdf(\lambda=2,5; k=6) \approx 0,0142 \\
+            k = 7: & 1 - \poissoncdf(\lambda=2,5; k=7) \approx 0,0042
+        \end{align*}
+        De haven moet een capaciteit hebben om op een dag zeven schepen te kunnen afhandelen als de kans kleiner dan $0,01$ moet zijn dat schepen naar andere havens moeten worden doorgestuurd.
+    }
+\end{enumerate}

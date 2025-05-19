@@ -1,0 +1,38 @@
+\question{7.4}{
+    Voor een eerstehulpafdeling van een ziekenhuis geldt dat het aantal pati\"enten met brandwonden dat per dag binnenkomt, kan worden beschreven door een Poissonverdeling met $\mu=0,35$.
+    Bereken met de formule van de Poissonverdeling de kans dat het aantal van dergelijke pati\"enten per dag $\ldots$
+}
+\begin{enumerate}[label=(\alph*)]
+    \item precies nul bedraagt.
+    \answer{
+        Laat $X$ de kansvariabele zijn die het aantal pati\"enten telt dat op een willekeurige dag met brandwonden binnenkomt op de eerstehulpafdeling van het ziekenhuis.
+        Gegeven is dat $X \sim \text{Poisson}(\lambda=0,35)$.
+        De Poissonformule geeft voor elke mogelijke uitkomst $k = 0, 1, 2, \ldots$ de kans op die uitkomst aan als
+        \[
+            P(X=k) = e^{-\lambda} \cdot \frac{\lambda^{k}}{k!}.
+        \]
+        De kans dat het aantal van dergelijke pati\"enten per dag precies nul bedraagt is dus gelijk aan
+        \[
+            P(X=0) = e^{-0,35} \cdot \frac{(0,35)^0}{0!} \approx 0,7047.
+        \]
+    }
+
+    \item precies \'e\'en is.
+    \answer{
+        De kans dat het aantal van dergelijke pati\"enten per dag precies \'e\'en bedraagt is dus gelijk aan
+        \[
+            P(X=1) = e^{-0,35} \cdot \frac{(0,35)^1}{1!} \approx 0,2466.
+        \]
+    }
+    
+    \item meer dan \'e\'en bedraagt.
+    \answer{
+        De kans dat het aantal van dergelijke pati\"enten per dag meer dan \'e\'en bedraagt kan met de complementregel berekend worden:
+        \begin{align*}
+            P(X>1)  &= 1 - P(X \le 1) \\
+                    &= 1 - P(X=0) - P(X=1) \\
+                    &\approx 1 - 0,7047 - 0,2466 \\
+                    &\approx 0,0487.
+        \end{align*}
+    }
+\end{enumerate}

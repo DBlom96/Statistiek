@@ -1,0 +1,49 @@
+\question{7.3}{
+    Het aantal lekke banden dat bij een garage dagelijks ter reparatie wordt aangeboden, mag worden beschouwd als een kansvariabele $K$ met een Poissonverdeling met $\mu=4$ per dag.
+    Bepaal met de tabel van de Poissonverdeling voor een willekeurige dag de kans op het ter reparatie aanbieden van:
+}
+\begin{enumerate}[label=(\alph*)]
+    \item precies \'e\'en lekke band.
+    \answer{
+        We hebben aangenomen dat het aantal lekke banden dat op een dag ter reparatie wordt aangeboden bij een garage een Poisson-verdeelde kansvariabele $K$ is met parameter $\mu=4$ per dag.
+        De kans op precies \'e\'en lekke band is dan gelijk aan
+        \[
+            P(K=1) = \poissonpdf(\lambda=4; k=1) \approx 0,0733.
+        \]
+    }
+
+    \item precies zes lekke banden.
+    \answer{
+        De kans op precies zes lekke banden is dan gelijk aan
+        \[
+            P(K=6) = \poissonpdf(\lambda=4; k=6) \approx 0,1042.
+        \]
+    }
+    
+    \item meer dan drie lekke banden.
+    \answer{
+        De kans op meer dan drie lekke banden is gelijk aan
+        \[
+            P(K > 3) = 1 - P(K \le 3) = 1 - \poissoncdf(\lambda=4; k=3) \approx 0,5665.
+        \]
+    }
+
+    \item minder dan drie lekke banden.
+    \answer{
+        De kans op minder dan drie lekke banden is gelijk aan
+        \[
+            P(K < 3) = P(K \le 2) = \poissoncdf(\lambda=4; k=2) \approx 0,2381.
+        \]
+    }
+
+    \item meer dan vier, maar minder dan tien lekke banden.
+    \answer{
+        De kans op meer dan vier, maar minder dan tien lekke banden is gelijk aan
+        \begin{align*}
+            P(4 < K < 10)   &= P(5 \le K \le 9) \\
+                            &= P(K \le 9) - P(K \le 4) \\
+                            &= \poissoncdf(\lambda=4; k=9) - \poissoncdf(\lambda=4; k=4) \\
+                            &\approx 0,3630.
+        \end{align*}
+    }
+\end{enumerate}

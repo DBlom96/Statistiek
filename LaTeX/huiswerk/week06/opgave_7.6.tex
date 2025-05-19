@@ -1,0 +1,54 @@
+\question{7.6}{
+    In een containerhaven kunnen per dag drie schepen worden afgehandeld met laden en lossen.
+    Bekend is dat het aantal binnenlopende schepen een variabele is met een Poissonverdeling met $\mu=2$ per dag.
+    Schepen die zich melden wanneer op een dag reeds drie schepen in behandeling zijn, worden doorverwezen naar een andere haven.
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Hoe groot is de kans dat op een willekeurige dag een of meer schepen moeten worden doorverwezen?
+    \answer{
+        Laat $X$ de kansvariabele zijn die het aantal binnenlopende schepen telt op een willekeurige dag.
+        Dan geldt dat $X$ een Poissonverdeling volgt met parameter $\mu = 2$.
+
+        De situatie waarin een of meer schepen moeten worden doorverwezen vindt plaats als er meer dan drie schepen binnenlopen.
+        Dit gebeurt met een kans van
+        \[
+            P(X > 3) = 1 - P(X \le 3) = 1 - \poissoncdf(\lambda=2; k=3) \approx 0,1429.
+        \]
+    }
+
+    \item Hoe groot is het verwachte aantal schepen dat zich per dag aanmeldt?
+    \answer{
+        De verwachtingswaarde van een Poisson-verdeelde kansvariabele met parameter $\mu$ is gelijk aan $\mu$.
+        In dit geval is het verwachte aantal schepen per dag dus simpelweg gelijk aan $\mu=2$.
+    }
+    
+    \item Hoe groot is het verwachte aantal dat per dag kan worden afgehandeld?
+    \answer{
+        Merk op dat het aantal schepen dat per dag kan worden afgehandeld begrensd is van boven door $3$, omdat in het geval van meer schepen er schepen naar andere havens moeten uitwijken.
+        Laat $Y$ het aantal schepen zijn dat op een willekeurige dag wordt afgehandeld, de kansverdeling hiervan wordt gegeven door
+        \begin{center}
+            \begin{tabular}{cc}
+                \toprule
+                    {\bfseries Aantal schepen $k$} & $P(Y=k)$\\
+                \cmidrule{1-1} \cmidrule{2-2}
+                    $0$ & $P(X=0) = \poissonpdf(\lambda=2; k=0) \approx 0,1353$ \\
+                    $1$ & $P(X=1) = \poissonpdf(\lambda=2; k=1) \approx 0,2707$ \\
+                    $2$ & $P(X=2) = \poissonpdf(\lambda=2; k=2) \approx 0,2707$ \\
+                    $3$ & $P(X \ge 3) = 1-\poissoncdf(\lambda=2; k=2) \approx 0,3233$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Het verwachte aantal schepen dat wordt afgehandeld is gelijk aan verwachtingswaarde van deze kansvariabele $Y$, oftewel:
+        \begin{align*}
+            E[Y]    &= 0 \cdot P(Y=0) + 1 \cdot P(Y=1) + 2 \cdot P(Y=2) + 3 \cdot P(Y = 3) \\
+                    &= 0 \cdot 0,1353 + 1 \cdot 0,2707 + 2 \cdot 0,2707 + 3 \cdot 0,3233 \\
+                    &\approx 1,7820
+        \end{align*}
+}
+
+    \item Wat is het verwachte aantal dat per dag wordt doorverwezen naar een andere haven?
+    \answer{
+        Het verwachte aantal dat per dag wordt doorverwezen naar een andere haven is gelijk aan het verwachte aantal schepen dat op een dag binnenkomt minus het verwachte aantal schepen dat kan worden afgehandeld.
+        In andere woorden, dit aantal is gelijk aan $2 - 1,7820 = 0,2180$.
+    }
+\end{enumerate}

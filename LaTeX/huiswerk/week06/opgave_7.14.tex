@@ -1,0 +1,34 @@
+\question{7.14}{
+    Op een werkdag van de dierenambulance komen oproepen binnen volgens een Poissonproces met $\mu = 0,50$ oproepen per uur.
+    Men is 10 uur per dag bereikbaar.   
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Bereken de kans dat op een dag minder dan $4$ oproepen binnenkomen.
+    \answer{
+        Laat $X$ de kansvariabele zijn die het aantal binnenkomende oproepen telt op een werkdag (10 werkuren met gemiddelde $0,50$ oproepen per uur) bij de dierenambulance.
+        Gegeven is dat $X \sim \text{Poisson}(\lambda=10\cdot 0,50 = 5)$.
+
+        De kans dat op een dag minder dan $4$ oproepen binnenkomen is dan gelijk aan
+        \[
+            P(X < 4) = P(X \le 3) = \poissoncdf(\lambda=5; k=3) \approx 0,2650.
+        \]
+
+    }
+
+    \item Hoe groot is de kans dat er meer dan $3$ uur voorbijgaan zonder dat een enkele oproep is geweest?
+    \answer{
+        Stel nu dat $X$ de kansvariabele is van het aantal binnenkomende oproepen in drie uur tijd.
+        In dat geval is $X$ Poisson verdeeld met parameter $\lambda = 3 \cdot 0,50 = 1,50$.
+        
+        De kans dat er meer dan $3$ uur voorbijgaan zonder dat een enkele oproep is geweest is gelijk aan de kans op geen oproepen in drie uur tijd, oftewel:
+        \[
+            P(X = 0) = \poissonpdf(\lambda=1,5; k=0) \approx 0,2231.
+        \]
+    }
+
+    \item De chauffeur van de dierenambulance wil met lunchpauze. Hij wil de tijdsduur van de pauze zodanig kiezen dat de kans hoogstens $0,25$ is dat binnen die periode een oproep binnenkomt.
+    Hoelang mag hij pauzeren? 
+    \answer{
+        
+    }
+\end{enumerate}
