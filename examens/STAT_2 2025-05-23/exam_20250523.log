@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.16)  19 MAY 2025 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.16)  20 MAY 2025 16:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1045,7 +1045,74 @@ Package marginnote Info: xpos seems to be 111.91896pt on input line 119.
 Package marginnote Info: Margin note 6.8 is on absolute page 7 on input line 119.
 Package marginnote Info: right page because not two side mode on input line 119.
 Package marginnote Info: xpos seems to be 482.51692pt on input line 119.
- [6]) (q3.tex [7]) (q4.tex [8] [9]) [10] (exam_20250523.aux)
+ [6]) (q3.tex [7]) (q4.tex [8]
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 43.
+Package marginnote Info: right page because not two side mode on input line 43.
+Package marginnote Info: xpos seems to be 433.59282pt on input line 43.
+Package marginnote Info: Margin note 9.2 is on absolute page 9 on input line 43.
+Package marginnote Info: right page because not two side mode on input line 43.
+Package marginnote Info: xpos seems to be 509.58891pt on input line 43.
+Package marginnote Info: Margin note 9.3 is on absolute page 10 on input line 43.
+Package marginnote Info: right page because not two side mode on input line 43.
+Package marginnote Info: xpos seems to be 421.76077pt on input line 43.
+ [9]
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 113.
+Package marginnote Info: Margin note 10.2 is on absolute page 10 on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be 463.22522pt on input line 113.
+Package marginnote Info: Margin note 10.3 is on absolute page 10 on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be 328.79239pt on input line 113.
+Package marginnote Info: Margin note 10.4 is on absolute page 10 on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be 510.88214pt on input line 113.
+
+Overfull \hbox (1.29323pt too wide) in paragraph at lines 113--113
+ []|[] 
+ []
+
+Package marginnote Info: Margin note 10.5 is on absolute page 11 on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be 438.90874pt on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 113.
+Package marginnote Info: Margin note 10.7 is on absolute page 11 on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be 217.17578pt on input line 113.
+Package marginnote Info: Margin note 10.8 is on absolute page 11 on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be 448.4212pt on input line 113.
+Package marginnote Info: Margin note 10.9 is on absolute page 11 on input line 113.
+Package marginnote Info: right page because not two side mode on input line 113.
+Package marginnote Info: xpos seems to be 111.91896pt on input line 113.
+[10]
+Package marginnote Info: Margin note 11.1 is on absolute page 12 on input line 136.
+Package marginnote Info: right page because not two side mode on input line 136.
+Package marginnote Info: xpos seems to be 369.64398pt on input line 136.
+Package marginnote Info: Margin note 11.2 is on absolute page 12 on input line 136.
+Package marginnote Info: right page because not two side mode on input line 136.
+Package marginnote Info: xpos seems to be 284.98344pt on input line 136.
+Package marginnote Info: Margin note 11.3 is on absolute page 12 on input line 136.
+Package marginnote Info: right page because not two side mode on input line 136.
+Package marginnote Info: xpos seems to be 471.10966pt on input line 136.
+Package marginnote Info: Margin note 11.4 is on absolute page 12 on input line 136.
+Package marginnote Info: right page because not two side mode on input line 136.
+Package marginnote Info: xpos seems to be 481.38045pt on input line 136.
+Package marginnote Info: Margin note 11.5 is on absolute page 12 on input line 136.
+Package marginnote Info: right page because not two side mode on input line 136.
+Package marginnote Info: xpos seems to be 301.63869pt on input line 136.
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\T1/bch/m/n/12 Dit le-vert het 95% Clopper-Pearson be-trouw-baar-heids-in-ter-val
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 136--136
+\OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1278; 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 2065]$ \T1/bch/m/n/12 voor de kans $\OML/cmm/m/it/12 p$ \T1/bch/m/n/12 dat er op een wil-le-keu-rige dag hoge
+ []
+
+[11]) [12] (exam_20250523.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1054,17 +1121,17 @@ Package rerunfilecheck Info: File `exam_20250523.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31871 strings out of 474486
- 639335 string characters out of 5743754
- 1945542 words of memory out of 5000000
- 53560 multiletter control sequences out of 15000+600000
- 573946 words of font info for 62 fonts, out of 8000000 for 9000
+ 31959 strings out of 474486
+ 640812 string characters out of 5743754
+ 1949542 words of memory out of 5000000
+ 53641 multiletter control sequences out of 15000+600000
+ 583807 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,17n,122p,606b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on exam_20250523.pdf (10 pages, 187129 bytes).
+ 119i,19n,122p,606b,1155s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on exam_20250523.pdf (12 pages, 240433 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
+ 185 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

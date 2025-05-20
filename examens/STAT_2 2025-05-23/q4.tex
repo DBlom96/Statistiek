@@ -7,7 +7,8 @@
     \begin{center}
         \begin{tabular}{cc}
             \toprule
-                \textbf{Aantal gedetecteerde onderzeeboten} & \textbf{Aantal dagen} \\
+                \textbf{Aantal gedetecteerde} & \multirow{2}{*}{\textbf{Aantal dagen}} \\
+                \textbf{onderzeeboten}        & \\
             \midrule
                 $0$ & $40$ \\
                 $1$ & $80$ \\
@@ -17,8 +18,8 @@
                 $5$ & $15$ \\
                 $6$ & $7$ \\
                 $7$ & $3$ \\
-            \midrule
-                \textbf{Totaal:} & 365\\
+            % \midrule
+            %     \textbf{Totaal:} & 365\\
             \bottomrule
         \end{tabular}
     \end{center}
@@ -27,22 +28,110 @@
         Bereken met behulp van de gegevens uit de tabel het aantal dagen waarop er data is verzameld en het gemiddelde aantal gedetecteerde vijandelijke onderzeeboten per dag.
     }
     \solution{
-
+        Het aantal dagen $n$ waarop er data is verzameld is gelijk aan
+        \[
+            n = 40 + 80 + 100 + 85 + 35 + 15 + 7 + 3 = 365 \rubric{1}
+        \]
+        Het totaal aantal detecties is gelijk aan
+        \[
+            \text{\#detecties} = 0 \cdot 40 + 1 \cdot 80 + 2 \cdot 100 + 3 \cdot 85 + 4 \cdot 35 + 5 \cdot 15 + 6 \cdot 7 + 7 \cdot 3 = 813 \rubric{2}
+        \]
+        Het gemiddelde aantal detecties is dus gelijk aan
+        \[
+            \text{gemiddelde} = \frac{\text{\#detecties}}{n} = \frac{813}{365} \approx 2.2274. \rubric{2}
+        \]
     }
 
-    \subquestion{10}{
-        Voer een geschikte hypothesetoets uit om de bewering te toetsen dat het aantal gedetecteerde onderzeeboten per dag een Poisson-verdeling volgt met gemiddelde $\lambda=2$.
-        Bepaal de toetsuitslag door het berekenen van de $p$-waarde, met significantieniveau $\alpha = 0,05$.
+    \subquestion{12}{
+        Toets of het aantal gedetecteerde onderzeeboten per dag $X$ is te beschouwen als een Poisson-verdeelde kansvariabele.
+        Schrijf hierbij specifiek de nul- en alternatieve hypothese uit en bepaal de toetsuitslag aan de hand van het berekenen van een $p$-waarde.
+        Kies als betrouwbaarheid $95\%$ en gebruik in je berekening je antwoord op vraag 4a.
     } 
     \solution{
+        Om deze bewering te toetsen, moeten we werken met de volgende hypothesen:
+        \begin{align*}
+            H_{0}: \text{ de kansvariabele $X$ volgt een Poissonverdeling.} \\
+            H_{1}: \text{ de kansvariabele $X$ volgt NIET een Poissonverdeling.}\rubric{2}
+        \end{align*}
 
+        Omdat we een toets willen uitvoeren om te testen of een kansvariabele een bepaalde kansverdeling volgt, moeten we een chi-kwadraattoets voor aanpassing gebruiken.
+        Om de toetsingsgrootheid $\chi^2$ te berekenen, hebben we allereerst de verwachte frequenties nodig als we zouden werken met een Poissonverdeling met parameter $\lambda=\frac{813}{365}$. \rubric{1}
+        
+            \begin{center}
+                \footnotesize
+                \begin{tabular}{ccc}
+                    \toprule
+                        \textbf{Aantal gedetecteerde} & \textbf{Aantal dagen} & \textbf{Aantal dagen} \\
+                        \textbf{onderzeeboten}        & \textbf{(observed)} & \textbf{(expected)}\\
+                    \midrule
+                        $0$ & $40$ & $365 \cdot \poissonpdf(\lambda=\frac{813}{365}; k=0) = 39.3502$\\
+                        $1$ & $80$ & $365 \cdot \poissonpdf(\lambda=\frac{813}{365}; k=1) = 87.6484$\\
+                        $2$ & $100$ & $365 \cdot \poissonpdf(\lambda=\frac{813}{365}; k=2) = 97.6140 $\\
+                        $3$ & $85$ & $365 \cdot \poissonpdf(\lambda=\frac{813}{365}; k=3) = 72.4750$\\
+                        $4$ & $35$ & $365 \cdot \poissonpdf(\lambda=\frac{813}{365}; k=4) = 40.3577$\\
+                        $5$ & $15$ & $365 \cdot \poissonpdf(\lambda=\frac{813}{365}; k=5) = 17.9785$\\
+                        $6$ & $7$ & $365 \cdot \poissonpdf(\lambda=\frac{813}{365}; k=6) = 6.6742$\\
+                        $7$ & $3$ & $365 \cdot (1 - \poissoncdf(\lambda=\frac{813}{365}; k=6)) = 2.9020$\\ 
+                    \bottomrule
+                \end{tabular}\rubric{3}
+            \end{center}
+        
+        Omdat er verwachte frequenties zijn die kleiner dan 5 zijn (vuistregel), moeten we rijen gaan samenvoegen, namelijk de laatste twee rijen:
+        \begin{center}
+            \footnotesize
+            \begin{tabular}{ccc}
+                \toprule
+                    \textbf{Aantal gedetecteerde} & \textbf{Aantal dagen} & \textbf{Aantal dagen} \\
+                    \textbf{onderzeeboten}        & \textbf{(observed)} & \textbf{(expected)}\\
+                \midrule
+                    $0$ & $40$ & $39.3502$\\
+                    $1$ & $80$ & $87.6484$\\
+                    $2$ & $100$ & $97.6140 $\\
+                    $3$ & $85$ & $72.4750$\\
+                    $4$ & $35$ & $40.3577$\\
+                    $5$ & $15$ & $17.9785$\\
+                    $\ge 6$ & $10$ & $9.5763$\\
+                \bottomrule
+            \end{tabular}\rubric{1}
+        \end{center}
+        De toetsingsgrootheid kunnen we nu bepalen als volgt:
+        \begin{align*}
+            \chi^2  &= \frac{(O_{0} - E_{0})}{E_{0}} + \frac{(O_{1} - E_{1})}{E_{1}} + \ldots + \frac{(O_{\ge 6} - E_{\ge 6})}{E_{\ge 6}} \\
+                    &= \frac{(40 - 39.3502)}{39.3502} + \frac{(80 - 87.6484)}{87.6484} + \ldots + \frac{(10 - 9.5763)}{9.5763} \\
+                    &\approx 4.1245 \rubric{2}
+        \end{align*} 
+        Aangenomen dat de nulhypothese waar zou zijn, is deze toetsingsgrootheid getrokken uit een chi-kwadraatverdeling met aantal vrijheidsgraden 
+        \[
+            df = \#\text{categorie\"en} - 1 - \#\text{geschatte parameters} = 7 - 1 - 1 = 5.
+        \]
+        De $p$-waarde die hoort bij deze uitkomst is 
+        \[
+            p = P(\chi^2 > 4.1245) = \chi^2\text{cdf}(4.1245; 10^{99}; 5) \approx 0.5316. \rubric{2}
+        \]
+        Tevens is er voor een betrouwbaarheidsniveau van $95\%$ ($\alpha=0.05$) gekozen.
+        Omdat $p > \alpha$, wordt $H_0$ niet verworpen. Er is onvoldoende bewijs om de bewering te verwerpen dat de kansvariabele een Poissonverdeling zou volgen. \rubric{1}
     }
 
-    \subquestion{10}{
+    \subquestion{8}{
         De marine definieert een dag met hoge vijandelijke onderzeese activiteit als een dag waarop minstens vier onderzeeboten worden gedetecteerd.
         Bereken met de methode van Clopper-Pearson een $95\%$-betrouwbaarheidsinterval voor de kans $p$ dat er op een willekeurige dag hoge vijandelijke activiteit is. 
     }
     \solution{
+        Volgens de gegevens van de marine zijn op $35+15+7+3=60$ van de $365$ dagen minstens vier onderzeeboten gedetecteerd.\rubric{1}
+        Een puntschatting voor de kans dat er op een willekeurige dag hoge vijandelijke onderzeese activiteit is, is gelijk aan $\hat{p} = \frac{60}{365}=0.1644$. \rubric{1}
 
+        Voor het $95\%$-betrouwbaarheidsinterval (dus $\alpha=0.05$) berekenen we de grenzen aan de hand van
+        \begin{enumerate}
+            \item We berekenen $p_1$ door de vergelijking $P(X \le 60) = \frac{\alpha}{2} = 0.025$ op te lossen. Hieruit volgt:
+            \[
+                \binomcdf(n=365; p_1=?; k=60) = 0.025 \rightarrow p_1 = 0.2065 \rubric{2}
+            \]
+
+            \item We berekenen $p_2$ door de vergelijking $P(X \ge 60) = 1 - P(X \le 59) = \frac{\alpha}{2} = 0.025$ op te lossen. Hieruit volgt:
+            \[
+                1 - \binomcdf(n=365; p_2=?; k=59) = 0.025 \rightarrow p_2 = 0.1278 \rubric{3}
+            \]
+        \end{enumerate}
+        Dit levert het 95\% Clopper-Pearson betrouwbaarheidsinterval $[0.1278; 0.2065]$ voor de kans $p$ dat er op een willekeurige dag hoge vijandelijke onderzeese activiteit is. \rubric{1}
     }
 \end{question}
