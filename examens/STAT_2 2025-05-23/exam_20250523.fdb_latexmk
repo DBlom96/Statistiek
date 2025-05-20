@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1747753061.92041 "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_2 2025-05-23/exam_20250523.tex" "exam_20250523.pdf" "exam_20250523" 1747753064.17818 0
+["pdflatex"] 1747766720.24238 "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_2 2025-05-23/exam_20250523.tex" "exam_20250523.pdf" "exam_20250523" 1747766722.33106 0
   "C:/Users/danny/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747677661 124177 fb99ef2de52f29fd88ea694d45142975 ""
   "C:/Users/danny/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1734346087 24225047 9f9d6f03f4e94b49b1f4d88a5bda1762 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -35,7 +35,7 @@
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
-  "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
+  "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
@@ -226,14 +226,14 @@
   "C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1744911442 2546 6c8b868b232fe9059ec63290771c600a ""
   "C:/Users/danny/Documents/GitHub/Statistiek/Python/FMW_titelblad_20250523.pdf" 1747396602 87464 9569b720c6d49726e537fb934abaa91e ""
   "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_2 2025-05-23/exam_20250523.tex" 1747680630 759 63684ee94de37de55974e928e6055a8b ""
-  "exam_20250523.aux" 1747753063 1579 9dcee023443b4f56b115e4d8590f57e0 "pdflatex"
-  "exam_20250523.out" 1747753063 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "exam_20250523.aux" 1747766722 2511 f8c5ffbe1229150b817e0ee178560615 "pdflatex"
+  "exam_20250523.out" 1747766721 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "exam_20250523.tex" 1747680630 759 63684ee94de37de55974e928e6055a8b ""
   "opg2a.png" 1747678991 22181 f8101bd4d9ed90634c01c85750c47f61 ""
-  "q1.tex" 1747406302 2353 a376f282e990412087803ae04daab2ee ""
+  "q1.tex" 1747766607 7809 4b8ff9b5c4dccc1bc87bd7e6026b2e00 ""
   "q2.tex" 1747680990 7291 97d1049b6c0cce4594bc9180e882d9a6 ""
   "q3.tex" 1747407134 1664 761a426c5b025c40ceeed02c4b48d4fa ""
-  "q4.tex" 1747753058 7943 e0f2a36860cd9d146ca05a69c6dcc099 ""
+  "q4.tex" 1747766717 7940 b318381705a13813c22e63c8b9f5509f ""
   (generated)
   "exam_20250523.aux"
   "exam_20250523.log"

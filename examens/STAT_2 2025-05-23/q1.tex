@@ -1,40 +1,89 @@
 \begin{question}{25}{
-    De Koninklijke Militaire Academie onderzoekt of een nieuw type gevechtstraining op basis van virtual reality de reactietijd van soldaten onder crisisomstandigheden significant verbetert.
+    Op de Koninklijke Militaire Academie wordt onderzocht of een nieuw type gevechtstraining op basis van virtual reality de reactietijd van soldaten onder crisisomstandigheden significant verbetert.
     Soldaten worden ondergedompeld in een realistische VR-simulatie waarin ze snel moeten reageren en vijandelijke dreigingen moeten zien te identificeren.
 
     Om de effectiviteit te testen, meten instructeurs de reactietijd (in milliseconden) van 18 cadetten na 6 weken VR-training en vergelijken dit met de gemiddelde reactietijd van 420 ms bij conventionele trainingsmethoden.
     Uit de steekproef blijkt dat de gemiddelde reactietijd na de VR-training gelijk is aan 390 milliseconden met een standaardafwijking van 40 milliseconden.
+    Er wordt aangenomen dat de reactietijd van een willekeurige cadet een normaal verdeelde kansvariabele is.
     }
 
     \subquestion{5}{
-        Bereken op grond van deze steekproef een $95\%$-betrouwbaarheidsinterval voor de gemiddelde reactietijd van een cadet.
+        Bereken op grond van deze steekproef een $98\%$-betrouwbaarheidsinterval voor de gemiddelde reactietijd van een cadet.
         Rond de grenzen van dit interval af op gehele milliseconden, zodanig dat de betrouwbaarheid gewaarborgd blijft.
     }
     \solution{
-
+        Laat $X \sim N(\mu=?; \sigma=?)$ de reactietijd zijn van een willekeurige cadet.
+        Volgens de centrale limietstelling is de gemiddelde reactietijd $\overline{X} = \frac{X_1 + X_2 + \ldots + X_{18}}{18}$ van 18 cadetten ook normaal verdeeld, met verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{18}}$. \rubric{1}
+        Omdat naast de verwachtingswaarde $\mu$ ook de standaardafwijking $\sigma$ onbekend is (en bovendien de steekproefgrootte $n = 18 < 30$), moet de $t$-verdeling worden gebruikt.\rubric{1}
+        De $t$-waarde die hoort bij $98\%$ betrouwbaarheid, oftewel $\alpha = 0.02$, is (in het geval van tweezijdige intervallen) gelijk aantal
+        \[
+            t = \invt(opp=1-\frac{\alpha}{2}; df=n-1) = \invt(opp=0.99; df=17) \approx 2.5669. \rubric{1}
+        \]
+        Omdat $\sigma$ dus onbekend is, gebruiken we de steekproefstandaardafwijking $s = 40$ als schatter.
+        Het betrouwbaarheidsinterval worden dan gegeven door
+        \begin{align*}
+            [\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] 
+                &= [390 - 2.5669 \cdot \frac{40}{\sqrt{18}}; 390 + 2.5669 \cdot \frac{40}{\sqrt{18}}] \\
+                &= [365.7990; 414.2010] \rubric{2}
+        \end{align*}
+        Om de betrouwbaarheid te waarborgen, mag het interval niet kleiner worden, dus naar buiten afronden: $[365; 415]$. 
     }
 
     \subquestion{3}{
-        De instructeurs willen de bewering dat de VR-training de reactietijd van cadetten significant verlaagt statistisch verantwoord toetsen.
-        Formuleer de bijbehorende nul- en alternatieve hypothese van deze hypothesetoets.
+        Een van de instructeurs die verantwoordelijk is voor de VR-training beweert dat de gemiddelde reactietijd van cadetten daalt tot hoogstens $380$ milliseconden.
+        De overige instructeurs willen dit niet meteen voor waar aannemen en willen dit graag statistisch verantwoord toetsen.
+        Formuleer de bijbehorende nul- en alternatieve hypothese van een geschikte hypothesetoets.
     } 
     \solution{
-
+        In deze hypothesetoets gaan we uit van een gegeven gemiddelde van $420$ milliseconden voor het conventionele trainingsregime.
+        In dat geval hebben we te maken met een $t$-toets met nul- en alternatieve hypothese als volgt: \rubric{1}
+        \begin{align*}
+            H_{0}: \mu &\le 380 \tag{nulhypothese} \\ \rubric{1}
+            H_{1}: \mu &> 380 \tag{alternatieve hypothese} \rubric{1}
+        \end{align*}
     }
 
     \subquestion{8}{
         Voer de hypothesetoets uit. 
-        Bepaal de toetsuitslag door het berekenen van een kritiek gebied op basis van de gegeven steekproef van 18 cadetten met significantieniveau $\alpha=0,02$.
+        Bepaal de toetsuitslag door het berekenen van een kritiek gebied op basis van de gegeven steekproef van 18 cadetten met significantieniveau $\alpha=0,05$.
     }
     \solution{
+        In dit werken we met een rechtszijdige toets (alternatieve hypothese heeft vorm $>$), dus het kritieke gebied is van de vorm $(g, \infty)$.\rubric{1}
+        We willen de (kleinste) grens $g$ zoeken zodanig dat de kans op een type-I fout ($H_0$ verwerpen terwijl die waar is) kleiner is dan $\alpha=0.05$.
 
+        Onder de nulhypothese is de gemiddelde reactietijd $\overline{X}$ van 18 willekeurige gekozen cadetten normaal verdeeld met verwachtingswaarde $380$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.\rubric{1}
+        Omdat $\sigma$ onbekend is en $n=18<30$, gebruiken we opnieuw de $t$-verdeling en $s = 40$. \rubric{1}
+        Er geldt dus, omdat we eenzijdig toetsen, dat 
+        \[
+            t = \invt(opp=1-\alpha; df=n-1) = \invt(opp=0.95; df=17) \approx 1.7396. \rubric{1}
+        \]
+
+        De bijbehorende grenswaarde vinden we nu met
+        \[
+            g = \mu + t \cdot \frac{s}{\sqrt{18}} = 380 + 1.7396 \cdot \frac{40}{\sqrt{18}} \approx 396.4012. \rubric{1}
+        \]
+
+        De gemeten waarde van $390$ is kleiner dan deze ondergrens $g \approx 396.4012$ van het kritieke gebied, dus $H_0$ wordt niet verworpen. 
+        Dit betekent dat met deze toets niet kan worden aangetoond dat de gemiddelde reactietijd hoger wordt door de VR-gevechtstraining. \rubric{2}
     }
 
     \subquestion{4}{
-        Leg in eigen woorden uit wat de uitslag van deze toets betekent voor de gemiddelde reactietijd van een cadet na VR-training.
+        Bepaal opnieuw de toetsuitslag, nu door middel van berekening van de $p$-waarde.
     }
-    \solution{
 
+    \solution{
+        Nog steeds geldt dat onder de nulhypothese geldt dat de gemiddelde reactietijd $\overline{X}$ van 18 willekeurige gekozen cadetten normaal verdeeld met verwachtingswaarde $380$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
+        Omdat $\sigma$ onbekend is en $n=18<30$, gebruiken we opnieuw de $t$-verdeling en $s = 40$. \rubric{1}
+        De $t$-waarde die hoort we een uitkomst van $\overline{x}=390$ is gelijk aan
+        \[
+            t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}} = \frac{390 - 380}{\frac{40}{\sqrt{18}}} \approx 1.0607. \rubric{1}
+        \]
+        Er geldt dus, omdat we eenzijdig toetsen, dat we de rechteroverschrijdingskans willen bepalen:
+        \[
+            p = P(\overline{X} > t) = \text{tcdf}(lower=1.0607; upper=10^{99}; df=17) \approx 0.1518. \rubric{1}
+        \]
+
+        Aangezien deze overschrijdingskans $p$ groter is dan $\alpha$, zal $H_0$ opnieuw niet worden verworpen. \rubric{1}
     }
 
     \subquestion{5}{
@@ -46,7 +95,22 @@
         Voor welke waarde van $x$ is de kans op verbreking van het record gelijk aan $5\%$?
     }
     \solution{
+        We noemen nu $Y$ de totale som van reactietijden van de zes cadetten in een team, dat is volgens de centrale limietstelling normaal verdeeld met verwachtingswaarde $6 \cdot \mu$ en standaardafwijking $\sqrt{6}\cdot\sigma$.
+        We gebruiken hiervoor de schattingen $6\cdot\overline{x}=6\cdot390=2340$ ms en $\sqrt{6}\cdot s=\sqrt{6}\cdot 40 \approx 97.9796$ ms. \rubric{1}
+        We willen nu de waarde $x$ vinden waarvoor geldt:
+        \[
+            P(Y \le x) = 0.05. \rubric{1}
+        \]
 
+        Omdat $n = 6 < 30$, werken we nog steeds met de $t$-verdeling, de $t$-waarde die daarbij hoort is
+        \[
+            t = \invt(opp=0.05; df=n-1) = \invt(opp=0.05; df=5) \approx -2.0150. \rubric{1}
+        \]
+        De grenswaarde van het interval is dan gelijk aan
+        \[
+            g = \mu + t \cdot s = 2340 - 2.0150 \cdot 97.9796 \approx 2142.5664 \rubric{1}
+        \]
+        Dit betekent dat het huidige record op deze grenswaarde $g = 2142.5664$ ms staat, dan zal een team van zes cadetten met $5\%$ kans het record kunnen breken. \rubric{1} 
     }
 
 \end{question}
