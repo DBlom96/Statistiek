@@ -1,8 +1,7 @@
 \begin{question}{20}{
-    Binnen het NAVO-bondgenootschap wordt over een periode van zes maanden door een internationaal cybersecurity team inlichtingen uitgewisseld over cyberaanvallen gericht op de Baltische staten: Estland, Letland en Litouwen.
-    Hierbij worden de cyberaanvallen van drie belangrijke types gemonitord, namelijk phishing aanvallen, injecties van malware en DDoS-aanvallen (Distributed Denial-of-Service).
+    Binnen het NAVO-bondgenootschap worden over een periode van zes maanden door een internationaal team van cyberexperts inlichtingen uitgewisseld over cyberaanvallen gericht op de Baltische staten: Estland, Letland en Litouwen.
+    Hierbij worden de drie meest voorkomende types cyberaanvallen gemonitord, namelijk phishing, injecties van malware en DDoS-aanvallen (Distributed Denial-of-Service).
     De verzamelde data ziet er als volgt uit:
-
 
     \begin{center}
         \begin{tabular}{c|ccc|c}
@@ -17,21 +16,90 @@
             \bottomrule
         \end{tabular}
     \end{center}
-    Het cybersecurity team wil testen of de verdeling van het type inkomende cyberaanvallen significant verschilt tussen de drie Baltische staten.
+    Het team van cyberspecialisten wil toetsen of de verdeling van het type inkomende cyberaanvallen significant verschilt tussen de drie Baltische staten.
 }
 
     \subquestion{3}{Formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$ van de bijbehorende hypothesetoets.}
     \solution{
+        Omdat we te maken hebben met een toets van onafhankelijkheid van twee nominale variabelen, gaan we een chi-kwadraattoets voor onafhankelijkheid uitvoeren.
+        De bijbehorende nul- en alternatieve hypothese zijn in dit geval gelijk aan
+        \begin{align*}
+            H_0&: \text{ de verdeling van types cyberaanvallen is onafhankelijk } \\
+               & \qquad \qquad \text{van het land waarop deze gericht is.} \rubric{2} \\
+            H_1&: \text{ de verdeling van types cyberaanvallen is wel afhankelijk} \\
+               & \qquad \qquad \text{van het land waarop deze gericht is.} \rubric{1}
+        \end{align*}
+    }
 
+    \subquestion{2}{Bepaal voor elk van de drie scenario's (alledrie dezelfde verdeling van cyberaanvallen, twee van de drie landen dezelfde verdeling, alledrie verschillende verdelingen) of het een correcte beslissing zou zijn om de nulhypothese aan te nemen?
+    Leg uit.}
+    \solution{
+        De nulhypothese van onafhankelijkheid wordt enkel en alleen aangenomen als alledrie de landen dezelfde verdeling van type cyberaanvallen hebben gericht op hun land.\rubric{1}
+        Dat betekent dat de nulhypothese alleen correct is in het geval van het eerste scenario. \rubric{1}
     }
 
     \subquestion{10}{Voer een chi-kwadraattoets voor onafhankelijkheid uit met significantieniveau $\alpha=0,05$ en bereken de bijbehorende $p$-waarde.}
     \solution{
+        Om een chi-kwadraattoets voor onafhankelijkheid uit te voeren, moeten we eerst de verwachte frequenties uitrekenen. Onder de aanname dat $H_0$ waar is, is deze voor elk van de negen cellen te berekenen als $\frac{\text{rijtotaal} \cdot \text{kolomtotaal}}{\text{totaal}}$.
+        De verwachte frequenties zijn nu te geven als:
+        \begin{center}
+            \begin{minipage}{0.45\textwidth}
+                \resizebox{\textwidth}{!}{
+                    \begin{tabular}{c|ccc|c}
+                        \toprule
+                            \multicolumn{5}{c}{\textbf{Waargenomen frequenties (observed)}} \\ 
+                            Land & Phishing & Malware & DDoS & \textbf{Totaal}\\
+                        \midrule 
+                            Estland & $120$ & $200$ & $140$ & $460$ \\
+                            Letland & $150$ & $170$ & $180$ & $500$ \\
+                            Litouwen & $100$ & $220$ & $160$ & $480$ \\
+                        \midrule
+                            \textbf{Totaal} & $370$ & $590$ & $480$ & $1440$ \\
+                        \bottomrule
+                    \end{tabular}
+                }
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\textwidth}
+                \resizebox{\textwidth}{!}{
+                    \begin{tabular}{c|ccc|c}
+                        \toprule
+                            \multicolumn{5}{c}{\textbf{Verwachte frequenties (expected)}} \\ 
+                            Land & Phishing & Malware & DDoS & \textbf{Totaal}\\
+                        \midrule 
+                            Estland & $118.1944$ & $188.4722$ & $153.3333$ & $460$ \\
+                            Letland & $128.4722$ & $204.8611$ & $166.6667$ & $500$ \\
+                            Litouwen & $123.3333$ & $196.6667$ & $160$ & $480$ \\
+                        \midrule
+                            \textbf{Totaal} & $370$ & $590$ & $480$ & $1440$  \\
+                        \bottomrule
+                    \end{tabular}
+                }
+            \end{minipage}\rubric{4}
+        \end{center} 
+        
+        We berekenen de toetsingsgrootheid$\chi^2$ als volgt, waarbij $O_{ij} / E_{ij}$ de geobserveerde / verwachte frequentie is in rij $i$, kolom $j$:        
+        \begin{align*}
+            \chi^2  &= \frac{(O_{11} - E_{11})^2}{E_{11}} + \frac{(O_{12} - E_{12})^2}{E_{12}} + \ldots + \frac{(O_{33} - E_{33})^2}{E_{33}} \\
+                    &= \frac{(120 - 118.1944)^2}{118.1944} + \frac{(150 - 128.4722)^2}{128.4722} + \ldots + \frac{(160 - 160)^2 }{160}\\
+                    &\approx 19.6812.\rubric{3}
+        \end{align*}
 
+        De bijbehorende $p$-waarde is de overschrijdingskans $P(X > \chi^2)$, waarbij $X$ de toetsingsgrootheid van de chikwadraattoets voor onafhankelijkheid.
+        Deze toetsingsgrootheid heeft $df = (\text{\#rijen}-1)\cdot(\text{\#kolommen}-1)=(3-1)\cdot(3-1) = 4$ vrijheidsgraden.\rubric{1}
+        \begin{align*}
+            p = P(X > \chi^2=19.6812)   &= \chi^2\text{cdf}(lower=19.6812; upper=10^{99};df=4) \\
+                                        &\approx 5.7721 \cdot 10^{-4}. \rubric{2}
+        \end{align*}
     }
 
-    \subquestion{7}{Kunnen we concluderen dat de verdeling van het type inkomende cyberaanvallen significant verschilt voor de drie Baltische staten?}
+    \subquestion{5}{Geef een conclusie voor deze hypothesetoets en ondersteun deze met behulp van gegevens uit de tabel.}
     \solution{
-
+        Uit de hypothesetoets volgt een extreem kleine overschrijdingskans $p = 5.7721 \cdot 10^{-4}$.
+        Omdat $p < \alpha = 0.05$, geldt dat $H_0$ wordt verworpen. \rubric{2}
+        We kunnen dus de conclusie trekken dat de verdeling van types cyberaanvallen significant verschilt over de drie Baltische staten. \rubric{1}
+        
+        Als we kijken naar de tabel van waargenomen frequenties, dan zien we dat de verdeling van cyberaanvallen redelijk gelijk verdeeld is in het geval van Letland ($150-170-180$).
+        We zien echter in Estland en Litouwen dat aanvallen met malware veel vaker voorkomen dat phishingaanvallen, tot soms wel twee keer zo vaak. \rubric{2} 
     }
 \end{question}
