@@ -3,7 +3,7 @@
 
 \documentclass[11pt,a4paper,dutch]{article} % document type and language
 
-\usepackage[centering,noheadfoot,margin=1in]{geometry}
+\usepackage[centering,noheadfoot,margin=0.7in]{geometry}
 \usepackage[dutch]{babel}
 \usepackage{palatino}  
 \usepackage{booktabs}
@@ -22,26 +22,25 @@
 \begin{document}
 \maketitle
 
-Gegeven is een steekproef van $n$ observaties $x_1, x_2, \ldots, x_n$ uit een populatie met $N$ elementen (waarbij $N >> n$).
+Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
 
 \textbf{Steekproefgemiddelde:}
 \[
-    \overline{x} = \frac{\sum_{i} x_i}{n} %= \frac{x_1 + x_2 + \ldots + x_n}{n}
+    \overline{x} = \frac{\sum\limits_{i} x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}
 \]
 
 \textbf{Steekproefvariantie:}
 \begin{align}
-    s^2 &= \frac{\sum_{i} (x_i-\overline{x})^2}{n} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
-    s^2 &= \frac{\sum_{i} x_i^2 - n \cdot \overline{x}^2}{n} \hfill \tag{optie 2}
+    s^2 &= \frac{\sum\limits_{i} (x_i-\overline{x})^2}{n} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
+    s^2 &= \frac{\left(\sum\limits_{i} x_i^2\right) - n \cdot \overline{x}^2}{n} = \frac{(x_1^2+x_2^2+\ldots+x_n^2) - n \cdot \overline{x}^2}{n} \hfill \tag{optie 2}
 \end{align}
-\textbf{Merk op:} als de steekproef gebruikt wordt om de populatievariantie te \underline{schatten}, delen door $n-1$.
 \vspace{.5cm}
 
 \textbf{Rekenregels kansrekening:}
 \begin{align*}
-    P(A \text{ \'of } B)    &= P(A) + P(B) - P(A \text{ en } B) \tag{optelregel}\\
+    P(A \text{ of } B)      &= P(A) + P(B) - P(A \text{ en } B) \tag{optelregel}\\
     P(B)                    &= 1 - P(\text{niet } B) \tag{complementregel}\\
-    P(A \text{ gegeven } B)                &= \frac{P(A \text{ en } B)}{P(B)} \tag{conditionele kansen}\\
+    P(A \mid B)         &= \frac{P(A \text{ en } B)}{P(B)} \tag{conditionele kansen}\\
 \end{align*}
 
 \textbf{Discrete en continue kansverdelingen:}
@@ -59,9 +58,9 @@ Gegeven is een steekproef van $n$ observaties $x_1, x_2, \ldots, x_n$ uit een po
         \midrule
             \textbf{CDF:}                                   & $F(k) = P(X \le k) = \sum_{\ell:\ell\le k} p(\ell)$ & $F(x) = P(X \le x) = \int_{-\infty}^{x} f(y)\ dy$ \\
         \midrule
-            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum_{k} k \cdot P(X=k)$ & $E[X] = \int_{x} x \cdot f(x)\ dx$\\
+            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum_{k} k \cdot P(X=k)$ & $E[X] = \int x \cdot f(x)\ dx$\\
         \midrule
-            \textbf{Variantie:}                             & $\text{Var}(X) = \sum_{k} (k - E[X])^2 \cdot P(X=k)$   & $\text{Var}(X) = \int_{x} (x - E[X])^2 \cdot f(x)\ dx$ \\    
+            \textbf{Variantie:}                             & $\text{Var}(X) = \sum_{k} (k - E[X])^2 \cdot P(X=k)$   & $\text{Var}(X) = \int (x - E[X])^2 \cdot f(x)\ dx$ \\    
         \midrule
             \textbf{Standaardafwijking:}                    & $\sigma(X) = \sqrt{\text{Var}(X)}$   & $\sigma(X) = \sqrt{\text{Var}(X)}$ \\
         \bottomrule
@@ -86,12 +85,12 @@ Gegeven is een steekproef van $n$ observaties $x_1, x_2, \ldots, x_n$ uit een po
             1 & k \geq b
             \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a+1)^2-1}{12}$ \\ 
         \midrule
-            Bernoulli($p$) & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
-            0 & k < 0 \\
-            1-p & k=0 \\
-            1 & k \geq 1
-            \end{cases}$ & $p$ & $p(1-p)$ \\ 
-        \midrule
+        %     Bernoulli($p$) & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
+        %     0 & k < 0 \\
+        %     1-p & k=0 \\
+        %     1 & k \geq 1
+        %     \end{cases}$ & $p$ & $p(1-p)$ \\ 
+        % \midrule
             Binomiaal($n,p$) & $p(k) = \binom{n}{k}p^k(1-p)^{n-k}$ & $F(k) = \sum\limits_{i=0}^k \binom{n}{i}p^i(1-p)^{n-i}$ & $np$ & $np(1-p)$ \\ 
         \midrule
             % Geo($p$) & $P(X=k) = (1-p)^{k-1}\cdot p$ & $F(k) = \sum_{i=1}^k(1-p)^{k-1}\cdot p$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\ \midrule
@@ -103,12 +102,44 @@ Gegeven is een steekproef van $n$ observaties $x_1, x_2, \ldots, x_n$ uit een po
             0, & x < a \\
             \frac{x-a}{b-a}, & a \leq x < b \\ 1, & x \geq b \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
         \midrule
-            $N(\mu, \sigma)$ & $f(x) = \frac{1}{\sigma\cdot\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$ & $F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)$ & $\mu$ & $\sigma^2$ \\ 
-        \midrule
+        %     $N(\mu, \sigma)$ & $f(x) = \frac{1}{\sigma\cdot\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$ & $F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)$ & $\mu$ & $\sigma^2$ \\ 
+        % \midrule
             Exponentieel($\lambda$) & $f(x) = \lambda e^{-\lambda x}$, $x \geq 0$ & $F(x) = \begin{cases} 1 - e^{-\lambda x}, & x \geq 0 \\ 0, & x < 0 \end{cases}$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
         \bottomrule
     \end{tabular}
 \end{table}
+
+% \textbf{Veelgebruikte functies op de grafische rekenmachine (op basis van TI-84 Plus)}
+% \begin{itemize}
+%     \item Continue kansvariabelen met kansdichtheidsfunctie $f$:
+%     \[
+%         \int_{a}^{b} f(x)\, dx = \text{fnInt}(f(x); x; a; b)
+%     \]
+%     \item Binomiaal verdeelde kansvariabele $X \sim \text{Binomiaal}(n; p)$:
+%     \begin{itemize}
+%         \item $P(X = k) = \text{binompdf}(n; p; k)$ en $P(X \le k) = \text{binomcdf}(n; p; k)$
+%     \end{itemize}
+%     \item Normaal verdeelde kansvariabele $X \sim N(\mu; \sigma)$:
+%     \begin{itemize}
+%         \item $P(a \le X \le b) = \text{normalcdf}(a; b; \mu; \sigma)$ en $P(X \le g) = p \rightarrow g = \text{invNorm}(p; \mu; \sigma)$
+%     \end{itemize}
+%     \item Poisson verdeelde kansvariabele $X \sim \text{Poisson}(\lambda)$:
+%     \begin{itemize}
+%         \item $P(X = k) = \text{poissonpdf}(\lambda; k)$ en $P(X \le k) = \text{poissoncdf}(\lambda; k)$
+%     \end{itemize}
+% \end{itemize}
+
+\textbf{$z$-score:}
+\[
+    z = \frac{x - \mu}{\sigma}
+\]
+
+\textbf{Centrale limietstelling:}
+Gegeven $n$ kansvariabelen $X_1, X_2, \ldots, X_n$ die onderling onafhankelijk zijn en dezelfde kansverdeling hebben met een verwachtingswaarde $\mu$ en standaardafwijking $\sigma$, dan geldt (bij benadering) dat
+\begin{itemize}
+    \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met verwachtingswaarde $n \cdot \mu$ en standaardafwijking $\sqrt{n} \cdot \sigma$.
+    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
+\end{itemize}
 
 % \textbf{Covariance:}
 % \[
@@ -142,7 +173,5 @@ Gegeven is een steekproef van $n$ observaties $x_1, x_2, \ldots, x_n$ uit een po
 
 % \textbf{Minimum sample size for bounding type II error $\beta$}
 % \[ n \ge \frac{(z_{\frac{\alpha}{2}}+z_{\beta})^2 \cdot \sigma^2}{\delta^2}\]
-
-
 
 \end{document}

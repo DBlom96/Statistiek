@@ -7,7 +7,7 @@ import comtypes.client
 import locale
 
 # Load template
-doc = Document(fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\tentamenvoorblad.docx")
+doc = Document(fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\tentamenvoorblad.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
 vaknaam = "Statistiek (deel 2) -- derde kans"
@@ -15,15 +15,15 @@ vakcode = "STA#2"
 datum = "20250523"
 tentamentijd = "10:00-13:00"
 examinator = "Dr. ir. D.A.M.P. Blom"
-peer_review = "Dr. J.B.M. Melissen"
+peer_review = "" # Dr. J.B.M. Melissen"
 aantal_opgaven = "4"
 aantal_paginas = "4"
 
 formatted_date = datetime.strptime(datum, "%Y%m%d").strftime("%d %B %Y")
 print(formatted_date)
 
-doc_path = fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.docx"
-pdf_path = fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.pdf"
+doc_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.docx"
+pdf_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.pdf"
 
 # Replace placeholders
 replacements = {

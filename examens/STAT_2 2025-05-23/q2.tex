@@ -1,9 +1,13 @@
 \begin{question}{30}{
-    Een luchtmacht onderzoekt de nauwkeurigheid van GPS-geleide raketten in een omgeving van elektronische oorlogsvoering.
-    De raketten worden gericht op een vijandelijke luchtmachtbasis.
-    Tijdens de vlucht worden de raketten ``gedesori\"enteerd'' omdat de vijandelijke troepen gebruik maken van GPS jammers om precisiewapens te verstoren.
-    Onderzocht wordt nu wat het verband is tussen de afstand (in km) tussen de eerste locatie waar de raket gejamd wordt en het doelwit ($X$) en de afstand (in km) tussen het doelwit en het daadwerkelijke inslagpunt van de raket ($Y$).
-    Van tien raketten worden data verzameld over deze twee variabelen.
+    De Oekraiense luchtmacht onderzoekt de nauwkeurigheid van haar GPS-geleide raketten in een omgeving waarin veelvuldig elektronische oorlogsvoering plaatsvindt door Russische GPS-jammers.
+    De raketten worden gericht op een luchtmachtbasis in de regio Koersk.
+    Tijdens de vlucht worden de raketten dus ``gedesori\"enteerd'' omdat de precisiewapens niet meer op GPS kunnen vertrouwen.
+    Voor iedere raket worden twee variabelen gemeten:
+    \begin{itemize}
+        \item de afstand $X$ (in kilometers) tot de vijandelijke basis waar de raket voor het eerst GPS-jamming ondervindt, en
+        \item de afwijking $Y$ (in kilometers) van de raket, dat wil zeggen de afstand van het daadwerkelijke inslagpunt van de raket tot het beoogde doelwit van de raket.
+    \end{itemize}
+    Voor tien raketten is data verzameld over deze twee variabelen.
     \begin{center}
         \begin{tabular}{c|cccccccccc}
             \toprule
@@ -15,7 +19,7 @@
 
 }
 
-    \subquestion{4}{Teken de gegevens uit bovenstaande tabel in een spreidingsdiagram.} 
+    \subquestion{4}{Teken de gegevens uit bovenstaande tabel in een spreidingsdiagram (scatter plot).} 
     \solution{
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
@@ -25,7 +29,7 @@
     }
 
     \subquestion{8}{Bereken met behulp van de tabel hierboven Pearson's correlatieco\"efficient. 
-    Bepaal of er sprake is van een lineaire correlatie en leg in woorden uit wat de betekenis is van de grootte en het teken van de correlatieco\"efficient.
+    Bepaal of er sprake is van lineaire correlatie en leg uit wat de betekenis is van de grootte en het teken van de correlatieco\"efficient.
     }
     \solution{
         Hiervoor moeten we eerst een tabel uitschrijven met de grootheden $\overline{X}$, $\overline{Y}$, $\overline{XY}$, $\overline{X^2}$ en $\overline{Y^2}$.
@@ -78,14 +82,14 @@
         Verder is in het geval van geen jamming de afstand tussen doelwit en inslagpunt $2.5264$ km (bijvoorbeeld door weersfenomenen of rekenfouten tijdens lancering).\rubric{2}
     }
 
-    \subquestion{2}{Geef een statistisch verantwoorde voorspelling van de afstand tot het doelwit waarop een raket inslaat die op $45$ kilometer van het doelwit voor het eerst GPS jamming ondervindt.}
+    \subquestion{2}{Geef een statistisch verantwoorde voorspelling van de afstand tot het doelwit waarop een raket inslaat die op $45$ kilometer afstand van het doelwit voor het eerst GPS-jamming ondervindt.}
     \solution{
         Je kunt de zojuist uitgerekend regressielijn gebruiken om een voorspelling te vinden.\rubric{1}
         Vul in $X = 45$, dit geeft $Y = 0.0227\cdot 45 + 2.5264\approx 3.5477$ km. \rubric{1}
         De raket zal naar verwachting zo ongeveer op iets meer dan 3.5 km van het doelwit inslaan.
     }
 
-    \subquestion{8}{Bepaal een $95\%$-voorspellingsinterval voor de afstand tussen doelwit en inslagpunt als die op $120$ kilometer van het doelwit voor het eerst GPS-jamming ondervindt.}
+    \subquestion{8}{Bepaal een $95\%$-voorspellingsinterval voor de afstand tussen doelwit en inslagpunt als die op $45$ kilometer van het doelwit voor het eerst GPS-jamming ondervindt.}
     \solution{
             Het voorspellingsinterval is $[Y_{0} - t\cdot s_{f}; Y_{0} + t\cdot s_{f}]$, waarbij $Y_0 = 3.5477$ de puntschatting gemaakt bij de vorige opgave.
             Verder geldt dat $t$ de $t$-waarde is die hoort bij een betrouwbaarheid van $95\%$ met $df = n-2 = 10 - 2 = 8$ vrijheidsgraden. \rubric{1}
