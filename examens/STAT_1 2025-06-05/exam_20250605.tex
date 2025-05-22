@@ -1,25 +1,29 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{pdfpages}
+\usepackage{setspace}
+
 
 % Importeer configuratie-instellingen
-\RequirePackage{../../LaTeX/config}
+\RequirePackage{C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/exam_config}
+\RequirePackage{C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros}
 
+\renewcommand{\baselinestretch}{1.5}
 % Begin van het document
 \begin{document}
 
 % FMW-specifiek titelblad voordat het examen begint
-\includepdf{../../Python/FMW_titelblad_20250523.pdf}
+\includepdf[pages=-]{\folder/Python/FMW_titelblad_20250605.pdf}
 
-\title{Tentamen statistiek}
-\author{Nederlandse Defensie Academie}
-\date{\today}
-\maketitle
+% \title{Tentamen statistiek}
+% \author{Nederlandse Defensie Academie}
+% \date{\today}
+% \maketitle
 
 % Include questions from external files
-\section*{Vragen}
-
 \input{q1.tex}
 \input{q2.tex}
-% Add more question files as needed
+\input{q3.tex}
+\input{q4.tex}
 
+% Add more question files as needed
 \end{document}

@@ -18,7 +18,7 @@
     \item Hoe groot is de kans dat er meer dan $3$ uur voorbijgaan zonder dat een enkele oproep is geweest?
     \answer{
         Stel nu dat $X$ de kansvariabele is van het aantal binnenkomende oproepen in drie uur tijd.
-        In dat geval is $X$ Poisson verdeeld met parameter $\lambda = 3 \cdot 0,50 = 1,50$.
+        In dat geval is $X$ Poisson verdeeld met parameter $\lambda = 3 \cdot 0,50 = 1,50$, aangezien er in drie uur gemiddeld $1,5$ oproepen gaan komen.
         
         De kans dat er meer dan $3$ uur voorbijgaan zonder dat een enkele oproep is geweest is gelijk aan de kans op geen oproepen in drie uur tijd, oftewel:
         \[
@@ -29,6 +29,18 @@
     \item De chauffeur van de dierenambulance wil met lunchpauze. Hij wil de tijdsduur van de pauze zodanig kiezen dat de kans hoogstens $0,25$ is dat binnen die periode een oproep binnenkomt.
     Hoelang mag hij pauzeren? 
     \answer{
-        
+        Tijdens een lunchpauze van $t$ uur lang is het aantal inkomende oproepen $X$ Poisson verdeeld met parameter $0,5t$.
+        Om de gevraagde tijdsduur $t$ te bepalen, moeten we de ongelijkheid
+        \[
+            P(X \ge 1) \le 0,25 \quad \rightarrow \quad 1 - P(X \le 0) \le 0,25
+        \]
+        oplossen.
+        Gebruik hiervoor het functiescherm in de grafische rekenmachine en vul in
+        \begin{align*}
+            y_1 &= 1 - \poissoncdf(\lambda=0,5\cdot X; k=0) \\
+            y_2 &= 0,25.
+        \end{align*}
+        De optie ``intersect'' (2nd-TRACE-5) geeft ons in dit geval een waarde $x \approx 0.5754$ uur, oftewel ongeveer 34,5 minuten.
+        De chauffeur zal dus ongeveer na 34,5 minuten terug moeten zijn van zijn pauze om hoogstens $25\%$ kans te hebben een oproep te hebben gemist.     
     }
 \end{enumerate}

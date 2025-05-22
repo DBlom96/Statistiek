@@ -7,12 +7,29 @@
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat een willekeurig zonnepaneel na vier jaar nog functioneert?
     \answer{
-
-    }
+        Laat $X$ de continue kansvariabele zijn die de levensduur van een zonnepaneel op een satelliet meet.
+        Gegeven is dat $X \sim \text{Exponentieel}(\lambda=0,5)$.
+        We willen de kans bepalen dat de satelliet na vier jaar nog functioneert, oftewel
+        \begin{align*}
+            P(X > 4)    &= 1 - P(X \le 4) \\
+                        &= 1 - (1 - e^{-0,5 \cdot 4}) \\
+                        &= e^{-2} \\
+                        &\approx 0,1353.
+        \end{align*}
+        Met ongeveer $13,53\%$ kans functioneert een willekeurig zonnepaneel van de satelliet nog na vier jaar.
+        }
 
     \item Hoe groot is de kans dat de satelliet na vier jaar nog functioneert?
     We gaan ervan uit dat de levensduren van de panelen onderling onafhankelijk zijn.
     \answer{
-        
+        Laat $Y$ nu de kansvariabele zijn die telt hoeveel zonnepanelen van de satelliet na vier jaar nog functioneren.
+        Gegeven de aanname dat de levensduren van de panelen onderling onafhankelijk zijn, kunnen we deze zien als onafhankelijke Bernoulli-experimenten.
+        In andere woorden, $Y$ is een binomiaal verdeelde kansvariabele met parameters $n = 5$ (aantal zonnepanelen op de satelliet) en $p = 0,1353$ (kans dat een willekeurig zonnepaneel na vier jaar nog functioneert).
+        De satelliet functioneert na vier jaar nog zolang dat er drie zonnepanelen nog functioneren, dit gebeurt met kans
+        \begin{align*}
+            P(Y \ge 3)  &= 1 - P(Y \le 2) \\
+                        &= 1 - \binomcdf(n=5; p=0,1353; k=2) \\
+                        &\approx 0,0200
+        \end{align*}
     }
 \end{enumerate}
