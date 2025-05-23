@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1747985441.45151 "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_1 2025-06-05/exam_20250605.tex" "exam_20250605.pdf" "exam_20250605" 1747985443.38643 0
+["pdflatex"] 1748012506.4172 "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_1 2025-06-05/exam_20250605.tex" "exam_20250605.pdf" "exam_20250605" 1748012508.57247 0
   "C:/Users/Danny/Documents/GitHub/Statistiek/LaTeX/styles/config.sty" 1747811693 2494 650168880531c2f6f420017f8339f886 ""
   "C:/Users/Danny/Documents/GitHub/Statistiek/LaTeX/styles/exam_config.sty" 1747984697 1211 73b914edf3965cc795642cc100f4a0bd ""
   "C:/Users/Danny/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1744911442 2546 6c8b868b232fe9059ec63290771c600a ""
@@ -222,12 +222,12 @@
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_1 2025-06-05/exam_20250605.tex" 1747984692 768 1e10afbbfc8c447a4f855baa0711807b ""
-  "exam_20250605.aux" 1747985443 343 27fdee1dcb88524751580f65c4496a26 "pdflatex"
-  "exam_20250605.out" 1747985442 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "exam_20250605.tex" 1747984692 768 1e10afbbfc8c447a4f855baa0711807b ""
-  "q1.tex" 1747985438 3266 bf03e7dff212424702fee391b97f5029 ""
-  "q2.tex" 1743442951 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_1 2025-06-05/exam_20250605.tex" 1748008378 793 76e3b1c07e75a602cf90865ed4720859 ""
+  "exam_20250605.aux" 1748012508 1309 aee07ae633d9a96a507d959f740f855a "pdflatex"
+  "exam_20250605.out" 1748012507 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "exam_20250605.tex" 1748008378 793 76e3b1c07e75a602cf90865ed4720859 ""
+  "q1.tex" 1748009186 6109 9b7dfb4a1f651e9efd8e39447742c2bf ""
+  "q2.tex" 1748012505 4861 b98a0afcf03dd652d3caac0703d9c902 ""
   "q3.tex" 1747984679 1775 8fa0b4939e1c6742e3965c01f2536444 ""
   "q4.tex" 1747984679 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)

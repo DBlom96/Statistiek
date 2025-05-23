@@ -1,0 +1,85 @@
+\begin{question}{25}{
+    Tijdens een militaire missie wordt een Panzerhoubitze 2000 ingezet voor langdurige operaties.
+    Een kritisch onderdeel, de elevatiemotor van het kanon, heeft een gemiddelde uitvalfrequentie van 1,5 storingen per maand.
+    Gedurende de missie wordt gebruik gemaakt van een logistiek transport voor het leveren van reserveonderdelen (spare parts) voor de Panzerhaubitze.
+}
+
+    \subquestion{3}{
+        Wat is de kans dat er in een periode van zes maanden precies tien storingen optreden, aangenomen dat de uitvallen volgens een Poissonproces plaatsvinden?
+    }
+    \solution{
+        Laat $X$ het aantal storingen aan de elevatiemotor van het kanon zijn in een periode van zes maanden.
+        De tijdseenheid is in maanden, dus $t = 6$ en $\lambda = 1,5$, oftewel $\mu = \lambda \cdot t = 9$. \rubric{1}
+
+        Er geldt dus dat $X \sim \text{Poisson}(\mu=9)$. \rubric{1}
+
+        De kans dat er in die zes maanden precies tien storingen plaatsvinden is dus gelijk aan
+        \[
+            P(X = 10) = \poissoncdf(\mu=9; k=9) \approx 0,1318. \rubric{1}
+        \]
+    }
+
+    \subquestion{3}{
+        De elevatiemotor van de Panzerhaubitze 2000 is precies \'e\'en maand geleden vervangen.
+        Hoe groot is de kans dat deze nog een maand zonder problemen blijft functioneren?
+    }
+    \solution{
+        Laat $T$ de tijd meten vanaf de vervanging van de motor tot de eerste storing.
+        Aangezien storingen plaatsvinden volgens een Poissonproces, geldt dat
+        \[
+            P(T > 2 \mid T > 1) = \frac{P(T > 2 \text{ en } T > 1)}{P(T > 1)} = \frac{P(T>2)}{P(T>1)} = \frac{e^{-1.5\cdot 2}}{e^{-1,5\cdot 1}} = \frac{1}{e\sqrt{e}} \approx 0,2231. \rubric{3}
+        \]
+        \textbf{Alternatief}: aangezien $T$ een exponentieel verdeelde kansvariabele is, hebben we te maken met geheugenloosheid.\rubric{1}
+        De kans dat deze nog een maand zonder problemen blijft functioneren is
+        \[
+            P(T > 1) = e^{-\lambda\cdot 1} = e^{-1,5\cdot 1} = e^{-1,5} \approx 0,2231. \rubric{2} 
+        \]
+    }   
+
+    \subquestion{3}{
+        De logistieke eenheid die verantwoordelijk is voor het transport heeft een transportcapaciteit van 12 reservemotoren per zes maanden.
+        Wat is de kans dat er in deze periode een tekort aan reserveonderdelen blijkt te zijn?
+    }
+    \solution{
+        Er gaat een tekort aan reserveonderdelen zijn als geldt dat er meer storingen optreden dan het aantal reserveonderdelen dat kan worden getransporteerd? \rubric{1}
+        We willen dus de kans $P(X > 12)$ bepalen, oftewel
+        \[
+            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12) = 1 - \poissoncdf(\mu=9; k=12) \approx 0,1242. \rubric{2}
+        \]
+    }
+
+    \subquestion{7}{
+        De eenheid overweegt twee opties om de kans op een tekort aan reserveonderdelen te minimaliseren:
+        \begin{itemize}
+            \item[\textbf{Optie 1:}] het doorvoeren van technologische upgrades die de uitvalfrequentie met $10\%$ verminderen.
+            \item[\textbf{Optie 2:}] een verhoging van de transportcapaciteit naar 13 reservemotoren per zes maanden.
+        \end{itemize}
+        Welke maatregel is het meest effectief in het verlagen van de kans op tekort.
+        Beargumenteer je antwoord aan de hand van berekeningen.
+    }
+    \solution{
+        Zodra optie 1 wordt doorgevoerd, wordt de uitvalfrequentie met $10\%$ vermindert, oftewel de gemiddelde uitvalfrequentie per maand daalt van $1,5$ naar $0,9 \cdot 1,5 = 1,35$ storingen.\rubric{1}
+        Per zes maanden geeft dit $\mu = \lambda \cdot t = 1,35 \cdot 6 = 8,1$ \rubric{1}.
+        De kans op een tekort aan reserveonderdelen is in dat geval:
+        \[
+            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12) = 1 - \poissoncdf(\mu=8,1; k=12) \approx 0,0687. \rubric{2}
+        \]
+
+        Zodra optie 2 wordt doorgevoerd, wordt de transportcapaciteit verhoogt tot 13 reservemotoren per zes maanden.
+        De kans op een tekort aan reserveonderdelen is in dat geval:
+        \[
+            P(X > 13) = P(X \ge 14) = 1 - P(X \le 13) = 1 - \poissoncdf(\mu=9; k=13) \approx 0,0739. \rubric{2}
+        \]
+
+        Aangezien de kans op een tekort kleiner is als optie 1 wordt doorgevoerd ($0,0687 < 0,0739$), is deze optie ook een effectievere maatregel om het tekort te minimaliseren. \rubric{2}
+    }
+
+    \subquestion{9}{
+        De militaire eenheid wil het risico op een tekort aan reserveonderdelen beperkt houden om de slaagkans van de missie te verhogen.
+        Hierbij wordt een beroep gedaan op de transportcapaciteiten van de logistieke eenheid.
+        Hoe groot moet de transportcapaciteit worden zodat met hoogstens $5\%$ kans de militaire eenheid met een tekort aan reserveonderdelen komt te zitten.
+    }
+    \solution{
+
+    }
+\end{question}

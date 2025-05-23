@@ -8,27 +8,26 @@
                 \end{cases}
     \]
 }
-
         \subquestion{4}{
             Toon met berekeningen (met de grafische rekenmachine) aan dat $f$ inderdaad voldoet aan de twee voorwaarden voor een kansdichtheidsfunctie.
         }
         \solution{
             Een functie $f$ kan dienen als een kansdichtheidsfunctie als geldt:
-            \begin{enumerate}
-                \item De functie $f$ is niet-negatief voor alle waarden van $t$, oftewel $f(t) \ge 0$.
-                \item De oppervlakte onder de grafiek van $f$ is gelijk aan 1, oftewel $\int_{-\infty}^{\infty} f(t)\, dt$
-            \end{enumerate}
-            De functie $f$ is gedefinieerd in twee gevallen.
+
+            \textbf{Voorwaarde 1:} de functie $f$ is niet-negatief voor alle waarden van $t$, oftewel \[f(t) \ge 0.\]
+            
             Op het interval $0 \le t \le 3$ geldt dat $f(t) = \frac{4}{27}\cdot t^2\cdot (3-t)$.
             In dat geval geldt dat $t^2 \ge 0$ en $3 - t \ge 0$, en we hebben te maken met een vermenigvuldiging van niet-negatieve termen, dus $f(t) \ge 0$.
             Buiten het interval $0 \le t \le 3$ is $f(t) = 0$, dus is ook voldaan aan $f(t) \ge 0$. \rubric{2}
+
+            \textbf{Voorwaarde 2:} de oppervlakte onder de grafiek van $f$ is gelijk aan 1, oftewel \[\int_{-\infty}^{\infty} f(t)\, dt=1.\]         
             
-            Voor de tweede voorwaarde moeten we checken of de oppervlakte onder de grafiek van $f$ daadwerkelijk gelijk is aan 1:
+            Voor de tweede voorwaarde moeten we dus checken of de oppervlakte onder de grafiek van $f$ daadwerkelijk gelijk is aan 1:
             \begin{align*}
                 \int_{-\infty}^{\infty} f(t)\, dt   &= \int_{0}^{3} \frac{4}{27}\cdot t^2 \cdot (3 - t)\, dt \\
                                                     &= \text{fnInt}(\frac{4}{27}\cdot x^2 \cdot (3 - x); x; 0; 3) \\
-                                                    &= 1.
-            \end{align*} \rubric{2}
+                                                    &= 1. \rubric{2}
+            \end{align*} 
             Hiermee is aangetoond dat de gegeven functie $f$ voldoet aan de twee voorwaarden voor kansdichtheidsfuncties.
         }
 
@@ -37,22 +36,48 @@
             Laat hierbij je berekeningen zien zonder gebruik te maken van het statistische menu van de grafische rekenmachine.
         }
         \solution{
-
+            De verwachtingswaarde $E[T]$ berekenen we door middel van
+            \begin{align*}
+                E[T] = \int_{-\infty}^{\infty} t\cdot f(t)\, dt &= \int_{0}^{3} t \cdot \frac{4}{27}\cdot t^2 \cdot (3 - t)\, dt \\
+                                                                &= \int_{0}^{3} \frac{4}{27}\cdot t^3 \cdot (3 - t)\, dt \\   
+                                                                &= \text{fnInt}(\frac{4}{27}\cdot t^3 \cdot (3 - t); t; 0; 3) \\
+                                                                &= 1,8. \rubric{3}          
+            \end{align*}
+            De standaardafwijking $\sigma(T)$ berekenen we door eerst de variantie $\Var{T}$ te bepalen, en van het resultaat de wortel te nemen:
+            \begin{align*}
+                \Var{T} = \int_{-\infty}^{\infty} (t-E[T])^2 \cdot f(t)\, dt    &= \int_{0}^{3} (t-1,8)^2 \cdot \frac{4}{27}\cdot t^2 \cdot (3 - t)\, dt \\
+                                                                                &= \text{fnInt}(\frac{4}{27}\cdot (t-1,8)^2 \cdot t^2 \cdot (3 - t); t; 0; 3) \\
+                                                                                &= 0,36. \rubric{3}
+            \end{align*} 
+            \begin{align*}
+                \sigma(T) = \sqrt{\Var{T}} = \sqrt{0,36} = 0,6. \rubric{2}
+            \end{align*}
         }
 
         \subquestion{4}{
             Bereken de mediaan van $T$.\\
-            {\scriptsize \textbf{Hint:} de mediaan van een kansverdeling is de uitkomst $g$ waarvoor geldt dat $P(T \le g) = P(T \ge g) = 0,5$.}
+            {\scriptsize \textbf{Hint:} de mediaan van een kansverdeling is de uitkomst $m$ waarvoor geldt dat $P(T \le m) = P(T \ge m) = 0,5$.}
         }
         \solution{
+            Om de mediaan van $T$ te vinden moeten we een grenswaarde $m$ bepalen waarvoor geldt $P(T \le m) = \int_{-\infty}^{m} f(t)\, dt = 0,5$. \rubric{1}
+            Deze vergelijking kunnen we oplossen door het functiemenu te openen en in te voeren:
+            \begin{align*}
+                y_1 &= \text{fnInt}(\frac{4}{27} \cdot t^2 \cdot (3 - t); t; 0; m) \\
+                y_2 &= 0,5  \rubric{2}
+            \end{align*}
+            De optie ``intersect'' geeft een waarde van $m \approx 1,8428$. \rubric{1}
 
-        }
+            }
 
         \subquestion{4}{
             Bereken het percentage dronezwermen dat binnen \'e\'en minuut wordt gedetecteerd.
         }
         \solution{
-
+            We starten door de kans $P(T < 1)$ te berekenen:
+            \[
+                P(T < 1) = \int_{-\infty}^{1} f(t)\, dt = \int_{0}^{1} \frac{4}{27} \cdot t^2 \cdot (3-t)\, dt = \text{fnInt}(\frac{4}{27} \cdot t^2 \cdot (3-t); t; 0; 1) \approx 0,1111. 
+            \]\rubric{3}
+            Omrekenen naar percentages geeft dat $11,11\%$ van de dronezwermen binnen \'e\'en minuut wordt gedetecteerd. \rubric{1}
         }
 
         \subquestion{5}{
@@ -61,10 +86,11 @@
             Hoe groot is de kans op succes in deze surveillancemissie?
         }
         \solution{
-
+            Laat $Y$ nu het aantal dronezwermen zijn dat meer dan \'e\'en minuut onopgemerkt blijft.
+            In dat geval is $Y$ een binomiaal verdeelde kansvariabele met parameters $n = 6$ (aantal dronezwermen) en $p \approx 0,1111$ (kans dat een dronezwerm langer dan een minuut onopgemerkt blijft).\rubric{2}
+            De kans op een succesvolle missie is gelijk aan de kans dat minstens een zwerm drones langer dan \'e\'en minuut onopgemerkt blijft, oftewel
+            \[
+                P(Y \ge 1) = 1 - P(Y=0) = 1 - \binompdf(n=6; p=0,1111; k=0) = 0,5067. \rubric{3}
+            \]
         }
-
-
-    
-
 \end{question}
