@@ -3,7 +3,7 @@
     De tijd $T$ (in minuten) totdat een zwerm gedetecteerd wordt is een kansvariabele met de volgende kansdichtheidsfunctie:
     \[
         f(t) = \begin{cases} 
-                    \frac{4}{27}\cdot t^3\cdot (3-t), &\text{ als } 0 \le t \le 3, \\
+                    \frac{4}{27}\cdot t^2\cdot (3-t), &\text{ als } 0 \le t \le 3, \\
                                        0, &\text{ anders.} 
                 \end{cases}
     \]
@@ -13,7 +13,23 @@
             Toon met berekeningen (met de grafische rekenmachine) aan dat $f$ inderdaad voldoet aan de twee voorwaarden voor een kansdichtheidsfunctie.
         }
         \solution{
-
+            Een functie $f$ kan dienen als een kansdichtheidsfunctie als geldt:
+            \begin{enumerate}
+                \item De functie $f$ is niet-negatief voor alle waarden van $t$, oftewel $f(t) \ge 0$.
+                \item De oppervlakte onder de grafiek van $f$ is gelijk aan 1, oftewel $\int_{-\infty}^{\infty} f(t)\, dt$
+            \end{enumerate}
+            De functie $f$ is gedefinieerd in twee gevallen.
+            Op het interval $0 \le t \le 3$ geldt dat $f(t) = \frac{4}{27}\cdot t^2\cdot (3-t)$.
+            In dat geval geldt dat $t^2 \ge 0$ en $3 - t \ge 0$, en we hebben te maken met een vermenigvuldiging van niet-negatieve termen, dus $f(t) \ge 0$.
+            Buiten het interval $0 \le t \le 3$ is $f(t) = 0$, dus is ook voldaan aan $f(t) \ge 0$. \rubric{2}
+            
+            Voor de tweede voorwaarde moeten we checken of de oppervlakte onder de grafiek van $f$ daadwerkelijk gelijk is aan 1:
+            \begin{align*}
+                \int_{-\infty}^{\infty} f(t)\, dt   &= \int_{0}^{3} \frac{4}{27}\cdot t^2 \cdot (3 - t)\, dt \\
+                                                    &= \text{fnInt}(\frac{4}{27}\cdot x^2 \cdot (3 - x); x; 0; 3) \\
+                                                    &= 1.
+            \end{align*} \rubric{2}
+            Hiermee is aangetoond dat de gegeven functie $f$ voldoet aan de twee voorwaarden voor kansdichtheidsfuncties.
         }
 
         \subquestion{8}{
