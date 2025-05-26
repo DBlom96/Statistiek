@@ -8,20 +8,35 @@
         Bereken de kans dat hij in een willekeurige week er langer dan $2\frac{1}{2}$ uur over doet om van de KMA naar het KIM te rijden.
     }
     \solution{
+        In een willekeurige week is zijn reistijd $T$ normaal verdeeld met gemiddelde $\mu = 130$ en standaardafwijking $\sigma=12$ minuten. \rubric{1}
         
+        De kans dat meneer de Wolf langer dan $2\frac{1}{2}$ uur -- oftewel 150 minuten -- erover doet om van de KMA naar het KIM te rijden is gelijk aan
+        \begin{align*}
+            P(T > 150) = \normalcdf(a=150; b=10^{99}; \mu=130; \sigma=12) \approx 0,0478. \rubric{3}
+        \end{align*}
     }
 
     \subquestion{5}{
         Bereken (met behulp van je antwoord op vraag 2a) de kans dat hij in een half jaar (26 weken) minstens 3 keer langer dan $2\frac{1}{2}$ uur doet over zijn busrit.
     }
     \solution{
-        
+        Reistijden in verschillende werken kunnen we als onafhankelijk van elkaar beschouwen, omdat de reistijd in de ene week niks zegt over hoe lang je de week erna onderweg bent.\rubric{1}
+        Het aantal keer $N$ dat meneer de Wolf in een half jaar meer dan $2\frac{1}{2}$ erover doet om van de KMA naar het KIM te rijden is binomiaal verdeeld met $n = 26$ en $p = 0,0478$. \rubric{1}
+        Dit geeft een kans voor minstens 3 keer langer dan $2\frac{1}{2}$ uur van
+        \begin{align*}
+            P(N \ge 3) = 1 - P(N \le 2) &= 1 - \binomcdf(n=26; p=0,0478; k=2) \\
+                                        &\approx 0,1257. \rubric{3}
+        \end{align*}
+        Met $12,57\%$ kans zal hij in een half jaar minstens 3 keer langer dan $2\frac{1}{2}$ uur over zijn busrit doet.
+
     }
 
     \subquestion{6}{
         Hoe groot is de kans dat hij gedurende een jaar (52 weken) gemiddeld langer dan 2 uur en een kwartier doet over zijn busritten.
     }
     \solution{
+        Zoals gezegd zijn de reistijden in verschillende weken onafhankelijk van elkaar.
+        Omdat de reistijden onafhankelijk zijn en normaal verdeeld met dezelfde $\mu$ en $\sigma$, kunnen we volgens de centrale limietstelling zeggen dat de gemiddeld reistijd $\overline{T}$ over 52 weken ook normaal verdeeld is met verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{52}}$.
         
     }
 

@@ -1,5 +1,5 @@
 \begin{question}{25}{
-    Tijdens een militaire missie wordt een Panzerhoubitze 2000 ingezet voor langdurige operaties.
+    Tijdens een militaire missie wordt een Panzerhaubitze 2000 ingezet voor langdurige operaties.
     Een kritisch onderdeel, de elevatiemotor van het kanon, heeft een gemiddelde uitvalfrequentie van 1,5 storingen per maand.
     Gedurende de missie wordt gebruik gemaakt van een logistiek transport voor het leveren van reserveonderdelen (spare parts) voor de Panzerhaubitze.
 }
@@ -38,22 +38,24 @@
 
     \subquestion{3}{
         De logistieke eenheid die verantwoordelijk is voor het transport heeft een transportcapaciteit van 12 reservemotoren per zes maanden.
-        Wat is de kans dat er in deze periode een tekort aan reserveonderdelen blijkt te zijn?
+        Wat is de kans dat er na aankomst van het logistieke transport een tekort aan benodigde reserveonderdelen blijkt te zijn?
     }
+
     \solution{
         Er gaat een tekort aan reserveonderdelen zijn als geldt dat er meer storingen optreden dan het aantal reserveonderdelen dat kan worden getransporteerd? \rubric{1}
         We willen dus de kans $P(X > 12)$ bepalen, oftewel
-        \[
-            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12) = 1 - \poissoncdf(\mu=9; k=12) \approx 0,1242. \rubric{2}
-        \]
+        \begin{align*}
+            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12)   &= 1 - \poissoncdf(\mu=9; k=12) \\
+                                                        &\approx 0,1242. \rubric{2}
+        \end{align*}
     }
 
     \subquestion{7}{
         De eenheid overweegt twee opties om de kans op een tekort aan reserveonderdelen te minimaliseren:
-        \begin{itemize}
-            \item[\textbf{Optie 1:}] het doorvoeren van technologische upgrades die de uitvalfrequentie met $10\%$ verminderen.
-            \item[\textbf{Optie 2:}] een verhoging van de transportcapaciteit naar 13 reservemotoren per zes maanden.
-        \end{itemize}
+        \begin{enumerate}
+            \item het doorvoeren van technologische upgrades die de uitvalfrequentie met $10\%$ verminderen.
+            \item een verhoging van de transportcapaciteit naar 13 reservemotoren per zes maanden.
+        \end{enumerate}
         Welke maatregel is het meest effectief in het verlagen van de kans op tekort.
         Beargumenteer je antwoord aan de hand van berekeningen.
     }
@@ -61,25 +63,51 @@
         Zodra optie 1 wordt doorgevoerd, wordt de uitvalfrequentie met $10\%$ vermindert, oftewel de gemiddelde uitvalfrequentie per maand daalt van $1,5$ naar $0,9 \cdot 1,5 = 1,35$ storingen.\rubric{1}
         Per zes maanden geeft dit $\mu = \lambda \cdot t = 1,35 \cdot 6 = 8,1$ \rubric{1}.
         De kans op een tekort aan reserveonderdelen is in dat geval:
-        \[
-            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12) = 1 - \poissoncdf(\mu=8,1; k=12) \approx 0,0687. \rubric{2}
-        \]
+        \begin{align*}
+            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12)   &= 1 - \poissoncdf(\mu=8,1; k=12) \\
+                                                        &\approx 0,0687. \rubric{2}
+        \end{align*}
 
         Zodra optie 2 wordt doorgevoerd, wordt de transportcapaciteit verhoogt tot 13 reservemotoren per zes maanden.
         De kans op een tekort aan reserveonderdelen is in dat geval:
-        \[
-            P(X > 13) = P(X \ge 14) = 1 - P(X \le 13) = 1 - \poissoncdf(\mu=9; k=13) \approx 0,0739. \rubric{2}
-        \]
+        \begin{align*}
+            P(X > 13) = P(X \ge 14) = 1 - P(X \le 13)   &= 1 - \poissoncdf(\mu=9; k=13) \\
+                                                        &\approx 0,0739. \rubric{2}
+        \end{align*}
 
         Aangezien de kans op een tekort kleiner is als optie 1 wordt doorgevoerd ($0,0687 < 0,0739$), is deze optie ook een effectievere maatregel om het tekort te minimaliseren. \rubric{2}
     }
 
     \subquestion{9}{
-        De militaire eenheid wil het risico op een tekort aan reserveonderdelen beperkt houden om de slaagkans van de missie te verhogen.
-        Hierbij wordt een beroep gedaan op de transportcapaciteiten van de logistieke eenheid.
-        Hoe groot moet de transportcapaciteit worden zodat met hoogstens $5\%$ kans de militaire eenheid met een tekort aan reserveonderdelen komt te zitten.
+        Stel nu dat de transportcapaciteit van twaalf reserveonderdelen per zes maanden bestaat uit drie transporten met vier reserveonderdelen waar steeds twee maanden tussen zit.
+        Het aantal storingen volgt nog steeds een Poissonproces met gemiddelde $\lambda=1,5$ per maand.
+        Wat is het verwachte aantal reserveonderdelen van een enkel transport (dus na twee maanden) dat gebruikt wordt om storingen mee op te lossen?
+        Ga hierbij ervanuit dat huidige reservevoorraad leeg is.
     }
     \solution{
-
+        Laat $Y$ het aantal reserveonderdelen zijn dat gebruikt moet worden op storingen mee op te lossen.
+        De uitkomstenruimte van $Y$ bestaat uit $0, 1, 2, 3, 4$, aangezien er maximaal 4 reservemotoren gebruikt kunnen worden als een transport bestaat uit vier reservemotoren.\rubric{2}
+        Deze kansvariabele $Y$ heeft de volgende kansfunctie:
+        \begin{center}
+            \begin{tabular}{cc}
+                \toprule
+                    {\bfseries Uitkomst $k$} & $P(Y=k)$\\
+                \cmidrule{1-1} \cmidrule{2-2}
+                    $0$ & $P(X=0) = \poissonpdf(\lambda=1,5\cdot 2; k=0) \approx 0,0498$ \\
+                    $1$ & $P(X=1) = \poissonpdf(\lambda=1,5 \cdot 2; k=1) \approx 0,1494$ \\
+                    $2$ & $P(X=2) = \poissonpdf(\lambda=1,5 \cdot 2; k=2) \approx 0,2240$ \\
+                    $3$ & $P(X=3) = \poissonpdf(\lambda=1,5 \cdot 2; k=3) \approx 0,2240$ \\
+                    $4$ & $P(X \ge 4) = 1-\poissoncdf(\lambda=1,5\cdot 2; k=3) \approx 0,3528$ \rubric{3} \\ 
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Het verwachte aantal reservemotoren dat wordt gebruikt om storingen mee te verhelpen is dan gelijk aantal
+        de verwachtingswaarde van deze kansvariabele $Y$, oftewel:
+        \begin{align*}
+            E[Y]    &= 0 \cdot P(Y=0) + 1 \cdot P(Y=1) + 2 \cdot P(Y=2) + 3 \cdot P(Y = 3) + 4 \cdot P(Y = 4) \\
+                    &\approx 0 \cdot 0,0498 + 1 \cdot 0,1494 + 2 \cdot 0,2240 + 3 \cdot 0,2240 + 4 \cdot 0,3528 \\
+                    &\approx 2,6806 \rubric{3}
+        \end{align*}
+        Het verwachte aantal reservemotoren dat moet worden gebruikt om storingen te verhelpen is dus gelijk aan $2,6806$. \rubric{1}
     }
 \end{question}
