@@ -112,38 +112,49 @@ Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
 \textbf{Veelgebruikte functies op de grafische rekenmachine}
 \begin{table}[H]
     \centering
-    \begin{tabular}{cc|c|c}
+    \begin{tabular}{c|c|c}
         \toprule
-            \textbf{Kansverdeling van $X$}  & \textbf{Type vraag} & \textbf{TI-84 Plus}         & \textbf{Casio} \\
+            \textbf{Type vraag}                     & \textbf{TI-84 Plus}           & \textbf{Casio} \\
         \midrule
-            Continu (willekeurig)   & $P(a \le X \le b)$             & $\int_{a}^{b} f(x)\, dx$ & $\int_{a}^{b} f(x)\, dx$\\
+            \multicolumn{3}{c}{\textbf{Continue kansverdeling (willekeurig)}} \\ 
         \midrule
-            Binomiaal$(n,p)$        & $P(X = k)$                     & binompdf$(n,p,k)$ & BinomialPD$(k, n, p)$ \\
-                                    & $P(X \le k)$                   & binomcdf$(n,p,k)$ & BinomialCD$(k, n, p)$ \\
+            $P(a \le X \le b)$                      & $\int_{a}^{b} f(x)\, dx$      & $\int_{a}^{b} f(x)\, dx$\\
+        \midrule    
+            \multicolumn{3}{c}{\textbf{$X \sim \text{Binomiaal}(n, p)$}} \\ 
         \midrule
-            N$(\mu, \sigma)$        & $P(a \le X \le b)$             & normalcdf$(a,b,\mu,\sigma)$ & normalCD$(a, b, \sigma, \mu)$ \\
-                                    & Wat is $g$ als $P(X \le g)=p$? & invNorm$(opp,\mu,\sigma)$ & invNorm$(opp, \sigma, \mu)$ \\
+            $P(X = k)$                              & binompdf$(n,p,k)$             & BinomialPD$(k, n, p)$ \\
+            $P(X \le k)$                            & binomcdf$(n,p,k)$             & BinomialCD$(k, n, p)$ \\
+        \midrule    
+            \multicolumn{3}{c}{\textbf{$X \sim N(\mu, \sigma)$}} \\
+        \midrule 
+            $P(a \le X \le b)$                      & normalcdf$(a,b,\mu,\sigma)$   & NormalCD$(a, b, \sigma, \mu)$ \\
+            Grenswaarde $g$ zodat $P(X \le g)=p$?   & invNorm$(p,\mu,\sigma)$       & InvNormCD$(\text{tail=left}, p, \sigma, \mu)$ \\
+        \midrule 
+            \multicolumn{3}{c}{\textbf{$X \sim \text{Poisson}(\lambda)$}} \\  
+        \midrule
+            $P(X = k)$                              & poissonpdf$(\lambda, k)$      & PoissonPD$(k, \lambda)$ \\
+            $P(X \le k)$                            & poissoncdf$(\lambda, k)$      & PoissonCD$(k, \lambda)$ \\
         \bottomrule
     \end{tabular}
 \end{table}
-\begin{itemize}
-    \item Continue kansvariabelen met kansdichtheidsfunctie $f$:
-    \[
-        \int_{a}^{b} f(x)\, dx = \text{fnInt}(f(x); x; a; b)
-    \]
-    \item Binomiaal verdeelde kansvariabele $X \sim \text{Binomiaal}(n; p)$:
-    \begin{itemize}
-        \item $P(X = k) = \text{binompdf}(n; p; k)$ en $P(X \le k) = \text{binomcdf}(n; p; k)$
-    \end{itemize}
-    \item Normaal verdeelde kansvariabele $X \sim N(\mu; \sigma)$:
-    \begin{itemize}
-        \item $P(a \le X \le b) = \text{normalcdf}(a; b; \mu; \sigma)$ en $P(X \le g) = p \rightarrow g = \text{invNorm}(p; \mu; \sigma)$
-    \end{itemize}
-    \item Poisson verdeelde kansvariabele $X \sim \text{Poisson}(\lambda)$:
-    \begin{itemize}
-        \item $P(X = k) = \text{poissonpdf}(\lambda; k)$ en $P(X \le k) = \text{poissoncdf}(\lambda; k)$
-    \end{itemize}
-\end{itemize}
+% \begin{itemize}
+%     \item Continue kansvariabelen met kansdichtheidsfunctie $f$:
+%     \[
+%         \int_{a}^{b} f(x)\, dx = \text{fnInt}(f(x); x; a; b)
+%     \]
+%     \item Binomiaal verdeelde kansvariabele $X \sim \text{Binomiaal}(n; p)$:
+%     \begin{itemize}
+%         \item $P(X = k) = \text{binompdf}(n; p; k)$ en $P(X \le k) = \text{binomcdf}(n; p; k)$
+%     \end{itemize}
+%     \item Normaal verdeelde kansvariabele $X \sim N(\mu; \sigma)$:
+%     \begin{itemize}
+%         \item $P(a \le X \le b) = \text{normalcdf}(a; b; \mu; \sigma)$ en $P(X \le g) = p \rightarrow g = \text{invNorm}(p; \mu; \sigma)$
+%     \end{itemize}
+%     \item Poisson verdeelde kansvariabele $X \sim \text{Poisson}(\lambda)$:
+%     \begin{itemize}
+%         \item $P(X = k) = \text{poissonpdf}(\lambda; k)$ en $P(X \le k) = \text{poissoncdf}(\lambda; k)$
+%     \end{itemize}
+% \end{itemize}
 
 \textbf{$z$-score:}
 \[
