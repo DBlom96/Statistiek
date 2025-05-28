@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1747917914.84905 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1747917917.38357 0
+["pdflatex"] 1748343112.71181 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1748343120.27727 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747908662 124356 d80fb265b13695b80413c9c8d049619c ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1743424562 24286510 e52fb5f6c18f310f7dba2f66d16ee221 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -215,19 +215,19 @@
   "huiswerk/week06.tex" 1747661894 341 3738446f7e8bb160c5835f2902bbfed6 ""
   "huiswerk/week06/opgave_7.10.tex" 1747669719 1611 787e1bbe324f59a254dd1ba4a0101abf ""
   "huiswerk/week06/opgave_7.12.tex" 1747917844 3968 6c4f35170e29b349198b1cb9c54e410f ""
-  "huiswerk/week06/opgave_7.14.tex" 1747917914 2523 aa91a596de981e6f37be220ec8e11cc1 ""
+  "huiswerk/week06/opgave_7.14.tex" 1748270106 2521 afefc4095d47e089d0d0341edee6d02b ""
   "huiswerk/week06/opgave_7.19.tex" 1747917585 2155 f7e674bf3082b3f5910b5724fca49d21 ""
   "huiswerk/week06/opgave_7.3.tex" 1747662871 1930 43f1f136172b5b69bbd8b8a04ac76d57 ""
   "huiswerk/week06/opgave_7.4.tex" 1747663440 1768 cecb6934394773d62ba91d42eeff83fa ""
   "huiswerk/week06/opgave_7.6.tex" 1747667711 3173 37601ad47e9af03a05f77959502a0c0c ""
-  "huiswerk/week06/opgave_7.8.tex" 1747668085 1725 6623606322c15dd19fb3eda71426b6aa ""
+  "huiswerk/week06/opgave_7.8.tex" 1748343108 1725 9b81818dafc1b73adc7b10528e6a8cf2 ""
   "huiswerk/week06/opgave_7.m1.tex" 1747917678 565 29a7b077019f8ec73f86b44ee2d06b1d ""
   "huiswerk/week06/opgave_7.m2.tex" 1747917728 869 867f7c94841380a01ef78ab9a1de9bd4 ""
   "huiswerk/week06/opgave_7.m3.tex" 1747639428 629 03ea65a7302f0f2dc56810547f782bed ""
   "huiswerk/week06/opgave_7.m5.tex" 1747639706 930 0bc7ac097bd7b8f59aa52d8459216a09 ""
   "huiswerk/week06/opgave_7.m6.tex" 1747639902 779 06f7d5ebc150c9bf2d254c797cbc3e1a ""
-  "main.aux" 1747917916 299 9484fcbf366542cadf4b851c402a8e40 "pdflatex"
-  "main.out" 1747917916 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1748343119 299 9484fcbf366542cadf4b851c402a8e40 "pdflatex"
+  "main.out" 1748343118 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1747662270 780 b47fc71b3e6ddb91689ce3113673da33 ""
   (generated)
   "main.aux"
