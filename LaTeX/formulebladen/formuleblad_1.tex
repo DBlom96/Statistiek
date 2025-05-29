@@ -21,10 +21,9 @@
 
 \begin{document}
 \maketitle
-
-Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
-
-\textbf{Steekproefgemiddelde:}
+\vspace{-1cm}
+% Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
+\textbf{Steekproefgemiddelde (gegeven een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$)}
 \[
     \overline{x} = \frac{\sum\limits_{i} x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}
 \]
@@ -34,13 +33,13 @@ Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
     s^2 &= \frac{\sum\limits_{i} (x_i-\overline{x})^2}{n} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
     s^2 &= \frac{\left(\sum\limits_{i} x_i^2\right) - n \cdot \overline{x}^2}{n} = \frac{(x_1^2+x_2^2+\ldots+x_n^2) - n \cdot \overline{x}^2}{n} \hfill \tag{optie 2}
 \end{align}
-\vspace{.5cm}
+% \vspace{.5cm}
 
 \textbf{Rekenregels kansrekening:}
 \begin{align*}
     P(A \text{ of } B)      &= P(A) + P(B) - P(A \text{ en } B) \tag{optelregel}\\
     P(B)                    &= 1 - P(\text{niet } B) \tag{complementregel}\\
-    P(A \mid B)         &= \frac{P(A \text{ en } B)}{P(B)} \tag{conditionele kansen}\\
+    P(A \mid B)         &= \frac{P(A \text{ en } B)}{P(B)} \tag{conditionele kansen}
 \end{align*}
 
 \textbf{Discrete en continue kansverdelingen:}
@@ -69,6 +68,25 @@ Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
 % \label{tab:prob_dist}
 \end{table}
 
+\textbf{Speciale kansverdelingen:}
+\begin{itemize}
+    \item $X \sim \text{Binomiaal}(n, p)$: tellen van aantal successen bij onafhankelijke kansexperimenten met twee uitkomsten (Bernoulli-experimenten): succes / mislukking.
+    \begin{itemize}
+        \item $n$: aantal Bernoulli-experimenten
+        \item $p$: succeskans per experiment
+    \end{itemize}
+    \item $X \sim \text{Poisson}(\lambda \cdot t)$: tellen van aantal ``gebeurtenissen'' in een ``interval'' van tijd / ruimte.
+    \begin{itemize}
+        \item $\lambda$: gemiddeld aantal gebeurtenissen per eenheid van tijd / ruimte.  
+        \item $t$: aantal eenheden van tijd / ruimte van het interval
+        
+        $\rightarrow$ \textbf{Voorbeeld:} als ``dag'' de tijdseenheid is, dan bestaat ``week'' uit $t=7$ tijdseenheden. 
+    \end{itemize}
+    \item $T \sim \text{Exponentieel}(\lambda)$: meten van de tijd / ruimte tot de volgende gebeurtenis.
+    \begin{itemize}
+        \item $\lambda$: gemiddeld aantal gebeurtenissen per eenheid van tijd / ruimte.  
+    \end{itemize}
+\end{itemize}
 \newpage
 \textbf{Verwachtingswaarde en variantie van veelgebruikte kansverdelingen:}
 \begin{table}[H]
@@ -158,14 +176,14 @@ Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
 
 \textbf{$z$-score:}
 \[
-    z = \frac{x - \mu}{\sigma}
+    z = \frac{x - \mu}{\sigma}\\
 \]
 
 \textbf{Centrale limietstelling:}
 Gegeven $n$ kansvariabelen $X_1, X_2, \ldots, X_n$ die onderling onafhankelijk zijn en dezelfde kansverdeling hebben met een verwachtingswaarde $\mu$ en standaardafwijking $\sigma$, dan geldt (bij benadering) dat
 \begin{itemize}
-    \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met verwachtingswaarde $n \cdot \mu$ en standaardafwijking $\sqrt{n} \cdot \sigma$.
-    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
+    \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met $E[\sum X] = n \cdot \mu$ en $\sigma(\overline{X}) = \sqrt{n} \cdot \sigma$.
+    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met $E[\overline{X}]=\mu$ en $\sigma(\overline{X})=\frac{\sigma}{\sqrt{n}}$.
 \end{itemize}
 
 % \textbf{Covariance:}

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1748414717.2542 "c:/Users/danny/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_1.tex" "formuleblad_1.pdf" "formuleblad_1" 1748414718.02103 0
+["pdflatex"] 1748519022.57081 "c:/Users/danny/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_1.tex" "formuleblad_1.pdf" "formuleblad_1" 1748519023.63763 0
   "C:/Users/danny/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747677661 124177 fb99ef2de52f29fd88ea694d45142975 ""
   "C:/Users/danny/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1734346087 24225047 9f9d6f03f4e94b49b1f4d88a5bda1762 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -83,9 +83,9 @@
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ts1ppl.fd" 1585253778 653 35f1cf70bf09b6e2d22ee0902cfb1a8b ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1700599895 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/tools/bm.sty" 1700599895 13231 2c742011581e2bf297e33520567d9464 ""
-  "c:/Users/danny/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_1.tex" 1748414716 10522 2382136da72e406e8c123636ac32827f ""
-  "formuleblad_1.aux" 1748414717 130 39353acbd12ce4c61fe15e390d09ca31 "pdflatex"
-  "formuleblad_1.tex" 1748414716 10522 2382136da72e406e8c123636ac32827f ""
+  "c:/Users/danny/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_1.tex" 1748519021 11679 b30146858c22403655c3be7524e35001 ""
+  "formuleblad_1.aux" 1748519023 130 39353acbd12ce4c61fe15e390d09ca31 "pdflatex"
+  "formuleblad_1.tex" 1748519021 11679 b30146858c22403655c3be7524e35001 ""
   (generated)
   "formuleblad_1.aux"
   "formuleblad_1.log"
