@@ -17,79 +17,73 @@
         \end{align*}
     }
 
-    \subquestion{5}{
+    \subquestion{6}{
         Bereken (met behulp van je antwoord op vraag 2a) de kans dat hij in een half jaar (26 weken) minstens 10 keer langer dan $2\frac{1}{2}$ uur doet over zijn busrit.
     }
     \solution{
         Reistijden in verschillende werken kunnen we als onafhankelijk van elkaar beschouwen, omdat de reistijd in de ene week niets zegt over hoe lang je de week erna onderweg bent.\rubric{1}
-        Het aantal keer $N$ dat meneer de Wolf in een half jaar meer dan $2\frac{1}{2}$ uur erover doet om van de KMA naar het KIM te rijden is binomiaal verdeeld met $n = 26$ en $p = 0,2660$. \rubric{1}
+        Het aantal keer $N$ dat meneer de Wolf in een half jaar meer dan $2\frac{1}{2}$ uur erover doet om van de KMA naar het KIM te rijden is dus binomiaal verdeeld met $n = 26$ en $p = 0,2660$. \rubric{1}
         Dit geeft een kans voor minstens 10 keer langer dan $2\frac{1}{2}$ uur van
         \begin{align*}
             P(N \ge 10) = 1 - P(N \le 9)    &= 1 - \binomcdf(n=26; p=0,2660; k=9) \\
-                                            &\approx 0,1272. \rubric{2}
+                                            &\approx 0,1272. \rubric{3}
         \end{align*}
         Met $12, 72\%$ kans zal hij in een half jaar minstens 3 keer langer dan $2\frac{1}{2}$ uur over zijn busrit doen.\rubric{1}
 
     }
 
-    \subquestion{6}{
-        Hoe groot is de kans dat hij gedurende een jaar (52 weken) gemiddeld langer dan 2 uur en een kwartier doet over zijn busritten.
+    \subquestion{8}{
+        Wat is de kans dat in een jaar (52 weken) het gemiddelde van de reistijden van de 52 busritten groter is dan 2 uur en een kwartier?
     }
     \solution{
         Zoals gezegd zijn de reistijden in verschillende weken onafhankelijk van elkaar.
-        Omdat de reistijden onafhankelijk zijn en normaal verdeeld met dezelfde $\mu$ en $\sigma$, 
-        kunnen we volgens de centrale limietstelling zeggen dat de gemiddelde reistijd $\overline{T}$ over 52 weken ook normaal verdeeld is,
+        Omdat de reistijden onafhankelijk zijn en normaal verdeeld met dezelfde $\mu$ en $\sigma$, kunnen we de centrale limietstelling gebruiken. \rubric{1}
+        Die zegt dat de gemiddelde reistijd $\overline{T} = \frac{T_1+\ldots+T_{52}}{52}$ over 52 weken ook normaal verdeeld is,
         met verwachtingswaarde $\mu=130$ en standaardafwijking $\frac{\sigma}{\sqrt{52}} = \frac{12}{\sqrt{52}}$. \rubric{2}
         
         De grenswaarde van $2$ uur en een kwartier is omgerekend naar minuten gelijk aan 135 minuten. \rubric{1}
 
         De kans dat de gemiddelde reistijd in 52 weken langer dan 2 uur en een kwartier is, is dus gelijk aan
         \begin{align*}
-            P(\overline{T} \ge 135) = \normalcdf(a=135; b=10^{99}; \mu=140; \sigma=\frac{16}{\sqrt{52}}) \approx 0,9879 \rubric{2}
+            P(\overline{T} \ge 135) = \normalcdf(a=135; b=10^{99}; \mu=140; \sigma=\frac{16}{\sqrt{52}}) \approx 0,9879 \rubric{3}
         \end{align*} 
         Met $98,79\%$ kans zal hij in een jaar gemiddeld langer dan $2$ uur en een kwartier doen over zijn busrit.\rubric{1}
     }
 
-    \subquestion{8}{
+    \subquestion{7}{
         Elke dinsdag vertrekt meneer de Wolf rond 8.00 uur `s ochtends vanaf de KMA.
-        Om precies te zijn is zijn vertrektijd $V$ normaal verdeeld met gemiddelde 7.59 en een standaardafwijking van $4$ minuten.
-        Hoe groot is de kans dat hij voor 10.00 uur aankomt op het KIM? 
-        {\scriptsize\textbf{Hint:} de aankomsttijd is de som $A = V + T$ van twee normaal verdeelde kansvariabelen (de vertrektijd $V$ en de reistijd $T$). 
-        Er geldt dat $A$ dus ook normaal verdeeld is met $E[A] = E[V] + E[T]$ en $\sigma(A) = \sqrt{\sigma(V)^2+\sigma(T)^2}$.}
+        Om precies te zijn is zijn vertrektijd $V$ (gemeten in minuten na middernacht) normaal verdeeld met gemiddelde $\mu=479$ minuten (oftewel $7.59$ uur) en standaardafwijking $\sigma=4$ minuten.
+        Hoe groot is de kans dat hij voor 10.00 uur aankomt op het KIM, gegeven dat zijn busrit $127$ minuten duurt? 
     }
     \solution{
-        De aankomsttijd $A$ is de som van twee kansvariabelen, namelijk $A = V + T$, waarbij $V$ is de vertrektijd en $T$ is de reistijd.\rubric{1}
-
-        We bepalen de tijden in minuten na middernacht.
-        De vertrektijd heeft verwachtingswaarde $E[V] = 7 \cdot 60 + 59 = 479$ minuten en standaardafwijking $\sigma(V) = 4$ minuten. \rubric{1}
-
-        De reistijd heeft verwachtingswaarde $E[T] = 140$ minuten en standaardafwijking $\sigma(T) = 14$ minuten.
-        Er geldt dus dat de aankomsttijd $A$ normaal verdeeld is met verwachtingswaarde $E[A] = E[V]+E[T] = 479+140 = 619$ minuten en standaardafwijking $\sigma(A) = \sqrt{\sigma(V)^2+\sigma(T)^2} = \sqrt{4^2+16^2} \approx 16,4924$ minuten. \rubric{3}
-
-        De kans dat hij v\'o\'or 10.00 uur, oftewel $A < 600$ minuten, is gelijk aan
+        De aankomsttijd $A$ is de som van twee kansvariabelen, namelijk $A = V + T$, waarbij $V$ is de vertrektijd en $T$ is de reistijd.
+        De aankomsttijd is in dit geval $A = V + 127$.\rubric{1}
+        Als hij v\'o\'or 10.00 uur aankomt op het KIM, dan betekent dat dat $A < 600$. \rubric{1}
+        Omdat $A = V + 127$, betekent dat ook dat $V = A - 127 = 600 - 127 = 473$ minuten.\rubric{1}
+        De kans dat meneer de Wolf v\'o\'or 10.00 uur aankomt op het KIM is dus gelijk aan de kans dat hij v\'o\'or 7.53 uur vertrekt, oftewel:
         \begin{align*}
-            P(A < 600) = \normalcdf(a=-10^{99}; b=600; \mu=619;\sigma=16,4924) \approx 0,1247 \rubric{2}
+            P(A < 600) = P(V < 473) &= \normalcdf(a=-10^{99}; b=473; \mu=479;\sigma=4) \\
+                                    &\approx 0,0668 \rubric{3}
         \end{align*}
-        Met kans $12,47\%$ komt meneer de Wolf v\'o\'or 10.00 uur aan op het KIM.\rubric{1}
+        Met kans $6,68\%$ komt meneer de Wolf v\'o\'or 10.00 uur aan op het KIM.\rubric{1}
 
     }
 
-    \subquestion{6}{
+    \subquestion{4}{
         Hoe laat moet meneer de Wolf `s ochtends uiterlijk vertrekken om te zorgen dat hij met kans $0,95$ v\'o\'or $10.00$ uur op het KIM aankomt? Rond af op hele minuten.
     }
 
     \solution{
-        We hebben een gegeven aankomsttijd $a = 10 \cdot 60 = 600$, dus de enige factor die er nu toe doet om een uiterste vertrektijd te berekenen is de reistijd $T$. \rubric{1}
-
+        We hebben een gegeven aankomsttijd $a = 10 \cdot 60 = 600$, dus de enige factor die er nu toe doet om een uiterste vertrektijd te berekenen is de reistijd $T$.
         Hiervoor berekenen we eerst de waarde $t$ van de reistijd dusdanig dat $P(T \le t) = 0,95$. \rubric{1}
 
         Dit kunnen we doen met behulp van de ``invNorm'' functie op de grafische rekenmachine.
         \[
-            t = \invnorm(opp=0,95; \mu=140; \sigma=16) \approx 166,3177.
+            t = \invnorm(opp=0,95; \mu=140; \sigma=16) \approx 166,3177.\rubric{1}
         \]
-        Met $95\%$ kans duurt de reis korter dan $167$ minuten (naar boven afgerond op hele minuten). \rubric{2}
+        Met $95\%$ kans duurt de reis korter dan $167$ minuten (naar boven afgerond op hele minuten). \rubric{1}
         De uiterste vertrektijd $v$ vinden we aan de hand van $v = a - t = 600 - 167 = 433$ minuten.
-        Omgerekend naar uren geeft dit een tijdstip van $7.13$ uur. \rubric{2}
+        Omgerekend naar uren geeft dit een tijdstip van $7.13$ uur. \rubric{1}
     }
 
 \end{question}

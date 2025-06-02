@@ -1,25 +1,25 @@
 \begin{question}{21}{
     Tijdens een nachtelijke militaire oefening worden $20$ parachutisten gedropt boven vijandelijke terrein.
-    Elke parachutist heeft een kans van $0,76$ om veilig en correct te landen op het voorziene dropzonegebied,
+    Elke parachutist heeft een kans van $0,76$ om veilig en correct te landen op de voorziene dropzone,
     rekening houdend met wind, zicht en navigatie.
 }
 
-    \subquestion{4}{
+    \subquestion{8}{
         Wat is de verwachtingswaarde en standaardafwijking van het aantal succesvolle parachutelandingen?
     }
     \solution{
         Laat $X$ het aantal succesvolle landingen zijn van de twintig parachutisten.
-        In dit geval geldt dat $X$ een binomiaal verdeelde kansvariabele is met $n=20$ (aantal parachutisten) en $p=0,76$ (kans op een succesvolle landing voor een willekeurige parachutist). \rubric{1}
+        In dit geval geldt dat $X$ een binomiaal verdeelde kansvariabele is met $n=20$ (aantal parachutisten) en $p=0,76$ (kans op een succesvolle landing voor een willekeurige parachutist). \rubric{2}
         De verwachtingswaarde en standaardafwijking van $X$ zijn daarom gelijk aan
         \begin{align*}
-            E[X] &= n \cdot p = 20 \cdot 0,76 = 15,2.
+            E[X] &= n \cdot p = 20 \cdot 0,76 = 15,2. \\ \rubric{3}
             \sigma(X)   &= \sqrt{n\cdot p \cdot (1-p)} \\
                         &= \sqrt{20 \cdot 0,76 \cdot (1-0,76)} \\
                         &\approx 1,9100. \rubric{3}
         \end{align*}
     }
 
-    \subquestion{4}{
+    \subquestion{5}{
         Hoe groot is de kans dat minstens vijftien parachutisten succesvol landen?
     }
     \solution{
@@ -28,10 +28,10 @@
         \[
             P(X \ge 15) = 1 - P(X \le 14) = 1 - \binomcdf(n=20; p=0,76; k=14) \approx 0,6573. \rubric{3}
         \]
-        Met $65,73\%$ kans zullen minstens vijftien van de twintig parachutisten succesvol landen.
+        Met $65,73\%$ kans zullen minstens vijftien van de twintig parachutisten succesvol landen.\rubric{1}
     }
 
-    \subquestion{6}{
+    \subquestion{8}{
         De oefening wordt een succes genoemd als minstens 18 parachutisten succesvol landen.
         Hoeveel parachutisten moeten er extra worden ingezet (bovenop de huidige 20) zodanig dat de kans dat de oefening een succes is, minstens $95\%$ is?
     }
@@ -39,7 +39,7 @@
         We hebben in dit geval opnieuw te maken met een binomiaal verdeelde kansvariabele $X$, maar nu is de parameter $n$ nader te bepalen. \rubric{1}
         De vraag is dus eigenlijk voor welke waarde van $n$ geldt dat
         \[
-            P(X \ge 18) = 1 - P(X \le 17) \ge 0,95. \rubric{1}
+            P(X \ge 18) = 1 - P(X \le 17) \ge 0,95. \rubric{2}
         \]
         Merk op dat we dit kunnen oplossen met een tabel gegeven de functies:
         \begin{align*}
@@ -48,30 +48,31 @@
         \end{align*}
         In dat geval zien we dat:
         \begin{align*}
-            n = 28: & 1 - \binomcdf(n=28; p=0,76; k=17) \approx 0,9476 \\
-            n = 29: & 1 - \binomcdf(n=29; p=0,76; k=17) \approx 0,9710 \rubric{1}
+            n = 28: &\qquad 1 - \binomcdf(n=28; p=0,76; k=17) \approx 0,9476 \\
+            n = 29: &\qquad 1 - \binomcdf(n=29; p=0,76; k=17) \approx 0,9710 \rubric{1}
         \end{align*}
         We hebben dus minstens 29 parachutisten nodig zodat met $95\%$ zekerheid minstens 18 parachutisten succesvol gaan landen. \rubric{1}
-    }
+        Dat betekent dat we dus $29 - 20 = 9$ extra parachutisten nodig hebben. \rubric{1}
+        }   
 
-    \subquestion{7}{
+    % \subquestion{7}{
 
-        Bereken een $95\%$-voorspellingsinterval voor de fractie succesvolle landingen in het geval van 20 parachutisten.
+    %     Bereken een $95\%$-voorspellingsinterval voor de fractie succesvolle landingen in het geval van 20 parachutisten.
 
-        {\scriptsize \textbf{Hint:} bereken eerst een $95\%$-voorspellingsinterval voor het aantal succesvolle landingen met het twee-sigmagebied.}
-    }
-    \solution{
-        In het college hebben we een vuistregel besproken waarin staat dat het $95\%$-voorspellingsinterval benaderd kan worden door het twee-sigmagebied:\rubric{1}
-        \begin{align*}
-            [E[X] - 2 \cdot \sigma(X); E[X] + 2 \cdot \sigma(X)] &= [15,2 - 2 \cdot 1,9100; 15,2 + 2 \cdot 1,9100] \\
-                                                                 &\approx [11,3801; 19,0199] \rubric{3}
-        \end{align*}
+    %     {\scriptsize \textbf{Hint:} bereken eerst een $95\%$-voorspellingsinterval voor het aantal succesvolle landingen met het twee-sigmagebied.}
+    % }
+    % \solution{
+    %     In het college hebben we een vuistregel besproken waarin staat dat het $95\%$-voorspellingsinterval benaderd kan worden door het twee-sigmagebied:\rubric{1}
+    %     \begin{align*}
+    %         [E[X] - 2 \cdot \sigma(X); E[X] + 2 \cdot \sigma(X)] &= [15,2 - 2 \cdot 1,9100; 15,2 + 2 \cdot 1,9100] \\
+    %                                                              &\approx [11,3801; 19,0199] \rubric{3}
+    %     \end{align*}
 
-        Het $95\%$-voorspellingsinterval vinden we dan door beide grenzen te delen door $20$:
-        \[
-            [\frac{11,3801}{20}; \frac{19,0199}{20}] = [0,5690; 0,9510] \rubric{1}
-        \]
+    %     Het $95\%$-voorspellingsinterval vinden we dan door beide grenzen te delen door $20$:
+    %     \[
+    %         [\frac{11,3801}{20}; \frac{19,0199}{20}] = [0,5690; 0,9510] \rubric{1}
+    %     \]
 
-        Dit houdt in dat met $95\%$ kans, de fractie succesvolle landingen van de twintig parachutisten tussen de $56,9\%$ en $95,1\%$ zal liggen. \rubric{2}    
-    }
+    %     Dit houdt in dat met $95\%$ kans, de fractie succesvolle landingen van de twintig parachutisten tussen de $56,9\%$ en $95,1\%$ zal liggen. \rubric{2}    
+    % }
     \end{question}
