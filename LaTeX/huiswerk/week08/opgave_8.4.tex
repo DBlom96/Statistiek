@@ -8,16 +8,37 @@
 \begin{enumerate}[label=(\alph*)]
     \item als $n=16$ waarnemingen zijn gebruikt voor het berekenen van $\overline{x} = 36$ minuten.
     \answer{
-
+        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$ en $z_{\alpha/2} = z_{0,025} = \invnorm(0,975) \approx 1,9600$.
+        Verder is gegeven dat $\overline{x} = 36$.
+        In algemene zin geldt dat een $95\%$-betrouwbaarheidsinterval voor $\mu$ van de vorm
+        \begin{align*}
+            &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[36 - 1,9600 \cdot \frac{4}{\sqrt{n}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{n}}]
+        \end{align*}
+        In het geval van $n=16$ waarnemingen is het $95\%$-betrouwbaarheidsinterval voor $\mu$ dus gelijk aan
+        \[
+            [36 - 1,9600 \cdot \frac{4}{\sqrt{16}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{16}}] = [34,04; 37,96]
+        \]
+        Met $95\%$ betrouwbaarheid ligt de gemiddelde montagetijd tussen $34,04$ en $37,96$ minuten.
     }
 
     \item als $n=100$ waarnemingen gebruikt zijn.
     \answer{
-
+        In het geval van $n=100$ waarnemingen is de berekening op eenzelfde manier uit te voeren.
+        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
+        \[
+            [36 - 1,9600 \cdot \frac{4}{\sqrt{100}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{100}}] = [35,22; 36,78]
+        \]
+        Met $95\%$ betrouwbaarheid ligt de gemiddelde montagetijd tussen $35,22$ en $36,78$ minuten.
     }
 
     \item als $n=4$ waarnemingen gebruikt zijn.
     \answer{
-    
+        In het geval van $n=4$ waarnemingen is de berekening weer op eenzelfde manier uit te voeren.
+        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
+        \[
+            [36 - 1,9600 \cdot \frac{4}{\sqrt{4}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{4}}] = [32,08; 39,92]
+        \]
+        Met $95\%$ betrouwbaarheid ligt de gemiddelde montagetijd tussen $32,08$ en $39,92$ minuten.
     }
 \end{enumerate}

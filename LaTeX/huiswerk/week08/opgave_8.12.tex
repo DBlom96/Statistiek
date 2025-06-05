@@ -9,6 +9,14 @@
     \item De gemiddelde leeftijd moet plus of min $2$ jaar worden bepaald.
     Ga ervan uit dat de standaarddeviatie van de leeftijden $12$ jaar is.
     \answer{
-
+        Laat $X \sim N(\mu=?; \sigma=?)$ de kansvariabele zijn die de leeftijd (in jaren) meet van een willekeurige kijker.
+        Volgens de centrale limietstelling geldt dat de gemiddelde snelheid $\overline{X}$ van $n$ willekeurige kijkers ook normaal verdeeld is met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
+        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$ en $z_{\alpha/2} = z_{0,025} = \invnorm(0,975) \approx 1,9600$.
+        Verder is gegeven dat $\sigma=12$ jaar en de breedte van het interval is $4$ jaar (plus of min 2)
+        De steekproefomvang bij dit $95\%$-betrouwbaarheidsinterval berekenen we als volgt:
+        \begin{align*}
+            n = (\frac{z_{\alpha/2}\cdot \sigma}{a})^2 = (\frac{1,9600 \cdot 12}{2})^2 \approx 138,2976.
+        \end{align*}
+        Afronden naar boven naar het eerstvolgende gehele getal geeft een steekproefomvang van $n=139$ kijkers.
     }
 \end{enumerate}

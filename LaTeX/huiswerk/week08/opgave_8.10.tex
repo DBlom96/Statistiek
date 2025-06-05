@@ -1,5 +1,5 @@
 \question{8.10}{
-    Bij een snelweg is door een verdekt opgestelde controlpost de snelheid bepaald voor een grote steekproef van de passerende auto's.
+    Bij een snelweg is door een verdekt opgestelde controlepost de snelheid bepaald voor een grote steekproef van de passerende auto's.
     Uit de aantekeningen van de onderzoeker blijkt dat de berekende standaarddeviatie van de snelheden $8,2$ km/uur bedraagt.
     Verder bleek dat men als $95\%$-betrouwbaarheidsinterval voor de gemiddelde snelheid als resultaat opgeschreven had dat $\mu$ tussen $74,2$ en $76,8$ zou moeten liggen.
     Helaas was niet meer te vinden hoe groot de steekproefomvang is geweest.
@@ -8,7 +8,21 @@
     \item Bereken op basis van de verstrekte gegevens de omvang van de steekproef.
     (Ga er hierbij van uit dat de nog onbekende steekproefomvang groot genoeg is om toepassing van de normale verdeling te rechtvaardigen.)
     \answer{
+        Laat $X \sim N(\mu=?; \sigma=?)$ de kansvariabele zijn die de snelheid (in km/uur) meet van een willekeurige passerende auto.
+        Volgens de centrale limietstelling geldt dat de gemiddelde snelheid $\overline{X}$ van $n$ willekeurige auto's ook normaal verdeeld is met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
+        Hoewel we strikt gezien de standaardafwijking $\sigma$ niet kennen, mogen we de schatting $s = 8,2$ in dit geval als dusdanig gebruiken omdat de steekproefomvang $n$ groot genoeg wordt verondersteld.
 
+        De algemene formule voor de steekproefomvang bij een $95\%$-betrouwbaarheidsinterval van lengte $2a$ is gegeven door 
+        \begin{align*}
+            n = (\frac{z_{\alpha/2}\cdot \sigma}{a})^2.
+        \end{align*}
+        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$ en $z_{\alpha/2} = z_{0,025} = \invnorm(0,975) \approx 1,9600$.
+        Verder benaderen we $\sigma$ met $s=8,2$, en is de afwijking $a = \frac{76,8 - 74,2}{2} = 1,3$ (de helft van de lengte van het interval tussen $74,2$ en $76,8$).
+        Dit geeft
+        \[
+            n = (\frac{z_{\alpha/2}\cdot \sigma}{a})^2 = (\frac{1,9600 \cdot 8,2}{1,3})^2 \approx 152,8400.
+        \]
+        Afronden naar boven naar het eerstvolgende gehele getal geeft een steekproefomvang van $n=153$.
     }
 
     \item Uit het interval blijkt dat $\mu$ op z'n minst $74,2$ en op z'n hoogst $76,8$ zou kunnen zijn.
@@ -19,6 +33,28 @@
     Hoeveel procent van de automobilisten krijgt dan een bekeuring?
     Formuleer dit als een interval.
     \answer{
+        Laat $X \sim N(\mu=?; \sigma=?)$ de kansvariabele zijn die de snelheid (in km/uur) meet van een willekeurige passerende auto.
 
+        In het geval dat $\mu = 74,2$, geldt dat de kans dat een willekeurige passerende auto te hard rijdt gelijk is aan 
+        \begin{align*}
+            P(X > 80) = \normalcdf(a=80; b=10^{99}; \mu=74,2; \sigma=8,2) \approx 0,2397
+        \end{align*}
+        Verder geldt dat de kans dat een willekeurige passerende auto een bekeuring krijgt gelijk is aan 
+        \begin{align*}
+            P(X > 85) = \normalcdf(a=85; b=10^{99}; \mu=74,2; \sigma=8,2) \approx 0,0939
+        \end{align*}
+        Als de gemiddelde snelheid van passerende auto's $\mu=74,2$ km/uur is, zal $23,97\%$ van de bestuurders te hard rijden en $9,39\%$ van de bestuurders een bekeuring krijgen.
+
+        In het geval dat $\mu = 76,8$, geldt dat de kans dat een willekeurige passerende auto te hard rijdt gelijk is aan 
+        \begin{align*}
+            P(X > 80) = \normalcdf(a=80; b=10^{99}; \mu=76,8; \sigma=8,2) \approx 0,3482
+        \end{align*}
+        In het geval dat $\mu = 76,8$, geldt dat de kans dat een willekeurige passerende auto een bekeuring krijgt gelijk is aan 
+        \begin{align*}
+            P(X > 85) = \normalcdf(a=85; b=10^{99}; \mu=76,8; \sigma=8,2) \approx 0,1587
+        \end{align*}
+        Als de gemiddelde snelheid van passerende auto's $\mu=76,8$ km/uur is, zal $34,82\%$ van de bestuurders te hard rijden en $15,87\%$ van de bestuurders een bekeuring krijgen.
+
+        Het percentage automobilisten dat een bekeuring krijgt ligt met $95\%$ betrouwbaarheid in het interval $[9,39; 15,87]$.
     }
 \end{enumerate}

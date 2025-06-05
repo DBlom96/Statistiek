@@ -8,5 +8,19 @@
 }
 
 \answer{
+    Gegeven is de standaardafwijking $\sigma = 1,2$ mg en de gewenste betrouwbaarheid van $95\%$, dus $\alpha=0,05$.
+    Het steekproefgemiddelde van een steekproef van zes monsters is volgens de centrale limietstelling weer normaal verdeeld met gemiddelde $\mu$ en standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{1,2}{\sqrt{6}}$.
+    Om het betrouwbaarheidsinterval te berekenen, bepalen we eerst het steekproefgemiddelde:
+    \begin{align*}
+        \overline{x} = \frac{x_1+x_2+\ldots+x_6}{6} = \frac{14,7+13,2+\ldots+15,0}{6} = 14,85
+    \end{align*} 
 
+    Omdat $\alpha = 0,05$, werken we verder met $z_{\alpha/2} = z_{0,025} = \invnorm(0,975) \approx 1,9600$.
+    Dit geeft een betrouwbaarheidsinterval van
+    \begin{align*}
+        &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+        &=[14,85 - 1,9600 \cdot \frac{1,2}{\sqrt{6}}; 14,85 + 1,9600 \cdot \frac{1,2}{\sqrt{6}}] \\
+        &=[13,89; 15,81]
+    \end{align*}
+    Met $95\%$ ligt de gemiddelde hoeveelheid stof per monster tussen $13,89$ en $15,81$ mg.
 }

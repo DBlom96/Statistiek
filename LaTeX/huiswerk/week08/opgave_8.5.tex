@@ -8,7 +8,13 @@
 \begin{enumerate}[label=(\alph*)]
     \item Hoeveel procent van de tasjes breekt reeds bij een belasting van hoogstens $10$ kg?
     \answer{
-
+        Laat $X$ de kansvariabele zijn die de breeksterkte van een tasje (in kg) meet.
+        Gegeven is dat $X \sim N(\mu = 11,5; \sigma = 1,3)$.
+        De kans dat een tasje breekt bij een belasting van hoogstens $10$ kg is gelijk aan
+        \begin{align*}
+            P(X \le 10) = \normalcdf(a=-10^{99}; b=10; \mu=11,5; \sigma=1,3) \approx 0,1243.
+        \end{align*}
+        Dat betekent dus dat $12,43\%$ van de tasjes al breekt bij een belasting van hoogstens $10$ kg.
     }
 
     \item De fabrikant gaat een nieuw soort plastic gebruiken bij de productie van de tasjes.
@@ -17,12 +23,38 @@
     Ga ervan uit dat de standaarddeviatie nog hetzelfde is.
     Bepaal een $95\%$-betrouwbaarheidsinterval voor $\mu$: de gemiddelde breeksterkte.
     \answer{
-
+        Laat nu $X \sim N(\mu=?; \sigma=1,3)$ de kansvariabele zijn die de breeksterkte (in kg) meet van een willekeurige tasje van het nieuw soort plastic.
+        Volgens de centrale limietstelling is het steekproefgemiddelde $\overline{X}$ van $25$ tasjes dan ook normaal verdeeld met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{1,3}{\sqrt{25}}$.
+        Omdat de gewenste betrouwbaarheid gelijk is aan $95\%$, hebben we te maken met $z_{\alpha/2} = z_{0,025} = \invnorm(opp=0,975) \approx 1,9600$.
+        Verder is gegeven dat $n=25$ en $\overline{x}=12,8$ kg.
+        Het $95\%$ betrouwbaarheidsinterval is dus gelijk aan
+        \begin{align*}
+            &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[12,8 - 1,9600 \cdot \frac{1,3}{\sqrt{25}}; 12,8 + 1,9600 \cdot \frac{1,3}{\sqrt{25}}] \\
+            &=[12,29; 13,31]
+        \end{align*}
+        De gemiddelde breeksterkte van tasjes van het nieuw soort plastic zal met $95\%$ betrouwbaarheid tussen $12,29$ en $13,31$ kg liggen.
     }
 
     \item Hoeveel procent van de tasjes breekt bij een belasting van minder dan $10$ kg als de nieuwe waarde van $\mu$ $12,8$ is?
     En hoeveel procent is dit als $\mu$ gelijk is aan de linkergrens $L$ respectievelijk de rechtergrens $R$ van het interval dat berekend is bij vraag \textbf{b}?
     \answer{
-    
+        In het geval dat de nieuwe waarde van $\mu=12,8$, kunnen we weer de kans berekenen met de normalcdf functie:
+        \begin{align*}
+            P(X \le 10) = \normalcdf(a=-10^{99}; b=10; \mu=12,8; \sigma=1,3) \approx 0,0156.
+        \end{align*}
+        Als $\mu=12,8$ kg, dan breekt $1,56\%$ van de tasjes van het nieuw soort plastic.
+
+        In het geval dat de nieuwe waarde van $\mu=L=12,29$, kunnen we weer de kans berekenen met de normalcdf functie:
+        \begin{align*}
+            P(X \le 10) = \normalcdf(a=-10^{99}; b=10; \mu=12,29; \sigma=1,3) \approx 0,0391.
+        \end{align*}
+        Als $\mu=12,29$ kg, dan breekt $3,91\%$ van de tasjes van het nieuw soort plastic.
+
+        In het geval dat de nieuwe waarde van $\mu=R=13,31$, kunnen we weer de kans berekenen met de normalcdf functie:
+        \begin{align*}
+            P(X \le 10) = \normalcdf(a=-10^{99}; b=10; \mu=12,29; \sigma=1,3) \approx 0,0054.
+        \end{align*}
+        Als $\mu=13,31$ kg, dan breekt $0,54\%$ van de tasjes van het nieuw soort plastic.
     }
 \end{enumerate}
