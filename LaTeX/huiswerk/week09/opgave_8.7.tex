@@ -1,7 +1,31 @@
 \question{8.7}{
     In een aselecte steekproef van $400$ kiesgerechtigde Nederlanders blijken $160$ personen aanhanger van een bepaalde politieke partij te zijn.
-    Geef een $99\%$-betrouwbaarheidsinterval voor $\pi$: de fractie aanhangers in de totale populatie.
+    Geef een $99\%$-betrouwbaarheidsinterval voor $p$: de fractie aanhangers in de totale populatie.
 }
 \answer{
+
+    Laat $X$ het aantal kiesgerechtigde Nederlanders in een steekproef dat aanhanger is van een bepaalde politieke partij.
+    Aangezien de steekproefomvang gelijk is aan $400$ kiesgerechtigde Nederlanders, is $X$ binomiaal verdeeld met $n=400$ en nog onbekende succeskans $p$.
     
+    We bepalen een $99\%$-betrouwbaarheidsinterval voor $p$ met behulp van de Clopper-Pearson methode.
+    Omdat de gewenste betrouwbaarheid $99\%$ is, geldt dat $\alpha = 0,01$.
+
+    De Clopper-Pearson methode werkt als volgt:
+    \begin{enumerate}
+        \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=160$ gelijk is aan $\alpha/2$, oftewel $P(X \le 160) = \alpha/2 = 0,005$.
+        Voer hiervoor in het functiescherm van de grafische rekenmachine:
+        \begin{align*}
+            y_1 &= \binomcdf(n=400; p_1=X; k=160) \\
+            y_2 &= 0,025
+        \end{align*}
+        De optie ``intersect'' geeft een waarde van $p_1 \approx 0,4653$.
+        \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=160$ gelijk is aan $\alpha/2$, oftewel $P(X \ge 160) = 1 - P(X \le 159) = \alpha/2 = 0,005$.
+        Voer hiervoor in het functiescherm van de grafische rekenmachine:
+        \begin{align*}
+            y_1 &= 1 - \binomcdf(n=400; p_1=X; k=159) \\
+            y_2 &= 0,025
+        \end{align*}
+        De optie ``intersect'' geeft een waarde van $p_2 \approx 0,3372$.
+    \end{enumerate}
+    We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het $95\%$-betrouwbaarheidsinterval voor de fractie aanhangers van de politieke partij is gelijk aan $[0,3372;  0,4653]$.
 }

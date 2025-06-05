@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1748519769.31288 "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_1 2025-06-05/exam_20250605.tex" "exam_20250605.pdf" "exam_20250605" 1748519772.63369 0
+["pdflatex"] 1749150366.60134 "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_1 2025-06-05/exam_20250605.tex" "exam_20250605.pdf" "exam_20250605" 1749150373.44982 0
   "C:/Users/danny/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747677661 124177 fb99ef2de52f29fd88ea694d45142975 ""
   "C:/Users/danny/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1734346087 24225047 9f9d6f03f4e94b49b1f4d88a5bda1762 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -224,14 +224,14 @@
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_1.pdf" 1748519023 144339 259ae1775dd8496f5d64575a37b9e74d ""
+  "C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_1.pdf" 1749148039 142468 4fc833b3bf98daba77f62027b7d9bdcf ""
   "C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/config.sty" 1747811693 2494 650168880531c2f6f420017f8339f886 ""
   "C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/exam_config.sty" 1748519536 1211 e6c93adc89e9b612688e529178dadff9 ""
   "C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1744911442 2546 6c8b868b232fe9059ec63290771c600a ""
   "C:/Users/danny/Documents/GitHub/Statistiek/Python/FMW_titelblad_20250605.pdf" 1747984679 126450 27373df247f6db65e72d907db7164e43 ""
   "c:/Users/danny/Documents/GitHub/Statistiek/examens/STAT_1 2025-06-05/exam_20250605.tex" 1748519767 864 f3f1631f8870ba0a8bf3fea373105514 ""
-  "exam_20250605.aux" 1748519772 2771 19cdcceae0737ff84085f0ecd624e9c5 "pdflatex"
-  "exam_20250605.out" 1748519771 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "exam_20250605.aux" 1749150372 2771 19cdcceae0737ff84085f0ecd624e9c5 "pdflatex"
+  "exam_20250605.out" 1749150371 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "exam_20250605.tex" 1748519767 864 f3f1631f8870ba0a8bf3fea373105514 ""
   "q1.tex" 1748518003 6089 fcb1112cb0e7c5f02375bc7854109b34 ""
   "q2.tex" 1748517720 6726 49126602ce1822e26cc19d292a5c8a24 ""

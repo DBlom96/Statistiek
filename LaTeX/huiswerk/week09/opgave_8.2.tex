@@ -35,6 +35,24 @@
 
     \item Bereken voor $\mu$ een betrouwbaarheidsinterval dat een betrouwbaarheid heeft van $95\%$.
     \answer{
+        Noteer met $X$ de kansvariabele die het aantal milligram eiwit in een willekeurig monster meet.
+        Gegeven is dat $X \sim N(\mu=?; \sigma=?)$.
+        Volgens de centrale limietstelling geldt dat het gemiddelde aantal milligram eiwit $\overline{X}$ in $10$ willekeurige monsters
+        normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{\sigma}{\sqrt{10}}$.
         
+        We hebben een geobserveerde steekproef van $10$ zakken genomen met steekproefgemiddelde $\overline{x} = 40,4$ milligram en steekproefstandaardafwijking $s = \sqrt{s^2} = \sqrt{7,0533} \approx 2,6558$ milligram. 
+        Aangezien we een betrouwbaarheid van $95\%$ willen, is $\alpha = 0,05$.
+        Verder, omdat de standaardafwijking onbekend is en de steekproefomvang $n < 30$, moeten we de $t$-verdeling met $df=n-1$ vrijheidsgraden gebruiken.
+        In het bijzonder gebruiken we
+        \[
+            t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,975; df=9) \approx 2,2622.
+        \]
+        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
+        \begin{align*}
+            &[\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] \\
+            &=[40,4 - 2,2622 \cdot \frac{2,6558}{\sqrt{10}}; 20142 + 2,2622 \cdot \frac{2,6558}{\sqrt{10}}] \\
+            &=[38,50; 42,30]
+        \end{align*}
+        Met $95\%$ betrouwbaarheid ligt de gemiddelde hoeveelheid eiwit in een monster tussen $38,50$ en $42,30$ milligram.
     }
 \end{enumerate}

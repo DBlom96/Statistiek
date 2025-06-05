@@ -5,18 +5,91 @@
 \begin{enumerate}[label=(\alph*)]
     \item Bereken een $95\%$-betrouwbaarheidsinterval voor $\mu$: het gemiddelde aantal werkuren van de studentenpopulatie.
     \answer{
-
+        Laat $X$ de tijd meten die een willekeurige student per week besteedt aan bijbaantjes.
+        Gegeven is dat $X \sim N(\mu=?; \sigma=?)$.
+        Volgens de centrale limietstelling geldt dat de gemiddelde tijd $\overline{X}$ die $18$ willekeurige studenten wekelijks aan bijbaantjes besteden
+        normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{\sigma}{\sqrt{18}}$.
+        
+        We hebben een geobserveerde steekproef van $18$ studenten genomen met steekproefgemiddelde $\overline{x} = 346$ minuten en steekproefstandaardafwijking $s = 175$ minuten.
+        Aangezien we een betrouwbaarheid van $95\%$ willen, is $\alpha = 0,05$.
+        Verder, omdat de standaardafwijking onbekend is en de steekproefomvang $n = 18 < 30$, moeten we de $t$-verdeling met $df=n-1$ vrijheidsgraden gebruiken.
+        In het bijzonder gebruiken we
+        \[
+            t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,975; df=17) \approx 2,1098.
+        \]
+        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
+        \begin{align*}
+            &[\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] \\
+            &=[346 - 2,1098 \cdot \frac{175}{\sqrt{18}}; 346 + 2,1098 \cdot \frac{175}{\sqrt{18}}] \\
+            &=[258,97; 433,03]
+        \end{align*}
+        Met $95\%$ betrouwbaarheid ligt de gemiddelde tijd die studenten aan bijbaantjes besteden tussen $258$ en $433$ minuten per week.
     }
 
     \item Nadere inspectie van de gegevens leverde dat drie studenten helemaal geen bijbaantje hebben, dus er zijn maar $15$ werkenden.
     Bereken voor de groep werkenden het steekproefgemiddelde en de standaarddeviatie.
     \emph{(Hint: doe dit door te manipuleren met de formule van $s^2$.)}
     \answer{
+        De totale tijd die de $18$ studenten bij elkaar aan bijbaantjes besteden is gelijk aan $18 \cdot 346 = 6228$ minuten. 
+        Aangezien slechts $15$ van de $18$ studenten een bijbaantje heeft, is het steekproefgemiddelde eigenlijk gelijk aan $\overline{x}_{\text{werkend}} = \frac{6228}{15} = 415,2$ minuten.
 
+        Voor de steekproefvariantie hebben we wat ingewikkeldere redeneringen nodig.
+        Ten eerste werd de steekproefvariantie bepaald als
+        \begin{align*}
+            s^2 = \frac{(x_1-\overline{x})^2+(x_2-\overline{x})^2+\ldots+(x_{18}-\overline{x})^2}{18-1}
+        \end{align*}
+        Stel nu dat $x_{16} = x_{17} = x_{18} = 0$, oftewel student $16, 17, 18$ zijn de drie niet-werkende studenten.
+        De term $(x_i - \overline{x})^2$ kun je anders opschrijven als:
+        \[
+            (x_i - \overline{x})^2 = x_i^2 - 2x_i\overline{x} + \overline{x}^2.
+        \]
+        In andere woorden, we kunnen de formule van de steekproefvariantie $s^2$ omschrijven als:
+        \begin{align*}
+            s^2 &= \frac{(x_1-\overline{x})^2+(x_2-\overline{x})^2+\ldots+(x_{18}-\overline{x})^2}{18-1} \\
+                &= \frac{(x_1^2-2\overline{x}x_1 + \overline{x}^2)+(x_2^2-2\overline{x}x_2 + \overline{x}^2)^2+\ldots+(x_{18}^2-2\overline{x}x_{18} + \overline{x}^2)}{18-1} \\
+                &= \frac{(x_1^2 + x_2^2 +\ldots + x_{18}^2) -2\overline{x}(x_1 + x_2 + \ldots + x_{18}) + 18 \cdot \overline{x}^2}{18-1}
+        \end{align*}
+        Merk op dat de som $x_1 + x_2 + \ldots + x_{18}$ gelijk is aan $18 \cdot \overline{x}$, dus de laatste formule kun je herschrijven tot
+        \begin{align*}
+            s^2 &= \frac{(x_1^2 + x_2^2 +\ldots + x_{18}^2) - 18 \cdot \overline{x}^2}{18-1}
+        \end{align*}
+
+        Gegeven is dat $\overline{x}=346$ en $s^2 = 175^2 = 30625$.
+        Hierdoor kunnen we $(x_1^2 + x_2^2 +\ldots + x_{18}^2)$, bepalen, namelijk:
+        \begin{align*}
+            x_1^2 + x_2^2 +\ldots + x_{18}^2    &= s^2 \cdot (18 - 1) + 18 \cdot \overline{x}^2 \\
+                                                &= 30625 \cdot 17 + 18 \cdot 346^2 \\
+                                                &= 2675513
+        \end{align*}
+        We kunnen de steekproefvariantie $s_{\text{werkend}}^2$ ook schrijven op basis van de $15$ werkenden, namelijk
+        \begin{align*}
+            s_{\text{werkend}}^2 &= \frac{(x_1^2 + x_2^2 +\ldots + x_{15}^2) - 15 \cdot \overline{x}_{\text{werkend}}^2}{15-1} \\
+                &= \frac{2675513 - 15 \cdot 415,2^2}{14} \\
+                &\approx 6403,3857
+        \end{align*}
+
+        De steekproefstandaardafwijking $s_{\text{werkend}}$ is de wortel van de steekproefvariantie, oftewel $s_{\text{werkend}} = \sqrt{s_{\text{werkend}}^2} = \sqrt{6403,3857} \approx 80,02$ minuten.
     }
 
     \item Bereken het $95\%$-betrouwbaarheidsinterval voor $\mu$ van de populatie werkende studenten.
     \answer{
+        De berekening kunnen we op eenzelfde manier uitvoeren als bij vraag \textbf{a}.
+        Volgens de centrale limietstelling geldt dat de gemiddelde tijd $\overline{X}$ die $15$ willekeurige studenten wekelijks aan bijbaantjes besteden
+        normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{\sigma}{\sqrt{15}}$.
         
+        We hebben een geobserveerde steekproef van $15$ studenten genomen met steekproefgemiddelde $\overline{x}_{\text{werkend}} = 415,2$ minuten en steekproefstandaardafwijking $s = 80,02$ minuten.
+        Aangezien we weer een betrouwbaarheid van $95\%$ willen, is $\alpha = 0,05$.
+        Verder, omdat de standaardafwijking onbekend is en de steekproefomvang $n = 15 < 30$, moeten we de $t$-verdeling met $df=n-1$ vrijheidsgraden gebruiken.
+        In het bijzonder gebruiken we
+        \[
+            t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,975; df=14) \approx 2,1448.
+        \]
+        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
+        \begin{align*}
+            &[\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] \\
+            &=[415,2 - 2,1448 \cdot \frac{80,02}{\sqrt{15}}; 415,2 + 2,1448 \cdot \frac{80,02}{\sqrt{15}}] \\
+            &=[370,89; 459,51]
+        \end{align*}
+        Met $95\%$ betrouwbaarheid ligt de gemiddelde tijd die werkende studenten aan bijbaantjes besteden tussen $370,89$ en $459,51$ minuten per week.
     }
 \end{enumerate}
