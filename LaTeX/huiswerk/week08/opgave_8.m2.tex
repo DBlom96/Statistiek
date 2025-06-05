@@ -1,0 +1,28 @@
+\question{8.m2}{Bij een grote financi\"ele instelling worden jaarlijks vele honderden net afgestudeerden aangenomen als trainee.
+Bedoeling is dat deze trainees na een zekere tijd $T$ een eerste aanbod ontvangen voor een offici\"ele baan bij deze instelling.
+Bij een onderzoek onder $36$ trainees is gebleken dat men gemiddeld na zestien maanden het eerste aanbod kreeg.
+Voor $T$ is gegeven dat de standaarddeviatie drie maanden is.
+Het $95\%$-betrouwbaarheidsinterval voor de gemiddelde tijd tot het eerste aanbod is dan gelijk aan $\ldots$}
+\begin{enumerate}[label=(\alph*)]
+    \item $9,01 < \mu < 22,99$
+    \item $15,16 < \mu < 16,85$
+    \item $15,02 < \mu < 16,98$
+    \item $14,84 < \mu < 17,17$
+\end{enumerate}
+\answer{De tijd $T$ (in maanden) tot een willekeurige trainee een eerste aanbod ontvangt is normaal verdeeld met onbekende verwachtingswaarde $\mu$ en standaardafwijking $\sigma=3$ maanden.
+In algemene zin kunnen we een $100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval vinden met de formule
+\begin{align*}
+    [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+\end{align*}
+In dit geval hebben we te maken met een steekproef $x_1, x_2, \ldots, x_{36}$ waaruit is gebleken dat het steekproefgemiddelde $\overline{x} = 16$ maanden.
+Verder is $alpha = 0,05$, omdat we een $95\%$-betrouwbaarheidsinterval voor de gemiddelde tijd $\mu$ willen vinden.
+Er geldt dus dat $z_{\alpha/2} = z_{0,0025} = \invnorm(opp=1-\frac{\alpha}{2}) \approx 1,9600$.
+
+Het $95\%$-betrouwbaarheidsinterval voor het gemiddelde $\mu$ is dus gelijk aan
+\begin{align*}
+    &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+    &\approx [16 - 1,9600 \cdot \frac{3}{\sqrt{36}}; 16 + 1,9600 \cdot \frac{3}{\sqrt{36}}] \\
+    &\approx [15,0200; 16,9800] 
+\end{align*}
+Het juiste antwoord is dus (c).
+}

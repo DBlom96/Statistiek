@@ -1,0 +1,29 @@
+\question{8.m5}{Van een normale verdeling met onbekende $\mu$ en $\sigma$ worden zes waarnemingen gedaan.
+Deze waren: $8, 12, 7, 9, 11, 13$.
+De puntschatting voor $\sigma$ is dus $\ldots$}
+\begin{enumerate}[label=(\alph*)]
+    \item $5,6$
+    \item $4,67$
+    \item $2,37$
+    \item $1,87$
+\end{enumerate}
+\answer{
+    We berekenen een puntschatting $s$ voor een onbekende standaardafwijking $\sigma$ van een normale verdeling door de steekproefvariantie $s^2$ te bepalen en daar de wortel uit te nemen.
+    Allereerst berekenen we het steekproefgemiddelde
+    \[
+        \overline{x} = \frac{x_1 + x_2 + \ldots + x_6}{6} = \frac{8+12+7+9+11+13}{6} = 10.
+    \]
+
+    Nu kunnen we de steekproefvariantie bepalen:
+    \begin{align*}
+        s^2 &= \frac{(x_1-\overline{x})^2 + \ldots + (x_n-\overline{x})^2}{n-1} \\
+            &= \frac{(8-10)^2 + \ldots + (13-10)^2}{5} \\
+            &= \frac{(x_1-\overline{x})^2 + \ldots + (x_1-\overline{6})^2}{6-1} \\
+            &= 5,6
+    \end{align*}
+    De puntschatting $s$ voor de standaardafwijking $\sigma$ vinden we door de wortel hiervan te nemen:
+    \[
+        s = \sqrt{s^2} = \sqrt{5,6} \approx 2,3664.
+    \]
+    Het juiste antwoord is dus antwoord (c).
+}

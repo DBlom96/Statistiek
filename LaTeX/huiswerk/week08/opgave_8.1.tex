@@ -1,0 +1,50 @@
+\question{8.1}{
+    Een machine vult zakken met meel.
+    Het gewicht van het meel in een willekeurige zak is te beschouwen als een trekking uit een normale verdeling met onbekende $\mu$ en een standaarddeviatie van $100$ gram.
+    Om het schattingsinterval te berekenen voor $\mu$ weegt men de inhoud van $25$ zakken meel.
+    Het gemiddelde gewicht van het meel per zak bedroeg $20,142$ kg.   
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Bereken een schattingsinterval voor $\mu$ (de verwachtingswaarde van het gewicht van het meel) dat een betrouwbaarheid heeft van $95\%$.
+    \answer{
+        Noteer met $X$ de kansvariabele die het gewicht (in gram) van een willekeurige zak meel meet.
+        Gegeven is dat $X \sim N(\mu=?; \sigma=100)$.
+        Volgens de centrale limietstelling geldt dat het gemiddelde gewicht $\overline{X}$ van $25$ zakken meel normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{100}{\sqrt{25}} = 20$ gram.
+        We hebben een geobserveerde steekproef van $25$ zakken genomen met uitkomst $\overline{x} = 20142$ gram. 
+        Aangezien we een betrouwbaarheid van $95\%$ willen, is $\alpha = 0,05$ en $z_{\alpha/2} = \invnorm(1-\alpha/2) \approx 1,9600$.
+        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
+        \begin{align*}
+            &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[20142 - 1,9600 \cdot \frac{100}{\sqrt{25}}; 20142 + 1,9600 \cdot \frac{100}{\sqrt{25}}] \\
+            &=[20102,8; 20181,2]
+        \end{align*}
+        Met $95\%$ betrouwbaarheid ligt het gemiddelde gewicht van een zak meel tussen de $20102,8$ en $20181,2$ gram.
+    }
+
+    \item Bereken een schattingsinterval voor $\mu$ dat een betrouwbaarheid heeft van $99\%$.
+    \answer{
+        Aangezien we in dit geval een betrouwbaarheid van $99\%$ willen, is $\alpha = 0,01$ en $z_{\alpha/2} = \invnorm(1-\alpha/2) \approx 2,5758$.
+        Het $99\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
+        \begin{align*}
+            &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[20142 - 2,5758 \cdot \frac{100}{\sqrt{25}}; 20142 + 2,5758 \cdot \frac{100}{\sqrt{25}}] \\
+            &=[20090,5; 20193,5]
+        \end{align*}
+        Met $99\%$ betrouwbaarheid ligt het gemiddelde gewicht van een zak meel tussen de $20090,5$ en $20193,5$ gram.
+    }
+
+    \item Hoe groot moet men de steekproefomvang $n$ kiezen om tot een $95\%$-betrouwbaarheidsinterval voor $\mu$ te komen dat een breedte heeft van $20$ eenheden (gram)?
+    \answer{
+        De breedte van het betrouwbaarheidsinterval
+        \[
+            [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+        \]
+        is gelijk aan $2z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 20$.
+        Aangezien we een betrouwbaarheid van $95\%$ willen en een breedte van $20$ gram, krijgen we
+        \begin{align*}
+            2z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 20 \rightarrow n &\ge (\frac{2z_{\alpha/2}\cdot \sigma}{20})^2 \\
+                                                                            &\approx 384,16
+        \end{align*}
+        Om de garantie van een breedte van maximaal $20$ gram te waarborgen, moeren we naar boven afronden, dus de steekproefomvang moet minimaal $n=385$ zijn.
+    }
+\end{enumerate}
