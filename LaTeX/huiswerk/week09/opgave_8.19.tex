@@ -1,0 +1,89 @@
+\question{8.19}{
+    Een technicus van een bedrijf dat oefenapparaten ontwikkelt voor fitnesstrainingen heeft een nieuw ontwerp gemaakt van een bepaalde machine.
+    Bedoeling is dat dit apparaat spierversterkend werkt voor personen met rugklachten.
+    Helaas was maar \'e\'en prototype van het apparaat beschikbaar om het te kunnen testen.
+    Hierdoor konden slechts de gegevens van twaalf pati\"enten worden verzameld.
+    Deze twaalf pati\"enten gingen oefenen met dit apparaat en het aantal dagen werd opgetekend dat nodig was om volledig het gewenste resultaat te behalen.
+    Van de twaalf pati\"enten werden de volgende aantallen dagen waargenomen:
+    \[
+        15, 18, 41, 27, 23, 16, 29, 30, 32, 22, 25, 22.
+    \]
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Schat de standaarddeviatie.
+    \answer{
+        We berekenen een schatting $s$ voor de standaarddeviatie door allereerst het steekproefgemiddelde te bepalen:
+        \[
+            \overline{x} = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{x_1 + x_2 + \ldots + x_{12}}{12} = \frac{15+18+\ldots+22}{12} = 25.
+        \]
+
+        Nu kunnen we de steekproefvariantie bepalen:
+        \begin{align*}
+            s^2 &= \frac{(x_1-\overline{x})^2 + \ldots + (x_n-\overline{x})^2}{n-1} \\
+                &= \frac{(x_1-\overline{x})^2 + \ldots + (x_{12}-\overline{x})^2}{12-1} \\      
+                &= \frac{(15-25)^2 + \ldots + (22-25)^2}{11} \\
+                &= 54.7272
+        \end{align*}
+        De puntschatting $s$ voor de standaarddeviatie vinden we door de wortel hiervan te nemen:
+        \[
+            s = \sqrt{54,7272} \approx 7,3978.
+        \]
+    }
+
+    \item Bereken een $95\%$-betrouwbaarheidsinterval voor $\mu$: de gemiddelde hersteltijd voor de populatie.
+    \answer{
+        Gegeven is een steekproef van $n=12$ pati\"enten, waarvoor het aantal dagen tot het gewenste resutaat het steekproefgemiddelde $\overline{x} = 25$ dagen en de steekproefstandaarddeviatie $s = 7,3978$ dagen is bepaald.
+        Omdat de steekproefomvang $n = 12 < 30$ is en de standaarddeviatie $\sigma$ onbekend is, moeten we de $t$-verdeling gebruiken.
+        Omdat het gewenste betrouwbaarheidsniveau $95\%$ is, geldt dat $\alpha=0,05$.
+
+        De bijbehorende $t$-waarde is gelijk aan 
+        \[
+            t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,975; df=11) \approx 2,2010.
+        \]
+        Het $95\%$-betrouwbaarheidsinterval is gelijk aan
+        \begin{align*}
+            &[\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] \\
+            &=[25 - 2,2010 \cdot \frac{7,3978}{\sqrt{12}}; 25 + 2,2010 \cdot \frac{7,3978}{\sqrt{12}}] \\
+            &=[20,2997; 29,7003] \\
+        \end{align*}
+        Met $95\%$ betrouwbaarheid zit het gemiddelde aantal dagen tot het gewenste resultaat tussen $20$ en $30$ dagen.
+    }
+
+    \item In een vervolgstudie werden $90$ personen getest.
+    Er werd een standaarddeviatie gevonden van $6,5$ dagen en een gemiddelde hersteltijd van $27$ dagen.
+    Bereken opnieuw een $95\%$-betrouwbaarheidsinterval voor $\mu$.
+    \answer{
+        Gegeven is nu een steekproef van $n=90$ pati\"enten, waarvoor het aantal dagen tot het gewenste resutaat het steekproefgemiddelde $\overline{x} = 27$ dagen en de steekproefstandaarddeviatie $s = 6,5$ dagen is bepaald.
+        Omdat nu geldt dat de steekproefomvang $n = 90 > 30$ is, mogen we wel de normale verdeling gebruiken en $\sigma$ schatten met $s$.
+        Omdat het gewenste betrouwbaarheidsniveau $95\%$ is, geldt dat $\alpha=0,05$.
+
+        De bijbehorende $z$-waarde is gelijk aan 
+        \[
+            z = z_{\alpha/2} = \invnorm(opp=1-\alpha/2) = \invnorm(0,975) \approx 1,9600.
+        \]
+        Het $95\%$-betrouwbaarheidsinterval is gelijk aan
+        \begin{align*}
+            &[\overline{x} - z \cdot \frac{s}{\sqrt{n}}; \overline{x} + z \cdot \frac{s}{\sqrt{n}}] \\
+            &=[27 - 1,9600 \cdot \frac{6,5}{\sqrt{90}}; 27 + 1,9600 \cdot \frac{6,5}{\sqrt{90}}] \\
+            &=[25,6571; 28,3429] \\
+        \end{align*}
+        Met $95\%$ betrouwbaarheid zit het gemiddelde aantal dagen tot het gewenste resultaat tussen $25$ en $28$ dagen.
+        Merk op dat dit betrouwbaarheidsinterval al een stuk kleiner is, wat het effect van een grotere steekproefomvang onderschrijft!
+    }
+
+    \item Men wenst het bij vraag \textbf{c} gevraagde interval zodanig te bepalen dat het resulterende interval voor $\mu$ niet breder is dan twee dagen.
+    Hoe groot moet de steekproefomvang worden gekozen om dat te bereiken, als de standaarddeviatie van vraag \textbf{a} als vertrekpunt mag worden gekozen?
+    \answer{
+        Als het resulterende interval voor $\mu$ niet breder is dan twee dagen, dan is ook de foutmarge (afwijking van het gemiddelde) $a$ niet groter dan 1 dag ($a = 1$).
+        Verder mogen we aannemen dat $\sigma = 7,3978$.
+        In formulevorm ziet dit er als volgt uit:
+        \[
+            z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} \le a = 1,
+        \]
+        oftewel
+        \[
+            n \ge \left(\frac{z_{\alpha/2} \cdot \sigma}{a} \right)^2 = \left(\frac{1,9600 \cdot 7,3978}{1} \right)^2 \approx 210,2410
+        \]
+        Afgerond naar boven naar het eerstvolgende gehele getal geeft een minimale steekproefomvang van $n=211$ personen om een interval te krijgen voor $\mu$ van maximaal $2$ dagen breed.
+    }
+\end{enumerate}

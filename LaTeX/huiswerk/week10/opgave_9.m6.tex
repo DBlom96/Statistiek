@@ -1,0 +1,23 @@
+\question{9.m6}{Voor een normaal verdeelde variabele met onbekende $\mu$ en $\sigma$ wordt een toets voor $\mu$ verricht.
+De volgende gegevens zijn van belang: $H_0: \mu=60$; $H_1: \mu < 60$; $\alpha=0,05$; $s^2=16$; $n=25$; het steekproefgemiddelde is $62$.
+Bij deze toets vinden we dus een berekende $t^*$-waarde of $z^*$-waarde die gelijk is aan $\ldots$}
+\begin{enumerate}[label=(\alph*)]
+    \item $2,50$
+    \item $0,625$
+    \item $1,568$
+    \item $1,316$
+\end{enumerate}
+\answer{
+    Omdat $\alpha = 0,05$ en $n=25$ gebruiken we de $t$-verdeling.
+    De formule voor de $t^*$-waarde is gegeven door
+    \[
+        t^* = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}
+    \]
+    Omdat geldt dat $s^2=16$, weten we dat $s = 4$.
+    Verder kunnen we onder de nulhypothese aannemen dat $\mu=60$ en is het steekproefgemiddelde $\overline{x} = 62$.
+    De bijbehorende $t^*$-waarde is gelijk aan
+    \[
+        t^* = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}} = \frac{62 - 60}{\frac{4}{\sqrt{25}}} = 2,5.
+    \]
+    Het juiste antwoord is (a).
+}

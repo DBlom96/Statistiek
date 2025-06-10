@@ -6,20 +6,74 @@
     Er bleken $80$ auto's niet verzekerd te zijn.
     Geef een $95\%$-betrouwbaarheidsinterval voor de fractie onverzekerde auto's in de gehele populatie.
     \answer{
+        Laat $X$ de kansvariabele zijn die het aantal onverzekerde auto's telt bij een steekproef van $1000$ kentekens.
+        Omdat iedere stemmer onafhankelijk van elkaar stemt, hebben we te maken met een binomiale verdeling.
+        Op basis van de steekproef geldt dat $X \sim \text{Binomiaal}(n=1000; p=?)$, waarbij we een uitkomst van $80$ onverzekerde auto's hebben geobserveerd,
+        
+        We willen een $95\%$-betrouwbaarheidsinterval voor $p$ bepalen.
+        Dit doen we met behulp van de Clopper-Pearson methode.
+        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$.
 
+        De Clopper-Pearson methode werkt als volgt:
+        \begin{enumerate}
+            \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=80$ gelijk is aan $\alpha/2$, oftewel $P(X \le 80) = \alpha/2 = 0,025$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= \binomcdf(n=1000; p_1=X; k=80) \\
+                y_2 &= 0,025
+            \end{align*}
+            De solver optie geeft een waarde van $p_1 \approx 0,0986$.
+            \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=80$ gelijk is aan $\alpha/2$, oftewel $P(X \ge 80) = 1 - P(X \le 79) = \alpha/2 = 0,025$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= 1 - \binomcdf(n=1000; p_1=X; k=79) \\
+                y_2 &= 0,025
+            \end{align*}
+            De solver optie geeft een waarde van $p_2 \approx 0,0639$.
+        \end{enumerate}
+        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
+        Het $95\%$-betrouwbaarheidsinterval voor de fractie onverzekerde auto's is dus gelijk aan $[0,0639; 0,0986]$.
     }
 
     \item Stel dat de Rijksdienst het percentage onverzekerde auto's wil schatten met een marge van plus of min $1\%$.
     Hoeveel auto's moeten dan voor een steekproef worden opgenomen?
     Geef aan welke veronderstellingen u hanteert.
     \answer{
-        
+        Bij $n = 1000$ is de foutmarge gelijk aan $\frac{0,0986-0,0639}{2} = 0,01735$, oftewel $1,73\%$.
+        Dat betekent dus dat de steekproefomvang nog groter moet worden om een foutmarge van slechts $1\%$ te krijgen.
+
+        Omdat $n$ heel groot is, mag de normale benadering gebruikt worden en geldt de formule
+        \[
+            n \ge \frac{z_{\alpha/2}^2 \cdot p \cdot (1-p)}{a^2},
+        \]
+        waarbij $a = 0,01$ de gewenste foutmarge (afwijking van het steekproefgemiddelde) is.
+        Omdat het betrouwbaarheidsniveau $95\%$ is, geldt $\alpha = 0,05$ en dus $z_{\alpha/2} = \invnorm(opp=1-\alpha/2=0,975) \approx 1,9600$.
+        Verder nemen we aan dat $\hat{p} = 0,08$, dit is de puntschatter voor de binomiale succeskans $p$.
+        De minimale steekproefomvang om een foutmarge van maximaal plus of min $1\%$ te krijgen is gelijk aan
+        \[
+            n \ge \frac{z_{\alpha/2}^2 \cdot \hat{p} \cdot (1-\hat{p})}{a^2} = \frac{1,9600^2 \cdot 0,08 \cdot 0,92}{0,01^2} \approx 2827,4176.
+        \]
+        Afronden naar boven op het eerstvolgende gehele getal geeft een minimale steekproefomvang van $n=2828$ auto's om een foutmarge van slechts $\pm 1\%$ te krijgen.
     }
 
     \item Voor een steekproef van $25$ onverzekerde auto's werd de ouderdom bepaald.
     Dat leverde een gemiddelde van $8,4$ jaar en een standaarddeviatie van $1,7$ jaar.
     Geef een $95\%$-betrouwbaarheidsinterval voor de gemiddelde leeftijd van alle onverzekerde auto's.
     \answer{
-        
+        Gegeven is een steekproef van $n=25$ onverzekerde auto's, waarvoor van de leeftijd een steekproefgemiddelde $\overline{x} = 8,4$ jaar en steekproefstandaarddeviatie $s = 1,7$ jaar is bepaald.
+        Omdat de steekproefomvang $n = 25 < 30$ is en de standaarddeviatie $\sigma$ onbekend is, moeten we de $t$-verdeling gebruiken.
+        Omdat het gewenste betrouwbaarheidsniveau $95\%$ is, geldt dat $\alpha=0,05$.
+
+        De bijbehorende $t$-waarde is gelijk aan 
+        \[
+            t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,975; df=24) \approx 2,0639.
+        \]
+        Het $95\%$-betrouwbaarheidsinterval is gelijk aan
+        \begin{align*}
+            &[\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] \\
+            &=[8,4 - 2,0639 \cdot \frac{1,7}{\sqrt{25}}; 8,4 + 2,0639 \cdot \frac{1,7}{\sqrt{25}}] \\
+            &=[7,6983; 9,1017] \\
+        \end{align*}
+        Met $95\%$ betrouwbaarheid zit de gemiddelde leeftijd van een onverzekerde auto tussen $7,7$ en $9,1$ jaar.
     }
 \end{enumerate}

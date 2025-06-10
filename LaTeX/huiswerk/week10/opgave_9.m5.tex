@@ -1,0 +1,32 @@
+\question{9.m5}{Een vulmachine is zodanig ingesteld dat deze verpakking vult met een vulgewicht $X$ dat een normale verdeling volgt met $\mu=1510$ gram en $\sigma=20$ gram.
+Regelmatig wordt met een steekproef gecontroleerd of de instelling ($\mu$) van de machine nog correct is.
+We nemen dan een steekproef van zestien verpakkingen en we toetsen tweezijdig met $\alpha=0,05$.
+We veronderstellen dat $\sigma$ niet is veranderd.
+De grenzen van het kritieke gebied zijn dan:}
+\begin{enumerate}[label=(\alph*)]
+    \item $1500,2$ en $1519,8$
+    \item $1477$ en $1543$
+    \item $1507,55$ en $1512,45$
+    \item $1461$ en $1559$
+\end{enumerate}
+\answer{
+    In deze vraag wordt tweezijdig getoetst met de volgende nulhypothese en alternatieve hypothese:
+    \begin{align*}
+        H_0:    & \qquad \mu = 1510 \\
+        H_1:    & \qquad \mu \neq 1510
+    \end{align*}
+    Gegeven is dat $X \sim N(\mu=?; \sigma=20)$, want we mochten veronderstellen dat $\sigma$ niet was veranderd.
+    Onder de nulhypothese $H_0$ geldt, dankzij de centrale limietstelling dat het steekproefgemiddelde $\overline{X} \sim N(\mu=?; \frac{\sigma}{\sqrt{16}})$
+    Omdat $\alpha = 0,05$, gebruiken we $z_{\alpha/2} = \invnorm(opp=1-\alpha/2) = \invnorm(opp=0,975) \approx 1,9600$.
+
+    Het acceptatiegebied is dan gegeven door
+    \begin{align*}
+        &[\mu - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{16}}; \mu - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{16}}] \\
+        &=[1510 - 1,9600 \cdot \frac{20}{\sqrt{16}}; 1510 - 1,9600 \cdot \frac{20}{\sqrt{16}}] \\
+        &=[1500,2; 1519,8] \\
+    \end{align*}
+    Het kritieke gebied $Z$ wordt gevormd door alle waardes die buiten het acceptatiegebied liggen, oftewel:
+    \[(-\infty; 1500,2) \text{ en } (1519,8, \infty). \]
+
+    Het juiste antwoord is (a).
+}

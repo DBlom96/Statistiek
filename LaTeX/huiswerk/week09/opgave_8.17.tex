@@ -1,0 +1,52 @@
+\question{8.17}{
+    De handvatten van koffers moeten van zodanige kwaliteit zijn dat ze niet breken bij een forse belasting van de koffers.
+    Ter controle van de kwaliteit van de handvatten werden er proeven genomen waarbij het gewicht dat aan een handvat hing net zolang werd opgevoerd tot het handvat brak.
+    Er werden negen handvatten getest waarbij de maximale belasting werd vastgesteld.
+    De resultaten staan in de volgende tabel:
+
+    \begin{center}
+        \begin{tabular}{cccccccccc}
+            \toprule
+                {\bfseries Handvat} & {\bfseries A} & {\bfseries B} & {\bfseries C} & {\bfseries D} & {\bfseries E} & {\bfseries F} & {\bfseries G} & {\bfseries H} & {\bfseries I} \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5} \cmidrule{6-6} \cmidrule{7-7} \cmidrule{8-8} \cmidrule{9-9} \cmidrule{10-10}
+                Breuk bij een gewicht (in kg) van & $84$ & $87$ & $81$ & $85$ & $90$ & $93$ & $86$ & $88$ & $80$ \\ 
+            \bottomrule
+        \end{tabular}
+    \end{center}
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Geef een schatting van de variantie.
+    \answer{
+        We berekenen een schatting $s^2$ voor de variantie door allereerst het steekproefgemiddelde te bepalen:
+        \[
+            \overline{x} = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{x_1 + x_2 + \ldots + x_9}{9} = \frac{84+87+\ldots+90}{9} = 86.
+        \]
+
+        Nu kunnen we de steekproefvariantie bepalen:
+        \begin{align*}
+            s^2 &= \frac{(x_1-\overline{x})^2 + \ldots + (x_n-\overline{x})^2}{n-1} \\
+                &= \frac{(x_1-\overline{x})^2 + \ldots + (x_9-\overline{x})^2}{9-1} \\      
+                &= \frac{(84-86)^2 + \ldots + (80-86)^2}{8} \\
+                &= 17,0
+        \end{align*}
+        De puntschatting voor de variantie $\sigma^2$ is dus gelijk aan $s^2=17$.
+    }
+
+    \item Geef een betrouwbaarheidsinterval voor $\mu_x$: de verwachtingswaarde van de maximumbelasting van een handvat.
+    Kies een $99\%$-betrouwbaarheidsinterval.
+    \answer{
+        Omdat we hier te maken hebben met een onbekende standaardafwijking $\sigma$ en een kleine steekproefomvang $n=9 < 30$, moeten we de $t$-verdeling gebruiken.
+        Gegeven is een betrouwbaarheidsniveau van $99\%$, oftewel $\alpha = 0,01$.
+        De $t$-waarde die hierbij hoort is gelijk aan
+        \[
+            t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,995; df=8) \approx 3,3554.
+        \]
+        Het $99\%$-betrouwbaarheidsinterval voor $\mu_x$ is in dit geval gelijk aan
+        \begin{align*}
+            &[\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] \\
+            &=[86 - 3,3554 \cdot \frac{17}{\sqrt{9}}; 86 + 3,3554 \cdot \frac{17}{\sqrt{9}}] \\
+            &=[66,9861; 105,0139] \\
+        \end{align*}
+        Met $99\%$ betrouwbaarheid zit de gemiddelde maximumbelasting van een handvat tussen ongeveer $67$ en $105$ kg.
+    }
+\end{enumerate}

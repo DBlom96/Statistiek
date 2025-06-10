@@ -7,11 +7,39 @@
 \begin{enumerate}[label=(\alph*)]
     \item Geef een $99,74\%$-betrouwbaarheidsinterval voor $\pi$: de fractie voorstemmers in de populatie.
     \answer{
+        Laat $X$ de kansvariabele zijn die het aantal voorstemmers telt bij het referendum.
+        Omdat iedere stemmer onafhankelijk van elkaar stemt, hebben we te maken met een binomiale verdeling.
+        Op basis van de steekproef geldt dat $X \sim \text{Binomiaal}(n=5000; p=?)$.
+        
+        We willen een $99,74\%$-betrouwbaarheidsinterval voor $p$ bepalen.
+        Dit doen we met behulp van de Clopper-Pearson methode.
+        Omdat de gewenste betrouwbaarheid $99,74\%$ is, geldt dat $\alpha = 0,0026$.
 
+        De Clopper-Pearson methode werkt als volgt:
+        \begin{enumerate}
+            \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=3082$ gelijk is aan $\alpha/2$, oftewel $P(X \le 3082) = \alpha/2 = 0,0013$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= \binomcdf(n=5000; p_1=X; k=3082) \\
+                y_2 &= 0,0013
+            \end{align*}
+            De solver optie geeft een waarde van $p_1 \approx 0,6370$.
+            \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=3082$ gelijk is aan $\alpha/2$, oftewel $P(X \ge 3082) = 1 - P(X \le 3081) = \alpha/2 = 0,0013$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= 1 - \binomcdf(n=5000; p_1=X; k=3081) \\
+                y_2 &= 0,0013
+            \end{align*}
+            De solver optie geeft een waarde van $p_2 \approx 0,5955$.
+        \end{enumerate}
+        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
+        Het $95\%$-betrouwbaarheidsinterval voor de fractie ondeugdelijke tegels is dus gelijk aan $[0,5955; 0,6370]$.
     }
 
     \item Vind je het houden van een referendum nog zinvol, gegeven het antwoord bij vraag \textbf{a}?
     \answer{
-        
+        Het antwoord op deze vraag is afhankelijk van het kiessysteem waarmee gewerkt wordt. 
+        Indien het gaat om een strikte meerderheid van $50\% + 1$ stem, dan is het niet heel waardevol omdat vrijwel zeker is dat de voorstemmers gaan winnen.
+        Als het quotum op een andere waarde ligt of als er andere zwaarwegende politieke redenen in het spel zijn, kan het uiteraard wel van meerwaarde zijn om een referendum te houden.
     }
 \end{enumerate}
