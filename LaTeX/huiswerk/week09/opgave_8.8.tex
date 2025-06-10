@@ -26,7 +26,33 @@
     \item Stel dat alleen de gegevens van dag $1$ bekend zouden zijn.
     Wat is op basis daarvan een $95\%$-betrouwbaarheidsinterval voor $\pi$: de populatiefractie van afgekeurde tegels?
     \answer{
+        Laat $X$ de kansvariabele zijn die het aantal afgekeurde tegels telt op een bepaalde dag.
+        Omdat iedere tegel onafhankelijk van elkaar ondeugdelijk is of niet, hebben we te maken met een binomiale verdeling.
+        Op dag $1$ is er een productieomvang  van $1200$, waarvan er $120$ zijn afgekeurd.
+        Op basis hiervan geldt dat $X \sim \text{Binomiaal}(n=1200; p=?)$.
+        
+        We willen een $95\%$-betrouwbaarheidsinterval voor $p$ bepalen.
+        Dit doen we met behulp van de Clopper-Pearson methode.
+        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$.
 
+        De Clopper-Pearson methode werkt als volgt:
+        \begin{enumerate}
+            \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=120$ gelijk is aan $\alpha/2$, oftewel $P(X \le 120) = \alpha/2 = 0,025$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= \binomcdf(n=1200; p_1=X; k=120) \\
+                y_2 &= 0,025
+            \end{align*}
+            De optie ``intersect'' geeft een waarde van $p_1 \approx 0,1184$.
+            \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=120$ gelijk is aan $\alpha/2$, oftewel $P(X \ge 120) = 1 - P(X \le 119) = \alpha/2 = 0,005$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= 1 - \binomcdf(n=1200; p_1=X; k=119) \\
+                y_2 &= 0,025
+            \end{align*}
+            De optie ``intersect'' geeft een waarde van $p_2 \approx 0,0836$.
+        \end{enumerate}
+        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het $95\%$-betrouwbaarheidsinterval voor de fractie ondeugdelijke tegels is gelijk aan $[0,0836; 0,1184]$.        
     }
 
     \item Bereken voor iedere dag de fractie afgekeurde tegels.

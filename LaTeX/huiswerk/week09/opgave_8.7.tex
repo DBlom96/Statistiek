@@ -16,16 +16,16 @@
         Voer hiervoor in het functiescherm van de grafische rekenmachine:
         \begin{align*}
             y_1 &= \binomcdf(n=400; p_1=X; k=160) \\
-            y_2 &= 0,025
+            y_2 &= 0,005
         \end{align*}
         De optie ``intersect'' geeft een waarde van $p_1 \approx 0,4653$.
         \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=160$ gelijk is aan $\alpha/2$, oftewel $P(X \ge 160) = 1 - P(X \le 159) = \alpha/2 = 0,005$.
         Voer hiervoor in het functiescherm van de grafische rekenmachine:
         \begin{align*}
             y_1 &= 1 - \binomcdf(n=400; p_1=X; k=159) \\
-            y_2 &= 0,025
+            y_2 &= 0,005
         \end{align*}
         De optie ``intersect'' geeft een waarde van $p_2 \approx 0,3372$.
     \end{enumerate}
-    We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het $95\%$-betrouwbaarheidsinterval voor de fractie aanhangers van de politieke partij is gelijk aan $[0,3372;  0,4653]$.
+    We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het $99\%$-betrouwbaarheidsinterval voor de fractie aanhangers van de politieke partij is gelijk aan $[0,3372;  0,4653]$.
 }
