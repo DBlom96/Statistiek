@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1749550590.25787 "c:/Users/danny/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1749550592.04051 0
+["pdflatex"] 1749626712.69356 "c:/Users/danny/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1749626715.57712 0
   "C:/Users/danny/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747677661 124177 fb99ef2de52f29fd88ea694d45142975 ""
   "C:/Users/danny/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1734346087 24225047 9f9d6f03f4e94b49b1f4d88a5bda1762 ""
   "C:/Users/danny/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -212,20 +212,20 @@
   "C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1744911442 2546 6c8b868b232fe9059ec63290771c600a ""
   "c:/Users/danny/Documents/GitHub/Statistiek/LaTeX/main.tex" 1749550559 780 657c0e2164ddddc7cd24df23dadba42e ""
   "huiswerk/week10.tex" 1749550587 336 8225c631e4a2ffba2e7f6feab2aefd44 ""
-  "huiswerk/week10/opgave_9.11.tex" 1749549053 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "huiswerk/week10/opgave_9.11.tex" 1749626708 1661 84cf9b4793601120bb30f13e66ddcc3e ""
   "huiswerk/week10/opgave_9.18.tex" 1749549053 0 d41d8cd98f00b204e9800998ecf8427e ""
   "huiswerk/week10/opgave_9.23.tex" 1749549053 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "huiswerk/week10/opgave_9.3.tex" 1749549053 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "huiswerk/week10/opgave_9.5.tex" 1749549053 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "huiswerk/week10/opgave_9.7.tex" 1749549053 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "huiswerk/week10/opgave_9.3.tex" 1749626115 547 c020d326bdb6984c61f118f38273d5d5 ""
+  "huiswerk/week10/opgave_9.5.tex" 1749626271 741 3f75b14accc4ce9dfe23171928034700 ""
+  "huiswerk/week10/opgave_9.7.tex" 1749626553 1415 47f0aad3373ef56534c2f54f85ca8def ""
   "huiswerk/week10/opgave_9.m1.tex" 1749549162 414 63b26bcaa25b8a2e01eda90875f4354b ""
   "huiswerk/week10/opgave_9.m2.tex" 1749549307 421 0bacb6125c48c48887abf28278c82ac4 ""
   "huiswerk/week10/opgave_9.m3.tex" 1749549306 395 0f7adfa01f16aabd4a7be2877ebba74b ""
   "huiswerk/week10/opgave_9.m4.tex" 1749549415 526 39c8284b7bc6af2725d01ab725be1174 ""
   "huiswerk/week10/opgave_9.m5.tex" 1749550014 1812 bee8122f5981aeb90c3165ee3e6b0a8b ""
   "huiswerk/week10/opgave_9.m6.tex" 1749550529 1072 e9a749fa86f89f13043b1ca46c175bfa ""
-  "main.aux" 1749550591 260 17add8a91b21f42333c5f71905e10baf "pdflatex"
-  "main.out" 1749550591 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1749626715 260 2f0dbe0b26906366be092e8980ef12d3 "pdflatex"
+  "main.out" 1749626714 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1749550559 780 657c0e2164ddddc7cd24df23dadba42e ""
   (generated)
   "main.aux"
