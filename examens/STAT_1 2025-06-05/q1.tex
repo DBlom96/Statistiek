@@ -86,10 +86,10 @@
         }
         \solution{
             Laat $Y$ nu het aantal dronezwermen zijn dat meer dan \'e\'en minuut onopgemerkt blijft.
-            In dat geval is $Y$ een binomiaal verdeelde kansvariabele met parameters $n = 6$ (aantal dronezwermen) en $p \approx 0,1111$ (kans dat een dronezwerm langer dan een minuut onopgemerkt blijft).\rubric{2}
+            In dat geval is $Y$ een binomiaal verdeelde kansvariabele met parameters $n = 6$ (aantal dronezwermen) en $p \approx 1-0,1111 = 0,8888$ (kans dat een dronezwerm langer dan een minuut onopgemerkt blijft).\rubric{2}
             De kans op een succesvolle missie is gelijk aan de kans dat minstens een zwerm drones langer dan \'e\'en minuut onopgemerkt blijft, oftewel
             \[
-                P(Y \ge 1) = 1 - P(Y=0) = 1 - \binompdf(n=6; p=0,1111; k=0) = 0,5067. \rubric{3}
+                P(Y \ge 1) = 1 - P(Y=0) = 1 - \binompdf(n=6; p=0,8888; k=0) = 0,999998. \rubric{3}
             \]
         }
 \end{question}
