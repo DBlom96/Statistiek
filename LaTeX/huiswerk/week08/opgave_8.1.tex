@@ -33,18 +33,18 @@
         Met $99\%$ betrouwbaarheid ligt het gemiddelde gewicht van een zak meel tussen de $20090,5$ en $20193,5$ gram.
     }
 
-    \item Hoe groot moet men de steekproefomvang $n$ kiezen om tot een $95\%$-betrouwbaarheidsinterval voor $\mu$ te komen dat een breedte heeft van $20$ eenheden (gram)?
+    \item Hoe groot moet men de steekproefomvang $n$ kiezen om tot een $95\%$-betrouwbaar\-heidsinterval voor $\mu$ te komen dat een breedte heeft van $20$ eenheden (gram)?
     \answer{
         De breedte van het betrouwbaarheidsinterval
         \[
             [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
         \]
         is gelijk aan $2z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 20$.
-        Aangezien we een betrouwbaarheid van $95\%$ willen en een breedte van $20$ gram, krijgen we
+        De intervalbreedte is gelijk aan twee keer de maximale afwijking $a$, oftewel $a = 10$.
+        Aangezien we een betrouwbaarheid van $95\%$ willen en een maximale afwijking $a = 10$ gram, krijgen we
         \begin{align*}
-            2z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 20 \rightarrow n &\ge (\frac{2z_{\alpha/2}\cdot \sigma}{20})^2 \\
-                                                                            &\approx 384,16
+            n \ge (\frac{z_{\alpha/2} \cdot \sigma}{10})^2 \approx 384,16
         \end{align*}
-        Om de garantie van een breedte van maximaal $20$ gram te waarborgen, moeten we naar boven afronden, dus de steekproefomvang moet minimaal $n=385$ zijn.
+        Om de garantie van een intervalbreedte van maximaal $20$ gram te waarborgen, moeten we naar boven afronden, dus de steekproefomvang moet minimaal $n=385$ zakken meel zijn.
     }
 \end{enumerate}
