@@ -1,0 +1,47 @@
+\question{10.m3}{
+    Bij een toets voor onafhankelijkheid geeft de tabel de waargenomen frequenties weer.
+    De te verwachten of \emph{expected} frequentie voor de cel waarin $80$ waarnemingen vermeld zijn, bedraagt $\ldots$
+}
+\begin{enumerate}[label=(\alph*)]
+    \item $\frac{80}{250}$
+    \item $125$
+    \item $0,2$
+    \item $100$
+\end{enumerate}
+
+\begin{center}
+    \begin{tabular}{ccc}
+        \toprule
+            & {\bfseries Man} & {\bfseries Vrouw} \\
+        \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+            Links & $80$ & $120$ \\
+            Rechts & $170$ & $130$ \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\answer{
+    Bekijk nu een uitgebreidere versie van de tabel van \emph{observed} frequenties hierboven, waarbij we ook de rij- en kolomtotalen hebben toegevoegd.
+    \begin{center}
+        \begin{tabular}{ccc|c}
+            \toprule
+                & {\bfseries Man} & {\bfseries Vrouw} & {\bfseries Totaal} \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4}
+                Links & $80$ & $120$ & $200$ \\
+                Rechts & $170$ & $130$ & $300$ \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4}
+                Totaal & $250$ & $250$ & $500$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    De te verwachten of \emph{expected} frequentie $E_{ij}$ voor de cel in rij $i$ en kolom $j$ is gelijk aan
+    \[
+        E_{ij} = \frac{\text{Rijtotaal}_{i} \cdot \text{Kolomtotaal}_j}{\text{Totaal}}.
+    \]
+    Dat wil zeggen dat de expected frequentie voor de cel linksboven, oftewel $E_{11}$, gelijk is aan
+    \[
+        E_{11} = \frac{\text{Rijtotaal}_{1} \cdot \text{Kolomtotaal}_1}{\text{Totaal}} = \frac{200 \cdot 250}{500} = 100.
+    \]
+    Het juiste antwoord is dus (d).
+}
