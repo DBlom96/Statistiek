@@ -44,14 +44,14 @@
 
         Omdat $n$ heel groot is, mag de normale benadering gebruikt worden en geldt de formule
         \[
-            n \ge \frac{z_{\alpha/2}^2 \cdot p \cdot (1-p)}{a^2},
+            n \ge \left(\frac{z_{\alpha/2} \cdot \sqrt{p \cdot (1-p)}}{a}\right)^2,
         \]
         waarbij $a = 0,01$ de gewenste foutmarge (afwijking van het steekproefgemiddelde) is.
         Omdat het betrouwbaarheidsniveau $95\%$ is, geldt $\alpha = 0,05$ en dus $z_{\alpha/2} = \invnorm(opp=1-\alpha/2=0,975) \approx 1,9600$.
         Verder nemen we aan dat $\hat{p} = 0,08$, dit is de puntschatter voor de binomiale succeskans $p$.
         De minimale steekproefomvang om een foutmarge van maximaal plus of min $1\%$ te krijgen is gelijk aan
         \[
-            n \ge \frac{z_{\alpha/2}^2 \cdot \hat{p} \cdot (1-\hat{p})}{a^2} = \frac{1,9600^2 \cdot 0,08 \cdot 0,92}{0,01^2} \approx 2827,4176.
+            n \ge \left(\frac{z_{\alpha/2} \cdot \sqrt{p \cdot (1-p)}}{a}\right)^2 = \left(\frac{1,9600 \cdot \sqrt{0,08 \cdot 0,92}}{0,01}\right)^2 \approx 2827,4176.
         \]
         Afronden naar boven op het eerstvolgende gehele getal geeft een minimale steekproefomvang van $n=2828$ auto's om een foutmarge van slechts $\pm 1\%$ te krijgen.
     }
