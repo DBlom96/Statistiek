@@ -1,0 +1,59 @@
+\question{9.18}{
+    Een bedrijf voert een administratie van het aantal klachten van afnemers.
+    In acht weken werden de volgende aantallen klachten per week geregistreerd:
+
+    \begin{center}
+        \begin{tabular}{ccccccccc}
+            \toprule
+                {\bfseries Week} & {\bfseries 1} & {\bfseries 2} & {\bfseries 3} & {\bfseries 4} & {\bfseries 5} & {\bfseries 6} & {\bfseries 7} & {\bfseries 8} \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5} \cmidrule{6-6} \cmidrule{7-7} \cmidrule{8-8} \cmidrule{9-9}
+                Aantal klachten & $30$ & $45$ & $46$ & $50$ & $52$ & $34$ & $35$ & $28$ \\ 
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    We gaan ervan uit dat het aantal klachten per week kan worden beschouwd als een variabele met een normale verdeling.
+    In het verleden bleek het aantal klachten gemiddeld $51$ per week te zijn.
+    Toets of dit gemiddelde nog houdbaar is in het licht van verzamelde uitkomsten (kies $\alpha=0,05$).
+}
+\answer{
+    In deze hypothesetoets geldt dat de nulhypothese $H_0: \mu = 51$ (gemiddeld $51$ klachten per week) getest wordt tegen de alternatieve hypothese $H_1: \mu \neq 51$ (gemiddeld iets anders dan $51$ klachten per week).
+    In acht weken wordt het aantal klachten geteld, oftewel $n=8$
+    Het geobserveerde steekproefgemiddelde is gelijk aan 
+    \begin{align*}
+        \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{30+45+\ldots+28}{8} = 40.
+    \end{align*}
+    Verder is de standaarddeviatie $\sigma$ niet gegeven, dus moeten we die schatten aan de hand van de gegevens.
+    De schatting $s^2$ van de steekproefvariantie vinden we als volgt
+    \begin{align*}
+     s^2    &= \frac{(x_n-\overline{x})^2 + \ldots + (x_n-\overline{x})^2}{n-1} \\
+            &= \frac{(x_1-\overline{x})^2 + \ldots + (x_8-\overline{x})^2}{8-1} \\
+            &= \frac{(30-40)^2 + \ldots + (28-40)^2}{8-1} \\
+            &\approx 9,3350
+    \end{align*}
+    Hierdoor volgt een schatting van de standaarddeviatie $s = \sqrt{s^2} = \sqrt{9,3350} \approx 3,0553$.
+    De steekproefomvang $n = 8 < 30$ en de standaardafwijking $\sigma$ onbekend is, dus we moeten een $t$-waarde bepalen.
+    Omdat we tweezijdig toetsen, berekenen we die als volgt
+    \[
+        t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,975; df=7) \approx 2,3646
+    \]
+
+    De toetsingsgrootheid is in dit geval het (theoretische) steekproefgemiddelde $\overline{X}$, die dus een $t$-verdeling volgt.
+    Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu = 51$.
+    Merk op dat hoe verder het steekproefgemiddelde afligt van $51$ (zowel ver daaronder als ver daarboven), hoe waarschijnlijker dat de alternatieve hypothese waar is.
+
+    Het kritieke gebied is dus van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij $g_1$ en $g_2$ kunnen worden berekend als volgt:
+        \begin{align*}
+            g_1 &= \mu - t \cdot \frac{s}{\sqrt{n}} \\
+                &= 51 - 2,3646 \cdot \frac{3,0553}{\sqrt{8}}\\
+                &\approx 48,4457 \\
+            g_2 &= \mu + t \cdot \frac{s}{\sqrt{n}} \\
+                &= 51 + 2,3646 \cdot \frac{3,0553}{\sqrt{8}} \\
+                &\approx 53,5543 \\    
+        \end{align*}
+
+    Het kritieke gebied is dus gelijk aan $(-\infty; 48,4457]$ en $[53,5543, \infty)$.
+
+    Het geobserveerde steekproefgemiddelde $\overline{x}=40$ ligt in het kritieke gebied, dus verwerpen we de nulhypothese $H_0$.
+    Er is voldoende reden om aan te nemen dat het gemiddelde aantal klachten per week significant anders is dan $51$.
+}

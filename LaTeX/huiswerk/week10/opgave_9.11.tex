@@ -7,5 +7,37 @@
     Toets door berekening van de $p$-waarde of de bewering van het restaurant staande kan worden gehouden (kies $\alpha=0,05$).
 }
 \answer{
+    In deze hypothesetoets geldt dat de nulhypothese $H_0: \mu \ge 160$ (gemiddeld minstens $160$ gram) getest wordt tegen de alternatieve hypothese $H_1: \mu < 160$ (gemiddeld minder dan $160$ gram).
     
+    Omdat we linkszijdig toetsen, berekenen we de $z$-waarde
+    \[
+        z_{\alpha} = \invnorm(opp=1-\alpha) = \invnorm(opp=0,95) \approx 1,6449
+    \]
+
+    De toetsingsgrootheid is in dit geval het (theoretische) steekproefgemiddelde $\overline{X}$.
+    Uit de centrale limietstelling volgt dat $\overline{X} \sim N(\mu; \frac{\sigma}{\sqrt{n}})$.
+    Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu = 160$.
+    Verder geldt dat de standaardafwijking $\sigma = 5$ bekend is en zes studenten een hamburger wegen, oftewel $n=6$.
+    Er volgt dus dat $\sigma(\overline{X}) = \frac{\sigma}{\sqrt{n}} = \frac{5}{\sqrt{6}}$, oftewel $\overline{X} \sim N(\mu=160; \sigma=\frac{5}{\sqrt{6}})$.
+    Merk op dat hoe lager het steekproefgemiddelde is, hoe waarschijnlijker dat de alternatieve hypothese waar is.
+
+    % Het kritieke gebied is dus van de vorm $(-\infty, g]$, waarbij $g$ kan worden berekend als volgt:
+    % \begin{align*}
+    %     g   &= \mu - z_{\alpha} \cdot \frac{\sigma}{\sqrt{n}} \\
+    %         &= 160 - 1,6449 \cdot \frac{5}{\sqrt{6}} \\
+    %         &\approx 156,6424
+    % \end{align*}
+
+    % Het kritieke gebied is dus gelijk aan $(-\infty; 156,6424)$.
+
+
+    Het geobserveerde steekproefgemiddelde is gelijk aan $\overline{x} = \frac{140+148+162+146+152+152}{6}=150$.
+    Omdat we linkszijdig toetsen, is de $p$-waarde gelijk aan de linkeroverschrijdingskans 
+    \begin{align*}
+        p   &= P(\overline{X} \le \overline{x}=150) \\
+            &= \normalcdf(a=-10^{99}; b=150; \mu=160; \sigma=\frac{5}{\sqrt{6}}) \\
+            &\approx 0,000000482
+    \end{align*}
+    De $p$-waarde is extreem laag, en omdat $p < \alpha$, verwerpen we de nulhypothese $H_0$.
+    Er is voldoende reden om aan te nemen dat het gemiddelde vleesgewicht van een hamburger bij Big-Smak significant lager is dan $160$ gram.
 }
