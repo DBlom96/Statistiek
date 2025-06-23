@@ -29,9 +29,9 @@
      s^2    &= \frac{(x_n-\overline{x})^2 + \ldots + (x_n-\overline{x})^2}{n-1} \\
             &= \frac{(x_1-\overline{x})^2 + \ldots + (x_8-\overline{x})^2}{8-1} \\
             &= \frac{(30-40)^2 + \ldots + (28-40)^2}{8-1} \\
-            &\approx 9,3350
+            &\approx 87,1429
     \end{align*}
-    Hierdoor volgt een schatting van de standaarddeviatie $s = \sqrt{s^2} = \sqrt{9,3350} \approx 3,0553$.
+    Hierdoor volgt een schatting van de standaarddeviatie $s = \sqrt{s^2} = \sqrt{87,1429} \approx 9,3350$.
     De steekproefomvang $n = 8 < 30$ en de standaardafwijking $\sigma$ onbekend is, dus we moeten een $t$-waarde bepalen.
     Omdat we tweezijdig toetsen, berekenen we die als volgt
     \[
@@ -45,14 +45,14 @@
     Het kritieke gebied is dus van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij $g_1$ en $g_2$ kunnen worden berekend als volgt:
         \begin{align*}
             g_1 &= \mu - t \cdot \frac{s}{\sqrt{n}} \\
-                &= 51 - 2,3646 \cdot \frac{3,0553}{\sqrt{8}}\\
-                &\approx 48,4457 \\
+                &= 51 - 2,3646 \cdot \frac{9,3350}{\sqrt{8}}\\
+                &\approx 43,1957 \\
             g_2 &= \mu + t \cdot \frac{s}{\sqrt{n}} \\
-                &= 51 + 2,3646 \cdot \frac{3,0553}{\sqrt{8}} \\
-                &\approx 53,5543 \\    
+                &= 51 + 2,3646 \cdot \frac{9,3350}{\sqrt{8}} \\
+                &\approx 58,8043 \\    
         \end{align*}
 
-    Het kritieke gebied is dus gelijk aan $(-\infty; 48,4457]$ en $[53,5543, \infty)$.
+    Het kritieke gebied is dus gelijk aan $(-\infty; 43,1957]$ en $[58,8043, \infty)$.
 
     Het geobserveerde steekproefgemiddelde $\overline{x}=40$ ligt in het kritieke gebied, dus verwerpen we de nulhypothese $H_0$.
     Er is voldoende reden om aan te nemen dat het gemiddelde aantal klachten per week significant anders is dan $51$.
