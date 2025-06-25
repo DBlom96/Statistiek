@@ -19,7 +19,99 @@
         \end{tabular}
     \end{center}
 }
-Toets met $\alpha=0,05$ of de waargenomen verdeling overeenstemt met een binomiale verdeling met $\pi=0,20$.
+Toets met $\alpha=0,05$ of de waargenomen verdeling overeenstemt met een binomiale verdeling met $p=0,20$.
 \answer{
+    Omdat we willen kijken of de gegeven data overeenkomen met een specifieke discrete kansverdeling, in dit geval de binomiale verdeling met $p=0,20$, kunnen we een chikwadraattoets voor aanpassing (goodness-of-fit test) uitvoeren.
+    Laat $X$ een kansvariabele zijn die het aantal verwijzingen naar de afdeling intensive care telt op een willekeurige dag.
+    Verder is gegeven dat er per dag $5$ orthopedische operaties zijn, die in $20\%$ van de gevallen leidt tot complicaties.
+    Bij een chikwadraattoets voor aanpassing beginnen we met het defini\"eren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
 
+    \begin{align*}
+        H_0: &\qquad \text{$X$ is binomiaal verdeeld met parameters $n=5$ en $p=0,20$.} \\
+        H_1: &\qquad \text{$X$ is NIET binomiaal verdeeld met parameters $n=5$ en $p=0,20$.}
+    \end{align*}
+
+    Het significantieniveau $\alpha=0,05$ is gegeven in de opdracht, net als de geobserveerde data.
+    Om de toetsingsgrootheid $X^2$ te kunnen bepalen, moeten we eerst de \emph{expected}-tabel berekenen.
+    Omdat onder de nulhypothese $H_0$ geldt dat $X \sim \text{Binomiaal}(n=5; p=0,20)$, kunnen we deze verwachte aantallen uitrekenen. 
+    Omdat we $100$ afzonderlijke dagen bekijken, moet dit ook worden meegenomen in de verwachte frequenties.   
+    \begin{center}
+        \begin{tabular}{ccc}
+            \toprule
+                {\bfseries Aantal per dag ($k$)} & {\bfseries Observed} & {\bfseries Expected} \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                $0$ & $15$ & $100 \cdot \binompdf(n=5; p=0,20; k=0) = 32,768$ \\
+                $1$ & $25$ & $100 \cdot \binompdf(n=5; p=0,20; k=1) = 40,96$ \\
+                $2$ & $36$ & $100 \cdot \binompdf(n=5; p=0,20; k=2) = 20,48$ \\
+                $3$ & $12$ & $100 \cdot \binompdf(n=5; p=0,20; k=3) = 5,12$ \\
+                $4$ & $10$ & $100 \cdot \binompdf(n=5; p=0,20; k=4) = 0,64$ \\
+                $5$ & $2$  & $100 - 32,768 - 40,96 - \ldots - 0,64 = 0,032$ \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                Totaal & $100$ dagen & $100$ dagen \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    Merk op dat we de chikwadraatverdeling enkel konden gebruiken zodra de verwachte frequenties allemaal minstens $5$ zijn.
+    Om dit te bereiken, moeten we categorie\"en samennemen, namelijk $3$ tot en met $5$:
+    \begin{center}
+        \begin{tabular}{ccc}
+            \toprule
+                {\bfseries Aantal per dag ($k$)} & {\bfseries Observed} & {\bfseries Expected} \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                $0$ & $15$ & $100 \cdot \binompdf(n=5; p=0,20; k=0) = 32,768$ \\
+                $1$ & $25$ & $100 \cdot \binompdf(n=5; p=0,20; k=1) = 40,96$ \\
+                $2$ & $36$ & $100 \cdot \binompdf(n=5; p=0,20; k=2) = 20,48$ \\
+                $\ge 3$ & $24$ & $100 - 32,768 - 40,96 - 20,48 = 5,792$ \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+                Totaal & $100$ dagen & $100$ dagen \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    De toetsingsgrootheid $X^2$ bepalen we aan de hand van de volgende formule:
+
+    \begin{align*}
+        X^2  &= \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}},
+    \end{align*}
+
+    waarbij $i = 1,2,3,4$ de index van de rij is.
+    Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
+    
+    \begin{align*}
+        \chi^2  &= \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}} \\
+                &=\frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \frac{(O_{3} - E_{3})^2}{E_{3}} + \frac{(O_{4} - E_{4})^2}{E_{4}} \\
+                &= \frac{(15 - 32,768)^2}{32,768} + \frac{(25-40,96)^2}{40,96} + \frac{(36-20,48)^2}{20,48} + \frac{(24-5,792)^2}{5,792} \\
+                &\approx 84,8540
+    \end{align*}
+
+    Onder de nulhypothese volgt de toetsingsgrootheid $X$ een chikwadraatverdeling met
+    \[
+        \text{df} = (\#\text{rijen}-1) = 4 - 1 = 3
+    \]
+    vrijheidsgraden.
+    De $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
+    \begin{align*}
+        p   &= P(X^2 \ge \chi^2) \\
+            &= \chi^2\text{cdf}(\text{lower}=\chi^2\approx 84,8540; \text{upper}=10^{10}; \text{df}=3) \\
+            &\approx 2,7893 \cdot 10^{-18}
+    \end{align*}
+
+    Aangezien de $p$-waarde extreem klein is, betekent dit dat de geobserveerde toetsingsgrootheid $\chi^2$ extreem hoge waarde heeft onder de aanname van een binomiale verdeling met $n=5$ en $p=0,20$.
+    Omdat de $p$-waarde veel kleiner is dan het significantieniveau $\alpha=0,01$, wordt $H_0$  verworpen.
+    Er is voldoende bewijs om aan te nemen dat het aantal verwijzingen naar de afdeling intensive care niet binomiaal verdeeld is met parameters $n=5$ en $p=0,20$.
+        
+    \vspace{1em}
+
+    {
+        \itshape \textbf{Side note:} 
+        eigenlijk moet je nog doordenken over wat de toetsuitslag betekent.
+        Merk op dat volgens de metingen het totaal aantal doorverwijzingen in $100$ dagen gelijk is aan
+        \[
+            0\cdot 15 + 1 \cdot 25 + 2 \cdot 36 + 3 \cdot 12 + 4 \cdot 10 + 5 \cdot 2 = 183
+        \]
+        Aangezien er elke dag $5$ operaties plaatsvinden, is het totaal aantal operaties gelijk aan $500$.
+        Dit betekent dat de fractie doorverwezen pati\"enten gelijk is aan $\frac{183}{500} = 0,366$.
+        Deze fractie is veel groter dan $p=0,20$, dus misschien is het niet zo realistisch om te verwachten dat de nulhypothese gaat kloppen.
+        Een analyse van de ruwe data is dus nodig om te bekijken wat de daadwerkelijke samenhang is tussen de variabelen.
+    }
 }

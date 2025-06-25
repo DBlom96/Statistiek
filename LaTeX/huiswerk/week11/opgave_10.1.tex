@@ -2,11 +2,12 @@
     Bij een onderzoek naar de rookgewoonten van Nederlanders van $18$ jaar en ouder werden door loting $200$ proefpersonen gekozen die vervolgens werden ingedeeld naar leeftijd en naar rookgewoonte.
     De resultaten waren als volgt:
     \begin{center}
+        \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccccc}
             \toprule
-                \multicolumn{5}{c}{Leeftijd} \\
+                \multicolumn{5}{c}{{\bfseries Leeftijd}} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
-                & {\bfseries $18-<30$} & {\bfseries $30-<45$} & {\bfseries 45 en ouder} & {\bfseries Totaal} \\
+                & $\mathbf{18-<30}$ & $\mathbf{30-<45}$ & $\mathbf{45}$ \textbf{en ouder} & {\bfseries Totaal} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
                 Roker & $25$ & $35$ & $20$ & $80$ \\
                 Niet-roker & $55$ & $25$ & $40$ & $120$ \\
@@ -24,11 +25,12 @@
     \answer{
         Om de \emph{expected}-tabel te bepalen, starten we vanuit een lege tabel waarin alleen de totalen (van de rijen en kolommen respectievelijk) gegeven zijn:
         \begin{center}
+            \renewcommand{\arraystretch}{1.25}
             \begin{tabular}{ccccc}
                 \toprule
-                    \multicolumn{5}{c}{Leeftijd} \\
+                    \multicolumn{5}{c}{{\bfseries Leeftijd}} \\
                 \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
-                    & {\bfseries $18-<30$} & {\bfseries $30-<45$} & {\bfseries 45 en ouder} & {\bfseries Totaal} \\
+                    & $\mathbf{18-<30}$ & $\mathbf{30-<45}$ & $\mathbf{45}$ \textbf{en ouder} & {\bfseries Totaal} \\
                 \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
                     Roker & $$ & $$ & $$ & $80$ \\
                     Niet-roker & $$ & $$ & $$ & $120$ \\
@@ -45,11 +47,12 @@
 
         Dit geeft de volgende \emph{expected}-tabel:
         \begin{center}
+            \renewcommand{\arraystretch}{1.25}
             \begin{tabular}{ccccc}
                 \toprule
-                    \multicolumn{5}{c}{Leeftijd} \\
+                    \multicolumn{5}{c}{{\bfseries Leeftijd}} \\
                 \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
-                    & {\bfseries $18-<30$} & {\bfseries $30-<45$} & {\bfseries 45 en ouder} & {\bfseries Totaal} \\
+                    & $\mathbf{18-<30}$ & $\mathbf{30-<45}$ & $\mathbf{45}$ \textbf{en ouder} & {\bfseries Totaal} \\
                 \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
                     Roker & $\frac{80 \cdot 80}{200}=32$ & $\frac{80 \cdot 60}{200}=24$ & $\frac{80 \cdot 60}{200}=24$ & $80$ \\
                     Niet-roker & $\frac{120 \cdot 80}{200} = 48$ & $\frac{120 \cdot 60}{200} = 36$ & $\frac{120 \cdot 60}{200} = 36$ & $120$ \\
@@ -62,16 +65,16 @@
 
     \item Bereken de toetsingsgrootheid $\chi^2$.
     \answer{
-        De theoretische toetsingsgrootheid $X$ bepalen we aan de hand van de volgende formule:
+        De theoretische toetsingsgrootheid $X^2$ bepalen we aan de hand van de volgende formule:
         \begin{align*}
-            X  &= \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}},
+            X^2  &= \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}},
         \end{align*}
         waarbij $i = 1,2$ de index van de rij is, en $j = 1,2,3$ de index van de kolom is.
         Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
         \begin{align*}
             \chi^2  &= \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}} \\
                     &=\frac{(O_{11} - E_{11})^2}{E_{11}} + \frac{(O_{12} - E_{12})^2}{E_{12}} + \ldots + \frac{(O_{23} - E_{23})^2}{E_{23}} \\
-                    &= \frac{(25 - 32)^2}{32} + \frac{(35 - 24)^2}{24} + \frac{(20 - 24)^2}{24} + \frac{(55-48)^2}{48} + \frac{(25-36)^2}{36} + \frac{(40 - 36)^2}{36}\\
+                    &= \frac{(25 - 32)^2}{32} + \frac{(35 - 24)^2}{24} + \ldots + \frac{(40 - 36)^2}{36}\\
                     &\approx 12,0660
         \end{align*}
     }
@@ -101,6 +104,11 @@
         De numerieke solver geeft $x \approx 9,2103$.
         Dat betekent dat het kritieke gebied gelijk is aan $[9,2103; \infty)$.
 
+        \begin{center}
+            \resizebox{0.9\textwidth}{!}{
+                \includegraphics{opg_10.1.png}
+            }
+        \end{center}
     }
 
     \item Wat is uw eindconclusie?
