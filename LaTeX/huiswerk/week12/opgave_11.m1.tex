@@ -1,0 +1,29 @@
+\question{11.m1}{
+    Voor een tweetal normale verdelingen is gegeven dat hun standaarddeviatie respectievelijk $\sigma_1 = 4$ en $\sigma_2 = 6$ bedragen.
+    Men wil toetsen $H_0: \mu_1=\mu_2$.
+    Een steekproef van negen waarnemingen uit de eerste verdeling leverde een gemiddelde uitkomst op van $48$, en een steekproef van zestien waarnemingen uit de tweede verdeling leverde een gemiddelde op van $42$.
+    De toetsingsgrootheid bij deze toets levert een $z$-waarde op van $\ldots$
+}
+\begin{enumerate}[label=(\alph*)]
+    \item $6$.
+    \item $2,99$.
+    \item $6,63$.
+    \item $2,67$.
+\end{enumerate}
+\answer{
+    We hebben te maken met twee normaal verdeelde kansvariabelen, namelijk $X_1 \sim N(\mu_1 = ?; \sigma_1 = 4)$ en $X_2 \sim N(\mu_2 = ?; \sigma_2=6)$.
+    Aangezien we respectievelijk steekproeven hebben van groottes $n = 9$ en $m = 16$, geldt voor de theoretische steekproefgemiddeldes $\overline{X_1} \sim N(\mu=\mu_1; \sigma = \frac{\sigma_1}{\sqrt{n}})$ en $\overline{X_2} \sim N(\mu=\mu_2; \sigma = \frac{\sigma_2}{\sqrt{m}})$, oftewel
+    \begin{align*}
+        \overline{X_1} &\sim N(\mu_1=?; \sigma = \frac{4}{3}) \\
+        \overline{X_2} &\sim N(\mu_2=?; \sigma = \frac{3}{2})
+    \end{align*}
+    De verschilvariabele $V = \overline{X_1} - \overline{X_2}$ is dan normaal verdeeld met verwachtingswaarde $\mu_V=\mu_1 - \mu_2$ en standaardafwijking $\sigma_V = \sqrt{\frac{\sigma_1^2}{n} + \frac{\sigma_2^2}{m}} = \sqrt{\frac{16}{9} + \frac{9}{4}} \approx 2,0069$.
+    Onder de nulhypothese geldt $\mu_1 = \mu_2$, oftewel de verschilvariabele heeft verwachtingswaarde $\mu_1 - \mu_2 = 0$.
+    De geobserveerde waarde $v = \overline{x_1} - \overline{x_2} = 48 - 42 = 6$.
+
+    De $z$-waarde die bij deze uitkomst hoort is gelijk aan
+    \[
+        z = \frac{v - \mu_V}{\sigma_V} = \frac{6 - 0}{2,0069} \approx 2,99
+    \]
+    Het juiste antwoord is dus (b).
+}

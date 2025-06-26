@@ -1,0 +1,41 @@
+\question{8.14}{
+    Een handelsmaatschappij onderzoekt hoe groot de fractie orders is die binnen de afgesproken levertijd worden uitgevoerd.
+    Van $200$ orders bleken er $180$ binnen de levertijd uitgevoerd te zijn.
+}
+\begin{enumerate}[label=(\alph*)]
+    \item Geef een $95\%$-betrouwbaarheidsinterval voor de fractie orders die op tijd zijn uitgevoerd.
+    \answer{
+        Laat $X$ de kansvariabele zijn die het aantal orders telt die op tijd zijn uitgevoerd.
+        Omdat iedere order onafhankelijk van elkaar wordt uitgevoerd, hebben we te maken met een binomiale verdeling.
+        Op basis van de steekproef geldt dat $X \sim \text{Binomiaal}(n=200; p=?)$.
+        
+        We willen een $95\%$-betrouwbaarheidsinterval voor $p$ bepalen.
+        Dit doen we met behulp van de Clopper-Pearson methode.
+        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$.
+
+        De Clopper-Pearson methode werkt als volgt:
+        \begin{enumerate}
+            \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=180$ gelijk is aan $\alpha/2$, oftewel $P(X \le 180) = \alpha/2 = 0,025$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= \binomcdf(n=200; p_1=X; k=180) \\
+                y_2 &= 0,025
+            \end{align*}
+            De solver optie geeft een waarde van $p_1 \approx 0,9378$.
+            \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=180$ gelijk is aan $\alpha/2$, oftewel $P(X \ge 180) = 1 - P(X \le 179) = \alpha/2 = 0,025$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= 1 - \binomcdf(n=200; p_1=X; k=179) \\
+                y_2 &= 0,025
+            \end{align*}
+            De solver optie geeft een waarde van $p_2 \approx 0,8498$.
+        \end{enumerate}
+        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
+        Het $95\%$-betrouwbaarheidsinterval voor de fractie orders die op tijd wordt uitgevoerd is dus gelijk aan $[0,8498; 0,9378]$.
+    }
+
+    \item Hoeveel orders moet worden onderzocht om een interval voor $p$ te krijgen dat hoogstens $0,02$ breed is? (We gaan ervan uit dat $p$ ongeveer $0,9$ is).
+    \answer{
+        Deze vraag is buiten de scope van het vak.
+    }
+\end{enumerate}

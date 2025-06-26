@@ -24,6 +24,7 @@ Toets met $\alpha=0,05$ of de waargenomen verdeling overeenstemt met een binomia
     Omdat we willen kijken of de gegeven data overeenkomen met een specifieke discrete kansverdeling, in dit geval de binomiale verdeling met $p=0,20$, kunnen we een chikwadraattoets voor aanpassing (goodness-of-fit test) uitvoeren.
     Laat $X$ een kansvariabele zijn die het aantal verwijzingen naar de afdeling intensive care telt op een willekeurige dag.
     Verder is gegeven dat er per dag $5$ orthopedische operaties zijn, die in $20\%$ van de gevallen leidt tot complicaties.
+    
     Bij een chikwadraattoets voor aanpassing beginnen we met het defini\"eren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
 
     \begin{align*}
@@ -36,6 +37,7 @@ Toets met $\alpha=0,05$ of de waargenomen verdeling overeenstemt met een binomia
     Omdat onder de nulhypothese $H_0$ geldt dat $X \sim \text{Binomiaal}(n=5; p=0,20)$, kunnen we deze verwachte aantallen uitrekenen. 
     Omdat we $100$ afzonderlijke dagen bekijken, moet dit ook worden meegenomen in de verwachte frequenties.   
     \begin{center}
+        \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
             \toprule
                 {\bfseries Aantal per dag ($k$)} & {\bfseries Observed} & {\bfseries Expected} \\
@@ -54,6 +56,7 @@ Toets met $\alpha=0,05$ of de waargenomen verdeling overeenstemt met een binomia
     Merk op dat we de chikwadraatverdeling enkel konden gebruiken zodra de verwachte frequenties allemaal minstens $5$ zijn.
     Om dit te bereiken, moeten we categorie\"en samennemen, namelijk $3$ tot en met $5$:
     \begin{center}
+        \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
             \toprule
                 {\bfseries Aantal per dag ($k$)} & {\bfseries Observed} & {\bfseries Expected} \\

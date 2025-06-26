@@ -1,0 +1,23 @@
+\question{11.m6}{
+    Voor een tweetal normale verdelingen willen we toetsen of ze dezelfde waarde van de variantie hebben.
+    Voor de eerste variabele werd met een steekproef van twaalf waarnemingen de waarde $s^2 = 240$ gevonden.
+    Bij de tweede variabele leverde de steekproef van tien waarnemingen de waarde $s^2 = 160$.
+    De toetsingsgrootheid krijgt hier dan de waarde $\ldots$
+}
+\begin{enumerate}[label=(\alph*)]
+    \item $80$.
+    \item $1,50$.
+    \item $4$.
+    \item $1,25$.
+\end{enumerate}
+\answer{
+    We hebben te maken met twee normaal verdeelde kansvariabelen $X_1 \sim N(\mu_1 = ?; \sigma_1 = ?)$ en $X_2 \sim N(\mu_2 = ?; \sigma_2 = ?)$ waarvan we willen toetsen of ze dezelfde standaardafwijking hebben.
+    In andere woorden, we willen toetsen met $H_0: \sigma_1^2 = \sigma_2^2$ tegen $H_1: \sigma_1^2 \neq \sigma_2^2$ .
+
+    Dit kunnen we doen met behulp van een $F$-toets.
+    We hebben voor beide kansvariabelen een schatting $s_1^2 = 240$ en $s_2^2 = 160$ bepaald van de variantie, op basis van steekproeven van grootte respectievelijk $n=12$ en $m=10$.
+    De bijbehorende toetsingsgrootheid is $F = \frac{S_1^2}{S_2^2}$ volgt de $F(12, 10)$-verdeling.
+    De geobserveerde toetsingsgrootheid is $f = \frac{s_1^2}{s_2^2} = \frac{240}{160} = 1,5$.
+
+    Het juiste antwoord is dus (b).
+}
