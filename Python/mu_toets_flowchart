@@ -1,0 +1,22 @@
+digraph {
+	rankdir=TB size="8,10"
+	A [label=Start]
+	B [label="Eén of twee steekproeven?"]
+	C1 [label="Eén steekproef"]
+	C2 [label="Twee steekproeven"]
+	D1 [label="Populatie-σ bekend?"]
+	E1 [label="Z-toets"]
+	E2 [label="t-toets"]
+	D2 [label="Gepaard of onafhankelijk?"]
+	F1 [label="Gepaarde t-toets"]
+	F2 [label="Onafhankelijke t-toets"]
+	A -> B
+	B -> C1 [label="Eén"]
+	B -> C2 [label=Twee]
+	C1 -> D1
+	D1 -> E1 [label=Ja]
+	D1 -> E2 [label=Nee]
+	C2 -> D2
+	D2 -> F1 [label=Gepaard]
+	D2 -> F2 [label=Onafhankelijk]
+}
