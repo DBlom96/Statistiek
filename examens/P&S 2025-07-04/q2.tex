@@ -1,0 +1,47 @@
+\begin{enquestion}{15}{
+    In a military exercise, measurements are conducted regarding the time a certain communication signal needs to reach a control post.
+    These times $X_1, X_2, \ldots, X_n$ are assumed to be independent and identically distributed according to a uniform distribution over the interval $[\theta; \theta+1]$, where $\theta$ is an unknown real parameter.
+}
+
+    \subquestion{5}{Write down the likelihood function $L(x_{1}, x_{2}, \ldots, x_{n}; \theta)$ for the parameter $\theta$ in terms of a sample of realizations $x_1, x_2, \ldots, x_n$.} 
+    \ensolution{
+        The probability density function for a single observation $x$ is
+        \[
+            f(x; \theta) = \begin{cases} 1,& \quad \text{if } \theta \le x \le \theta+1 \\ 0, &\quad \text{otherwise.} \end{cases} \rubric{1}
+        \]
+
+        The likelihood function is therefore the product of ones and zeros, depending on the sample of observations $x_1, x_2, \ldots, x_n$.
+        In particular, we get 
+        \begin{align*}
+            L(x_{1}, x_{2}, \ldots, x_{n}; \theta)  &= f(x_{1}; \theta) \cdot  f(x_{2}; \theta) \ldots \cdot f(x_{n}; \theta) \\
+                                                    &=\mathrm{1}(\theta\le x_1\le\theta+1)\cdot \mathrm{1}(\theta\le x_2\le\theta+1)\cdot \ldots \cdot \mathrm{1}(\theta\le x_n\le\theta+1) \rubric{2}
+        \end{align*}
+        This means we can write the likelihood function as follows:
+        \begin{align*}
+            L(x_{1}, x_{2}, \ldots, x_{n}; \theta)  &= \begin{cases} 1,& \quad \text{if } \theta \le x_i \le \theta+1 \text{ for all } i=1,\ldots,n \\ 0, &\quad \text{otherwise.} \end{cases} \rubric{2}
+        \end{align*}
+    }
+
+    \subquestion{5}{Derive the maximum likelihood estimator (MLE) of the parameter $\theta$.}
+    
+    \ensolution{
+        In order for the likelihood function $L(x_1, x_2, \ldots, x_n; \theta)$ to take on the maximum value $1$, every observation $x_i$ needs to lie between $\theta \le x_i \le \theta+1$, hence we need that $\theta \le \min_i x_i$ and $\theta + 1 \ge \max_i x_i$.\rubric{2}
+        This means the likelihood is constant as long as $\theta$ is in the interval $[\max_i x_i - 1; \min_i x_i]$. \rubric{1}
+
+        Since the likelihood is constant on this interval, any $\theta$ in this range is a maximum likelihood estimator.
+        Commonly, the right endpoint is chosen, that is $\hat{\theta}_{MLE} = \min_i x_i$. \rubric{2}
+    }
+
+    \subquestion{5}{Show that the estimator $\overline{X} - \frac{1}{2} = \frac{(X_1+X_2+\ldots+X_n)}{n} - \frac{1}{2}$ is an unbiased estimator for the parameter $\theta$.}
+    \ensolution{
+        If $\hat{\theta} = \overline{X} - \frac{1}{2}$ is an unbiased estimator, it should hold that $E[\overline{X} - \frac{1}{2}] = \theta$.\rubric{1}
+
+        Notice that the expected value of a single measurement $X_i$ is equal to
+        \[
+            E[X_i] = \int_{-\infty}^{\infty} x \cdot f(x)\, dx = \int_\theta^{\theta+1} x \cdot 1\, dx = \theta + \frac{1}{2}. \rubric{1}
+        \]
+        Therefore, the expected value of the sample mean $\overline{X}$ is also equal to $\theta+\frac{1}{2}$.\rubric{1}
+        Rearranging the terms gives $E[\overline{X}] - \frac{1}{2} = E[\overline{X} - \frac{1}{2}]=\theta$.\rubric{1}
+        This shows that $\overline{X} - \frac{1}{2}$ is an unbiased estimator.\rubric{1}
+    }
+\end{enquestion}

@@ -1,4 +1,4 @@
-\newcommand{\folder}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\newcommand{\folder}{C:/Users/danny/Documents/GitHub/Statistiek}
 
 \RequirePackage{\folder/LaTeX/styles/config}
 
@@ -8,6 +8,16 @@
     \newpage
     \refstepcounter{question}
     \textbf{Opgave \arabic{question} (#1 punten)} {#2}
+    \begin{itemize}[label={}, left=1.5em, itemsep=1.5em]
+}{
+    \end{itemize}
+}
+
+\newenvironment{enquestion}[2] % #1 = points, #2 = question
+{%
+    \newpage
+    \refstepcounter{question}
+    \textbf{Problem \arabic{question} (#1 points)} {#2}
     \begin{itemize}[label={}, left=1.5em, itemsep=1.5em]
 }{
     \end{itemize}
@@ -36,6 +46,14 @@
 \newcommand{\solution}[1]{%
     \ifshowanswers
         \begin{tcolorbox}[breakable, colback=blue!5, colframe=blue!40, coltext=green!50!black, title=Uitwerking]
+            #1
+        \end{tcolorbox}
+    \fi
+}
+
+\newcommand{\ensolution}[1]{%
+    \ifshowanswers
+        \begin{tcolorbox}[breakable, colback=blue!5, colframe=blue!40, coltext=green!50!black, title=Solution]
             #1
         \end{tcolorbox}
     \fi

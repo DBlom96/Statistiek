@@ -1,0 +1,88 @@
+\begin{enquestion}{20}{
+    Over a six-month period, NATO cyber experts monitor cyberattacks targeting Estonia.
+    The following five types of attacks are recorded: phishing, malware injection, DDoS (Distributed Denial-of-Service), brute-force login attempts and supply chain exploits.
+    The Estonian team observed $500$ attacks in total.
+    Furthermore, the expected distribution of cyberattack types is assessed based on global intelligence reports:
+    \begin{center}
+        \begin{tabular}{ccc}
+            \toprule
+                {\bfseries Attack type} & {\bfseries Observed frequencies} & {\bfseries Expected proportion}\\
+            \midrule 
+                Phishing & $90$ & $20\%$ \\
+                Malware injection & $160$ & $30\%$ \\
+                DDoS & $120$ & $25\%$ \\
+                Brute-force & $70$ & $15\%$ \\
+                Supply chain exploits & $60$ & $10\%$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    The cyber team would like to test whether the observed distribution of the types of incoming cyber attacks differs significantly from the expected distribution
+}
+
+    \subquestion{3}{
+        Which kind of hypothesis test do we need to perform. State the null hypothesis $H_0$ and the alternative hypothesis $H_1$ of this test.
+    }
+    \ensolution{
+        Since we aim at testing whether the frequencies of a nominal variable follows a specific distribution, we need to perform a chi-square goodness-of-fit test.\rubric{1}
+        The null hypothesis $H_0$ and the alternative hypothesis $H_1$ of this test can be formulated as follows:
+        \begin{align*}
+            H_0&: \text{The distribution of attack types in Estonia follows} \\
+               & \qquad \qquad \text{the expected proportions (20\%, 30\%, 25\%, 15\%, 10\%).} \rubric{1} \\
+            H_1&: \text{The distribution of attack types in Estonia differs from} \\
+               & \qquad \qquad \text{the expected proportions (20\%, 30\%, 25\%, 15\%, 10\%).} \rubric{1}
+        \end{align*}
+    }
+
+    \subquestion{3}{Calculate the expected frequencies under the null hypothesis $H_0$.}
+    \ensolution{
+        We can evaluate the expected frequencies by taking the total of $500$ observations and calculating frequencies based on the percentages.\rubric{1}
+        \begin{center}
+            \begin{tabular}{ccc}
+                \toprule
+                    {\bfseries Attack type} & {\bfseries Observed frequencies} & {\bfseries Expected frequencies}\\
+                \midrule 
+                    Phishing & $90$ & $20\%\cdot 500 = 100$ \\
+                    Malware injection & $160$ & $30\% \cdot 500 = 150$ \\
+                    DDoS & $120$ & $25\% \cdot 500 = 125$ \\
+                    Brute-force & $70$ & $15\% \cdot 500 = 75$ \\
+                    Supply chain exploits & $60$ & $10\% \cdot 500 = 50$ \\
+                \midrule
+                    {\bfseries Total} & $500$ & $500$ \rubric{2}\\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        
+    }
+
+    \subquestion{9}{Perform the hypothesis test at a significance level $\alpha=0.05$, and compute the $p$-value.}
+    \ensolution{
+        The test statistic for a chi-squared goodness-of-fit test are given by
+        \[
+            X^2 = \sum \frac{(O_i - E_i)^2}{E_i} \rubric{1}
+        \]
+        where $O_i$ and $E_i$ are respectively the observed and expected frequencies for category $i=1,2,3,4,5$.
+
+        We can use the observed and expected frequencies to calculate the specific test statistic:
+        \begin{align*}
+            \chi^2  &= \frac{(90 - 100)^2}{100} + \frac{(160 - 150)^2}{150} + \frac{(120 - 125)^2}{125} + \frac{(70 - 75)^2}{75} + \frac{(60 - 50)^2}{50} \\
+                    &= \frac{100}{100} + \frac{100}{150} + \frac{25}{125} + \frac{25}{75} + \frac{100}{50} \\
+                    &= 1 + 0.6667 + 0.2 + 0.3333 + 2 \\
+                    &= 4.2 \rubric{4}
+        \end{align*}
+
+        Since we have five categories, the number of degrees of freedom is one less, so df$=4$.\rubric{1}
+        Using the graphical calculator, we can compute the $p$-value of the test-statistic $\chi^2$ as follows:
+        \begin{align*}
+            p = P(X^2 \ge \chi^2 = 4.2) = \chi^2\text{cdf}(\text{lower}=4.2; \text{upper}=10^{99}; \text{df}=4) \approx 0.3796 \rubric{3}
+        \end{align*}
+    }
+
+    \subquestion{5}{State a conclusion for the hypothesis test in the original context of the problem and interpret it using data from the table.}
+    \ensolution{
+        The $p$-value of the test statistic $\chi^2$ is larger than the significance level $\alpha$, since $0.3796 > 0.05$.\rubric{1}
+        This means that based on the given sample we decide to accept the null hypothesis $H_0$. \rubric{1}
+        There is insufficient reason to reject the claim that the distribution of cyber attacks follows the given expected distribution. \rubric{1}
+        
+        If we consider the table of observed and expected frequencies in subquestion (b), this makes sense as the observed and expected frequencies are relatively close to each other, and no surprisingly low or high values are observed.\rubric{2} 
+    }
+\end{enquestion}
