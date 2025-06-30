@@ -1,4 +1,4 @@
-\begin{enquestion}{15}{
+\begin{enquestion}{18}{
     In a test for the endurance of soldiers, research is conducted on the relationship between the load weight carried by the soldier ($X$) and the time needed for completing a 3 km speed march ($Y$).
     The following data were collected on 12 soldiers:
 
@@ -15,7 +15,7 @@
     The research team believes that there is a linear relationship between the weight of the vehicle and the deployment time.
 }
     
-    \subquestion{6}{Calculate the least-squares estimates $\hat{\beta}_0$ and $\hat{\beta}_{1}$ for the slope and intercept of the linear regression line $Y = \beta_0 + \beta_1 X$, where $Y$ is the deployment time, and $X$ is the vehicle weight.}
+    \subquestion{8}{Calculate the least-squares estimates $\hat{\beta}_0$ and $\hat{\beta}_{1}$ for the slope and intercept of the linear regression line $Y = \beta_0 + \beta_1 X$, where $Y$ is the deployment time, and $X$ is the vehicle weight.}
 
     \ensolution{
         We start by generating a table based on the data, the sample sums and means can then be used to calculate the least-squares estimated $\hat{\beta}_0$ and $\hat{\beta}_{1}$:
@@ -37,7 +37,7 @@
                     $15$ & $16.05$ & $240.75$ & $225$ & $257.6025$ \\
                     $25$ & $18.55$ & $463.75$ & $625$ & $344.1025$ \\
                 \midrule
-                    $\overline{X} = 20.8333$ & $\overline{Y} = 18.6517$ & $\overline{XY} = 396.5750$ & $\overline{X^2} = 465.8333$ & $\overline{Y^2} = 351.0376$ \rubric{3}\\
+                    $\overline{X} = 20.8333$ & $\overline{Y} = 18.6517$ & $\overline{XY} = 396.5750$ & $\overline{X^2} = 465.8333$ & $\overline{Y^2} = 351.0376$ \rubric{4}\\
                 \bottomrule
             \end{tabular}
         \end{center}
@@ -50,7 +50,7 @@
                     &= \frac{7.999}{31.806} = 0.2515 \\
             \hat{\beta}_0 &= \overline{Y} - \beta_1 \cdot \overline{X} \\
             &= 18.652 - 0.2515 \cdot 20.833 \\
-            &= 13.4124.\rubric{2}
+            &= 13.4124.\rubric{3}
         \end{align*}
         The equation of the regression line is thus equal to $Y = 13.4124 + 0.2515X$. \rubric{1}
     }
@@ -65,7 +65,7 @@
         Specifically, for every additional kilogram of load weight, the predicted time to complete the speed march increases by around a quarter of a minute (15 seconds).\rubric{1}
     }
 
-    \subquestion{5}{
+    \subquestion{6}{
         Calculate the correlation coefficient $R(X,Y)$ between the load weight and speed march time. 
         Based on the value of the correlation coefficient, what can you conclude about the strength and direction of the relationship between the two variables?
     }
@@ -75,7 +75,7 @@
             R(X, Y) &= \frac{\overline{X \cdot Y} - \overline{X} \cdot \overline{Y}}{\sqrt{(\overline{X}^2 - \overline{X^2}) \cdot (\overline{Y}^2 - \overline{Y^2})}} \\
             &= \frac{396.575 - 20.833 \cdot 18.652}{\sqrt{(20.833^2 - 465.833) \cdot (18.652^2 - 351.038)}} \\
             &= \frac{7.999}{10.014} \\
-            &\approx 0.7987.\rubric{3}
+            &\approx 0.7987.\rubric{4}
         \end{align*}
         
         The value of the correlation coefficient is positive and relative close to one, which suggests a strong positive correlation between load weight and speed march time.

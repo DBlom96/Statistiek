@@ -1,14 +1,12 @@
-\begin{enquestion}{15}{
+\begin{enquestion}{20}{
     A naval research unit investigates the signal strength (in decibels, dB) of sonar pulses reflected from a newly designed stealth submarine hull.
 
     Under standard conditions, the mean reflected signal strength from a conventional hull is $\mu_0 = 65$ dB, with unknown standard deviation $\sigma$ dB.
 
     To assess whether the new stealth design reduces detectability, a test series is conducted. Signal strength is measured in 10 independent trials with the following results (in dB):
-
     \[
     \{63.2,\ 64.1,\ 62.5,\ 63.8,\ 65.0,\ 64.7,\ 63.5,\ 62.9,\ 63.6,\ 64.2\}
     \]
-
     Assume the measurements follow a normal distribution. Use a significance level of $\alpha = 0.05$.
 }
 
@@ -16,9 +14,8 @@
     \ensolution{
         We can compute the sample mean and the sample variance as follows:
         \[
-            \overline{x} = \frac{x_{1}+x_{2}+\ldots+x_{n}}{n} = \frac{63.2+64.1+\ldots+64.2}{10} = \frac{637.5}{10} = 63.75
+            \overline{x} = \frac{x_{1}+x_{2}+\ldots+x_{n}}{n} = \frac{63.2+64.1+\ldots+64.2}{10} = \frac{637.5}{10} = 63.75 \rubric{1}
         \]
-        \rubric{1}
         \begin{align*}
             s^2     &= \frac{1}{n-1}\sum_{i=1}^n (x_i - \overline{x})^2 \\
                     &= \frac{1}{10-1} \cdot \left( (63.2-63.75)^2 + (64.1-63.75)^2 + \ldots + (64.2-63.75)^2\right) \\
@@ -38,10 +35,10 @@
     \ensolution{
         Since we aim at testing whether the mean reflected signal strength is still $\mu_0 = 65$ or if it has decreased, the null hypothesis $H_0$ and the alternative hypothesis $H_1$ of this test can be formulated as follows:
         \begin{align*}
-            H_0&: \mu = 65 \quad \text (no change in reflectivity) \rubric{1} \\
+            H_0&: \mu = 65 \quad \text{(no change in reflectivity)} \rubric{1} \\
             H_1&: \mu < 65 \quad \text{(stealth hull reduces reflectivity)} \rubric{1}
         \end{align*}
-        This is a \textbf{one-sided} left-tailed test.
+        This is a \textbf{one-sided} left-tailed test. \rubric{1}
     }   
     \subquestion{9}{Perform the hypothesis test for the mean reflected signal strength $\mu$ based on the critical region.}
 
@@ -50,11 +47,11 @@
         This $t$-distribution has $\text{df}=n-1=9$ degrees of freedom.\rubric{1}
 
         We want to compute a critical region for the population mean $\mu$ with significance level $\alpha = 0.05$.
-        Since the hypothesis is left-tailed, the critical region is of the form $(-\infty, g]$, where \rubric{1}
         The $t$-value is equal to
         \[
             t = \invt(\text{area}=1 - \alpha; \text{df}=n-1) = \invt(\text{area}=0.95; \text{df}=9) = 1.8331. \rubric{2}
         \]
+        Since the hypothesis is left-tailed, the critical region is of the form $(-\infty, g]$. \rubric{1}
         In particular, we can compute the boundary $g$ as follows
         \begin{align*}
             g   &= \mu - t \cdot \frac{s}{\sqrt{n}} \\
@@ -63,7 +60,8 @@
         \end{align*}  
         
         The critical region is therefore be given by $(-\infty; 64.5483]$.\rubric{1}
-        The sample mean $\overline{x}=63.75$ lies in the critical region, hence we reject the null hypothesis $H_0$.\rubric{1}
+        The sample mean (test statistic) $\overline{x}=63.75$ lies in the critical region, hence we reject the null hypothesis $H_0$.
+        Based on the selected sample, there is sufficient evidence to believe that the new stealth design indeed reduces detectability.\rubric{1}
         }
 
     
@@ -81,5 +79,5 @@
         \end{align*}
 
         So, $\beta \approx 0.5757$: a $57,57\%$ chance of accepting the null hypothesis while it is incorrect in reality. \rubric{1}
-=    }
+    }
     \end{enquestion}
