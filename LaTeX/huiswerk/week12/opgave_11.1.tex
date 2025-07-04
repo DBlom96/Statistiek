@@ -11,5 +11,44 @@
     Met een verschiltoets gaan we bepalen of er een significante verbetering is opgetreden.
 }
 \answer{
-    
+    Laat $X$ en $Y$ de kansvariabelen zijn die het niveau van luchtverontreiniging meet op een willekeurige dag in respectievelijk februari 2017 en februari 2018.
+    Van deze kansvariabelen zijn zowel de verwachtingswaarden als de standaardafwijkingen onbekend.
+
+    Om te bepalen of er een significante verbetering is opgetreden, moeten we kijken of de gemiddelde luchtverontreiniging is gedaald in 2018.
+    We voeren hiervoor een hypothesetoets uit met de volgende nulhypothese $H_0$ en de alternatieve hypothese $H_1$:
+    \[
+        H_0: \mu_X \le \mu_Y \text{ versus } H_1: \mu_X > \mu_Y.
+    \]
+
+    Omdat de standaardafwijkingen onbekend zijn, moeten we werken met een onafhankelijke $t$-toets met behulp van de verschilvariabele $V$.
+    Voor deze verschilvariabele $V$ geldt dat
+    \begin{align*}
+        \mu_V   &= \mu_X - \mu_Y \\
+        s_V     &= \sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}.
+    \end{align*}
+
+    We veronderstellen dat beide steekproeven te beschouwen zijn als trekking uit (normale) verdelingen met dezelfde variantie, dus kunnen we gebruik maken van de ``pooled variance'':
+    \[
+        s_P^2 = \frac{(n-1) s_X^2 + (m-1) s_Y^2}{n-1+m-1} = \frac{19 \cdot 17,2 + 19 \cdot 15,9}{38} = 16,55.
+    \]
+
+    Onder de nulhypothese $H_0$ (uitgaande van het extreme geval $\mu_X = \mu_Y$) geldt dus voor de verschilvariabele $V$ dat
+    \begin{align*}
+        \mu_V   &= \mu_X - \mu_Y = 0 \\
+        s_V     &= \sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}} = \sqrt{\frac{16,55}{20} + \frac{16,55}{20}} \approx 1,2865
+    \end{align*}
+
+    De $t$-waarde bijbehorende bij de uitkomst $v = \overline{x} - \overline{y} = 164,6 - 143,2 = 21,4$ is gelijk aan
+    \[
+        t = \frac{v - \mu_V}{s_V} = \frac{21,4 - 0}{1,2865} = 16,6347.
+    \]
+
+    Merk op dat deze $t$-waarde uit een $t$-verdeling komt met $\text{df}=n-m+2=38$ vrijheidsgraden.
+
+    Aangezien we rechtszijdig toetsen, kunnen we de $p$-waarde als volgt berekenen:
+    \begin{align*}
+        p = \tcdf(\text{lower}=16,63; \text{upper}=10^{99}; \text{df}=38) \approx 2,4554 \cdot 10^{-19}.
+    \end{align*}
+    De $p$-waarde is extreem klein (kleiner dan welke vaakgebruikte keuze voor $\alpha$ dan ook), dus verwerpen we de nulhypothese.
+    Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in 2018.
 }

@@ -15,5 +15,64 @@
     Voer de toets op twee manieren uit en geef aan van welke veronderstellingen men is uitgegaan bij de toetsen (vergelijk opgave 11.12).
 }
 \answer{
+    Laat $X$ en $Y$ de kansvariabelen zijn die het aantal verkochte flessen wasmiddel telt respectievelijk v\'o\'or en na de reclamecampagne.
+    We kunnen ervan uit dat deze aantallen \emph{gepaard} zijn
+    \begin{align*}
+        X &\sim N(\mu_X = ?; \sigma_X = ?) \\
+        Y &\sim N(\mu_Y = ?; \sigma_Y = ?). 
+    \end{align*}
+
+    Hierdoor kunnen we de gepaarde uitkomsten samennemen tot een nieuwe variabele gebaseerd op het verschil:
+    \begin{center}
+        \begin{tabular}{ccccccc}
+            \toprule
+                {\bfseries Filiaal} & {\bfseries A} & {\bfseries B} & {\bfseries C} & {\bfseries D} & {\bfseries E} & {\bfseries F} \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5} \cmidrule{6-6} \cmidrule{7-7} 
+                Aantal voor ($x$) & $320$ & $260$ & $440$ & $400$ & $380$ & $310$ \\
+                Aantal na ($y$) & $420$ & $380$ & $520$ & $490$ & $490$ & $400$ \\
+            \midrule
+                Verschil ($v = y - x$) & $100$ & $120$ & $80$ & $90$ & $110$ & $90$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    We gaan toetsen of het gemiddelde van $V$ gelijk is aan $0$, omdat dit zou duiden op $\mu_X = \mu_Y$.
+    Hiervoor defini\"eren we allereerst de nulhypothese $H_0$ en alternatieve hypothese $H_1$:
+    \[
+        H_0: \mu_V = 0 \text{ versus } H_1: \mu_V > 0 \text{(significant hogere aantallen na reclamecampagne)}.
+    \]
+    Gegeven is het significantieniveau $\alpha = 0,05$ en de steekproefgegevens in bovenstaande tabel.
+    Het steekproefgemiddelde van de verschillen is gelijk aan
+    \[
+        \overline{v} = \frac{v_1 + v_2 + \ldots + v_6}{6} = \frac{100 + 120 + \ldots + 90}{6} \approx 98,3333
+    \]
+    De steekproefvariantie $s_V^2$ berekenen we als volgt:
+    \[
+        s_V^2 = \frac{(v_1-\overline{v})^2 + \ldots + (v_n-\overline{v})^2}{n-1} = \frac{(100-98,3333)^2 + \ldots + (90-98,3333)^2}{5} = 216,6667 \\
+    \]
+
+    Neem aan dat $V$ normaal verdeeld is $\mu_V = 0$ en met onbekende standaardafwijking $\sigma_v$.  
+    Hierdoor moeten we gebruik maken van de $t$-verdeling met $\text{df}=n-1 = 5$ vrijheidsgraden. 
+    Onder de nulhypothese is de toetsingsgrootheid van deze toets gelijk aan
+    \[
+        t = \frac{\overline{v} - \mu_V}{s_V} = \frac{98,3333 - 0}{\sqrt{216,6667}} \approx 6,6804.
+    \]
+
+    {\bfseries Methode 1 (kritiek gebied):}
+
+    Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ bepaald kan worden met de $t$-verdeling.
+    \begin{align*}
+        g_2 &= \invt(\text{opp}=1-\alpha = 0,95; \text{df}=5) \approx 2,0150
+    \end{align*}
+    De berekende $t \approx 6,6804$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de reclamecampagne.
+
+    {\bfseries Methode 2 ($p$-waarde):}
     
+    Omdat we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $6,6804$ en vergelijken deze met $\alpha/2 = 0,025$.
+    \begin{align*}
+        p &= \tcdf(\text{lower}=6,6804; \text{upper}=10^{99}; \text{df}=5) \approx 5,6789 \cdot 10^{-4}.
+    \end{align*}
+    De $p$-waarde is (veel) kleiner dan het significantieniveau $\alpha$, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de reclamecampagne.
 }

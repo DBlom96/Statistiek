@@ -17,7 +17,7 @@
             \toprule
                 {\bfseries Filiaal} & {\bfseries P} & {\bfseries Q} & {\bfseries R} & {\bfseries S} & {\bfseries T} & {\bfseries U} & {\bfseries V} &{\bfseries W} & {\bfseries X} & {\bfseries Y} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5} \cmidrule{6-6} \cmidrule{7-7} \cmidrule{8-8} \cmidrule{9-9} \cmidrule{10-10} \cmidrule{11-11}
-                {\bfseries Aantal flessen} & $400$ & $3600$ & $410$ & $500$ & $540$ & $380$ & $490$ & $520$ & $420$ & $480$ \\
+                {\bfseries Aantal flessen} & $400$ & $360$ & $410$ & $500$ & $540$ & $380$ & $490$ & $520$ & $420$ & $480$ \\
             \bottomrule
         \end{tabular}
     \end{center}
@@ -25,5 +25,109 @@
     (Ga ervan uit dat de waargenomen aantallen mogen worden beschouwd als trekkingen uit normale verdelingen.)
 }
 \answer{
+    Laat $X$ en $Y$ de kansvariabelen zijn die het aantal verkochte flessen afwasmiddel telt respectievelijk v\'o\'or en na de intensieve reclamecampagne.
+    We mogen ervan uitgaan dat deze aantallen trekkingen zijn uit normale verdelingen, oftewel
+    \begin{align*}
+        X &\sim N(\mu_X = ?; \sigma_X = ?) \\
+        Y &\sim N(\mu_Y = ?; \sigma_Y = ?). 
+    \end{align*}
+    Merk op dat we niet weten of de varianties gelijk zijn, dus hiervoor moeten we eerst een $F$-toets uitvoeren.
+
+    {\bfseries \boldmath$F$-toets}\\
+    We gaan toetsen of de varianties van $X$ en $Y$ gelijk zijn.
+    Hiervoor defini\"eren we allereerst de nulhypothese $H_0$ en alternatieve hypothese $H_1$:
+    \[
+        H_0: \sigma_X^2 = \sigma_Y^2 \text{ versus } H_1: \sigma_X^2 \neq \sigma_Y^2.
+    \]
+    We gaan opnieuw uit van een significantieniveau $\alpha = 0,05$ en de steekproefgegevens in de bovenstaande tabellen.
+    We berekenen allereerst de steekproefgemiddeldes:
+    \begin{align*}
+        \overline{x} &= \frac{x_1+x_2+\ldots+x_n}{n} = \frac{320 + 260 + \ldots + 300}{6} = 350 \\
+        \overline{y} &= \frac{y_1+y_2+\ldots+y_m}{m} = \frac{400 + 360 + \ldots + 480}{10} = 450 \\
+    \end{align*}
+    Met behulp van de steekproefgemiddeldes kunnen we nu de steekproefvarianties bepalen.
+    \begin{align*}
+        s_X^2 &= \frac{(x_1-\overline{x})^2 + \ldots + (x_n-\overline{x})^2}{n-1} = \frac{(320-350)^2 + \ldots + (300-350)^2}{5} = 4600 \\
+        s_Y^2 &= \frac{(y_1-\overline{y})^2 + \ldots + (y_m-\overline{y})^2}{m-1} = \frac{(400-450)^2 + \ldots + (480-450)^2}{9} = 4000 \\
+    \end{align*}
     
+    De toetsingsgrootheid van de $F$-toets is gelijk aan
+    \[
+        F = \frac{S_X^2}{S_Y^2}
+    \]
+    en volgt de $F$-verdeling met respectievelijk $\text{df1}=n-1=5$ en $\text{df2}=m-1=9$ vrijheidsgraden.
+    In dit geval hebben we een toetsingsgrootheid van
+    \[
+        f = \frac{s_X^2}{s_Y^2} = \frac{4600}{4000} = 1,15
+    \]
+
+    {\bfseries Methode 1 (kritiek gebied):} \\
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $F(5,9)$-verdeling.
+    \begin{align*}
+        &\fcdf(\text{lower}=0; \text{upper}=g_1; \text{df1}=5; \text{df2}=9)=\alpha/2=0,025 \rightarrow g_1 \approx 0,1497\\
+        &\fcdf(\text{lower}=g_2; \text{upper}=10^{99}; \text{df1}=5; \text{df2}=9)=\alpha/2=0,025 \rightarrow g_2 \approx 4,4844
+    \end{align*}
+    De berekende $f = 1,15$ ligt dus niet in het kritieke gebied, dus we accepteren de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de varianties niet gelijk zouden zijn aan elkaar.
+    
+    {\bfseries Methode 2 ($p$-waarde):} \\
+    De berekende $f = 1,15$ ligt boven de $1$, dus we berekenen de $p$-waarde als de rechteroverschrijdingskans van de waarde $1,15$ en vergelijken deze met $\alpha/2 = 0,025$.
+    \begin{align*}
+        p &= \normalcdf(\text{lower}=1,15; \text{upper}=10^{99}; \text{df1}=5; \text{df2}=9) \approx 0,4020.
+    \end{align*}
+    De $p$-waarde is groter dan het significantieniveau $\alpha$, dus we accepteren de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de varianties niet gelijk zouden zijn aan elkaar.
+
+    {\bfseries Onafhankelijke \boldmath$t$-toets (gelijke variantie)}\\
+    Door het toetsresultaat van de $F$-toets mogen we uitgaande van gelijke varianties, oftewel $\sigma^2 = \sigma_X^2 = \sigma_Y^2$.
+    We gaan toetsen of de gemiddeldes van $X$ en $Y$ gelijk zijn.
+    Hiervoor defini\"eren we allereerst de nulhypothese $H_0$ en alternatieve hypothese $H_1$:
+    \[
+        H_0: \mu_X = \mu_Y \text{ versus } H_1: \mu_X = \mu_Y.
+    \]
+    Gegeven is het significantieniveau $\alpha = 0,05$ en de steekproefgegevens hierboven berekend:
+    \begin{align*}
+        \overline{x} = 350 \quad s_X^2 = 4600 \quad n = 6 \\
+        \overline{y} = 450 \quad s_Y^2 = 4000 \quad m = 10 \\
+    \end{align*}
+
+    Als toetsingsgrootheid kijken we naar de verschilvariabele $V = \overline{X} - \overline{Y}$.
+    Deze verschilvariabele heeft een verwachtingswaarde $\mu_V = \mu_X - \mu_Y$.
+    Omdat we mogen uitgaan van gelijke varianties, kunnen we de standaardafwijking $\sigma_V$ van $V$ schatten met behulp van de ``pooled variance'':
+    \begin{align*}
+        s_P^2 = \frac{(n-1)s_X^2+(m-1)s_Y^2}{n-1+m-1} = \frac{6\cdot 4600 + 10 \cdot 4000}{14} \approx 4828,5714
+    \end{align*}
+    Een schatting van $\sigma_V$ berekenen we dan als volgt:
+    \[
+        s_V = \sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}} = \sqrt{\frac{4828,5714}{6} + \frac{4828,5714}{10}}\approx 35,8834.
+    \]
+
+    Het geobserveerde verschil is $v = \overline{x} - \overline{y} = 350 - 450 = -100$.
+    Onder de nulhypothese geldt $\mu_1 = \mu_2$, oftewel de verschilvariabele heeft verwachtingswaarde $\mu_V = \mu_1 - \mu_2 = 0$.
+
+    De bijbehorende $t$-waarde berekenen we dan als volgt:
+    \[
+        t = \frac{v - \mu_V}{s_V} = \frac{-100 - 0}{35,8834} \approx -2,7868.
+    \]
+
+    {\bfseries Methode 1 (kritiek gebied):}
+    
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $t$-verdeling.
+    Omdat we met de pooled variance werken, is het aantal vrijheidsgraden gelijk aan $\text{df}=n+m-2=14$.
+    \begin{align*}
+        g_1 &= \invt(\text{opp}=\alpha/2 = 0,025; \text{df}=14) \approx-2,1448 \\
+        g_2 &= \invt(\text{opp}=1-\alpha/2 = 0,975; \text{df}=14) \approx 2,1448
+    \end{align*}
+    De berekende $t \approx -2,7868$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de intensieve reclamecampagne.
+
+    {\bfseries Methode 2 ($p$-waarde):}
+
+    De berekende $t \approx -2,7868$ ligt links van het gemiddelde $\mu_V = 0$.
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de linkeroverschrijdingskans van de waarde $-2,7868$ en vergelijken deze met $\alpha/2 = 0,025$.
+    \begin{align*}
+        p &= \tcdf(\text{lower}=-10^{99}; \text{upper}=-2,7868; \text{df}=14) \approx 0,0073.
+    \end{align*}
+    De $p$-waarde is kleiner dan $\alpha/2$, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de intensieve reclamecampagne.
 }

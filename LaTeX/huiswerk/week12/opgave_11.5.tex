@@ -12,8 +12,70 @@
         \end{tabular}
     \end{center}
     Veronderstel dat beide inkomensverdelingen mogen worden beschouwd als normale verdelingen met dezelfde onbekende variantie.
-    Toets of $\mu_1 = \mu_2$ (kies $\alpha = 0,05$).
+    Toets of $\mu_X = \mu_Y$ (kies $\alpha = 0,05$).
 }
 \answer{
+   We hebben te maken met twee normaal verdeelde kansvariabelen 
+    \begin{align*}
+        X &\sim N(\mu_X = ?; \sigma_X = ?) \\
+        Y &\sim N(\mu_Y = ?; \sigma_Y = ?). 
+    \end{align*}
+
+    Om te toetsen of de gemiddeldes van beide kansvariabelen gelijk zijn, gebruiken we de volgende nulhypothese $H_0$ en alternatieve hypothese $H_1$:
+    \[
+        H_0: \mu_X = \mu_Y \text{ versus } H_1: \mu_X \neq \mu_Y.
+    \]
+    Verder is het significantieniveau $\alpha = 0,05$ gegeven.
     
+    In de tabel zijn data geven voor beide groepen.
+    We berekenen allereerst de steekproefgemiddeldes:
+    \begin{align*}
+        \overline{x} &= \frac{x_1+x_2+\ldots+x_n}{n} = \frac{40 + 45 + \ldots + 43}{12} = 40 \\
+        \overline{y} &= \frac{y_1+y_2+\ldots+y_m}{m} = \frac{25 + 28 + \ldots + 22}{7} = 30 \\
+    \end{align*}
+    Met behulp van de steekproefgemiddeldes kunnen we nu de steekproefvarianties bepalen.
+    \begin{align*}
+        s_X^2 &= \frac{(x_1-\overline{x})^2 + \ldots + (x_n-\overline{x})^2}{n-1} = \frac{(40-40)^2 + \ldots + (43-40)^2}{11} = 30,2 \\
+        s_Y^2 &= \frac{(y_1-\overline{y})^2 + \ldots + (y_m-\overline{y})^2}{m-1} = \frac{(25-30)^2 + \ldots + (22-30)^2}{6} = 31 \\
+    \end{align*}
+    
+    Als toetsingsgrootheid kijken we naar de verschilvariabele $V = \overline{X} - \overline{Y}$.
+    Deze verschilvariabele heeft een verwachtingswaarde $\mu_V = \mu_X - \mu_Y$.
+    Omdat we mogen uitgaan van gelijke varianties, kunnen we de standaardafwijking $\sigma_V$ van $V$ schatten met behulp van de ``pooled variance'':
+    \begin{align*}
+        s_P^2 = \frac{(n-1)s_X^2+(m-1)s_Y^2}{n-1+m-1} = \frac{11\cdot 30,2 + 6 \cdot 31}{17} = 30,4824.
+    \end{align*}
+    Een schatting van $\sigma_V$ berekenen we dan als volgt:
+    \[
+        s_V = \sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}} = \sqrt{\frac{30,4824}{12} + \frac{30,4824}{7}}\approx 2,6258
+    \]
+
+    Het geobserveerde verschil is $v = \overline{x} - \overline{y} = 40 - 30 = 10$.
+    Onder de nulhypothese geldt $\mu_X = \mu_Y$, oftewel de verschilvariabele heeft verwachtingswaarde $\mu_V = \mu_X - \mu_Y = 0$.
+
+    De bijbehorende $t$-waarde berekenen we dan als volgt:
+    \[
+        t = \frac{v - \mu_V}{s_V} = \frac{10 - 0}{2,6258} \approx 3,8084.
+    \]
+
+    {\bfseries Methode 1 (kritiek gebied):}
+    
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen bepaald kunnen worden met de $t$-verdeling.
+    Omdat we met de pooled variance werken, is het aantal vrijheidsgraden gelijk aan $\text{df}=n+m-2=17$.
+    \begin{align*}
+        g_1 &= \invt(\text{opp}=\alpha/2=0,025; \text{df}=17) \approx -2,1098 \\
+        g_2 &= \invt(\text{opp}=1-\alpha/2=0,975; \text{df}=17) \approx 2,1098 \\
+    \end{align*}
+    De berekende $t \approx 3,8084$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het gemiddelde jaarsalaris significant verschilt tussen beide groepen werknemers.
+
+    {\bfseries Methode 2 ($p$-waarde):}
+
+    De berekende $t \approx 3,8084$ ligt rechts van het gemiddelde $\mu_V = 0$.
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3,8084$ en vergelijken deze met $\alpha/2 = 0,025$.
+    \begin{align*}
+        p &= \normalcdf(\text{lower}=3,8084; \text{upper}=10^{99}; \text{df}=17) \approx 7,0254 \cdot 10^{-4}.
+    \end{align*}
+    De $p$-waarde is (veel) kleiner dan $\alpha/2$, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het gemiddelde jaarsalaris significant verschilt tussen beide groepen werknemers.
 }

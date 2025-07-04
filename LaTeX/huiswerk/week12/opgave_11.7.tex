@@ -6,5 +6,58 @@
     Hierbij mag men aannemen dat de steekproeven afkomstig waren uit twee normale verdelingen met dezelfde variantie.
 }
 \answer{
+    We hebben te maken met twee normaal verdeelde kansvariabelen die het aantal microgram schadelijke stof per $m^3$ meet, respectievelijk in de omgeving van een bepaalde fabriek en in een grote stad.
+    \begin{align*}
+        X &\sim N(\mu_X = ?; \sigma_X = ?) \\
+        Y &\sim N(\mu_Y = ?; \sigma_Y = ?). 
+    \end{align*}
+
+    Om te toetsen of de gemiddeldes van beide kansvariabelen gelijk zijn, gebruiken we de volgende nulhypothese $H_0$ en alternatieve hypothese $H_1$:
+    \[
+        H_0: \mu_X = \mu_Y \text{ versus } H_1: \mu_X > \mu_Y \text{ (hogere luchtvervuiling rondom fabriek)}.
+    \]
+    Verder is het significantieniveau $\alpha = 0,01$ gegeven.
+    De steekproefdata uit de vraag kunnen als volgt worden samengevat:
+    \begin{align*}
+        \overline{x} &= 2,26 \quad s_X = 0,56 \quad n = 8 \\
+        \overline{y} &= 1,54 \quad s_Y = 0,42 \quad m = 10
+    \end{align*}
     
+    Als toetsingsgrootheid kijken we naar de verschilvariabele $V = \overline{X} - \overline{Y}$.
+    Deze verschilvariabele heeft een verwachtingswaarde $\mu_V = \mu_X - \mu_Y$.
+    Omdat we mogen uitgaan van gelijke varianties, kunnen we de standaardafwijking $\sigma_V$ van $V$ schatten met behulp van de ``pooled variance'':
+    \begin{align*}
+        s_P^2 = \frac{(n-1)s_X^2+(m-1)s_Y^2}{n-1+m-1} = \frac{7\cdot 0,56^2 + 9 \cdot 0,42^2}{16} \approx 0,2364.
+    \end{align*}
+    Een schatting van $\sigma_V$ berekenen we dan als volgt:
+    \[
+        s_V = \sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}} = \sqrt{\frac{0,2364}{8} + \frac{0,2364}{10}}\approx 0,2306.
+    \]
+
+    Het geobserveerde verschil is $v = \overline{x} - \overline{y} = 2,26 - 1,54 = 0,72$.
+    Onder de nulhypothese geldt $\mu_1 = \mu_2$, oftewel de verschilvariabele heeft verwachtingswaarde $\mu_V = \mu_1 - \mu_2 = 0$.
+
+    De bijbehorende $t$-waarde berekenen we dan als volgt:
+    \[
+        t = \frac{v - \mu_V}{s_V} = \frac{0,72 - 0}{0,2306} \approx 3,1217.
+    \]
+
+    {\bfseries Methode 1 (kritiek gebied):}
+    
+    Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ bepaald kan worden met de $t$-verdeling.
+    Omdat we met de pooled variance werken, is het aantal vrijheidsgraden gelijk aan df$=n+m-2=16$.
+    \begin{align*}
+        g &= \invt(\text{opp}=1-\alpha = 0,99; \text{df}=16) \approx 2,5835
+    \end{align*}
+    De berekende $t \approx 3,1217$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde luchtvervuiling significant hoger is in de omgeving van de fabriek.
+
+    {\bfseries Methode 2 ($p$-waarde):}
+
+    Omdat we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3,1217$ en vergelijken deze met $\alpha = 0,01$.
+    \begin{align*}
+        p &= \normalcdf(\text{lower}=3,1217; \text{upper}=10^{99}; \text{df}=16) \approx 0,0033.
+    \end{align*}
+    De $p$-waarde is kleiner dan het significantieniveau $\alpha$, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde luchtvervuiling significant hoger is in de omgeving van de fabriek.
 }
