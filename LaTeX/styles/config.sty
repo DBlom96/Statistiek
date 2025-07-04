@@ -11,6 +11,7 @@
 \usepackage{url}
 \usepackage{charter}                
 \usepackage[defaultsans]{cantarell} % cantarell fonts
+\usepackage{gensymb} % degree symbol
 
 % MATHEMATICS
 \usepackage{amsmath, amssymb, amsfonts, amsthm, eurosym}
@@ -73,7 +74,7 @@
 % Define answer formatting
 \newcommand{\answer}[1]{%
   \ifprintanswers
-    \begin{tcolorbox}[breakable, colback=blue!5, colframe=blue!40, title=Uitwerking]
+    \begin{tcolorbox}[parbox=false, breakable, colback=blue!5, colframe=blue!40, title=Uitwerking]
       #1
     \end{tcolorbox}%
   \else
