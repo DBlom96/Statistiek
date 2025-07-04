@@ -4,5 +4,60 @@
     (Kies $\alpha=0,05$.)
 }
 \answer{
+    Hierdoor kunnen we de gepaarde uitkomsten samennemen tot een nieuwe variabele gebaseerd op het verschil:
+    \begin{center}
+        \begin{tabular}{ccccccc}
+            \toprule
+                {\bfseries Filiaal} & {\bfseries A} & {\bfseries B} & {\bfseries C} & {\bfseries D} & {\bfseries E} & {\bfseries F} \\
+            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5} \cmidrule{6-6} \cmidrule{7-7} 
+                Aantal voor ($x$) & $320$ & $260$ & $440$ & $400$ & $380$ & $310$ \\
+                Aantal na ($y$) & $420$ & $380$ & $520$ & $490$ & $490$ & $400$ \\
+            \midrule
+                Verschil ($v = y - x$) & $100$ & $120$ & $80$ & $90$ & $110$ & $90$ \\
+                Verschil $\%$ ($pv=\frac{v}{x}\cdot 100\%$) & $31,25$ & $46,1538$ & $18,1818$ & $22,5$ & $28,9474$ & $29,0323$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    We gaan toetsen of het gemiddelde van $PV$ gelijk is aan $0$, omdat dit zou duiden op $\mu_X = \mu_Y$.
+    Hiervoor defini\"eren we allereerst de nulhypothese $H_0$ en alternatieve hypothese $H_1$:
+    \[
+        H_0: \mu_{PV} = 0 \text{ versus } H_1: \mu_{PV} > 0 \text{(significant hogere aantallen na reclamecampagne)}.
+    \]
+    Gegeven is het significantieniveau $\alpha = 0,05$ en de steekproefgegevens in bovenstaande tabel.
+    Het steekproefgemiddelde van de verschillen is gelijk aan
+    \[
+        \overline{pv} = \frac{{pv}_1 + {pv}_2 + \ldots + {pv}_6}{6} = \frac{31,25 + 46,1538 + \ldots + 29,0323}{6} \approx 29,3442
+    \]
+    De steekproefvariantie $s_{PV}^2$ berekenen we als volgt:
+    \begin{align*}
+    s_{PV}^2    &= \frac{(v_1-\overline{v})^2 + \ldots + (v_n-\overline{v})^2}{n-1} \\
+                &= \frac{(31,25-29,3442)^2 + \ldots + (29,0323-29,3442)^2}{5} \\
+                &\approx 91,5786
+    \end{align*}
+        
+    Neem aan dat $PV$ normaal verdeeld is $\mu_{PV} = 0$ en met onbekende standaardafwijking $\sigma_{PV}$.  
+    Hierdoor moeten we gebruik maken van de $t$-verdeling met $\text{df}=n-1 = 5$ vrijheidsgraden. 
+    Onder de nulhypothese is de toetsingsgrootheid van deze toets gelijk aan
+    \[
+        t = \frac{\overline{pv} - \mu_{PV}}{s_{PV}} = \frac{29,3442 - 0}{\sqrt{91,5786}} \approx 3,0664
+    \]
+
+    {\bfseries Methode 1 (kritiek gebied):}
     
+    Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ bepaald kan worden met de $t$-verdeling.
+    \begin{align*}
+        g &= \invt(\text{opp}=1-\alpha = 0,95; \text{df}=5) \approx 2,0150
+    \end{align*}
+    De berekende $t \approx 3,0664$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de reclamecampagne.
+
+    {\bfseries Methode 2 ($p$-waarde):}
+
+    Omdat we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $6,6804$ en vergelijken deze met $\alpha/2 = 0,025$.
+    \begin{align*}
+        p &= \tcdf(\text{lower}=3,0664; \text{upper}=10^{99}; \text{df}=5) \approx 0,0139.
+    \end{align*}
+    De $p$-waarde is kleiner dan het significantieniveau $\alpha$, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de reclamecampagne.
 }

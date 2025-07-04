@@ -11,13 +11,28 @@
     \item $1,25$.
 \end{enumerate}
 \answer{
-    We hebben te maken met twee normaal verdeelde kansvariabelen $X_1 \sim N(\mu_1 = ?; \sigma_1 = ?)$ en $X_2 \sim N(\mu_2 = ?; \sigma_2 = ?)$ waarvan we willen toetsen of ze dezelfde standaardafwijking hebben.
-    In andere woorden, we willen toetsen met $H_0: \sigma_1^2 = \sigma_2^2$ tegen $H_1: \sigma_1^2 \neq \sigma_2^2$ .
-
-    Dit kunnen we doen met behulp van een $F$-toets.
-    We hebben voor beide kansvariabelen een schatting $s_1^2 = 240$ en $s_2^2 = 160$ bepaald van de variantie, op basis van steekproeven van grootte respectievelijk $n=12$ en $m=10$.
-    De bijbehorende toetsingsgrootheid is $F = \frac{S_1^2}{S_2^2}$ volgt de $F(12, 10)$-verdeling.
-    De geobserveerde toetsingsgrootheid is $f = \frac{s_1^2}{s_2^2} = \frac{240}{160} = 1,5$.
+    We hebben te maken met twee normaal verdeelde kansvariabelen 
+    \begin{align*}
+        X_1 &\sim N(\mu_1 = ?; \sigma_1 = ?) \\
+        X_2 &\sim N(\mu_2 = ?; \sigma_2 = ?). 
+    \end{align*}
+    Van deze twee kansvariabelen willen we toetsen of de varianties gelijk zijn, oftewel dat geldt $\sigma^2 = \sigma_1^2 = \sigma_2^2$.
+    Hiervoor moeten we een $F$-toets uitvoeren.
+    
+    Voor een $F$-toets werken we met de volgende nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
+    \[
+        H_0: \sigma_1^2 = \sigma_2^2 \text{ versus } H_1: \sigma_1^2 \neq \sigma_2^2.
+    \]
+    Verder hebben we voor beide kansvariabelen twee steekproeven van respectievelijk grootte $n=12$ en $m=10$ getrokken om de varianties te schatten, met als resultaat $s_1^2 = 240$ en $s_2^2 = 160$.
+    De toetsingsgrootheid $F$ is gelijk aan
+    \[
+        F = \frac{S_1^2}{S_2^2}
+    \]
+    en volgt onder $H_0$ de $F(n-1, m-1)$-verdeling.
+    De geobserveerde toetsingsgrootheid is in dit geval gelijk aan
+    \[
+        f = \frac{s_1^2}{s_2^2} = \frac{240}{160} = 1,50.
+    \]
 
     Het juiste antwoord is dus (b).
 }
