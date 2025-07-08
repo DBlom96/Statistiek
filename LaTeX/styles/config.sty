@@ -11,13 +11,14 @@
 \usepackage{url}
 \usepackage{charter}                
 \usepackage[defaultsans]{cantarell} % cantarell fonts
-\usepackage{gensymb} % degree symbol
+\usepackage{parskip}
 
 % MATHEMATICS
 \usepackage{amsmath, amssymb, amsfonts, amsthm, eurosym}
 \usepackage{calc}
 \usepackage{ifthen}
 \usepackage{mathtools}
+\usepackage{siunitx}
 
 % TABLES, ARRAYS AND MATRICES
 \usepackage{array}
@@ -57,7 +58,7 @@
 \usepackage{marginnote}
 
 % MISCELLANEOUS
-\usepackage{parskip}
+% \usepackage{parskip}
 
 % Counters
 \newcounter{question}
@@ -77,7 +78,16 @@
 % Define answer formatting
 \newcommand{\answer}[1]{%
   \ifprintanswers
-    \begin{tcolorbox}[parbox=false, breakable, colback=blue!5, colframe=blue!40, title=Uitwerking]
+    \begin{tcolorbox}[
+      breakable,
+      parbox=false,
+      colback=blue!5,
+      colframe=blue!40,
+      title=Uitwerking,
+      parskip=\baselineskip,      % ruimte tussen paragrafen binnen de box
+      before skip=1em,            % ruimte vóór de box
+      after skip=1em              % ruimte ná de box
+    ]    
       #1
     \end{tcolorbox}%
   \else

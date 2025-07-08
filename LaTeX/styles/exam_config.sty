@@ -45,7 +45,15 @@
 % Answer Box Environment
 \newcommand{\solution}[1]{%
     \ifshowanswers
-        \begin{tcolorbox}[breakable, colback=blue!5, colframe=blue!40, coltext=green!50!black, title=Uitwerking]
+        \begin{tcolorbox}[breakable,
+            colback=blue!5,
+            colframe=blue!40, 
+            coltext=green!50!black, 
+            title=Uitwerking,
+            parskip=1em,      % ruimte tussen paragrafen binnen de box
+            before skip=1em,  % ruimte vóór de box
+            after skip=1em    % ruimte ná de box
+        ]
             #1
         \end{tcolorbox}
     \fi
@@ -53,7 +61,17 @@
 
 \newcommand{\ensolution}[1]{%
     \ifshowanswers
-        \begin{tcolorbox}[breakable, colback=blue!5, colframe=blue!40, coltext=green!50!black, title=Solution]
+        \begin{tcolorbox}[
+            breakable, 
+            colback=blue!5, 
+            colframe=blue!40, 
+            coltext=green!50!black, 
+            title=Solution,
+            parskip=1em,      % ruimte tussen paragrafen binnen de box
+            before skip=1em,  % ruimte vóór de box
+            after skip=1em    % ruimte ná de box
+        ]
+
             #1
         \end{tcolorbox}
     \fi
