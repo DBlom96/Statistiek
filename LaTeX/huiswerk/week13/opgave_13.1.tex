@@ -5,7 +5,7 @@
     \begin{center}
         \begin{tabular}{ccccccccc}
             \toprule
-                {\bfseries Temperatuur \boldmath$\degree C$} & $60$ & $70$ & $80$ & $90$ & $100$ & $75$ & $85$ & $100$ \\
+                {\bfseries Temperatuur (\si{\celsius})} & $60$ & $70$ & $80$ & $90$ & $100$ & $75$ & $85$ & $100$ \\
             \midrule
                 {\bfseries Krimp (\%)} & $1,2$ & $1,9$ & $2,8$ & $3,8$ & $4,2$ & $2,6$ & $3,2$ & $4,5$ \\
             \bottomrule
@@ -17,16 +17,56 @@
 \begin{enumerate}[label=(\alph*)]
     \item Welke sommaties moeten we berekenen om de regressieco\"effici\"enten te kunnen bepalen?
     \answer{
-
+        Bij enkelvoudige regressie is de regressielijn van de vorm $Y = a + b\cdot X$, waarbij we de regressieco\"effici\"enten $a$ en $b$ bepalen aan de hand van 
+        \begin{align*}
+            b &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
+            a &= \overline{y} - b \cdot \overline{x}
+        \end{align*}
+        We hebben dus de sommaties (of gemiddeldes) $\sum x_i$, $\sum y_i$, $\sum x_i\cdot y_i$ en $\sum x_i^2$
     }
 
     \item Bereken de sommaties in een rekenschema.
     \answer{
-
+        De sommaties worden geillustreerd in onderstaand rekenschema:
+        \begin{center}
+	\begin{tabular}{cccc}
+		\toprule
+			$x$ & $y$ & $xy$ & $x^2$ \\
+		\midrule
+			$60$ & $1.2$ & $72$ & $3600$  \\
+			$70$ & $1.9$ & $133$ & $4900$ \\
+			$80$ & $2.8$ & $224$ & $6400$ \\
+			$90$ & $3.8$ & $342$ & $8100$  \\
+			$100$ & $4.2$ & $420$ & $10000$  \\
+			$75$ & $2.6$ & $195$ & $5625$  \\
+			$85$ & $3.2$ & $272$ & $7225$ \\
+			$100$ & $4.5$ & $450$ & $10000$ \\
+		\midrule
+$			\overline{x} = 82.5$ & $\overline{y} = 3.025$ & $\overline{xy} = 263.5$ & $\overline{x^2} = 6981.25$ \\
+		\bottomrule
+	\end{tabular}
+\end{center}
     }
 
     \item Bereken de co\"effici\"enten $a$ en $b$ van de lineaire vergelijking.
     \answer{
+        We kunnen de gemiddeldes uit het bovenstaande rekenschema invullen om de co\"effici\"enten te krijgen van de regressielijn.
+        \begin{align*}
+            b   &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
+                &= \frac{263,5 - 82,5 \cdot 3,025}{6981,25 - (82,5)^2} \\
+                &= \frac{13,938}{175} = 0,0796 \\
+            a   &= \overline{y} - b \cdot \overline{x} \\
+                &= 3,025 - 0,0796 \cdot 82,5 \\
+                &= -3,5455.
+        \end{align*}
+        De formule van de regressielijn behorende bij deze steekproef is dus gelijk aan $Y = -3,5455+0,0796X$.
+    }
+
+    \item Voorspel de krimp als de temperatuur $X$ de waarde \SI{65}{\celsius} heeft.
+    \answer{
+        Een voorspelling voor de krimp bij een temperatuur van \SI{65}{\celsius} vinden we simpelweg door $X = 65$ in te vullen in de regressielijn.
+        Dit geeft een voorspelde waarde van $Y = -3,5455 + 0,0796 \cdot 65 = 1,63125$. 
         
+        Dat betekent dat bij een temperatuur van \SI{65}{\celsius} de vezels naar verwachting met ongeveer $1,63\%$ zullen krimpen.
     }
 \end{enumerate}
