@@ -73,9 +73,9 @@
                             &\approx 100,9746 
         \end{align*}
 
-        Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van $Y \mid X = x_0$:
+        Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van $Y$ gegeven $X = x_0$:
         \begin{align*}
-            s_{f} &= s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{(\overline{x^2} - \overline{x}^2)} \right) } \\
+            s_{f}   &= s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{(\overline{x^2} - \overline{x}^2)} \right) } \\
                     &= 100,9746 \cdot \sqrt{ 1 + \frac{1}{10} \cdot \left( 1 + \frac{(10 - 5,6)^2}{(36,724 - 5,6^2)} \right) } \\
                     &\approx 122,0468 
         \end{align*}
@@ -85,7 +85,7 @@
         \[
         t = \invt(\text{opp} = 1 - \alpha / 2; \text{df} = n - 2) = \invt(\text{opp} = 0,975; \text{df} = 8) \approx 2,3060
         \]
-        Het $95\%$-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor $X = x_0$ kan dus worden beschreven door
+        Het $95\%$-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = x_0$ kan dus worden beschreven door
         \begin{align*}
             &[y_0 - t \cdot s_{{f}}; y_0 - t \cdot s_{{f}}] \\ 
             &=[1385,8091 - 2,3060 \cdot 122,0468, 1385,8091 + 2,3060 \cdot 122,0468] \\ 
@@ -97,9 +97,35 @@
 
     \item Veronderstel eens dat de hier bedoelde regressielijn exact bekend zou zijn, bijvoorbeeld omdat een alomvattend onderzoek naar onderhoudskosten heeft plaatsgevonden waarbij alle $50 000$ Inceatti-auto's die in Nederland rondrijden, betrokken waren.
     Dit bleek een regressielijn op te leveren met $\alpha=320$ en $\beta=130$.
-    Verder geldt voor de storingsterm $\sigma_e = 65$.
+    Verder geldt voor de storingsterm $\sigma_{\varepsilon} = 65$.
     Geef hiermee een $99\%$-voorspellingsinterval voor het bedrag aan jaarlijkse onderhoudskosten voor een willekeurige Inceatti-auto van tien jaar oud.
     \answer{
-    
+        Het daadwerkelijke verband tussen de variabelen ``leeftijd (in jaren)'' ($X$) en ``onderhoudskosten in de laatste $12$ maanden'' ($Y$) is gelijk aan
+        \begin{align*}
+            Y = \alpha + \beta \cdot X + \varepsilon = 320 + 130 \cdot X + \varepsilon,
+        \end{align*}
+        waarbij de storingsterm $\varepsilon \sim N(0, 65)$.
+
+        Voor een willekeurige Inceatti-auto van tien jaar oud geldt dus $X = 10$.
+        Dat betekent dat we $Y$ volledig kunnen beschrijven met alleen de storingsterm $\varepsilon$ als kansvariabele:
+        \begin{align*}
+            Y = 320 + 130 \cdot 10 + \varepsilon = 1620 + \varepsilon.
+        \end{align*}
+
+        We kunnen $Y$ dus als een kansvariabele zien die normaal verdeeld is met verwachtingswaarde $\mu = 1620$ en standaardafwijking $\sigma=65$.
+        Omdat we een \SI{99}{\percent}-voorspellingsinterval willen bepalen (dus het betrouwbaarheidsniveau $\alpha = 0,01$), geldt dat $z_{\alpha/2} = \invnorm(\text{opp}=1 - \alpha/2) = \invnorm(\text{opp}=0,995) \approx 2,5758$.
+
+        Het \SI{99}{\percent}-voorspellingsinterval voor een volgende uitkomst van $Y$ wordt dan gegeven door
+        \begin{align*}
+                    &[\mu - z_{\alpha/2} \cdot \sigma; \mu + z_{\alpha/2} \cdot \sigma] \\
+            =       &[1620 - 2,5758 \cdot 65; 1620 + 2,5758 \cdot 65] \\
+            \approx &[1452,5711; 1787,4289]
+        \end{align*}
+        Voor een willekeurige Inceatti-auto van tien jaar oud zullen met \SI{99}{\percent} zekerheid de onderhoudskosten in de laatste $12$ maanden tussen de $1452$ en $1788$ euro bedragen.
+        \begin{center}
+            \resizebox{0.9\textwidth}{!}{
+                \includegraphics{opg13.9c.png}
+            }
+        \end{center}
     }
 \end{enumerate}

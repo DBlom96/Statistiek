@@ -15,5 +15,33 @@
     Bereken hiervoor de rangcorrelatieco\"effici\"ent van Spearman.
 }
 \answer{
-    
+    De eerste stap bij het berekenen van Spearman's correlatieco\"effici\"ent is het bepalen van de rankings van de uitkomsten voor de $A$- en $B$-scores:
+        \begin{center}
+            \renewcommand{\arraystretch}{1.25}
+            \begin{tabular}{ccccccccc}
+                \toprule
+                    {\bfseries Rangnummers $A$-scores} & $1$ & $7$ & $5$ & $3,5$ & $8$ & $6$ & $3,5$ & $2$ \\
+                    {\bfseries Rangnummers $B$-scores} & $8$ & $1,5$ & $3$ & $6$ & $1,5$ & $4$ & $5$ & $7$ \\
+                \midrule
+                    {\bfseries Verschillen $d_i$} & $-7$ & $5,5$ & $2$ & $-2,5$ & $6,5$ & $2$ & $-1,5$ & $-5$ \\
+                    {\bfseries Kwadratische verschillen $d_i^2$} & $49$ & $30,25$ & $4$ & $6,25$ & $42,25$ & $4$ & $2,25$ & $25$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+
+        De som van de kwadratische rangnummerverschillen is gelijk aan $\sum_i d_i^2 = 163$.
+        Aangezien de steekproefgrootte gelijk is aan $n = 8$, is de rangcorrelatieco\"effici\"ent van Spearman gelijk aan
+        \begin{align*}
+            r_s &= 1 - \frac{ 6 \cdot \sum_i d_i^2 }{ n^3 - n }  \\
+                &= 1 - \frac{ 6 \cdot 163 }{ 8^3 - 8 }  \\
+                &\approx -0,9405.
+        \end{align*}
+
+        Omdat de rangcorrelatieco\"effici\"ent $r_s$ dichtbij $-1$ ligt, geldt dat de rangnummers een nagenoeg tegengestelde samenhang vertonen.
+
+        {
+            \itshape Side note: merk op dat we in deze opgave meerdere keren dezelfde $A$-scores hebben waargenomen (in dit bijvoorbeeld 45).
+            In dat geval zijn deze respectievelijk op de derde en vierde plaats in de ranking (van laag naar hoog).
+            Omdat je niet eenduidig kunt zeggen welke van de twee derde is en welke vierde, wordt uitgegaan van het gemiddelde van de rankings, in dit geval dus $3,5$.
+        }
 }
