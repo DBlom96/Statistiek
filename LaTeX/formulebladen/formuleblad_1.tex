@@ -1,39 +1,15 @@
-% !TEX TS-program = xelatex
-% !TEX encoding = UTF-8 Unicode
-
-\documentclass[11pt,a4paper,dutch]{article} % document type and language
-
-\usepackage[centering,noheadfoot,margin=0.7in]{geometry}
-\usepackage[dutch]{babel}
-\usepackage{palatino}  
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{float}
-\usepackage{bm}
-\setlength{\parindent}{0cm} 
-
-\usepackage{amsmath, amsfonts, amssymb, amsthm}
-
-\title{Formuleblad Statistiek deel 1 (2024-2025)}
-\author{}
-\date{}
-
-\begin{document}
-\maketitle
 \vspace{-1cm}
 % Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
+\section*{Deel 1}
 \textbf{Steekproefgemiddelde (gegeven een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$)}
 \[
-    \overline{x} = \frac{\sum\limits_{i} x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}
+    \overline{x} = \frac{\sum_{i} x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}
 \]
 
 \textbf{Steekproefvariantie:}
-\begin{align}
-    s^2 &= \frac{\sum\limits_{i} (x_i-\overline{x})^2}{n} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
-    s^2 &= \frac{\left(\sum\limits_{i} x_i^2\right) - n \cdot \overline{x}^2}{n} = \frac{(x_1^2+x_2^2+\ldots+x_n^2) - n \cdot \overline{x}^2}{n} \hfill \tag{optie 2}
-\end{align}
-% \vspace{.5cm}
+\begin{align*}
+    s^2 &= \frac{\sum_{i} (x_i-\overline{x})^2}{n-1} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
+\end{align*}
 
 \textbf{Rekenregels kansrekening:}
 \begin{align*}
@@ -47,7 +23,7 @@
     \centering
     \begin{tabular}{m{3.8cm}|m{6cm}|m{5.7cm}}
         \toprule
-                                                            & \textbf{Discrete kansvariabelen}  & \textbf{Continue kansvariabelen} \\ 
+            & \textbf{Discrete kansvariabelen}  & \textbf{Continue kansvariabelen} \\ 
         \midrule
             \textbf{Uitkomstenruimte:}                      & Eindig / aftelbaar oneindig   & Overaftelbaar oneindig \\
         \midrule
@@ -64,8 +40,6 @@
             \textbf{Standaardafwijking:}                    & $\sigma(X) = \sqrt{\text{Var}(X)}$   & $\sigma(X) = \sqrt{\text{Var}(X)}$ \\
         \bottomrule
     \end{tabular}
-% \caption{Discrete and Continuous Probability Distributions with Mean and Variance}
-% \label{tab:prob_dist}
 \end{table}
 
 \textbf{Speciale kansverdelingen:}
@@ -79,7 +53,6 @@
     \begin{itemize}
         \item $\lambda$: gemiddeld aantal gebeurtenissen per eenheid van tijd / ruimte.  
         \item $t$: aantal eenheden van tijd / ruimte van het interval
-        
         $\rightarrow$ \textbf{Voorbeeld:} als ``dag'' de tijdseenheid is, dan bestaat ``week'' uit $t=7$ tijdseenheden. 
     \end{itemize}
     \item $T \sim \text{Exponentieel}(\lambda)$: meten van de tijd / ruimte tot de volgende gebeurtenis.
@@ -185,38 +158,3 @@ Gegeven $n$ kansvariabelen $X_1, X_2, \ldots, X_n$ die onderling onafhankelijk z
     \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met $E[\sum X] = n \cdot \mu$ en $\sigma(\overline{X}) = \sqrt{n} \cdot \sigma$.
     \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met $E[\overline{X}]=\mu$ en $\sigma(\overline{X})=\frac{\sigma}{\sqrt{n}}$.
 \end{itemize}
-
-% \textbf{Covariance:}
-% \[
-%     Cov(X, Y) = E[(X-E[X])\cdot(Y-E[Y])] = E[X\cdot Y] - E[X]E[Y]
-% \]
-
-% \textbf{Correlation coefficient:}
-% \[
-%     \rho(X, Y) = \frac{Cov(X,Y)}{\sqrt{Var(X) \cdot Var(Y)}}
-% \]
-
-% \textbf{Variance of error terms:}
-% \[ \hat{\sigma}^2 = \frac{1}{n-2}\sum_{i=1}^{n} (y_{i} - \hat{y}_{i})^2 = \frac{\sum_{i=1}^{n} y_{i}^2 - \hat{\beta}_{0}\cdot \sum_{i=1}^{n} y_{i} - \hat{\beta}_{1}\cdot \sum_{i=1}^{n} x_{i}y_{i}}{n-2}\]
-
-% \textbf{Coefficients of regression line:}
-
-% Given a sample of $n$ observations $(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)$, the regression line $\hat{y} = \hat{\beta}_0 + \hat{\beta}_{1}\cdot x$ satisfies:
-% \begin{itemize}
-%     \item $\hat{\beta}_{1} = \frac{\sum_{i=1}^{n}x_iy_i - n \cdot \overline{x} \cdot \overline{y}}{\sum_{i=1}^{n} x_{i}^2 - n \cdot \overline{x}^2}$
-%     \item $\hat{\beta}_{0} = \overline{y} - \hat{\beta}_{1} \cdot \overline{x}$
-% \end{itemize}
-
-% \textbf{Sample correlation coefficient:}
-% \[ r(X, Y) = \frac{Cov(X, Y)}{\sqrt{s_{X}^2\cdot s_{Y}^2}} = \frac{\sum_{i=1}^{n}(x_{i}-\overline{x})\cdot(y_{i} - \overline{y})}{\sqrt{\sum_{i=1}^{n}(x_{i}-\overline{x})^2 \cdot \sum_{i=1}^{n}(y_{i}-\overline{y})^2}} = \frac{\sum_{i=1}^{n}x_{i}y_{i} - n \cdot \overline{x}\cdot \overline{y}}{\sqrt{\left(\sum_{i=1}^{n}x_{i}^2-n\cdot \overline{x}^2\right) \cdot \left(\sum_{i=1}^{n}y_{i}^2-n\cdot \overline{y}^2\right)}}\]
-
-% \textbf{Likelihood function:}
-% \[ L(x_1, x_2, \ldots, x_n; \theta) = f(x_1; \theta)\cdot f(x_2; \theta)\cdot\ldots\cdot f(x_n; \theta)\]
-
-% \textbf{Minimum sample size with given accuracy $E$:}
-% \[ n \ge \left(\frac{z_{\frac{\alpha}{2}} \cdot \sigma}{E}\right)^2\]
-
-% \textbf{Minimum sample size for bounding type II error $\beta$}
-% \[ n \ge \frac{(z_{\frac{\alpha}{2}}+z_{\beta})^2 \cdot \sigma^2}{\delta^2}\]
-
-\end{document}

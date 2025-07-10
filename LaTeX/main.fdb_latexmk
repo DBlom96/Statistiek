@@ -1,5 +1,9 @@
 # Fdb version 4
+<<<<<<< Updated upstream
 ["pdflatex"] 1752158090.64294 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1752158093.64544 0
+=======
+["pdflatex"] 1752139869.84048 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1752139872.31563 0
+>>>>>>> Stashed changes
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1751975888 124356 d80fb265b13695b80413c9c8d049619c ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1743424562 24286510 e52fb5f6c18f310f7dba2f66d16ee221 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -228,6 +232,7 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/config.sty" 1751977005 2833 dc9bb23da18c120bb356e120766f7157 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1751614899 2581 e923608aa4d7fe04bfa4e7cfdfb0345d ""
+<<<<<<< Updated upstream
   "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" 1752140476 780 5d6bcfec04db9a8af9ab057a9fda4648 ""
   "figures/opg13.15a.png" 1752158010 24783 3f728b809517919fa171cfc27087ed13 ""
   "figures/opg13.15b.png" 1752158033 38024 69cb75f5474ee2bce098abd38d7c7d71 ""
@@ -244,14 +249,31 @@
   "huiswerk/week13/opgave_13.4.tex" 1751979627 8627 4ab92157627196e1b3a53a0b61ea264e ""
   "huiswerk/week13/opgave_13.5.tex" 1752140237 5181 d58d2a70922831e4fb2bba1f98fc30f6 ""
   "huiswerk/week13/opgave_13.9.tex" 1752146398 7936 841736490e50a8cd4b3916307d2a6ca3 ""
+=======
+  "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" 1752139476 780 5d6bcfec04db9a8af9ab057a9fda4648 ""
+  "figures/opg13.4.png" 1751979616 34810 a44cac538b94b91cfdb6e3bc76d610bd ""
+  "huiswerk/week13.tex" 1752139476 342 df2ebb4c2270806b1e7ae783199d4035 ""
+  "huiswerk/week13/opgave_13.1.tex" 1751974717 3574 c55863e1af48098f9df9407709b82fbf ""
+  "huiswerk/week13/opgave_13.11.tex" 1752139868 849 2cda8325e4dbeeb4e4b154ba64956a3e ""
+  "huiswerk/week13/opgave_13.15.tex" 1751536949 1635 b0c7ee78b27693650ed22aa078bb673d ""
+  "huiswerk/week13/opgave_13.4.tex" 1751979627 8627 4ab92157627196e1b3a53a0b61ea264e ""
+  "huiswerk/week13/opgave_13.5.tex" 1752139869 1493 3ec2e117d58e47db4a3999ac0dcc41bc ""
+  "huiswerk/week13/opgave_13.9.tex" 1751977070 2293 302a91b2c828c7d9a1d61e5995ab5449 ""
+>>>>>>> Stashed changes
   "huiswerk/week13/opgave_13.m1.tex" 1751537634 919 c8597f0226eec9d4b7e3bfdb1a8075b9 ""
   "huiswerk/week13/opgave_13.m2.tex" 1751974717 815 4cabe967ec894a8736f8ed40a385cf1f ""
   "huiswerk/week13/opgave_13.m3.tex" 1751974717 485 440398648888b3868a05a85ecd08290a ""
   "huiswerk/week13/opgave_13.m4.tex" 1751639094 825 5a53f203c0daf2e793c8610e6728bbc4 ""
   "huiswerk/week13/opgave_13.m6.tex" 1751974717 1019 e6100b78fcc8329a39d2f0b09dee303a ""
+<<<<<<< Updated upstream
   "main.aux" 1752158093 299 d2fbf133fd611c1d6075cf03eaf00cbc "pdflatex"
   "main.out" 1752158092 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1752140476 780 5d6bcfec04db9a8af9ab057a9fda4648 ""
+=======
+  "main.aux" 1752139872 299 9484fcbf366542cadf4b851c402a8e40 "pdflatex"
+  "main.out" 1752139871 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1752139476 780 5d6bcfec04db9a8af9ab057a9fda4648 ""
+>>>>>>> Stashed changes
   (generated)
   "main.aux"
   "main.log"
