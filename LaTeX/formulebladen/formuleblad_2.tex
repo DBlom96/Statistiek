@@ -1,216 +1,158 @@
-% !TEX TS-program = xelatex
-% !TEX encoding = UTF-8 Unicode
+\section*{Statistiek deel 2:}
 
-\documentclass[11pt,a4paper,dutch]{article} % document type and language
+\subsection*{Betrouwbaarheidsintervallen voor het gemiddelde $\mu$}
+    \subsubsection*{Geval 1: $\sigma$ bekend}
+        \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
+        \[
+            z_{\alpha/2} = \text{InvNorm}(\text{opp}=1-\alpha/2; \mu=0; \sigma=1)
+        \]
+        \[
+            [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+        \]
 
-\usepackage[centering,noheadfoot,margin=0.7in]{geometry}
-\usepackage[dutch]{babel}
-\usepackage{palatino}  
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{float}
-\usepackage{bm}
-\setlength{\parindent}{0cm} 
+        \textbf{Minimale steekproefomvang voor \boldmath$100\cdot(1-\alpha)\%$-BI als \boldmath$\mu$ maximaal \boldmath$\pm a$ mag afwijken:}
+        \[
+            n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{a} \right)^2
+        \]
 
-\usepackage{amsmath, amsfonts, amssymb, amsthm}
+    \subsubsection*{Geval 2: $\sigma$ NIET bekend}
+        \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
+        \[
+            t = \invt(\text{opp}=1-\alpha/2; \text{df}=n-1)
+        \]
+        \[
+            [\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}]
+        \]
 
-\title{Formuleblad Statistiek deel 2 (2024-2025)}
-\author{}
-\date{}
+        \textbf{Minimale steekproefomvang voor $100\cdot(1-\alpha)\%$-BI als $\mu$ maximaal \boldmath$\pm a$ mag afwijken:}
+        \[
+            \text{GR tabel (voor verschillende $n$):} \quad \frac{s}{\sqrt{n}} \cdot \text{tcdf}(\text{opp}=1-\alpha/2; \text{df}=n-1) \le a
+        \]
+    
+    {\itshape NB: zodra $n \ge 30$, vallen de normale en de $t$-verdeling nagenoeg samen. Je mag dan de schatting $s$ gebruiken als $\sigma$, zelfs als $\sigma$ zelf niet bekend is.}
 
-\begin{document}
-\maketitle
-\vspace{-1cm}
-% Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
-\section*{Deel 1}
-\textbf{Steekproefgemiddelde (gegeven een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$)}
+\subsection*{Betrouwbaarheidsintervallen voor de binomiale succeskans $p$}
+    \textbf{Betrouwbaarheidsinterval voor \boldmath$p$ (Clopper-Pearson):}
+    Gegeven $n$ Bernoulli-experimenten, waarvan $k$ successen.
+    \begin{enumerate}
+        \item Bereken de succeskans $p_1$ zodat geldt $P(X \le k) = \binomcdf(n; p; k) = \alpha/2$
+        \item Bereken de succeskans $p_2$ zodat geldt $P(X \ge k) = 1 - \binompdf(n; p; k-1) = \alpha/2$
+        \item De berekende waarden voor $p_1$ en $p_2$ zijn de grenzen van het Clopper-Pearson interval.
+    \end{enumerate}
+
+\subsection*{Hypothesetoetsen}
+    \textbf{Stappenplan hypothesetoetsen}
+    \begin{enumerate}
+        \item Definieer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
+        \item Bepaal het significantieniveau $\alpha$ (kans op Type-I fout, onterecht $H_0$ verwerpen)
+        \item Verzamel data voor de toetsingsgrootheid
+        \item Bereken de toetsingsgrootheid
+        \item Geef een conclusie (met behulp van het kritieke gebied / $p$-waarde) en vertaal deze terug naar de originele probleemcontext.
+    \end{enumerate}
+
+    \newpage
+    \textbf{Drie typen hypothesetoetsen: linkszijdig, tweezijdig, rechtszijdig}
+    \begin{center}
+        \includegraphics[width=0.72\linewidth]{left_sided.png}
+        \includegraphics[width=0.72\linewidth]{two_sided.png}
+        \includegraphics[width=0.72\linewidth]{right_sided.png}
+    \end{center}
+    {\itshape \textbf{NB:} voor elke kansverdeling (normaal, t, $\chi^2$, $F$) kun je het kritieke gebied berekenen door met de GR solver een vergelijking met $\alpha$ (links- of rechtszijdig) of twee vergelijkingen met $\alpha/2$ (tweezijdig) op te lossen. De $p$-waarde (overschrijdingskans) bepaal je met de CDF-functie van de desbetreffende kansverdeling.}
+
+    \newpage
+    \textbf{Soorten toetsen}
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{c|c|c}
+            \toprule
+                \textbf{Soort toets} & \textbf{Toetsingsgrootheid} & \textbf{Kansverdeling (onder $H_0$)} \\
+            \midrule
+                \multicolumn{3}{c}{\textbf{Toetsen voor het gemiddelde $\mu \leq \mu_0$ of $\mu = \mu_0$ of $\mu \geq \mu_0$}} \\ 
+            \midrule
+                $z$-toets ($\sigma$ bekend)    & $\overline{X}$ & $N(\mu_0; \frac{\sigma}{\sqrt{n}})$ \\
+                $t$-toets ($\sigma$ onbekend)  & $T = \frac{\overline{X} - \mu_0}{\frac{s}{\sqrt{n}}}$ & $t(\text{df}=n-1)$ \\
+            \midrule
+                \multicolumn{3}{c}{\textbf{Chikwadraattoetsen ($\chi^2$)}} \\
+            \midrule
+                Onafhankelijkheid & $X^2 = \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ & $\chi^2(\text{df}=\text{(\#rijen-1)} \cdot \text{(\#kolommen-1)})$ \\
+                Aanpassing (goodness-of-fit) & $X^2 = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}$ & $\chi^2(\text{df}=\text{(\#categorie\"en-1)})$ \\
+            \midrule
+                \multicolumn{3}{c}{\textbf{Verschiltoetsen (op basis van twee populaties $A$ en $B$)}} \\
+            \midrule
+                $F$-toets: $\sigma_A^2 = \sigma_B^2$ & $F = \frac{S_1^2}{S_2^2}$ & $F(df1, df2)$ \\
+                $z$-toets & $V =\overline{X_A} - \overline{X_B}$ & $N\left(\mu_A - \mu_B; \sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}\right)$ \\
+                $t$-toets ($\sigma_A^2 = \sigma_B^2$) & $T = \frac{(\overline{x_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_P^2}{n} + \frac{S_P^2}{m}}}$ & $t(\text{df}=n+m-2)$ \\
+                $t$-toets ($\sigma_A^2 \neq \sigma_B^2$) & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_A^2}{n} + \frac{S_B^2}{m}}}$ & $t(\text{df}=\min(n-1;m-1))$ \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+    \textbf{Beslisboom verschiltoetsen}
+
+    \begin{tikzpicture}[node distance=4cm]
+
+        % Nodes
+        \node (sigmaKnown) [process] {$\sigma_A$ en $\sigma_B$ bekend?};
+        \node (ztest) [process, below of=sigmaKnown, xshift=-4cm, align=center] {Voer $z$-toets uit met \\ $\displaystyle V = \overline{X_A} - \overline{X_B} \sim N\left(\mu_A - \mu_B; \sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}\right)$};
+        \node (varEqual) [process, below of=sigmaKnown, xshift=4cm, align=center] {Voer $F$-toets uit \\ Wordt $H_0: \sigma_A^2 = \sigma_B^2$ geaccepteerd?};
+        \node (pooledT) [process, below of=varEqual, xshift=-4cm, yshift=-1.5cm, align=center] {Voer $t$-toets ($\sigma_A^2 = \sigma_B^2$) uit \\ met ``pooled variance'' \\ $\displaystyle s_P^2 = \frac{(n-1)\cdot s_A^2 + (m-1) \cdot s_B^2}{n-1+m-1}$};
+        \node (welchT) [process, below of=varEqual, xshift=2cm, yshift=-1.5cm, align=center] {Voer $t$-toets ($\sigma_A^2 \neq \sigma_B^2$) uit \\ $\displaystyle t = \frac{(\overline{x_A} - \overline{x_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{s_A^2}{n} + \frac{s_B^2}{m}}}$}; % \\ ($\text{df}=\min(n-1; m-1)$)};
+
+        % Arrows
+        \draw [arrow] (sigmaKnown) -- node[above, sloped] {ja} (ztest);
+        \draw [arrow] (sigmaKnown) -- node[above, sloped] {nee} (varEqual);
+        \draw [arrow] (varEqual) -- node[above, sloped] {ja} (pooledT);
+        \draw [arrow] (varEqual) -- node[above,sloped] {nee} (welchT);
+
+    \end{tikzpicture}
+
+\newpage
+
+\subsection*{Correlatie en regressie}
+
+\textbf{Correlatieco\"effici\"ent van Pearson:}
 \[
-    \overline{x} = \frac{\sum\limits_{i} x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}
+    r = \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\sqrt{(\overline{x^2} - \overline{x}^2)\cdot(\overline{y^2} - \overline{y}^2)}}
 \]
 
-\textbf{Steekproefvariantie:}
-\begin{align}
-    s^2 &= \frac{\sum\limits_{i} (x_i-\overline{x})^2}{n-1} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
-\end{align}
+\textbf{Correlatieco\"effici\"ent van Spearman:}
+\[
+    r_s = 1 - \frac{6 \sum_i d_i^2}{n^3-n}
+\]
 
-\textbf{Rekenregels kansrekening:}
+\textbf{Co\"effici\"enten van de lineaire regressielijn $Y = a + b\cdot X$:}
 \begin{align*}
-    P(A \text{ of } B)      &= P(A) + P(B) - P(A \text{ en } B) \tag{optelregel}\\
-    P(B)                    &= 1 - P(\text{niet } B) \tag{complementregel}\\
-    P(A \mid B)         &= \frac{P(A \text{ en } B)}{P(B)} \tag{conditionele kansen}
+    b &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
+    a &= \overline{y} - b \cdot \overline{x}
 \end{align*}
 
-\textbf{Discrete en continue kansverdelingen:}
-\begin{table}[H]
-    \centering
-    \begin{tabular}{m{3.8cm}|m{6cm}|m{5.7cm}}
-        \toprule
-            & \textbf{Discrete kansvariabelen}  & \textbf{Continue kansvariabelen} \\ 
-        \midrule
-            \textbf{Uitkomstenruimte:}                      & Eindig / aftelbaar oneindig   & Overaftelbaar oneindig \\
-        \midrule
-            \textbf{Toepassingen:}                          & Tellen / categoriseren        & Meten \\
-        \midrule
-            \textbf{Kansbegrip:}                            & Kansfunctie $p(k) = P(X=k)$   & Kansdichtheidsfunctie $f(x)$ \\
-        \midrule
-            \textbf{CDF:}                                   & $F(k) = P(X \le k) = \sum_{\ell:\ell\le k} p(\ell)$ & $F(x) = P(X \le x) = \int_{-\infty}^{x} f(y)\ dy$ \\
-        \midrule
-            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum_{k} k \cdot P(X=k)$ & $E[X] = \int x \cdot f(x)\ dx$\\
-        \midrule
-            \textbf{Variantie:}                             & $\text{Var}(X) = \sum_{k} (k - E[X])^2 \cdot P(X=k)$   & $\text{Var}(X) = \int (x - E[X])^2 \cdot f(x)\ dx$ \\    
-        \midrule
-            \textbf{Standaardafwijking:}                    & $\sigma(X) = \sqrt{\text{Var}(X)}$   & $\sigma(X) = \sqrt{\text{Var}(X)}$ \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+\textbf{Schatting van de variantie van de storingsterm $\varepsilon$:}
+\begin{align*}
+    s_{\varepsilon} &= \frac{\sum e_i^2}{n - 2} = \frac{\sum \left(y_i - (a + b \cdot x_i)\right)^2}{n - 2}=  \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
+\end{align*}
 
-\textbf{Speciale kansverdelingen:}
-\begin{itemize}
-    \item $X \sim \text{Binomiaal}(n, p)$: tellen van aantal successen bij onafhankelijke kansexperimenten met twee uitkomsten (Bernoulli-experimenten): succes / mislukking.
-    \begin{itemize}
-        \item $n$: aantal Bernoulli-experimenten
-        \item $p$: succeskans per experiment
-    \end{itemize}
-    \item $X \sim \text{Poisson}(\lambda \cdot t)$: tellen van aantal ``gebeurtenissen'' in een ``interval'' van tijd / ruimte.
-    \begin{itemize}
-        \item $\lambda$: gemiddeld aantal gebeurtenissen per eenheid van tijd / ruimte.  
-        \item $t$: aantal eenheden van tijd / ruimte van het interval
-        $\rightarrow$ \textbf{Voorbeeld:} als ``dag'' de tijdseenheid is, dan bestaat ``week'' uit $t=7$ tijdseenheden. 
-    \end{itemize}
-    \item $T \sim \text{Exponentieel}(\lambda)$: meten van de tijd / ruimte tot de volgende gebeurtenis.
-    \begin{itemize}
-        \item $\lambda$: gemiddeld aantal gebeurtenissen per eenheid van tijd / ruimte.  
-    \end{itemize}
-\end{itemize}
-\newpage
-\textbf{Verwachtingswaarde en variantie van veelgebruikte kansverdelingen:}
-\begin{table}[H]
-    \centering
-    \begin{tabular}{c|p{4.5cm}|c|c|c}
-        \toprule
-            \textbf{Verdeling} & {\bfseries Kans(dichtheids)functie} & \textbf{CDF} & $E(X)$ & $\textrm{Var}(X)$ \\ 
-        \midrule
-            \multicolumn{5}{c}{\textbf{Discreet}} \\ 
-        \midrule
-            Uniform($a, b$) & $p(k) = \frac{1}{b-a+1}$ \newline $(k=a,a+1,\ldots,b)$ & $F(k) = \begin{cases} 
-            0 & x < a \\
-            \frac{k - a + 1}{b-a+1} & a \leq k < b \\
-            1 & k \geq b
-            \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a+1)^2-1}{12}$ \\ 
-        \midrule
-        %     Bernoulli($p$) & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
-        %     0 & k < 0 \\
-        %     1-p & k=0 \\
-        %     1 & k \geq 1
-        %     \end{cases}$ & $p$ & $p(1-p)$ \\ 
-        % \midrule
-            Binomiaal($n,p$) & $p(k) = \binom{n}{k}p^k(1-p)^{n-k}$ & $F(k) = \sum\limits_{i=0}^k \binom{n}{i}p^i(1-p)^{n-i}$ & $np$ & $np(1-p)$ \\ 
-        \midrule
-            % Geo($p$) & $P(X=k) = (1-p)^{k-1}\cdot p$ & $F(k) = \sum_{i=1}^k(1-p)^{k-1}\cdot p$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\ \midrule
-            Poisson($\lambda$) & $p(k) = e^{-\lambda}\cdot \frac{\lambda^k}{k!}$ & $F(k) = \sum\limits_{i=0}^k e^{-\lambda} \cdot \frac{\lambda^i}{i!}$ & $\lambda$ & $\lambda$ \\ 
-        \midrule
-            \multicolumn{5}{c}{\textbf{Continuous}} \\ 
-        \midrule
-            Uniform($a, b$) & $f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b \\ 0, & \text{elders.} \end{cases}$ & $F(x) = \begin{cases} 
-            0, & x < a \\
-            \frac{x-a}{b-a}, & a \leq x < b \\ 1, & x \geq b \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
-        \midrule
-        %     $N(\mu, \sigma)$ & $f(x) = \frac{1}{\sigma\cdot\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$ & $F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)$ & $\mu$ & $\sigma^2$ \\ 
-        % \midrule
-            Exponentieel($\lambda$) & $f(x) = \lambda e^{-\lambda x}$, $x \geq 0$ & $F(x) = \begin{cases} 1 - e^{-\lambda x}, & x \geq 0 \\ 0, & x < 0 \end{cases}$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\textbf{Veelgebruikte functies op de grafische rekenmachine}
-\begin{table}[H]
-    \centering
-    \begin{tabular}{c|c|c}
-        \toprule
-            \textbf{Type vraag}                     & \textbf{TI-84 Plus}           & \textbf{Casio} \\
-        \midrule
-            \multicolumn{3}{c}{\textbf{Continue kansverdeling (willekeurig)}} \\ 
-        \midrule
-            $P(a \le X \le b)$                      & $\int_{a}^{b} f(x)\, dx$      & $\int_{a}^{b} f(x)\, dx$\\
-        \midrule    
-            \multicolumn{3}{c}{\textbf{$X \sim \text{Binomiaal}(n, p)$}} \\ 
-        \midrule
-            $P(X = k)$                              & binompdf$(n,p,k)$             & BinomialPD$(k, n, p)$ \\
-            $P(X \le k)$                            & binomcdf$(n,p,k)$             & BinomialCD$(k, n, p)$ \\
-        \midrule    
-            \multicolumn{3}{c}{\textbf{$X \sim N(\mu, \sigma)$}} \\
-        \midrule 
-            $P(a \le X \le b)$                      & normalcdf$(a,b,\mu,\sigma)$   & NormalCD$(a, b, \sigma, \mu)$ \\
-            Grenswaarde $g$ zodat $P(X \le g)=p$?   & invNorm$(p,\mu,\sigma)$       & InvNormCD$(\text{tail=left}, p, \sigma, \mu)$ \\
-        \midrule 
-            \multicolumn{3}{c}{\textbf{$X \sim \text{Poisson}(\lambda)$}} \\  
-        \midrule
-            $P(X = k)$                              & poissonpdf$(\lambda, k)$      & PoissonPD$(k, \lambda)$ \\
-            $P(X \le k)$                            & poissoncdf$(\lambda, k)$      & PoissonCD$(k, \lambda)$ \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-% \begin{itemize}
-%     \item Continue kansvariabelen met kansdichtheidsfunctie $f$:
-%     \[
-%         \int_{a}^{b} f(x)\, dx = \text{fnInt}(f(x); x; a; b)
-%     \]
-%     \item Binomiaal verdeelde kansvariabele $X \sim \text{Binomiaal}(n; p)$:
-%     \begin{itemize}
-%         \item $P(X = k) = \text{binompdf}(n; p; k)$ en $P(X \le k) = \text{binomcdf}(n; p; k)$
-%     \end{itemize}
-%     \item Normaal verdeelde kansvariabele $X \sim N(\mu; \sigma)$:
-%     \begin{itemize}
-%         \item $P(a \le X \le b) = \text{normalcdf}(a; b; \mu; \sigma)$ en $P(X \le g) = p \rightarrow g = \text{invNorm}(p; \mu; \sigma)$
-%     \end{itemize}
-%     \item Poisson verdeelde kansvariabele $X \sim \text{Poisson}(\lambda)$:
-%     \begin{itemize}
-%         \item $P(X = k) = \text{poissonpdf}(\lambda; k)$ en $P(X \le k) = \text{poissoncdf}(\lambda; k)$
-%     \end{itemize}
-% \end{itemize}
-
-\textbf{$z$-score:}
+\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor de gemiddelde $Y$ bij gegeven $X = x_0$:}
 \[
-    z = \frac{x - \mu}{\sigma}\\
-\]
-
-\textbf{Centrale limietstelling:}
-Gegeven $n$ kansvariabelen $X_1, X_2, \ldots, X_n$ die onderling onafhankelijk zijn en dezelfde kansverdeling hebben met een verwachtingswaarde $\mu$ en standaardafwijking $\sigma$, dan geldt (bij benadering) dat
-\begin{itemize}
-    \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met $E[\sum X] = n \cdot \mu$ en $\sigma(\overline{X}) = \sqrt{n} \cdot \sigma$.
-    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met $E[\overline{X}]=\mu$ en $\sigma(\overline{X})=\frac{\sigma}{\sqrt{n}}$.
-\end{itemize}
-
-\newpage
-\section*{Deel 2:}
-\textbf{$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor $\mu$ (wanneer $\sigma$ bekend is):}
-\[
-    z_{\alpha/2} = \text{InvNorm}(opp=1-\alpha/2; \mu=0; \sigma=1)
+    t = \invt(\text{opp} = 1 - \alpha/2; \text{df} = n - 2)
 \]
 \[
-    [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+    s_\mu = s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }
+\]
+\[
+    [a+b\cdot x_0 - t \cdot s_\mu; a+b\cdot x_0 + t \cdot s_\mu]
 \]
 
-\textbf{Minimale steekproefomvang zodat het $100\cdot(1-\alpha)\%$-BI voor $\mu$ maximale afwijking $a$ heeft:}
+\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor $Y$ bij gegeven $X = x_0$:}
 \[
-    n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{a} \right)^2
-\]
-{\itshape NB: soms kan in plaats van de afwijking $a$ een gewenste intervalbreedte gegeven zijn, deze is gelijk aan $2a$.}
-
-\textbf{$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor $\mu$ (wanneer $\sigma$ NIET bekend is):}
-\[
-    t = \text{InvT}(opp=1-\alpha/2; \mu=0; \sigma=1)
+    t = \invt(\text{opp} = 1 - \alpha/2; \text{df} = n - 2)
 \]
 \[
-    [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+    s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }
 \]
-
-\textbf{Minimale steekproefomvang zodat het $100\cdot(1-\alpha)\%$-BI voor $\mu$ maximale afwijking $a$ heeft:}
 \[
-    n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{a} \right)^2
+    [a+b\cdot x_0 - t \cdot s_f; a+b\cdot x_0 + t \cdot s_f]
 \]
-{\itshape NB: soms kan in plaats van de afwijking $a$ een gewenste intervalbreedte gegeven zijn, deze is gelijk aan $2a$.}
 
 % \textbf{Covariance:}
 % \[
@@ -244,5 +186,35 @@ Gegeven $n$ kansvariabelen $X_1, X_2, \ldots, X_n$ die onderling onafhankelijk z
 
 % \textbf{Minimum sample size for bounding type II error $\beta$}
 % \[ n \ge \frac{(z_{\frac{\alpha}{2}}+z_{\beta})^2 \cdot \sigma^2}{\delta^2}\]
+
+% \textbf{Veelgebruikte functies op de grafische rekenmachine}
+% \begin{table}[H]
+%     \centering
+%     \begin{tabular}{c|c|c}
+%         \toprule
+%             \textbf{Vraag}                     & \textbf{TI-84 Plus}           & \textbf{Casio} \\
+%         \midrule
+%             \multicolumn{3}{c}{\textbf{Continue kansverdeling (willekeurig)}} \\ 
+%         \midrule
+%             $z_{p}$                      & invNorm$(\text{opp}=1-p; \mu=0; \sigma=1)$      & InvNormCD$(\text{opp}=1-p; \sigma=1; \mu=0)$\\
+%             $t_{p}$                      & invNorm$(\text{opp}=1-p; \mu=0; \sigma=1)$      & InvNormCD$(\text{opp}=1-p; \sigma=1; \mu=0)$\\
+%         \midrule    
+%             \multicolumn{3}{c}{\textbf{$X \sim \text{Binomiaal}(n, p)$}} \\ 
+%         \midrule
+%             $P(X = k)$                              & binompdf$(n,p,k)$             & BinomialPD$(k, n, p)$ \\
+%             $P(X \le k)$                            & binomcdf$(n,p,k)$             & BinomialCD$(k, n, p)$ \\
+%         \midrule    
+%             \multicolumn{3}{c}{\textbf{$X \sim N(\mu, \sigma)$}} \\
+%         \midrule 
+%             $P(a \le X \le b)$                      & normalcdf$(a,b,\mu,\sigma)$   & NormalCD$(a, b, \sigma, \mu)$ \\
+%             % Grenswaarde $g$ zodat $P(X \le g)=p$?   & invNorm$(p,\mu,\sigma)$       & InvNormCD$(\text{tail=left}, p, \sigma, \mu)$ \\
+%         \midrule 
+%             \multicolumn{3}{c}{\textbf{$X \sim \text{Poisson}(\lambda)$}} \\  
+%         \midrule
+%             $P(X = k)$                              & poissonpdf$(\lambda, k)$      & PoissonPD$(k, \lambda)$ \\
+%             $P(X \le k)$                            & poissoncdf$(\lambda, k)$      & PoissonCD$(k, \lambda)$ \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
 \end{document}
