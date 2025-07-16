@@ -2,7 +2,12 @@
 \usepackage{pdfpages}
 
 % Importeer configuratie-instellingen
-\RequirePackage{../../LaTeX/config}
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\usepackage{\path/LaTeX/styles/exam_config}
+\usepackage{\path/LaTeX/styles/statistics-macros}
+\graphicspath{{\path/LaTeX/figures/}}
+
+\renewcommand{\baselinestretch}{1.5}
 
 % Begin van het document
 \begin{document}
@@ -16,8 +21,6 @@
 \maketitle
 
 % Include questions from external files
-\section*{Vragen}
-
 \input{q1.tex}
 \input{q2.tex}
 \input{q3.tex}

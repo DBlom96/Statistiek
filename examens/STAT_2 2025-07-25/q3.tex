@@ -1,0 +1,118 @@
+\begin{question}{20}{
+    Bij de sollicitatiegesprekken voor cadetten en adelborsten wordt door de aanstellingscommissie aan de aspirant-officier gevraagd naar zijn of haar primaire motivatie om officier te willen worden.
+    De antwoorden van de aspiranten zijn ruwweg in te delen in vier categorie\"en: leiderschap, avontuur, doorgroeimogelijkheden en dienen aan het vaderland.
+    
+    Naar aanleiding van de sollicitatiegesprekken kunnen de antwoorden als volgt worden samengevat:
+
+    \begin{center}
+        \renewcommand{\arraystretch}{1.25}
+        \begin{tabular}{c|cc|c}
+            \toprule
+                & Cadetten & Adelborsten & \\
+            \midrule
+                Leiderschap & $52$ & $22$ & $74$ \\
+                Avontuur & $23$ & $9$ & $32$ \\
+                Doorgroeimogelijkheden & $17$ & $11$ & $28$ \\
+                Vaderland dienen & $38$ & $28$ & $56$ \\
+            \midrule
+                Totaal      & $130$ & $70$ & $200$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    C-NLDA wil inzicht krijgen in of de primaire motivatie van cadetten significant afwijkt van die van adelborsten.
+}
+
+    \subquestion{4}{
+        Welk type hypothesetoets dienen we hiervoor uit te voeren? 
+        Formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$ van de bijbehorende hypothesetoets.
+    }
+    \solution{
+        Omdat we willen weten of de primaire motivatie van cadetten significant afwijkt van die van de adelborsten, dienen we een $\chi^2$-toets (chikwadraat) voor onafhankelijkheid uit te voeren. \rubric{2}
+        Dit kan ook omdat we te maken hebben met twee categorische variabelen!
+        
+        De bijbehorende nul- en alternatieve hypothese zijn in dit geval gelijk aan
+        \begin{align*}
+            H_0&: \text{ de verdeling van de primaire motivaties van cadetten } \\
+               & \qquad \qquad \text{is onafhankelijk van het type aspirant-officieren.} \rubric{1} \\
+            H_1&: \text{ de verdeling van de primaire motivaties van cadetten } \\
+               & \qquad \qquad \text{is WEL afhankelijk van het type aspirant-officieren.} \rubric{1}
+        \end{align*}
+    }
+
+    \subquestion{11}{Bepaal de $p$-waarde van de desbetreffende hypothesetoets.}
+    \solution{
+        Om een chi-kwadraattoets voor onafhankelijkheid uit te voeren, moeten we eerst de verwachte frequenties uitrekenen. Onder de aanname dat $H_0$ waar is, is deze voor elk van de negen cellen te berekenen als $\frac{\text{rijtotaal} \cdot \text{kolomtotaal}}{\text{totaal}}$.
+        De verwachte frequenties zijn te berekenen met behulp van de formule:
+        \[
+            E_{ij} = \frac{\text{rijtotaal}_{i} \cdot \text{kolomtotaal}_{j}}{\text{totaal}}
+        \]
+
+        \begin{center}
+            \begin{minipage}{0.45\textwidth}
+                \begin{table}[H]
+                    \renewcommand{\arraystretch}{1.25}
+                    \centering
+                    {\bfseries Observed} \\[1ex]
+                        \begin{tabular}{c|cc|c}
+                            \toprule
+                                & Cadetten & Adelborsten & Totaal \\
+                            \midrule
+                                Leiderschap & $52$ & $22$ & $74$ \\
+                                Avontuur & $23$ & $9$ & $32$ \\
+                                Doorgroei & $17$ & $11$ & $28$ \\
+                                Dienen & $38$ & $28$ & $56$ \\
+                            \midrule
+                                Totaal      & $130$ & $70$ & $200$ \\
+                            \bottomrule
+                        \end{tabular}
+                    
+                \end{table}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\textwidth}    
+                \begin{table}[H]
+                    \renewcommand{\arraystretch}{1.25}
+                    \centering
+                    {\bfseries Expected} \\[1ex]
+                        \begin{tabular}{cc|c}
+                        \toprule
+                                Cadetten & Adelborsten & Totaal \\
+                            \midrule
+                                $\frac{130 \cdot 74}{200} = 48,1$ & $\frac{70 \cdot 74}{200} = 25,9$ & $74$ \\
+                                $\frac{130 \cdot 32}{200} = 20,8$ & $\frac{70 \cdot 32}{200} = 11,2$ & $32$ \\
+                                $\frac{130 \cdot 28}{200} = 18,2$ & $\frac{70 \cdot 28}{200} = 9,8$ & $28$ \\
+                                $\frac{130 \cdot 56}{200} = 42,9$ & $\frac{70 \cdot 56}{200} = 23,1$ & $56$ \\
+                            \midrule
+                                $130$ & $70$ & $200$ \\
+                            \bottomrule
+                        \end{tabular}
+                    
+                \end{table}
+            \end{minipage}\rubric{4}
+        \end{center} 
+        
+        We berekenen de toetsingsgrootheid $\chi^2$ als volgt, waarbij $O_{ij} / E_{ij}$ de geobserveerde / verwachte frequentie is in rij $i$, kolom $j$:        
+        \begin{align*}
+            \chi^2  &= \frac{(O_{11} - E_{11})^2}{E_{11}} + \frac{(O_{12} - E_{12})^2}{E_{12}} + \ldots + \frac{(O_{42} - E_{42})^2}{E_{42}} \\
+                    &= \frac{(52 - 48,1)^2}{48,1} + \frac{(22-25,9)^2}{25,9} + \ldots + \frac{(28 - 23,1)^2}{23,1} \\
+                    &\approx 3,3934.\rubric{3}
+        \end{align*}
+
+        De bijbehorende $p$-waarde is de rechteroverschrijdingskans $P(X > \chi^2)$, waarbij $X^2$ de toetsingsgrootheid van de chikwadraattoets voor onafhankelijkheid. \rubric{1}
+        Deze toetsingsgrootheid heeft $\text{df} = (\text{\#rijen}-1)\cdot(\text{\#kolommen}-1)=(4-1)\cdot(2-1) = 3$ vrijheidsgraden.\rubric{1}
+        \begin{align*}
+            p = P(X > \chi^2 \approx 3,3934) &= \chi^2\text{cdf}(\text{lower}=3,3934; \text{upper}=10^{99}; \text{df}=3) \\
+                                        &\approx 0,3348. \rubric{2}
+        \end{align*}
+    }
+
+    \subquestion{5}{Geef de conclusie van de hypothesetoets (op basis van een significantieniveau $\alpha = 0,05$) met behulp van de berekende $p$-waarde.}
+    \solution{
+        Uit de hypothesetoets volgt een redelijk grote rechteroverschrijdingskans $p \approx 0,3348$.
+        Omdat $p > \alpha = 0,05$, geldt dat $H_0$ wordt aangenomen. \rubric{2}
+        We kunnen dus de conclusie trekken dat de verdeling van primaire motivaties om officier te worden niet significant verschilt tussen cadetten en adelborsten. \rubric{1}
+        
+        Als we kijken naar de tabel van geobserveerde en verwachte frequenties, dan zien we dat deze redelijk dichtbij elkaar in de buurt liggen.
+        Er zijn geen grote uitschieters te bekennen in de verwachte frequenties ten opzichte van de daadwerkelijk geobserveerde data.
+    }
+\end{question}
