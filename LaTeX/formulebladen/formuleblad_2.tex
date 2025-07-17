@@ -26,7 +26,7 @@
 
         \textbf{Minimale steekproefomvang voor $100\cdot(1-\alpha)\%$-BI als $\mu$ maximaal \boldmath$\pm a$ mag afwijken:}
         \[
-            \text{GR tabel (voor verschillende $n$):} \quad \frac{s}{\sqrt{n}} \cdot \text{tcdf}(\text{opp}=1-\alpha/2; \text{df}=n-1) \le a
+            \text{GR tabel (voor verschillende $n$):} \quad \frac{s}{\sqrt{n}} \cdot \text{InvT}(\text{opp}=1-\alpha/2; \text{df}=n-1) \le a
         \]
     
     {\itshape NB: zodra $n \ge 30$, vallen de normale en de $t$-verdeling nagenoeg samen. Je mag dan de schatting $s$ gebruiken als $\sigma$, zelfs als $\sigma$ zelf niet bekend is.}
@@ -36,7 +36,7 @@
     Gegeven $n$ Bernoulli-experimenten, waarvan $k$ successen.
     \begin{enumerate}
         \item Bereken de succeskans $p_1$ zodat geldt $P(X \le k) = \binomcdf(n; p; k) = \alpha/2$
-        \item Bereken de succeskans $p_2$ zodat geldt $P(X \ge k) = 1 - \binompdf(n; p; k-1) = \alpha/2$
+        \item Bereken de succeskans $p_2$ zodat geldt $P(X \ge k) = 1 - \binomcdf(n; p; k-1) = \alpha/2$
         \item De berekende waarden voor $p_1$ en $p_2$ zijn de grenzen van het Clopper-Pearson interval.
     \end{enumerate}
 
