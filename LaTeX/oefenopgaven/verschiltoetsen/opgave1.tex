@@ -1,0 +1,117 @@
+\question{1}{
+    Defensie onderzoekt de stressbestendigheid van vrouwelijke en mannelijke militairen in potentieel levensbedreigende situaties.
+    Tijdens een realistische simulatie van een hinderlaag in vijandelijk gebied wordt de hartslag gemeten van negen vrouwelijke en negen mannelijke militairen.
+    De gemiddelde hartslag tijdens het 10 minuten durende scenario wordt per militair vastgelegd.
+    
+    De resultaten zijn als volgt:
+
+    \begin{center}
+        \begin{tabular}{c|ccccccccc}
+            \toprule
+                \textbf{Gemiddelde hartslag (vrouwen, $A$)} & $80$ & $81$ & $80$ & $70$ & $72$ & $69$ & $65$ & $74$ & $80$ \\
+                \textbf{Gemiddelde hartslag (mannen, $B$)} & $80$ & $74$ & $73$ & $72$ & $78$ & $75$ & $70$ & $74$ & $69$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    Het hoofd van de medische dienst wil weten of mannelijke militairen in deze setting een hogere stressrespons vertonen dan hun mannelijke collega's. 
+    Voor beide populaties wordt aangenomen dat de gemiddelde hartslag normaal verdeeld is met onbekende verwachtingswaardes $\mu_A$ en $\mu_B$, en standaardafwijkingen $\sigma_A$ en $\sigma_B$.
+}
+    \begin{enumerate}[label=(\alph*)]
+        \item Bereken de steekproefgemiddeldes $\overline{x_A}$ en $\overline{x_B}$, en de steekproefvarianties $s_A^2$ en $s_B^2$.
+        \answer{
+            {\bfseries Populatie $A$: vrouwelijke militairen.}
+            We berekenen het steekproefgemiddelde $\overline{x_A}$ als volgt:
+            \begin{align*}
+                \overline{x_A} = \frac{ 80 + 81 + \ldots + 80 }{ 9 } \approx 74.5556
+            \end{align*}
+        
+
+            We berekenen de steekproefvariantie $s_A^2$ als volgt:
+            \begin{align*}
+                s_A^2 = \frac{ (80 - 74.5556)^2 + (81 - 74.5556)^2 + \ldots + (80 - 74.5556)^2 }{ 9 - 1 } \approx 35.0278
+            \end{align*}
+       
+            {\bfseries Populatie $B$: mannelijke militairen.}
+
+            We berekenen het steekproefgemiddelde $\overline{x_B}$ als volgt:
+            \begin{align*}
+                \overline{x_B} = \frac{ 80 + 74 + \ldots + 69 }{ 9 } \approx 73.8889
+            \end{align*}
+        
+
+            We berekenen de steekproefvariantie $s_B^2$ als volgt:
+            \begin{align*}
+                s_B^2 = \frac{ (80 - 73.8889)^2 + (74 - 73.8889)^2 + \ldots + (69 - 73.8889)^2 }{ 9 - 1 } \approx 12.3611
+            \end{align*}
+        
+        }
+
+        \item Bepaal met behulp van een $F$-toets of de varianties in de gemiddelde hartslag gelijk zijn voor de populaties van vrouwelijke en mannelijke militairen.
+            Gebruik de $p$-waarde in je conclusie. 
+            Kies voor het significantieniveau $\alpha = 0,05$.
+        \answer{
+            We noteren de populaties vrouwelijke en mannelijke militairen respectievelijk met $A$ en $B$.
+            In de vraag staat dat we aan mogen nemen dat $X_A \sim N(\mu_A=?; \sigma_A=?)$ en $X_B \sim N(\mu_B=?; \sigma_A=?)$.
+
+            We toetsen op gelijke varianties, oftewel de nulhypothese $H_0$ en de alternatieve hypothese $H_1$ worden als volgt gedefinieerd:
+            \begin{align*}
+                H_0: \quad \sigma_A^2 = \sigma_B^2 \\
+                H_1: \quad \sigma_A^2 \neq \sigma_B^2
+            \end{align*}
+
+            Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0,05$, en data is al verzameld voor beide populaties.
+            De toetsingsgrootheid voor een $F$-toets is gelijk aan
+            \[
+                F = \frac{S_A^2}{S_B^2}, 
+            \]
+            en volgt een $F(n-1, m-1)$-verdeling, oftewel een $F(8, 8)$-verdeling.
+
+            De geobserveerde toetsingsgrootheid is gelijk aan
+            \[
+                f = \frac{s_A^2}{s_B^2} = \frac{35,0278}{12,3611} \approx 2,8337.            \]
+            
+            In dit geval is de $p$-waarde gelijk aan de rechteroverschrijdingskans van deze toetsingsgrootheid $f$ (deze is kleiner dan de linkeroverschrijdingskans):
+            \begin{align*}
+                p = P(F \ge f) = \text{Fcdf}(\text{lower}=2,8337; \text{upper}=10^{99}; \text{df1}=9; \text{df2}=9) \approx 0,081.
+            \end{align*}
+            Aangezien de $p$-waarde groter is dan $\alpha/2 = 0,025$ (tweezijdige toets!), wordt de nulhypothese $H_0$ aangenomen.
+            Er is onvoldoende bewijs om op basis van deze steekproef de aanname van gelijke varianties te verwerpen.
+            We mogen dus uitgaan van gelijke varianties.
+        }
+
+        \item Bepaal met behulp van een onafhankelijke $t$-toets of de gemiddelde hartslag in stresssituaties bij mannelijke militairen significant hoger ligt dan bij vrouwelijke militairen.
+            Baseer je conclusie op het kritieke gebied.
+            Kies opnieuw voor het significantieniveau $\alpha = 0,05$.
+        \answer{
+            We toetsen of de gemiddelde hartslag $\mu_B$ voor mannelijke militairen significant hoger is dan de gemiddelde hartslag $\mu_A$ voor vrouwelijke militairen.
+            De hypotheses kunnen we daarom als volgt defini\"eren:
+            \begin{align*}
+                H_0: \quad \mu_A \ge \mu_B \text{ (niet significant hoger) } \\
+                H_1: \quad \mu_A < \mu_B \text{ (wel significant hoger) }
+            \end{align*}
+
+            Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0,05$, en data is al verzameld voor beide populaties.
+
+            Op basis van ons antwoord bij vraag (b) mogen we aannemen dat $\sigma = \sigma_A = \sigma_B$.
+            Dat betekent dat we met de pooled variance mogen werken als schatting voor de gemeenschappelijke onbekende $\sigma$.
+            
+            \begin{align*}
+                s_P^2 = \frac{(n-1)\cdot s_A^2 + (m-1) \cdot s_B^2}{n-1+m-1} = \frac{9\cdot 0,0778 + 9\cdot 0,0529}{18} \approx 0,0653.
+            \end{align*}
+            
+            De toetsingsgrootheid van de bijbehorende $t$-toets is gelijk aan
+            \[
+                t = \frac{(\overline{x}-\overline{y}) - (\mu_A - \mu_B)}{\sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}}} \approx -5,4239, 
+            \]
+            en komt uit een $t$-verdeling met $\text{df}=18$ vrijheidsgraden.
+            Omdat we linkszijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g]$.
+            Deze kritieke grens kunnen we met de $t$-verdeling bepalen, namelijk
+            \[
+                g = \invt(\text{opp} = \alpha; \text{df}=n+m-2) = \invt(\text{opp}=0,05; \text{df}=18) \approx -1,7341
+            \]
+            
+            De toetsingsgrootheid $t$ ligt in het kritieke gebied, dus $H_0$ moet worden verworpen.
+            Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de maximale G-belasting van F-35 vliegers significant hoger is dan die van F-16 vliegers.
+        }    
+        \end{enumerate}

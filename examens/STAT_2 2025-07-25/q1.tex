@@ -1,9 +1,9 @@
 \begin{question}{20}{
     Een onderzoeksteam van het Maritime Warfare Center (MWC) onderzoekt de signaalsterkte (in decibel) van sonarpulsen die worden gereflecteerd door een nieuw type onderzeeboot.
-    Het huidige ontwerp heeft een gemiddelde gereflecteerde signaalsterkte van $\mu = 65$ decibel.
+    Het huidige (oude) ontwerp heeft een gemiddelde gereflecteerde signaalsterkte van $\mu = \mu_0 = 65$ decibel.
 
     Het MWC wil toetsen of bij het nieuwe ontwerp de gemiddelde signaalsterkte significant verschilt van het oude ontwerp.
-    In een steekproef van tien onafhankelijke metingen is bij het nieuwe ontwerp de gereflecteerde signaalsterkte in decibel gemeten met gemiddelde $63,75$ decibel en standaardafwijking $s = 0,78$.
+    In een steekproef van tien onafhankelijke metingen met het nieuwe ontwerp is de gereflecteerde signaalsterkte gemiddeld $63,75$ decibel met een standaardafwijking van $0,78$.
     Je mag aannemen dat de signaalsterktes normaal verdeeld zijn met onbekende standaardafwijking $\sigma$.
     
     Gebruik voor de hypothesetoets een significantieniveau van $\alpha=0,05$.
@@ -13,54 +13,55 @@
        Verklaar het gekozen type (tweezijdig, linkszijdig of rechtszijdig) van de toets.
     }
     \solution{
-        Aangezien we willen toetsen of de gemiddelde gereflecteerde signaalsterkte significant lager ligt dan $\mu = 65$, kunnen we de hypothesetoets als volgt defini\"eren:
+        Aangezien we willen toetsen of de gemiddelde gereflecteerde signaalsterkte significant afwijkt van $\mu = \mu_0 = 65$, kunnen we de hypothesetoets als volgt defini\"eren:
         \begin{align*}
             H_0&: \mu = 65 \quad \text{(geen significant verschil)} \rubric{2} \\
             H_1&: \mu \neq 65 \quad \text{(wel een significant verschil)} \rubric{1}
         \end{align*}
-        Dit is een tweezijdige toets, omdat de nulhypothese uitgaat van een status-quo (geen verschil) en de alternatieve hypothese juist wel een verschil aanduidt.
-         \rubric{2}
+        Dit is een tweezijdige toets, omdat de nulhypothese uitgaat van een status-quo (geen verschil) en de alternatieve hypothese juist wel een verschil aanduidt.\rubric{2}
     }
     
-    \subquestion{10}{
+    \subquestion{9}{
        Voer de bijbehorende hypothesetoets uit met behulp van het kritieke gebied.
     }
     \solution{
         We mogen uitgaan van een significantieniveau van $\alpha = 0,05$ en verder is gegeven uit de steekproefdata dat $\overline{x} = 63,75$ en $s = 0,78$.
-        Uit de centrale limietstelling volgt onder $H_0$ dat het steekproefgemiddelde $\overline{X}$ normaal verdeeld is met gemiddelde $\mu = 65$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$. \rubric{1}
+        Uit de centrale limietstelling volgt onder $H_0$ dat de toetsingsgrootheid $\overline{X}$ normaal verdeeld is met gemiddelde $\mu = \mu_0 = 65$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$. \rubric{1}
         
-        Aangezien de steekproefgrootte $n = 10$ kleiner is dan $30$ en de standaardafwijking $\sigma$ onbekend is, moeten we de $t$-verdeling gebruiken. \rubric{1}
+        Aangezien de steekproefgrootte $n = 10 < 30$ en de (populatie)standaardafwijking $\sigma$ onbekend is, moeten we de $t$-verdeling gebruiken. \rubric{1}
+        
         Deze $t$-verdeling heeft $\text{df}=n-1=9$ vrijheidsgraden.\rubric{1}
 
         De bijbehorende $t$-waarde (tweezijdig toetsen) is gelijk aan 
         \[
-            t = \invt(\text{area}=1 - \alpha/2; \text{df}=n-1) = \invt(\text{area}=0.975; \text{df}=9) = 2,2622. \rubric{2}
+            t = \invt(\text{opp}=1 - \alpha/2; \text{df}=n-1) = \invt(\text{opp}=0.975; \text{df}=9) \approx 2,2622. \rubric{2}
         \]
         
         Hieruit volgt een voorspellingsinterval voor $\overline{X}$ op basis van deze steekproef gelijk aan
         \begin{align*}
-            & [\mu - t \cdot \frac{s}{\sqrt{n}}; \mu + t \cdot \frac{s}{\sqrt{n}}] \\
+            & [\mu_0 - t \cdot \frac{s}{\sqrt{n}}; \mu_0 + t \cdot \frac{s}{\sqrt{n}}] \\
             = & [65 - 2,2622 \cdot \frac{0,78}{\sqrt{10}}; 65 + 2,2622 \cdot \frac{0,78}{\sqrt{10}}] \\
-            \approx & [64,4420; 65,5580] \rubric{3}
+            \approx & [64,4420; 65,5580] \rubric{2}
         \end{align*}  
         
         Het gemeten steekproefgemiddelde $\overline{x} = 63,75$ ligt niet in dit voorspellingsinterval -- dus wel in het kritieke gebied -- dus verwerpen we de nulhypothese.\rubric{1}
-        Er is voldoende reden om aan te nemen dat de gemiddelde gereflecteerde signaalsterkte significant lager ligt bij het nieuwe ontwerp.\rubric{1}
+        Er is voldoende reden om aan te nemen dat de gemiddelde gereflecteerde signaalsterkte significant afwijkt van het nieuwe ontwerp.\rubric{1}
     }
 
     
-    \subquestion{5}{
+    \subquestion{6}{
         Bereken de kans op een type-II fout $\beta$ als geldt dat het daadwerkelijke populatiegemiddelde van het nieuwe ontwerp gelijk is aan $\mu = 64,5$ decibel, en dat de standaardafwijking $\sigma$ gelijk is aan $0,8$.
     }
     \solution{
-        In vraag (b) hebben we bepaald dat het voorspellingsinterval voor $\overline{X}$ gelijk is aan $[64,4420; 65,5580]$. 
-        We moeten nu de kans uitrekenen op dat $\overline{X} \sim N(\mu=64,5; \sigma = \frac{0,8}{\sqrt{10}})$ een waarde aanneemt in het voorspellingsinterval voor $\overline{X}$. \rubric{1}
+        Bij een type-II fout wordt $H_0$ aangenomen, terwijl $H_1$ waar is. \rubric{1}
+        In dit geval geldt dat $H_1$ waar is, omdat $\mu = 64,5 \neq 65$. \rubric{1}
+        We willen dus de kans bepalen dat de toetsingsgrootheid een waarde in het acceptatiegebied van $H_0$ aanneemt (oftewel $[64,4420; 65,5580]$), gegeven $\mu = 64,5$. \rubric{1}
 
         In andere woorden:
         \begin{align*}
             \beta   &= P(64,4420 \le \overline{X} \le 65,5580 \mid \mu = 64.5) \\
                     &= \normalcdf(\text{lower}=64,4420 ; \text{upper}=65,5580; \mu=64.5; \sigma=\frac{0.8}{\sqrt{10}}) \\
-                    &\approx 0,5907. \rubric{3}
+                    &\approx 0,5907. \rubric{2}
         \end{align*}
 
         De kans op een type-II fout is dus gelijk aan $\beta \approx 0,5907$, oftewel $59\%$ kans dat de nulhypothese wordt aangenomen terwijl deze in werkelijkheid fout is.\rubric{1}

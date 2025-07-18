@@ -7,17 +7,18 @@
         \begin{tabular}{c|ccccccccc}
             \toprule
                 \textbf{Slaaptijd (in uren)} & $4,0$ & $4,5$ & $5,0$ & $5,5$ & $6,0$ & $6,5$ & $7,0$ & $7,5$ & $8,0$ \\
-                \textbf{Hersteltijd na zware inspanning (in uren)} & $66$ & $61$ & $63$ & $62$ & $65$ & $64$ & $57$ & $59$ & $60$ \\
+                \textbf{Hersteltijd (in uren)} & $66$ & $61$ & $63$ & $62$ & $65$ & $64$ & $57$ & $59$ & $60$ \\
             \bottomrule
         \end{tabular}
     \end{center}
 }
+    
     \subquestion{2}{
         Als we een regressie-analyse willen uitvoeren, welke variabele zou dan de afhankelijke variabele $Y$ zijn en welke variabele zou de onafhankelijke variabele $X$ zijn?
     }
     \solution{
         Bij een regressie-analyse is de meest logische keuze om slaaptijd als onafhankelijke variabele $X$ te kiezen, en de hersteltijd als afhankelijke variabele $Y$. 
-        Een langere hersteltijd verklaart niet waarom iemand langer slaapt, terwijl dat andersom wellicht wel het geval kan zijn.
+        Een langere hersteltijd verklaart niet waarom iemand langer slaapt, terwijl dat andersom wellicht wel het geval kan zijn.\rubric{2}
     }
     \subquestion{5}{
         Teken het bijbehorende spreidingsdiagram op basis van je antwoord op vraag (a).
@@ -83,7 +84,7 @@
               &= \frac{369,1111 - 6 \cdot 61,8889}{37,6667 - (6)^2} \\
               &= \frac{-2,2222}{1,6667} \approx -1,3333 \\ \rubric{2}
             a &= \overline{y} - b \cdot \overline{x} \\
-              &= 61,8889 - -1,3333 \cdot 6 \\ 
+              &= 61,8889 - (-1,3333 \cdot 6) \\ 
               &\approx 69,8889.\rubric{2}
         \end{align*}
         De formule van de regressielijn is dus gelijk aan $Y = 69,8889 - 1,3333 \cdot X$. \rubric{1}
@@ -99,7 +100,7 @@
         Daarnaast kunnen we de standaardafwijking $\sigma$ van de storingsterm $\varepsilon$ schatten:
         \begin{align*}
             s_{\varepsilon} &= \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
-                               &= \sqrt{ \frac{9}{7} \cdot \left( 3837,8889 - 69,8889 \cdot 61,8889 - -1,3333 \cdot 369,1111 \right) } \\ 
+                               &= \sqrt{ \frac{9}{7} \cdot \left( 3837,8889 - 69,8889 \cdot 61,8889 - (-1,3333 \cdot 369,1111) \right) } \\ 
                                &\approx 2,456. \rubric{3}
         \end{align*}
 
@@ -122,6 +123,7 @@
             &\approx [55,9021; 65,8757]. \rubric{2}
         \end{align*}
         
-        Met \SI{90}{\percent} betrouwbaarheid ligt een toekomstige uitkomst van $Y$ voor gegeven $X = 6,75$ tussen $55,9021$ en $65,8757$.
+        Met \SI{90}{\percent} zekerheid zal de hersteltijd van een willekeurige cadet die $6$ uur en $45$ minuten heeft geslapen tussen ongeveer 
+        $56$ en $66$ uur liggen.
     }
 \end{question}

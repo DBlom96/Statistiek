@@ -1,8 +1,8 @@
 \section*{Statistiek deel 2:}
 
-\subsection*{Betrouwbaarheidsintervallen voor het gemiddelde $\mu$}
-    \subsubsection*{Geval 1: $\sigma$ bekend}
-        \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
+\subsection*{Betrouwbaarheidsintervallen voor het gemiddelde $\mu$ ($\sigma$ bekend)}
+    \begin{itemize}
+        \item \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
         \[
             z_{\alpha/2} = \text{InvNorm}(\text{opp}=1-\alpha/2; \mu=0; \sigma=1)
         \]
@@ -10,30 +10,38 @@
             [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
         \]
 
-        \textbf{Minimale steekproefomvang voor \boldmath$100\cdot(1-\alpha)\%$-BI als \boldmath$\mu$ maximaal \boldmath$\pm a$ mag afwijken:}
+        \item \textbf{Minimale steekproefomvang voor \boldmath$100\cdot(1-\alpha)\%$-BI als \boldmath$\mu$ maximaal \boldmath$\pm a$ mag afwijken:}
         \[
             n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{a} \right)^2
         \]
+    \end{itemize}
 
-    \subsubsection*{Geval 2: $\sigma$ NIET bekend}
-        \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
-        \[
-            t = \invt(\text{opp}=1-\alpha/2; \text{df}=n-1)
-        \]
-        \[
-            [\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}]
-        \]
+\subsection*{Betrouwbaarheidsintervallen voor het gemiddelde $\mu$ ($\sigma$ onbekend)}
+    \begin{itemize}
+        \item \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
+            \[
+                t = \invt(\text{opp}=1-\alpha/2; \text{df}=n-1)
+            \]
+            \[
+                [\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}]
+            \]
 
-        \textbf{Minimale steekproefomvang voor $100\cdot(1-\alpha)\%$-BI als $\mu$ maximaal \boldmath$\pm a$ mag afwijken:}
-        \[
-            \text{GR tabel (voor verschillende $n$):} \quad \frac{s}{\sqrt{n}} \cdot \text{InvT}(\text{opp}=1-\alpha/2; \text{df}=n-1) \le a
-        \]
+        \item \textbf{Minimale steekproefomvang voor $100\cdot(1-\alpha)\%$-BI als $\mu$ maximaal \boldmath$\pm a$ mag afwijken:}
+            \[
+                \text{GR tabel (voor verschillende $n$):} \quad \frac{s}{\sqrt{n}} \cdot \text{InvT}(\text{opp}=1-\alpha/2; \text{df}=n-1) \le a
+            \]
+            
+            {\itshape NB: zodra $n \ge 30$, vallen de normale en de $t$-verdeling nagenoeg samen. Je mag dan rekenen met de schatting $s$ in plaats van de daadwerkelijke (onbekende) $\sigma$.}
     
-    {\itshape NB: zodra $n \ge 30$, vallen de normale en de $t$-verdeling nagenoeg samen. Je mag dan de schatting $s$ gebruiken als $\sigma$, zelfs als $\sigma$ zelf niet bekend is.}
 
+    \item {\bfseries Onderscheidend vermogen (toets met $H_0: \mu=\mu_0$ vs. $H_1: \mu \neq \mu_0$, en gegeven $\mu = \mu_1$)}
+        \begin{align*}
+            1 - \beta = P(\overline{X} \text{ neemt waarde aan in het kritieke gebied} \mid \mu = \mu_1)
+        \end{align*}
+    \end{itemize}
 \subsection*{Betrouwbaarheidsintervallen voor de binomiale succeskans $p$}
     \textbf{Betrouwbaarheidsinterval voor \boldmath$p$ (Clopper-Pearson):}
-    Gegeven $n$ Bernoulli-experimenten, waarvan $k$ successen.
+    Gegeven een binomiale verdeling met $n$ Bernoulli-experimenten en onbekende $p$, en uitkomst $k$.
     \begin{enumerate}
         \item Bereken de succeskans $p_1$ zodat geldt $P(X \le k) = \binomcdf(n; p; k) = \alpha/2$
         \item Bereken de succeskans $p_2$ zodat geldt $P(X \ge k) = 1 - \binomcdf(n; p; k-1) = \alpha/2$
@@ -44,21 +52,99 @@
     \textbf{Stappenplan hypothesetoetsen}
     \begin{enumerate}
         \item Definieer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
-        \item Bepaal het significantieniveau $\alpha$ (kans op Type-I fout, onterecht $H_0$ verwerpen)
+        \item Bepaal het significantieniveau $\alpha$ (kans op verwerpen van $H_0$ terwijl $H_0$ waar is $\rightarrow$ type-I fout)
         \item Verzamel data voor de toetsingsgrootheid
         \item Bereken de toetsingsgrootheid
+        \begin{itemize}
+            \item Uitgaande van de nulhypothese $H_0$ maken we aannames over de kansverdeling van de toetsingsgrootheid!
+        \end{itemize}
         \item Geef een conclusie (met behulp van het kritieke gebied / $p$-waarde) en vertaal deze terug naar de originele probleemcontext.
     \end{enumerate}
 
     \newpage
     \textbf{Drie typen hypothesetoetsen: linkszijdig, tweezijdig, rechtszijdig}
-    \begin{center}
-        \includegraphics[width=0.72\linewidth]{left_sided.png}
-        \includegraphics[width=0.72\linewidth]{two_sided.png}
-        \includegraphics[width=0.72\linewidth]{right_sided.png}
-    \end{center}
-    {\itshape \textbf{NB:} voor elke kansverdeling (normaal, t, $\chi^2$, $F$) kun je het kritieke gebied berekenen door met de GR solver een vergelijking met $\alpha$ (links- of rechtszijdig) of twee vergelijkingen met $\alpha/2$ (tweezijdig) op te lossen. De $p$-waarde (overschrijdingskans) bepaal je met de CDF-functie van de desbetreffende kansverdeling.}
+    
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            {\bfseries Linkszijdige toets}
+            
+            Kritiek gebied:
+            
+            {\color{red} $(-\infty; g]$}
+            
+            \includegraphics[width=\linewidth]{left_sided.png}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            {\bfseries Tweezijdige toets}
+            
+            Kritiek gebied: 
+            
+            {\color{red} $(-\infty; g_1]$ en $[g_2; \infty)$}
+            
+            \includegraphics[width=\linewidth]{two_sided.png}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            {\bfseries Rechtszijdige toets}
+            
+            Kritiek gebied:  
+            
+            {\color{red} $[g; \infty)$}
+            
+            \includegraphics[width=\linewidth]{right_sided.png}
+        \end{center}
+    \end{minipage}
 
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{m{2.5cm}|ccc}
+            \toprule
+                \textbf{Kansverdeling (onder $H_0$)} & \textbf{Linkszijdig} & \textbf{Tweezijdig} & \textbf{Rechtszijdig} \\
+
+            \midrule
+                \multirow{2}*{$N(\mu; \sigma)$} & \multirow{2}*{$g = \invnorm(\alpha; \mu; \sigma)$} & $g_1 = \invnorm(\text{opp}=\frac{\alpha}{2}; \mu; \sigma)$ & \multirow{2}*{$g = \invnorm(1-\alpha; \mu; \sigma)$}\\
+                & & $g_2 = \invnorm(\text{opp}=1-\frac{\alpha}{2}; \mu; \sigma)$ & \\
+            \midrule
+                \multirow{2}*{$t(\text{df})$} & \multirow{2}*{$g = \invt(\alpha; \text{df})$} & $g_1 = \invt(\text{opp}=\frac{\alpha}{2}; \text{df})$ & \multirow{2}*{$g = \invt(1-\alpha; \text{df})$}\\
+                & & $g_2 = \invt(\text{opp}=1-\frac{\alpha}{2}; \text{df})$ & \\
+            \midrule
+                \multicolumn{4}{c}{\emph{Grenzen die met de solver functie moeten worden opgelost:}} \\
+            \midrule
+                $\chi^2(\text{df})$ & \multirow{2}*{$\chi^2\text{cdf}(0; g; \text{df}) = \alpha$} & $\chi^2\text{cdf}(0; g_1; \text{df}) = \frac{\alpha}{2}$ & \multirow{2}*{$\chi^2\text{cdf}(g; 10^{99}; \text{df}) = \alpha$}\\
+                (chikwadraat) & & $\chi^2\text{cdf}(g_2; 10^{99}; \text{df}) = \frac{\alpha}{2}$ & \\
+            \midrule
+                $F(\text{df}_A; \text{df}_B)$ & \multirow{2}*{$\text{Fcdf}(0; g; \text{df}_A; \text{df}_B) = \alpha$} & $\text{Fcdf}(0; g_1; \text{df}_A; \text{df}_B) = \frac{\alpha}{2}$ & \multirow{2}*{$\text{Fcdf}(g; 10^{99}; \text{df}_A; \text{df}_B) = \alpha$}\\
+                & & $\text{Fcdf}(g_2; 10^{99}; \text{df}_A; \text{df}_B) = \frac{\alpha}{2}$ & \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+    \textbf{$p$-waardes uitrekenen (gegeven een theoretische en geobserveerde toetsingsgrootheid $T$ en $t$)}
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{m{2.5cm}|cc}
+            \toprule
+                \textbf{Kansverdeling (onder $H_0$)} & \textbf{Linkszijdig ($P(T \le t)$)} & \textbf{Rechtszijdig ($P(T \ge t)$)} \\
+            \midrule
+                $N(\mu; \sigma)$ & $p = \normalcdf(-10^{99}; t; \mu; \sigma)$ & $p = \normalcdf(t; 10^{99}; \mu; \sigma)$ \\
+            \midrule
+                $t(\text{df})$ & $p = \tcdf(-10^{99}; t; \text{df})$ & $p = \tcdf(t; 10^{99}; \text{df})$\\
+            \midrule
+                $\chi^2(\text{df})$ & $p = \chi^2\text{cdf}(0; t; \text{df})$ & $p = \chi^2\text{cdf}(t; 10^{99}; \text{df})$ \\
+            \midrule
+                $F(\text{df}_A; \text{df}_B)$ & $p = \text{Fcdf}(0; t; \text{df}_A; \text{df}_B)$ & $p = \text{Fcdf}(t; 10^{99}; \text{df}_A; \text{df}_B)$ \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+    {\itshape NB: Om met de $p$-waarde een conclusie te trekken uit een hypothesetoets vergelijken we de $p$-waarde met het significantieniveau $\alpha$. Let op: bij tweezijdige toetsen neem je het minimum van de linkszijdige en rechtszijdige $p$-waarde en vergelijk je deze met $\alpha/2$!}
     \newpage
     \textbf{Soorten toetsen}
     \begin{table}[H]
@@ -80,9 +166,9 @@
             \midrule
                 \multicolumn{3}{c}{\textbf{Verschiltoetsen (op basis van twee populaties $A$ en $B$)}} \\
             \midrule
-                $F$-toets: $\sigma_A^2 = \sigma_B^2$ & $F = \frac{S_1^2}{S_2^2}$ & $F(df1, df2)$ \\
+                $F$-toets: $\sigma_A^2 = \sigma_B^2$ & $F = \frac{S_A^2}{S_B^2}$ & $F(\text{df}_A, \text{df}_B)$ \\
                 $z$-toets & $V =\overline{X_A} - \overline{X_B}$ & $N\left(\mu_A - \mu_B; \sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}\right)$ \\
-                $t$-toets ($\sigma_A^2 = \sigma_B^2$) & $T = \frac{(\overline{x_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_P^2}{n} + \frac{S_P^2}{m}}}$ & $t(\text{df}=n+m-2)$ \\
+                $t$-toets ($\sigma_A^2 = \sigma_B^2$) & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_P^2}{n} + \frac{S_P^2}{m}}}$ & $t(\text{df}=n+m-2)$ \\
                 $t$-toets ($\sigma_A^2 \neq \sigma_B^2$) & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_A^2}{n} + \frac{S_B^2}{m}}}$ & $t(\text{df}=\min(n-1;m-1))$ \\
             \bottomrule
         \end{tabular}
@@ -94,10 +180,10 @@
 
         % Nodes
         \node (sigmaKnown) [process] {$\sigma_A$ en $\sigma_B$ bekend?};
-        \node (ztest) [process, below of=sigmaKnown, xshift=-4cm, align=center] {Voer $z$-toets uit met \\ $\displaystyle V = \overline{X_A} - \overline{X_B} \sim N\left(\mu_A - \mu_B; \sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}\right)$};
-        \node (varEqual) [process, below of=sigmaKnown, xshift=4cm, align=center] {Voer $F$-toets uit \\ Wordt $H_0: \sigma_A^2 = \sigma_B^2$ geaccepteerd?};
-        \node (pooledT) [process, below of=varEqual, xshift=-4cm, yshift=-1.5cm, align=center] {Voer $t$-toets ($\sigma_A^2 = \sigma_B^2$) uit \\ met ``pooled variance'' \\ $\displaystyle s_P^2 = \frac{(n-1)\cdot s_A^2 + (m-1) \cdot s_B^2}{n-1+m-1}$};
-        \node (welchT) [process, below of=varEqual, xshift=2cm, yshift=-1.5cm, align=center] {Voer $t$-toets ($\sigma_A^2 \neq \sigma_B^2$) uit \\ $\displaystyle t = \frac{(\overline{x_A} - \overline{x_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{s_A^2}{n} + \frac{s_B^2}{m}}}$}; % \\ ($\text{df}=\min(n-1; m-1)$)};
+        \node (ztest) [process, below of=sigmaKnown, xshift=-4cm, align=center] {Voer $z$-toets uit met \\[1ex] $\displaystyle V = \overline{X_A} - \overline{X_B} \sim N\left(\mu_A - \mu_B; \sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}\right)$};
+        \node (varEqual) [process, below of=sigmaKnown, xshift=4cm, align=center] {Voer $F$-toets uit \\[1ex] Wordt $H_0: \sigma_A^2 = \sigma_B^2$ geaccepteerd?};
+        \node (pooledT) [process, below of=varEqual, xshift=-4cm, yshift=-1.5cm, align=center] {Voer $t$-toets ($\sigma_A^2 = \sigma_B^2$) uit \\ met ``pooled variance'' \\[1ex] $\displaystyle s_P^2 = \frac{(n-1)\cdot s_A^2 + (m-1) \cdot s_B^2}{n-1+m-1}$ \\[1ex] $\displaystyle t = \frac{(\overline{x_A}-\overline{x_B})-(\mu_A-\mu_B)}{\sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}}}$ \\[1ex] $\text{df} = n+m-2$};
+        \node (welchT) [process, below of=varEqual, xshift=2cm, yshift=-1.5cm, align=center] {Voer $t$-toets ($\sigma_A^2 \neq \sigma_B^2$) uit \\[1ex] $\displaystyle t = \frac{(\overline{x_A} - \overline{x_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{s_A^2}{n} + \frac{s_B^2}{m}}}$ \\[1ex] $\text{df} = \min(n-1, m-1)$}; % \\ ($\text{df}=\min(n-1; m-1)$)};
 
         % Arrows
         \draw [arrow] (sigmaKnown) -- node[above, sloped] {ja} (ztest);
@@ -118,7 +204,7 @@
 
 \textbf{Correlatieco\"effici\"ent van Spearman:}
 \[
-    r_s = 1 - \frac{6 \sum_i d_i^2}{n^3-n}
+    r_s = 1 - \frac{6 \cdot \sum_i d_i^2}{n^3-n}
 \]
 
 \textbf{Co\"effici\"enten van de lineaire regressielijn $Y = a + b\cdot X$:}
@@ -129,10 +215,10 @@
 
 \textbf{Schatting van de variantie van de storingsterm $\varepsilon$:}
 \begin{align*}
-    s_{\varepsilon} &= \frac{\sum e_i^2}{n - 2} = \frac{\sum \left(y_i - (a + b \cdot x_i)\right)^2}{n - 2}=  \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
+    s_{\varepsilon}^2 &= \frac{\sum e_i^2}{n - 2} = \frac{\sum \left(y_i - (a + b \cdot x_i)\right)^2}{n - 2}=  \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) \\ 
 \end{align*}
 
-\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor de gemiddelde $Y$ bij gegeven $X = x_0$:}
+\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor de gemiddelde $Y$ bij een gegeven $X = x_0$:}
 \[
     t = \invt(\text{opp} = 1 - \alpha/2; \text{df} = n - 2)
 \]
@@ -143,7 +229,7 @@
     [a+b\cdot x_0 - t \cdot s_\mu; a+b\cdot x_0 + t \cdot s_\mu]
 \]
 
-\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor $Y$ bij gegeven $X = x_0$:}
+\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor $Y$ bij een gegeven $X = x_0$:}
 \[
     t = \invt(\text{opp} = 1 - \alpha/2; \text{df} = n - 2)
 \]

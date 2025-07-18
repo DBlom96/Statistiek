@@ -1,7 +1,7 @@
 \begin{question}{28}{
     Bij een onderzoek binnen de Koninklijke Luchtmacht wordt gekeken naar de effectiviteit van de training van piloten van gevechtsvliegtuigen.
     Tijdens de training neemt een piloot plaats in een speciale centrifuge, waarbij hij of zij aan hoge G-krachten wordt blootgesteld.
-    Hierbij wordt geoefend met de Anti-G Straining Maneuver (AGSM), een speciale ademhalingstechniek die helpt om langer weerstand te kunnen bieden aan de hoge G-krachten.
+    Hierbij wordt geoefend met de \emph{Anti-G Straining Maneuver (AGSM)}, een speciale ademhalingstechniek die helpt om langer weerstand te kunnen bieden aan de hoge G-krachten.
 
     De focus van het onderzoek ligt op het bepalen van de maximale G-belasting totdat een piloot verstoringen ervaart in het gezichtsveld, zoals tunnelvisie of tijdelijke blackouts.
     Hierbij zijn voor twee populaties steekproeven genomen, namelijk voor de populatie F-16 vliegers (populatie $A$) en voor de populatie F-35 vliegers (populatie $B$).
@@ -9,8 +9,8 @@
     \begin{center}
             \begin{tabular}{c|cccccccccc}
                 \toprule
-                    \textbf{Maximale G-belasting populatie $A$ (in G)} & $7,4$ & $8,1$ & $8,3$ & $7,8$ & $7,9$ & $8,0$ & $7,7$ & $8,2$ & $7,6$ & $8,0$ \\
-                    \textbf{Maximale G-belasting populatie $B$ (in G)} & $8,3$ & $8,7$ & $8,9$ & $8,2$ & $8,5$ & $8,4$ & $8,8$ & $8,6$ & $8,3$ & $8,5$ \\
+                    \textbf{G-belasting F-16 vliegers (in G)} & $7,4$ & $8,1$ & $8,3$ & $7,8$ & $7,9$ & $8,0$ & $7,7$ & $8,2$ & $7,6$ & $8,0$ \\
+                    \textbf{G-belasting F-35 vliegers (in G)} & $8,3$ & $8,7$ & $8,9$ & $8,2$ & $8,5$ & $8,4$ & $8,8$ & $8,6$ & $8,3$ & $8,5$ \\
                 \bottomrule
             \end{tabular}
         \end{center}
@@ -25,7 +25,7 @@
         We berekenen het steekproefgemiddelde $\overline{x}$ voor de steekproef uit populatie $A$ als volgt.
         De steekproefgrootte is gelijk aan $n = 10$.
         \begin{align*}
-            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 7,4 + 8,1 + \ldots + 8,0 }{ 10 } \approx 7,9 \rubric{2}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 7,4 + 8,1 + \ldots + 8,0 }{ 10 } \approx 7,9. \rubric{2}
         \end{align*}
     
         We berekenen de steekproefvariantie $s_A^2$ als volgt:
@@ -49,7 +49,7 @@
     }
 
     \subquestion{10}{
-        Voer een $F$-toets uit en bepaal met behulp van de $p$-waarde of de varianties in de maximale G-belasting gelijk is voor beide populaties. Kies voor het significantieniveau $\alpha = 0,05$.
+        Voer een $F$-toets uit en bepaal met behulp van de $p$-waarde of de varianties in de maximale G-belasting gelijk zijn voor beide populaties. Kies voor het significantieniveau $\alpha = 0,05$.
     }
     \solution{
         We noteren de populaties F-16 en F-35 vliegers respectievelijk met $A$ en $B$.
@@ -67,12 +67,13 @@
             F = \frac{S_A^2}{S_B^2}, 
         \]
         en volgt een $F(n-1, m-1)$-verdeling, oftewel een $F(9,9)$-verdeling. \rubric{2}
+
         De geobserveerde toetsingsgrootheid is gelijk aan
         \[
             f = \frac{s_A^2}{s_B^2} = \frac{0,0778}{0,0529} \approx 1,4707. \rubric{2}
         \]
         
-        De $p$-waarde (rechteroverschrijdingskans) van deze toetsingsgrootheid $f$ is gelijk aan
+        In dit geval is de $p$-waarde gelijk aan de rechteroverschrijdingskans van deze toetsingsgrootheid $f$ (deze is kleiner dan de linkeroverschrijdingskans):
         \begin{align*}
             p = P(F \ge f) = \text{Fcdf}(\text{lower}=1,4707; \text{upper}=10^{99}; \text{df1}=9; \text{df2}=9) \approx 0,2874.\rubric{2}
         \end{align*}

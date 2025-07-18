@@ -6,9 +6,10 @@
     \overline{x} = \frac{\sum_{i} x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}
 \]
 
-\textbf{Steekproefvariantie:}
+\textbf{Steekproefvariantie en steekproefstandaardafwijking:}
 \begin{align*}
-    s^2 &= \frac{\sum_{i} (x_i-\overline{x})^2}{n-1} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} \hfill \tag{optie 1} \\%= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
+    s^2 &= \frac{\sum_{i} (x_i-\overline{x})^2}{n-1} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} \\ %= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
+    s   &= \sqrt{s^2} = \sqrt{ \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} }
 \end{align*}
 
 \textbf{Rekenregels kansrekening:}
@@ -45,20 +46,17 @@
 \textbf{Speciale kansverdelingen:}
 \begin{itemize}
     \item $X \sim \text{Binomiaal}(n, p)$: tellen van aantal successen bij onafhankelijke kansexperimenten met twee uitkomsten (Bernoulli-experimenten): succes / mislukking.
-    \begin{itemize}
-        \item $n$: aantal Bernoulli-experimenten
-        \item $p$: succeskans per experiment
-    \end{itemize}
+    
+    {\bfseries Parameters:} het aantal Bernoulli-experimenten $n$ en de succeskans per experiment $p$.
+    
     \item $X \sim \text{Poisson}(\lambda \cdot t)$: tellen van aantal ``gebeurtenissen'' in een ``interval'' van tijd / ruimte.
-    \begin{itemize}
-        \item $\lambda$: gemiddeld aantal gebeurtenissen per eenheid van tijd / ruimte.  
-        \item $t$: aantal eenheden van tijd / ruimte van het interval
-        $\rightarrow$ \textbf{Voorbeeld:} als ``dag'' de tijdseenheid is, dan bestaat ``week'' uit $t=7$ tijdseenheden. 
-    \end{itemize}
+    
+    {\bfseries Parameters:} het gemiddelde aantal gebeurtenissen $\lambda$ per meeteenheid (tijd / ruimte) en het aantal meeteenheden $t$.
+    
+    $\rightarrow$ \emph{Voorbeeld: bij de meeteenheid van een dag bestaat een week uit $t=7$ meeteenheden.} 
     \item $T \sim \text{Exponentieel}(\lambda)$: meten van de tijd / ruimte tot de volgende gebeurtenis.
-    \begin{itemize}
-        \item $\lambda$: gemiddeld aantal gebeurtenissen per eenheid van tijd / ruimte.  
-    \end{itemize}
+
+    {\bfseries Parameter:} het gemiddelde aantal gebeurtenissen $\lambda$ per meeteenheid (tijd / ruimte).  
 \end{itemize}
 \newpage
 \textbf{Verwachtingswaarde en variantie van veelgebruikte kansverdelingen:}
@@ -128,24 +126,6 @@
         \bottomrule
     \end{tabular}
 \end{table}
-% \begin{itemize}
-%     \item Continue kansvariabelen met kansdichtheidsfunctie $f$:
-%     \[
-%         \int_{a}^{b} f(x)\, dx = \text{fnInt}(f(x); x; a; b)
-%     \]
-%     \item Binomiaal verdeelde kansvariabele $X \sim \text{Binomiaal}(n; p)$:
-%     \begin{itemize}
-%         \item $P(X = k) = \text{binompdf}(n; p; k)$ en $P(X \le k) = \text{binomcdf}(n; p; k)$
-%     \end{itemize}
-%     \item Normaal verdeelde kansvariabele $X \sim N(\mu; \sigma)$:
-%     \begin{itemize}
-%         \item $P(a \le X \le b) = \text{normalcdf}(a; b; \mu; \sigma)$ en $P(X \le g) = p \rightarrow g = \text{invNorm}(p; \mu; \sigma)$
-%     \end{itemize}
-%     \item Poisson verdeelde kansvariabele $X \sim \text{Poisson}(\lambda)$:
-%     \begin{itemize}
-%         \item $P(X = k) = \text{poissonpdf}(\lambda; k)$ en $P(X \le k) = \text{poissoncdf}(\lambda; k)$
-%     \end{itemize}
-% \end{itemize}
 
 \textbf{$z$-score:}
 \[
@@ -155,6 +135,6 @@
 \textbf{Centrale limietstelling:}
 Gegeven $n$ kansvariabelen $X_1, X_2, \ldots, X_n$ die onderling onafhankelijk zijn en dezelfde kansverdeling hebben met een verwachtingswaarde $\mu$ en standaardafwijking $\sigma$, dan geldt (bij benadering) dat
 \begin{itemize}
-    \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met $E[\sum X] = n \cdot \mu$ en $\sigma(\overline{X}) = \sqrt{n} \cdot \sigma$.
-    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met $E[\overline{X}]=\mu$ en $\sigma(\overline{X})=\frac{\sigma}{\sqrt{n}}$.
+    \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met verwachtingswaarde $n \cdot \mu$ en standaardafwijking $\sqrt{n} \cdot \sigma$.
+    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
 \end{itemize}

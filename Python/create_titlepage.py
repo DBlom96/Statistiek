@@ -7,7 +7,7 @@ import comtypes.client
 import locale
 
 # Load template
-doc = Document(fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\tentamenvoorblad.docx")
+doc = Document(fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\Tentamenvoorblad.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
 vaknaam = "Statistiek (deel 2)"
@@ -24,8 +24,8 @@ if formatted_date[0] == "0":
     formatted_date = formatted_date[1:]
 print(formatted_date)
 
-doc_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.docx"
-pdf_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.pdf"
+doc_path = fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.docx"
+pdf_path = fr"C:\Users\danny\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.pdf"
 
 # Replace placeholders
 replacements = {
