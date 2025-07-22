@@ -1,0 +1,124 @@
+\begin{question}{30}{
+    De afdeling Dienstencentrum Human Resources (DCHR) van Defensie wil nagaan of het wervingsproces effectief en vlot verloopt.
+    De doelstelling is dat sollicitanten binnen \textbf{45 dagen} (exclusief veiligheidsonderzoek) na hun schriftelijke sollicitatie een formeel aanstellingsvoorstel ontvangen.
+    
+    Om de huidige omstandigheden van werving en selectie te onderzoeken, zijn doorlooptijden van dertien recent aangestelde burgermedewerkers verzameld (in dagen):
+    \begin{align*}
+        39, 42, 44, 48, 47, 43, 31, 46, 40, 42, 43, 49, 44
+    \end{align*}
+    Neem aan dat de doorlooptijden normaal verdeeld zijn, elke procedure met dezelfde verwachtingswaarde en standaardafwijking.
+}
+    \subquestion{7}{
+        Bereken het steekproefgemiddelde en de steekproefstandaardafwijking van de doorlooptijden van sollicitatieprocedures.
+    }
+    \solution{
+        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 42 + 45 + \ldots + 47 }{ 13 } \approx 45,9231.\rubric{2}
+        \end{align*}
+    
+
+        We berekenen de steekproefvariantie $s^2$ als volgt:
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (42 - 45,9231)^2 + (45 - 45,9231)^2 + \ldots + (47 - 45,9231)^2 }{ 13 - 1 } \\
+                &\approx 21,5769.\rubric{3}
+        \end{align*}
+    
+
+        We berekenen de steekproefstandaardafwijking $s$ door te wortel van de steekproefvariantie $s^2$ te nemen:
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 21,5769 } \approx 4,6451.\rubric{2}
+        \end{align*}
+    }
+
+    \subquestion{6}{
+        Bereken een \SI{94}{\percent}-betrouwbaarheidsinterval voor de gemiddelde doorlooptijd $\mu$ van sollicitatieprocessen, op grond van bovengenoemde steekproef,
+        zonder daarbij gebruik te maken van de optie TESTS/Interval van de grafische rekenmachine.
+        Rond de grenzen van het interval af op gehele dagen, dusdanig dat het betrouwbaarheidsniveau gewaarborgd blijft.
+    }
+    \solution{
+        Laat $X \sim N(\mu=?; \sigma=?)$ de doorlooptijd zijn van een willekeurige sollicitatieprocedure.
+        Volgens de centrale limietstelling is de gemiddelde doorlooptijd $\overline{X} = \frac{X_1 + X_2 + \ldots + X_{13}}{13}$ van 13 procedures ook normaal verdeeld, met onbekende verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{13}}$. \rubric{1}
+        Omdat naast de verwachtingswaarde $\mu$ ook de standaardafwijking $\sigma$ onbekend is (en bovendien de steekproefgrootte $n = 13 < 30$), moet de $t$-verdeling worden gebruikt.\rubric{1}
+        De $t$-waarde die hoort bij $94\%$ betrouwbaarheid, oftewel $\alpha = 0,06$, is (in het geval van tweezijdige intervallen) gelijk aan
+        \[
+            t = \invt(opp=1-\frac{\alpha}{2}; df=n-1) = \invt(opp=0,97; df=12) \approx 2,0764. \rubric{1}
+        \]
+        Omdat $\sigma$ dus onbekend is, gebruiken we de steekproefstandaardafwijking $s = 4,6451$ als schatter.
+        Het betrouwbaarheidsinterval worden dan gegeven door
+        \begin{align*}
+            [\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] 
+                &= [45,9231 - 2,0764 \cdot \frac{4,6451}{\sqrt{13}}; 45,9231 + 2,0764 \cdot \frac{4,6451}{\sqrt{13}}] \\
+                &= [43,2480; 48,5982] \rubric{2}
+        \end{align*}
+        Om de betrouwbaarheid te waarborgen, mag het interval niet kleiner worden, dus naar buiten afronden: $[43; 49]$. 
+        Met \SI{94}{\percent} betrouwbaarheid ligt de gemiddelde doorlooptijd van een sollicitatieprocedure tussen de $43$ en $49$ dagen.\rubric{1}
+    }
+
+    \subquestion{9}{
+        Toets op basis van de gegeven steekproef of de gemiddelde doorlooptijd van sollicitatieprocedures voldoet aan de bovengenoemde doelstelling van maximaal 45 dagen.
+        Geef je conclusie op basis van de $p$-waarde.
+        Kies in dit geval als onbetrouwbaarheid $\alpha = 0,05$.
+        Leg in simpele bewoordingen uit wat de uitslag van deze toets betekent voor de doorlooptijd van sollicitatieprocedures binnen Defensie.
+    }
+    \solution{
+        In deze hypothesetoets hebben we we te maken met een $t$-toets met nul- en alternatieve hypothese als volgt: \rubric{1}
+        \begin{align*}
+            H_{0}: \mu &\le 45 \tag{gemiddelde voldoet aan de doelstelling} \\ \rubric{1}
+            H_{1}: \mu &> 45 \tag{gemiddelde voldoet NIET aan de doelstelling} \rubric{1}
+        \end{align*}
+
+        In dit geval werken we met een rechtszijdige toets (alternatieve hypothese heeft vorm $>$), dus het kritieke gebied is van de vorm $[g, \infty)$.\rubric{1}
+        We willen de (kleinste) grens $g$ zoeken zodanig dat de kans op een type-I fout ($H_0$ verwerpen terwijl die waar is) kleiner is dan $\alpha=0,05$.
+
+        Onder de nulhypothese is de gemiddelde doorlooptijd $\overline{X}$ van 13 willekeurige sollicitatieprocedures normaal verdeeld met verwachtingswaarde $\mu = 45$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.\rubric{1}
+        Omdat $\sigma$ onbekend is en $n = 18 < 30$, gebruiken we opnieuw de $t$-verdeling en $s = 4,6451$. \rubric{1}
+        Er geldt dus, omdat we eenzijdig toetsen, dat 
+        \[
+            t = \invt(opp=1-\alpha; df=n-1) = \invt(opp=0,95; df=12) \approx 2,1788. \rubric{1}
+        \]
+        (merk op dat de $t$-waarde anders is, omdat we met een ander betrouwbaarheidsniveau werken!).
+        
+        De bijbehorende grenswaarde vinden we nu met
+        \[
+            g = \mu + t \cdot \frac{s}{\sqrt{18}} = 45 + 2,1788 \cdot \frac{4,6451}{\sqrt{13}} \approx 47,8070. \rubric{1}
+        \]
+
+        Het steekproefgemiddelde $\overline{x} \approx 45,9231$ is kleiner dan deze ondergrens $g \approx 47,8070$ van het kritieke gebied, dus $H_0$ wordt niet verworpen. 
+        Dit betekent dat met deze toets niet kan worden aangetoond dat de gemiddelde doorlooptijd buiten de gestelde doelstelling valt. \rubric{2}
+    } 
+    
+    \subquestion{8}{
+        Het Dienstencentrum Human Resources breidt haar onderzoek uit.
+        In een grootschalige onderzoek met $386$ burgermedewerkers, blijkt dat $102$ burgermedewerkers binnen 45 dagen een aanstellingsvoorstel heeft ontvangen.
+        Bereken met de Clopper-Pearson methode een \SI{95}{\percent}-betrouwbaarheidsinterval voor het percentage burgermedewerkers dat binnen 45 dagen een aanstellingsvoorstel heeft ontvangen.
+    }
+    \solution{
+       Laat $X$ het aantal burgermedewerkers zijn dat binnen $45$ dagen een aanstellingsvoorstel heeft ontvangen. 
+        Aangezien de steekproefomvang gelijk is aan $386$ kiesgerechtigde Nederlanders, is $X$ binomiaal verdeeld met $n=386$ en nog onbekende succeskans $p$. \rubric{1}
+    
+        We bepalen een \SI{95}{\percent}-betrouwbaarheidsinterval voor $p$ met behulp van de Clopper-Pearson methode.
+        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0,05$.
+
+        De Clopper-Pearson methode werkt als volgt:
+        \begin{enumerate}
+            \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=102$ gelijk is aan $\alpha/2$, oftewel $P(X \le 102) = \alpha/2 = 0,025$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= \binomcdf(n=386; p_1=X; k=102) \\
+                y_2 &= 0,025 \rubric{2}
+            \end{align*}
+            De solver optie geeft een waarde van $p_1 \approx 0,3112$.\rubric{1}
+            \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=102$ gelijk is aan $\alpha/2$, oftewel $P(X \ge 102) = 1 - P(X \le 101) = \alpha/2 = 0,025$.
+            Voer hiervoor in het functiescherm van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= 1 - \binomcdf(n=386; p_1=X; k=101) \\
+                y_2 &= 0,025 \rubric{2}
+            \end{align*}
+            De solver optie geeft een waarde van $p_2 \approx 0,2209$.\rubric{1}
+        \end{enumerate}
+        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel met \SI{95}{\percent}-betrouwbaarheid ligt het percentage burgermedewerkers dat binnen $45$ dagen een aanstellingsvoorstel heeft ontvangen tussen ongeveer \SI{22}{\percent} en \SI{31}{\percent}. \rubric{1}
+    }  
+
+\end{question}

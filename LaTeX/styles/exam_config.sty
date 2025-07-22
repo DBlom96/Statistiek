@@ -8,6 +8,7 @@
     \newpage
     \refstepcounter{question}
     \textbf{Opgave \arabic{question} (#1 punten)} {#2}
+    \vspace{1cm}
     \begin{itemize}[label={}, left=1.5em, itemsep=1.5em]
 }{
     \end{itemize}
@@ -33,7 +34,7 @@
 
 % Solution Toggle (to show/hide solutions)
 \newif\ifshowanswers
-\showanswerstrue % Toggle this to hide / show solutions
+\showanswersfalse % Toggle this to hide / show solutions
 
 % Rubric command
 \newcommand{\rubric}[1]{%
