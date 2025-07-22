@@ -1,0 +1,64 @@
+\begin{question}{15}{
+    A set of $n$ independent and identically distributed random variables $X_{1}, X_{2}, \ldots, X_{n}$ are drawn from a distribution with the probability density function:
+    \[
+        f(x; \theta) = \frac{1}{\theta} e^{-\frac{x}{\theta}}, \quad x \ge 0, \quad \theta > 0
+    \]
+}
+
+    \subquestion{3}{
+        Write down the likelihood function $L(x_{1}, x_{2}, \ldots, x_{n}; \theta)$ given a sample of realizations of $X_{1}, X_{2}, \ldots, X_{n}$.
+    }
+    \solution{
+        The likelihood function can be written as follows:
+        \begin{align*}
+            L(x_{1}, x_{2}, \ldots, x_{n}; \theta) &= f(x_{1}; \theta) \cdot  f(x_{2}; \theta) \ldots \cdot f(x_{n}; \theta) \\
+                                                    &= \frac{1}{\theta} e^{-\frac{x_{1}}{\theta}} \cdot \frac{1}{\theta} e^{-\frac{x_2}{\theta}} \ldots \cdot \frac{1}{\theta} e^{-\frac{x_{n}}{\theta}} \\
+                                                    &= (\frac{1}{\theta})^{n} e^{-\frac{\sum_{i=1}^{n} x_{i}}{\theta}} \\
+        \end{align*}
+        \points{3}
+    }
+
+    \subquestion{7}{
+        Derive the maximum likelihood estimator (MLE) of the parameter $\theta$.
+
+        {\small\bfseries Hint:} consider the natural logarithm (ln) of the likelihood function (the log-likelihood).
+    }
+    \solution{
+        The maximum likelihood estimator can be obtained by first considering the log-likelihood, as it results in easier computations later on:
+        \begin{align*}
+            \ell(x_1, x_2, \ldots, x_n; \theta) &= \ln{(\frac{1}{\theta})^{n} e^{-\frac{\sum_{i=1}^{n} x_{i}}{\theta}}} \\
+                                                &= \ln{(\frac{1}{\theta})^{n}} + \ln{e^{-\frac{\sum_{i=1}^{n} x_{i}}{\theta}}} \\
+                                                &= -n \cdot \ln{\theta} - \frac{\sum_{i=1}^{n} x_{i}}{\theta} \rubric{3}
+        \end{align*}
+        
+        The maximum likelihood estimator (MLE) can then be found by optimizing the log-likelihood function, i.e., taking the derivative of the likelihood function and setting it equal to zero:
+        Notice that the log-likelihood function has the same optimal solutions as the likelihood function, as the logarithm is a strictly increasing function and hence preserving optimality.
+
+        \begin{align*}
+            \frac{d\ell(x_1, x_2, \ldots, x_n; \theta)}{d\theta} &= -\frac{n}{\theta} + \frac{\sum_{i=1}^n x_i}{\theta^2} = 0 \rubric{1}            
+        \end{align*}
+
+        Solving the equation gives us:
+        \[
+            -\frac{n}{\theta} + \frac{\sum_{i=1}^n x_i}{\theta^2} = 0 \Rightarrow \frac{\sum_{i=1}^n x_i}{\theta^2} = \frac{n}{\theta} \Rightarrow \hat{\theta}_{\text{MLE}} = \frac{\sum x_i}{n} = \overline{x}. \rubric{2}
+        \]
+        The maximum likelihood estimator of $\theta$ is the sample mean $\hat{\theta}_{\text{MLE}} = \frac{\sum_{i=1}^{n} X_{i}}{n} = \overline{X}$. \rubric{1}
+    }
+
+    \subquestion{5}{
+        Show that the sample mean $\overline{X}= \frac{(X_1+X_2+\ldots+X_n)}{n}$ is an unbiased estimator for the parameter $\theta$.
+    }
+    \solution{
+        We need to show that $E[\frac{\sum_{i=1}^{n} X_{i}}{n}] = \theta$.
+        Notice that the given probability density function is equal to the density function of a exponential distribution with parameter $\lambda  = \frac{1}{\theta}$. \rubric{2}
+        
+        This means that each $X_i$ has an expected value of $E[X_{i}] = \frac{1}{\lambda} = \theta$. \rubric{1}
+        
+        Therefore, we have that
+        \[
+            E[\frac{\sum_{i=1}^{n} X_{i}}{n}] = \frac{1}{n}\sum_{i=1}^{n} E[X_{i}] = \frac{1}{n} (\theta + \theta + \ldots + \theta) = \frac{1}{n} \cdot n\theta = \theta,
+        \]
+        which finishes the proof. \rubric{2}
+    }
+
+\end{question}
