@@ -1,0 +1,109 @@
+\begin{question}{20}{
+    An air force unit is testing a new type of radar used for detecting enemy drones.
+    The manufacturer, Thales, claims that the radar has a \SI{70}{\percent} success rate in detecting a drone.
+    To test this claim, $1000$ independent trials are conducted. In each trial, the radar attempts to detect $4$ drones. The number of drones detected per trial is recorded as follows:
+    \begin{center}
+        \begin{tabular}{cc}
+            \toprule
+                \textbf{Number of detected drones} & \textbf{Observed frequencies} \\
+            \midrule
+                $0$ & $15$ \\
+                $1$ & $105$ \\
+                $2$ & $290$ \\
+                $3$ & $360$ \\
+                $4$ & $230$ \\
+            \midrule
+                \textbf{Total:} & $1000$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \vspace{1ex}
+
+    To test the claim with the manufacturer, we would like to test whether the observed data indeed fits a binomial distribution using a chi-square goodness-of-fit test.
+}
+
+    \subquestion{2}{
+        Which values for the parameters $n$ and $p$ should we use for our hypothesis test.
+        Explain your answer.    
+    }
+    \solution{
+        Notice that in each trial, the radar attempts to detect $4$ drones, so the value of $n = 4$. \rubric{1}
+        Furthermore, the radar has a \SI{80}{\percent} success rate, so the binomial success probability $p = 0,8$. \rubric{1}
+
+        {\itshape Note: the value of $n$ is NOT equal to $500$. This number only indicates how many times a binomial random variable is being observed!}
+    }
+
+    \subquestion{3}{
+        State the null hypothesis $H_0$ and the alternative hypothesis $H_1$ of the hypothesis test.
+        What does rejecting $H_0$ tell us about the distribution of the number of detected drones?
+    }
+    \solution{
+        The null hypothesis $H_0$ and the alternative hypothesis $H_1$ of this test can be formulated as follows:
+        \begin{align*}
+            H_0&: \text{The number of detected drones follows a binomial distribution} \\
+            &\qquad \qquad \text{with $n=4$ and $p=0,8$.} \rubric{1} \\
+            H_1&: \text{The number of detected drones does not follow a binomial distribution} \\
+            &\qquad \qquad \text{with $n=4$ and $p=0,8$.} \rubric{1}
+        \end{align*}
+        Rejecting the null hypothesis only tells us that the number of detected drones does not follow this specific distribution. 
+        It can still be binomially distributed, but possibly with a different value for the success probability $p$. \rubric{1}
+    }
+
+    \subquestion{3}{
+        Calculate the expected frequencies under the null hypothesis $H_0$.
+    }
+    \solution{
+        We can evaluate the expected frequencies (under $H_0$) by using the total of $500$ independent trials and the binomial distribution with parameters $n=4$ and $p=0,8$.
+        \begin{center}
+            \begin{tabular}{ccc}
+                \toprule
+                    \textbf{Number of} & \textbf{Observed} & \textbf{Expected} \\
+                    \textbf{detected drones} & \textbf{frequencies} & \textbf{frequencies}\\
+                \midrule
+                    $0$ & $15$  & $1000 \cdot \binompdf(n=4; p=0,7; k=0) \approx 8,1$  \\
+                    $1$ & $105$ & $1000 \cdot \binompdf(n=4; p=0,7; k=1) \approx 75,6$ \\
+                    $2$ & $290$ & $1000 \cdot \binompdf(n=4; p=0,7; k=2) \approx 264,6$ \\
+                    $3$ & $360$ & $1000 \cdot \binompdf(n=4; p=0,7; k=3) \approx 411,6$\\
+                    $4$ & $230$ & $1000 \cdot \binompdf(n=4; p=0,7; k=4) \approx 240,1$ \\
+                \midrule
+                    \textbf{Total:} & $1000$ & $1000$  \\ 
+                \bottomrule
+            \end{tabular}\rubric{3}
+        \end{center}
+    }
+
+    \subquestion{9}{
+        Perform the hypothesis test at a significance level $\alpha = 0,05$ by computing the $p$-value.
+    }
+    \solution{
+        The test statistic for a chi-square goodness-of-fit test is given by:
+
+        \begin{align*}
+            X^2 &= \frac{(O_{0} - E_{0})^2}{E_{0}} + \frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \frac{(O_{3} - E_{3})^2}{E_{3}} + \frac{(O_{4} - E_{4})^2}{E_{4}} \rubric{1}
+        \end{align*}
+        where $O_i$ and $E_i$ are respectively the observed and expected frequencies for value $i = 0, 1, 2, 3, 4$.
+        We can use the table of observed and expected frequencies to calculate the observed test statistic
+        \begin{align*}
+            \chi^2 &= \frac{(15 - 8,1)^2}{8,1} + \frac{(105 - 75,6)^2}{75,6} + \frac{(290 - 264,6)^2}{264,6} + \frac{(360 - 411,6)^2}{411,6} + \frac{(230 - 240,1)^2}{240,1} \\
+                   &\approx 26,643. \rubric{3}
+        \end{align*}
+    
+        Under the null hypothesis, the test statistic $X^2$ follows a chi-square distribution with $\text{df}= 5 - 1 = 4$ degrees of freedom. \rubric{1}
+        Hence, we can calculate the $p$-value as the probability of observing a test statistic larger than $\chi^2$:
+        \begin{align*}
+            p = P(\chi^2 > 26,643) &= \chi^2\text{cdf}(\text{lower}=26,643; \text{upper}=10^{99}; \text{df}=4) \\
+                                             &\approx 2,3471 \cdot 10^{-5}.  \rubric{2}
+        \end{align*}
+        As the $p$-value is (much) smaller than the significance level $\alpha$, we reject the null hypothesis.
+        There is ample evidence that the number of detected drones does not follow a binomial distribution with $n=4$ and $p=0,8$. \rubric{2}
+    }
+
+    \subquestion{3}{
+        Interpret the result of the hypothesis test using data from the tables of observed and expected frequencies.
+    }
+    \solution{
+        If we consider the table of observed and expected frequencies, we see that the observed frequencies are higher than expected for $0$, $1$ or $2$ detected drones, and lower than expected for $3$ or $4$ detected drones. \rubric{2}
+        It is therefore likely that the success probability of the radar is smaller than what the manufacturer claims it to be. \rubric{1}
+    }
+
+\end{question}
