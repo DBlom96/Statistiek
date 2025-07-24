@@ -1,26 +1,88 @@
-\begin{question}{23}{
-    t-test
+\begin{enquestion}{23}{
+    During CBRN readiness training, military standards require that personnel are able to don full protective gear in no more than $6.0$ minutes.
+    A commander collects data from a random sample of twelve soldiers. 
+    The sample mean donning time is $6.3$ minutes.
+    Assume donning times are normally distributed with a population standard deviation of $0.4$ minutes.
 }
     
-    \subquestion{2}{
-        sample size
-    }
-    \solution{
-    }
     \subquestion{5}{
+        Construct a \SI{95}{\percent}-confidence interval for the true mean donning time $\mu$. 
+        Interpret the result in context.
     }
     \solution{
+        As the true standard deviation $\sigma = 0.4$, we can use the normal distribution to compute the confidence interval. \rubric{1}
+        The $z$-value corresponding to a \SI{95}{\percent} confidence level, i.e., $\alpha = 0,05$, is (in case of two-sided confidence intervals) equal to:
+        \begin{align*}
+            z_{\alpha/2}   &= \invnorm(\text{area}=1-\alpha/2; \mu=0; \sigma=1) \\
+                &= \invnorm(\text{area}=0.975; \mu=0; \sigma=1) \\
+                &\approx 1,96. \rubric{1}
+        \end{align*}
+        The \SI{95}{\percent}-confidence interval is then given by
+        \begin{align*}
+            &[\overline{x} - z_{\alpha/2} \cdot \frac{ \sigma }{ \sqrt{ n } }; \overline{x} + z_{\alpha/2} \cdot \frac{ \sigma }{ \sqrt{ n } }] \\
+            &= [6.3 - 1.96 \cdot \frac{ 0.4 }{ \sqrt{ 12 } }; 6.3 + 1.96 \cdot \frac{ 0.4 }{ \sqrt{ 12 } }] \\
+            &= [6.0737; 6.5263]. \rubric{2}
+        \end{align*}
 
+        As the interval does not contain the value $6.0$, with \SI{95}{\percent} confidence we can say that the true average donning time is longer than $6.0$ minutes. \rubric{1}
     }
 
-    \subquestion{8}{
+    \subquestion{4}{
+        What is the minimum sample size required to estimate the true mean donning time $\mu$ within $\pm 0.1$ minutes, with \SI{95}{\percent} confidence?
     }
     \solution{
+        As the population standard deviation $\sigma = 0.4$ is known, we can use the normal distribution to compute the minimum sample size. \rubric{1}
+        Furthermore, we know that $\alpha = 0,05$ and the deviation is at most $a = 0,1$.
+        The minimum required sample size is then equal to
+        \begin{align*}
+            n \ge \left( \frac{ z_{\alpha/2} \cdot \sigma }{ a } \right)^2 = \left( \frac{ 1.96 \cdot 0.4 }{ 0.1 }\right)^2 \approx 61.4633. \rubric{2}
+        \end{align*}
+        Notice that we need to round up to the nearest integer.
+        At least $62$ soldiers must be sampled to estimate the mean donning time within $\pm 0.1$ minutes with \SI{95}{\percent} confidence, assuming the standard deviation remains at 0.4 minutes.\rubric{1}
     }
 
-    \subquestion{7}{
+    We would like to test if the true mean donning time is indeed up to military standards.
+    For that purpose, a hypothesis test needs to be conducted.
+    From the following questions onwards, we assume that the \textbf{sample} standard deviation (based on the twelve soldiers) is equal to $0.4$ minutes, and the true standard deviation $\sigma$ is unknown.
+    Use a significance level $\alpha = 0,05$.
+    \subquestion{4}{
+        State the null and alternative hypothesis of the hypothesis test.
+        Explain your choice on the type of hypothesis test (left-sided, two-sided or right-sided).
+    }
+    \solution{
+        In this hypothesis test, we want to test a claim on the true mean donning time $\mu$.
+        The null hypothesis $H_0$ and the alternative hypothesis $H_1$ can be formulated as follows:
+        \begin{align*}
+            H_{0}: \mu &\le 6.0 \tag{mean donning time conform military standard} \\ \rubric{2}
+            H_{1}: \mu &> 6.0 \tag{mean donning time violate military standard} \rubric{1}
+        \end{align*}
+
+        In this case, we work with a right-sided test (alternative hypothesis has sign $>$), since we take the military standard (within $6.0$ minutes) as default setting and only reject the claim of satisfying this standard if the sample mean donning time is significantly larger than $6.0$ minutes.\rubric{1}    }
+
+    \subquestion{10}{
+        Perform the hypothesis test and state your conclusion based on the critical region.
     }
 
     \solution{
-    }
-\end{question}
+        We use the null hypothesis $H_0$ and the alternative hypothesis $H_1$ from the previous subquestion.
+        Furthermore, the sample mean $\overline{x} = 6.3$ and $s = 0.4$ are given, as well as the significance level $\alpha=0,05$.
+        
+        As we work with a right-sided test, the critical region is of the form $[g, \infty)$.\rubric{1}
+        We want to compute the smallest value $g$ such that the probability of a type-I error (rejecting $H_0$ while it is true) is equal to $\alpha=0,05$.\rubric{1}
+
+        Under the null hypothesis, the true mean donning time $\overline{X}$ of twelve arbitrarily soldiers is normally distributed with $\mu = 6.0$ en standard deviation $\frac{\sigma}{\sqrt{12}}$.\rubric{1}
+        As $\sigma$ is unknown and $n = 12 < 30$, we need to resort to the $t$-distribution, using the estimation $s = 0.4$. \rubric{1}
+        As we have a right-sided test, the corresponding $t$-value is equal to 
+        \[
+            t = \invt(opp=1-\alpha; df=n-1) = \invt(opp=0,95; df=11) \approx 1,7959. \rubric{1}
+        \]
+        
+        The associated boundary value $g$ is then equal to
+        \[
+            g = \mu + t \cdot \frac{s}{\sqrt{12}} = 6.0 + 1,7959 \cdot \frac{0.4}{\sqrt{12}} \approx 6.2074. \rubric{2}
+        \]
+
+        The sample mean $\overline{x} = 6.3$ is larger than this boundary value $g \approx 6.2074$, so $\overline{x}$ lies in the critical region.
+        Therefore, under this significance level $\alpha$, the null hypothesis will be rejected. \rubric{1}
+        Based on the given sample, there is enough evidence that the true mean donning time is significantly longer than $6.0$ minutes, therefore violating military standards.\rubric{2}    }
+\end{enquestion}

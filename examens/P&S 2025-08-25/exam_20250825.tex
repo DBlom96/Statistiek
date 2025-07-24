@@ -4,16 +4,17 @@
 \usepackage[dutch]{babel}
 
 % Importeer configuratie-instellingen
-\RequirePackage{C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/exam_config}
-\RequirePackage{C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros}
-\graphicspath{{C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/figures/}}
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\RequirePackage{\path/LaTeX/styles/exam_config}
+\RequirePackage{\path/LaTeX/styles/statistics-macros}
+\graphicspath{{\path/LaTeX/figures/}}
 
 \renewcommand{\baselinestretch}{1.5}
 % Begin van het document
 \begin{document}
 
 % FMW-specifiek titelblad voordat het examen begint
-\includepdf[pages=-]{\folder/Python/FMW_titelblad_20250704.pdf}
+\includepdf[pages=-]{\folder/Python/FMW_titelblad_20250825.pdf}
 
 % \title{Tentamen statistiek}
 % \author{Nederlandse Defensie Academie}
@@ -23,11 +24,12 @@
 % \includepdf[pages=-]{\folder/LaTeX/formulebladen/formuleblad_1.pdf}
 
 % Include questions from external files
+\input{q3.tex}
+\input{q5.tex}
 \input{q1.tex}
 \input{q2.tex}
-\input{q3.tex}
 \input{q4.tex}
-\input{q5.tex}
+
 
 % Add more question files as needed
 \end{document}

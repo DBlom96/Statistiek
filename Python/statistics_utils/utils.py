@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from math import inf, sqrt
+from math import inf, sqrt, ceil, floor
 import itertools as it
 from scipy.stats import norm, t, binom, poisson, chi2, f
 from scipy.stats import chi2_contingency, ttest_ind, rankdata

@@ -1,18 +1,20 @@
-\begin{question}{22}{
+\begin{enquestion}{22}{
     In a joint project between physical training instructors of the Royal Military Academy (KMA) and the medical service, the relationship is investigated
     between average sleep duration of a cadet (in hours) and the recovery time after intense physical exertion (in hours).
     
     Recovery time is measured using a muscle soreness index; a cadet is considered fully recovered when this index falls below a certain threshold.
 
     For nine cadets, the average sleep duration and recovery time after intense exertion are measured.
-    \begin{center}
+    
+    \begin{table}[H]
+        \centering
         \begin{tabular}{c|ccccccccc}
             \toprule
                 \textbf{Sleep duration (in hours)} & $4,0$ & $4,5$ & $5,0$ & $5,5$ & $6,0$ & $6,5$ & $7,0$ & $7,5$ & $8,0$ \\
                 \textbf{Recovery time (in hours)} & $66$ & $61$ & $63$ & $62$ & $65$ & $64$ & $57$ & $59$ & $60$ \\
             \bottomrule
         \end{tabular}
-    \end{center}
+    \end{table}
 }
     
     \subquestion{2}{
@@ -28,7 +30,7 @@
     \solution{
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
-                \includegraphics{20250725_q4_scatterplot.png}
+                \includegraphics{20250825_scatterplot_q4.png}
             }
         \end{center}
     }
@@ -62,6 +64,7 @@
                 \bottomrule
             \end{tabular} \rubric{4}
         \end{center}
+        \vspace{1ex}
         Now we compute Pearson's correlation coefficient as follows:
         \begin{align*}
             r(x,y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x}^2 - \overline{x^2}) \cdot (\overline{y}^2 - \overline{y^2}) } }\\
@@ -92,4 +95,4 @@
         A statistically sound prediction of the recovery time of a cadet who slept for $6$ hours and $45$ minutes is found by filling in $X = 6,75$:
         This results in a predicted recovery time of $Y = 69,8889 - 1,3333 \cdot 6,75 = 60,88887$ hours, or just under $61$ hours. \rubric{2} 
     }
-\end{question}
+\end{enquestion}
