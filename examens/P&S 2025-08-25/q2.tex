@@ -28,9 +28,9 @@
     }
     \solution{
         Notice that in each trial, the radar attempts to detect $4$ drones, so the value of $n = 4$. \rubric{1}
-        Furthermore, the radar has a \SI{80}{\percent} success rate, so the binomial success probability $p = 0,8$. \rubric{1}
+        Furthermore, the radar has a \SI{70}{\percent} success rate, so the binomial success probability $p = 0,7$. \rubric{1}
 
-        {\itshape Note: the value of $n$ is NOT equal to $500$. This number only indicates how many times a binomial random variable is being observed!}
+        {\itshape Note: the value of $n$ is NOT equal to $1000$. This number only indicates how many times a binomial random variable is being observed!}
     }
 
     \subquestion{3}{
@@ -41,9 +41,9 @@
         The null hypothesis $H_0$ and the alternative hypothesis $H_1$ of this test can be formulated as follows:
         \begin{align*}
             H_0&: \text{The number of detected drones follows a binomial distribution} \\
-            &\qquad \qquad \text{with $n=4$ and $p=0,8$.} \rubric{1} \\
+            &\qquad \qquad \text{with $n=4$ and $p=0,7$.} \rubric{1} \\
             H_1&: \text{The number of detected drones does not follow a binomial distribution} \\
-            &\qquad \qquad \text{with $n=4$ and $p=0,8$.} \rubric{1}
+            &\qquad \qquad \text{with $n=4$ and $p=0,7$.} \rubric{1}
         \end{align*}
         Rejecting the null hypothesis only tells us that the number of detected drones does not follow this specific distribution. 
         It can still be binomially distributed, but possibly with a different value for the success probability $p$. \rubric{1}
@@ -53,7 +53,7 @@
         Calculate the expected frequencies under the null hypothesis $H_0$.
     }
     \solution{
-        We can evaluate the expected frequencies (under $H_0$) by using the total of $500$ independent trials and the binomial distribution with parameters $n=4$ and $p=0,8$.
+        We can evaluate the expected frequencies (under $H_0$) by using the total of $500$ independent trials and the binomial distribution with parameters $n=4$ and $p=0,7$.
         \begin{center}
             \begin{tabular}{ccc}
                 \toprule
@@ -84,7 +84,7 @@
         where $O_i$ and $E_i$ are respectively the observed and expected frequencies for value $i = 0, 1, 2, 3, 4$.
         We can use the table of observed and expected frequencies to calculate the observed test statistic
         \begin{align*}
-            \chi^2 &= \frac{(15 - 8,1)^2}{8,1} + \frac{(105 - 75,6)^2}{75,6} + \frac{(290 - 264,6)^2}{264,6} + \frac{(360 - 411,6)^2}{411,6} + \frac{(230 - 240,1)^2}{240,1} \\
+            \chi^2 &= \frac{(15 - 8,1)^2}{8,1} + \ldots + \frac{(230 - 240,1)^2}{240,1} \\
                    &\approx 26,643. \rubric{3}
         \end{align*}
     
