@@ -14,21 +14,21 @@
     \solution{
         We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
         \begin{align*}
-            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 42 + 45 + \ldots + 47 }{ 13 } \approx 45,9231.\rubric{2}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 39 + 42 + \ldots + 44 }{ 13 } \approx 42,9231.\rubric{3}
         \end{align*}
     
 
         We berekenen de steekproefvariantie $s^2$ als volgt:
         \begin{align*}
             s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
-                &= \frac{ (42 - 45,9231)^2 + (45 - 45,9231)^2 + \ldots + (47 - 45,9231)^2 }{ 13 - 1 } \\
-                &\approx 21,5769.\rubric{3}
+                &= \frac{ (39 - 42,9231)^2 + (42 - 42,9231)^2 + \ldots + (44 - 42,9231)^2 }{ 13 - 1 } \\
+                &\approx 21,5769. \rubric{3}
         \end{align*}
     
 
         We berekenen de steekproefstandaardafwijking $s$ door te wortel van de steekproefvariantie $s^2$ te nemen:
         \begin{align*}
-            s = \sqrt{ s^2 } = \sqrt{ 21,5769 } \approx 4,6451.\rubric{2}
+            s = \sqrt{ s^2 } = \sqrt{ 21,5769 } \approx 4,6451. \rubric{1}
         \end{align*}
     }
 
@@ -41,19 +41,19 @@
         Laat $X \sim N(\mu=?; \sigma=?)$ de doorlooptijd zijn van een willekeurige sollicitatieprocedure.
         Volgens de centrale limietstelling is de gemiddelde doorlooptijd $\overline{X} = \frac{X_1 + X_2 + \ldots + X_{13}}{13}$ van 13 procedures ook normaal verdeeld, met onbekende verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{13}}$. \rubric{1}
         Omdat naast de verwachtingswaarde $\mu$ ook de standaardafwijking $\sigma$ onbekend is (en bovendien de steekproefgrootte $n = 13 < 30$), moet de $t$-verdeling worden gebruikt.\rubric{1}
-        De $t$-waarde die hoort bij $94\%$ betrouwbaarheid, oftewel $\alpha = 0,06$, is (in het geval van tweezijdige intervallen) gelijk aan
+        Omdat $\sigma$ onbekend is en de steekproefgrootte $n = 13 < 30$ is, moeten we gebruik maken van de $t$-verdeling.
+        De $t$-waarde die hoort bij \SI{94}{\percent} betrouwbaarheid, oftewel $\alpha = 0.06$, is (in het geval van tweezijdige intervallen) gelijk aan
         \[
-            t = \invt(opp=1-\frac{\alpha}{2}; df=n-1) = \invt(opp=0,97; df=12) \approx 2,0764. \rubric{1}
+            t = \invt(\text{opp}=1-\frac{\alpha}{2}; \text{df}=n-1) = \invt(\text{opp}=0,97; \text{df}=12) \approx 2,0764.\rubric{1}
         \]
-        Omdat $\sigma$ dus onbekend is, gebruiken we de steekproefstandaardafwijking $s = 4,6451$ als schatter.
-        Het betrouwbaarheidsinterval worden dan gegeven door
+        Het \SI{94}{\percent}-betrouwbaarheidsinterval wordt dan gegeven door
         \begin{align*}
-            [\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] 
-                &= [45,9231 - 2,0764 \cdot \frac{4,6451}{\sqrt{13}}; 45,9231 + 2,0764 \cdot \frac{4,6451}{\sqrt{13}}] \\
-                &= [43,2480; 48,5982] \rubric{2}
+            &[\overline{x} - t \cdot \frac{ s }{ \sqrt{ n } }; \overline{x} + t \cdot \frac{ s }{ \sqrt{ n } }] \\
+            &= [42,9231 - 2,0764 \cdot \frac{ 4,6451 }{ \sqrt{ 13 } }; 42,9231 + 2,0764 \cdot \frac{ 4,6451 }{ \sqrt{ 13 } }] \\
+            &= [40,2480; 45,5982].\rubric{2}
         \end{align*}
-        Om de betrouwbaarheid te waarborgen, mag het interval niet kleiner worden, dus naar buiten afronden: $[43; 49]$. 
-        Met \SI{94}{\percent} betrouwbaarheid ligt de gemiddelde doorlooptijd van een sollicitatieprocedure tussen de $43$ en $49$ dagen.\rubric{1}
+        Om de betrouwbaarheid te waarborgen, mag het interval niet kleiner worden, dus naar buiten afronden: $[40; 46]$. 
+        Met \SI{94}{\percent} betrouwbaarheid ligt de gemiddelde doorlooptijd van een sollicitatieprocedure tussen de $40$ en $46$ dagen.\rubric{1}
     }
 
     \subquestion{9}{
