@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1755517165.81227 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex" "exam_20250725.pdf" "exam_20250725" 1755517168.60057 0
+["pdflatex"] 1755523926.63031 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex" "exam_20250725.pdf" "exam_20250725" 1755523930.0321 0
   "../../LaTeX/formulebladen/formuleblad_STA2.pdf" 1753345002 312600 f8a5bec145274738f359a57edbbef3e1 ""
   "../../Python/FMW_titelblad_20250725.pdf" 1753345002 170016 4d617a1d80c06165989294b12595b79d ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1753438647 124356 d80fb265b13695b80413c9c8d049619c ""
@@ -235,10 +235,10 @@
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/config.sty" 1753345002 2828 0cd47d7746680cf1fc2109cfbac946ad ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/exam_config.sty" 1755515242 2338 db9fc3dfa232c62c33b1ba81591dea19 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1753345002 2633 1b6afd87a1b64a777eb43a24d4bd010b ""
-  "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex" 1755515303 857 d523feef07c56c9ac944773344b3ce0a ""
-  "exam_20250725.aux" 1755517168 3289 2e11544d0f0f0a09e16beef8739174d3 "pdflatex"
-  "exam_20250725.out" 1755517167 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "exam_20250725.tex" 1755515303 857 d523feef07c56c9ac944773344b3ce0a ""
+  "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex" 1755523925 855 bcc9b790643e9a7c33bbd7f6962e8fab ""
+  "exam_20250725.aux" 1755523929 3289 2e11544d0f0f0a09e16beef8739174d3 "pdflatex"
+  "exam_20250725.out" 1755523928 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "exam_20250725.tex" 1755523925 855 bcc9b790643e9a7c33bbd7f6962e8fab ""
   "q1.tex" 1753345002 4554 e5d4bb87becd466ebfcd5cdb1805d30d ""
   "q2a.tex" 1755517161 8729 0d51c4a0ea41384603a603e40d590697 ""
   "q3.tex" 1753345002 6505 6748a1d90810b20b15c01265183ae9f0 ""
