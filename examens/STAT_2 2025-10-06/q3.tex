@@ -1,40 +1,36 @@
-\begin{question}{20}{
-    Bij de sollicitatiegesprekken voor cadetten en adelborsten wordt door de aanstellingscommissie aan de aspirant-officier gevraagd naar zijn of haar primaire motivatie om officier te willen worden.
-    De meest genoemde antwoorden van de aspiranten zijn ruwweg in te delen in drie categorie\"en: leiderschap, avontuur en dienen aan het vaderland.
-    
-    Naar aanleiding van de sollicitatiegesprekken kunnen de antwoorden als volgt worden samengevat:
-
+\begin{question}{30}{
+    Het Ministerie van Defensie wil onderzoeken of er een verband is tussen het OPCO waar een militair deel van uitmaakt en de mate waarin hij/zij tevreden is met zijn/haar huidige gevechtstenue.
+    De tevredenheid met de uitrusting wordt gemeten met een enquête en kan twee waarden aannemen: ``tevreden'' en ``niet tevreden''.
+    \vspace{1ex}
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
-        \begin{tabular}{c|cc|c}
+        \begin{tabular}{cccc}
             \toprule
-                & Cadetten & Adelborsten & Totaal \\
+                & \textbf{Tevreden} & \textbf{Niet tevreden} \\
             \midrule
-    			Leiderschap & $52$ & $22$ & $74$ \\ 
-			    Avontuur & $23$ & $9$ & $32$ \\ 
-			    Vaderland dienen & $38$ & $28$ & $66$ \\ 
-            \midrule
-                Totaal & $113$ & $59$ & $172$ \\
+    			\textbf{CLAS} & $250$ & $150$ \\ 
+			    \textbf{CLRS} & $200$ & $200$ \\ 
+			    \textbf{CZSK} & $220$ & $180$ \\ 
+                \textbf{KMAR} & $180$ & $220$ \\
             \bottomrule
         \end{tabular}
     \end{center}
-    C-NLDA wil inzicht krijgen in of de primaire motivatie van cadetten significant afwijkt van die van adelborsten.
 }
 
     \subquestion{4}{
-        Welk type hypothesetoets dienen we hiervoor uit te voeren? 
+        Welk type hypothesetoets dienen we uit te voeren om aan te tonen of er een verband is tussen OPCO en mate van tevredenheid?
         Formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$ van de bijbehorende hypothesetoets.
     }
     \solution{
-        Omdat we willen weten of de primaire motivatie van cadetten significant afwijkt van die van de adelborsten, dienen we een $\chi^2$-toets (chikwadraat) voor onafhankelijkheid uit te voeren. \rubric{2}
+        Omdat we willen weten of de mate van tevredenheid significant afwijkt tussen militairen van verschillende OPCO's, dienen we een $\chi^2$-toets (chikwadraat) voor onafhankelijkheid uit te voeren. \rubric{2}
         Dit kan ook omdat we te maken hebben met twee categorische variabelen!
         
         De bijbehorende nul- en alternatieve hypothese zijn in dit geval gelijk aan
         \begin{align*}
-            H_0&: \text{ de verdeling van de primaire motivaties van cadetten } \\
-               & \qquad \qquad \text{is onafhankelijk van het type aspirant-officieren.} \rubric{1} \\
-            H_1&: \text{ de verdeling van de primaire motivaties van cadetten } \\
-               & \qquad \qquad \text{is WEL afhankelijk van het type aspirant-officieren.} \rubric{1}
+            H_0&: \text{ de verdeling van de mate van tevredenheid } \\
+               & \qquad \qquad \text{is onafhankelijk van het OPCO van de militairen.} \rubric{1} \\
+            H_1&: \text{ e verdeling van de mate van tevredenheid } \\
+               & \qquad \qquad \text{is wel afhankelijk van het OPCO van de militairen.} \rubric{1}
         \end{align*}
     }
 
@@ -88,7 +84,7 @@
         \begin{align*}
             \chi^2 &= \frac{(O_{1, 1} - E_{1,1})^2}{E_{1, 1}} + \frac{(O_{1, 2} - E_{1,2})^2}{E_{1, 2}} + \ldots + \frac{(O_{3, 2} - E_{3,2})^2}{E_{3, 2}} \\
                     &= \frac{(52 - 48,6163)^2}{48,6163} + \frac{(22 - 25,3837)^2}{25,3837} + \ldots + \frac{(28 - 22,6395)^2}{22,6395} \\
-                    &\approx 3,1603. \rubric{3}
+                    &\approx 3,1603. \rubric{2}
         \end{align*}
 
         De bijbehorende $p$-waarde is de rechteroverschrijdingskans $P(X > \chi^2)$, waarbij $X^2$ de toetsingsgrootheid van de chikwadraattoets voor onafhankelijkheid. \rubric{1}
@@ -99,8 +95,8 @@
                 &= \chi^2\text{cdf}(\text{lower}=3.1603; \text{upper}=10^{99}; \text{df}=2) \\
                 &\approx 0.2059.  \rubric{2}
         \end{align*}
-        % Omdat $p > \alpha$, wordt de nulhypothese $H_0$ aangenomen.
-        % Er is onvoldoende reden om de aanname te verwerpen dat de twee variabelen onafhankelijk zijn van elkaar. \rubric{1}
+        Omdat $p > \alpha$, wordt de nulhypothese $H_0$ aangenomen.
+        Er is onvoldoende reden om de aanname te verwerpen dat de twee variabelen onafhankelijk zijn van elkaar. \rubric{1}
     }
 
     \subquestion{5}{Geef de conclusie van de hypothesetoets (op basis van een significantieniveau $\alpha = 0,05$) met behulp van de berekende $p$-waarde.}
@@ -111,5 +107,10 @@
         
         Als we kijken naar de tabel van geobserveerde en verwachte frequenties, dan zien we dat deze redelijk dichtbij elkaar in de buurt liggen.
         Er zijn geen grote uitschieters te bekennen in de verwachte frequenties ten opzichte van de daadwerkelijk geobserveerde frequenties.\rubric{2}
+    }
+
+    \subquestion{10}{
+        Naast de vraag of de mate van tevredenheid afhangt van het OPCO, is het ministerie ook geïnteresseerd in het percentage tevreden militairen.
+        Bepaal een \SI{95}{\percent}-betrouwbaarheidsinterval voor het percentage tevreden militairen (over alle OPCO's samen).
     }
 \end{question}

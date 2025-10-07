@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  23 SEP 2025 14:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  6 OCT 2025 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex"
-(c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex
+**"c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_1 2025-10-17/exam_20251017.tex"
+(c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_1 2025-10-17/exam_20251017.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -95,35 +95,11 @@ File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks20
 \c@AM@survey=\count289
 \AM@templatesizebox=\box54
-) (../../LaTeX/styles/exam_config.sty (../../LaTeX/styles/config.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-))
-\Gm@cnth=\count290
-\Gm@cntv=\count291
-\c@Gm@tempcnt=\count292
-\Gm@bindingoffset=\dimen158
-\Gm@wd@mp=\dimen159
-\Gm@odd@mp=\dimen160
-\Gm@even@mp=\dimen161
-\Gm@layoutwidth=\dimen162
-\Gm@layoutheight=\dimen163
-\Gm@layouthoffset=\dimen164
-\Gm@layoutvoffset=\dimen165
-\Gm@dimlist=\toks21
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty
-Package: authblk 2001/02/27 1.3 (PWD)
-\affilsep=\skip54
-\@affilsep=\skip55
-\c@Maxaffil=\count293
-\c@authors=\count294
-\c@affil=\count295
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count296
+\babel@savecnt=\count290
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
@@ -131,11 +107,11 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
-\U@D=\dimen166
+\U@D=\dimen158
 \l@unhyphenated=\language79
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count297
+\bbl@dirlevel=\count291
 
 *************************************
 * Local config file bblopts.cfg used
@@ -149,7 +125,33 @@ Package babel Info: Importing font and identification data for dutch
 (babel)             from babel-nl.ini. Reported on input line 12.
 )
 Package babel Info: Making " an active character on input line 127.
-)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+)) (C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/exam_config.sty (../../LaTeX/styles/config.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count292
+\Gm@cntv=\count293
+\c@Gm@tempcnt=\count294
+\Gm@bindingoffset=\dimen159
+\Gm@wd@mp=\dimen160
+\Gm@odd@mp=\dimen161
+\Gm@even@mp=\dimen162
+\Gm@layoutwidth=\dimen163
+\Gm@layoutheight=\dimen164
+\Gm@layouthoffset=\dimen165
+\Gm@layoutvoffset=\dimen166
+\Gm@dimlist=\toks21
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip54
+\@affilsep=\skip55
+\c@Maxaffil=\count295
+\c@authors=\count296
+\c@affil=\count297
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
@@ -872,37 +874,37 @@ Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
 )
 \c@question=\count400
 \c@subquestion=\count401
-)) (../../LaTeX/styles/statistics-macros.sty)
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 12.
+)) (C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty)
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 13.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count402
-) (exam_20250725.aux
+) (exam_20251017.aux
 Package babel Info: 'dutch' activates 'dutch' shorthands.
 (babel)             Reported on input line 8.
 )
-\openout1 = `exam_20250725.aux'.
+\openout1 = `exam_20251017.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count403
@@ -969,294 +971,146 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
 File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 12.
-Package hyperref Info: Link coloring OFF on input line 12.
- (exam_20250725.out) (exam_20250725.out)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 13.
+Package hyperref Info: Link coloring OFF on input line 13.
+ (exam_20251017.out) (exam_20251017.out)
 \@outlinefile=\write4
-\openout4 = `exam_20250725.out'.
+\openout4 = `exam_20251017.out'.
 
- (q1.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+<C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, id=6, 845.07718pt x 1194.98447pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf  used on input line 16.
+(pdftex.def)             Requested size: 845.07512pt x 1194.98155pt.
+<C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, id=8, page=1, 845.07718pt x 1194.98447pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page1 used on input line 16.
+(pdftex.def)             Requested size: 845.07512pt x 1194.98155pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page1 used on input line 16.
+(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page1 used on input line 16.
+(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page1 used on input line 16.
+(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+
+
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page1 used on input line 16.
+(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+[1
+
+
+ <C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, id=44, page=2, 845.07718pt x 1194.98447pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page2 used on input line 16.
+(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page2 used on input line 16.
+(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+
+
+File: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf , page2 used on input line 16.
+(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+[2
+
+ <C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, id=57, 597.50829pt x 845.0471pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf  used on input line 23.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, id=59, page=1, 597.50829pt x 845.0471pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page1 used on input line 23.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page1 used on input line 23.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page1 used on input line 23.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page1 used on input line 23.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page1 used on input line 23.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+[3
+
+ <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, id=125, page=2, 597.50829pt x 845.0471pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page2 used on input line 23.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page2 used on input line 23.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf , page2 used on input line 23.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+[4
+
+ <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf>] (q1.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package marginnote Info: right page because not two side mode on input line 22.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 22.
-Package marginnote Info: right page because not two side mode on input line 22.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 22.
-Package marginnote Info: Margin note 1.3 is on absolute page 1 on input line 22.
-Package marginnote Info: right page because not two side mode on input line 22.
-Package marginnote Info: xpos seems to be 406.17207pt on input line 22.
-Package marginnote Info: Margin note 1.4 is on absolute page 1 on input line 22.
-Package marginnote Info: right page because not two side mode on input line 22.
-Package marginnote Info: xpos seems to be 421.76007pt on input line 22.
-Package marginnote Info: Margin note 1.5 is on absolute page 1 on input line 22.
-Package marginnote Info: right page because not two side mode on input line 22.
-Package marginnote Info: xpos seems to be 495.69672pt on input line 22.
-Package marginnote Info: Margin note 1.6 is on absolute page 1 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 304.96335pt on input line 49.
-Package marginnote Info: Margin note 1.7 is on absolute page 1 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 374.54488pt on input line 49.
-Package marginnote Info: Margin note 1.8 is on absolute page 2 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 380.02493pt on input line 49.
-Package marginnote Info: Margin note 1.9 is on absolute page 2 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 507.11436pt on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 49.
-Package marginnote Info: Margin note 1.11 is on absolute page 2 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 307.43034pt on input line 49.
-Package marginnote Info: Margin note 1.12 is on absolute page 2 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 470.63441pt on input line 49.
-Package marginnote Info: Margin note 1.13 is on absolute page 2 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 324.36095pt on input line 49.
+)) (q2.tex
 
+[5{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (q3.tex
 
-[1
+[6]) (q4.tex
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 68.
-Package marginnote Info: right page because not two side mode on input line 68.
-Package marginnote Info: xpos seems to be 433.27173pt on input line 68.
-Package marginnote Info: Margin note 2.2 is on absolute page 2 on input line 68.
-Package marginnote Info: right page because not two side mode on input line 68.
-Package marginnote Info: xpos seems to be 317.42178pt on input line 68.
-Package marginnote Info: Margin note 2.3 is on absolute page 2 on input line 68.
-Package marginnote Info: right page because not two side mode on input line 68.
-Package marginnote Info: xpos seems to be 301.50696pt on input line 68.
-Package marginnote Info: right page because not two side mode on input line 68.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 68.
-Package marginnote Info: Margin note 2.5 is on absolute page 2 on input line 68.
-Package marginnote Info: right page because not two side mode on input line 68.
-Package marginnote Info: xpos seems to be 190.11142pt on input line 68.
-Package marginnote Info: Margin note 2.6 is on absolute page 2 on input line 68.
-Package marginnote Info: right page because not two side mode on input line 68.
-Package marginnote Info: xpos seems to be 464.12474pt on input line 68.
-) (q2.tex
+[7])
 
-[2]
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 49.
-Package marginnote Info: Margin note 3.2 is on absolute page 3 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 450.75908pt on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 49.
-Package marginnote Info: Margin note 3.4 is on absolute page 3 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 239.27615pt on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 49.
-Package marginnote Info: Margin note 3.6 is on absolute page 4 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 453.19653pt on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 49.
-Package marginnote Info: Margin note 3.8 is on absolute page 4 on input line 49.
-Package marginnote Info: right page because not two side mode on input line 49.
-Package marginnote Info: xpos seems to be 229.4054pt on input line 49.
-
-
-[3]
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 82.
-Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 82.
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be 350.62914pt on input line 82.
-Package marginnote Info: Margin note 4.3 is on absolute page 4 on input line 82.
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be 465.89885pt on input line 82.
-Package marginnote Info: Margin note 4.4 is on absolute page 4 on input line 82.
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be 383.1863pt on input line 82.
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 82.
-Package marginnote Info: Margin note 4.6 is on absolute page 4 on input line 82.
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be 518.00359pt on input line 82.
-Package marginnote Info: Margin note 4.7 is on absolute page 5 on input line 82.
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be 216.6643pt on input line 82.
-Package marginnote Info: Margin note 4.8 is on absolute page 5 on input line 82.
-Package marginnote Info: right page because not two side mode on input line 82.
-Package marginnote Info: xpos seems to be 354.81696pt on input line 82.
-
-
-[4]
-Package marginnote Info: right page because not two side mode on input line 118.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 118.
-Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 118.
-Package marginnote Info: right page because not two side mode on input line 118.
-Package marginnote Info: xpos seems to be 414.7053pt on input line 118.
-Package marginnote Info: right page because not two side mode on input line 118.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 118.
-Package marginnote Info: Margin note 5.4 is on absolute page 5 on input line 118.
-Package marginnote Info: right page because not two side mode on input line 118.
-Package marginnote Info: xpos seems to be 485.4782pt on input line 118.
-Package marginnote Info: Margin note 5.5 is on absolute page 5 on input line 118.
-Package marginnote Info: right page because not two side mode on input line 118.
-Package marginnote Info: xpos seems to be 411.1731pt on input line 118.
-Package marginnote Info: Margin note 5.6 is on absolute page 5 on input line 118.
-Package marginnote Info: right page because not two side mode on input line 118.
-Package marginnote Info: xpos seems to be 508.28519pt on input line 118.
-Package marginnote Info: Margin note 5.7 is on absolute page 6 on input line 118.
-Package marginnote Info: right page because not two side mode on input line 118.
-Package marginnote Info: xpos seems to be 145.05711pt on input line 118.
-
-
-[5]) (q3.tex
-
-[6]
-Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 39.
-Package marginnote Info: right page because not two side mode on input line 39.
-Package marginnote Info: xpos seems to be 229.01874pt on input line 39.
-Package marginnote Info: right page because not two side mode on input line 39.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 39.
-Package marginnote Info: right page because not two side mode on input line 39.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 39.
-Package marginnote Info: Margin note 7.4 is on absolute page 7 on input line 39.
-Package marginnote Info: right page because not two side mode on input line 39.
-Package marginnote Info: xpos seems to be 461.09048pt on input line 39.
-Package marginnote Info: Margin note 7.5 is on absolute page 7 on input line 39.
-Package marginnote Info: right page because not two side mode on input line 39.
-Package marginnote Info: xpos seems to be 475.43051pt on input line 39.
-
-Overfull \hbox (10.12798pt too wide) in paragraph at lines 104--104
- [][] 
- []
-
-Package marginnote Info: Margin note 7.6 is on absolute page 8 on input line 104.
-Package marginnote Info: right page because not two side mode on input line 104.
-Package marginnote Info: xpos seems to be 524.0427pt on input line 104.
-Package marginnote Info: right page because not two side mode on input line 104.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 104.
-Package marginnote Info: Margin note 7.8 is on absolute page 8 on input line 104.
-Package marginnote Info: right page because not two side mode on input line 104.
-Package marginnote Info: xpos seems to be 209.37709pt on input line 104.
-Package marginnote Info: Margin note 7.9 is on absolute page 8 on input line 104.
-Package marginnote Info: right page because not two side mode on input line 104.
-Package marginnote Info: xpos seems to be 509.8347pt on input line 104.
-Package marginnote Info: Margin note 7.10 is on absolute page 8 on input line 104.
-Package marginnote Info: right page because not two side mode on input line 104.
-Package marginnote Info: xpos seems to be 473.55418pt on input line 104.
-Package marginnote Info: right page because not two side mode on input line 104.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 104.
-Package marginnote Info: Margin note 7.12 is on absolute page 8 on input line 104.
-Package marginnote Info: right page because not two side mode on input line 104.
-Package marginnote Info: xpos seems to be 245.11166pt on input line 104.
-
-
-[7]
-Package marginnote Info: Margin note 8.1 is on absolute page 9 on input line 114.
-Package marginnote Info: right page because not two side mode on input line 114.
-Package marginnote Info: xpos seems to be 463.53722pt on input line 114.
-Package marginnote Info: Margin note 8.2 is on absolute page 9 on input line 114.
-Package marginnote Info: right page because not two side mode on input line 114.
-Package marginnote Info: xpos seems to be 437.85678pt on input line 114.
-Package marginnote Info: Margin note 8.3 is on absolute page 9 on input line 114.
-Package marginnote Info: right page because not two side mode on input line 114.
-Package marginnote Info: xpos seems to be 237.78104pt on input line 114.
-
-
-[8]) (q4.tex
-
-[9]
-Package marginnote Info: Margin note 10.1 is on absolute page 10 on input line 22.
-Package marginnote Info: right page because not two side mode on input line 22.
-Package marginnote Info: xpos seems to be 241.201pt on input line 22.
-<../../LaTeX/figures/20250725_q4_scatterplot.png, id=70, 514.5624pt x 327.3831pt>
-File: ../../LaTeX/figures/20250725_q4_scatterplot.png Graphic file (type png)
-<use ../../LaTeX/figures/20250725_q4_scatterplot.png>
-Package pdftex.def Info: ../../LaTeX/figures/20250725_q4_scatterplot.png  used on input line 32.
-(pdftex.def)             Requested size: 514.56114pt x 327.3823pt.
-
-
-[10]
-Package marginnote Info: Margin note 11.1 is on absolute page 12 on input line 73.
-Package marginnote Info: right page because not two side mode on input line 73.
-Package marginnote Info: xpos seems to be 498.71722pt on input line 73.
-Package marginnote Info: right page because not two side mode on input line 73.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 73.
-Package marginnote Info: Margin note 11.3 is on absolute page 12 on input line 73.
-Package marginnote Info: right page because not two side mode on input line 73.
-Package marginnote Info: xpos seems to be 272.84593pt on input line 73.
-Package marginnote Info: Margin note 11.4 is on absolute page 12 on input line 73.
-Package marginnote Info: right page because not two side mode on input line 73.
-Package marginnote Info: xpos seems to be 340.71695pt on input line 73.
-
-
-[11 <../../LaTeX/figures/20250725_q4_scatterplot.png>]
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 93.
-Package marginnote Info: Margin note 12.3 is on absolute page 13 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 238.35112pt on input line 93.
-Package marginnote Info: Margin note 12.4 is on absolute page 13 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 304.29634pt on input line 93.
-Package marginnote Info: Margin note 12.5 is on absolute page 13 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 504.4227pt on input line 93.
-Package marginnote Info: Margin note 12.6 is on absolute page 13 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 200.83499pt on input line 93.
-
-
-[12]
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 128.
-Package marginnote Info: Margin note 13.2 is on absolute page 13 on input line 128.
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be 197.09044pt on input line 128.
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 128.
-Package marginnote Info: Margin note 13.4 is on absolute page 14 on input line 128.
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be 265.78479pt on input line 128.
-Package marginnote Info: Margin note 13.5 is on absolute page 14 on input line 128.
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be 505.17688pt on input line 128.
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 128.
-Package marginnote Info: Margin note 13.7 is on absolute page 14 on input line 128.
-Package marginnote Info: right page because not two side mode on input line 128.
-Package marginnote Info: xpos seems to be 276.01129pt on input line 128.
-
-
-[13])
-
-[14] (exam_20250725.aux)
+[8] (exam_20251017.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
-Package rerunfilecheck Info: File `exam_20250725.out' has not changed.
+Package rerunfilecheck Info: File `exam_20251017.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 35889 strings out of 468133
- 762385 string characters out of 5430719
- 1184905 words of memory out of 5000000
- 63896 multiletter control sequences out of 15000+600000
- 650256 words of font info for 71 fonts, out of 8000000 for 9000
+ 35743 strings out of 468133
+ 762317 string characters out of 5430719
+ 1171782 words of memory out of 5000000
+ 63749 multiletter control sequences out of 15000+600000
+ 642927 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,19n,129p,628b,1613s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on exam_20250725.pdf (14 pages, 204740 bytes).
+ 128i,17n,129p,634b,1262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on exam_20251017.pdf (8 pages, 318056 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 227 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
