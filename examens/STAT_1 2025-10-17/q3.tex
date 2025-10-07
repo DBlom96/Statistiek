@@ -1,48 +1,106 @@
 \begin{question}{30}{
-    Bij een grenscontrole in de buurt van Enschede doet de Koninklijke Marechaussee een steekproef om drugssmokkel per auto te detecteren.
+    Bij een grenscontrole in de buurt van Enschede doet de Koninklijke Marechaussee doorzoekingen in auto's op basis van een steekproef om drugssmokkel per auto te detecteren.
     Hierbij wordt op een dag uit de voorbijgaande auto's een steekproef van $n = 29$ auto's aselect gekozen.
     De doorzoektijd $T$ van deze auto's is uniform verdeeld tussen $11$ en $17$ minuten.
 } 
-    \subquestion{4}{
+    \subquestion{5}{
         Wat zijn de verwachtingswaarde $E[T]$ en de standaardafwijking $\sigma(T)$ van de doorzoektijd van een willekeurige auto?
     }
 
     \solution{
-
+        Gegeven is dat de doorzoektijd $T$ is uniform verdeeld tussen $a = 11$ en $b = 17$.\rubric{1}
+        De verwachtingswaarde $E[T]$ van een uniform verdeelde kansvariabele $T$ is gelijk aan
+        \[
+            E[T] = \frac{a+b}{2} = \frac{11 + 17}{2} = 14. \rubric{1}
+        \]
+        Vervolgens is de variantie $\Var{T}$ van een uniform verdeelde kansvariabele $T$ gelijk aan
+        \begin{align*}
+            \Var{T} = \frac{(b-a)^2}{12} = \frac{(17 - 11)^2}{12} = 3 \rubric{2}
+        \end{align*}
+        De standaardafwijking $\sigma(T)$ is gelijk aan de wortel van de variantie, oftewel $\sigma(T) = \sqrt{3} \approx 1.7321$. \rubric{1}
     }
 
-    \subquestion{4}{
+    \subquestion{3}{
         Wat is de kans dat de doorzoeking van een willekeurige auto langer dan $15$ minuten duurt?
     }
 
     \solution{
-        
+        De kans dat de doorzoektijd van een willekeurige auto langer dan $15$ minuten is, is gelijk aan
+
+        \begin{align*}
+            P(T > 15) = P(T \ge 15) &= 1 - P(T < 15) \\
+                                    &= 1 - \frac{15-a}{b-a} \\
+                                    &= 1 - \frac{15-11}{17-11} \\
+                                    &=\frac{1}{3} \rubric{3}
+        \end{align*}
     }
 
     \subquestion{6}{
-        Bereken dat minstens de helft van de doorzoekingen sneller is afgerond dan $15$ minuten.
+        Bereken de kans dat minstens driekwart van de doorzoekingen sneller is afgerond dan $15$ minuten.
+        Je mag aannemen dat de doorzoekingen onafhankelijk van elkaar plaatsvinden.
     }
 
     \solution{
-
+        We kunnen aannemen dat de verschillende doorzoekingen onafhankelijk van elkaar plaatsvinden, oftewel dat de lengte van de doorzoekingen niet van elkaar afhangen. \rubric{1}
+        Introduceer de variabele $X$ die het aantal doorzoekingen telt dat binnen $15$ minuten is afgerond.
+        Omdat de doorzoekingen onafhankelijk zijn, is $X$ binomiaal verdeeld met $n = 29$ en een succeskans $p = 1 - \frac{1}{3} = \frac{2}{3}$. \rubric{2}
+        We willen de kans bepalen dat minstens driekwart van de doorzoekingen, oftewel minstens $\frac{3}{4}\cdot 29 \rightarrow 22$ doorzoekingen binnen $15$ minuten is afgerond. \rubric{1}
+        Deze kans is gelijk aan
+        \[
+            P(X \geq 22) = 1 - P(X \leq 21) = 1 - \binomcdf(n=29, p=\frac{2}{3}, k=21) \approx 0.1986. \rubric{2}
+        \]
     }
 
     \subquestion{8}{
-        Wat is de kans dat de totale doorzoektijd over de $n=29$ geselecteerde auto's langer is dan acht uur?
+        Wat is de kans dat de totale doorzoektijd over de $n=29$ geselecteerde auto's langer is dan zeven uur?
     }
 
     \solution{
+        De doorzoektijden $T_1, \ldots, T_{29}$ van de $n = 29$ auto's in de steekproef volgen dezelfde kansverdeling 
+        met verwachtingswaarde $\mu = 14$ en standaardafwijking $\sigma = \sqrt{3}$. \rubric{1}
+        Daarnaast vinden ze onafhankelijk van elkaar plaats. 
 
+        Volgens de centrale limietstelling is de som van de doorzoektijden $\sum T = T_1 + T_2 + \ldots + T_{29}$ 
+        bij benadering normaal verdeeld met verwachtingswaarde $n \cdot \mu = 29 \cdot 14 = 406$ 
+        en standaardafwijking $\sqrt{n} \cdot \sigma \approx 9.3274$. \rubric{3}
+
+        De kans dat de totale doorzoektijd langer is dan zeven uur, oftewel $7 \cdot 60 = 420$ minuten \rubric{1}
+        is gelijk aan
+        \begin{align*}
+            P(\sum T \geq 420) = \normalcdf(a = 420, b = 10^{99}, \mu = 406, \sigma = 9.3274) \approx 0.0667. \rubric{3}
+        \end{align*}
     }
 
     \subquestion{8}{
         De Marechaussee kan de doorzoeking van auto's mogelijk verkorten door gebruik te maken van drugshonden.
         Hierbij wordt ervanuit gegaan dat de doorzoektijd nog steeds uniform verdeeld zal zijn, maar verschoven naar links (oftewel van $[11, 17]$ naar $[11-x, 17-x]$ voor een bepaalde waarde van $x$).
-        Voor welke waarde van $x$ geldt dat de kans dat de $n=29$ geselecteerde auto's binnen zeven uur kunnen worden gedetecteerd nu groter is dan \SI{90}{\percent}.
+        Voor welke waarde van $x$ geldt dat de kans dat de $n=29$ geselecteerde auto's binnen zes uur kunnen worden gedetecteerd groter is dan \SI{90}{\percent}.
     }
 
     \solution{
+        In dit geval hebben we nog steeds te maken met de centrale limietstelling, alleen zal de verwachtingswaarde afhangen van de nog onbekende $x$.
+        Merk op dat de variantie hetzelfde blijft, omdat de spreiding tussen mogelijke uitkomsten hetzelfde blijft.\rubric{1}
 
+        De verwachtingswaarde $E[T]$ van de nieuwe doorzoektijd $T$ is gelijk aan
+        \[
+            E[T] = \frac{a+b}{2} = \frac{11 - x + 17 - x}{2} = 14 - x. \rubric{1}
+        \]
+
+        Volgens de centrale limietstelling is de som van de doorzoektijden $\sum T = T_1 + T_2 + \ldots + T_{29}$ 
+        bij benadering normaal verdeeld met verwachtingswaarde $n \cdot \mu = 29 \cdot (14 - x) = 406 - 29x$ 
+        en standaardafwijking $\sqrt{n} \cdot \sigma \approx 9.3274$. \rubric{2}
+
+        We willen de waarde $x$ bepalen zodanig dat geldt dat:
+        \[
+            P(\sum T \geq 360) = \normalcdf(a = 360, b = 10^{99}, \mu = 406 - 29x, \sigma = 9.3274) \geq 0.90 \rubric{1}
+        \]
+        
+        Om deze vergelijking op te lossen, gebruik de solver optie op de grafische rekenmachine en voer in:
+        \begin{align*}
+            &y_1: \qquad \normalcdf(a = 360, b = 10^{99}, \mu = 406 - 29X, \sigma = 9.3274) \\
+            &y_2: \qquad 0.90 
+        \end{align*}
+        Hieruit volgt dat $x \approx 1.1740$.\rubric{2}
+        De doorzoektijd moet met minstens $1$ minuut en $10$ seconden versnellen om met \SI{90}{\percent} zekerheid binnen zes uur de $29$ doorzoekingen af te ronden.\rubric{1}
     }
-
 \end{question}

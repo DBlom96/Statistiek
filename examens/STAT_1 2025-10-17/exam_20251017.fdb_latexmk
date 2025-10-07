@@ -1,6 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1759760151.07913 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_1 2025-10-17/exam_20251017.tex" "exam_20251017.pdf" "exam_20251017" 1759760153.61699 0
+["pdflatex"] 1759847893.64568 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_1 2025-10-17/exam_20251017.tex" "exam_20251017.pdf" "exam_20251017" 1759847897.64263 0
   "../../LaTeX/styles/config.sty" 1759741176 2827 686687842aab86bac28506eedd5dd74b ""
+  "../figures/exam20251017_1a.pdf" 1759839686 16074 78c8ef4916d5667f27a77f6379fdb511 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759222054 124356 d80fb265b13695b80413c9c8d049619c ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1755601769 13257336 70235e7a1464f0f15c5a7808b591ab6e ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -226,16 +227,16 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/formuleblad_STA1.pdf" 1759748575 149170 e2314d289b12b9640b4f56f8f478e672 ""
-  "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/exam_config.sty" 1759741373 2277 b0e8b65bd77d6920efc969a7f1633790 ""
+  "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/exam_config.sty" 1759839798 2277 1cad747bd4aeb9f398afc3631015fef2 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1753345002 2633 1b6afd87a1b64a777eb43a24d4bd010b ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/Python/FMW_titelblad_20251017.pdf" 1759742630 126612 d029b7ed927322d32c549a633eed3e4c ""
   "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_1 2025-10-17/exam_20251017.tex" 1759748605 863 39512b1e519dd8aaf41e439fca676599 ""
-  "exam_20251017.aux" 1759760153 298 6da8fa3d92dbd59a2f059551a2aa9dc3 "pdflatex"
-  "exam_20251017.out" 1759760152 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "exam_20251017.aux" 1759847897 2554 03ff22e3d5ffbd7b34ecfdd39362869f "pdflatex"
+  "exam_20251017.out" 1759847896 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "exam_20251017.tex" 1759748605 863 39512b1e519dd8aaf41e439fca676599 ""
-  "q1.tex" 1759760150 2349 058ab2300410e197c23c7456ef1e9459 ""
-  "q2.tex" 1759754654 2207 a79752ab8b5bc09173d91ac3bf39ca59 ""
-  "q3.tex" 1759756524 1603 a5d4c0e5b148c631ca6e4501abf739bd ""
+  "q1.tex" 1759842035 6753 823695e83a9f638fecc095ee30ddd206 ""
+  "q2.tex" 1759844994 6979 d395a9101d0b29abff042c21f463e90a ""
+  "q3.tex" 1759847889 6000 5cbe8eac9ad4075c04dac6677ac9a221 ""
   "q4.tex" 1759758656 1885 5e7a4234f179860ace46ff4738923889 ""
   (generated)
   "exam_20251017.aux"

@@ -3,50 +3,117 @@
     Voordat ze beginnen, moeten ze zich melden bij het KPU-bedrijf in Soesterberg om hun nieuwe gevechtstenues aan te vragen.
     Hierbij wordt aangenomen dat het aantal aanvragen $X$ per dag van reservisten voor een gevechtstenue een Poissonverdeling volgt met parameter $\lambda = 4.2$.
 }    
-    \subquestion{4}{
+    \subquestion{5}{
         Bereken de kans dat er in een willekeurige week precies $30$ reservisten een aanvraag doen voor een nieuw gevechtstenue.
     }
 
     \solution{
-    
-    }
+        Laat $X$ het aantal aanvragen voor een nieuw gevechtstenue in een periode van een week.
+        De tijdseenheid is in dagen, dus $t = 7$ en $\lambda = 4.2$, oftewel $\mu = \lambda \cdot t = 29.4$. \rubric{2}
+        
+        Er geldt dus dat $X$ Poisson verdeeld is met parameter $\mu = 29.4$.
 
-    \subquestion{5}{
-        De huidige productie van nieuwe gevechtstenues ligt op $5$ gevechtstenues per dag (er wordt in deze opgave vanuit gegaan dat er een speciale productie is alleen voor reservisten).
-        Op drukke dagen kan het dus zijn dat er meer gevechtstenues worden aangevraagd dan dat er kunnen worden geproduceerd?
-        Wat is de kans dat er na een dag een tekort is op de productie?
-    }
-
-    \solution{
-    
+        De kans dat er in die zeven dagen precies $30$ aanvragen worden geplaatst is dus gelijk aan
+        \[
+            P(X = 30) = \poissonpdf(\mu=29.4; k=30) \approx 0.0722. \rubric{2}
+        \]
     }
 
     \subquestion{3}{
-        Wat is de kans dat er de volgende dag opnieuw een tekort is op de productie, gegeven dat dit gisteren ook was?
+        De huidige productie van nieuwe gevechtstenues ligt op $5$ gevechtstenues per dag (er wordt in deze opgave vanuit gegaan dat er een speciale productie is alleen voor reservisten).
+        Op drukke dagen kan het dus zijn dat er meer gevechtstenues worden aangevraagd dan dat er kunnen worden geproduceerd.
+        Wat is de kans dat er na een dag een tekort is op de productie? 
     }
 
     \solution{
-    
+        Er zal een tekort aan gevechtstenues zijn als er op een dag meer aanvragen zijn dan dat er gevechtstenues geproduceerd worden.\rubric{1}
+        We willen dus de kans $P(X > 5)$ bepalen, oftewel
+        \begin{align*}
+            P(X > 5) = P(X \geq 6)  &= 1 - P(X \leq 5)   \\
+                                    &= 1 - \poissoncdf(\mu=4.2; k=5) \\
+                                    &\approx 0.2469. \rubric{2}
+        \end{align*}
+    }
+
+    \subquestion{4}{
+        De aanvragen voor een nieuw gevechtstenue dienen zich aan volgens een Poissonproces met parameter $\lambda = 4.2$.
+        Dat betekent dat zodra een aanvraag worden geplaatst, de tijd tot de volgende aanvraag exponentieel verdeeld is met parameter $1 / \lambda$.
+        Stel dat de laatste aanvraag een uur geleden plaatsvond.
+        Wat is de kans dat er binnen het volgende uur een aanvraag binnenkomt?
+    }
+
+    \solution{
+        Merk op dat de exponentiële verdeling \emph{geheugenloos} is.\rubric{1}
+        Dit houdt in dat het niet uitmaakt wanneer de laatste aanvraag heeft plaatsgevonden. \rubric{1}
+
+        Noteer met $T$ de kansvariabele die de tijd (in uren) meet tot de volgende aanvraag.
+        Er geldt dat $T$ exponentieel verdeeld is met parameter $\frac{\lambda}{24}$ (let op dat de originele $\lambda$ over aanvragen per dag ging!). \rubric{1}
+
+        De kans dat binnen het volgende uur een aanvraag binnenkomt is dan
+        \begin{align*}
+            P(T < 1) = F(1) = 1 - e^{-\lambda/24 \cdot 1} \approx 0.1605. \rubric{1}
+        \end{align*}
     }
     
     \subquestion{6}{
-        Met hoeveel procent moet de productie worden opgeschroefd om met \SI{95}{\percent} kans te kunnen voldoen aan de vraag naar een nieuw gevechtstenue?
+        Met welk aantal zal de productie moeten worden opgeschroefd om met \SI{95}{\percent} kans te kunnen voldoen aan de vraag naar een nieuw gevechtstenue?
     }
 
     \solution{
+        We willen in deze vraag dus bepalen voor welke productiegrootte per dag $k$ geldt dat de kans op hoogstens $k$ aanvragen op een willekeurige dag groter dan of gelijk aan \SI{95}{\percent}. \rubric{1}
+        In andere woorden, voor welke $k$ geldt dat 
+        \begin{align*}
+            P(X \leq k) = \poissoncdf(\mu=4.2, k?) \geq 0.95. \rubric{1}
+        \end{align*}
 
+        Om deze vergelijking op te lossen, gebruik de tabel optie op de grafische rekenmachine en voer in:
+        \begin{align*}
+            &y_1: \qquad \poissoncdf(\mu=4.2, k=X) \\
+            &y_2: \qquad 0.95 \rubric{2}
+        \end{align*}
+        (Merk op dat de solver optie niet werkt, omdat hetgeen wat we willen uitrekenen een geheel getal moet zijn, en er dus discrete stappen zijn tussen uitkomsten).
+
+        Hieruit volgt dat:
+        \begin{align*}
+            k=7: & \poissoncdf(\mu=4.2, k=7) \approx 0.9361 \\
+            k=8: & \poissoncdf(\mu=4.2, k=8) \approx 0.9721 \rubric{1}
+        \end{align*}
+        Dit betekent dat om met \SI{95}{\percent} kans genoeg gevechtstenues te hebben er minstens $8$ gevechtstenues moeten worden geproduceerd, oftewel de productie moet met minstens $8-5 = 3$ worden opgeschroefd. \rubric{1}
     }
 
     \subquestion{7}{
         Binnen afzienbare tijd start echter ook een nieuwe lichting cadetten en adelborsten aan de langmodelopleiding.
-        Ook deze plaatsen hun orders volgens een Poissonproces, dit keer met gemiddeld $8.7$ aanvragen per dag.
+        Ook dit aantal aanvragen $Y$ per dag volgt een Poissonverdeling, dit keer met gemiddeld $8.7$ aanvragen per dag.
+        Het bleek echter niet mogelijk om de productiecapaciteit te verhogen.
         Om aan deze grote vraag kunnen voldoen, werkt de afdeling een tijdje vooruit om alvast genoeg gevechtstenues klaar te hebben liggen voor de grote drukte.
 
-        Uitgaande van de productiecapaciteit van $5$ gevechtstenues, hoe lang van tevoren moet de productie worden opgestart om met \SI{95}{\percent} kans genoeg gevechtstenues klaar te hebben liggen voor de reservisten én langmodellers om de eerste dag door te komen?
+        Uitgaande van de productiecapaciteit van $5$ gevechtstenues per dag, hoe lang van tevoren moet de productie worden opgestart om met \SI{95}{\percent} kans genoeg gevechtstenues klaar te hebben liggen voor de reservisten én langmodellers om de eerste dag door te komen?
     }
 
     \solution{
+        Merk op dat de populaties van reservisten en langmodellers twee onafhankelijke populaties zijn. \rubric{1}
+        Aangezien het aantal aanvragen $X$ en $Y$ beide Poisson verdeelde kansvariabelen zijn, is het totale aantal aanvragen $Z = X + Y$ ook Poisson verdeeld met parameter $4.2 + 8.7 = 12.9$. \rubric{1}
 
+        We berekenen eerst de waarde $k$ waarvoor geldt dat de kans dat het totale aantal aanvragen hoogstens $k$ is gelijk is aan $0.95$, oftewel:
+
+        \begin{align*}
+            P(Z \leq k) = \poissoncdf(\mu=12.9, k?) \geq 0.95. \rubric{1}
+        \end{align*}
+
+        Om deze vergelijking op te lossen, gebruik de tabel optie op de grafische rekenmachine en voer in:
+        \begin{align*}
+            &y_1: \qquad \poissoncdf(\mu=12.9, k=X) \\
+            &y_2: \qquad 0.95 \rubric{2}
+        \end{align*}
+        (Merk op dat de solver optie niet werkt, omdat hetgeen wat we willen uitrekenen een geheel getal moet zijn, en er dus discrete stappen zijn tussen uitkomsten).
+
+        Hieruit volgt dat:
+        \begin{align*}
+            k=18: & \poissoncdf(\mu=12.9, k=18) \approx 0.9341 \\
+            k=19: & \poissoncdf(\mu=12.9, k=19) \approx 0.9600 \rubric{1}
+        \end{align*}
+        Dit betekent dat er minstens $19$ gevechtstenues moeten klaarliggen om met \SI{95}{\percent} kans genoeg gevechtstenues te hebben op de eerste dag. \rubric{1}
+        Er moet dus $\frac{19}{5} = 3.8$ dagen van te voren begonnen worden met het produceren van gevechtstenues. \rubric{1}
     }
 
 \end{question}
