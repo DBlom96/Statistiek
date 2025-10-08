@@ -13,7 +13,24 @@
        Bereken van de gemeten waarden het steekproefgemiddelde en de steekproefstandaardafwijking.
     }
     \solution{
+        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 931 + 978 + \ldots + 937 }{ 10 } \approx 957.3. \rubric{2}
+        \end{align*}
+    
 
+        We berekenen de steekproefvariantie $s^2$ als volgt:
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (931 - 957.3)^2 + (978 - 957.3)^2 + \ldots + (937 - 957.3)^2 }{ 10 - 1 } \\
+                &\approx 560.6778. \rubric{2}
+        \end{align*}
+    
+
+        We berekenen de steekproefstandaardafwijking $s$ door te wortel van de steekproefvariantie $s^2$ te nemen:
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 560.6778 } \approx 23.6786. \rubric{1}
+        \end{align*}
     }
     
     \subquestion{7}{
@@ -23,7 +40,21 @@
 
     }
     \solution{
-    
+        Gegeven is dat de treksterkte van de metaallegering een normale verdeling volgt met een onbekende verwachtingswaarde $\mu$ en een onbekende standaardafwijking $\sigma$.
+        Volgens de centrale limietstelling geldt dat de gemiddelde treksterkte van de metaallegering dan normaal verdeeld is met parameters $\mu$ en $\frac{\sigma}{\sqrt{10}}$. \rubric{1}
+        Omdat $\sigma$ onbekend is en de steekproefgrootte $n = 10 < 30$ is, moeten we gebruik maken van de $t$-verdeling. \rubric{1}
+        De $t$-waarde die hoort bij \SI{90}{\percent} betrouwbaarheid, oftewel $\alpha = 0.1$, is (in het geval van tweezijdige intervallen) gelijk aan
+        \[
+            t = \invt(\text{opp}=1-\frac{\alpha}{2}; \text{df}=n-1) = \invt(\text{opp}=0.95; \text{df}=9) \approx 1.8331. \rubric{2}
+        \]
+        Het \SI{90}{\percent}-betrouwbaarheidsinterval wordt dan gegeven door
+        \begin{align*}
+            [\overline{x} - t \cdot \frac{ s }{ \sqrt{ n } }; \overline{x} + t \cdot \frac{ s }{ \sqrt{ n } }] \\
+            &= [957.3 - 1.8331 \cdot \frac{ 23.6786 }{ \sqrt{ 10 } }; 957.3 + 1.8331 \cdot \frac{ 23.6786 }{ \sqrt{ 10 } }] \\
+            &= [943.574; 971.026]. \rubric{2}
+        \end{align*}
+        Om de betrouwbaarheid te waarborgen, moeten we het interval naar buiten afronden, oftewel de ondergrens naar beneden afronden en de bovengrens naar boven.
+        In andere woorden, het \SI{90}{\percent}-betrouwbaarheidsinterval voor de gemiddelde treksterkte $\mu$ loopt van $943$ tot $972$. \rubric{1} 
     }
 
     \subquestion{6}{
@@ -33,7 +64,29 @@
         Kies in dit geval voor een significantieniveau van $\alpha = 0.05$.
     }
     \solution{
-    
+        In deze hypothesetoets hebben we te maken met een $t$-toets met nul- en alternatieve hypothese als volgt:
+        \begin{align*}
+            H_{0}: \mu &\geq 940 \tag{gemiddelde voldoet aan de bewering} \\
+            H_{1}: \mu &< 940 \tag{gemiddelde voldoet NIET aan de bewering} \rubric{1}
+        \end{align*}
+
+        In dit geval werken we met een linkszijdige toets (alternatieve hypothese heeft vorm $<$), dus het kritieke gebied is van de vorm $(-\infty, g]$. \rubric{1}
+        We willen de grens $g$ bepalen zodanig dat de kans op een type-I fout ($H_0$ verwerpen terwijl deze juist waar is) gelijk is aan $\alpha=0,05$.
+
+        Onder de nulhypothese is de gemiddelde treksterkte $\overline{X}$ van 10 willekeurige monsters van de metaallegering normaal verdeeld met verwachtingswaarde $\mu = 940$ en standaardafwijking $\frac{\sigma}{\sqrt{10}}$.
+        Omdat $\sigma$ onbekend is en $n = 10 < 30$, gebruiken we opnieuw de $t$-verdeling en $s = 23.6786$. \rubric{1}
+        Er geldt dus, omdat we eenzijdig toetsen, dat 
+        \[
+            t = \invt(opp=1-\alpha; df=n-1) = \invt(opp=0.95; df=9) \approx 1.8331. \rubric{1}
+        \]
+        (merk op dat de $t$-waarde anders is, omdat we met een ander betrouwbaarheidsniveau werken!).
+        
+        De bijbehorende grenswaarde vinden we nu met
+        \[
+            g = \mu - t \cdot \frac{s}{\sqrt{10}} = 940 - 1.8331 \cdot \frac{23.6786}{\sqrt{10}} \approx 926.2741. \rubric{1}
+        \]
+
+        Het steekproefgemiddelde $\overline{x} \approx 957.3$ is groter dan deze bovengrens $g \approx 926.2741$ van het kritieke gebied, dus $H_0$ wordt niet verworpen. \rubric{1} 
     }
 
     \subquestion{2}{
@@ -41,6 +94,7 @@
 
     }
     \solution{
-
+        De toetsuitslag betekent dus dat $H_0$ niet wordt verworpen.\rubric{1}
+        In andere woorden, op basis van de steekproef is er onvoldoende bewijs om de bewering van de onderzoekers (dat de gemiddelde treksterkte minstens $940$ $N/mm^2$ is) te ontkrachten. \rubric{1}
     }
 \end{question}

@@ -1,6 +1,6 @@
 \begin{question}{20}{
     Een Oekraïens militaire inlichtingencentrum heeft het vermoeden dat er een bepaald patroon zit in het aantal Shahed-drones dat gebruikt wordt in Russische drone-aanvallen.
-    Om dit te onderzoeken, hebben ze de gegevens verzameld over het aantal drones dat gebruikt werd in $100$ aanvallen.
+    Om dit te onderzoeken, hebben ze de gegevens verzameld over het aantal drones dat gebruikt werd in $171$ aanvallen.
      
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
@@ -21,24 +21,76 @@
 }
     \subquestion{10}{
         Toets of de verdeling van het aantal drones significant afwijkt van een uniforme verdeling over deze zes categorieën.
-        Bepaal de toetsuitslag aan de hand van de $p$-waarde en kies als significantieniveau $\alpha = 0,02$.
+        Bepaal de toetsuitslag aan de hand van de $p$-waarde en kies als significantieniveau $\alpha = 0.02$.
     }
 
     \solution{
+        We voeren een chikwadraat toets voor aanpassing met een significantieniveau van $\alpha = 0.02$.
 
+        We beginnen met het definiëren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$:
+        \begin{itemize}
+            \item[$H_0$: ] het aantal drones in Russische drone-aanvallen is uniform verdeeld \rubric{1}
+            \item[$H_1$: ] het aantal drones in Russische drone-aanvallen is NIET uniform verdeeld \rubric{1}
+        \end{itemize}
+        Allereerst berekenen we op basis van de discrete uniforme kansverdeling (evenveel kans op iedere mogelijke categorie) de verwachte frequenties:
+        \begin{center}
+            \begin{tabular}{ccc}
+                \toprule
+                    \textbf{Categorie} & \textbf{Observed} & \textbf{Expected} \\
+                \midrule
+                    $1$ & $18$ & $30.1667$ \\
+                    $2$ & $23$ & $30.1667$ \\
+                    $3$ & $34$ & $30.1667$ \\
+                    $4$ & $37$ & $30.1667$ \\
+                    $5$ & $31$ & $30.1667$ \\
+                    $\geq 6$ & $38$ & $30.1667$ \\ 
+                \bottomrule
+            \end{tabular}\rubric{2}
+        \end{center}
+    
+        Vervolgens berekenen we de geobserveerde toetsingsgrootheid $\chi^2$ als volgt:
+        \begin{align*}
+            \chi^2  &= \frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \ldots + \frac{(O_{\geq 6} - E_{\geq 6})^2}{E_{\geq 6}}\\
+                    &= \frac{(18 - 30.1667)^2}{30.1667} + \frac{(23 - 30.1667)^2}{30.1667} + \ldots + \frac{(38 - 30.1667)^2}{30.1667}\\
+                    &\approx 10.7017 \rubric{2}
+        \end{align*}
+    
+        De theoretische toetsingsgrootheid $X^2$ volgt onder de nulhypothese een $\chi^2$-verdeling met $\text{df}= 6 - 1 - 0 = 5$ vrijheidsgraden. \rubric{1}
+        De $p$-waarde berekenen we als de rechteroverschrijdingskans van onze geobserveerde toetsingsgrootheid $\chi^2$ op basis van de chikwadraatverdeling met $5$ vrijheidsgraden:
+        \begin{align*}
+            p = P(X^2 \geq \chi^2 > 10.7017) &= \chi^2\text{cdf}(\text{lower}=10.7017; \text{upper}=10^{99}; \text{df}=5) \\
+                                    &\approx 0.0576.   \rubric{2}
+        \end{align*}
+        Omdat $p > \alpha = 0.02$, wordt de nulhypothese $H_0$ aangenomen.
+        Er is onvoldoende reden om de aanname te verwerpen dat de geobserveerde data tot stand zijn gekomen als trekkingen van de uniforme kansverdeling.\rubric{1}
     }
 
     \subquestion{5}{
         Voer de toets opnieuw uit, maar bepaal nu de toetsuitslag aan de hand van het kritieke gebied.
     }
     \solution{
-
+        Deze toets heeft veelal dezelfde elementen als het antwoord bij vraag a. Het verschil zit hem in de manier waarop tot de conclusie wordt gekomen. \rubric{1}
+        Bij een chikwadraattoets is het kritieke gebied altijd van de vorm $[g, \infty)$, oftewel de toets is altijd rechtszijdig. \rubric{1}
+        
+        Deze grens $g$ voldoet aan de volgende vergelijking:
+        \begin{align*}
+            P(X^2 \geq g) = \chi^2\text{cdf}(\text{lower}=g; \text{upper}=10^{99}; \text{df}=5) = \alpha = 0.02
+        \end{align*}
+        Deze vergelijking kunnen we oplossen door gebruik te maken van de solver optie op de grafische rekenmachine:
+        \begin{align*}
+            &y_1: \qquad \chi^2\text{cdf}(\text{lower}=X; \text{upper}=10^{99}; \text{df}=5) \\
+            &y_2: \qquad 0.02 \rubric{1}
+        \end{align*}
+        De oplossing voor deze vergelijking is $g \approx 13.3882$. \rubric{1}
+        De geobserveerde toetsingsgrootheid $\chi^2 = 10.7017$ ligt dus niet in het kritieke gebied, waardoor de nulhypothese $H_0$ wordt aangenomen.
+        Er is onvoldoende reden om de aanname te verwerpen dat de geobserveerde data tot stand zijn gekomen als trekkingen van de uniforme kansverdeling.\rubric{1}
     }
 
     \subquestion{5}{
         Verklaar de toetsuitslag aan de hand van de frequenties in de bovenstaande tabel en de verwachte frequenties volgens een uniforme verdeling.
     }
     \solution{
-    
+        Als we kijken naar de geobserveerde frequenties, dan zien we dat deze in de buurt liggen van de verwachte frequenties volgens de uniforme verdeling. \rubric{2}
+        Het is dus niet zo gek dat de nulhypothese $H_0$ wordt aangenomen, omdat de toetsingsgrootheid $\chi^2$ kleiner is naarmate de observed en expected frequenties meer op elkaar lijken.\rubric{3}
     }
 \end{question}

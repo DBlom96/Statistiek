@@ -22,95 +22,115 @@
         Formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$ van de bijbehorende hypothesetoets.
     }
     \solution{
-        Omdat we willen weten of de mate van tevredenheid significant afwijkt tussen militairen van verschillende OPCO's, dienen we een $\chi^2$-toets (chikwadraat) voor onafhankelijkheid uit te voeren. \rubric{2}
+        Omdat we willen weten of de mate van tevredenheid significant afwijkt tussen militairen van verschillende OPCO's, dienen we een chikwadraattoets voor onafhankelijkheid uit te voeren. \rubric{2}
         Dit kan ook omdat we te maken hebben met twee categorische variabelen!
         
         De bijbehorende nul- en alternatieve hypothese zijn in dit geval gelijk aan
-        \begin{align*}
-            H_0&: \text{ de verdeling van de mate van tevredenheid } \\
-               & \qquad \qquad \text{is onafhankelijk van het OPCO van de militairen.} \rubric{1} \\
-            H_1&: \text{ e verdeling van de mate van tevredenheid } \\
-               & \qquad \qquad \text{is wel afhankelijk van het OPCO van de militairen.} \rubric{1}
-        \end{align*}
+        \begin{itemize}
+            \item[$H_0$:] de verdeling van de mate van tevredenheid is onafhankelijk van het OPCO van de militairen. \rubric{1}
+            \item[$H_1$:] de verdeling van de mate van tevredenheid is WEL afhankelijk van het OPCO van de militairen. \rubric{1}
+        \end{itemize}
     }
 
     \subquestion{11}{Bepaal de $p$-waarde van de desbetreffende hypothesetoets.}
     \solution{
-        Om een chi-kwadraattoets voor onafhankelijkheid uit te voeren, moeten we eerst de verwachte frequenties uitrekenen. Onder de aanname dat $H_0$ waar is, is deze voor elk van de negen cellen te berekenen als $\frac{\text{rijtotaal} \cdot \text{kolomtotaal}}{\text{totaal}}$.
-        De verwachte frequenties zijn te berekenen met behulp van de formule:
-        \[
-            E_{ij} = \frac{\text{rijtotaal}_{i} \cdot \text{kolomtotaal}_{j}}{\text{totaal}}
-        \]
+        We voeren een chikwadraat toets voor onafhankelijkheid uit om de bovenstaande hypotheses te toetsen.
+        Allereerst berekenen we op basis van de aanname van onafhankelijkheid de verwachte frequenties:
 
-        \begin{center}
-            \begin{minipage}{0.45\textwidth}
-                \begin{table}[H]
-                    \centering
-                    \caption{``Observed'' frequenties}
-                    \begin{tabular}{c|cc|c}
-                        \toprule
-                            & C & A & Totaal \\
-                        \midrule
-                            Leiderschap & $52$ & $22$ & $74$ \\ 
-                            Avontuur & $23$ & $9$ & $32$ \\ 
-                            Vaderland dienen & $38$ & $28$ & $66$ \\
-                        \midrule
-                            Totaal & $113$ & $59$ & $172$ \\
-                        \bottomrule
-                    \end{tabular}
-                \end{table}
-            \end{minipage}
-            \hfill
-            \begin{minipage}{0.45\textwidth}
-                \begin{table}[H]
-                    \centering
-                    \caption{``Expected'' frequenties}
-                    \begin{tabular}{cc|c}
-                        \toprule
-                            C & A & Totaal \\
-                        \midrule
-                             $48,6163$ & $25,3837$ & $74$ \\ 
-                             $21,0233$ & $10,9767$ & $32$ \\ 
-                             $43,3605$ & $22,6395$ & $66$ \\ 
-                        \midrule
-                             $113$ & $59$ & $172$ \\
-                        \bottomrule
-                    \end{tabular}
-                \end{table}
-            \end{minipage}\rubric{4}
-        \end{center} 
+        \begin{minipage}{0.45\textwidth}
+            \begin{table}[H]
+                \centering
+                % \caption{Geobserveerde frequenties (observed)}
+                \begin{tabular}{c|cc|c}
+                    \multicolumn{4}{c}{\textbf{Geobserveerde frequenties (observed)}} \\
+                    \toprule
+                        & \textbf{T} & \textbf{NT}  & \textbf{Totaal} \\
+                    \midrule
+                        \textbf{CLAS} & $250$ & $150$ & $400$ \\ 
+                        \textbf{CLRS} & $200$ & $200$ & $400$ \\ 
+                        \textbf{CZSK} & $220$ & $180$ & $400$ \\ 
+                        \textbf{KMAR} & $180$ & $220$ & $400$ \\ 
+                    \midrule
+                        \textbf{Totaal} & $850$ & $750$ & $1600$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{table}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \begin{table}[H]
+                \centering
+                % \caption{Verwachte frequenties \\ (expected)}
+                \begin{tabular}{c|cc|c}
+                    \multicolumn{4}{c}{\textbf{Verwachte frequenties (expected)}} \\
+                    \toprule
+                        & \textbf{T}  & \textbf{NT}  & \textbf{Totaal} \\
+                    \midrule
+    			        \textbf{CLAS} & $212.5$ & $187.5$ & $400$ \\ 
+                        \textbf{CLRS} & $212.5$ & $187.5$ & $400$ \\ 
+                        \textbf{CZSK} & $212.5$ & $187.5$ & $400$ \\ 
+                        \textbf{KMAR} & $212.5$ & $187.5$ & $400$ \\ 
+                    \midrule
+                        \textbf{Totaal} & $850$ & $750$ & $1600$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{table}
+        \end{minipage}
         
-        We berekenen de toetsingsgrootheid $\chi^2$ als volgt, waarbij $O_{ij} / E_{ij}$ de geobserveerde / verwachte frequentie is in rij $i$, kolom $j$:        
+        Vervolgens berekenen we de toetsingsgrootheid $X^2$ als volgt:
         \begin{align*}
-            \chi^2 &= \frac{(O_{1, 1} - E_{1,1})^2}{E_{1, 1}} + \frac{(O_{1, 2} - E_{1,2})^2}{E_{1, 2}} + \ldots + \frac{(O_{3, 2} - E_{3,2})^2}{E_{3, 2}} \\
-                    &= \frac{(52 - 48,6163)^2}{48,6163} + \frac{(22 - 25,3837)^2}{25,3837} + \ldots + \frac{(28 - 22,6395)^2}{22,6395} \\
-                    &\approx 3,1603. \rubric{2}
+            \chi^2  &= \frac{(O_{1, 1} - E_{1,1})^2}{E_{1, 1}} + \frac{(O_{1, 2} - E_{1,2})^2}{E_{1, 2}} + \ldots + \frac{(O_{4, 2} - E_{4,2})^2}{E_{4, 2}} \\
+                    &= \frac{(250 - 212.5)^2}{212.5} + \frac{(150 - 187.5)^2}{187.5} + \ldots + \frac{(220 - 187.5)^2}{187.5} \\
+                    &\approx 26.8549.
         \end{align*}
-
-        De bijbehorende $p$-waarde is de rechteroverschrijdingskans $P(X > \chi^2)$, waarbij $X^2$ de toetsingsgrootheid van de chikwadraattoets voor onafhankelijkheid. \rubric{1}
-        De toetsingsgrootheid $X^2$ volgt onder de nulhypothese een $\chi^2$-verdeling met $\text{df}= (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (3-1)\cdot(2-1) = 2$ vrijheidsgraden. \rubric{1}
-
+        De toetsingsgrootheid $X^2$ volgt onder de nulhypothese een $\chi^2$-verdeling met $\text{df}= (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (4-1)\cdot(2-1) = 3$ vrijheidsgraden.
         \begin{align*}
-            p   &= P(\chi^2 > 3.1603) \\
-                &= \chi^2\text{cdf}(\text{lower}=3.1603; \text{upper}=10^{99}; \text{df}=2) \\
-                &\approx 0.2059.  \rubric{2}
+            p   &= P(\chi^2 > 26.8549) \\ 
+                &= \chi^2\text{cdf}(\text{lower}=26.8549; \text{upper}=10^{99}; \text{df}=3) \\
+                &\approx 0.   
         \end{align*}
-        Omdat $p > \alpha$, wordt de nulhypothese $H_0$ aangenomen.
-        Er is onvoldoende reden om de aanname te verwerpen dat de twee variabelen onafhankelijk zijn van elkaar. \rubric{1}
     }
 
-    \subquestion{5}{Geef de conclusie van de hypothesetoets (op basis van een significantieniveau $\alpha = 0,05$) met behulp van de berekende $p$-waarde.}
+    \subquestion{5}{Geef de conclusie van de hypothesetoets (op basis van een significantieniveau $\alpha = 0.05$) met behulp van de berekende $p$-waarde.}
     \solution{
-        Uit de hypothesetoets volgt een redelijk grote rechteroverschrijdingskans $p \approx 0,2059$.
-        Omdat $p > \alpha = 0,05$, geldt dat $H_0$ wordt aangenomen. \rubric{2}
-        We kunnen dus de conclusie trekken dat de verdeling van primaire motivaties om officier te worden niet significant verschilt tussen cadetten en adelborsten. \rubric{1}
+        Uit de hypothesetoets volgt een bizar kleine $p$-waarde van nagenoeg $0$, oftewel rechteroverschrijdingskans.
+         grote rechteroverschrijdingskans $p \approx 0.2059$.
+        Omdat $p << \alpha = 0.05$, geldt dat $H_0$ wordt verworpen. \rubric{2}
+        We kunnen dus de conclusie trekken dat de categorische variabelen OPCO en mate van tevredenheid niet onafhankelijk zijn van elkaar. \rubric{1}
         
-        Als we kijken naar de tabel van geobserveerde en verwachte frequenties, dan zien we dat deze redelijk dichtbij elkaar in de buurt liggen.
-        Er zijn geen grote uitschieters te bekennen in de verwachte frequenties ten opzichte van de daadwerkelijk geobserveerde frequenties.\rubric{2}
+        Als we kijken naar de tabel van geobserveerde frequenties, dan zien we dat de verdeling tevreden-niet tevreden erg verschilt tussen de verschillende OPCO's.\rubric{1}
+        Dat duidt erop dat bijvoorbeeld militairen van de KMAR vaker ontevreden zijn dan bijvoorbeeld landmachters. 
+        Hierdoor zijn er ook grote verschillen tussen de geobserveerde en verwachte frequenties.\rubric{1}
     }
 
     \subquestion{10}{
         Naast de vraag of de mate van tevredenheid afhangt van het OPCO, is het ministerie ook geïnteresseerd in het percentage tevreden militairen.
         Bepaal een \SI{95}{\percent}-betrouwbaarheidsinterval voor het percentage tevreden militairen (over alle OPCO's samen).
+    }
+    \solution{
+        Om een betrouwbaarheidsinterval te bepalen van een fractie (of percentage) gebruiken we de Clopper-Pearson methode. \rubric{1}
+        Laat $X$ het aantal tevreden militairen zijn in de steekproef.
+        Aangezien de steekproefomvang gelijk is aan $1600$ militairen, is $X$ binomiaal verdeeld met $n = 400$ en een onbekende succeskans $p$. \rubric{1}
+        De steekproefuitkomst is dat er $k = 850$ tevreden militairen zijn. \rubric{1}
+        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$.
+
+        De Clopper-Pearson methode werkt als volgt:
+        \begin{enumerate}
+            \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=850$ gelijk is aan $\alpha/2$, oftewel $P(X \leq 850) = \alpha/2 = 0.025$.
+            Voer hiervoor in het solver menu van de grafische rekenmachine in:
+            \begin{align*}
+                y_1 &= \binomcdf(n=1600; p_1=X; k=850) \\
+                y_2 &= 0.025 \rubric{2}
+            \end{align*}
+            De solver optie geeft een waarde van $p_1 \approx 0.5559$.\rubric{1}
+            \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=850$ gelijk is aan $\alpha/2$, oftewel $P(X \geq 850) = 1 - P(X \le 849) = \alpha/2 = 0.025$.
+            Voer hiervoor in het solver menu van de grafische rekenmachine:
+            \begin{align*}
+                y_1 &= 1 - \binomcdf(n=1600; p_1=X; k=849) \\
+                y_2 &= 0.025 \rubric{2}
+            \end{align*}
+            De solver optie geeft een waarde van $p_2 \approx 0.5064$.\rubric{1}
+        \end{enumerate}
+        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het \SI{90}{\percent}-betrouwbaarheidsinterval voor de fractie tevreden militairen loopt van \SI{50.64}{\percent} tot \SI{55.59}{\percent}. \rubric{1}
     }
 \end{question}
