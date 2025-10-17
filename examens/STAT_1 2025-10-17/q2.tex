@@ -20,7 +20,7 @@
     }
 
     \subquestion{3}{
-        De huidige productie van nieuwe gevechtstenues ligt op $5$ gevechtstenues per dag (er wordt in deze opgave vanuit gegaan dat er een speciale productie is alleen voor reservisten).
+        De huidige productie ligt op $5$ nieuwe gevechtstenues per dag (er wordt in deze opgave vanuit gegaan dat er een speciale productie is alleen voor reservisten).
         Op drukke dagen kan het dus zijn dat er meer gevechtstenues worden aangevraagd dan dat er kunnen worden geproduceerd.
         Wat is de kans dat er na een dag een tekort is op de productie? 
     }
@@ -37,7 +37,7 @@
 
     \subquestion{4}{
         De aanvragen voor een nieuw gevechtstenue dienen zich aan volgens een Poissonproces met parameter $\lambda = 4.2$.
-        Dat betekent dat zodra een aanvraag worden geplaatst, de tijd tot de volgende aanvraag exponentieel verdeeld is met parameter $1 / \lambda$.
+        Dat betekent dat -- zodra een aanvraag worden geplaatst -- de tijd tot de volgende aanvraag exponentieel verdeeld is met $\lambda$.
         Stel dat de laatste aanvraag een uur geleden plaatsvond.
         Wat is de kans dat er binnen het volgende uur een aanvraag binnenkomt?
     }
@@ -67,17 +67,18 @@
         \end{align*}
 
         Om deze vergelijking op te lossen, gebruik de tabel optie op de grafische rekenmachine en voer in:
-        \begin{align*}
-            &y_1: \qquad \poissoncdf(\mu=4.2, k=X) \\
-            &y_2: \qquad 0.95 \rubric{2}
-        \end{align*}
+        \begin{itemize}
+            \item[$y_1:$] $\poissoncdf(\mu=4.2, k=X)$
+            \item[$y_2:$] $0.95$ \rubric{2}
+        \end{itemize}
         (Merk op dat de solver optie niet werkt, omdat hetgeen wat we willen uitrekenen een geheel getal moet zijn, en er dus discrete stappen zijn tussen uitkomsten).
 
         Hieruit volgt dat:
-        \begin{align*}
-            k=7: & \poissoncdf(\mu=4.2, k=7) \approx 0.9361 \\
-            k=8: & \poissoncdf(\mu=4.2, k=8) \approx 0.9721 \rubric{1}
-        \end{align*}
+        \begin{itemize}
+            \item[] $k=7: \poissoncdf(\mu=4.2, k=7) \approx 0.9361$
+            \item[] $k=8: \poissoncdf(\mu=4.2, k=8) \approx 0.9721$ \rubric{1}
+        \end{itemize}
+        
         Dit betekent dat om met \SI{95}{\percent} kans genoeg gevechtstenues te hebben er minstens $8$ gevechtstenues moeten worden geproduceerd, oftewel de productie moet met minstens $8-5 = 3$ worden opgeschroefd. \rubric{1}
     }
 
@@ -95,23 +96,20 @@
         Aangezien het aantal aanvragen $X$ en $Y$ beide Poisson verdeelde kansvariabelen zijn, is het totale aantal aanvragen $Z = X + Y$ ook Poisson verdeeld met parameter $4.2 + 8.7 = 12.9$. \rubric{1}
 
         We berekenen eerst de waarde $k$ waarvoor geldt dat de kans dat het totale aantal aanvragen hoogstens $k$ is gelijk is aan $0.95$, oftewel:
-
         \begin{align*}
             P(Z \leq k) = \poissoncdf(\mu=12.9, k?) \geq 0.95. \rubric{1}
         \end{align*}
-
         Om deze vergelijking op te lossen, gebruik de tabel optie op de grafische rekenmachine en voer in:
-        \begin{align*}
-            &y_1: \qquad \poissoncdf(\mu=12.9, k=X) \\
-            &y_2: \qquad 0.95 \rubric{2}
-        \end{align*}
-        (Merk op dat de solver optie niet werkt, omdat hetgeen wat we willen uitrekenen een geheel getal moet zijn, en er dus discrete stappen zijn tussen uitkomsten).
+        \begin{itemize}
+            \item[] $y_1: \poissoncdf(\mu=12.9, k=X)$ \rubric{1}
+        \end{itemize}
+        (Merk op dat we niet met de solver optie kunnen werken, omdat hetgeen wat we willen uitrekenen ($k$) een geheel getal moet zijn, en er dus discrete stappen zijn tussen uitkomsten).
 
-        Hieruit volgt dat:
-        \begin{align*}
-            k=18: & \poissoncdf(\mu=12.9, k=18) \approx 0.9341 \\
-            k=19: & \poissoncdf(\mu=12.9, k=19) \approx 0.9600 \rubric{1}
-        \end{align*}
+        Uit de tabel volgt dat:
+        \begin{itemize}
+            \item[] $k=18: \poissoncdf(\mu=12.9, k=18) \approx 0.9341$ 
+            \item[] $k=19: \poissoncdf(\mu=12.9, k=19) \approx 0.9600$ \rubric{1}
+        \end{itemize}
         Dit betekent dat er minstens $19$ gevechtstenues moeten klaarliggen om met \SI{95}{\percent} kans genoeg gevechtstenues te hebben op de eerste dag. \rubric{1}
         Er moet dus $\frac{19}{5} = 3.8$ dagen van te voren begonnen worden met het produceren van gevechtstenues. \rubric{1}
     }
