@@ -1,0 +1,131 @@
+\begin{question}{28}{
+    De Koninklijke Marine is geïnteresseerd in het bepalen van een betrouwbare onderhoudsstrategie voor de maritieme NH90-gevechtshelikopters.
+    Hiervoor is het belangrijk om data te verzamelen van de \emph{mean time between failures} (MTBF), oftewel de gemiddelde tijd tussen twee faalmomenten van een helikopteronderdeel.
+    Om te onderzoeken wat kritieke onderdelen zijn, worden de \emph{time between failures} (TBF) van de motor ($X$) en rotorbladen ($Y$) van tien NH90-gevechtshelikopters gemeten.
+
+    De volgende data zijn verzameld over de time between failures van motoren en rotorbladen van NH90-gevechtshelikopters.
+    
+    \begin{center}
+        \begin{tabular}{c|cccccccccc}
+            \toprule
+                TBF motoren (uren) & $1185$ & $1175$ & $1195$ & $1180$ & $1195$ & $1190$ & $1185$ & $1215$ & $1175$ & $1205$ \\ 
+            \midrule
+                TBF rotorbladen (uren) & $1180$ & $1205$ & $1190$ & $1210$ & $1175$ & $1200$ & $1225$ & $1195$ & $1185$ & $1215$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \vspace{1em}
+
+    De centrale vraag is nu om te toetsen of de MTBF van de motor significant lager is dan die van de rotorbladen, oftewel dat de motor sneller faalt dan de rotorbladen.
+    Voor beide steekproeven kan worden aangenomen dat de tijden tussen faalmomenten normaal verdeeld zijn.
+}
+
+    \subquestion{8}{
+        Bepaal voor beide populaties de steekproefgemiddelden ($x$ en $y$) en de steekproefvarianties ($s_X^2$ en $s_Y^2$).
+    }
+    \solution{
+
+        \textbf{Time between failures voor motoren:}
+
+        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 1185 + 1175 + \ldots + 1205 }{ 10 } = 1190. \rubric{2}
+        \end{align*}
+    
+
+        We berekenen de steekproefvariantie $s_X^2$ als volgt:
+        \begin{align*}
+            s_X^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (1185 - 1190)^2 + (1175 - 1190)^2 + \ldots + (1205 - 1190)^2 }{ 10 - 1 } \\
+                &\approx 166.6667. \rubric{2}
+        \end{align*}
+        
+        \textbf{Time between failures voor rotorbladen:}
+
+        We berekenen het steekproefgemiddelde $\overline{y}$ als volgt:
+        \begin{align*}
+            \overline{y} = \frac{y_1+y_2+\ldots+y_n}{n} = \frac{ 1180 + 1205 + \ldots + 1215 }{ 10 } = 1198.\rubric{2}
+        \end{align*}
+    
+
+        We berekenen de steekproefvariantie $s_x^2$ als volgt:
+        \begin{align*}
+            s_Y^2 &= \frac{ (y_1 - \overline{y})^2 + (y_2 - \overline{y})^2 + \ldots + (y_n - \overline{y})^2 }{ n - 1 } \\
+                &= \frac{ (1180 - 1198)^2 + (1205 - 1198)^2 + \ldots + (1215 - 1198)^2 }{ 10 - 1 } \\
+                &\approx 256.6667.\rubric{2}
+        \end{align*}
+    }
+
+    \subquestion{10}{
+        Voer een $F$-toets uit om te bepalen of de varianties van de MTBF's van de twee populaties als gelijk kunnen worden beschouwd ($\sigma_X^2 = \sigma_Y^2$).
+        Gebruik hiervoor een significantieniveau van $\alpha = 0.05$ en bepaal de toetsuitslag op basis van het kritieke gebied.
+    }
+    \solution{
+        In de vraag staat dat we aan mogen nemen dat voor de time between failures $X$ en $Y$ voor respectievelijk motoren en rotorbladen geldt dat
+        $X \sim N(\mu_X=?; \sigma_X=?)$ en $Y \sim N(\mu_Y=?; \sigma_Y=?)$.
+
+        We toetsen op gelijke varianties, oftewel
+        \begin{align*}
+            H_0: \quad \sigma_X^2 = \sigma_Y^2 \\
+            H_1: \quad \sigma_X^2 \neq \sigma_Y^2 \rubric{2}
+        \end{align*}
+
+        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en data is al verzameld voor beide populaties.
+        De toetsingsgrootheid voor een $F$-toets is gelijk aan
+        \[
+            F = \frac{S_X^2}{S_Y^2}, 
+        \]
+        en volgt een $F(n-1, m-1)$-verdeling, oftewel een $F(9,9)$-verdeling. \rubric{1}
+
+        De geobserveerde toetsingsgrootheid is gelijk aan
+        \[
+            f = \frac{s_X^2}{s_Y^2} = \frac{166.6667}{256.6667} = 0.6494. \rubric{2}
+        \]
+        
+        Omdat een $F$-toets altijd tweezijdig toetst, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $F(9,9)$-verdeling.
+        \begin{align*}
+            &\fcdf(\text{lower}=0; \text{upper}=g_1; \text{df1}=9; \text{df2}=9)=\alpha/2=0.025 \rightarrow g_1 \approx 0.2484\\
+            &\fcdf(\text{lower}=g_2; \text{upper}=10^{99}; \text{df1}=9; \text{df2}=9)=\alpha/2=0.025 \rightarrow g_2 \approx 4.0260 \rubric{2}
+        \end{align*}
+        Het kritieke gebied is dus $(-\infty; 0.2484]$ en $[4.0260; \infty)$. \rubric{1}
+        De berekende $f = 0.6494$ ligt dus niet in het kritieke gebied, dus we kunnen de nulhypothese $H_0$ niet verwerpen. \rubric{1}
+        Er is onvoldoende bewijs om op basis van deze steekproef de aanname van gelijke varianties te verwerpen. \rubric{1}
+    }
+
+    \subquestion{10}{
+        Bepaal met behulp van een onafhankelijke $t$-toets of de MTBF van de motor significant lager is dan die van de rotorbladen.
+        Gebruik hiervoor opnieuw een significantieniveau van $\alpha = 0.05$, en bepaal de toetsuitslag op basis van de $p$-waarde.
+    }
+    \solution{
+        We toetsen of de gemiddelde time to failure $\mu_X$ voor de motoren significant lager is dan de gemiddelde time to failure $\mu_Y$ voor de rotorbladen.
+        De hypotheses kunnen we daarom als volgt defini\"eren:
+        \begin{align*}
+            H_0: \quad \mu_X \geq \mu_Y \text{ (niet significant lager) } \\
+            H_1: \quad \mu_X < \mu_Y \text{ (wel significant lager) } \rubric{2}
+        \end{align*}
+
+        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en data is al verzameld voor beide populaties.
+
+        Op basis van ons antwoord bij vraag (b) mogen we nu aannemen dat $\sigma^2 = \sigma_X^2 = \sigma_Y^2$.
+        Dat betekent dat we met de pooled variance mogen werken als schatting voor de gemeenschappelijke onbekende variantie $\sigma^2$. \rubric{1}
+        
+        \begin{align*}
+            s_P^2 = \frac{(n-1)\cdot s_X^2 + (m-1) \cdot s_Y^2}{n-1+m-1} = \frac{9 \cdot 166.6667 + 9 \cdot 256.6667}{18} \approx 211.6667. \rubric{1}
+        \end{align*}
+        
+        De toetsingsgrootheid van de bijbehorende $t$-toets is gelijk aan
+        \[
+            t = \frac{(\overline{x}-\overline{y}) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}}} = \frac{(1190-1198) - 0}{\sqrt{\frac{211.6667}{10} + \frac{211.6667}{10}}}\approx -1.2296, 
+        \]
+        en komt uit een $t$-verdeling met $\text{df}=18$ vrijheidsgraden. \rubric{2}
+        Omdat we linkszijdig toetsen, is de $p$-waarde gelijk aan de linkeroverschrijdingskans van deze geobserveerde toetsingsgrootheid $t$:
+        \begin{align*}
+            p = P(T \leq t) &= \tcdf(\text{lower}=-10^{99}, \text{upper}=t; \text{df}=n+m-2) \\
+                            &= \tcdf(-10^{99}; -1.2296, 18) \\
+                            &\approx 0.1173 \rubric{2}
+        \end{align*}
+        
+        Deze $p$-waarde is groter dan het significantieniveau $\alpha = 0.05$, dus $H_0$ wordt geaccepteerd.\rubric{1}
+        Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de MTBF van motoren significant lager is dan de MTBF van rotorbladen.\rubric{1}
+    }
+\end{question}
