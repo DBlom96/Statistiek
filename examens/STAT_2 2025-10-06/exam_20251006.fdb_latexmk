@@ -1,9 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1759950256.25129 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-10-06/exam_20251006.tex" "exam_20251006.pdf" "exam_20251006" 1759950259.14394 0
-  "../../LaTeX/figures/20250725_q4_scatterplot.png" 1753345002 26880 adccd018484e96ba23ba7195f1bfd2fa ""
+["pdflatex"] 1761833027.78674 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-10-06/exam_20251006.tex" "exam_20251006.pdf" "exam_20251006" 1761833030.17626 0
   "../../LaTeX/formulebladen/formuleblad_STA2.pdf" 1753345002 312600 f8a5bec145274738f359a57edbbef3e1 ""
   "../../LaTeX/styles/config.sty" 1759741176 2827 686687842aab86bac28506eedd5dd74b ""
-  "../../LaTeX/styles/exam_config.sty" 1759839798 2277 1cad747bd4aeb9f398afc3631015fef2 ""
+  "../../LaTeX/styles/exam_config.sty" 1761833024 2362 d83a03aa27595c2fd3127a4dbc3210a2 ""
   "../../LaTeX/styles/statistics-macros.sty" 1753345002 2633 1b6afd87a1b64a777eb43a24d4bd010b ""
   "../../Python/FMW_titelblad_20251006.pdf" 1758096048 126614 bbb4e9ad8b5cb0f4af5561dca0a65a16 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759222054 124356 d80fb265b13695b80413c9c8d049619c ""
@@ -233,11 +232,11 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-10-06/exam_20251006.tex" 1759741260 772 887504928d01855431eac826a8b21f97 ""
-  "exam_20251006.aux" 1759950258 2798 18db58af4728baf5f46249d672a00418 "pdflatex"
-  "exam_20251006.out" 1759950257 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "exam_20251006.aux" 1761833029 299 9484fcbf366542cadf4b851c402a8e40 "pdflatex"
+  "exam_20251006.out" 1761833029 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "exam_20251006.tex" 1759741260 772 887504928d01855431eac826a8b21f97 ""
   "q1.tex" 1759924653 6250 ab71fba8e4302df8247b8e1fd6dd6e38 ""
-  "q2.tex" 1759948260 5578 41f9e5da33837a8f3cdb960a14fa12eb ""
+  "q2.tex" 1761120052 5488 0cb0b9cca81c114aeb238af0b351bea6 ""
   "q3.tex" 1759950252 8134 f42593b493cf71e15d81548346b85449 ""
   "q4.tex" 1759924780 7897 fab5856ba19a5cf478ee6cb67ca7d07f ""
   (generated)

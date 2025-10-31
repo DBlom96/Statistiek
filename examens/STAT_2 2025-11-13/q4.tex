@@ -1,0 +1,77 @@
+\begin{question}{18}{
+    Tijdens patrouilles in oefengebieden kan de Landmacht geconfronteerd worden met verborgen explosieven of boobytraps.
+    Bij een vermoeden van een boobytrap wordt de EOD (Explosieve Opruimingsdienst Defensie) ingeschakeld om de situatie te beoordelen en te neutraliseren indien nodig.
+    De patrouilles testen een nieuwe sensortechnologie waarmee mogelijk sneller een mogelijke boobytrap kan worden gesignaleerd en correct doorgegeven aan de EOD.
+
+    In een veldtest wordt het sensorsysteem getest en zijn $18$ opeenvolgende detecties gemeten waarbij de reactietijd (in seconden) van het eerste signaal tot de melding aan EOD werd geregistreerd.
+    Historisch ligt de gemiddelde reactietijd bij het oude meldingsprotocol op $11.8$ seconden.
+    Met de nieuwe sensoren werd een gemiddelde van $11.2$ seconden gemeten, met een standaarddeviatie van $1.6$ seconden.
+    De vraag is of deze versnelling statistisch significant is, zodat de Landmacht kan besluiten tot bredere implementatie van de technologie.
+    We mogen aannemen dat de reactietijden normaal verdeeld zijn.
+}
+    \subquestion{3}{
+        Formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$ om te testen of de nieuwe sensortechnologie een snellere reactietijd biedt dan het oude meldingsprotocol.
+    }
+    \solution{
+        We formuleren de nul- en alternatieve hypothese als volgt:
+        \begin{description}
+            \item[$H_0$:] $\mu \geq 11.8$ (de nieuwe sensortechnologie biedt niet gemiddeld een snellere reactietijd dan het oude meldingsprotocol) \rubric{2}
+            \item[$H_1$:] $\mu < 11.8$ (de nieuwe sensortechnologie biedt wel gemiddeld snellere reactietijd dan het oude meldingsprotocol) \rubric{1}
+        \end{description}
+    }
+    
+    \subquestion{6}{
+        Bereken -- onder de nulhypothese $H_0$ -- een \SI{95}{\percent}-voorspellingsinterval voor de gemiddelde reactietijd van 18 willekeurige metingen met de nieuwe sensortechnologie.
+
+    }
+    \solution{
+        Onder de nulhypothese geldt dat de reactietijd $X$ met de nieuwe sensortechnologie normaal verdeeld is met verwachtingswaarde $\mu = 11.8$ en een onbekende standaardafwijking $\sigma$.
+        Volgens de centrale limietstelling geldt dat de gemiddelde reactietijd van $18$ willekeurige metingen dan normaal verdeeld is met parameters $\mu = 11.8$ en $\frac{\sigma}{\sqrt{18}}$. \rubric{1}
+        Omdat $\sigma$ onbekend is en de steekproefgrootte $n = 18 < 30$ is, moeten we gebruik maken van de $t$-verdeling. \rubric{1}
+        De $t$-waarde die hoort bij \SI{95}{\percent} betrouwbaarheid, oftewel $\alpha = 0.05$, is (in het geval van een eenzijdig interval) gelijk aan
+        \[
+            t = \invt(\text{opp}=1-\frac{\alpha}; \text{df}=n-1) = \invt(\text{opp}=0.95; \text{df}=17) \approx 1.7396. \rubric{2}
+        \]
+        Het \SI{95}{\percent}-voorspellingsinterval (rechtszijdig interval!) voor de gemiddelde reactietijd $\overline{X}$ van $18$ metingen wordt dan gegeven door
+        \begin{align*}
+            &  [\mu - t \cdot \frac{ s }{ \sqrt{ n } }; \infty) \\
+            &= [11.8 - 1.7396 \cdot \frac{ 1.6 }{ \sqrt{ 18 } }; \infty) \\
+            &= [11.1440, \infty). \rubric{2}
+        \end{align*}
+    }
+
+    \subquestion{4}{
+        Concludeer aan de hand van het voorspellingsinterval van vraag (b) of de gemeten gemiddelde reactietijd van $11.2$ seconden met de nieuwe sensortechnologie wijst op een statistisch significante verbetering in reactietijd vergeleken met het oude meldingsprotocol.
+    }
+
+    \solution{
+        Merk op dat het voorspellingsinterval uit vraag (b) gelijk is aan $[11.1440, \infty)$ en correspondeert met het acceptatiegebied in de bijbehorende hypothesetoets. \rubric{1}
+        Omdat de gemeten gemiddelde reactietijd van $11.2$ seconden in dit interval ligt, valt deze dus niet in het kritieke gebied van de toets. \rubric{1}
+        Hieruit concluderen we dat er onvoldoende bewijs is om de nulhypothese te verwerpen. \rubric{1}
+        Met andere woorden, op basis van de steekproef is er onvoldoende bewijs om te concluderen dat de nieuwe sensortechnologie een statistisch significante verbetering in reactietijd biedt vergeleken met het oude meldingsprotocol. \rubric{1}
+    }
+
+    \subquestion{5}{
+        Nog steeds uitgaande van een steekproefgemiddelde van $11.2$ seconden en een steekproefstandaardafwijking van $1.6$ seconden, hoe groot had de steekproefomvang minimaal moeten zijn om tot een andere conclusie te zijn gekomen?
+    }
+    \solution{
+        Een andere conclusie, oftewel het verwerpen van de nulhypothese, zou betekenen dat het steekproefgemiddelde van $11.2$ seconden in het kritieke gebied van de toets valt.\rubric{1}
+        Hiervoor had dus moeten gelden dat de ondergrens van het voorspellingsinterval (ofwel de bovengrens van het kritieke gebied) groter is dan $11.2$ seconden, oftewel
+        \begin{align*}
+            11.2 &< 11.8 - t \cdot \frac{ s }{ \sqrt{ n } } \rubric{1} 
+        \end{align*}
+
+        Invoeren in het functiescherm van de GR:
+        \begin{description}
+            \item[$y_1$:] $11.8 - \invt(0.95, X-1) \cdot \frac{ 1.6 }{ \sqrt{ X } }$
+            \item[$y_2$:] $11.2$ \rubric{1}
+        \end{description}
+        geeft met de optie TABLE:
+        \begin{description}
+            \item[$n=29$:] $11.8 - \invt(0.95, 29-1) \cdot \frac{ 1.6 }{ \sqrt{ 29 } } \approx 11.191$
+            \item[$n=30$:] $11.8 - \invt(0.95, 30-1) \cdot \frac{ 1.6 }{ \sqrt{ 30 } } \approx 11.203$ \rubric{1}
+        \end{description}
+        Dus de steekproefomvang had minimaal $30$ moeten zijn om tot een andere conclusie te komen. \rubric{1}
+    }
+
+\end{question}

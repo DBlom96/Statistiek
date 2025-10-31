@@ -32,8 +32,8 @@
 
 % Solution Toggle (to show/hide solutions)
 \newif\ifshowanswers
-\showanswerstrue % Toggle this to hide / show solutions
-% \showanswersfalse % Toggle this to hide / show solutions
+% \showanswerstrue % Toggle this to hide / show solutions
+\showanswersfalse % Toggle this to hide / show solutions
 
 % Rubric command
 \newcommand{\rubric}[1]{%
@@ -76,6 +76,10 @@
             #1
         \end{tcolorbox}
     \fi
+}
+
+\newcommand{\multilinecell}[1]{
+    \begin{tabular}{@{}c@{}} #1 \end{tabular}
 }
 
 % Customizable Settings

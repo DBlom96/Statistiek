@@ -15,7 +15,7 @@ vakcode = "STA#2"
 datum = "20251113"
 tentamentijd = "9:00-12:00"
 examinator = "Dr. ir. D.A.M.P. Blom"
-peer_review = "Dr. M.P. Roeling"
+peer_review = "Dr. ir. B. Westerweel"
 aantal_opgaven = "4"
 aantal_paginas = "4"
 

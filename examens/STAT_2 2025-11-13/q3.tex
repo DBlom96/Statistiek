@@ -1,9 +1,9 @@
 \begin{question}{28}{
-    De Koninklijke Marine is geïnteresseerd in het bepalen van een betrouwbare onderhoudsstrategie voor de maritieme NH90-gevechtshelikopters.
+    De Koninklijke Marine is geïnteresseerd in het bepalen van een betrouwbare onderhoudsstrategie voor de maritieme NH90-helikopters.
     Hiervoor is het belangrijk om data te verzamelen van de \emph{mean time between failures} (MTBF), oftewel de gemiddelde tijd tussen twee faalmomenten van een helikopteronderdeel.
-    Om te onderzoeken wat kritieke onderdelen zijn, worden de \emph{time between failures} (TBF) van de motor ($X$) en rotorbladen ($Y$) van tien NH90-gevechtshelikopters gemeten.
+    Om te onderzoeken wat kritieke onderdelen zijn, worden de \emph{time between failures} (TBF) van de motor ($X$) en rotorbladen ($Y$) van tien NH90-helikopters gemeten.
 
-    De volgende data zijn verzameld over de time between failures van motoren en rotorbladen van NH90-gevechtshelikopters.
+    De volgende data zijn verzameld over de time between failures van motoren en rotorbladen van NH90-helikopters.
     
     \begin{center}
         \begin{tabular}{c|cccccccccc}
@@ -16,7 +16,7 @@
     \end{center}
     \vspace{1em}
 
-    De centrale vraag is nu om te toetsen of de MTBF van de motor significant lager is dan die van de rotorbladen, oftewel dat de motor sneller faalt dan de rotorbladen.
+    De centrale vraag is nu om te toetsen of de MTBF $\mu_X$ van de motor significant lager is dan de MTBF $\mu_Y$ van de rotorbladen, oftewel dat de motor gemiddeld genomen sneller faalt dan de rotorbladen.
     Voor beide steekproeven kan worden aangenomen dat de tijden tussen faalmomenten normaal verdeeld zijn.
 }
 
@@ -57,7 +57,7 @@
     }
 
     \subquestion{10}{
-        Voer een $F$-toets uit om te bepalen of de varianties van de MTBF's van de twee populaties als gelijk kunnen worden beschouwd ($\sigma_X^2 = \sigma_Y^2$).
+        Voer een $F$-toets uit om te bepalen of de varianties van de times between failures (TBFs) van de twee populaties als gelijk kunnen worden beschouwd ($\sigma_X^2 = \sigma_Y^2$).
         Gebruik hiervoor een significantieniveau van $\alpha = 0.05$ en bepaal de toetsuitslag op basis van het kritieke gebied.
     }
     \solution{

@@ -1,9 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1761567906.56032 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex" "exam_20250725.pdf" "exam_20250725" 1761567908.84792 0
-  "../../LaTeX/figures/20250725_q4_scatterplot.png" 1753345002 26880 adccd018484e96ba23ba7195f1bfd2fa ""
+["pdflatex"] 1761895110.27466 "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex" "exam_20250725.pdf" "exam_20250725" 1761895112.70352 0
   "../../LaTeX/formulebladen/formuleblad_STA2.pdf" 1753345002 312600 f8a5bec145274738f359a57edbbef3e1 ""
   "../../LaTeX/styles/config.sty" 1759741176 2827 686687842aab86bac28506eedd5dd74b ""
-  "../../LaTeX/styles/exam_config.sty" 1761567093 2277 4e8206d9ba3bf2d3df4757cd5f4520da ""
+  "../../LaTeX/styles/exam_config.sty" 1761895096 2362 d83a03aa27595c2fd3127a4dbc3210a2 ""
   "../../LaTeX/styles/statistics-macros.sty" 1753345002 2633 1b6afd87a1b64a777eb43a24d4bd010b ""
   "../../Python/FMW_titelblad_20250725.pdf" 1753345002 170016 4d617a1d80c06165989294b12595b79d ""
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759222054 124356 d80fb265b13695b80413c9c8d049619c ""
@@ -236,8 +235,8 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "c:/Users/Admin/Documents/GitHub/Statistiek/examens/STAT_2 2025-07-25/exam_20250725.tex" 1761567902 789 5910fad629c0b96b637e79712b2062c6 ""
-  "exam_20250725.aux" 1761567908 2892 0b4f360b3fbc3f36b3aa9bd3225c2dc9 "pdflatex"
-  "exam_20250725.out" 1761567907 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "exam_20250725.aux" 1761895112 299 9484fcbf366542cadf4b851c402a8e40 "pdflatex"
+  "exam_20250725.out" 1761895112 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "exam_20250725.tex" 1761567902 789 5910fad629c0b96b637e79712b2062c6 ""
   "q1.tex" 1753345002 4554 e5d4bb87becd466ebfcd5cdb1805d30d ""
   "q2.tex" 1761560534 7253 e161670f33b13f67d4080542f702e9a9 ""
