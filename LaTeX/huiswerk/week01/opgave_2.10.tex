@@ -9,11 +9,11 @@ Prijsverandering geeft het verschil aan tussen huidige verkoopprijzen en de prij
         \toprule
             \textbf{Type woning} & \textbf{Aantal verkocht} & \textbf{Aantal aanwezig} & \textbf{Prijsverandering} \\
         \midrule
-            Villa & $14$ & $280$ & $+5\%$ \\
-            Rijtjeshuis & $130$ & $1.600$ & $+2,4\%$ \\
-            Appartement & $48$ & $450$ & $+1,6\%$ \\
-            Twee onder een kap & $26$ & $500$ & $+7,2\%$ \\
-            Serviceflat & $28$ & $140$ & $-2,5\%$ \\
+            Villa & $14$ & $280$ & $+\SI{5}{\percent}$ \\
+            Rijtjeshuis & $130$ & $1.600$ & $+\SI{2.4}{\percent}$ \\
+            Appartement & $48$ & $450$ & $+\SI{1.6}{\percent}$ \\
+            Twee onder een kap & $26$ & $500$ & $+\SI{7.2}{\percent}$ \\
+            Serviceflat & $28$ & $140$ & $-\SI{2.5}{\percent}$ \\
         \bottomrule
     \end{tabular}
 \end{center}
@@ -23,19 +23,21 @@ Prijsverandering geeft het verschil aan tussen huidige verkoopprijzen en de prij
     \answer{
         De gemiddelde prijsverandering van de verkochte huizen wordt berekend als een gewogen gemiddelde:
         \begin{align*}
-            \samplemean &= \frac{14 \cdot 5 + 130 \cdot 2,4 + 48 \cdot 1,6 + 26 \cdot 7,2 + 28 \cdot (-2,5)}{14+130+48+26+28} \\
+            \samplemean &= \frac{14 \cdot 5 + 130 \cdot 2.4 + 48 \cdot 1.6 + 26 \cdot 7.2 + 28 \cdot (-2.5)}{14+130+48+26+28} \\
                         &= \frac{576}{246} \\
-                        &\approx 2,3415
+                        &\approx 2.3415.
         \end{align*}
+        Gemiddeld is de prijs van de verkochte huizen dus met ongeveer \SI{2.34}{\percent} gestegen.
     }
 
     \item Bereken op basis van de gegevens de gemiddelde waardeverandering van het totale woningbestand op basis van weging met het aantal aanwezige huizen.
     \answer{
         De gemiddelde waardeverandering van het totale woningbestand wordt berekend als een gewogen gemiddelde:
         \begin{align*}
-            \samplemean &= \frac{280 \cdot 5 + 1600 \cdot 2,4 + 450 \cdot 1,6 + 500 \cdot 7,2 + 140 \cdot (-2,5)}{280+1600+450+500+140} \\
+            \samplemean &= \frac{280 \cdot 5 + 1600 \cdot 2.4 + 450 \cdot 1.6 + 500 \cdot 7.2 + 140 \cdot (-2.5)}{280+1600+450+500+140} \\
                         &= \frac{9210}{2970} \\
-                        &\approx 3,1010
+                        &\approx 3.1010.
         \end{align*}
+        Gemiddeld is de waarde van het totale woningbestand dus met ongeveer \SI{3.10}{\percent} gestegen.
     }
 \end{enumerate}

@@ -1,30 +1,32 @@
-\documentclass[12pt]{book}
+\documentclass[12pt]{article}
 
 % Laad stijlen via relatieve paden
-\newcommand{\path}{C:/Users/danny/Documents/GitHub/Statistiek}
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
 \usepackage{\path/LaTeX/styles/config}
 \usepackage{\path/LaTeX/styles/statistics-macros}
 \graphicspath{{\path/LaTeX/figures/}}
 
-\title{Statistiek voor MBW / KW \\ Uitwerkingen huiswerkopgaven}
-\author{Dr. ir. D.A.M.P. Blom \& Dr. J.B.M. Melissen}
-\date{2025}
+\includeonly{./huiswerk/week01}
+
+\title{Statistiek \\ Uitwerkingen huiswerkopgaven}
+\author{} % Dr. ir. D.A.M.P. Blom}
+\date{2025 -- 2026}
 
 \begin{document}
 \maketitle
 
 % Invoegen van alle weken
-% \input{./huiswerk/week01}
-% \input{./huiswerk/week02}
-% \input{./huiswerk/week03}
-% \input{./huiswerk/week04}
-% \input{./huiswerk/week05}
-% \input{./huiswerk/week06}
-% \input{./huiswerk/week08}
-% \input{./huiswerk/week09}
-% \input{./huiswerk/week10}
-% \input{./huiswerk/week11}
-% \input{./huiswerk/week12}
-\input{./huiswerk/week13}
+\include{./huiswerk/week01}
+\include{./huiswerk/week02}
+\include{./huiswerk/week03}
+\include{./huiswerk/week04}
+\include{./huiswerk/week05}
+\include{./huiswerk/week06}
+\include{./huiswerk/week08}
+\include{./huiswerk/week09}
+\include{./huiswerk/week10}
+\include{./huiswerk/week11}
+\include{./huiswerk/week12}
+\include{./huiswerk/week13}
 
 \end{document}

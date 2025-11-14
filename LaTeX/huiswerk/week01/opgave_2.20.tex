@@ -3,7 +3,6 @@
     De resultaten waren als volgt:
 }
 
-
 \begin{center}
     \begin{tabular}{c}
         \toprule
@@ -26,15 +25,15 @@
     \answer{
         Het gemiddelde wordt berekend als:
         \[
-        \samplemean = \frac{\sum x_i}{n}
+            \samplemean = \frac{\sum x_i}{n}
         \]
         Voor de groep studenten is het gemiddelde gelijk aan:
         \[
-        \samplemean_{\text{studenten}} = \frac{72 + 51 + \dots + 57}{30} \approx 62,6333.
+            \samplemean_{\text{studenten}} = \frac{72 + 51 + \dots + 57}{30} \approx 62.6333.
         \]
         Voor de groep afgestudeerden is het gemiddelde gelijk aan:
         \[
-        \samplemean_{\text{afgestudeerden}} = \frac{88 + 130 + \dots + 71}{40} \approx 125,9500.
+            \samplemean_{\text{afgestudeerden}} = \frac{88 + 130 + \dots + 71}{40} \approx 125.9500.
         \]
 
         Aangezien voor beide groepen geldt dat het aantal waarnemingen even is, bekijken we het gemiddelde van de twee middelste waarden.
@@ -67,53 +66,55 @@
         \]
         Voor de groep studenten is de variantie gelijk aan
         \begin{align*}
-            \samplevar_{\text{studenten}}   &= \frac{1}{30-1} \cdot \left((72 - 62,6333)^2 + \ldots + (57-62,6333)^2\right)\\                               
-                                            &\approx 896,5161.
+            \samplevar_{\text{studenten}}   &= \frac{1}{30-1} \cdot \left((72 - 62.6333)^2 + \ldots + (57-62.6333)^2\right)\\                               
+                                            &\approx 896.5161.
         \end{align*}
         De standaarddeviatie is de wortel uit de variantie, oftewel
         \[
-            s_{\text{studenten}} = \sqrt{\samplevar_{\text{studenten}}} = \sqrt{896,5161} \approx 29,9419.
+            s_{\text{studenten}} = \sqrt{\samplevar_{\text{studenten}}} = \sqrt{896.5161} \approx 29.9419.
         \]
 
         Voor de groep afgestudeerden is de variantie gelijk aan
         \begin{align*}
-            \samplevar_{\text{afgestudeerden}}   &= \frac{1}{40-1} \cdot ((88 - 125,9500)^2 + (130-125,9500)^2 + \ldots \\
-                                                 & \qquad + (71-125,9500)^2) \\                               
-                                                 &\approx 6255,9974.
+            \samplevar_{\text{afgestudeerden}}   &= \frac{1}{40-1} \cdot ((88 - 125.9500)^2 + (130-125.9500)^2 + \ldots \\
+                                                 & \qquad + (71-125.9500)^2) \\                               
+                                                 &\approx 6255.9974.
         \end{align*}
         De standaarddeviatie is de wortel uit de variantie, oftewel
         \[
-            s_{\text{afgestudeerden}} = \sqrt{\samplevar_{\text{afgestudeerden}}} = \sqrt{6255,9974} \approx 79,0949.
+            s_{\text{afgestudeerden}} = \sqrt{\samplevar_{\text{afgestudeerden}}} = \sqrt{6255.9974} \approx 79.0949.
         \]
     }
 
     \item Bepaal voor beide groepen een boxplot. Zijn er uitbijters?
     \answer{
-        De interkwartielafstand (interquartile range) \( IQR \) wordt berekend als:
+        De interkwartielafstand (interquartile range) $\IQR$ wordt berekend als:
         \[
-        IQR = Q_3 - Q_1
+            \IQR = Q_3 - Q_1
         \]
         Voor studenten:
         \[
-        Q_1 = 37, \quad Q_3 = 80 \Rightarrow IQR_{\text{studenten}} = 43
+            Q_1 = 37, \quad Q_3 = 80 \Rightarrow \IQR_{\text{studenten}} = 43
         \]
         Voor afgestudeerden:
         \[
-        Q_1 = 70, \quad Q_3 = 172 \Rightarrow IQR_{\text{afgestudeerden}} = 102
+            Q_1 = 70, \quad Q_3 = 172 \Rightarrow \IQR_{\text{afgestudeerden}} = 102
         \]
 
         Uitbijters worden gedefinieerd als waarden buiten:
         \[
-        [Q_1 - 1,5 \times IQR, Q_3 + 1,5 \times IQR]
+            [Q_1 - 1.5 \times \IQR, Q_3 + 1.5 \times \IQR]
         \]
         Voor studenten:
         \[
-        [37 - 1,5 \times 43, 80 + 1,5 \times 43] = [-27,5, 144,5] \quad \text{Geen uitbijters}
+            [37 - 1.5 \times 43, 80 + 1.5 \times 43] = [-27.5, 144.5] \quad \text{Geen uitbijters}
         \]
         Voor afgestudeerden:
         \[
-        [70 - 1,5 \times 102, 172 + 1,5 \times 102] = [-83, 325] \quad \text{Uitbijters: 380}
+            [70 - 1.5 \times 102, 172 + 1.5 \times 102] = [-83, 325] \quad \text{Uitbijters: 380}
         \]
+
+
     }
 
     \item Schrijf een korte notitie waarin het verschil wordt toegelicht tussen beide groepen.
@@ -121,7 +122,7 @@
         Afgestudeerden geven gemiddeld significant meer geld uit aan eten buiten de deur dan studenten. 
         Dit verschil kan worden verklaard door hun hogere inkomen, stabiliteit en veranderde eetgewoonten.
         Daarnaast is de spreiding bij afgestudeerden aanzienlijk groter, wat betekent dat sommige individuen zeer hoge uitgaven hebben.
-        De boxplot-analyse bevestigt dat er een uitbijter in de groep van afgestudeerden aanwezig is (380 euro),
+        De boxplot-analyse bevestigt dat er een uitbijter in de groep van afgestudeerden aanwezig is ($380$ euro),
         wat mogelijk iemand is met uitzonderlijke uitgavenpatronen.
     }
 \end{enumerate}
