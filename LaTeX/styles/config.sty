@@ -5,7 +5,7 @@
 \usepackage{authblk} % more flexible formatting of author / address
 
 % ENCODINGS, FONTS AND LANGUAGE
-\usepackage[dutch]{babel}
+\usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
@@ -41,17 +41,31 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[many]{tcolorbox} % Boxed environments
-\usepackage{tikz}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.18}
 \colorlet{highlight}{green!70!black}
+\usepackage{fontawesome}
 
 % HEADERS AND FOOTERS
 \usepackage{fancyhdr}
 \setlength{\headheight}{15.2pt}
 \pagestyle{fancy}
+\fancyhf{} % clear header and footer
+
+% Header
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{Probability \& Statistics}
+
+% Footer
+\fancyfoot[C]{\thepage}
+
+% Optional: header line
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
 
 % REFERENCES
 \usepackage{hyperref}
-\usepackage{cleveref}
+\usepackage[capitalize]{cleveref}
 \usepackage{url}
 
 % EXAM-SPECIFIC PACKAGES

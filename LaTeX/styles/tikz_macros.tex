@@ -1,0 +1,59 @@
+\usetikzlibrary{arrows.meta, backgrounds, bending, calc, decorations.pathreplacing, intersections, positioning, shapes}
+\usepgfplotslibrary{fillbetween, statistics}
+
+% \input{../styles/macros.tex}
+% \setbeamertemplate{footline}{}
+% \setbeamertemplate{headline}{}
+
+% Aangepaste TikZ-instellingen
+\colorlet{currentcolor}{blue}
+\colorlet{optimalcolor}{green!50!black}
+\colorlet{feasiblecolor}{cyan!60}
+
+\tikzset{
+  activity/.style={draw, thick, fill=gray!10, minimum size=6mm, circle},
+  arrow/.style={-stealth, thick},
+  axis/.style={semithick, -stealth, line cap=round},
+  connector/.style={-stealth, thick, draw=black!70},
+  constraintdirection/.style={-stealth, very thick, shorten >=-0.3cm},
+  critical/.style={red, very thick},
+  cross/.style={cross out, draw, minimum size=2*(#1 - \pgflinewidth), inner sep=0pt, outer sep=0pt},
+  current/.style={intersect, currentcolor, inner sep=3pt},
+  direction/.style={-stealth, orange, ultra thick, dashed},
+  feasible/.style={draw=black, ultra thick, fill=feasiblecolor},
+  halfspace/.style={fill=blue!20, opacity=0.2},
+  hoogtelijn/.style={objective, -, thin, dashed},
+  intersect/.style={circle, fill=black, inner sep=1.5pt},
+  objective/.style={ultra thick,-stealth, color=red},
+  optimum/.style={current, optimalcolor},
+  optimumtext/.style={optimalcolor, thick, fill=green!20, align=center},
+  tick/.style={thick}
+}
+
+\pgfplotsset{
+    compat=newest,
+    every axis/.style={
+        axis x line=middle,
+        axis y line=middle,
+        enlarge x limits=0.1,
+        enlarge y limits=0.1,
+        grid=both,
+        grid style={line width=.1pt, draw=gray!30},
+        tick style={black},
+        label style={font=\small},
+        tick label style={font=\scriptsize}
+    }
+}
+
+% TikZ macros
+\newcommand{\drawaxes}[2]{% xmin xmax ymin ymax
+  \draw[axis] (-0.5,0) -- (#1,0) node[anchor=north west] {$x_1$};
+  \draw[axis] (0,-0.5) -- (0,#2) node[anchor=south east] {$x_2$};
+
+  % Axis ticks and labels
+  \foreach \x in {1, ..., #1} 
+    \draw (\x, -0.1) -- (\x, 0.1) node[below] {\x};
+  \foreach \y in {1, ..., #2}
+    \draw (-0.1, \y) -- (0.1, \y) node[left] {\y};
+  \node (origin) at (0,0) [anchor=north east] {$O$};
+}
