@@ -5,54 +5,56 @@
     \begin{center}
         \begin{tabular}{cccccccccc}
             \toprule
-                $36,5$ & $45,2$ & $40,5$ & $42,0$ & $37,7$ & $39,4$ & $41,6$ & $38,8$ & $39,0$ & $43,3$ \\
+                $36.5$ & $45.2$ & $40.5$ & $42.0$ & $37.7$ & $39.4$ & $41.6$ & $38.8$ & $39.0$ & $43.3$ \\
             \bottomrule
         \end{tabular}
     \end{center}
 }
 \begin{enumerate}[label=(\alph*)]
-    \item Een zuivere schatter voor $\mu$ is het steekproefgemiddelde $\overline{x}$.
-    Bereken $\overline{x}$.
+    \item Een zuivere schatter voor $\mu$ is het steekproefgemiddelde $\samplemean$.
+    Bereken $\samplemean$.
     \answer{
-        Het steekproefgemiddelde $\overline{x}$ berekenen we als volgt:
+        Het steekproefgemiddelde $\samplemean$ berekenen we als volgt:
         \begin{align*}
-            \overline{x} = \frac{x_1+x_2+\ldots+x_{10}}{10} = \frac{36,5+45,2+\ldots+43,3}{10} = 40,4
+            \samplemean = \frac{x_1+x_2+\ldots+x_{10}}{10} = \frac{36.5+45.2+\ldots+43.3}{10} = 40.4.
         \end{align*}
-        Gemiddeld zit er $40,4$ mg eiwit in een monster.
+        Gemiddeld zit er $40.4$ mg eiwit in een monster.
     }
 
     \item Hier kennen we $\sigma$ niet, dus voordat er een schattingsinterval kan worden berekend voor $\mu$, moet er een schatting van de variantie gemaakt worden.
     Bereken deze variantie.
     \answer{
-        De steekproefvariantie $s^2$ berekenen we als volgt:
+        De steekproefvariantie $\samplevar$ berekenen we als volgt:
         \begin{align*}
-            s^2 &= \frac{(x_1-\overline{x})^2+(x_2-\overline{x})^2+\ldots+(x_{10}-\overline{x})^2}{10-1} \\
-                &= \frac{(36,5-40,4)^2+(45,2-40,4)^2+\ldots+(43,3-40,4)^2}{10-1} \\
-                &\approx 7,0533
+            \samplevar &= \frac{(x_1-\samplemean)^2+(x_2-\samplemean)^2+\ldots+(x_{10}-\samplemean)^2}{10-1} \\
+                &= \frac{(36.5-40.4)^2+(45.2-40.4)^2+\ldots+(43.3-40.4)^2}{10-1} \\
+                &\approx 7.0533.
         \end{align*}
-        Gemiddeld zit er $40,4$ mg eiwit in een monster.
     }
 
-    \item Bereken voor $\mu$ een betrouwbaarheidsinterval dat een betrouwbaarheid heeft van $95\%$.
+    \item Bereken voor $\mu$ een betrouwbaarheidsinterval dat een betrouwbaarheid heeft van \SI{95}{\percent}.
     \answer{
-        Noteer met $X$ de kansvariabele die het aantal milligram eiwit in een willekeurig monster meet.
-        Gegeven is dat $X \sim N(\mu=?; \sigma=?)$.
-        Volgens de centrale limietstelling geldt dat het gemiddelde aantal milligram eiwit $\overline{X}$ in $10$ willekeurige monsters
+        Noteer met $X$ de kansvariabele die het aantal \unit{mg} eiwit in een willekeurig monster meet.
+        Gegeven is dat $X \sim \normal{\mu=\ ?}{\sigma=\ ?}$.
+        Volgens de centrale limietstelling geldt dat het gemiddelde aantal \unit{mg} eiwit $\samplemeanvar$ in $10$ willekeurige monsters
         normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{\sigma}{\sqrt{10}}$.
         
-        We hebben een geobserveerde steekproef van $10$ zakken genomen met steekproefgemiddelde $\overline{x} = 40,4$ milligram en steekproefstandaardafwijking $s = \sqrt{s^2} = \sqrt{7,0533} \approx 2,6558$ milligram. 
-        Aangezien we een betrouwbaarheid van $95\%$ willen, is $\alpha = 0,05$.
-        Verder, omdat de standaardafwijking onbekend is en de steekproefomvang $n < 30$, moeten we de $t$-verdeling met $df=n-1$ vrijheidsgraden gebruiken.
+        We hebben een geobserveerde steekproef van $10$ zakken genomen met steekproefgemiddelde $\samplemean = 40.4$ \unit{mg} en steekproefstandaardafwijking 
+        \[
+            \samplestd = \sqrt{\samplevar} = \sqrt{7.0533} \approx 2.6558\ \unit{mg}.
+        \] 
+        Aangezien we een betrouwbaarheid van \SI{95}{\percent} willen, is $\alpha = 0.05$.
+        Verder, omdat de standaardafwijking $\sigma$ onbekend is en de steekproefomvang $n < 30$, moeten we de $t$-verdeling met $\df=n-1$ vrijheidsgraden gebruiken.
         In het bijzonder gebruiken we
         \[
-            t = \invt(opp=1-\alpha/2; df=n-1) = \invt(opp=0,975; df=9) \approx 2,2622.
+            t = \invt(\opp=1-\alpha/2; \df=n-1) = \invt(\opp=0.975; \df=9) \approx 2.2622.
         \]
-        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
         \begin{align*}
-            &[\overline{x} - t \cdot \frac{s}{\sqrt{n}}; \overline{x} + t \cdot \frac{s}{\sqrt{n}}] \\
-            &=[40,4 - 2,2622 \cdot \frac{2,6558}{\sqrt{10}}; 20142 + 2,2622 \cdot \frac{2,6558}{\sqrt{10}}] \\
-            &=[38,50; 42,30]
+            &\phantom{=}[\samplemean - t \cdot \frac{\samplestd}{\sqrt{n}}; \samplemean + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
+            &=[40.4 - 2.2622 \cdot \frac{2.6558}{\sqrt{10}}; 20142 + 2.2622 \cdot \frac{2.6558}{\sqrt{10}}] \\
+            &=[38.50; 42.30]
         \end{align*}
-        Met $95\%$ betrouwbaarheid ligt de gemiddelde hoeveelheid eiwit in een monster tussen $38,50$ en $42,30$ milligram.
+        Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde hoeveelheid eiwit in een monster tussen $38.50$ en $42.30$ \unit{mg}.
     }
 \end{enumerate}

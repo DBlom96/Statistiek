@@ -6,8 +6,8 @@
 \contentsline {chapter}{\chapternumberline {4}Week 4: de binomiale verdeling}{43}{chapter.4}%
 \contentsline {chapter}{\chapternumberline {5}Week 5: de normale verdeling en de centrale limietstelling}{51}{chapter.5}%
 \contentsline {chapter}{\chapternumberline {6}Week 6: de Poissonverdeling}{61}{chapter.6}%
-\contentsline {chapter}{\chapternumberline {7}Week 8: schatten en betrouwbaarheid}{71}{chapter.7}%
-\contentsline {chapter}{\chapternumberline {8}Week 9: schatten en betrouwbaarheid (deel 2)}{81}{chapter.8}%
+\contentsline {chapter}{\chapternumberline {7}Week 8: schatten en betrouwbaarheid (1/2)}{71}{chapter.7}%
+\contentsline {chapter}{\chapternumberline {8}Week 9: schatten en betrouwbaarheid (2/2)}{81}{chapter.8}%
 \contentsline {chapter}{\chapternumberline {9}Week 10: hypothesetoetsen}{97}{chapter.9}%
 \contentsline {chapter}{\chapternumberline {10}Week 11: chikwadraatverdeling}{109}{chapter.10}%
 \contentsline {chapter}{\chapternumberline {11}Week 12: verschiltoetsen}{127}{chapter.11}%

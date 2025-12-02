@@ -1,7 +1,7 @@
 \question{8.12}{
     Een student doet een onderzoek naar het kijkgedrag van Nederlanders naar de uitzendingen van de samenvattingen voetbal op zondag.
     Zij wil weten wat het percentage vrouwen is onder de kijkers, wat de gemiddelde leeftijd is onder de kijkers en wat het percentage aanhangers van FC Utrecht is onder de kijkers.
-    In alle drie gevallen wenst men een $95\%$-betrouwbaarheidsinterval.
+    In alle drie gevallen wenst men een \SI{95}{\percent}-betrouwbaarheidsinterval.
     De student wil een steekproef nemen uit de voetbalkijkers.
     Geef aan hoe groot de steekproefomvang moet worden gekozen als voldaan moet worden aan de volgende voorwaarden:
 }
@@ -9,13 +9,13 @@
     \item De gemiddelde leeftijd moet plus of min $2$ jaar worden bepaald.
     Ga ervan uit dat de standaarddeviatie van de leeftijden $12$ jaar is.
     \answer{
-        Laat $X \sim N(\mu=?; \sigma=?)$ de kansvariabele zijn die de leeftijd (in jaren) meet van een willekeurige kijker.
-        Volgens de centrale limietstelling geldt dat de gemiddelde snelheid $\overline{X}$ van $n$ willekeurige kijkers ook normaal verdeeld is met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
-        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$ en $z_{\alpha/2} = z_{0,025} = \invnorm(0,975) \approx 1,9600$.
-        Verder is gegeven dat $\sigma=12$ jaar en de breedte van het interval is $4$ jaar (plus of min 2)
-        De steekproefomvang bij dit $95\%$-betrouwbaarheidsinterval berekenen we als volgt:
+        Laat $X \sim \normal{\mu=\ ?}{\sigma=\ ?}$ de kansvariabele zijn die de leeftijd (in jaren) meet van een willekeurige kijker.
+        Volgens de centrale limietstelling geldt dat de gemiddelde snelheid $\samplemeanvar$ van $n$ willekeurige kijkers ook normaal verdeeld is met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
+        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$ en $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
+        Verder is gegeven dat $\sigma=12$ jaar en de breedte van het interval is $4$ jaar ($\pm\ 2$ jaar)
+        De steekproefomvang bij dit \SI{95}{\percent}-betrouwbaarheidsinterval berekenen we als volgt:
         \begin{align*}
-            n = (\frac{z_{\alpha/2}\cdot \sigma}{a})^2 = (\frac{1,9600 \cdot 12}{2})^2 \approx 138,2976.
+            n = \left(\frac{z_{\alpha/2}\cdot \sigma}{a}\right)^2 = \left(\frac{1.9600 \cdot 12}{2}\right)^2 \approx 138.2976.
         \end{align*}
         Afronden naar boven naar het eerstvolgende gehele getal geeft een steekproefomvang van $n=139$ kijkers.
     }

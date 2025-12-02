@@ -4,20 +4,20 @@ We mogen ervan uitgaan dat de afgeleverde hoeveelheden beschreven worden door ee
 De standaarddeviatie is echter onbekend.}
 
 \begin{enumerate}[label=(\alph*)]
-    \item Bij nauwkeurig nawegen van een groot aantal pakken bleek dat in $20\%$ van de gevallen een pak minder dan $1 000$ gram rijst bevat.
+    \item Bij nauwkeurig nawegen van een groot aantal pakken bleek dat in \SI{20}{\percent} van de gevallen een pak minder dan $1 000$ gram rijst bevat.
     Bereken op basis van deze informatie de standaarddeviatie van de vulgewichten.
     \answer{
         Laat $X$ de normaal verdeelde kansvariabele zijn met verwachtingswaarde $\mu=1 010$ en onbekende standaarddeviatie $\sigma$ die het gewicht van een pak rijst beschrijft.
-        In dat geval is de kansvariabele $Z = \frac{X - \mu}{\sigma}$ standaardnormaal verdeeld, oftewel $Z \sim N(0, 1)$.
+        In dat geval is de kansvariabele $Z = \frac{X - \mu}{\sigma}$ standaardnormaal verdeeld, oftewel $Z \sim \normal{0}{1}$.
         
-        De $z$-waarde waarvoor geldt dat $P(Z < z) = 0,20$ is gelijk aan
+        De $z$-waarde waarvoor geldt dat $P(Z < z) = 0.20$ is gelijk aan
         \[
-            z = \text{InvNorm}(opp=0,20; \mu=0; \sigma=1) \approx -0,8416.
+            z = \invnorm(\opp=0.20; \mu=0; \sigma=1) \approx -0.8416.
         \]
         
-        In andere woorden: de waarde $1 000$ g ligt 0,8416 standaarddeviaties onder het gemiddelde, oftewel:
+        In andere woorden: de waarde $1 000$ ligt 0.8416 standaarddeviaties onder het gemiddelde, oftewel:
         \[
-            \frac{1 000 - 1 010}{\sigma} = -0,8416 \rightarrow 1 000 = 1 010 - 0,8416 \cdot \sigma \rightarrow \sigma \approx 11,8818
+            \frac{1 000 - 1 010}{\sigma} = -0.8416 \rightarrow 1 000 = 1 010 - 0.8416 \cdot \sigma \rightarrow \sigma \approx 11.8818
         \]
 
         \begin{center}
@@ -32,15 +32,18 @@ De standaarddeviatie is echter onbekend.}
         Zodra we de verwachtingswaarde $\mu$ en de standaarddeviatie $\sigma$ van een normale verdeling weten, kunnen we de $z$-waarde bepalen van een specifieke uitkomst $x$.
         In dat geval is de $z$-waarde die hoort bij $1020$ gram gelijk aan 
         \[
-            z = \frac{x-\mu}{\sigma} = \frac{1020 - 1010}{11,8818} \approx 0,8416.
+            z = \frac{x-\mu}{\sigma} = \frac{1020 - 1010}{11.8818} \approx 0.8416.
         \]
         De kans dat een willekeurig pak rijst meer dan $1 020$ gram weegt is gelijk aan:
         \begin{align*}
-            P(X > 1 020)    &= P(Z > 0,8416) \\
-                            &= \text{normalcdf}(a=0,8416; b=10^{10}; \mu=0; \sigma=1) \\
-                            &\approx 0,2000.
+            P(X > 1 020)    &= P(Z > 0.8416) \\
+                            &= \normalcdf(a=0.8416; b=10^{10}; \mu=0; \sigma=1) \\
+                            &\approx 0.2000.
         \end{align*}
-        \textbf{Merk op dat deze kans hetzelfde is als de kans $P(X < 1 000)$, aangezien de kansverdeling van $X$ symmetrisch is rond $\mu = 1 010$.}
+        {\itshape Merk op dat we dit ook zonder berekening hadden kunnen inzien.
+            We hebben immers te maken met een normale verdeling met gemiddelde $\mu = 1010$, oftewel een symmetrische verdeling rond $1010$.
+            Uit deze symmetrie volgt dat $P(X > 1020) = P(X < 1 000) = 0.20$.
+        }
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
                 \includegraphics{opg5.2b.png}
@@ -51,22 +54,21 @@ De standaarddeviatie is echter onbekend.}
     \item Stel we kiezen willekeurig $16$ pakken rijst.
     Hoe groot is de kans dat deze gemiddeld minder dan $1 000$ gram rijst bevatten?
     \answer{
-        Laat $X_1, X_2, \ldots, X_16$ de gewichten zijn van $16$ willekeurig gekozen pakken rijst.
+        Laat $X_1, X_2, \ldots, X_{16}$ de gewichten zijn van $16$ willekeurig gekozen pakken rijst.
         Volgens de centrale limietstelling geldt voor het gemiddelde gewicht van deze 16 pakken rijst:
         \[
-            \overline{X} = \frac{X_1+X_2+\ldots+X_{16}}{16} \sim N(\mu_{\overline{X}}=1 010; \sigma_{\overline{X}} = \frac{\sigma}{\sqrt{16}} \approx 2,9705)
-        \].
-        
+            \samplemeanvar = \frac{X_1+X_2+\ldots+X_{16}}{16} \sim N(\mu=1 010; \frac{\sigma}{\sqrt{16}} \approx 2.9705).
+        \]      
         We berekenen allereerst de $z$-score behorende bij een gemiddeld gewicht van $1000$ gram.
-        Die is gelijk aan:
+        Dat is gelijk aan:
         \[
-            z = \frac{x-\mu}{\sigma} = \frac{1 000 - 1 010}{2,9705} \approx -3,3665.
+            z = \frac{x-\mu}{\sigma} = \frac{1 000 - 1 010}{2.9705} \approx -3.3665.
         \]
-        De kans dat de $16$ willekeurig gekozen pakken rijst gemiddeld minder dan $1 000$ gram rijst bevatten is dan gelijk 
+        De kans dat de $16$ willekeurig gekozen pakken rijst gemiddeld minder dan $1 000$ gram rijst bevatten is dan gelijk aan
         \begin{align*}
-            P(\overline{X} < 1 000)     &= P(Z < -3,3665) \\
-                                        &\text{normalcdf}(a=-10^{10};b=-3,3665;\mu=0;\sigma=1) \\
-                                        &\approx 3,8072 \cdot 10^{-4}.
+            P(\samplemeanvar < 1 000)   &= P(Z < -3.3665) \\
+                                        &= \normalcdf(a=-10^{10};b=-3.3665;\mu=0;\sigma=1) \\
+                                        &\approx 3.8072 \cdot 10^{-4}.
         \end{align*}
     }
 \end{enumerate}

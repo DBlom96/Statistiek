@@ -1,44 +1,44 @@
 \question{8.4}{
     De montagetijd van een apparaat in een fabriek is te beschouwen als een kansvariabele $X$ die normaal is verdeeld met een verwachtingswaarde van $40$ minuten en een standaarddeviatie van vier minuten.
     Na het invoeren van een nieuw systeem voor de montage is de chef van de afdeling benieuwd of de gemiddelde montagetijd hierdoor korter is geworden.
-    Voor een aantal ($n$) montages vond hij als gemiddelde montagetijd $\overline{x}=36$ minuten.
+    Voor een aantal ($n$) montages vond hij als gemiddelde montagetijd $\samplemean=36$ minuten.
     We gaan ervan uit dat de montagetijden nog steeds normaal zijn verdeeld met $\sigma=4$ minuten.
-    Bereken een $95\%$-betrouwbaarheidsinterval voor $\mu$ in de volgende gevallen: 
+    Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ in de volgende gevallen: 
 }
 \begin{enumerate}[label=(\alph*)]
-    \item als $n=16$ waarnemingen zijn gebruikt voor het berekenen van $\overline{x} = 36$ minuten.
+    \item als $n=16$ waarnemingen zijn gebruikt voor het berekenen van $\samplemean = 36$ minuten.
     \answer{
-        Omdat de gewenste betrouwbaarheid $95\%$ is, geldt dat $\alpha = 0,05$ en $z_{\alpha/2} = z_{0,025} = \invnorm(0,975) \approx 1,9600$.
-        Verder is gegeven dat $\overline{x} = 36$.
-        In algemene zin geldt dat een $95\%$-betrouwbaarheidsinterval voor $\mu$ van de vorm
+        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$ en $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
+        Verder is gegeven dat $\samplemean = 36$.
+        In algemene zin geldt dat een \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ van de vorm
         \begin{align*}
-            &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
-            &=[36 - 1,9600 \cdot \frac{4}{\sqrt{n}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{n}}]
+            &[\samplemean - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemean + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[36 - 1.9600 \cdot \frac{4}{\sqrt{n}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{n}}]
         \end{align*}
-        In het geval van $n=16$ waarnemingen is het $95\%$-betrouwbaarheidsinterval voor $\mu$ dus gelijk aan
+        In het geval van $n=16$ waarnemingen is het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ dus gelijk aan
         \[
-            [36 - 1,9600 \cdot \frac{4}{\sqrt{16}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{16}}] = [34,04; 37,96]
+            [36 - 1.9600 \cdot \frac{4}{\sqrt{16}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{16}}] = [34.04; 37.96]
         \]
-        Met $95\%$ betrouwbaarheid ligt de gemiddelde montagetijd tussen $34,04$ en $37,96$ minuten.
+        Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde montagetijd tussen $34.04$ en $37.96$ minuten.
     }
 
     \item als $n=100$ waarnemingen gebruikt zijn.
     \answer{
         In het geval van $n=100$ waarnemingen is de berekening op eenzelfde manier uit te voeren.
-        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
         \[
-            [36 - 1,9600 \cdot \frac{4}{\sqrt{100}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{100}}] = [35,22; 36,78]
+            [36 - 1.9600 \cdot \frac{4}{\sqrt{100}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{100}}] = [35.22; 36.78]
         \]
-        Met $95\%$ betrouwbaarheid ligt de gemiddelde montagetijd tussen $35,22$ en $36,78$ minuten.
+        Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde montagetijd tussen $35.22$ en $36.78$ minuten.
     }
 
     \item als $n=4$ waarnemingen gebruikt zijn.
     \answer{
         In het geval van $n=4$ waarnemingen is de berekening weer op eenzelfde manier uit te voeren.
-        Het $95\%$-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
         \[
-            [36 - 1,9600 \cdot \frac{4}{\sqrt{4}}; 36 + 1,9600 \cdot \frac{4}{\sqrt{4}}] = [32,08; 39,92]
+            [36 - 1.9600 \cdot \frac{4}{\sqrt{4}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{4}}] = [32.08; 39.92]
         \]
-        Met $95\%$ betrouwbaarheid ligt de gemiddelde montagetijd tussen $32,08$ en $39,92$ minuten.
+        Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde montagetijd tussen $32.08$ en $39.92$ minuten.
     }
 \end{enumerate}
