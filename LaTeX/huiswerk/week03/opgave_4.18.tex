@@ -3,12 +3,14 @@ Een concurrent van Lauwen wil eveneens een (onbekend) bod $X$ doen, waarvan de h
 Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we ervan uitgaan dat beide partijen nooit exact hetzelfde bod zullen doen.
 }
 \begin{enumerate}[label=(\alph*)]
-    \item Veronderstel dat Lauwen \euro 23 000 biedt. Hoe groot is de kans dat hij daarmee in het bezit komt van de klok?
+    \item Veronderstel dat Lauwen \euro 23 000 biedt. 
+    Hoe groot is de kans dat hij daarmee in het bezit komt van de klok?
     \answer{
-        Lauwen komt enkel en alleen in bezit van de klok als het bod $X \sim \text{Uniform}(20 000; 30 000)$ van zijn concurrent lager is dan \euro 23 000.
+        Gegeven is dat het bod van zijn concurrent $X$ wordt gemodelleerd als een uniforme kansvariabele op het interval tussen \euro 20 000 en \euro 30 000, met andere woorden $X \sim \uniform{20 000}{30 000}$.
+        Lauwen komt enkel en alleen in bezit van de klok als geldt dat $X \leq 23000$.
         De kans hierop is gelijk aan
         \[
-            P(X \le 23 000) = \frac{23 000 - 20 000}{30 000 - 20 000} = \frac{3 000}{10 000} = 0,3
+            P(X \le 23 000) = \frac{23 000 - 20 000}{30 000 - 20 000} = \frac{3 000}{10 000} = 0.3.
         \]
     }
     
@@ -16,14 +18,14 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
     \answer{
         Als Lauwen een bod van \euro 28 000 doet, is de kans op aankoop gelijk aan 
         \[
-            P(X \le 28 000) = \frac{28 000 - 20 000}{30 000 - 20 000} = \frac{8 000}{10 000} = 0,8
+            P(X \le 28 000) = \frac{28 000 - 20 000}{30 000 - 20 000} = \frac{8 000}{10 000} = 0.8.
         \]
         Als Lauwen een bod van \euro 30 000 doet, is de kans op aankoop gelijk aan $1$, want dit is de bovengrens van het bod $X$ wat de concurrent gaat uitbrengen.
     }
 
     \item Er is een klant aan wie Lauwen de klok voor een bedrag van \euro 31 000 onmiddellijk kan verkopen. Hoeveel bedraagt de verwachte winst voor Lauwen bij de biedingen die bij de vragen $a$ en $b$ worden overwogen? 
     \answer{
-        Als Lauwen een bod van \euro 23 000 doet, is de kans op aankoop gelijk aan $0,3$.
+        Als Lauwen een bod van \euro 23 000 doet, is de kans op aankoop gelijk aan $0.3$.
         In het geval dat hij de concurrent overtreft ($X < 23 000$), is de winst gelijk aan $31 000 - 23 000 = 8 000$ euro.
         In het geval dat hij de concurrent niet overtreft ($X > 23 000$), is de winst gelijk aan $0$, want dan kan hij de klok niet doorverkopen.
         Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
@@ -32,7 +34,7 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
                 \toprule
                     {\bfseries winst $k$ (in euro)} & $0$ & $8 000$\\
                 \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                    {\bfseries $f(k)=P(W=k)$} & $0,7$ & $0,3$ \\
+                    {\bfseries $f(k)=P(W=k)$} & $0.7$ & $0.3$ \\
                 \bottomrule
             \end{tabular}
         \end{center}
@@ -40,13 +42,13 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
         De verwachte winst is in dat geval gelijk aan 
         \begin{align*}
             E[W]    &= 0 \cdot P(W=0) + 8 000 \cdot P(W = 8 000) \\
-                    &= 0 \cdot 0,7 + 8 000 \cdot 0,3 \\
-                    &= 2 400
+                    &= 0 \cdot 0.7 + 8 000 \cdot 0.3 \\
+                    &= 2 400.
         \end{align*}
 
         Op een zelfde manier kun je de verwachte winst bepalen in het geval van boden van respectievelijk \euro 28 000 en \euro 30 000:
         \begin{itemize}
-            \item Wanneer het bod gelijk is aan \euro 28 000, is de kans op aankoop gelijk aan $P(X<28 000) = 0,8$.
+            \item Wanneer het bod gelijk is aan \euro 28 000, is de kans op aankoop gelijk aan $P(X<28 000) = 0.8$.
             In dat geval is de winst gelijk aan $31 000 - 28 000 = 3 000$ euro, en anders $0$ euro. 
             Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
             \begin{center}
@@ -54,14 +56,14 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
                     \toprule
                         {\bfseries winst $k$ (in euro)} & $0$ & $3 000$\\
                     \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                        {\bfseries $f(k)=P(W=k)$} & $0,2$ & $0,8$ \\
+                        {\bfseries $f(k)=P(W=k)$} & $0.2$ & $0.8$ \\
                     \bottomrule
                 \end{tabular}
             \end{center}
             De verwachte winst (in euro) is in dat geval gelijk aan 
             \begin{align*}
                 E[W]    &= 0 \cdot P(W=0) + 3 000 \cdot P(W = 3 000) \\
-                        &= 0 \cdot 0,2 + 3 000 \cdot 0,8 \\
+                        &= 0 \cdot 0.2 + 3 000 \cdot 0.8 \\
                         &= 2 400
             \end{align*}
             
@@ -73,17 +75,17 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
     \item Noem het bedrag dat Lauwen gaat bieden $B$. Bij welke bieding $B$ is de verwachte verkoopwinst zo hoog mogelijk?
     \answer{
         Stel dat Lauwen een bedrag van $B$ euro gaat bieden.
-        We kunnen aannemen dat $20 000 \le B \le 30 000$. 
+        We kunnen aannemen dat $20 000 \le B \le 30 000$.
         Als $B < 20 000$, dan wordt Lauwen altijd overboden door zijn concurrent.
-        Als $B > 30 000$, dan is zijn winst kleiner dan bij $B = 30 000$, terwijl in dat geval de concurrent al sowieso wordt overboden.
+        Daarnaast is Lauwen bij $B = 30 000$ al verzekerd van aankoop van de klok, dus heeft hij geen reden om een hoger bod uit te brengen.
         De kans op aankoop is altijd gegeven door $P(X < B)$, de kans dat het concurrerende bod $X$ wordt overtroffen.
         Deze kans -- in termen van $B$ -- is gelijk aan
         \[
             P(X < B) = \frac{B-20 000}{30 000 - 20 000} = \frac{B-20 000}{10 000}
         \]
-        Als $X < B$, dan koopt Lauwen de klok aan, en kan daar dan $31 000 - B$ euro winst op maken.
-        Als $X > B$, dan wordt Lauwen overtroffen en is zijn winst $0$ euro.
-        Dit gebeurt met kans $P(X > B) = 1 - P(X < B) = 1 - \frac{B-20 000}{10 000} = \frac{30 000 - B}{10 000}$.
+        Bij aankoop maakt Lauwen een winst van $31 000 - B$ euro (opbrengsten minus kosten).
+        Als Lauwen wordt overboden, dan is zijn winst $0$ euro.
+        Dit gebeurt met kans $P(X \geq B) = 1 - P(X < B) = 1 - \frac{B-20 000}{10 000} = \frac{30 000 - B}{10 000}$.
         Je kunt dus de winst $W$ zien als een discrete kansvariabele met twee mogelijke uitkomsten:
             \begin{center}
                 \begin{tabular}{ccc}
@@ -100,15 +102,16 @@ Gelet op het veronderstelde continue karakter van de kansvariabele, mogen we erv
                         &= 0 \cdot \left(\frac{30 000 - B}{10 000}\right) + (31 000 - B) \cdot \left(\frac{B-20 000}{10 000}\right) \\
                         &= \frac{(31 000 - B)\cdot(B - 20 000)}{10 000} \\
                         &= \frac{-620 000 000 + 51 000\cdot B-B^2}{10 000} \\
-                        &= -62 000 + 5,1\cdot B-\frac{1}{10000}\cdot B^2
+                        &= -62 000 + 5.1\cdot B-\frac{1}{10000}\cdot B^2
             \end{align*}
             We vinden de optimale waarde voor $B$ door de afgeleide naar $B$ te nemen (exponent naar voren halen en exponent met 1 verminderen) en gelijk te stellen aan 0:
-            \[
-                \frac{d}{dB}(E[W]) = 5,1 - \frac{2}{10000}\cdot B = 0 \rightarrow B = 5,1 \cdot \frac{10 000}{2} = 25 500
-            \]
+            \begin{align*}
+                &\frac{d}{dB}(-62 000 + 5.1\cdot B-\frac{1}{10000}\cdot B^2) = 5.1 - \frac{2}{10000}\cdot B = 0 \\
+                &\rightarrow B = 5.1 \cdot \frac{10 000}{2} = 25 500
+            \end{align*}
             Invullen van $B = 25 500$ geeft een verwachte winst (in euro) van 
             \[
-                E[W] = -62 000 + 5,1\cdot 25 500-\frac{1}{10000}\cdot (25 500)^2 = 3 025.
+                E[W] = -62 000 + 5.1\cdot 25 500-\frac{1}{10000}\cdot (25 500)^2 = 3 025.
             \]
     }
 

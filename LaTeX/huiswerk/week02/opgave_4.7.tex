@@ -6,7 +6,7 @@ waarvan de gegevens zijn geplaatst in de volgende tabel:}
         \toprule
             {\bfseries Aantal $k$} & $0$ & $1$ & $2$ & $3$ & $4$ & $5$\\
         \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5} \cmidrule{6-6} \cmidrule{7-7}
-            {\bfseries $f(k)=P(X=k)$} & $0,20$ & $0,30$ & $0,20$ & $0,15$ & $0,10$ & $0,05$ \\
+            {\bfseries $f(k)=P(X=k)$} & $0.20$ & $0.30$ & $0.20$ & $0.15$ & $0.10$ & $0.05$ \\
         \bottomrule
     \end{tabular}
 \end{center}
@@ -17,11 +17,11 @@ waarvan de gegevens zijn geplaatst in de volgende tabel:}
             We berekenen deze kansen als volgt:
             \begin{align*}
                 P(X\ge 3) &= P(X=3) + P(X=4) + P(X=5) \\
-                          &= 0,15 + 0,10 + 0,05 = 0,30\\
+                          &= 0.15 + 0.10 + 0.05 = 0.30\\
                 P(X\le 3) &= 1 - P(X \ge 4) \\
                           &= 1 - (P(X=4) + P(X=5)) \\
-                          &= 1 - (0,10+0,05) \\
-                          &= 1 - 0,15 = 0,85 
+                          &= 1 - (0.10+0.05) \\
+                          &= 1 - 0.15 = 0.85 
             \end{align*}
         }
 
@@ -31,8 +31,8 @@ waarvan de gegevens zijn geplaatst in de volgende tabel:}
             \begin{align*}
                 E[X]    &= \sum_k k \cdot P(X=k) \\
                         &= 0 \cdot P(X=0) + 1 \cdot P(X=1) + \ldots + 5 \cdot P(X=5) \\
-                        &= 0 \cdot 0,20 + 1 \cdot 0,30 + \ldots + 5 \cdot 0,05 \\
-                        &= 1,8
+                        &= 0 \cdot 0.20 + 1 \cdot 0.30 + \ldots + 5 \cdot 0.05 \\
+                        &= 1.8
             \end{align*}
         }
 
@@ -41,15 +41,15 @@ waarvan de gegevens zijn geplaatst in de volgende tabel:}
             We berekenen de standaarddeviatie van $X$ door eerst de variantie te berekene:
             \begin{align*}
                 \Var{X} &= \sum_k (k-E[X])^2 \cdot P(X=k) \\
-                        &= (0-1,8)^2 \cdot P(X=0) + (1-1,8)^2 \cdot P(X=1) + \ldots \\
-                        & \qquad + (5-1,8)^2  \cdot P(X=5) \\
-                        &= (0-1,8)^2 \cdot 0,20 + (1-1,8)^2 \cdot 0,30 + \ldots + (5-1,8)^2 \cdot 0,05 \\
-                        &= 2,06
+                        &= (0-1.8)^2 \cdot P(X=0) + (1-1.8)^2 \cdot P(X=1) + \ldots \\
+                        & \qquad + (5-1.8)^2  \cdot P(X=5) \\
+                        &= (0-1.8)^2 \cdot 0.20 + (1-1.8)^2 \cdot 0.30 + \ldots + (5-1.8)^2 \cdot 0.05 \\
+                        &= 2.06
             \end{align*}
 
             De standaarddeviatie vinden we dan door de wortel uit de variantie te nemen:
             \[
-                \sigma(X) = \sqrt{\Var{X}}= \sqrt{2,06} \approx 1,4353
+                \sigma(X) = \sqrt{\Var{X}}= \sqrt{2.06} \approx 1.4353
             \]
         }
     \end{enumerate}

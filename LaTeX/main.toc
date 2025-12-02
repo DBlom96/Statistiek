@@ -1,0 +1,15 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{Inhoudsopgave}{i}{chapter*.1}%
+\contentsline {chapter}{\chapternumberline {1}Week 1: grondslagen statistiek en datavisualisatie}{1}{chapter.1}%
+\contentsline {chapter}{\chapternumberline {2}Week 2: discrete kansvariabelen}{17}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}Week 3: continue kansvariabelen}{31}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}Week 4: de binomiale verdeling}{43}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {5}Week 5: de normale verdeling en de centrale limietstelling}{51}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {6}Week 6: de Poissonverdeling}{61}{chapter.6}%
+\contentsline {chapter}{\chapternumberline {7}Week 8: schatten en betrouwbaarheid}{71}{chapter.7}%
+\contentsline {chapter}{\chapternumberline {8}Week 9: schatten en betrouwbaarheid (deel 2)}{81}{chapter.8}%
+\contentsline {chapter}{\chapternumberline {9}Week 10: hypothesetoetsen}{97}{chapter.9}%
+\contentsline {chapter}{\chapternumberline {10}Week 11: chikwadraatverdeling}{109}{chapter.10}%
+\contentsline {chapter}{\chapternumberline {11}Week 12: verschiltoetsen}{127}{chapter.11}%
+\contentsline {chapter}{\chapternumberline {12}Week 13: correlatie en regressie}{141}{chapter.12}%
+\contentsline {chapter}{Bibliografie}{159}{chapter*.17}%

@@ -1,24 +1,25 @@
 % Configuration settings for the exam
-\usepackage[a4paper, margin=0.8in]{geometry} % Adjust the margins
+\usepackage[margin=0.75in]{geometry} % Adjust the margins
 
 % TOP MATTER
 \usepackage{authblk} % more flexible formatting of author / address
 
 % ENCODINGS, FONTS AND LANGUAGE
-\usepackage[english]{babel}
+\usepackage[dutch]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
 \usepackage{charter}                
 \usepackage[defaultsans]{cantarell} % cantarell fonts
 \usepackage{parskip}
+\usepackage{csquotes} % for proper quotation marks with the enquote command
 
 % MATHEMATICS
 \usepackage{amsmath, amssymb, amsfonts, amsthm, eurosym}
 \usepackage{calc}
 \usepackage{ifthen}
 \usepackage{mathtools}
-\usepackage[output-decimal-marker={,}]{siunitx}
+\usepackage[output-decimal-marker={.}]{siunitx}
 
 % TABLES, ARRAYS AND MATRICES
 \usepackage{array}
@@ -47,21 +48,15 @@
 \usepackage{fontawesome}
 
 % HEADERS AND FOOTERS
-\usepackage{fancyhdr}
-\setlength{\headheight}{15.2pt}
-\pagestyle{fancy}
-\fancyhf{} % clear header and footer
+\copypagestyle{lecturenotes}{ruled}
+\makeevenhead{lecturenotes}{\leftmark}{}{}
+\makeoddhead{lecturenotes}{}{}{Uitwerkingen huiswerkopgaven}
 
-% Header
-\fancyhead[L]{\leftmark}
-\fancyhead[R]{Probability \& Statistics}
+\makeevenfoot{lecturenotes}{}{\thepage}{}
+\makeoddfoot{lecturenotes}{}{\thepage}{}
 
-% Footer
-\fancyfoot[C]{\thepage}
-
-% Optional: header line
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
+% CHAPTER STYLES
+\chapterstyle{madsen}
 
 % REFERENCES
 \usepackage{hyperref}
@@ -70,9 +65,6 @@
 
 % EXAM-SPECIFIC PACKAGES
 \usepackage{marginnote}
-
-% MISCELLANEOUS
-% \usepackage{parskip}
 
 % Counters
 \newcounter{question}
