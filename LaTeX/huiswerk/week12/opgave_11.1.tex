@@ -6,7 +6,7 @@
     Hierbij werden $20$ waarden ($x_i$) die bepaald zijn in februari 2017 vergeleken met $20$ waarden ($y_i$) die zijn gemeten in februari 2018.
     Voor deze waarden werd berekend:
     \[
-        \overline{x}=164,6 \text{ en } s_X = 17,2; \text{ en } \overline{y} = 143,2 \text{ en } s_Y = 15,9
+        \samplemeanx=164.6 \text{ en } s_X = 17.2; \text{ en } \samplemeany = 143.2 \text{ en } s_Y = 15.9
     \]
     Met een verschiltoets gaan we bepalen of er een significante verbetering is opgetreden.
 }
@@ -16,11 +16,12 @@
 
     Om te bepalen of er een significante verbetering is opgetreden, moeten we kijken of de gemiddelde luchtverontreiniging is gedaald in 2018.
     We voeren hiervoor een hypothesetoets uit met de volgende nulhypothese $H_0$ en de alternatieve hypothese $H_1$:
-    \[
-        H_0: \mu_X \le \mu_Y \text{ versus } H_1: \mu_X > \mu_Y.
-    \]
+    \begin{itemize}
+        \item[$H_0$:] Er is geen verbetering opgetreden, oftewel $\mu_X \le \mu_Y$.
+        \item[$H_1$:] Er is wel een verbetering opgetreden, oftewel $\mu_X > \mu_Y$.
+    \end{itemize}
 
-    Verder wordt er uitgegaan van een significantieniveau $\alpha = 0,05$.
+    Verder wordt er uitgegaan van een significantieniveau $\alpha = 0.05$.
     Omdat de standaardafwijkingen onbekend zijn, moeten we werken met een onafhankelijke $t$-toets met behulp van de verschilvariabele $V$.
     Voor deze verschilvariabele $V$ geldt dat
     \begin{align*}
@@ -28,40 +29,40 @@
         s_V     &= \sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}.
     \end{align*}
 
-    We veronderstellen dat beide steekproeven te beschouwen zijn als trekking uit (normale) verdelingen met dezelfde variantie, dus kunnen we gebruik maken van de ``pooled variance'':
+    We veronderstellen dat beide steekproeven te beschouwen zijn als trekking uit (normale) verdelingen met dezelfde variantie, dus kunnen we gebruik maken van de \enquote{pooled variance}:
     \[
-        s_P^2 = \frac{(n-1) s_X^2 + (m-1) s_Y^2}{n-1+m-1} = \frac{19 \cdot 17,2^2 + 19 \cdot 15,9^2}{38} = 274,325.
+        s_P^2 = \frac{(n-1) s_X^2 + (m-1) s_Y^2}{n-1+m-1} = \frac{19 \cdot 17.2^2 + 19 \cdot 15.9^2}{38} = 274.325.
     \]
 
     Onder de nulhypothese $H_0$ (uitgaande van het extreme geval $\mu_X = \mu_Y$) geldt dus voor de verschilvariabele $V$ dat
     \begin{align*}
         \mu_V   &= \mu_X - \mu_Y = 0 \\
-        s_V     &= \sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}} = \sqrt{\frac{274,325}{20} + \frac{274,325}{20}} \approx 5,2376
+        s_V     &= \sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}} = \sqrt{\frac{274.325}{20} + \frac{274.325}{20}} \approx 5.2376.
     \end{align*}
 
-    De $t$-waarde bijbehorende bij de uitkomst $v = \overline{x} - \overline{y} = 164,6 - 143,2 = 21,4$ is gelijk aan
+    De $t$-waarde bijbehorende bij de uitkomst $v = \samplemeanx - \samplemeany = 164.6 - 143.2 = 21.4$ is gelijk aan
     \[
-        t = \frac{v - \mu_V}{s_V} = \frac{21,4 - 0}{5,2376} = 4,0858.
+        t = \frac{v - \mu_V}{s_V} = \frac{21.4 - 0}{5.2376} = 4.0858.
     \]
 
-    Merk op dat deze $t$-waarde uit een $t$-verdeling komt met $\text{df}=n-m+2=38$ vrijheidsgraden.
+    Merk op dat deze $t$-waarde uit een $t$-verdeling komt met $\df=n-m+2=38$ vrijheidsgraden.
 
     {\bfseries Methode 1 (kritiek gebied):}
     
     Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ als volgt bepaald kan worden:
     \begin{align*}
-        g &= \invt(\text{opp}=1-\alpha; \text{df} = n + m - 2) = \invt(\text{opp}=0,95; \text{df} = 38) \approx 1,6860
+        g &= \invt(\opp=1-\alpha; \df = n + m - 2) = \invt(\opp=0.95; \df = 38) \approx 1.6860.
     \end{align*}
-    De berekende waarde $t \approx 4,0858$ is groter dan deze grens $g$ is.
-    Dat betekent dat $t$ in het kritieke gebied ligt, dus we verwerpen de nulhypothese $H_0$.
-    Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in 2018.
+    De geobserveerde toetsingsgrootheid $t \approx 4.0858$ is groter dan deze grens $g$, dus $t$ ligt in het kritieke gebied.
+    We verwerpen dus de nulhypothese $H_0$.
+    Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in $2018$.
 
     {\bfseries Methode 2 ($p$-waarde):} 
 
-    Aangezien we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $t \approx 4,0858$:
+    Aangezien we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $t \approx 4.0858$:
     \begin{align*}
-        p = \tcdf(\text{lower}=4,0858; \text{upper}=10^{99}; \text{df}=38) \approx 1,0936 \cdot 10^{-4}.
+        p = \tcdf(\lb=4.0858; \ub=10^{99}; \df=38) \approx 1.0936 \cdot 10^{-4}.
     \end{align*}
-    De $p$-waarde is extreem klein (veel kleiner dan $\alpha=0,05$), dus verwerpen we de nulhypothese.
-    Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in 2018.
+    De $p$-waarde is extreem klein (veel kleiner dan $\alpha=0.05$), dus verwerpen we de nulhypothese.
+    Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in $2018$.
 }

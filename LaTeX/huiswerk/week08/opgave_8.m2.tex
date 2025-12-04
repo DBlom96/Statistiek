@@ -12,15 +12,15 @@ Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde tijd tot het e
 \answer{De tijd $T$ (in maanden) tot een willekeurige trainee een eerste aanbod ontvangt is normaal verdeeld met onbekende verwachtingswaarde $\mu$ en standaardafwijking $\sigma=3$ maanden.
 In algemene zin kunnen we een $100\cdot(1-\alpha)$\si{\percent}-betrouwbaarheidsinterval vinden met de formule
 \begin{align*}
-    [\samplemean - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemean + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+    [\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
 \end{align*}
-In dit geval hebben we te maken met een steekproef $x_1, x_2, \ldots, x_{36}$ waaruit is gebleken dat het steekproefgemiddelde $\samplemean = 16$ maanden.
+In dit geval hebben we te maken met een steekproef $x_1, x_2, \ldots, x_{36}$ waaruit is gebleken dat het steekproefgemiddelde $\samplemeanx = 16$ maanden.
 Verder is $\alpha = 0.05$, omdat we een \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde tijd $\mu$ willen vinden.
 Er geldt dus dat $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-\frac{\alpha}{2}; \mu=0; \sigma=1) \approx 1.9600$.
 
 Het \SI{95}{\percent}-betrouwbaarheidsinterval voor het gemiddelde $\mu$ is dus gelijk aan
 \begin{align*}
-    &[\samplemean - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemean + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+    &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
     &\approx [16 - 1.9600 \cdot \frac{3}{\sqrt{36}}; 16 + 1.9600 \cdot \frac{3}{\sqrt{36}}] \\
     &\approx [15.0200; 16.9800] 
 \end{align*}

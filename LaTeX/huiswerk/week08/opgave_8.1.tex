@@ -9,12 +9,12 @@
     \answer{
         Noteer met $X$ de kansvariabele die het gewicht (in gram) van een willekeurige zak meel meet.
         Gegeven is dat $X \sim \normal{\mu=\ ?}{\sigma=100}$.
-        Volgens de centrale limietstelling geldt dat het gemiddelde gewicht $\samplemeanvar$ van $25$ zakken meel normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{100}{\sqrt{25}} = 20$ gram.
-        We hebben een geobserveerde steekproef van $25$ zakken genomen met uitkomst $\samplemean = 20142$ gram. 
+        Volgens de centrale limietstelling geldt dat het gemiddelde gewicht $\samplemeanvarX$ van $25$ zakken meel normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{100}{\sqrt{25}} = 20$ gram.
+        We hebben een geobserveerde steekproef van $25$ zakken genomen met uitkomst $\samplemeanx = 20142$ gram. 
         Aangezien we een betrouwbaarheid van \SI{95}{\percent} willen, is $\alpha = 0.05$ en $z_{\alpha/2} = \invnorm(\opp=1-\alpha/2) \approx 1.9600$.
         Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
         \begin{align*}
-            &[\samplemean - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemean + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
             &=[20142 - 1.9600 \cdot \frac{100}{\sqrt{25}}; 20142 + 1.9600 \cdot \frac{100}{\sqrt{25}}] \\
             &=[20102.8; 20181.2]
         \end{align*}
@@ -26,7 +26,7 @@
         Aangezien we in dit geval een betrouwbaarheid van \SI{99}{\percent} willen, is $\alpha = 0.01$ en $z_{\alpha/2} = \invnorm(\opp=1-\alpha/2) \approx 2.5758$.
         Het \SI{99}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
         \begin{align*}
-            &[\samplemean - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemean + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
             &=[20142 - 2.5758 \cdot \frac{100}{\sqrt{25}}; 20142 + 2.5758 \cdot \frac{100}{\sqrt{25}}] \\
             &=[20090.5; 20193.5]
         \end{align*}
@@ -37,7 +37,7 @@
     \answer{
         De breedte van het betrouwbaarheidsinterval
         \[
-            [\samplemean - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemean + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+            [\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
         \]
         is gelijk aan $2z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 20$.
         De intervalbreedte is gelijk aan twee keer de maximale afwijking $a$, oftewel $a = 10$.

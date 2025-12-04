@@ -3,27 +3,27 @@
     Ook de variabele $Y$ is normaal verdeeld met onbekende verwachtingswaarde.
     Er geldt $\Var{Y}=30$.
     Van de variabele $X$ worden tien trekkingen gedaan.
-    Die leveren als gemiddelde $\overline{x} = 50$.
-    Er worden vijf trekkingen gedaan van de variabele $Y$ die als gemiddelde opleveren $\overline{y} = 55$.
-    Toets of beide variabelen dezelfde verwachtingswaarde kunnen hebben (kies $\alpha=0,05$).
+    Die leveren als gemiddelde $\samplemeanx = 50$.
+    Er worden vijf trekkingen gedaan van de variabele $Y$ die als gemiddelde opleveren $\samplemeany = 55$.
+    Toets of beide variabelen dezelfde verwachtingswaarde kunnen hebben (kies $\alpha=0.05$).
 }
 \answer{
     We hebben te maken met twee normaal verdeelde kansvariabelen 
     \begin{align*}
-        X &\sim N(\mu_X = ?; \sigma_X = \sqrt{100}=10) \\
-        Y &\sim N(\mu_Y = ?; \sigma_Y = \sqrt{30}). 
+        X &\sim \normal{\mu_X =\ ?}{\sigma_X = \sqrt{100}=10}, \\
+        Y &\sim \normal{\mu_Y =\ ?}{\sigma_Y = \sqrt{30}}. 
     \end{align*}
     
-
     Om te toetsen of de gemiddeldes van beide kansvariabelen gelijk zijn, gebruiken we de volgende nulhypothese $H_0$ en alternatieve hypothese $H_1$:
-    \[
-        H_0: \mu_X = \mu_Y \text{ versus } H_1: \mu_X \neq \mu_Y.
-    \]
-    Verder zijn het significantieniveau $\alpha = 0,05$ en de steekproefgemiddeldes $\overline{x} = 50$ en $\overline{y} = 55$ gegeven.
-    Als toetsingsgrootheid kijken we naar de verschilvariabele $V = \overline{X} - \overline{Y}$.
+    \begin{itemize}
+        \item[$H_0$:] De verwachtingswaarden zijn gelijk, oftewel $\mu_X = \mu_Y$.
+        \item[$H_1$:] De verwachtingswaarden zijn niet gelijk, oftewel $\mu_X \neq \mu_Y$.
+    \end{itemize}
+    Verder zijn het significantieniveau $\alpha = 0.05$ en de steekproefgemiddeldes $\samplemeanx = 50$ en $\samplemeany = 55$ gegeven.
+    Als toetsingsgrootheid kijken we naar de verschilvariabele $V = \samplemeanvarX - \samplemeanvarY$.
     Hiervoor geldt dat
     \begin{align*}
-        V = \overline{X} - \overline{Y} = N(\mu_V = \mu_X - \mu_Y; \sigma_V = \sqrt{\frac{\sigma_X^2}{n}+\frac{\sigma_Y^2}{m}} = \sqrt{\frac{100}{10}+\frac{30}{5}} = 4).
+        V = \samplemeanvarX - \samplemeanvarY = \normal{\mu_V = \mu_X - \mu_Y}{\sigma_V = \sqrt{\frac{\sigma_X^2}{n}+\frac{\sigma_Y^2}{m}} = \sqrt{\frac{100}{10}+\frac{30}{5}} = 4}.
     \end{align*}
     
     Onder de nulhypothese geldt $\mu_X = \mu_Y$, oftewel de verschilvariabele heeft verwachtingswaarde $\mu_V = \mu_X - \mu_Y = 0$.
@@ -32,19 +32,19 @@
     
     Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen bepaald kunnen worden met:
     \begin{align*}
-        g_1 &= \invnorm(\text{opp}=\alpha/2=0,025; \mu = \mu_V=0; \sigma = \sigma_V=4) \approx -7,8399 \\
-        g_2 &= \invnorm(\text{opp}=1-\alpha/2=0,975; \mu = \mu_V=0; \sigma = \sigma_V=4) \approx 7,8399 \\
+        g_1 &= \invnorm(\opp=\alpha/2=0.025; \mu = \mu_V=0; \sigma = \sigma_V=4) \approx -7.8399, \\
+        g_2 &= \invnorm(\opp=1-\alpha/2=0.975; \mu = \mu_V=0; \sigma = \sigma_V=4) \approx 7.8399. \\
     \end{align*}
-    Het geobserveerde verschil is $v = \overline{x} - \overline{y} = 50 - 55 = -5$.
+    Het geobserveerde verschil is $v = \samplemeanx - \samplemeany = 50 - 55 = -5$.
     Deze waarde ligt niet in het kritieke gebied, dus we accepteren de nulhypothese $H_0$.
     Er is onvoldoende bewijs om de aanname te verwerpen dat beide variabelen dezelfde verwachtingswaarde zouden hebben.
 
     {\bfseries Methode 2 ($p$-waarde):} 
 
-    Het geobserveerde verschil is $v = \overline{x} - \overline{y} = 50 - 55 = -5$ en ligt dus links van het gemiddelde $\mu_V = 0$.
-    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de linkeroverschrijdingskans van de waarde $-5$ en vergelijken deze met $\alpha/2 = 0,025$.
+    Het geobserveerde verschil is $v = \samplemeanx - \samplemeany = 50 - 55 = -5$ en ligt dus links van het gemiddelde $\mu_V = 0$.
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de linkeroverschrijdingskans van de waarde $-5$ en vergelijken deze met $\alpha/2 = 0.025$.
     \begin{align*}
-        p &= \normalcdf(\text{lower}=-10^{99}; \text{upper}=-5; \mu = 0; \sigma = 4) = 0,1056
+        p &= \normalcdf(\\lb=-10^{99}; \ub=-5; \mu = 0; \sigma = 4) = 0.1056
     \end{align*}
     De $p$-waarde is groter dan $\alpha/2$, dus we accepteren de nulhypothese $H_0$.
     Er is onvoldoende bewijs om de aanname te verwerpen dat beide variabelen dezelfde verwachtingswaarde zouden hebben.

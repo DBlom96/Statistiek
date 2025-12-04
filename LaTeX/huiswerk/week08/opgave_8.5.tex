@@ -24,12 +24,12 @@
     Bepaal een \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$: de gemiddelde breeksterkte.
     \answer{
         Laat nu $X \sim \normal{\mu=\ ?}{\sigma=1.3}$ de kansvariabele zijn die de breeksterkte (in kg) meet van een willekeurige tasje van het nieuw soort plastic.
-        Volgens de centrale limietstelling is het steekproefgemiddelde $\samplemeanvar$ van $25$ tasjes dan ook normaal verdeeld met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{1.3}{\sqrt{25}}$.
+        Volgens de centrale limietstelling is het steekproefgemiddelde $\samplemeanvarX$ van $25$ tasjes dan ook normaal verdeeld met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{1.3}{\sqrt{25}}$.
         Omdat de gewenste betrouwbaarheid gelijk is aan \SI{95}{\percent}, hebben we te maken met $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
-        Verder is gegeven dat $n=25$ en $\samplemean=12.8$ kg.
+        Verder is gegeven dat $n=25$ en $\samplemeanx=12.8$ kg.
         Het \SI{95}{\percent}-betrouwbaarheidsinterval is dus gelijk aan
         \begin{align*}
-            &[\samplemean - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemean + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
             &=[12.8 - 1.9600 \cdot \frac{1.3}{\sqrt{25}}; 12.8 + 1.9600 \cdot \frac{1.3}{\sqrt{25}}] \\
             &=[12.29; 13.31]
         \end{align*}

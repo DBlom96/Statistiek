@@ -17,7 +17,7 @@
         \end{tabular}
     \end{center}
     We gaan met behulp van de chikwadraattoets onderzoeken of de indelingen naar leeftijd en rookgewoonte al dan niet afhankelijk van elkaar zijn.
-    We toetsen met $\alpha=0,01$.
+    We toetsen met $\alpha=0.01$.
     De nulhypothese luidt: $H_0:$ onafhankelijkheid.
 }
 \begin{enumerate}[label=(\alph*)]
@@ -72,10 +72,10 @@
         waarbij $i = 1,2$ de index van de rij is, en $j = 1,2,3$ de index van de kolom is.
         Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
         \begin{align*}
-            \chi^2  &= \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}} \\
-                    &=\frac{(O_{11} - E_{11})^2}{E_{11}} + \frac{(O_{12} - E_{12})^2}{E_{12}} + \ldots + \frac{(O_{23} - E_{23})^2}{E_{23}} \\
+            \chi^2  &= \sum_{i,j} \frac{(o_{ij} - e_{ij})^2}{e_{ij}} \\
+                    &=\frac{(o_{11} - e_{11})^2}{e_{11}} + \frac{(o_{12} - e_{12})^2}{e_{12}} + \ldots + \frac{(o_{23} - e_{23})^2}{e_{23}} \\
                     &= \frac{(25 - 32)^2}{32} + \frac{(35 - 24)^2}{24} + \ldots + \frac{(40 - 36)^2}{36}\\
-                    &\approx 12,0660
+                    &\approx 12.0660.
         \end{align*}
     }
 
@@ -84,33 +84,34 @@
         Bij een $\chi^2$-toets voor onafhankelijkheid van twee nominale variabelen is het aantal vrijheidsgraden gelijk aan het aantal cellen waarvoor je een waarde vrij kunt kiezen.
         Dit is gelijk aan 
         \[
-            \text{df} = (\#\text{rijen}-1) \cdot (\#\text{kolommen}-1) = (2-1)\cdot(3-1) = 2.
+            \df = (\nrows-1) \cdot (\ncols-1) = (2-1)\cdot(3-1) = 2.
         \]
-        In deze hypothesetoets voor onafhankelijkheid heeft de toetsingsgrootheid een chikwadraatverdeling met $\text{df}=2$ vrijheidsgraden.
+        In deze hypothesetoets voor onafhankelijkheid heeft de toetsingsgrootheid een chikwadraatverdeling met $\df=2$ vrijheidsgraden.
     }
 
     \item Geef het kritieke gebied aan van de grootheid $X$.
     \answer{
-        Merk op dat onafhankelijkheid waarschijnlijker is als de toetsingsgrootheid dichter bij 0 ligt.
+        Merk op dat onafhankelijkheid waarschijnlijker is als de toetsingsgrootheid dichter bij $0$ ligt.
         Dit volgt uit de formule van de toetsingsgrootheid $X$, omdat in dat geval de observed frequenties dicht in de buurt van de expected frequenties liggen.
 
-        Het kritieke gebied is dus van de vorm $[g, \infty)$, waarbij $g$ de grenswaarde is waarvoor geldt $P(X \ge g) = \alpha$.
-        Dit kunnen we met de grafische rekenmachine bepalen aan de hand van 
+        Het kritieke gebied is dus van de vorm $[g, \infty)$, waarbij $g$ de grenswaarde is waarvoor geldt $P(X \ge g) = \alpha=0.01$.
+        Dit kunnen we met de grafische rekenmachine berekenen met behulp van de \enquote{solver}-functie, waarbij we het volgende systeem van vergelijkingen oplossen: 
         \begin{align*}
-            y_1 &= \chi^2\text{cdf}(\text{lower}=x; \text{upper}=10^{10}; \text{df}=2) \\
-            y_2 &= \alpha=0,01
+            E_1 &= \chi^2\text{cdf}(\lb=x; \ub=10^{10}; \df=2), \\
+            E_2 &= \alpha=0.01.
         \end{align*}
-    
-        De numerieke solver geeft $x \approx 9,2103$.
-        Dat betekent dat het kritieke gebied gelijk is aan $[9,2103; \infty)$.
+        Dit geeft een kritieke grenswaarde van $x \approx 9.2103$.
+        Dat betekent dat het kritieke gebied gelijk is aan $[9.2103; \infty)$.
     }
 
     \item Wat is uw eindconclusie?
     \answer{
-        De geobserveerde toetsingsgrootheid $\chi^2 \approx 12,0660$ ligt in het kritieke gebied, omdat $12,0660 > 9,2103$.
+        De geobserveerde toetsingsgrootheid $\chi^2 \approx 12.0660$ ligt in het kritieke gebied, omdat $12.0660 > 9.2103$.
         Dit betekent dat de nulhypothese $H_0$ wordt verworpen.
-        Er is voldoende bewijs om aan te nemen dat de twee nominale variabelen ``leeftijd'' en ``rookgewoonte'' afhankelijk zijn van elkaar.
-    
+        Er is voldoende bewijs om aan te nemen dat de twee nominale variabelen \enquote{leeftijd} en \enquote{rookgewoonte} afhankelijk zijn van elkaar.
+        Om te bekijken hoe deze afhankelijkheid eruit ziet, is een analyse van de ruwe data (observed frequenties) nodig.
+        Als we kijken naar de ruwe data, zien we dat het aandeel rokers in de leeftijdsgroep 30-<45 een stuk hoger ligt dan in de andere leeftijdsgroepen.
+        Hierdoor kun je dus concluderen dat rookgewoontes niet vergelijkbaar zijn over alle leeftijdscategorie\"en.
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
                 \includegraphics{opg_10.1.png}

@@ -57,7 +57,7 @@ De standaarddeviatie is echter onbekend.}
         Laat $X_1, X_2, \ldots, X_{16}$ de gewichten zijn van $16$ willekeurig gekozen pakken rijst.
         Volgens de centrale limietstelling geldt voor het gemiddelde gewicht van deze 16 pakken rijst:
         \[
-            \samplemeanvar = \frac{X_1+X_2+\ldots+X_{16}}{16} \sim N(\mu=1 010; \frac{\sigma}{\sqrt{16}} \approx 2.9705).
+            \samplemeanvarX = \frac{X_1+X_2+\ldots+X_{16}}{16} \sim N(\mu=1 010; \frac{\sigma}{\sqrt{16}} \approx 2.9705).
         \]      
         We berekenen allereerst de $z$-score behorende bij een gemiddeld gewicht van $1000$ gram.
         Dat is gelijk aan:
@@ -66,7 +66,7 @@ De standaarddeviatie is echter onbekend.}
         \]
         De kans dat de $16$ willekeurig gekozen pakken rijst gemiddeld minder dan $1 000$ gram rijst bevatten is dan gelijk aan
         \begin{align*}
-            P(\samplemeanvar < 1 000)   &= P(Z < -3.3665) \\
+            P(\samplemeanvarX < 1 000)   &= P(Z < -3.3665) \\
                                         &= \normalcdf(a=-10^{10};b=-3.3665;\mu=0;\sigma=1) \\
                                         &\approx 3.8072 \cdot 10^{-4}.
         \end{align*}

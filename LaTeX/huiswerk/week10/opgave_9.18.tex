@@ -19,13 +19,13 @@
     In acht weken wordt het aantal klachten geteld, oftewel $n=8$.
     Het geobserveerde steekproefgemiddelde is gelijk aan 
     \begin{align*}
-        \samplemean = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{30+45+\ldots+28}{8} = 40.
+        \samplemeanx = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{30+45+\ldots+28}{8} = 40.
     \end{align*}
     Verder is de standaarddeviatie $\sigma$ niet gegeven, dus moeten we die schatten aan de hand van de gegevens.
     De schatting $\samplevar$ van de steekproefvariantie vinden we als volgt
     \begin{align*}
-        \samplevar  &= \frac{(x_n-\samplemean)^2 + \ldots + (x_n-\samplemean)^2}{n-1} \\
-                    &= \frac{(x_1-\samplemean)^2 + \ldots + (x_8-\samplemean)^2}{8-1} \\
+        \samplevar  &= \frac{(x_n-\samplemeanx)^2 + \ldots + (x_n-\samplemeanx)^2}{n-1} \\
+                    &= \frac{(x_1-\samplemeanx)^2 + \ldots + (x_8-\samplemeanx)^2}{8-1} \\
                     &= \frac{(30-40)^2 + \ldots + (28-40)^2}{8-1} \\
                     &\approx 87.1429.
     \end{align*}
@@ -38,7 +38,7 @@
     \[
         t = \invt(\opp=1-\alpha/2; \df=n-1) = \invt(\opp=0.975; \df=7) \approx 2.3646.
     \]
-    De toetsingsgrootheid is in dit geval het (theoretische) steekproefgemiddelde $\samplemeanvar$, die dus een $t$-verdeling volgt.
+    De toetsingsgrootheid is in dit geval het (theoretische) steekproefgemiddelde $\samplemeanvarX$, die dus een $t$-verdeling volgt.
     Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu=51$.
     Merk op dat hoe verder het steekproefgemiddelde $\mu$ afligt van $51$ (zowel ver daaronder als ver daarboven), hoe waarschijnlijker dat de alternatieve hypothese waar is.
     Het kritieke gebied $Z$ is dus van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij $g_1$ en $g_2$ kunnen worden berekend als volgt:
@@ -51,6 +51,6 @@
                 &\approx 58.8043.    
         \end{align*}
     Het kritieke gebied $Z$ is dus gelijk aan $(-\infty; 43.1957]$ en $[58.8043, \infty)$.
-    De geobserveerde toetsingsgrootheid $\samplemean=40$ ligt in het kritieke gebied, dus verwerpen we de nulhypothese $H_0$.
+    De geobserveerde toetsingsgrootheid $\samplemeanx=40$ ligt in het kritieke gebied, dus verwerpen we de nulhypothese $H_0$.
     Er is voldoende reden om aan te nemen dat het gemiddelde aantal klachten per week significant afwijkt van $51$.
 }

@@ -14,13 +14,13 @@
     \answer{
         We berekenen een schatting $\samplestd$ voor de standaarddeviatie door allereerst het steekproefgemiddelde te bepalen:
         \[
-            \samplemean = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{x_1 + x_2 + \ldots + x_{12}}{12} = \frac{15+18+\ldots+22}{12} = 25.
+            \samplemeanx = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{x_1 + x_2 + \ldots + x_{12}}{12} = \frac{15+18+\ldots+22}{12} = 25.
         \]
 
         Nu kunnen we de steekproefvariantie bepalen:
         \begin{align*}
-            \samplevar &= \frac{(x_1-\samplemean)^2 + \ldots + (x_n-\samplemean)^2}{n-1} \\
-                &= \frac{(x_1-\samplemean)^2 + \ldots + (x_{12}-\samplemean)^2}{12-1} \\      
+            \samplevar &= \frac{(x_1-\samplemeanx)^2 + \ldots + (x_n-\samplemeanx)^2}{n-1} \\
+                &= \frac{(x_1-\samplemeanx)^2 + \ldots + (x_{12}-\samplemeanx)^2}{12-1} \\      
                 &= \frac{(15-25)^2 + \ldots + (22-25)^2}{11} \\
                 &= 54.7272.
         \end{align*}
@@ -32,7 +32,7 @@
 
     \item Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$: de gemiddelde hersteltijd voor de populatie.
     \answer{
-        Gegeven is een steekproef van $n=12$ pati\"enten, waarvoor het aantal dagen tot het gewenste resutaat het steekproefgemiddelde $\samplemean = 25$ dagen en de steekproefstandaarddeviatie $\samplestd = 7.3978$ dagen is bepaald.
+        Gegeven is een steekproef van $n=12$ pati\"enten, waarvoor het aantal dagen tot het gewenste resutaat het steekproefgemiddelde $\samplemeanx = 25$ dagen en de steekproefstandaarddeviatie $\samplestd = 7.3978$ dagen is bepaald.
         Omdat de steekproefomvang $n = 12 < 30$ is en de standaarddeviatie $\sigma$ onbekend is, moeten we de $t$-verdeling gebruiken.
         Omdat het gewenste betrouwbaarheidsniveau \SI{95}{\percent} is, geldt dat $\alpha=0.05$.
 
@@ -42,7 +42,7 @@
         \]
         Het $95\%$-betrouwbaarheidsinterval is gelijk aan
         \begin{align*}
-            &[\samplemean - t \cdot \frac{\samplestd}{\sqrt{n}}; \samplemean + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
+            &[\samplemeanx - t \cdot \frac{\samplestd}{\sqrt{n}}; \samplemeanx + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
             &=[25 - 2.2010 \cdot \frac{7.3978}{\sqrt{12}}; 25 + 2.2010 \cdot \frac{7.3978}{\sqrt{12}}] \\
             &=[20.2997; 29.7003].
         \end{align*}
@@ -53,7 +53,7 @@
     Er werd een standaarddeviatie gevonden van $6.5$ dagen en een gemiddelde hersteltijd van $27$ dagen.
     Bereken opnieuw een \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$.
     \answer{
-        Gegeven is nu een steekproef van $n=90$ pati\"enten, waarvoor het aantal dagen tot het gewenste resutaat het steekproefgemiddelde $\samplemean = 27$ dagen en de steekproefstandaarddeviatie $\samplestd = 6.5$ dagen is bepaald.
+        Gegeven is nu een steekproef van $n=90$ pati\"enten, waarvoor het aantal dagen tot het gewenste resutaat het steekproefgemiddelde $\samplemeanx = 27$ dagen en de steekproefstandaarddeviatie $\samplestd = 6.5$ dagen is bepaald.
         Hoewel nog steeds geldt dat $\sigma$ onbekend is, mogen we nu wel de normale verdeling gebruiken omdat geldt dat de steekproefomvang $n = 90 > 30$ is.
         Bovendien mogen we $\sigma$ schatten met $\samplestd$.
         Omdat het gewenste betrouwbaarheidsniveau \SI{95}{\percent} is, geldt dat $\alpha=0.05$.
@@ -64,7 +64,7 @@
         \]
         Het \SI{95}{\percent}-betrouwbaarheidsinterval is gelijk aan
         \begin{align*}
-            &[\samplemean - z \cdot \frac{\samplestd}{\sqrt{n}}; \samplemean + z \cdot \frac{\samplestd}{\sqrt{n}}] \\
+            &[\samplemeanx - z \cdot \frac{\samplestd}{\sqrt{n}}; \samplemeanx + z \cdot \frac{\samplestd}{\sqrt{n}}] \\
             &=[27 - 1.9600 \cdot \frac{6.5}{\sqrt{90}}; 27 + 1.9600 \cdot \frac{6.5}{\sqrt{90}}] \\
             &=[25.6571; 28.3429].
         \end{align*}

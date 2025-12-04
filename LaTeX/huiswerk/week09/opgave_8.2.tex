@@ -11,12 +11,12 @@
     \end{center}
 }
 \begin{enumerate}[label=(\alph*)]
-    \item Een zuivere schatter voor $\mu$ is het steekproefgemiddelde $\samplemean$.
-    Bereken $\samplemean$.
+    \item Een zuivere schatter voor $\mu$ is het steekproefgemiddelde $\samplemeanx$.
+    Bereken $\samplemeanx$.
     \answer{
-        Het steekproefgemiddelde $\samplemean$ berekenen we als volgt:
+        Het steekproefgemiddelde $\samplemeanx$ berekenen we als volgt:
         \begin{align*}
-            \samplemean = \frac{x_1+x_2+\ldots+x_{10}}{10} = \frac{36.5+45.2+\ldots+43.3}{10} = 40.4.
+            \samplemeanx = \frac{x_1+x_2+\ldots+x_{10}}{10} = \frac{36.5+45.2+\ldots+43.3}{10} = 40.4.
         \end{align*}
         Gemiddeld zit er $40.4$ mg eiwit in een monster.
     }
@@ -26,7 +26,7 @@
     \answer{
         De steekproefvariantie $\samplevar$ berekenen we als volgt:
         \begin{align*}
-            \samplevar &= \frac{(x_1-\samplemean)^2+(x_2-\samplemean)^2+\ldots+(x_{10}-\samplemean)^2}{10-1} \\
+            \samplevar &= \frac{(x_1-\samplemeanx)^2+(x_2-\samplemeanx)^2+\ldots+(x_{10}-\samplemeanx)^2}{10-1} \\
                 &= \frac{(36.5-40.4)^2+(45.2-40.4)^2+\ldots+(43.3-40.4)^2}{10-1} \\
                 &\approx 7.0533.
         \end{align*}
@@ -36,10 +36,10 @@
     \answer{
         Noteer met $X$ de kansvariabele die het aantal \unit{mg} eiwit in een willekeurig monster meet.
         Gegeven is dat $X \sim \normal{\mu=\ ?}{\sigma=\ ?}$.
-        Volgens de centrale limietstelling geldt dat het gemiddelde aantal \unit{mg} eiwit $\samplemeanvar$ in $10$ willekeurige monsters
+        Volgens de centrale limietstelling geldt dat het gemiddelde aantal \unit{mg} eiwit $\samplemeanvarX$ in $10$ willekeurige monsters
         normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{\sigma}{\sqrt{10}}$.
         
-        We hebben een geobserveerde steekproef van $10$ zakken genomen met steekproefgemiddelde $\samplemean = 40.4$ \unit{mg} en steekproefstandaardafwijking 
+        We hebben een geobserveerde steekproef van $10$ zakken genomen met steekproefgemiddelde $\samplemeanx = 40.4$ \unit{mg} en steekproefstandaardafwijking 
         \[
             \samplestd = \sqrt{\samplevar} = \sqrt{7.0533} \approx 2.6558\ \unit{mg}.
         \] 
@@ -51,7 +51,7 @@
         \]
         Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
         \begin{align*}
-            &\phantom{=}[\samplemean - t \cdot \frac{\samplestd}{\sqrt{n}}; \samplemean + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
+            &\phantom{=}[\samplemeanx - t \cdot \frac{\samplestd}{\sqrt{n}}; \samplemeanx + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
             &=[40.4 - 2.2622 \cdot \frac{2.6558}{\sqrt{10}}; 20142 + 2.2622 \cdot \frac{2.6558}{\sqrt{10}}] \\
             &=[38.50; 42.30]
         \end{align*}
