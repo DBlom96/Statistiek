@@ -8,28 +8,25 @@
 \answer{
     We hebben te maken met twee normaal verdeelde kansvariabelen die het aantal microgram schadelijke stof per $m^3$ meet, respectievelijk in de omgeving van een bepaalde fabriek en in een grote stad.
     \begin{align*}
-        X &\sim \normal{\mu_X =\ ?}{\sigma_X =\ ?},
+        X &\sim \normal{\mu_X =\ ?}{\sigma_X =\ ?}, \\
         Y &\sim \normal{\mu_Y =\ ?}{\sigma_Y =\ ?}. 
     \end{align*}
-
+    Tevens is gegeven dat we mogen aannemen dat beide verdelingen dezelfde onbekende variantie hebben, oftewel $\sigma^2 = \sigma_X^2 = \sigma_Y^2$.
+    Hierdoor is een $F$-toets niet meer benodigd.
     Om te toetsen of de gemiddeldes van beide kansvariabelen gelijk zijn, gebruiken we de volgende nulhypothese $H_0$ en alternatieve hypothese $H_1$:
     \begin{itemize}
         \item[$H_0$:] De verwachtingswaarden zijn gelijk, oftewel $\mu_X = \mu_Y$ (geen significant verschil in luchtvervuiling tussen grote stad en omgeving van een fabriek)
         \item[$H_1$:] De verwachtingswaarden zijn niet gelijk, oftewel $\mu_X \ne \mu_Y$ (wel een significant verschil in luchtvervuiling tussen grote stad en omgeving van een fabriek).
     \end{itemize}
-
-    Verder is het significantieniveau $\alpha = 0.01$ gegeven.
-    De steekproefdata uit de vraag kunnen als volgt worden samengevat:
+    Verder is het significantieniveau $\alpha = 0.01$ gegeven, en kunnen de steekproefdata uit de vraag kunnen als volgt worden samengevat:
     \begin{align*}
-        \samplemeanx &= 2.26 \quad s_X = 0.56 \quad n = 8 \\
-        \samplemeany &= 1.54 \quad s_Y = 0.42 \quad m = 10
+        \samplemeanx &= 2.26 \qquad s_X = 0.56 \qquad n = 8 \\
+        \samplemeany &= 1.54 \qquad s_Y = 0.42 \qquad m = 10
     \end{align*}
-    
     Omdat we mogen uitgaan van gelijke varianties, kunnen we de gezamenlijke standaardafwijking $\sigma$ schatten met behulp van de formule voor de \enquote{pooled variance}:
     \begin{align*}
         s_P^2 = \frac{(n-1)s_X^2+(m-1)s_Y^2}{n-1+m-1} = \frac{7\cdot 0.56^2 + 9 \cdot 0.42^2}{16} \approx 0.2364.
     \end{align*}
-
     Onder de nulhypothese geldt $\mu_1 = \mu_2$, oftewel $\mu_1 - \mu_2 = 0$.
     De bijbehorende geobserveerde toetsingsgrootheid $t$ berekenen we dan als volgt:
     \begin{align*}
@@ -38,22 +35,21 @@
             &\approx 3.1217.
     \end{align*}
 
-    {\bfseries Methode 1 (kritiek gebied):}
-    
-    Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ bepaald kan worden met de $t$-verdeling.
+    {\noindent\bfseries Methode 1 (kritiek gebied):}\\    
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $t$-verdeling.
     Omdat we met de pooled variance werken, is het aantal vrijheidsgraden gelijk aan $\df=n+m-2=16$.
     \begin{align*}
-        g &= \invt(\opp=1-\alpha = 0.99; \df=16) \approx 2.5835
+        g_1 &= \invt(\opp=\alpha/2 = 0.005; \df=16) \approx -2.9208, \\
+        g_2 &= \invt(\opp=1-\alpha/2=0.975; \df=16) \approx 2.9208.
     \end{align*}
     De berekende $t \approx 3.1217$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
     Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde luchtvervuiling significant hoger is in de omgeving van de fabriek.
 
-    {\bfseries Methode 2 ($p$-waarde):}
-
-    Omdat we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3.1217$ en vergelijken deze met $\alpha = 0.01$.
+    {\noindent\bfseries Methode 2 ($p$-waarde):}\\
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3.1217$ (omdat deze waarde groter dan $0$ is) en vergelijken deze met $\alpha/2 = 0.005$.
     \begin{align*}
         p &= \normalcdf(\lb=3.1217; \ub=10^{10}; \df=16) \approx 0.0033.
     \end{align*}
-    De $p$-waarde is kleiner dan het significantieniveau $\alpha$, dus we verwerpen de nulhypothese $H_0$.
+    De $p$-waarde is kleiner dan $\alpha/2$, dus we verwerpen de nulhypothese $H_0$.
     Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde luchtvervuiling significant hoger is in de omgeving van de fabriek.
 }

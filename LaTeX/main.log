@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  4 DEC 2025 13:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  4 DEC 2025 16:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1931,6 +1931,21 @@ Hoofdstuk 11.
 [139]) (huiswerk/week12/opgave_11.m3.tex) (huiswerk/week12/opgave_11.m6.tex
 
 [140]) (huiswerk/week12/opgave_11.1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+
+ []
+
+
 
 [141]
 
@@ -1939,45 +1954,64 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[143]) (huiswerk/week12/opgave_11.5.tex
+[143]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[144]
+
+
+[144]) (huiswerk/week12/opgave_11.5.tex
 
 [145]) (huiswerk/week12/opgave_11.7.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[146]) (huiswerk/week12/opgave_11.12.tex
-
-[147]
-
-[148]
-
-[149]) (huiswerk/week12/opgave_11.13.tex
-
-[150]
-
-[151]) (huiswerk/week12/opgave_11.14.tex
+[146]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[152
+[147]) (huiswerk/week12/opgave_11.12.tex
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+
+ []
+
+
+
+[148]
+
+[149]
+
+[150]) (huiswerk/week12/opgave_11.13.tex
+
+[151]
+
+[152]) (huiswerk/week12/opgave_11.14.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[153
 
 ])) (huiswerk/week13.tex
 
-[153]
-
-[154
-
-]
+[154]
 Hoofdstuk 12.
 (huiswerk/week13/opgave_13.m1.tex) (huiswerk/week13/opgave_13.m2.tex
 
-[155]) (huiswerk/week13/opgave_13.m3.tex) (huiswerk/week13/opgave_13.m4.tex) (huiswerk/week13/opgave_13.m6.tex
+[155
+
+]) (huiswerk/week13/opgave_13.m3.tex) (huiswerk/week13/opgave_13.m4.tex) (huiswerk/week13/opgave_13.m6.tex
 
 [156]) (huiswerk/week13/opgave_13.1.tex
+Underfull \vbox (badness 1337) has occurred while \output is active []
+
+
 
 [157]) (huiswerk/week13/opgave_13.4.tex
 
@@ -1985,7 +2019,7 @@ Hoofdstuk 12.
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png, id=1238, 462.528pt x 346.896pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png>
-Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png  used on input line 79.
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png  used on input line 78.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2011,7 +2045,7 @@ File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.5.png Graph
 Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.5.png  used on input line 60.
 (pdftex.def)             Requested size: 633.08366pt x 331.71848pt.
 
-Underfull \vbox (badness 4805) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2034,6 +2068,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [166 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9.png>]
+Overfull \hbox (29.20828pt too wide) in paragraph at lines 130--130
+\T1/bch/m/n/12 voorspellingsinterval wil-len be-pa-len (of-te-wel $\OML/cmm/m/it/12  \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 01$\T1/bch/m/n/12 ), geldt dat $\OML/cmm/m/it/12 z[] \OT1/cmr/m/n/12 = []([] =
+ []
+
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9c.png, id=1288, 578.16pt x 289.08pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9c.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9c.png>
@@ -2063,7 +2101,7 @@ Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figure
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png, id=1304, 650.43pt x 327.3831pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png>
-Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png  used on input line 80.
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png  used on input line 79.
 (pdftex.def)             Requested size: 650.4284pt x 327.3823pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2079,7 +2117,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png, id=1317, 667.7748pt x 327.3831pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png>
-Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png  used on input line 95.
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png  used on input line 94.
 (pdftex.def)             Requested size: 667.77316pt x 327.3823pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2090,46 +2128,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png, id=1326, 766.062pt x 331.7193pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png>
-Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png  used on input line 146.
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png  used on input line 145.
 (pdftex.def)             Requested size: 766.06012pt x 331.71848pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[173]))
-
-[174 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png>]
-No file main.bbl.
-
-
-[175
-
-
-]
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
- (main.aux)
- ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2020/03/25>
- ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E718F10FAF1A85050C94B79E84994CC0;2323.
- ) 
-Here is how much of TeX's memory you used:
- 52449 strings out of 468133
- 1229511 string characters out of 5430719
- 1734366 words of memory out of 5000000
- 79227 multiletter control sequences out of 15000+600000
- 679875 words of font info for 99 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 113i,14n,115p,824b,1960s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on main.pdf (179 pages, 1652943 bytes).
-PDF statistics:
- 1542 PDF objects out of 1728 (max. 8388607)
- 641 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+[173

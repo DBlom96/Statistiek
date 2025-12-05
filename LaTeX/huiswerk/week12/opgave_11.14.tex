@@ -1,7 +1,7 @@
 \question{11.14}{
     Een onderzoeker merkt naar aanleiding van de aanpak bij opgave 11.13 op dat het misschien beter is om per filiaal eerst de procentuele omzetstijging te berekenen.
     Voer op basis van deze uitkomsten nogmaals een $t$-toets uit. 
-    (Kies $\alpha=0,05$.)
+    (Kies $\alpha=0.05$.)
 }
 \answer{
     Hierdoor kunnen we de gepaarde uitkomsten samennemen tot een nieuwe variabele gebaseerd op het verschil:
@@ -14,50 +14,48 @@
                 Aantal na ($y$) & $420$ & $380$ & $520$ & $490$ & $490$ & $400$ \\
             \midrule
                 Verschil ($v = y - x$) & $100$ & $120$ & $80$ & $90$ & $110$ & $90$ \\
-                Verschil $\%$ ($pv=\frac{v}{x}\cdot 100\%$) & $31,25$ & $46,1538$ & $18,1818$ & $22,5$ & $28,9474$ & $29,0323$ \\
+                Verschil \si{\percent} ($\text{pv}=\frac{v}{x}\cdot \SI{100}{\percent}$) & $31.25$ & $46.1538$ & $18.1818$ & $22.5$ & $28.9474$ & $29.0323$ \\
             \bottomrule
         \end{tabular}
     \end{center}
-
-    We gaan toetsen of het gemiddelde van $PV$ gelijk is aan $0$, omdat dit zou duiden op $\mu_X = \mu_Y$.
+    We gaan toetsen of het gemiddelde van de procentuele verandering $\text{PV}$ gelijk is aan $0$, omdat dit zou duiden op $\mu_X = \mu_Y$.
     Hiervoor defini\"eren we allereerst de nulhypothese $H_0$ en alternatieve hypothese $H_1$:
-    \[
-        H_0: \mu_{PV} = 0 \text{ versus } H_1: \mu_{PV} > 0 \text{(significant hogere aantallen na reclamecampagne)}.
-    \]
-    Gegeven is het significantieniveau $\alpha = 0,05$ en de steekproefgegevens in bovenstaande tabel.
+    \begin{itemize}
+        \item[$H_0$:] Er is geen significante procentuele verandering, oftewel $\mu_{\text{PV}} = 0$.
+        \item[$H_1$:] Er is wel een significante procentuele verandering, oftewel $\mu_{\text{PV}} \neq 0$. 
+    \end{itemize}
+    Gegeven is het significantieniveau $\alpha = 0.05$ en de steekproefgegevens in bovenstaande tabel.
     Het steekproefgemiddelde van de verschillen is gelijk aan
     \[
-        \overline{pv} = \frac{{pv}_1 + {pv}_2 + \ldots + {pv}_6}{6} = \frac{31,25 + 46,1538 + \ldots + 29,0323}{6} \approx 29,3442
+        \overline{\text{pv}} = \frac{\text{pv}_1 + {\text{pv}}_2 + \ldots + {\text{pv}}_6}{6} = \frac{31.25 + 46.1538 + \ldots + 29.0323}{6} \approx 29.3442.
     \]
-    De steekproefvariantie $s_{PV}^2$ berekenen we als volgt:
+    De steekproefvariantie $s_{\text{PV}}^2$ berekenen we als volgt:
     \begin{align*}
-    s_{PV}^2    &= \frac{(v_1-\overline{v})^2 + \ldots + (v_n-\overline{v})^2}{n-1} \\
-                &= \frac{(31,25-29,3442)^2 + \ldots + (29,0323-29,3442)^2}{5} \\
-                &\approx 91,5786
-    \end{align*}
-        
-    Neem aan dat $PV$ normaal verdeeld is $\mu_{PV} = 0$ en met onbekende standaardafwijking $\sigma_{PV}$.  
+    s_{\text{PV}}^2    &= \frac{(\text{pv}_1-\overline{\text{pv}})^2 + \ldots + (\text{pv}_n-\overline{\text{pv}})^2}{n-1} \\
+                &= \frac{(31.25-29.3442)^2 + \ldots + (29.0323-29.3442)^2}{5} \\
+                &\approx 91.5786.
+    \end{align*}  
+    Neem opnieuw aan dat $\text{PV}$ normaal verdeeld is $\mu_{\text{PV}} = 0$ en met onbekende standaardafwijking $\sigma_{\text{PV}}$.  
     Hierdoor moeten we gebruik maken van de $t$-verdeling met $\text{df}=n-1 = 5$ vrijheidsgraden. 
     Onder de nulhypothese is de toetsingsgrootheid van deze toets gelijk aan
     \[
-        t = \frac{\overline{pv} - \mu_{PV}}{s_{PV}} = \frac{29,3442 - 0}{\sqrt{91,5786}} \approx 3,0664
+        t = \frac{\overline{\text{pv}} - \mu_{\text{PV}}}{s_{\text{PV}}} = \frac{29.3442 - 0}{\sqrt{91.5786}} \approx 3.0664.
     \]
 
-    {\bfseries Methode 1 (kritiek gebied):}
-    
-    Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ bepaald kan worden met de $t$-verdeling.
+    {\noindent\bfseries Methode 1 (kritiek gebied):}\\    
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $t$-verdeling.
     \begin{align*}
-        g &= \invt(\text{opp}=1-\alpha = 0,95; \text{df}=5) \approx 2,0150
+        g_1 &= \invt(\opp=\alpha/2 = 0.025; \df=5) \approx -2.5706, \\
+        g_2 &= \invt(\opp=1-\alpha/2 = 0.975; \df=5) \approx 2.5706.
     \end{align*}
-    De berekende $t \approx 3,0664$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
-    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de reclamecampagne.
+    De berekende $t \approx 3.0664$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat er een significante procentuele verandering is in het aantal verkochte flessen afwasmiddel, specifiek een significante stijging.
 
-    {\bfseries Methode 2 ($p$-waarde):}
-
-    Omdat we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $6,6804$ en vergelijken deze met $\alpha/2 = 0,025$.
+    {\noindent\bfseries Methode 2 ($p$-waarde):}\\
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3.0664$ en vergelijken deze met $\alpha/2 = 0.025$.
     \begin{align*}
-        p &= \tcdf(\text{lower}=3,0664; \text{upper}=10^{99}; \text{df}=5) \approx 0,0139.
+        p &= \tcdf(\lb=3.0664; \ub=10^{10}; \df=5) \approx 0.0139.
     \end{align*}
-    De $p$-waarde is kleiner dan het significantieniveau $\alpha$, dus we verwerpen de nulhypothese $H_0$.
-    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het aantal verkochte flessen afwasmiddel significant hoger is na de reclamecampagne.
+    De $p$-waarde is kleiner dan $\alpha/2$, dus we verwerpen de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat er een significante procentuele verandering is in het aantal verkochte flessen afwasmiddel, specifiek een significante stijging.
 }

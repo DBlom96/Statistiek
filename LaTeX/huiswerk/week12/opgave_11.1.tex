@@ -12,56 +12,79 @@
 }
 \answer{
     Laat $X$ en $Y$ de kansvariabelen zijn die het niveau van luchtverontreiniging meet op een willekeurige dag in respectievelijk februari 2017 en februari 2018.
+    De steekproefgroottes zijn beide gelijk aan $n=m=20$.
     Van deze kansvariabelen zijn zowel de verwachtingswaarden als de standaardafwijkingen onbekend.
+    Merk op dat we niet weten of de varianties gelijk zijn, dus hiervoor moeten we eerst een $F$-toets uitvoeren.\\[1ex]
 
+    {\bfseries \boldmath$F$-toets:}\\
+    We gaan toetsen of de varianties van $X$ en $Y$ gelijk zijn.
+    Hiervoor defini\"eren we allereerst de nulhypothese $H_0$ en alternatieve hypothese $H_1$:
+    \begin{itemize}
+        \item[$H_0$:] De varianties zijn gelijk, oftewel $\sigma_X^2 = \sigma_Y^2$,
+        \item[$H_1$:] De varianties zijn niet gelijk, oftewel $\sigma_X^2 \neq \sigma_Y^2$.
+    \end{itemize}
+    We gaan opnieuw uit van een significantieniveau $\alpha = 0.05$ en de steekproefgegevens in de bovenstaande tabellen.
+    De toetsingsgrootheid van de $F$-toets is gelijk aan
+    \[
+        F = \frac{S_X^2}{S_Y^2}
+    \]
+    en volgt de $F$-verdeling met respectievelijk $\df_1=n-1=19$ en $\df_2=m-1=19$ vrijheidsgraden.
+    In dit geval hebben we een geobserveerde toetsingsgrootheid van
+    \[
+        f = \frac{s_X^2}{s_Y^2} = \frac{17.2}{15.9} \approx 1.0817.
+    \]
+
+    {\bfseries Methode 1 (kritiek gebied):} \\
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $F(19, 19)$-verdeling.
+    \begin{align*}
+        &\fcdf(\lb=0; \ub=g_1; \df_1=19; \df_2=19)=\alpha/2=0.025 \rightarrow g_1 \approx 0.3958,\\
+        &\fcdf(\lb=g_2; \ub=10^{10}; \df_1=19; \df_2=19)=\alpha/2=0.025 \rightarrow g_2 \approx 2.5265.
+    \end{align*}
+    De geobserveerde toetsingsgrootheid $f \approx 1.0817$ ligt dus niet in het kritieke gebied, dus we accepteren de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de varianties niet gelijk zouden zijn aan elkaar.
+    
+    {\bfseries Methode 2 ($p$-waarde):} \\
+    De geobserveerde toetsingsgrootheid $f \approx 1.0817$ ligt boven de $1$, dus we berekenen de $p$-waarde als de rechteroverschrijdingskans van de waarde $f \approx 1.0817$ en vergelijken deze met $\alpha/2 = 0.025$.
+    \begin{align*}
+        p &= \normalcdf(\lb=1.0817; \ub=10^{10}; \df_1=19; \df_2=19) \approx 0.4329.
+    \end{align*}
+    De $p$-waarde is veel groter dan het significantieniveau $\alpha$, dus we accepteren de nulhypothese $H_0$.
+    Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de varianties niet gelijk zouden zijn aan elkaar.\\[1ex]
+
+    {\noindent\bfseries Onafhankelijke \boldmath$t$-toets (gelijke variantie)}\\
     Om te bepalen of er een significante verbetering is opgetreden, moeten we kijken of de gemiddelde luchtverontreiniging is gedaald in 2018.
     We voeren hiervoor een hypothesetoets uit met de volgende nulhypothese $H_0$ en de alternatieve hypothese $H_1$:
     \begin{itemize}
         \item[$H_0$:] Er is geen verbetering opgetreden, oftewel $\mu_X \le \mu_Y$.
         \item[$H_1$:] Er is wel een verbetering opgetreden, oftewel $\mu_X > \mu_Y$.
     \end{itemize}
-
     Verder wordt er uitgegaan van een significantieniveau $\alpha = 0.05$.
-    Omdat de standaardafwijkingen onbekend zijn, moeten we werken met een onafhankelijke $t$-toets met behulp van de verschilvariabele $V$.
-    Voor deze verschilvariabele $V$ geldt dat
-    \begin{align*}
-        \mu_V   &= \mu_X - \mu_Y \\
-        s_V     &= \sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}.
-    \end{align*}
-
-    We veronderstellen dat beide steekproeven te beschouwen zijn als trekking uit (normale) verdelingen met dezelfde variantie, dus kunnen we gebruik maken van de \enquote{pooled variance}:
+    Op basis van de toetsuitslag van de $F$-toets nemen we aan dat de varianties gelijk zijn, oftewel $\sigma^2 = \sigma_X^2 = \sigma_Y^2$.
+    In dit geval mogen we gebruik maken van de \enquote{pooled variance}:
     \[
         s_P^2 = \frac{(n-1) s_X^2 + (m-1) s_Y^2}{n-1+m-1} = \frac{19 \cdot 17.2^2 + 19 \cdot 15.9^2}{38} = 274.325.
     \]
-
-    Onder de nulhypothese $H_0$ (uitgaande van het extreme geval $\mu_X = \mu_Y$) geldt dus voor de verschilvariabele $V$ dat
+    Onder de nulhypothese $H_0$ nemen we aan dat $\mu_X = \mu_Y$ (extreem geval), waardoor de bijbehorende geobserveerde toetsingsgrootheid gelijk is aan
     \begin{align*}
-        \mu_V   &= \mu_X - \mu_Y = 0 \\
-        s_V     &= \sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}} = \sqrt{\frac{274.325}{20} + \frac{274.325}{20}} \approx 5.2376.
+        t   &= \frac{(\samplemeanx - \samplemeany) - (\mu_X-\mu_Y)}{\sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}}} \\
+            &= \frac{(164.6 - 143.2) - 0}{\sqrt{\frac{274.325}{20} + \frac{274.325}{20}}} \\
+            &\approx 4.0858.
     \end{align*}
+    Merk op dat de theoretische toetsingsgrootheid een $t$-verdeling volgt met $\df=n-m+2=38$ vrijheidsgraden.\\[1ex]
 
-    De $t$-waarde bijbehorende bij de uitkomst $v = \samplemeanx - \samplemeany = 164.6 - 143.2 = 21.4$ is gelijk aan
-    \[
-        t = \frac{v - \mu_V}{s_V} = \frac{21.4 - 0}{5.2376} = 4.0858.
-    \]
-
-    Merk op dat deze $t$-waarde uit een $t$-verdeling komt met $\df=n-m+2=38$ vrijheidsgraden.
-
-    {\bfseries Methode 1 (kritiek gebied):}
-    
+    {\noindent\bfseries Methode 1 (kritiek gebied):}\\
     Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ als volgt bepaald kan worden:
     \begin{align*}
         g &= \invt(\opp=1-\alpha; \df = n + m - 2) = \invt(\opp=0.95; \df = 38) \approx 1.6860.
     \end{align*}
-    De geobserveerde toetsingsgrootheid $t \approx 4.0858$ is groter dan deze grens $g$, dus $t$ ligt in het kritieke gebied.
+    De geobserveerde toetsingsgrootheid $t \approx 4.0858$ is groter dan deze kritieke grens $g$, dus $t$ ligt in het kritieke gebied.
     We verwerpen dus de nulhypothese $H_0$.
     Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in $2018$.
 
-    {\bfseries Methode 2 ($p$-waarde):} 
-
+    {\noindent\bfseries Methode 2 ($p$-waarde):}\\
     Aangezien we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $t \approx 4.0858$:
     \begin{align*}
-        p = \tcdf(\lb=4.0858; \ub=10^{99}; \df=38) \approx 1.0936 \cdot 10^{-4}.
+        p = \tcdf(\lb=4.0858; \ub=10^{10}; \df=38) \approx 1.0936 \cdot 10^{-4}.
     \end{align*}
     De $p$-waarde is extreem klein (veel kleiner dan $\alpha=0.05$), dus verwerpen we de nulhypothese.
     Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in $2018$.
