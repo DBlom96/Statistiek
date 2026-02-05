@@ -1,0 +1,126 @@
+eenheid_id,type_eenheid,personeelssterkte_pct,opleiding_voltooid_pct,materieel_beschikbaarheid_pct,onderhoud_status,logistiek_niveau,medical_ready_pct,inzetstatus,gereedheid_H1_score,gereedheid_H1_categorie
+E001,Infanterie,92,88,85,Goed,Hoog,90,Stand-by,86,A
+E002,Artillerie,85,82,80,Goed,Medium,85,Stand-by,80,B
+E003,Genie,78,75,70,Matig,Medium,80,Inzet,70,C
+E004,Luchtmobiel,90,90,88,Onvoldoende,Hoog,87,Stand-by,85,B
+E005,Logistiek,95,92,93,Uitstekend,Hoog,95,Reserve,92,A
+E006,Geneeskundige keten,98,96,97,Uitstekend,Hoog,98,Reserve,94,A
+E007,Infanterie,75,70,65,Matig,Medium,80,Inzet,68,C
+E008,Artillerie,88,85,78,Goed,Medium,85,Stand-by,76,B
+E009,Genie,70,65,60,Matig,Laag,75,Inzet,60,C
+E010,Luchtmobiel,85,83,80,Goed,Medium,85,Stand-by,78,B
+E011,Logistiek,92,90,91,Uitstekend,Hoog,92,Reserve,90,A
+E012,Geneeskundige keten,96,95,96,Uitstekend,Hoog,96,Reserve,95,A
+E013,Infanterie,80,78,75,Onvoldoende,Medium,82,Stand-by,75,B
+E014,Artillerie,77,73,70,Matig,Medium,78,Stand-by,70,C
+E015,Genie,85,80,78,Goed,Medium,85,Stand-by,78,B
+E016,Luchtmobiel,90,88,85,Goed,Hoog,87,Stand-by,85,B
+E017,Logistiek,88,85,90,Onvoldoende,Hoog,90,Reserve,87,A
+E018,Geneeskundige keten,97,95,98,Uitstekend,Hoog,97,Reserve,96,A
+E019,Infanterie,72,68,65,Matig,Medium,75,Inzet,65,C
+E020,Artillerie,80,75,70,Goed,Medium,80,Stand-by,72,B
+E021,Infanterie,85,82,78,Onvoldoende,Medium,83,Stand-by,78,B
+E022,Artillerie,83,80,75,Goed,Medium,82,Stand-by,76,B
+E023,Genie,77,72,68,Matig,Medium,78,Inzet,70,C
+E024,Luchtmobiel,88,85,82,Onvoldoende,Hoog,86,Stand-by,83,B
+E025,Logistiek,91,89,92,Uitstekend,Hoog,91,Reserve,89,A
+E026,Geneeskundige keten,95,94,96,Uitstekend,Hoog,95,Reserve,93,A
+E027,Infanterie,78,74,70,Goed,Medium,79,Stand-by,72,B
+E028,Artillerie,82,79,75,Goed,Medium,81,Stand-by,75,B
+E029,Genie,80,76,72,Matig,Medium,78,Inzet,73,C
+E030,Luchtmobiel,86,84,80,Onvoldoende,Hoog,85,Stand-by,80,B
+E031,Logistiek,93,91,94,Uitstekend,Hoog,92,Reserve,91,A
+E032,Geneeskundige keten,97,95,97,Uitstekend,Hoog,97,Reserve,95,A
+E033,Infanterie,81,77,73,Goed,Medium,80,Stand-by,75,B
+E034,Artillerie,79,75,70,Matig,Medium,78,Stand-by,70,C
+E035,Genie,83,79,76,Goed,Medium,82,Stand-by,77,B
+E036,Luchtmobiel,88,86,82,Goed,Hoog,86,Stand-by,83,B
+E037,Logistiek,90,88,91,Uitstekend,Hoog,90,Reserve,88,A
+E038,Geneeskundige keten,96,94,96,Uitstekend,Hoog,96,Reserve,94,A
+E039,Infanterie,74,70,67,Matig,Medium,75,Inzet,67,C
+E040,Artillerie,81,78,73,Onvoldoende,Medium,80,Stand-by,74,B
+E041,Genie,79,75,72,Matig,Medium,78,Stand-by,72,C
+E042,Luchtmobiel,85,82,80,Goed,Hoog,84,Stand-by,80,B
+E043,Logistiek,92,90,93,Uitstekend,Hoog,91,Reserve,90,A
+E044,Geneeskundige keten,95,94,96,Uitstekend,Hoog,95,Reserve,93,A
+E045,Infanterie,77,73,70,Goed,Medium,78,Stand-by,72,B
+E046,Artillerie,80,76,72,Matig,Medium,79,Stand-by,73,C
+E047,Genie,82,78,75,Onvoldoende,Medium,81,Stand-by,76,B
+E048,Luchtmobiel,87,85,82,Goed,Hoog,86,Stand-by,83,B
+E049,Logistiek,91,89,92,Uitstekend,Hoog,90,Reserve,89,A
+E050,Geneeskundige keten,96,95,97,Uitstekend,Hoog,96,Reserve,95,A
+E051,Infanterie,83,80,77,Goed,Medium,81,Stand-by,78,B
+E052,Artillerie,78,74,70,Matig,Medium,77,Stand-by,71,C
+E053,Genie,84,80,76,Goed,Medium,82,Stand-by,77,B
+E054,Luchtmobiel,88,85,83,Onvoldoende,Hoog,86,Stand-by,84,B
+E055,Logistiek,93,91,94,Uitstekend,Hoog,92,Reserve,91,A
+E056,Geneeskundige keten,97,95,96,Uitstekend,Hoog,96,Reserve,95,A
+E057,Infanterie,80,76,72,Goed,Medium,79,Stand-by,74,B
+E058,Artillerie,82,78,74,Goed,Medium,81,Stand-by,75,B
+E059,Genie,79,75,71,Matig,Medium,78,Inzet,72,C
+E060,Luchtmobiel,86,83,80,Onvoldoende,Hoog,85,Stand-by,81,B
+E061,Logistiek,90,88,91,Uitstekend,Hoog,90,Reserve,88,A
+E062,Geneeskundige keten,95,93,95,Uitstekend,Hoog,95,Reserve,93,A
+E063,Infanterie,78,74,70,Goed,Medium,77,Stand-by,72,B
+E064,Artillerie,81,77,73,Matig,Medium,79,Stand-by,74,C
+E065,Genie,83,79,76,Goed,Medium,81,Stand-by,77,B
+E066,Luchtmobiel,87,85,82,Goed,Hoog,86,Stand-by,83,B
+E067,Logistiek,92,90,93,Uitstekend,Hoog,91,Reserve,90,A
+E068,Geneeskundige keten,96,94,97,Uitstekend,Hoog,96,Reserve,94,A
+E069,Infanterie,75,70,66,Matig,Medium,76,Inzet,68,C
+E070,Artillerie,80,75,71,Goed,Medium,79,Stand-by,72,B
+E071,Genie,82,78,75,Matig,Medium,81,Stand-by,76,B
+E072,Luchtmobiel,88,85,83,Goed,Hoog,86,Stand-by,84,B
+E073,Logistiek,91,89,92,Uitstekend,Hoog,90,Reserve,89,A
+E074,Geneeskundige keten,95,94,96,Uitstekend,Hoog,95,Reserve,93,A
+E075,Infanterie,79,75,72,Goed,Medium,78,Stand-by,73,B
+E076,Artillerie,77,73,70,Matig,Medium,76,Stand-by,70,C
+E077,Genie,84,80,77,Onvoldoende,Medium,82,Stand-by,78,B
+E078,Luchtmobiel,85,83,80,Goed,Hoog,84,Stand-by,81,B
+E079,Logistiek,92,90,94,Uitstekend,Hoog,91,Reserve,90,A
+E080,Geneeskundige keten,97,95,97,Uitstekend,Hoog,96,Reserve,95,A
+E081,Infanterie,82,78,75,Goed,Medium,80,Stand-by,77,B
+E082,Artillerie,79,75,71,Matig,Medium,78,Stand-by,72,C
+E083,Genie,85,81,78,Goed,Medium,83,Stand-by,79,B
+E084,Luchtmobiel,87,84,82,Goed,Hoog,85,Stand-by,83,B
+E085,Logistiek,93,91,95,Uitstekend,Hoog,92,Reserve,91,A
+E086,Geneeskundige keten,96,95,96,Uitstekend,Hoog,95,Reserve,94,A
+E087,Infanterie,78,74,71,Goed,Medium,77,Stand-by,72,B
+E088,Artillerie,80,76,72,Onvoldoende,Medium,79,Stand-by,74,B
+E089,Genie,81,77,73,Matig,Medium,79,Stand-by,75,B
+E090,Luchtmobiel,86,83,80,Goed,Hoog,85,Stand-by,81,B
+E091,Logistiek,90,88,91,Uitstekend,Hoog,90,Reserve,88,A
+E092,Geneeskundige keten,95,93,95,Uitstekend,Hoog,95,Reserve,93,A
+E093,Infanterie,77,73,70,Goed,Medium,76,Stand-by,72,B
+E094,Artillerie,82,78,74,Matig,Medium,80,Stand-by,75,B
+E095,Genie,83,79,76,Goed,Medium,81,Stand-by,77,B
+E096,Luchtmobiel,88,86,83,Goed,Hoog,86,Stand-by,84,B
+E097,Logistiek,92,90,93,Uitstekend,Hoog,91,Reserve,90,A
+E098,Geneeskundige keten,97,95,97,Uitstekend,Hoog,96,Reserve,95,A
+E099,Infanterie,79,74,71,Matig,Medium,77,Inzet,72,C
+E100,Artillerie,81,77,73,Onvoldoende,Medium,79,Stand-by,74,B
+E101,Infanterie,84,80,76,Goed,Medium,82,Stand-by,78,B
+E102,Artillerie,78,74,70,Matig,Medium,77,Stand-by,71,C
+E103,Genie,86,82,79,Onvoldoende,Medium,84,Stand-by,80,B
+E104,Luchtmobiel,90,88,85,Goed,Hoog,87,Stand-by,86,B
+E105,Logistiek,94,92,95,Uitstekend,Hoog,93,Reserve,92,A
+E106,Geneeskundige keten,97,96,98,Uitstekend,Hoog,97,Reserve,95,A
+E107,Infanterie,76,72,68,Matig,Medium,78,Inzet,69,C
+E108,Artillerie,83,80,76,Goed,Medium,82,Stand-by,77,B
+E109,Genie,74,70,66,Matig,Laag,76,Inzet,66,C
+E110,Luchtmobiel,88,85,82,Goed,Hoog,86,Stand-by,83,B
+E111,Logistiek,91,89,92,Uitstekend,Hoog,90,Reserve,89,A
+E112,Geneeskundige keten,96,95,97,Uitstekend,Hoog,96,Reserve,94,A
+E113,Infanterie,81,78,74,Onvoldoende,Medium,80,Stand-by,75,B
+E114,Artillerie,79,75,71,Matig,Medium,78,Stand-by,72,C
+E115,Genie,88,84,81,Goed,Hoog,86,Stand-by,82,B
+E116,Luchtmobiel,85,83,80,Goed,Hoog,84,Stand-by,81,B
+E117,Logistiek,93,91,94,Uitstekend,Hoog,92,Reserve,91,A
+E118,Geneeskundige keten,98,96,98,Uitstekend,Hoog,98,Reserve,96,A
+E119,Infanterie,73,69,65,Matig,Medium,75,Inzet,66,C
+E120,Artillerie,82,78,74,Goed,Medium,81,Stand-by,75,B
+E121,Genie,80,76,72,Matig,Medium,79,Stand-by,73,C
+E122,Luchtmobiel,89,86,84,Goed,Hoog,87,Stand-by,85,B
+E123,Logistiek,92,90,93,Uitstekend,Hoog,91,Reserve,90,A
+E124,Geneeskundige keten,95,94,96,Uitstekend,Hoog,95,Reserve,93,A
+E125,Infanterie,78,74,70,Onvoldoende,Medium,77,Stand-by,72,B

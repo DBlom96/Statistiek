@@ -1,128 +1,130 @@
-\vspace{-2cm}
-% Gegeven is een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$.
-\section*{Statistiek deel 1}
-\textbf{Steekproefgemiddelde (gegeven een steekproef met $n$ uitkomsten $x_1, x_2, \ldots, x_n$)}
+\vspace{-1.2cm}
+Gegeven een steekproef met $n$ observaties $x_1, x_2, \ldots, x_n$:
+
+\textbf{Steekproefgemiddelde}
 \[
     \overline{x} = \frac{\sum_{i} x_i}{n} = \frac{x_1 + x_2 + \ldots + x_n}{n}
 \]
 
 \textbf{Steekproefvariantie en steekproefstandaardafwijking:}
 \begin{align*}
-    s^2 &= \frac{\sum_{i} (x_i-\overline{x})^2}{n-1} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} \\ %= \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n - 1}
+    s^2 &= \frac{\sum_{i=1}^{n} (x_i-\overline{x})^2}{n-1} = \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} \\[1ex]
     s   &= \sqrt{s^2} = \sqrt{ \frac{(x_1-\overline{x})^2 + (x_2-\overline{x})^2 + \ldots + (x_n - \overline{x})^2}{n-1} }
 \end{align*}
 
-\textbf{Rekenregels kansrekening:}
-\begin{align*}
-    P(A \text{ of } B)      &= P(A) + P(B) - P(A \text{ en } B) \tag{optelregel}\\
-    P(B)                    &= 1 - P(\text{niet } B) \tag{complementregel}\\
-    P(A \mid B)         &= \frac{P(A \text{ en } B)}{P(B)} \tag{conditionele kansen}
-\end{align*}
+\textbf{Rekenregels kansrekening ($\cup$ betekent \enquote{of}, $\cap$ betekent \enquote{en}, $\neg$ betekent \enquote{niet}):}
+{
+    \addtolength{\jot}{1em}
+    \begin{align*}
+        P(A \cup B)  &= P(A) + P(B) - P(A \cap B) \tag{optelregel} \\
+        P(B)                &= 1 - P(\neg B) \tag{complementregel} \\
+        P(A \mid B)         &= \frac{P(A \cap B)}{P(B)} \tag{conditionele kansen}
+    \end{align*}
+}
 
-\textbf{Discrete en continue kansverdelingen:}
+\textbf{Discrete en continue kansvariabelen:}
 \begin{table}[H]
+    \renewcommand{\arraystretch}{1.8}
     \centering
-    \begin{tabular}{m{3.8cm}|m{6cm}|m{5.7cm}}
+    \begin{tabular}{m{3.8cm}m{6cm}m{5.7cm}}
         \toprule
             & \textbf{Discrete kansvariabelen}  & \textbf{Continue kansvariabelen} \\ 
         \midrule
             \textbf{Uitkomstenruimte:}                      & Eindig / aftelbaar oneindig   & Overaftelbaar oneindig \\
-        \midrule
+        %\midrule
             \textbf{Toepassingen:}                          & Tellen / categoriseren        & Meten \\
-        \midrule
+        %\midrule
             \textbf{Kansbegrip:}                            & Kansfunctie $p(k) = P(X=k)$   & Kansdichtheidsfunctie $f(x)$ \\
-        \midrule
-            \textbf{CDF:}                                   & $F(k) = P(X \le k) = \sum_{\ell:\ell\le k} p(\ell)$ & $F(x) = P(X \le x) = \int_{-\infty}^{x} f(y)\ dy$ \\
-        \midrule
-            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum_{k} k \cdot P(X=k)$ & $E[X] = \int x \cdot f(x)\ dx$\\
-        \midrule
-            \textbf{Variantie:}                             & $\text{Var}(X) = \sum_{k} (k - E[X])^2 \cdot P(X=k)$   & $\text{Var}(X) = \int (x - E[X])^2 \cdot f(x)\ dx$ \\    
-        \midrule
-            \textbf{Standaardafwijking:}                    & $\sigma(X) = \sqrt{\text{Var}(X)}$   & $\sigma(X) = \sqrt{\text{Var}(X)}$ \\
+        %\midrule
+            \textbf{CDF} & $F(k) = P(X \le k) = \sum\limits_{\ell:\ell\le k} p(\ell)$ & $F(x) = P(X \le x) = \int\limits_{-\infty}^{x} f(y)\dy$ \\
+        %\midrule
+            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum\limits_{k} k \cdot P(X=k)$ & $E[X] = \int x \cdot f(x)\dx$\\
+        %\midrule
+            \textbf{Variantie:}                             & $\Var{X} = \sum\limits_{k} (k - E[X])^2 \cdot P(X=k)$   & $\Var{X} = \int (x - E[X])^2 \cdot f(x)\dx$ \\    
+        %\midrule
+            \textbf{Standaardafwijking:}                    & $\sigma(X) = \sqrt{\Var{X}}$   & $\sigma(X) = \sqrt{\Var{X}}$ \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 \textbf{Speciale kansverdelingen:}
 \begin{itemize}
-    \item $X \sim \text{Binomiaal}(n, p)$: tellen van aantal successen bij onafhankelijke kansexperimenten met twee uitkomsten (Bernoulli-experimenten): succes / mislukking.
+    \item \textbf{Binomiale verdeling}: aantal successen tellen bij onafhankelijke (Bernoulli-)kansexperimenten met twee mogelijke uitkomsten: succes / mislukking.
+    \begin{itemize}
+        \item {\itshape Parameters:} aantal Bernoulli-experimenten $n$, succeskans per experiment $p$
+    \end{itemize}
     
-    {\bfseries Parameters:} het aantal Bernoulli-experimenten $n$ en de succeskans per experiment $p$.
-    
-    \item $X \sim \text{Poisson}(\lambda \cdot t)$: tellen van aantal ``gebeurtenissen'' in een ``interval'' van tijd / ruimte.
-    
-    {\bfseries Parameters:} het gemiddelde aantal gebeurtenissen $\lambda$ per meeteenheid (tijd / ruimte) en het aantal meeteenheden $t$.
-    
-    $\rightarrow$ \emph{Voorbeeld: bij de meeteenheid van een dag bestaat een week uit $t=7$ meeteenheden.} 
-    \item $T \sim \text{Exponentieel}(\lambda)$: meten van de tijd / ruimte tot de volgende gebeurtenis.
+    \item \textbf{Poissonverdeling:} aantal \enquote{gebeurtenissen} tellen in een \enquote{meetinterval} van tijd of ruimte.
+    \begin{itemize}
+        \item {\itshape Parameters:} gemiddelde aantal gebeurtenissen $\lambda$ per meeteenheid (tijd / ruimte), het aantal meeteenheden $t$ (bijv. $t = 7$ als een week lang wordt gemeten, en de meeteenheid is \enquote{dag}).
+    \end{itemize}
 
-    {\bfseries Parameter:} het gemiddelde aantal gebeurtenissen $\lambda$ per meeteenheid (tijd / ruimte).  
+    \item \textbf{Exponentiële verdeling:} de tijd / afstand tot de volgende \enquote{gebeurtenis}.
+    \begin{itemize}
+        \item {\itshape Parameter:} gemiddelde aantal gebeurtenissen $\lambda$ per meeteenheid (tijd / ruimte).  
+    \end{itemize}
 \end{itemize}
 \newpage
+\vspace{-1cm}
+
 \textbf{Verwachtingswaarde en variantie van veelgebruikte kansverdelingen:}
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|p{4.5cm}|c|c|c}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabular}{ccccc}
         \toprule
-            \textbf{Verdeling} & {\bfseries Kans(dichtheids)functie} & \textbf{CDF} & $E(X)$ & $\textrm{Var}(X)$ \\ 
+            \multicolumn{5}{c}{\textbf{DISCRETE KANSVERDELINGEN}} \\ 
         \midrule
-            \multicolumn{5}{c}{\textbf{Discreet}} \\ 
+            \textbf{Verdeling} & {\bfseries Kansfunctie $p(k) = P(X = k)$} & {\bfseries CDF $F(k) = P(X \leq k)$} & $E(X)$ & $\Var{X}$ \\ 
         \midrule
-            Uniform($a, b$) & $p(k) = \frac{1}{b-a+1}$ \newline $(k=a,a+1,\ldots,b)$ & $F(k) = \begin{cases} 
-            0 & x < a \\
-            \frac{k - a + 1}{b-a+1} & a \leq k < b \\
-            1 & k \geq b
+            \uniform{a}{b} & \makecell{$p(k) = \frac{1}{b-a+1}$ \\[1ex] $(k=a, a+1, \ldots, b)$} & $F(k) = \begin{cases} 
+            0, & x < a, \\
+            \frac{k - a + 1}{b-a+1}, & a \leq k < b, \\
+            1, & k \geq b.
             \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a+1)^2-1}{12}$ \\ 
         \midrule
-        %     Bernoulli($p$) & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
-        %     0 & k < 0 \\
-        %     1-p & k=0 \\
-        %     1 & k \geq 1
-        %     \end{cases}$ & $p$ & $p(1-p)$ \\ 
-        % \midrule
-            Binomiaal($n,p$) & $p(k) = \binom{n}{k}p^k(1-p)^{n-k}$ & $F(k) = \sum\limits_{i=0}^k \binom{n}{i}p^i(1-p)^{n-i}$ & $np$ & $np(1-p)$ \\ 
+            \bernoulli{p} & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
+            0, & k < 0, \\
+            1-p, & 0 \leq k < 1, \\
+            1, & k \geq 1.
+            \end{cases}$ & $p$ & $p \cdot (1-p)$ \\ 
         \midrule
-            % Geo($p$) & $P(X=k) = (1-p)^{k-1}\cdot p$ & $F(k) = \sum_{i=1}^k(1-p)^{k-1}\cdot p$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\ \midrule
-            Poisson($\lambda$) & $p(k) = e^{-\lambda}\cdot \frac{\lambda^k}{k!}$ & $F(k) = \sum\limits_{i=0}^k e^{-\lambda} \cdot \frac{\lambda^i}{i!}$ & $\lambda$ & $\lambda$ \\ 
+            \binomial{n}{p} & $p(k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$ & $F(k) = \sum\limits_{i=0}^k \binom{n}{i} \cdot p^i \cdot (1-p)^{n-i}$ & $n \cdot p$ & $n \cdot p \cdot (1-p)$ \\ 
         \midrule
-            \multicolumn{5}{c}{\textbf{Continuous}} \\ 
+            \poisson{\lambda} & $p(k) = e^{-\lambda}\cdot \frac{\lambda^k}{k!}$ & $F(k) = \sum\limits_{i=0}^k e^{-\lambda} \cdot \frac{\lambda^i}{i!}$ & $\lambda$ & $\lambda$ \\ 
         \midrule
-            Uniform($a, b$) & $f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b \\ 0, & \text{elders.} \end{cases}$ & $F(x) = \begin{cases} 
-            0, & x < a \\
-            \frac{x-a}{b-a}, & a \leq x < b \\ 1, & x \geq b \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
+            \multicolumn{5}{c}{\textbf{CONTINUE KANSVERDELINGEN}} \\ 
         \midrule
-        %     $N(\mu, \sigma)$ & $f(x) = \frac{1}{\sigma\cdot\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$ & $F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)$ & $\mu$ & $\sigma^2$ \\ 
-        % \midrule
-            Exponentieel($\lambda$) & $f(x) = \lambda e^{-\lambda x}$, $x \geq 0$ & $F(x) = \begin{cases} 1 - e^{-\lambda x}, & x \geq 0 \\ 0, & x < 0 \end{cases}$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
+            \textbf{Verdeling} & {\bfseries Kansdichtheidsfunctie $f(x)$} & {\bfseries CDF $F(x) = P(X \leq x)$} & $E(X)$ & $\Var{X}$ \\ 
+        \midrule
+            \uniform{a}{b} & $f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b, \\ 0, & \text{elders.} \end{cases}$ & $F(x) = \begin{cases} 
+            0, & x < a, \\
+            \frac{x-a}{b-a}, & a \leq x < b, \\
+            1, & x \geq b. \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
+        \midrule
+            Exponentieel($\lambda$) & \makecell{$f(x) = \lambda e^{-\lambda x}$ \\[1ex] $(x \geq 0)$} & $F(x) = \begin{cases} 1 - e^{-\lambda x}, & x \geq 0, \\ 0, & x < 0. \end{cases}$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\ 
         \bottomrule
     \end{tabular}
 \end{table}
 
-\textbf{Veelgebruikte functies op de grafische rekenmachine}
+\textbf{Veelgebruikte functies op de grafische rekenmachine:}
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c|c}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{cccc}
         \toprule
-            \textbf{Type vraag}                     & \textbf{TI-84 Plus}           & \textbf{Casio} \\
+            \textbf{Kansverdeling} & \textbf{Type vraag} & \textbf{TI-84 Plus CE-T} & \textbf{Casio fx-CG50} \\
         \midrule
-            \multicolumn{3}{c}{\textbf{Continue kansverdeling (willekeurig)}} \\ 
-        \midrule
-            $P(a \le X \le b)$                      & $\int_{a}^{b} f(x)\, dx$      & $\int_{a}^{b} f(x)\, dx$\\
+            \makecell{Continue verdeling met \\ kansdichtheidsfunctie $f(x)$} & $P(a \le X \le b)$ & $\int_{a}^{b} f(x) \dx$ & $\int_{a}^{b} f(x) \dx$ \\
         \midrule    
-            \multicolumn{3}{c}{\textbf{$X \sim \text{Binomiaal}(n, p)$}} \\ 
-        \midrule
-            $P(X = k)$                              & binompdf$(n,p,k)$             & BinomialPD$(k, n, p)$ \\
-            $P(X \le k)$                            & binomcdf$(n,p,k)$             & BinomialCD$(k, n, p)$ \\
+            \multirow{2}{*}{\binomial{n}{p}}    & $P(X = k)$    & $\binompdf(n, p, k)$ & BinomialPD$(k, n, p)$ \\
+                                                & $P(X \le k)$  & $\binomcdf(n, p, k)$ & BinomialCD$(k, n, p)$ \\
         \midrule    
-            \multicolumn{3}{c}{\textbf{$X \sim N(\mu, \sigma)$}} \\
+            \multirow{2}{*}{\normal{\mu}{\sigma}}   & $P(a \le X \le b)$ & $\normalcdf(a,b,\mu,\sigma)$   & NormCD$(a, b, \sigma, \mu)$ \\[1ex]
+                                                    & \makecell{Grenswaarde $g$ zodat \\ $P(X \leq g) = p$}   & $\invnorm(p, \mu, \sigma)$ & InvN$(p, \sigma, \mu)$ \\
         \midrule 
-            $P(a \le X \le b)$                      & normalcdf$(a,b,\mu,\sigma)$   & NormalCD$(a, b, \sigma, \mu)$ \\
-            Grenswaarde $g$ zodat $P(X \le g)=p$?   & invNorm$(p,\mu,\sigma)$       & InvNormCD$(\text{tail=left}, p, \sigma, \mu)$ \\
-        \midrule 
-            \multicolumn{3}{c}{\textbf{$X \sim \text{Poisson}(\lambda)$}} \\  
-        \midrule
-            $P(X = k)$                              & poissonpdf$(\lambda, k)$      & PoissonPD$(k, \lambda)$ \\
-            $P(X \le k)$                            & poissoncdf$(\lambda, k)$      & PoissonCD$(k, \lambda)$ \\
+            \multirow{2}{*}{\poisson{\mu = \lambda \cdot t}}    & $P(X = k)$    & $\poissonpdf(\mu, k)$ & PoissonPD$(k, \mu)$ \\
+                                                                & $P(X \le k)$  & $\poissoncdf(\mu, k)$ & PoissonCD$(k, \mu)$ \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -133,8 +135,11 @@
 \]
 
 \textbf{Centrale limietstelling:}
-Gegeven $n$ kansvariabelen $X_1, X_2, \ldots, X_n$ die onderling onafhankelijk zijn en dezelfde kansverdeling hebben met een verwachtingswaarde $\mu$ en standaardafwijking $\sigma$, dan geldt (bij benadering) dat
+
+Gegeven zijn $n$ kansvariabelen $X_1, X_2, \ldots, X_n$, die onderling onafhankelijk zijn en dezelfde kansverdeling volgen 
+met verwachtingswaarde $\mu$ en standaardafwijking $\sigma$.
+Er geldt (bij benadering) het volgende:
 \begin{itemize}
-    \item de som $\sum X = X_1 + X_2 + \ldots + X_n$ normaal verdeeld is met verwachtingswaarde $n \cdot \mu$ en standaardafwijking $\sqrt{n} \cdot \sigma$.
-    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ normaal verdeeld is met verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
+    \item de som $\sum_{i=1}^{n} X_i = X_1 + X_2 + \ldots + X_n$ is normaal verdeeld met parameters $n \cdot \mu$ en $\sqrt{n} \cdot \sigma$.
+    \item het gemiddelde $\overline{X} = \frac{X_1 + X_2 + \ldots + X_n}{n}$ is normaal verdeeld met parameters $\mu$ en $\frac{\sigma}{\sqrt{n}}$.
 \end{itemize}

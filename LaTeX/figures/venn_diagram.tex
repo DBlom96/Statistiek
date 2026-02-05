@@ -1,0 +1,23 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+    \foreach \x in {1, 2, 3, 4, 5, 6}
+    {
+        \foreach \y in {1, 2, 3, 4, 5, 6}
+        {
+            \begin{tikzpicture}
+                \node at (-\y, \x) {$(\y, \x)$};
+                
+                % \node at (-1, 0) {$A$};
+                % \node at (2.5, 0) {$B$};
+                % \node at (0.75, 2.3) {$C$};
+                
+                % \node at (0.75, 0) {\large $A \cap B \cap C$};
+                
+                % \node at (-2, -2) {Diagram voor $|A| = \x$, $|B| = \y$, $|C| = 6$};
+            \end{tikzpicture}
+        }
+    }
+\end{document}        
