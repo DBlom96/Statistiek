@@ -22,7 +22,7 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine: 
             \begin{align*}
-                E_1 &= \binomcdf(n=1000; p_1=X; k=80), \\
+                E_1 &= \binomcdf(n=1000, p_1=X, k=80), \\
                 E_2 &= 0.025.
             \end{align*}
             Dit geeft een waarde van $p_1 \approx 0.0986$.
@@ -32,13 +32,13 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:            
             \begin{align*}
-                E_1 &= 1 - \binomcdf(n=1000; p_1=X; k=79), \\
+                E_1 &= 1 - \binomcdf(n=1000, p_1=X, k=79), \\
                 E_2 &= 0.025.
             \end{align*}
             Dit geeft een waarde van $p_2 \approx 0.0639$.
         \end{enumerate}
         We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
-        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie onverzekerde auto's is dus gelijk aan $[0.0639; 0.0986]$.
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie onverzekerde auto's is dus gelijk aan $[0.0639, 0.0986]$.
     }
 
     \item Stel dat de Rijksdienst het percentage onverzekerde auto's wil schatten met een marge van plus of min \SI{1}{\percent}.
@@ -72,13 +72,13 @@
 
         De bijbehorende $t$-waarde is gelijk aan 
         \[
-            t = \invt(\opp=1-\alpha/2; \df=n-1) = \invt(\opp=0.975; \df=24) \approx 2.0639.
+            t = \invt(\opp=1-\alpha/2, \df=n-1) = \invt(\opp=0.975, \df=24) \approx 2.0639.
         \]
         Het \SI{95}{\percent}-betrouwbaarheidsinterval is gelijk aan
         \begin{align*}
-            &[\samplemeanx - t \cdot \frac{\samplestd}{\sqrt{n}}; \samplemeanx + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
-            &=[8.4 - 2.0639 \cdot \frac{1.7}{\sqrt{25}}; 8.4 + 2.0639 \cdot \frac{1.7}{\sqrt{25}}] \\
-            &=[7.6983; 9.1017] \\
+            &[\samplemeanx - t \cdot \frac{\samplestd}{\sqrt{n}}, \samplemeanx + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
+            &=[8.4 - 2.0639 \cdot \frac{1.7}{\sqrt{25}}, 8.4 + 2.0639 \cdot \frac{1.7}{\sqrt{25}}] \\
+            &=[7.6983, 9.1017] \\
         \end{align*}
         Met \SI{95}{\percent} betrouwbaarheid zit de gemiddelde leeftijd van een onverzekerde auto tussen $7.7$ en $9.1$ jaar.
     }

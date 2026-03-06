@@ -14,7 +14,7 @@
     In dit geval is de kritieke grens de waarde $x$ waarvoor geldt dat $P(X \ge x) = 0.05$.
     Deze kritieke waarde berekenen we met de \enquote{solver}-optie door het volgende in te voeren:
     \begin{align*}
-        E_1 &= \chi^2\text{cdf}(\lb=x; \ub=10^{10}; \df=6) \\
+        E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=6) \\
         E_2 &= 0.05.
     \end{align*}
     Dit geeft een kritieke waarde $x \approx 12.5916$.

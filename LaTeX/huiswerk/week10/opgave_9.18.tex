@@ -36,7 +36,7 @@
     De steekproefomvang $n = 8 < 30$ en de standaardafwijking $\sigma$ onbekend is, dus we moeten een $t$-waarde bepalen.
     Omdat we tweezijdig toetsen, berekenen we die als volgt
     \[
-        t = \invt(\opp=1-\alpha/2; \df=n-1) = \invt(\opp=0.975; \df=7) \approx 2.3646.
+        t = \invt(\opp=1-\alpha/2, \df=n-1) = \invt(\opp=0.975, \df=7) \approx 2.3646.
     \]
     De toetsingsgrootheid is in dit geval het (theoretische) steekproefgemiddelde $\samplemeanvarX$, die dus een $t$-verdeling volgt.
     Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu=51$.
@@ -50,7 +50,7 @@
                 &= 51 + 2.3646 \cdot \frac{9.3350}{\sqrt{8}} \\
                 &\approx 58.8043.    
         \end{align*}
-    Het kritieke gebied $Z$ is dus gelijk aan $(-\infty; 43.1957]$ en $[58.8043, \infty)$.
+    Het kritieke gebied $Z$ is dus gelijk aan $(-\infty, 43.1957]$ en $[58.8043, \infty)$.
     De geobserveerde toetsingsgrootheid $\samplemeanx=40$ ligt in het kritieke gebied, dus verwerpen we de nulhypothese $H_0$.
     Er is voldoende reden om aan te nemen dat het gemiddelde aantal klachten per week significant afwijkt van $51$.
 }

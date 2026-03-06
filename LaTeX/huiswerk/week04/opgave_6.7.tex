@@ -1,6 +1,6 @@
 \question{6.7}{
     De Bloedbank is een organisatie waar burgers bloed kunnen laten aftappen. 
-    Dit donorbloed kan worden gebruikt bij pati\"enten die dit nodig hebben.
+    Dit donorbloed kan worden gebruikt bij patiënten die dit nodig hebben.
     In Nederland heeft \SI{44}{\percent} van de bevolking bloedgroep $A$.
     Deze groep is onderverdeeld in \SI{36}{\percent} met bloedgroep $A+$ en \SI{8}{\percent} met bloedgroep $A-$.
     Er komen op een bepaalde dag $30$ donoren om bloed te geven.
@@ -12,16 +12,16 @@
         Het aantal bloeddonoren met bloedgroep $A$ uit een groep van $30$ donoren is een binomiaal verdeelde kansvariabele $X$ met parameters $n = 30$ (aantal donoren) en $p = 0.44$ (succeskans / kans op bloedgroep $A$).
         De kans dat precies $8$ van de $30$ donoren bloedgroep $A$ hebben is gelijk aan
         \[
-            P(X=8) = \binompdf(n=30; p=0.44; k=8) \approx 0.0237
+            P(X=8) = \binompdf(n=30, p=0.44, k=8) \approx 0.0237.
         \]
     }
 
     \item Hoe groot is de kans dat \emph{binnen} de groep van $8$ mensen met bloedgroep $A$ er twee zijn met bloedgroep $A-$?
     \answer{
-        Het aantal donoren met bloedgroep $A-$ binnen een groep van $8$ willekeurige donoren met bloedgroep $A$ is een binomiaal verdeelde kansvariabele $Y$ met parameters $n=8$ en $p = \frac{8}{36+8}=\frac{8}{44}$.
+        Het aantal donoren met bloedgroep $A-$ binnen een groep van $8$ willekeurige donoren met bloedgroep $A$ is een binomiaal verdeelde kansvariabele $Y$ met parameters $n=8$ en $p = P(A- \mid A) = \frac{P(A-)}{P(A)} = \frac{8}{44}$.
         De kans dat binnen deze groep precies twee donoren bloedgroep $A-$ hebben is gelijk aan
         \[
-            P(Y=2) = \binompdf(n = 8; p = \frac{8}{44}; k=2) \approx 0.2777
+            P(Y=2) = \binompdf(n = 8, p = \frac{8}{44}, k=2) \approx 0.2777.
         \]
     }
 \end{enumerate}

@@ -97,11 +97,11 @@
         Het kritieke gebied is dus van de vorm $[g, \infty)$, waarbij $g$ de grenswaarde is waarvoor geldt $P(X \ge g) = \alpha=0.01$.
         Dit kunnen we met de grafische rekenmachine berekenen met behulp van de \enquote{solver}-functie, waarbij we het volgende systeem van vergelijkingen oplossen: 
         \begin{align*}
-            E_1 &= \chi^2\text{cdf}(\lb=x; \ub=10^{10}; \df=2), \\
-            E_2 &= \alpha=0.01.
+            E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=2) \\
+            E_2 &= 0.01.
         \end{align*}
         Dit geeft een kritieke grenswaarde van $x \approx 9.2103$.
-        Dat betekent dat het kritieke gebied gelijk is aan $[9.2103; \infty)$.
+        Dat betekent dat het kritieke gebied gelijk is aan $[9.2103, \infty)$.
     }
 
     \item Wat is uw eindconclusie?

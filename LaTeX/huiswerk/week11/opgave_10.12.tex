@@ -70,9 +70,14 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     Extreem grote waarde van de toetsingsgrootheid duiden op grote verschillen tussen observed en expected frequenties, dus het kritieke gebied is van de vorm $[g, \infty)$.
     Deze grenswaarde $g$ is de oplossing van de vergelijking
     \begin{align*}
-        \chi^2\text{cdf}(\lb=g; \ub=10^{10}; \df=3) = \alpha = 0.05
+        \chi^2\text{cdf}(\lb=g, \ub=\GRinfinity, \df=3) = \alpha = 0.05
     \end{align*}
-    De solver optie geeft $g \approx 7.8147$.
+    Deze grenswaarde berekenen we met de \enquote{solver}-optie door het volgende in te voeren:
+    \begin{align*}
+        E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=3) \\
+        E_2 &= 0.05.
+    \end{align*}
+    Dit geeft een oplossing $g \approx 7.8147$.
     Aangezien de toetsingsgrootheid $\chi^2$ groter dan deze grenswaarde is ($10.5717 > 7.8147$), geldt dat de toetsingsgrootheid in het kritieke gebied ligt en dus $H_0$ wordt verworpen.
     Er is voldoende bewijs om aan te nemen dat de steekproef niet representatief is voor de populatie kiesgerechtigde Nederlanders.
     \begin{center}
@@ -84,7 +89,7 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     {\bfseries Alternatief}: de $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
     \begin{align*}
         p   &= P(X^2 \ge \chi^2) \\
-            &= \chi^2\text{cdf}(\lb=\chi^2 \approx 10.5717; \ub=10^{10}; \df=3) \\
+            &= \chi^2\text{cdf}(\lb=\chi^2 \approx 10.5717, \ub=\GRinfinity, \df=3) \\
             &\approx 0.0143.
     \end{align*}
     Aangezien de $p$-waarde kleiner is dan het significantieniveau $\alpha$, betekent dit dat de geobserveerde toetsingsgrootheid $\chi^2$ een extreem hoge waarde heeft onder de aanname dat de steekproef representatief zou zijn voor de populatie.

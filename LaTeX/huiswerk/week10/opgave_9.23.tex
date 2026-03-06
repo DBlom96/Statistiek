@@ -43,12 +43,12 @@
         Het onderscheidingsvermogen van een hypothesetoets is dan gelijk aan $1 - \beta$, oftewel de kans dat de nulhypothese inderdaad wordt verworpen als $H_1$ waar is.
         
         Merk op dat de alternatieve hypothese waar is, aangezien $7.3$ inderdaad groter dan $7$ is.
-        Ervan uitgaande dat $\mu = 7.3$, geldt dat het gemiddelde benzineverbruik (in liters per $100$ km) bij 16 willekeurige proefritten $\samplemeanvarX \sim N(\mu=7.3; \sigma = \frac{0.5}{\sqrt{16}})$. 
+        Ervan uitgaande dat $\mu = 7.3$, geldt dat het gemiddelde benzineverbruik (in liters per $100$ km) bij 16 willekeurige proefritten $\samplemeanvarX \sim N(\mu=7.3, \sigma = \frac{0.5}{\sqrt{16}})$. 
         Deze kans $\beta$ op een type-II fout kunnen we berekenen als de kans dat $\samplemeanvarX$ een waarde aanneemt in het acceptatiegebied op basis van deze nieuwe kansverdeling met $\mu = 7.3$.
         dat we bij (a) hebben berekend, oftewel
         \begin{align*}
             \beta   &= P(\samplemeanvarX < 7.2056) \\
-                        &= \normalcdf(a=-10^{10}; b=7.2056; \mu=7.3; \sigma=\frac{0.5}{\sqrt{16}}) \\
+                        &= \normalcdf(\lb=-\GRinfinity, \ub=7.2056, \mu=7.3, \sigma=\frac{0.5}{\sqrt{16}}) \\
                         &\approx 0.2251.
         \end{align*}
         Het onderscheidingsvermogen van deze hypothesetoets is dan gelijk aan $1-\beta = 1 - 0.2251 = 0.7749$.

@@ -1,5 +1,6 @@
 \question{6.12}{
-    In de binnenstad van Utrecht worden door de politie op een gegeven dag $800$ parkeerbonnen uitgeschreven, elk met een boetebedrag van $40$ euro per parkeerbon.
+    In de binnenstad van Utrecht worden door de politie op een gegeven dag $800$ parkeerbonnen uitgeschreven, 
+    elk met een boetebedrag van $40$ euro per parkeerbon.
     Het is een bekend gegeven dat \SI{75}{\percent} van de ontvangers van zo'n bekeuring het bedrag overmaakt.
     \SI{25}{\percent} doet dat niet.
 }
@@ -8,17 +9,18 @@
     \item Bereken voor de dag met $800$ parkeerbonnen de verwachtingswaarde en de standaarddeviatie van het aantal directe betalers.
     Stel dat voor deze specifieke dag op de uiterste betaaldatum $520$ bekeurden hun boete hebben voldaan, is dat dan uitzonderlijk gegeven de betaalkans van \SI{75}{\percent}?
     \answer{
-        Het aantal directe betalers kan worden ge\"interpreteerd als een binomiaal verdeelde kansvariabele met parameters $n = 800$ (aantal parkeerbonnen) en $p = 0.75$ (kans op directe betaling).
-        De verwachtingswaarde $E[X]$ en standaarddeviatie $\sigma(X)$ van deze kansvariabele zijn gelijk aan
+        Het aantal directe betalers kan worden geïnterpreteerd als een binomiaal verdeelde kansvariabele met parameters $n = 800$ (aantal parkeerbonnen) en $p = 0.75$ (kans op directe betaling).
+        De verwachtingswaarde $E(X)$ en standaarddeviatie $\sigma(X)$ van deze kansvariabele zijn gelijk aan
         \begin{align*}
-            E[X] &= n \cdot p = 800 \cdot 0.75 = 600 \\
-            \sigma(X) &= \sqrt{n\cdot p \cdot (1-p)} = \sqrt{800 \cdot 0.75 \cdot (1 - 0.75)} \approx 12.2474.
+            E(X) &= n \cdot p = 800 \cdot 0.75 = 600 \\
+            \sigma(X) &= \sqrt{n \cdot p \cdot (1-p)} = \sqrt{800 \cdot 0.75 \cdot (1 - 0.75)} \approx 12.2474.
         \end{align*}
-        Om te bepalen of $520$ directe betalers een uitzonderlijk aantal is, bepalen we de kans op hoogstens $520$ directe betalers (merk op dat $520$ een aantal standaarddeviaties onder de verwachtingswaarde ligt).
+        Om te bepalen of $520$ directe betalers een uitzonderlijk aantal is, bepalen we de kans op hoogstens $520$ directe betalers.
         \[
-            P(X \le 520) = \binomcdf(n=800; p=0.75; k=520) = 1.9170 \cdot 10^{-10}
+            P(X \le 520) = \binomcdf(n=800, p=0.75, k=520) = 1.9170 \cdot 10^{-10}.
         \]
         Aangezien deze kans extreem klein is, is een aantal van $520$ directe betalers uitzonderlijk laag.
+        Merk op dat $520$ inderdaad een aantal standaarddeviaties onder de verwachtingswaarde ligt.
     }
 
     \item Wat is het verwachte bedrag dat binnenkomt van een dag met 800 bekeurden en wat is de standaarddeviatie?
@@ -26,11 +28,11 @@
         Het bedrag dat binnenkomt op een dag met 800 bekeurden is een kansvariabele $B = 40\cdot X$.
         Het verwachte bedrag dat binnenkomt is dus gelijk aan
         \[
-            E[B] = E[40 \cdot X] = 40 \cdot E[X] = 40 \cdot 600 = \text{\euro}24 000,
+            E(B) = E(40 \cdot X) = 40 \cdot E(X) = 40 \cdot 600 = \text{\euro} 24 000,
         \]
         en de standaarddeviatie is dus gelijk aan
         \[
-            \sigma(B) = \sigma(40 \cdot X) = 40 \cdot \sigma(X) = 40 \cdot 12.2474 \approx \text{\euro}489.90.
+            \sigma(B) = \sigma(40 \cdot X) = 40 \cdot \sigma(X) = 40 \cdot 12.2474 \approx \text{\euro} 489.90.
         \]
     }
     

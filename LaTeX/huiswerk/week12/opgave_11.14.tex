@@ -43,10 +43,10 @@
     \]
 
     {\noindent\bfseries Methode 1 (kritiek gebied):}\\    
-    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $t$-verdeling.
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $t$-verdeling.
     \begin{align*}
-        g_1 &= \invt(\opp=\alpha/2 = 0.025; \df=5) \approx -2.5706, \\
-        g_2 &= \invt(\opp=1-\alpha/2 = 0.975; \df=5) \approx 2.5706.
+        g_1 &= \invt(\opp=\alpha/2 = 0.025, \df=5) \approx -2.5706, \\
+        g_2 &= \invt(\opp=1-\alpha/2 = 0.975, \df=5) \approx 2.5706.
     \end{align*}
     De berekende $t \approx 3.0664$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
     Er is op basis van deze steekproeven voldoende reden om aan te nemen dat er een significante procentuele verandering is in het aantal verkochte flessen afwasmiddel, specifiek een significante stijging.
@@ -54,7 +54,7 @@
     {\noindent\bfseries Methode 2 ($p$-waarde):}\\
     Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3.0664$ en vergelijken deze met $\alpha/2 = 0.025$.
     \begin{align*}
-        p &= \tcdf(\lb=3.0664; \ub=10^{10}; \df=5) \approx 0.0139.
+        p &= \tcdf(\lb=3.0664, \ub=\GRinfinity, \df=5) \approx 0.0139.
     \end{align*}
     De $p$-waarde is kleiner dan $\alpha/2$, dus we verwerpen de nulhypothese $H_0$.
     Er is op basis van deze steekproeven voldoende reden om aan te nemen dat er een significante procentuele verandering is in het aantal verkochte flessen afwasmiddel, specifiek een significante stijging.

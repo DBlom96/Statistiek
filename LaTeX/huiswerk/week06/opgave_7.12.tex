@@ -4,13 +4,13 @@
     Als zich meer dan vier schepen melden, dan worden de overige schepen doorgestuurd naar een andere haven.   
 }
 \begin{enumerate}[label=(\alph*)]
-    \item Hoe groot is de kans dat op een zekere dag \'e\'en of meer schepen worden doorgestuurd?
+    \item Hoe groot is de kans dat op een zekere dag één of meer schepen worden doorgestuurd?
     \answer{
         De kansvariabele $K$ telt het aantal binnenlopende schepen op een willekeurige dag en volgt een Poissonverdeling met parameter $\mu = 2\frac{1}{2}$.
-        Er wordt minstens \'e\'en schip doorverwezen naar een andere haven als er meer dan vier schepen zich melden in de haven.
+        Er wordt minstens één schip doorverwezen naar een andere haven als er meer dan vier schepen zich melden in de haven.
         Dit gebeurt met een kans van
         \[
-            P(X > 4) = 1 - P(X \le 4) = 1 - \poissoncdf(\lambda=2\frac{1}{2}; k=4) \approx 0.1088.
+            P(K > 4) = 1 - P(K \le 4) = 1 - \poissoncdf(\mu=2\frac{1}{2}, k=4) \approx 0.1088.
         \]
     }
 
@@ -28,17 +28,17 @@
                 \toprule
                     {\bfseries Aantal schepen $k$} & $P(Y=k)$\\
                 \cmidrule{1-1} \cmidrule{2-2}
-                    $0$ & $P(X=0) = \poissonpdf(\lambda=2\frac{1}{2}; k=0) \approx 0.0821$ \\
-                    $1$ & $P(X=1) = \poissonpdf(\lambda=2\frac{1}{2}; k=1) \approx 0.2052$ \\
-                    $2$ & $P(X=2) = \poissonpdf(\lambda=2\frac{1}{2}; k=2) \approx 0.2565$ \\
-                    $3$ & $P(X=3) = \poissonpdf(\lambda=2\frac{1}{2}; k=3) \approx 0.2138$ \\
-                    $4$ & $P(X \ge 4) = 1-\poissoncdf(\lambda=2\frac{1}{2}; k=3) \approx 0.2424$ \\
+                    $0$ & $P(K=0) = \poissonpdf(\mu=2\frac{1}{2}, k=0) \approx 0.0821$ \\
+                    $1$ & $P(K=1) = \poissonpdf(\mu=2\frac{1}{2}, k=1) \approx 0.2052$ \\
+                    $2$ & $P(K=2) = \poissonpdf(\mu=2\frac{1}{2}, k=2) \approx 0.2565$ \\
+                    $3$ & $P(K=3) = \poissonpdf(\mu=2\frac{1}{2}, k=3) \approx 0.2138$ \\
+                    $4$ & $P(K \ge 4) = 1-\poissoncdf(\mu=2\frac{1}{2}, k=3) \approx 0.2424$ \\
                 \bottomrule
             \end{tabular}
         \end{center}
         Het verwachte aantal schepen dat wordt afgehandeld is gelijk aan verwachtingswaarde van deze kansvariabele $Y$, oftewel:
         \begin{align*}
-            E[Y]    &= 0 \cdot P(Y=0) + 1 \cdot P(Y=1) + 2 \cdot P(Y=2) + 3 \cdot P(Y = 3) + 4 \cdot P(Y = 4) \\
+            E[Y]    &= 0 \cdot P(Y = 0) + 1 \cdot P(Y = 1) + 2 \cdot P(Y = 2) + 3 \cdot P(Y = 3) + 4 \cdot P(Y = 4) \\
                     &\approx 0 \cdot 0.0821 + 1 \cdot 0.2052 + 2 \cdot 0.2565 + 3 \cdot 0.2138 + 4 \cdot 0.2424 \\
                     &\approx 2.3292.
         \end{align*}
@@ -51,20 +51,20 @@
         We willen de capaciteit $C$ dusdanig vinden zodat de kans dat er meer dan $C$ schepen aankomen op een dag kleiner is dan $0.01$, omdat in dat geval er minstens \'e\'en schip moet worden doorgestuurd.
         Om deze capaciteit $C$ te bepalen, moeten we dus de volgende ongelijkheid oplossen:
         \[
-            P(X > C) = 1 - P(X \le C) = 1 - \poissoncdf(\lambda=2.5; k=C) < 0.01.
+            P(X > C) = 1 - P(X \le C) = 1 - \poissoncdf(\mu=2.5, k=C) < 0.01.
         \]
         Merk op dat zodra $C$ groter wordt, de kans $P(X > C)$ steeds kleiner wordt.
         We kunnen de juiste waarde van $C$ vinden door met de grafische rekenmachine een tabel te maken.
         Dit doen we door eerst in het functiescherm van de grafische rekenmachine de functie
         \[
-            y_1 = 1 - \poissoncdf(2.5; X)
+            y_1 = 1 - \poissoncdf(\mu=2.5, k=X)
         \]
         in te voeren (via de knop \enquote{y=}), en vervolgens een tabel te genereren (via de knop \enquote{2nd} + \enquote{GRAPH}).
         We zoeken in de tabel naar de kleinste waarde van $X$ waarvoor geldt dat $y_1 < 0.01$.
         We vinden dan de volgende waarden:
         \begin{align*}
-            k = 6: &\qquad 1 - \poissoncdf(\lambda=2.5; k=6) \approx 0.0142, \\
-            k = 7: &\qquad 1 - \poissoncdf(\lambda=2.5; k=7) \approx 0.0042.
+            k = 6: &\qquad 1 - \poissoncdf(\mu=2.5, k=6) \approx 0.0142, \\
+            k = 7: &\qquad 1 - \poissoncdf(\mu=2.5, k=7) \approx 0.0042.
         \end{align*}
         De haven moet dus een capaciteit hebben om op een dag minstens $7$ schepen te kunnen afhandelen als de kans kleiner dan $0.01$ moet zijn dat er een schip naar een andere haven moeten worden doorgestuurd.
     }

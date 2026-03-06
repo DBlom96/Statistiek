@@ -9,11 +9,11 @@
 \answer{
     We kunnen deze kansen bepalen aan de hand van de functie \enquote{normalcdf} op de grafische rekenmachine.
     \begin{align*}
-        P(Z < -0.35)        &= \normalcdf(a=-10^{10}; b=-0.35; \mu=0; \sigma=1) \\
+        P(Z < -0.35)        &= \normalcdf(\lb=-\GRinfinity, \ub=-0.35, \mu=0, \sigma=1) \\
                             &\approx 0.3632. \\
-        P(-0.16 < Z < 0.16) &= \normalcdf(a=-0.16; b=0.16; \mu=0; \sigma=1) \\
+        P(-0.16 < Z < 0.16) &= \normalcdf(\lb=-0.16, \ub=0.16, \mu=0, \sigma=1) \\
                             &\approx 0.1271. \\
-        P(Z > -1.15)        &= \normalcdf(a=-1.15; b=10^{10}; \mu=0; \sigma=1) \\
+        P(Z > -1.15)        &= \normalcdf(\lb=-1.15, \ub=\GRinfinity, \mu=0, \sigma=1) \\
                             &\approx 0.8749. \\
     \end{align*}
 

@@ -11,7 +11,7 @@ We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel app
         De klasse met de \SI{20}{\percent} lichtste appels loopt van $-\infty$ tot $g_1$ voor een bepaald gewicht $g_1$ en er geldt $P(X<g_1)=0.2$.
         Dat betekent dus dat
         \[
-            g_1 = \invnorm(\opp=0.2; \mu=100; \sigma=20) \approx 83.1676 \text{ g}.
+            g_1 = \invnorm(\opp=0.2, \mu=100, \sigma=20) \approx 83.1676 \text{ g}.
         \]
     }
 
@@ -28,12 +28,12 @@ We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel app
         \]
         We kunnen de tweede klassegrens dus bepalen als volgt:
         \[
-            g_2 = \invnorm(\opp=0.4; \mu=100; \sigma=20) \approx 94.9331\ \unit{gram}.
+            g_2 = \invnorm(\opp=0.4, \mu=100, \sigma=20) \approx 94.9331\ \unit{gram}.
         \]
         Op een soortgelijke manier vinden we $g_3$ en $g_4$:
         \begin{align*}
-            g_3 &= \invnorm(\opp=0.6; \mu=100; \sigma=20) \approx 105.0669\ \unit{gram}. \\
-            g_4 &= \invnorm(\opp=0.8; \mu=100; \sigma=20) \approx 116.8324\ \unit{gram}.
+            g_3 &= \invnorm(\opp=0.6, \mu=100, \sigma=20) \approx 105.0669\ \unit{gram}. \\
+            g_4 &= \invnorm(\opp=0.8, \mu=100, \sigma=20) \approx 116.8324\ \unit{gram}.
         \end{align*}
 
         {\itshape LET OP: de eerste klasse loopt van $-\infty$ tot $g_1$.
@@ -43,7 +43,7 @@ We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel app
             De $z$-score is gelijk aan $z = \frac{0-100}{20} = -5$, dus
             \begin{align*}
                 P(X < 0)    &= P(Z < -5) \\
-                            &=\normalcdf(a=-10^{10}; b=-5; \mu=0;\sigma=1) \\
+                            &=\normalcdf(\lb=-\GRinfinity, \ub=-5, \mu=0,\sigma=1) \\
                             &= 2.8711 \cdot 10^{-7}.
             \end{align*}
         }

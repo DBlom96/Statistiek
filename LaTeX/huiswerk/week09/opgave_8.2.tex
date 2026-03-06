@@ -47,13 +47,13 @@
         Verder, omdat de standaardafwijking $\sigma$ onbekend is en de steekproefomvang $n < 30$, moeten we de $t$-verdeling met $\df=n-1$ vrijheidsgraden gebruiken.
         In het bijzonder gebruiken we
         \[
-            t = \invt(\opp=1-\alpha/2; \df=n-1) = \invt(\opp=0.975; \df=9) \approx 2.2622.
+            t = \invt(\opp=1-\alpha/2, \df=n-1) = \invt(\opp=0.975, \df=9) \approx 2.2622.
         \]
         Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan 
         \begin{align*}
-            &\phantom{=}[\samplemeanx - t \cdot \frac{\samplestd}{\sqrt{n}}; \samplemeanx + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
-            &=[40.4 - 2.2622 \cdot \frac{2.6558}{\sqrt{10}}; 20142 + 2.2622 \cdot \frac{2.6558}{\sqrt{10}}] \\
-            &=[38.50; 42.30]
+            &\phantom{=}[\samplemeanx - t \cdot \frac{\samplestd}{\sqrt{n}}, \samplemeanx + t \cdot \frac{\samplestd}{\sqrt{n}}] \\
+            &=[40.4 - 2.2622 \cdot \frac{2.6558}{\sqrt{10}}, 20142 + 2.2622 \cdot \frac{2.6558}{\sqrt{10}}] \\
+            &=[38.50, 42.30]
         \end{align*}
         Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde hoeveelheid eiwit in een monster tussen $38.50$ en $42.30$ \unit{mg}.
     }

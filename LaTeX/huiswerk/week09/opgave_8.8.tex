@@ -43,7 +43,7 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= \binomcdf(n=1200; p_1=X; k=120) \\
+                E_1 &= \binomcdf(n=1200, p_1=X, k=120) \\
                 E_2 &= 0.025
             \end{align*}
             Dit geeft een waarde van $p_1 \approx 0.1184$.
@@ -53,13 +53,13 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= 1 - \binomcdf(n=1200; p_1=X; k=119) \\
+                E_1 &= 1 - \binomcdf(n=1200, p_1=X, k=119) \\
                 E_2 &= 0.025
             \end{align*}
             Dit geeft een waarde van $p_2 \approx 0.0836$.
         \end{enumerate}
         We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
-        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie ondeugdelijke tegels is dus gelijk aan $[0.0836; 0.1184]$.        
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie ondeugdelijke tegels is dus gelijk aan $[0.0836, 0.1184]$.        
     }
 
     \item Bereken voor iedere dag de fractie afgekeurde tegels.
@@ -89,7 +89,7 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= \binomcdf(n=16900; p_1=X; k=1780) \\
+                E_1 &= \binomcdf(n=16900, p_1=X, k=1780) \\
                 E_2 &= 0.025
             \end{align*}
             Dit geeft een waarde van $p_1 \approx 0.1101$.
@@ -99,13 +99,13 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= 1 - \binomcdf(n=16900; p_1=X; k=1779) \\
+                E_1 &= 1 - \binomcdf(n=16900, p_1=X, k=1779) \\
                 E_2 &= 0.025
             \end{align*}
             Dit geeft een waarde van $p_2 \approx 0.1007$.
         \end{enumerate}
         We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
-        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie afgekeurde tegels is dus gelijk aan $[0.1007; 0.1101]$.
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie afgekeurde tegels is dus gelijk aan $[0.1007, 0.1101]$.
 
         {
             \itshape Merk op dat dit interval al een stuk smaller is dan het interval dat we bij (a) hebben berekend, waardoor we dus nauwkeurigere schatting kunnen maken van $p$.

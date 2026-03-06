@@ -5,12 +5,12 @@
 \begin{enumerate}[label=(\alph*)]
     \item Bereken de kans dat op een dag minder dan $4$ oproepen binnenkomen.
     \answer{
-        Laat $X$ de kansvariabele zijn die het aantal binnenkomende oproepen telt op een werkdag (10 werkuren met gemiddelde $0.50$ oproepen per uur) bij de dierenambulance.
-        Gegeven is dat $X \sim \poisson{\lambda=10\cdot 0.50=5}$.
+        Laat $X$ de kansvariabele zijn die het aantal binnenkomende oproepen telt op een werkdag ($10$ werkuren met gemiddelde $0.50$ oproepen per uur) bij de dierenambulance.
+        Gegeven is dat $X \sim \poisson{\mu=10\cdot 0.50=5}$.
 
         De kans dat op een dag minder dan $4$ oproepen binnenkomen is dan gelijk aan
         \[
-            P(X < 4) = P(X \le 3) = \poissoncdf(\lambda=5; k=3) \approx 0.2650.
+            P(X < 4) = P(X \le 3) = \poissoncdf(\mu=5, k=3) \approx 0.2650.
         \]
     }
 
@@ -21,11 +21,12 @@
         
         De kans dat er meer dan $3$ uur voorbijgaan zonder dat een enkele oproep is geweest is gelijk aan de kans op geen oproepen in drie uur tijd, oftewel:
         \[
-            P(X = 0) = \poissonpdf(\lambda=1.5; k=0) \approx 0.2231.
+            P(X = 0) = \poissonpdf(\mu=1.5, k=0) \approx 0.2231.
         \]
     }
 
-    \item De chauffeur van de dierenambulance wil met lunchpauze. Hij wil de tijdsduur van de pauze zodanig kiezen dat de kans hoogstens $0.25$ is dat binnen die periode een oproep binnenkomt.
+    \item De chauffeur van de dierenambulance wil met lunchpauze.
+    Hij wil de tijdsduur van de pauze zodanig kiezen dat de kans hoogstens $0.25$ is dat binnen die periode een oproep binnenkomt.
     Hoelang mag hij pauzeren? 
     \answer{
         Het aantal inkomende oproepen tijdens een lunchpauze van $t$ uur is Poisson verdeeld met parameter $0.5t$.
@@ -33,7 +34,7 @@
 
         Om deze ongelijkheid op te lossen, kunnen we opnieuw het \enquote{solver}-menu gebruiken:
         \begin{align*}
-            E_1 &= 1 - \poissoncdf(\lambda=0.5\cdot x; k=0) \\
+            E_1 &= 1 - \poissoncdf(\mu=0.5\cdot X, k=0) \\
             E_2 &= 0.25.
         \end{align*}
         Dit geeft ons een waarde $x \approx 0.5754$ uur, oftewel ongeveer $34.5$ minuten.

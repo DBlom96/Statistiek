@@ -11,7 +11,7 @@ Deze kan worden beschouwd als een normaal verdeelde variabele $X$ met $\mu=120$ 
         De kans dat een servicebeurt meer dan $150$ minuten vergt is dan gelijk aan
         \begin{align*}
             P(X > 150)  &= P(Z > 1.5) \\
-                        &= \text{normalcdf}(a=1.5; b=10^{10}; \mu=0;\sigma=1) \\
+                        &= \normalcdf(\lb=1.5, \ub=\GRinfinity, \mu=0,\sigma=1) \\
                         &\approx 0.0668.
         \end{align*}
     }
@@ -28,7 +28,7 @@ Deze kan worden beschouwd als een normaal verdeelde variabele $X$ met $\mu=120$ 
         \]
         We willen dus een grenswaarde bepalen, en dat kunnen we doen met de functie \enquote{InvNorm}:
         \[
-            x = \invnorm(\opp=0.95; \mu=120; \sigma=20) \approx 152.8971\ \unit{min}.
+            x = \invnorm(\opp=0.95, \mu=120, \sigma=20) \approx 152.8971\ \unit{min}.
         \]  
         In het geval van minder dan \SI{1}{\percent} is de berekening op een soortgelijke manier te maken, namelijk:
         \[
@@ -36,7 +36,7 @@ Deze kan worden beschouwd als een normaal verdeelde variabele $X$ met $\mu=120$ 
         \]
         We willen dus een grenswaarde bepalen, en dat kunnen we opnieuw doen met de functie \enquote{InvNorm}:
         \[
-            x = \invnorm(\opp=0.99; \mu=120; \sigma=20) \approx 166.5270\ \unit{min}.
+            x = \invnorm(\opp=0.99, \mu=120, \sigma=20) \approx 166.5270\ \unit{min}.
         \]  
     }
 \end{enumerate}

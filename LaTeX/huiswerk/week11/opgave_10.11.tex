@@ -39,11 +39,11 @@ Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomia
             \toprule
                 {\bfseries Aantal per dag ($k$)} & {\bfseries Observed} & {\bfseries Expected} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                $0$ & $15$ & $100 \cdot \binompdf(n=5; p=0.20; k=0) = 32.768$. \\
-                $1$ & $25$ & $100 \cdot \binompdf(n=5; p=0.20; k=1) = 40.96$. \\
-                $2$ & $36$ & $100 \cdot \binompdf(n=5; p=0.20; k=2) = 20.48$. \\
-                $3$ & $12$ & $100 \cdot \binompdf(n=5; p=0.20; k=3) = 5.12$. \\
-                $4$ & $10$ & $100 \cdot \binompdf(n=5; p=0.20; k=4) = 0.64$. \\
+                $0$ & $15$ & $100 \cdot \binompdf(n=5, p=0.20, k=0) = 32.768$. \\
+                $1$ & $25$ & $100 \cdot \binompdf(n=5, p=0.20, k=1) = 40.96$. \\
+                $2$ & $36$ & $100 \cdot \binompdf(n=5, p=0.20, k=2) = 20.48$. \\
+                $3$ & $12$ & $100 \cdot \binompdf(n=5, p=0.20, k=3) = 5.12$. \\
+                $4$ & $10$ & $100 \cdot \binompdf(n=5, p=0.20, k=4) = 0.64$. \\
                 $5$ & $2$  & $100 - 32.768 - 40.96 - \ldots - 0.64 = 0.032$. \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
                 Totaal & $100$ dagen & $100$ dagen \\
@@ -58,9 +58,9 @@ Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomia
             \toprule
                 {\bfseries Aantal per dag ($k$)} & {\bfseries Observed} & {\bfseries Expected} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                $0$ & $15$ & $100 \cdot \binompdf(n=5; p=0.20; k=0) = 32.768$ \\
-                $1$ & $25$ & $100 \cdot \binompdf(n=5; p=0.20; k=1) = 40.96$ \\
-                $2$ & $36$ & $100 \cdot \binompdf(n=5; p=0.20; k=2) = 20.48$ \\
+                $0$ & $15$ & $100 \cdot \binompdf(n=5, p=0.20, k=0) = 32.768$ \\
+                $1$ & $25$ & $100 \cdot \binompdf(n=5, p=0.20, k=1) = 40.96$ \\
+                $2$ & $36$ & $100 \cdot \binompdf(n=5, p=0.20, k=2) = 20.48$ \\
                 $\ge 3$ & $24$ & $100 - 32.768 - 40.96 - 20.48 = 5.792$ \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
                 Totaal & $100$ dagen & $100$ dagen \\
@@ -87,7 +87,7 @@ Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomia
     De $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
     \begin{align*}
         p   &= P(X^2 \ge \chi^2) \\
-            &= \chi^2\text{cdf}(\lb=\chi^2 \approx 84.8540; \ub=10^{10}; \df=3) \\
+            &= \chi^2\text{cdf}(\lb=\chi^2 \approx 84.8540, \ub=\GRinfinity, \df=3) \\
             &\approx 2.7893 \cdot 10^{-18}.
     \end{align*}
     Aangezien de $p$-waarde extreem klein is, betekent dit dat de geobserveerde toetsingsgrootheid $\chi^2$ extreem hoge waarde heeft onder de aanname van een binomiale verdeling met $n=5$ en $p=0.20$.

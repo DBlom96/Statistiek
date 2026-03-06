@@ -8,15 +8,16 @@
 \newcommand{\cdf}[1]{F_{#1}(x)} % Cumulatieve verdelingsfunctie
 
 % Kansverdelingen
-\newcommand{\normal}[2]{$N(#1, #2)$} % Normale verdeling met \mu=#1 en \sigma=#2
-\newcommand{\uniform}[2]{\textrm{Uniform}($#1$, $#2$)} % Uniforme verdeling U(a, b)
-\newcommand{\bernoulli}[1]{\textrm{Bernoulli}($#1$)} % Bernoulli verdeling
-\newcommand{\binomial}[2]{\textrm{Binomiaal}($#1$, $#2$)} % Binomiale verdeling
-\newcommand{\poisson}[1]{\textrm{Poisson}($#1$)} % Poisson verdeling
-\newcommand{\exponential}[1]{\textrm{Exponentieel}($#1$)} % Exponentiele verdeling
+\newcommand{\normal}[2]{N(#1, #2)} % Normale verdeling met \mu=#1 en \sigma=#2
+\newcommand{\uniform}[2]{\textrm{Uniform}(#1, #2)} % Uniforme verdeling U(a, b)
+\newcommand{\bernoulli}[1]{\textrm{Bernoulli}(#1)} % Bernoulli verdeling
+\newcommand{\binomial}[2]{\textrm{Binomiaal}(#1, #2)} % Binomiale verdeling
+\newcommand{\poisson}[1]{\textrm{Poisson}(#1)} % Poisson verdeling
+\newcommand{\exponential}[1]{\textrm{Exponentieel}(#1)} % Exponentiele verdeling
 
 % GR-functies (TI84-plus)
 \DeclareMathOperator{\med}{med}
+\DeclareMathOperator{\fnInt}{fnInt}
 \DeclareMathOperator{\invt}{InvT}
 \DeclareMathOperator{\invnorm}{InvNorm}
 \DeclareMathOperator{\normalcdf}{normalcdf}
@@ -27,6 +28,7 @@
 \DeclareMathOperator{\binompdf}{binompdf}
 \DeclareMathOperator{\poissonpdf}{poissonpdf}
 \DeclareMathOperator{\normalpdf}{normalpdf}
+
 
 \DeclareMathOperator{\invtC}{InvT}
 \DeclareMathOperator{\invnormC}{InvN}
@@ -40,13 +42,14 @@
 \DeclareMathOperator{\poissonpdfC}{PoissonPD}
 
 % Argumenten voor rekenmachine-functies
-\newcommand{\opp}{\text{opp}} % Oppervlakte
+\newcommand{\opp}{\text{area}} % Oppervlakte
 \newcommand{\df}{\text{df}} % Gemiddelde
 \newcommand{\lb}{\text{lower}} % Ondergrens
 \newcommand{\ub}{\text{upper}} % Bovengrens
 \newcommand{\nrows}{\text{\#rijen}} % Aantal rijen
 \newcommand{\ncols}{\text{\#kolommen}} % Aantal kolommen
-\newcommand{\ncategories}{\text{\#categorie\"en}} % Aantal categorieen
+\newcommand{\ncategories}{\text{\#categorieën}} % Aantal categorieen
+\newcommand{\GRinfinity}{10^{99}} % Oneindig voor grafische rekenmachine
 
 % Steekproef
 \newcommand{\samplemeanvarX}{\overline{X}}
@@ -76,8 +79,8 @@
 \newcommand{\reject}{\text{verwerp} \Hnull}
 \newcommand{\fail}{\text{accepteer} \Hnull}
 
-\newcommand{\dx}{\;dx}
-\newcommand{\dy}{\;dy}
+\newcommand{\dx}{\;\text{d}x}
+\newcommand{\dy}{\;\text{d}y}
 
 
 % EXAMPLE USAGE:

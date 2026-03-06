@@ -1,6 +1,6 @@
 \question{6.14}{
     Bij een keukenbedrijf weet men dat van alle klanten die een catalogus aanvragen, \SI{15}{\percent} daadwerkelijk een bestelling zal plaatsen in de maand volgend op de toezending van de catalogus.
-    Daarna, dus m\'e\'er dan een maand later, blijken er nooit bestellingen te worden gedaan.
+    Daarna, dus méér dan een maand later, blijken er nooit bestellingen te worden gedaan.
 }
 
 \begin{enumerate}[label=(\alph*)]
@@ -12,30 +12,30 @@
         We willen de kans $P(X > 20)$ bepalen (\enquote{meer dan} betekent \enquote{$>$}):
         \begin{align*}
             P(X > 20) = P(X \ge 21) &= 1 - P(X \le 20) \\
-                                    &= 1 - \binomcdf(n=120; p=0.15; k=20) \\
-                                    &\approx 0.2557
+                                    &= 1 - \binomcdf(n=120, p=0.15, k=20) \\
+                                    &\approx 0.2557.
         \end{align*}
         
         Met \SI{25.57}{\percent} kans zullen meer dan twintig klanten een bestelling gaan plaatsen.
     }
 
     \item In een bepaald jaar worden $1 200$ catalogi aangevraagd.
-    Hoe groot is het verwachte aantal bestellingen? Bereken een voorspellingsinterval (symmetrisch) waarvoor geldt dat hierin met 95\% kans het aantal waar te nemen bestellingen ligt.
+    Hoe groot is het verwachte aantal bestellingen? Bereken een voorspellingsinterval (symmetrisch) waarvoor geldt dat hierin met \SI{95}{\percent} kans het aantal waar te nemen bestellingen ligt.
     \answer{
         De kansvariabele $X \sim \binomial{n}{p}$ telt het aantal klanten dat daadwerkelijk een bestelling zal plaatsen, met nu
         $n=1200$ (aantal klanten die een catalogus aangevraagd hebben) en $p=0.15$ (kans dat een klant die een catalogus aanvraagt daadwerkelijk een bestelling plaatst).
         We vinden nu dat
         \[
-            E[X] = n \cdot p = 1200 \cdot 0.15 = 180,
+            E(X) = n \cdot p = 1200 \cdot 0.15 = 180,
         \]
         en
         \[
-            \sigma(X) = \sqrt{n\cdot p \cdot (1-p)}\approx 12.3693.
+            \sigma(X) = \sqrt{n\cdot p \cdot (1-p)} \approx 12.3693.
         \]
         Het \SI{95}{\percent}-voorspellingsinterval worden dan gegeven door
         \begin{align*}
-            E[X] - 2\cdot \sigma(X) &=180 - 2 \cdot 12.3693 \approx 155.2614 \\
-            E[X] + 2\cdot \sigma(X) &=180 + 2 \cdot 12.3693 \approx 204.7386
+            E(X) - 2\cdot \sigma(X) &=180 - 2 \cdot 12.3693 \approx 155.2614, \\
+            E(X) + 2\cdot \sigma(X) &=180 + 2 \cdot 12.3693 \approx 204.7386.
         \end{align*} 
         
         Met \SI{95}{\percent} kans zal het aantal waar te nemen bestellingen tussen $155$ en $205$ liggen (merk op: naar buiten afronden om \SI{95}{\percent} zekerheid te behouden).
@@ -47,12 +47,12 @@
         De kansvariabele $X \sim \binomial{n}{p}$ telt het aantal klanten dat daadwerkelijk een bestelling zal plaatsen, met nu
         $n=800$ (aantal klanten die een catalogus aangevraagd hebben) en $p=0.15$ (kans dat een klant die een catalogus aanvraagt daadwerkelijk een bestelling plaatst).
         Laat $F$ de fractie van het totaal aantal klanten zijn dat daadwerkelijk een bestelling zal plaatsen.
-        We willen de kans $P(F < 0.1)$ bepalen (``minder dan"\ betekent ``<"):
+        We willen de kans $P(F < 0.1)$ bepalen (\enquote{minder dan} betekent \enquote{<}):
         \begin{align*}
-            P(F < 0,1)  &= P(X < 0.1 \cdot n) \\
+            P(F < 0.1)  &= P(X < 0.1 \cdot n) \\
                         &= P(X < 80) \\
                         &= P(X \le 79) \\
-                        &= \binomcdf(n=800; p=0.15; k=79) \\
+                        &= \binomcdf(n=800, p=0.15, k=79) \\
                         &\approx 1.2317 \cdot 10^{-5}.
         \end{align*}
         Het is zeer onwaarschijnlijk dat minder dan \SI{10}{\percent} van de groep aanvragers een bestelling plaatst.

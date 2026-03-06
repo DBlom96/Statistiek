@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1770214607.94144 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/main_formulebladen.tex" "main_formulebladen.pdf" "main_formulebladen" 1770214610.22843 0
+["pdflatex"] 1770287744.17313 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/main_formulebladen.tex" "main_formulebladen.pdf" "main_formulebladen" 1770287750.95201 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770200478 561754 f18f39ba1ea1d99f277b8b20931757e8 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1755601769 13257336 70235e7a1464f0f15c5a7808b591ab6e ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -276,9 +276,9 @@
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/config.sty" 1770200459 3227 7df9fe337926451a27a9583b34b4eaa3 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1770214563 4022 ec575c3be1ab440a80b59b2d74d996c7 ""
   "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/main_formulebladen.tex" 1770199144 1374 b811d8d9ce8af26cbb8261e3e26001a2 ""
-  "formuleblad_1.tex" 1770214607 7862 9ee16f160f6b46d7b3b1b96242d24f76 ""
-  "main_formulebladen.aux" 1770214609 298 6d9e4bf8a9577d25a3bbc2ccf7378b97 "pdflatex"
-  "main_formulebladen.out" 1770214609 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "formuleblad_1.tex" 1770287743 7898 6f41418e94eed16e94551ce61f7fae2c ""
+  "main_formulebladen.aux" 1770287750 298 6d9e4bf8a9577d25a3bbc2ccf7378b97 "pdflatex"
+  "main_formulebladen.out" 1770287749 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main_formulebladen.tex" 1770199144 1374 b811d8d9ce8af26cbb8261e3e26001a2 ""
   (generated)
   "main_formulebladen.aux"

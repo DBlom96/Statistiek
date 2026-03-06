@@ -16,7 +16,7 @@ De tijdsduren van bezoeken zijn onderling onafhankelijk.}
         Hierdoor geldt dus
         \begin{align*}
             P(X > 60)   &= P(Z > 1.5) \\
-                        &= \normalcdf(a=1.5; b=10^{10}; \mu=0; \sigma=1) \\
+                        &= \normalcdf(\lb=1.5, \ub=\GRinfinity, \mu=0, \sigma=1) \\
                         &\approx 0.0668.
         \end{align*}
         Met \SI{6.68}{\percent} kans vergt een willekeurig bezoek meer dan $60$ minuten.
@@ -34,7 +34,7 @@ De tijdsduren van bezoeken zijn onderling onafhankelijk.}
         De kans dat acht bezoeken meer dan $6\frac{1}{2}$ uur vergen is gelijk aan
         \begin{align*}
             P(\sum X > 390)     &= P(Z > 1.0607) \\
-                                &= \normalcdf(a=1.0607; b=10^{10}; \mu=0; \sigma=1) \\
+                                &= \normalcdf(\lb=1.0607, \ub=\GRinfinity, \mu=0, \sigma=1) \\
                                 &\approx 0.1444.
         \end{align*}
         Met \SI{14.44}{\percent} kans zullen de acht bezoeken in totaal meer dan $6\frac{1}{2}$ uur vergen.
@@ -48,7 +48,7 @@ De tijdsduren van bezoeken zijn onderling onafhankelijk.}
         We willen nu de grens $T$ berekenen waarvoor geldt dat $P(\sum X \le T) = 0.95$.
         De bijbehorende $z$-score is
         \[
-            P(Z\le z) = 0.95 \rightarrow z = \invnorm(\opp=0.95; \mu=0; \sigma=1) \approx 1.6449.
+            P(Z\le z) = 0.95 \rightarrow z = \invnorm(\opp=0.95, \mu=0, \sigma=1) \approx 1.6449.
         \]
         Terugrekenen naar de bijbehorende uitkomst $T$ voor de kansverdeling $\normal{\mu=450}{\sigma=31.6228}$ van $\sum X$ geeft:
         \[

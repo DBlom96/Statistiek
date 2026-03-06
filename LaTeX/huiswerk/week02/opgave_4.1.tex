@@ -1,0 +1,99 @@
+\question{4.1}{
+    Een kioskhouder verkoopt elke zaterdag een aantal exemplaren van het \emph{Weekendmagazine}.
+    Het aantal exemplaren dat op een willekeurige zaterdag wordt gevraagd, kan worden beschouwd als een kansvariabele $X$ waarvoor de volgende uitkomsten en bijbehorende kansen gegeven zijn (zie de tabel).
+
+    \begin{center}
+        \begin{tabular}{cc}
+            \toprule
+                {\bfseries Aantal gevraagde \emph{Weekendmagazines} $k$} & {\bfseries $P(X=k)$} \\
+            \cmidrule{1-1} \cmidrule{2-2} 
+                $30$ & $0.10$ \\
+                $35$ & $0.35$ \\
+                $40$ & $0.30$ \\    
+                $45$ & $0.20$ \\
+                $50$ & $0.05$ \\
+            \bottomrule
+        \end{tabular}
+}
+\begin{enumerate}[label=(\alph*)]
+    \item De kioskhouder koopt elke zaterdag $40$ exemplaren van het \emph{Weekendmagazine}.
+    Hoe groot is de kans dat hij niet aan de vraag kan voldoen?
+    \answer{
+        De kioskhouder kan niet aan de vraag voldoen als er meer dan $40$ exemplaren worden gevraagd.
+        Dit is het geval (zie tabel) als er $45$ of meer kranten worden gevraagd.
+        De gevraagde kans luidt:
+        \[
+            P(X = 45) + P(X = 50) = 0.20 + 0.05 = 0.25.
+        \]
+    }
+
+    \item Hoe groot is de verwachtingswaarde van de vraag op een willekeurige zaterdag?
+    \answer{
+        Volgens de definitie van verwachtingswaarde geldt de volgende formule:
+        \begin{align*}
+            E(X)    &= \sum_k k \cdot P(X=k).
+        \end{align*}
+        Term voor term invullen levert:
+        \[
+            E(X) = 30 \cdot 0.10 + 35 \cdot 0.35 + 40 \cdot 0.30 + 45 \cdot 0.20 + 50 \cdot 0.05 = 38.75.        
+        \]
+    }
+
+    \item Hoe groot is de variantie van de vraag?
+    \answer{
+        De formule voor de variantie luidt:
+        \[
+            \Var{X} = \sum_k (k - E(X))^2 \cdot P(X = k).
+        \]
+        Hiertoe berekenen we eerst de termen $(k - E(X))^2$:
+        \begin{center}
+            \begin{tabular}{cc}
+                \toprule
+                    \makecell{{\bfseries Aantal gevraagde} \\ {\bfseries \emph{Weekendmagazines} $k$}} & {\bfseries $(k - E(X))^2$} \\
+                \cmidrule{1-1} \cmidrule{2-2} 
+                    $30$ & $(30 - 38.75)^2 = 76.5625$ \\
+                    $35$ & $(35 - 38.75)^2 = 14.0625$ \\
+                    $40$ & $(40 - 38.75)^2 = 1.5625$ \\    
+                    $45$ & $(45 - 38.75)^2 = 39.0625$ \\
+                    $50$ & $(50 - 38.75)^2 = 126.5625$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Term voor term invullen levert:
+        \begin{align*}
+            \Var{X} &= \sum_k (k - E(X))^2 \cdot P(X = k) \\
+                    &= 76.5625 \cdot 0.10 + 14.0625 \cdot 0.35 + \ldots + 126.5625 \cdot 0.05 \\
+                    &= 21.1875. 
+        \end{align*}
+    }
+
+    \item De inkoopprijs van de kranten is voor de kioskhouder \euro 1.40, terwijl de verkoopprijs \euro 2.25 bedraagt.
+    De kranten die niet worden verkocht, moeten worden weggegooid (en leveren dus een verlies op van \euro 1.40 per stuk).
+    Bereken de verwachte winst van de kioskhouder bij een inkoop van 40 exemplaren per zaterdag.
+    \answer{
+        We berekenen de opbrengst van de verschillende aanallen die gevraagd kunnen worden.
+        De (onzekere) opbrengst per zaterdag definiëren we als de kansvariabele $Y$.
+        Bij een vraag van $30$ stuks bedraagt de opbrengst $30 \cdot 0.85 + 10 \cdot (-1.40) = \text{\euro} 11.50$.
+        Bij een vraag van $35$ stuks bedraagt de opbrengst $35 \cdot 0.85 + 5 \cdot (-1.40) = \text{\euro} 22.75$.  
+        Bij een vraag van $40$ (of meer!) stuks bedraagt de opbrengst $40 \cdot 0.85 = \text{\euro} 34$.
+
+        We hebben hier dus te maken met de volgende kansvariabele $Y$:
+        \begin{center}
+            \begin{tabular}{cc}
+                \toprule
+                    {\bfseries Winst $y$} & {\bfseries $P(Y = y)$} \\
+                \cmidrule{1-1} \cmidrule{2-2} 
+                    $11.50$ & $0.10$ \\
+                    $22.75$ & $0.35$ \\
+                    $34$ & $0.30 + 0.20 + 0.05 = 0.55$ \\    
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        De verwachte winst is te berekenen met de formule voor de verwachtingswaarde:
+        \begin{align*}
+            E(Y)    &= \sum_y y \cdot P(Y = y) \\
+                    &= 11.50 \cdot 0.10 + 22.75 \cdot 0.35 + 34 \cdot 0.55 \\
+                    &\approx \text{\euro} 27.81.
+        \end{align*}
+    }
+\end{enumerate}

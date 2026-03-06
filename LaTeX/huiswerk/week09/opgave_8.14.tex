@@ -21,7 +21,7 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= \binomcdf(n=200; p_1=X; k=180) \\
+                E_1 &= \binomcdf(n=200, p_1=X, k=180) \\
                 E_2 &= 0.025
             \end{align*}
             Dit geeft een waarde van $p_1 \approx 0.9378$.
@@ -31,13 +31,13 @@
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= 1 - \binomcdf(n=200; p_1=X; k=179) \\
+                E_1 &= 1 - \binomcdf(n=200, p_1=X, k=179) \\
                 E_2 &= 0.025
             \end{align*}
             Dit geeft een waarde van $p_2 \approx 0.8498$.
         \end{enumerate}
         We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
-        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie orders die op tijd wordt uitgevoerd is dus gelijk aan $[0.8498; 0.9378]$.
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de fractie orders die op tijd wordt uitgevoerd is dus gelijk aan $[0.8498, 0.9378]$.
     }
 
     \item Hoeveel orders moet worden onderzocht om een interval voor $p$ te krijgen dat hoogstens $0.02$ breed is? (We gaan ervan uit dat $p$ ongeveer $0.9$ is).

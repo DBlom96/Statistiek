@@ -16,7 +16,7 @@
     Uit de centrale limietstelling volgt dat $\samplemeanvarX \sim \normal{\mu}{\frac{\sigma}{\sqrt{n}}}$.
     Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu = 160$.
     Verder geldt dat de standaardafwijking $\sigma = 5$ bekend is en zes studenten een hamburger wegen, oftewel $n=6$.
-    Er volgt dus dat $\sigma(\samplemeanvarX) = \frac{\sigma}{\sqrt{n}} = \frac{5}{\sqrt{6}}$, oftewel $\samplemeanvarX \sim N(\mu=160; \sigma=\frac{5}{\sqrt{6}})$.
+    Er volgt dus dat $\sigma(\samplemeanvarX) = \frac{\sigma}{\sqrt{n}} = \frac{5}{\sqrt{6}}$, oftewel $\samplemeanvarX \sim N(\mu=160, \sigma=\frac{5}{\sqrt{6}})$.
     
     Merk op dat hoe lager het steekproefgemiddelde is, hoe waarschijnlijker dat de alternatieve hypothese waar is.
     De geobserveerde toetsingsgrootheid is gelijk aan 
@@ -26,7 +26,7 @@
     Omdat we linkszijdig toetsen, is de $p$-waarde gelijk aan de linkeroverschrijdingskans 
     \begin{align*}
         p   &= P(\samplemeanvarX \le \samplemeanx=150) \\
-            &= \normalcdf(a=-10^{10}; b=150; \mu=160; \sigma=\frac{5}{\sqrt{6}}) \\
+            &= \normalcdf(\lb=-\GRinfinity, \ub=150, \mu=160, \sigma=\frac{5}{\sqrt{6}}) \\
             &\approx 0.000000482.
     \end{align*}
     De $p$-waarde is extreem laag, en omdat $p < \alpha$, verwerpen we de nulhypothese $H_0$.

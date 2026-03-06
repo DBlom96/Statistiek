@@ -31,7 +31,7 @@
 \begin{enumerate}[label=(\alph*)]
     \item Bereken de regressielijn waardoor de onderhoudsuitgaven worden verklaard uit de leeftijd.
     \answer{
-        De regressielijn is van de vorm $Y = a + b\cdot X$, waarbij we de regressieco\"effici\"enten $a$ en $b$ bepalen aan de hand van 
+        De regressielijn is van de vorm $Y = a + b\cdot X$, waarbij we de regressiecoëfficiënten $a$ en $b$ bepalen aan de hand van 
         \begin{align*}
             b &= \frac{\samplemeanxy - \samplemeanx \cdot \samplemeany}{\samplemeanxsquared - (\samplemeanx)^2} \\
             a &= \samplemeany - b \cdot \samplemeanx
@@ -44,7 +44,7 @@
             \samplemeanx = 5.6, \quad \samplemeany = 850, \quad \samplemeanxsquared = 36.724, \quad \samplemeanysquared = 810 200, \quad \samplemeanxy = 5413.2.
         \]
 
-        We hebben nu alle grootheden die benodigd zijn om de co\"effici\"enten van de regressielijn $Y = a + b \cdot X$ te kunnen bepalen:
+        We hebben nu alle grootheden die benodigd zijn om de coëfficiënten van de regressielijn $Y = a + b \cdot X$ te kunnen bepalen:
         \begin{align*}
             b   &= \frac{\samplemeanxy - \samplemeanx \cdot \samplemeany}{\samplemeanxsquared - (\samplemeanx)^2} \\
                 &= \frac{5413.2 - 5.6 \cdot 850}{36.724 - (5.6)^2} \\
@@ -83,11 +83,11 @@
         Omdat we de standaardafwijkingen geschat hebben en de storingstermen normaal verdeeld zijn, moeten we werken met de $t$-verdeling met $df = n - 2 = 8$ vrijheidsgraden.
         De grenswaarde die hoort bij een betrouwbaarheidsniveau $\alpha = 0.05$ is gelijk aan
         \[
-        t = \invt(\opp = 1 - \alpha / 2; \df = n - 2) = \invt(\opp = 0.975; \df = 8) \approx 2.3060.
+        t = \invt(\opp = 1 - \alpha / 2, \df = n - 2) = \invt(\opp = 0.975, \df = 8) \approx 2.3060.
         \]
         Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = x_0$ kan dus worden beschreven door
         \begin{align*}
-            &[y_0 - t \cdot s_{{f}}; y_0 - t \cdot s_{{f}}] \\ 
+            &[y_0 - t \cdot s_{{f}}, y_0 - t \cdot s_{{f}}] \\ 
             &=[1385.8091 - 2.3060 \cdot 122.0468, 1385.8091 + 2.3060 \cdot 122.0468] \\ 
             &\approx [1104.3688, 1667.2494] 
         \end{align*}
@@ -117,9 +117,9 @@
 
         Het \SI{99}{\percent}-voorspellingsinterval voor een volgende uitkomst van $Y$ wordt dan gegeven door
         \begin{align*}
-                    &[\mu - z_{\alpha/2} \cdot \sigma; \mu + z_{\alpha/2} \cdot \sigma] \\
-            =       &[1620 - 2.5758 \cdot 65; 1620 + 2.5758 \cdot 65] \\
-            \approx &[1452.5711; 1787.4289].
+                    &[\mu - z_{\alpha/2} \cdot \sigma, \mu + z_{\alpha/2} \cdot \sigma] \\
+            =       &[1620 - 2.5758 \cdot 65, 1620 + 2.5758 \cdot 65] \\
+            \approx &[1452.5711, 1787.4289].
         \end{align*}
         Voor een willekeurige Inceatti-auto van tien jaar oud zullen met \SI{99}{\percent} zekerheid de onderhoudskosten in de laatste $12$ maanden tussen de $1452$ en $1788$ euro bedragen.
         \begin{center}

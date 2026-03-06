@@ -3,7 +3,7 @@
     We toetsen $H_0: \mu = 50$ tegen $H_1: \mu > 50$.
 }
 \begin{enumerate}[label=(\alph*)]
-    \item Bereken het kritieke gebied als er \'e\'en waarneming wordt gedaan bij een kans op een fout van de eerste soort $\alpha=0.05$ en ook bij $\alpha=0.01$.
+    \item Bereken het kritieke gebied als er één waarneming wordt gedaan bij een kans op een fout van de eerste soort $\alpha=0.05$ en ook bij $\alpha=0.01$.
     \answer{
         Gegeven is dat we te maken hebben met een kansvariabele $X \sim \normal{\mu=\ ?}{\sigma=10}$.
         We willen toetsen of er geldt dat $\mu = 50$.
@@ -20,27 +20,27 @@
         Omdat verder de standaardafwijking $\sigma = 10$ bekend is en we een enkele waarneming doen, oftewel $n=1$,
         volgt dat $\frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{1}}=10$, oftewel het theoretische steekproefgemiddelde $\samplemeanvarX \sim \normal{\mu=50}{\sigma=10}$.
         Merk op dat hoe groter de toetsingsgrootheid is, hoe waarschijnlijker dat de alternatieve hypothese waar is (rechtszijdige toets).
-        Het kritieke gebied is dus van de vorm $[g; \infty)$, waarbij $g$ kan worden berekend als volgt:
+        Het kritieke gebied is dus van de vorm $[g, \infty)$, waarbij $g$ kan worden berekend als volgt:
         \begin{align*}
             g   &= \mu + z_{\alpha} \cdot \frac{\sigma}{\sqrt{n}} \\
                 &= 50 + 1.6449 \cdot \frac{10}{\sqrt{1}} \\
                 &\approx 66.4485.
         \end{align*}
-        Het kritieke gebied is dus gelijk aan $Z = [66.4485; \infty)$.
+        Het kritieke gebied is dus gelijk aan $Z = [66.4485, \infty)$.
 
         \item Stel nu dat $\alpha = 0.01$.
         Omdat we rechtszijdig toetsen, berekenen we de $z$-waarde
         \[
-            z_{\alpha} = \invnorm(\opp=1-\alpha) = \invnorm(\opp=0.99) \approx 2.3263
+            z_{\alpha} = \invnorm(\opp=1-\alpha) = \invnorm(\opp=0.99) \approx 2.3263.
         \]
 
-        Het kritieke gebied is opnieuw van de vorm $Z = [g; \infty)$, waarbij $g$ kan worden berekend als volgt:
+        Het kritieke gebied is opnieuw van de vorm $Z = [g, \infty)$, waarbij $g$ kan worden berekend als volgt:
         \begin{align*}
             g   &= \mu + z_{\alpha} \cdot \frac{\sigma}{\sqrt{n}} \\
                 &= 50 + 2.3263 \cdot \frac{10}{\sqrt{1}} \\
                 &\approx 73.2635.
         \end{align*}
-        Het kritieke gebied is dus gelijk aan $Z = [73.2635; \infty)$.
+        Het kritieke gebied is dus gelijk aan $Z = [73.2635, \infty)$.
         \end{itemize}
     }
 
@@ -57,29 +57,29 @@
             Uit de centrale limietstelling volgt dat $\samplemeanvarX \sim \normal{\mu}{\frac{\sigma}{\sqrt{n}}}$.
             Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu = 50$.
             Omdat verder de standaardafwijking $\sigma(X) = 10$ bekend is en we nu $100$ waarnemingen, oftewel $n=100$, 
-            volgt dat $\sigma(\samplemeanvarX) = \frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{100}}=1$, oftewel $\samplemeanvarX \sim N(\mu=50; \sigma=1)$.
+            volgt dat $\sigma(\samplemeanvarX) = \frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{100}}=1$, oftewel $\samplemeanvarX \sim N(\mu=50, \sigma=1)$.
             Merk op dat hoe groter de toetsingsgrootheid is, hoe waarschijnlijker dat de alternatieve hypothese waar is.
-            Het kritieke gebied is dus van de vorm $[g; \infty)$, waarbij $g$ kan worden berekend als volgt:
+            Het kritieke gebied is dus van de vorm $[g, \infty)$, waarbij $g$ kan worden berekend als volgt:
             \begin{align*}
                 g   &= \mu + z_{\alpha} \cdot \frac{\sigma}{\sqrt{n}} \\
                     &= 50 + 1.2816 \cdot \frac{10}{\sqrt{100}} \\
                     &\approx 51.2816.
             \end{align*}
-            Het kritieke gebied is dus gelijk aan $Z=[51.2816; \infty)$.
+            Het kritieke gebied is dus gelijk aan $Z=[51.2816, \infty)$.
             
             \item Stel nu dat $\alpha = 0.001$.
             Omdat we rechtszijdig toetsen, berekenen we de $z$-waarde
             \[
                 z_{\alpha} = \invnorm(\opp=1-\alpha) = \invnorm(\opp=0.999) \approx 3.0902.
             \]
-            Het kritieke gebied is opnieuw van de vorm $[g; \infty)$, waarbij $g$ kan worden berekend als volgt:
+            Het kritieke gebied is opnieuw van de vorm $[g, \infty)$, waarbij $g$ kan worden berekend als volgt:
             \begin{align*}
                 g   &= \mu + z_{\alpha} \cdot \frac{\sigma}{\sqrt{n}} \\
                     &= 50 + 3.0902 \cdot \frac{10}{\sqrt{100}} \\
                     &\approx 53.0902.
             \end{align*}
 
-            Het kritieke gebied is dus gelijk aan $Z=[53.0902; \infty)$.
+            Het kritieke gebied is dus gelijk aan $Z=[53.0902, \infty)$.
         \end{itemize} 
     }   
 \end{enumerate}

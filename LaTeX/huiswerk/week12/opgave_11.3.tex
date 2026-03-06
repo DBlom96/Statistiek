@@ -27,10 +27,10 @@
     Onder de nulhypothese geldt $\mu_X = \mu_Y$, oftewel de verschilvariabele heeft verwachtingswaarde $\mu_V = \mu_X - \mu_Y = 0$.
 
     {\bfseries Methode 1 (kritiek gebied):}\\
-    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen bepaald kunnen worden met:
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen bepaald kunnen worden met:
     \begin{align*}
-        g_1 &= \invnorm(\opp=\alpha/2=0.025; \mu = \mu_V=0; \sigma = \sigma_V=4) \approx -7.8399, \\
-        g_2 &= \invnorm(\opp=1-\alpha/2=0.975; \mu = \mu_V=0; \sigma = \sigma_V=4) \approx 7.8399.
+        g_1 &= \invnorm(\opp=\alpha/2=0.025, \mu = \mu_V=0, \sigma = \sigma_V=4) \approx -7.8399, \\
+        g_2 &= \invnorm(\opp=1-\alpha/2=0.975, \mu = \mu_V=0, \sigma = \sigma_V=4) \approx 7.8399.
     \end{align*}
     Het geobserveerde verschil is $v = \samplemeanx - \samplemeany = 50 - 55 = -5$.
     Deze waarde ligt niet in het kritieke gebied, dus we accepteren de nulhypothese $H_0$.
@@ -40,7 +40,7 @@
     Het geobserveerde verschil is $v = \samplemeanx - \samplemeany = 50 - 55 = -5$ en ligt dus links van het gemiddelde $\mu_V = 0$.
     Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de linkeroverschrijdingskans van de waarde $-5$ en vergelijken deze met $\alpha/2 = 0.025$.
     \begin{align*}
-        p &= \normalcdf(\lb=-10^{10}; \ub=-5; \mu = 0; \sigma = 4) = 0.1056
+        p &= \normalcdf(\lb=-\GRinfinity, \ub=-5, \mu = 0, \sigma = 4) = 0.1056
     \end{align*}
     De $p$-waarde is groter dan $\alpha/2$, dus we accepteren de nulhypothese $H_0$.
     Er is onvoldoende bewijs om de aanname te verwerpen dat beide variabelen dezelfde verwachtingswaarde zouden hebben.

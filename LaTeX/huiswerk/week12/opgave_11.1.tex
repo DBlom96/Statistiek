@@ -6,7 +6,7 @@
     Hierbij werden $20$ waarden ($x_i$) die bepaald zijn in februari 2017 vergeleken met $20$ waarden ($y_i$) die zijn gemeten in februari 2018.
     Voor deze waarden werd berekend:
     \[
-        \samplemeanx=164.6 \text{ en } s_X = 17.2; \text{ en } \samplemeany = 143.2 \text{ en } s_Y = 15.9
+        \samplemeanx=164.6 \text{ en } s_X = 17.2, \text{ en } \samplemeany = 143.2 \text{ en } s_Y = 15.9
     \]
     Met een verschiltoets gaan we bepalen of er een significante verbetering is opgetreden.
 }
@@ -35,10 +35,10 @@
     \]
 
     {\bfseries Methode 1 (kritiek gebied):} \\
-    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $F(19, 19)$-verdeling.
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $F(19, 19)$-verdeling.
     \begin{align*}
-        &\fcdf(\lb=0; \ub=g_1; \df_1=19; \df_2=19)=\alpha/2=0.025 \rightarrow g_1 \approx 0.3958,\\
-        &\fcdf(\lb=g_2; \ub=10^{10}; \df_1=19; \df_2=19)=\alpha/2=0.025 \rightarrow g_2 \approx 2.5265.
+        &\fcdf(\lb=0, \ub=g_1, \df_1=19, \df_2=19)=\alpha/2=0.025 \rightarrow g_1 \approx 0.3958,\\
+        &\fcdf(\lb=g_2, \ub=\GRinfinity, \df_1=19, \df_2=19)=\alpha/2=0.025 \rightarrow g_2 \approx 2.5265.
     \end{align*}
     De geobserveerde toetsingsgrootheid $f \approx 1.0817$ ligt dus niet in het kritieke gebied, dus we accepteren de nulhypothese $H_0$.
     Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de varianties niet gelijk zouden zijn aan elkaar.
@@ -46,7 +46,7 @@
     {\bfseries Methode 2 ($p$-waarde):} \\
     De geobserveerde toetsingsgrootheid $f \approx 1.0817$ ligt boven de $1$, dus we berekenen de $p$-waarde als de rechteroverschrijdingskans van de waarde $f \approx 1.0817$ en vergelijken deze met $\alpha/2 = 0.025$.
     \begin{align*}
-        p &= \normalcdf(\lb=1.0817; \ub=10^{10}; \df_1=19; \df_2=19) \approx 0.4329.
+        p &= \normalcdf(\lb=1.0817, \ub=\GRinfinity, \df_1=19, \df_2=19) \approx 0.4329.
     \end{align*}
     De $p$-waarde is veel groter dan het significantieniveau $\alpha$, dus we accepteren de nulhypothese $H_0$.
     Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de varianties niet gelijk zouden zijn aan elkaar.\\[1ex]
@@ -73,9 +73,9 @@
     Merk op dat de theoretische toetsingsgrootheid een $t$-verdeling volgt met $\df=n-m+2=38$ vrijheidsgraden.\\[1ex]
 
     {\noindent\bfseries Methode 1 (kritiek gebied):}\\
-    Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g; \infty)$, waarbij de grens $g$ als volgt bepaald kan worden:
+    Omdat we rechtszijdig toetsen, is het kritieke gebied van de vorm $[g, \infty)$, waarbij de grens $g$ als volgt bepaald kan worden:
     \begin{align*}
-        g &= \invt(\opp=1-\alpha; \df = n + m - 2) = \invt(\opp=0.95; \df = 38) \approx 1.6860.
+        g &= \invt(\opp=1-\alpha, \df = n + m - 2) = \invt(\opp=0.95, \df = 38) \approx 1.6860.
     \end{align*}
     De geobserveerde toetsingsgrootheid $t \approx 4.0858$ is groter dan deze kritieke grens $g$, dus $t$ ligt in het kritieke gebied.
     We verwerpen dus de nulhypothese $H_0$.
@@ -84,7 +84,7 @@
     {\noindent\bfseries Methode 2 ($p$-waarde):}\\
     Aangezien we rechtszijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $t \approx 4.0858$:
     \begin{align*}
-        p = \tcdf(\lb=4.0858; \ub=10^{10}; \df=38) \approx 1.0936 \cdot 10^{-4}.
+        p = \tcdf(\lb=4.0858, \ub=\GRinfinity, \df=38) \approx 1.0936 \cdot 10^{-4}.
     \end{align*}
     De $p$-waarde is extreem klein (veel kleiner dan $\alpha=0.05$), dus verwerpen we de nulhypothese.
     Er is voldoende reden om op basis van deze steekproef aan te nemen dat er daadwerkelijk een significante daling is gerealiseerd in de luchtverontreiniging in $2018$.

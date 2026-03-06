@@ -7,10 +7,11 @@
 \begin{enumerate}[label=(\alph*)]
     \item de kans dat twee of minder baby's de complicatie vertonen.
     \answer{
-        Het aantal baby's waarbij bij een aangeboren afwijking een bepaalde complicatie optreedt is een binomiaal verdeelde kansvariabele $X$ met parameters $n = 20$ (aantal baby's met een aangeboren afwijking) en $p = 0.25$ (kans op complicatie, het is in deze context vreemd om het een ``succeskans" te noemen...).
+        Het aantal baby's waarbij bij een aangeboren afwijking een bepaalde complicatie optreedt is een binomiaal verdeelde kansvariabele $X$ met parameters $n = 20$ (aantal baby's met een aangeboren afwijking) en $p = 0.25$ (kans op complicatie).
+        Merk op dat het in deze context vreemd is om te spreken van een \enquote{succeskans} $p$.
         De kans dat twee of minder baby's de complicatie vertonen is gelijk aan
         \[
-            P(X \le 2) = \binomcdf(n=20; p=0.25; k=2) \approx 0.0913    
+            P(X \le 2) = \binomcdf(n=20, p=0.25, k=2) \approx 0.0913.    
         \]
     }
 
@@ -18,7 +19,7 @@
     \answer{
         De kans dat precies twee baby's de complicatie vertonen is gelijk aan
         \[
-            P(X = 2) = \binompdf(n=20; p=0.25; k=2) \approx 0.0670    
+            P(X = 2) = \binompdf(n=20, p=0.25, k=2) \approx 0.0670.    
         \]
     }
 
@@ -27,8 +28,8 @@
         De kans dat meer dan twee baby's de complicatie vertonen is gelijk aan
         \begin{align*}
             P(X > 2) = P(X \ge 3)   &= 1 - P(X \le 2) \\
-                                    &= 1 - \binompdf(n=20; p=0.25; k=2) \\
-                                    &\approx 0.9087    
+                                    &= 1 - \binompdf(n=20, p=0.25, k=2) \\
+                                    &\approx 0.9087.    
         \end{align*}
     }
 
@@ -37,9 +38,9 @@
         De kans dat minstens $4$ maar hoogstens $7$ baby's de complicatie vertonen is gelijk aan
         \begin{align*}
             P(4 \le X \le 7)    &= P(X \ge 7) - P(X \le 3) \\
-                                &= \binomcdf(n=20; p=0.25; k=7) \\
-                                &\qquad- \binomcdf(n=20; p=0.25; k=3) \\
-                                &\approx 0.89819 - 0.41484 \approx 0.4834    
+                                &= \binomcdf(n=20, p=0.25, k=7) \\
+                                &\qquad- \binomcdf(n=20, p=0.25, k=3) \\
+                                &\approx 0.8982 - 0.2252 \approx 0.6730.    
         \end{align*}
         
     }

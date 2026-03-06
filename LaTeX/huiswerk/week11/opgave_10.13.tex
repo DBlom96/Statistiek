@@ -39,10 +39,10 @@
                 {\bfseries Aantal branden} & {\bfseries Frequentie} & {\bfseries Frequentie} \\
                 {\bfseries per week} & {\bfseries (observed)} & {\bfseries (expected)} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                $0$         & $48$ & $100 \cdot \poissonpdf(\mu=1; k=0) = 36.7879$ \\
-                $1$         & $24$ & $100 \cdot \poissonpdf(\mu=1; k=1) = 36.7879$ \\
-                $2$         & $16$ & $100 \cdot \poissonpdf(\mu=1; k=2) = 18.3940$ \\
-                $3$         &  $8$ & $100 \cdot \poissonpdf(\mu=1; k=3) = 6.1313$ \\
+                $0$         & $48$ & $100 \cdot \poissonpdf(\mu=1, k=0) = 36.7879$ \\
+                $1$         & $24$ & $100 \cdot \poissonpdf(\mu=1, k=1) = 36.7879$ \\
+                $2$         & $16$ & $100 \cdot \poissonpdf(\mu=1, k=2) = 18.3940$ \\
+                $3$         &  $8$ & $100 \cdot \poissonpdf(\mu=1, k=3) = 6.1313$ \\
                 $4$ of meer &  $4$ & $100 - 36.7879 - 36.7879 - \ldots = 1.8988$ \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
                 Totaal & $100$ dagen & $100$ dagen \\
@@ -91,9 +91,14 @@
     Met andere woorden, het kritieke gebied is van de vorm $[g, \infty)$.
     Deze grenswaarde $g$ is de oplossing van de vergelijking
     \begin{align*}
-        \chi^2\text{cdf}(\lb=g; \ub=10^{10}; \df=3) = \alpha = 0.05
+        \chi^2\text{cdf}(\lb=g, \ub=\GRinfinity, \df=3) = \alpha = 0.05
     \end{align*}
-    Door dit stelsel vergelijkingen in te voeren in het \enquote{solver}-menu, krijgen we een waarde van $g \approx 7.8147$.
+    Deze vergelijking kun je op de grafische rekenmachine invoeren in het \enquote{solver}-menu:
+    \begin{align*}
+        E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=3) \\
+        E_2 &= 0.05.
+    \end{align*}
+    krijgen we een waarde van $g \approx 7.8147$.
     Het kritieke gebied is dus $[7.8147, \infty)$.
     De geobserveerde toetsingsgrootheid $\chi^2 \approx 10.1366$ ligt daarmee in het kritieke gebied en dus wordt $H_0$ verworpen.
     Er is voldoende bewijs om aan te nemen dat het aantal branden per week niet een Poissonverdeling met gemiddelde $\mu=1$ volgt.
@@ -106,7 +111,7 @@
     {\bfseries Alternatief:} de $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
     \begin{align*}
         p   &= P(X^2 \ge \chi^2) \\
-            &= \chi^2\text{cdf}(\lb=\chi^2\approx 10.1366; \ub=10^{10}; \df=3) \\
+            &= \chi^2\text{cdf}(\lb=\chi^2\approx 10.1366, \ub=\GRinfinity, \df=3) \\
             &\approx 0.0174
     \end{align*}
 
