@@ -1,0 +1,44 @@
+\mode<presentation>
+
+\setbeamertemplate{background canvas}{%
+	\ifnum\c@framenumber=1%
+		% On title page
+		\includegraphics[width=\the\paperwidth, height=\the\paperheight]{Figures/presentatie_danny1_bg.jpg}
+	\else%
+		\begin{tikzpicture}
+			\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+			\fill[Poissongray] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+		\end{tikzpicture}
+	\fi%
+}
+
+\setbeamertemplate{title page}{%
+	\vskip2cm%
+	\begin{beamercolorbox}[leftskip=0.2cm, wd=0.8\paperwidth]{title}
+		\usebeamerfont{title}{\inserttitle}
+	\end{beamercolorbox}%
+	\vskip0.2cm%
+	\begin{beamercolorbox}[leftskip=0.2cm, wd=0.8\paperwidth]{subtitle}
+		\usebeamerfont{subtitle}{\insertsubtitle}
+	\end{beamercolorbox}%
+	\vskip0.75cm%
+	\begin{beamercolorbox}[leftskip=0.2cm, wd=0.8\paperwidth]
+		{author}
+		\usebeamerfont{author}{\insertauthor}
+	\end{beamercolorbox}
+	\vskip0.2cm%
+	\begin{beamercolorbox}[leftskip=0.2cm, wd=0.8\paperwidth]
+		{date}
+		\usebeamerfont{date}{\insertdate}
+	\end{beamercolorbox}
+	\vskip1cm%
+%	\begin{beamercolorbox}[leftskip=0.15cm, wd=0.8\paperwidth]
+%		{date}
+%		\includegraphics[width=0.3\paperwidth]{Figures/Logos/TUe-logo-descriptor-line/TUe-logo-descriptor-line-white.png}
+%	\end{beamercolorbox}
+	\vfill
+}
+
+\setbeamertemplate{itemize items}[ball]
+\mode
+<all>

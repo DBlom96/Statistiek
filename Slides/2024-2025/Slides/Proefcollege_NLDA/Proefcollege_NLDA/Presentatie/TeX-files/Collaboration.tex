@@ -1,0 +1,105 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[overlay, remember picture,scale=0.9]
+        \tikzstyle{arc}=[-stealth, dashed, thin, shorten >=2pt, shorten <=2pt];
+        \tikzstyle{arcbend}=[arc, bend right=10];
+        \tikzstyle{usedarc}=[arc, solid, very thick];
+        \tikzstyle{usedarcbend}=[usedarc, bend right=10];
+        
+        \tikzstyle{bluenode}=[draw=blue, fill=blue!30, circle];
+        \tikzstyle{rednode}=[draw=red, fill=red!30, circle];
+        
+        % BLUE AND RED VERTICES, AND INTERNAL ARCS
+        \node (bluehospital) at (-2, 0) {\includegraphics[scale=0.8]{Figures/Pictures/blue_hospital.pdf}};
+        \node[right of=bluehospital] (redhospital) at (2,0) {\includegraphics[scale=0.8]{Figures/Pictures/red_hospital.pdf}};
+        
+        \foreach \i in {1,2,3}
+        {
+            \node[bluenode, label=225:{$p_{\i}$}] (v\i) at ($(bluehospital)-(0,3)+(-120+120*\i:1.5cm)$) {};
+        }
+
+        \foreach \i [count=\x] in {A,B,C,D}
+        {
+            \pgfmathsetmacro\location{int(45+90*(\x-1))}
+            \node[rednode, label=\location:{$p_{\i}$}] (v\i) at ($(redhospital)-(0,3)+(-45+90*\x:1.5cm)$) {};
+        }      
+        
+        \foreach \i/\j in {A/B, B/D, C/B}
+            \draw[arc] (v\i) to (v\j);
+        
+        \foreach \i/\j in {1/2, 2/1, 2/3, 3/2, A/D, D/A}
+            \draw[arcbend] (v\i) to (v\j);
+        
+        % DRAW SOLUTION
+        \onslide<3>{
+            \foreach \i/\j in {C/B}
+                \draw[arc] (v\i) to (v\j);
+            
+            \foreach \i/\j in {A/B, B/D}
+                \draw[usedarc] (v\i) to (v\j);
+            
+            \foreach \i/\j in {2/3, 3/2, A/D}
+                \draw[arcbend] (v\i) to (v\j);
+       
+            \foreach \i/\j in {1/2, 2/1, D/A}
+                \draw[usedarcbend] (v\i) to (v\j);
+        }
+
+        % DRAW INTERNATIONAL ARCS
+        \onslide<4>{
+            \foreach \i/\j in {A/B, B/D, C/B}
+                \draw[arc] (v\i) to (v\j);
+            
+            \foreach \i/\j in {}
+                \draw[usedarc] (v\i) to (v\j);
+            
+            \foreach \i/\j in {1/2, 2/1, 2/3, 3/2, A/D, D/A}
+                \draw[arcbend] (v\i) to (v\j);
+       
+            \foreach \i/\j in {}
+                \draw[usedarcbend] (v\i) to (v\j);
+
+            \foreach \i/\j in {B/1, 1/C, 3/C}
+                \draw[arc, purple!90] (v\i) to (v\j);
+
+            % Arrows between hospitals
+            \draw[-stealth, very thick] ($(bluehospital.east)-(0,0.2)$) to ($(redhospital.west)-(0,0.2)$);
+            \draw[-stealth, very thick] ($(redhospital.west)-(0,.4)$) to ($(bluehospital.east)-(0,.4)$);
+        }
+
+        % DRAW MULTI-AGENT KEP SOLUTION
+        \onslide<5>{
+            \foreach \i/\j in {A/B, B/D}
+            {
+                \draw[arc] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {B/1, 1/C, C/B}
+            {
+                \draw[usedarc] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {1/2, 2/1}
+            {
+                \draw[arcbend] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {2/3, 3/2, A/D, D/A}
+            {
+                \draw[usedarcbend] (v\i) to (v\j);
+            }
+
+            \foreach \i/\j in {B/1, 1/C}
+            {
+                \draw[usedarc, purple!90] (v\i) to (v\j);
+            }
+            
+            \draw[arc, purple!90] (v3) to (vC);
+
+             % Arrows between hospitals
+            \draw[-stealth, very thick] ($(bluehospital.east)-(0,0.2)$) to ($(redhospital.west)-(0,0.2)$);
+            \draw[-stealth, very thick] ($(redhospital.west)-(0,.4)$) to ($(bluehospital.east)-(0,.4)$);
+        }
+    
+    \end{tikzpicture}
+\end{figure}

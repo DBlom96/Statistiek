@@ -1,0 +1,85 @@
+\begin{figure}
+    \begin{tikzpicture}[overlay, remember picture]
+        \tikzstyle{arc}=[-stealth, very thick, shorten >=2pt, shorten <=2pt];
+        \tikzstyle{arcbend}=[arc, bend right=10];
+        \tikzstyle{bluenode}=[draw=blue, fill=blue!30, circle];
+        \tikzstyle{rednode}=[draw=red, fill=red!30, circle];
+        
+        % BLUE AND RED VERTICES
+        \onslide<+->{
+            \node[bluenode] (v1) at ($(current page.south)+(-2,1.5)$) {$1$};
+            \node[bluenode] (v2) at ($(v1)+(0,2)$) {$2$};
+            \node[bluenode] (v3) at ($(v1)+(0,4)$) {$3$};
+    
+            \node[rednode] (vA) at ($(v3)+(4,0)$) {$A$};
+            \node[rednode] (vB) at ($(v2)+(3,0)$) {$B$};
+            \node[rednode] (vC) at ($(v2)+(5,0)$) {$C$};
+            \node[rednode] (vD) at ($(v1)+(3,0)$) {$D$};
+        }
+
+        % DRAW UNUSED ARCS AND SOLUTION
+        \onslide<+>{
+            \foreach \i/\j in {D/B}
+            {
+                \draw[arc, thin, dashed] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {A/B, B/C}
+            {
+                \draw[arc] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {2/3, 3/2, A/C}
+            {
+                \draw[arcbend, thin, dashed] (v\i) to (v\j);
+            }
+        
+            \foreach \i/\j in {1/2, 2/1, C/A}
+            {
+                \draw[arcbend] (v\i) to (v\j);
+            }
+        }
+
+        % DRAW INTERNATIONAL ARCS
+        \onslide<+>{
+            \foreach \i/\j in {A/B, B/C, D/B}
+            {
+                \draw[arc, thin, dashed] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {1/2, 2/1, 2/3, 3/2, A/C, C/A}
+            {
+                \draw[arcbend, thin, dashed] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {B/1, 1/D}
+            {
+                \draw[arc, thin, dashed, purple!90] (v\i) to (v\j);
+            }
+        }
+
+        % DRAW INTERNATIONAL ARCS
+        \onslide<+>{
+            \foreach \i/\j in {A/B, B/C}
+            {
+                \draw[arc, thin, dashed] (v\i) to (v\j);
+            }
+
+            \foreach \i/\j in {D/B, B/1, 1/D}
+            {
+                \draw[arc] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {1/2, 2/1}
+            {
+                \draw[arcbend, thin, dashed] (v\i) to (v\j);
+            }
+            
+            \foreach \i/\j in {2/3, 3/2, A/C, C/A}
+            {
+                \draw[arcbend] (v\i) to (v\j);
+            }
+        }
+    
+    \end{tikzpicture}
+\end{figure}

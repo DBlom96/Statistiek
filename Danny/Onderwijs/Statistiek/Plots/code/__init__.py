@@ -1,4 +1,0 @@
-from .base import KansverdelingPlotter
-from .discrete import BinomialeVerdelingPlotter, PoissonVerdelingPlotter
-from .continuous import NormaleVerdelingPlotter, ExponentieleVerdelingPlotter, TVerdelingPlotter, ChikwadraatVerdelingPlotter
-from .ztoets import ZToetsPlotter

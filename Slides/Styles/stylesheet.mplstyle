@@ -1,0 +1,53 @@
+# Figure properties
+figure.facecolor     : 2F504D         # Teal background matching your slide
+figure.edgecolor     : 00FFFF
+figure.figsize       : 8, 6           # Default figure size
+
+# Axes properties
+axes.facecolor       : 2F504D         # Axes background same as figure
+axes.edgecolor       : white          # White axes edge for contrast
+axes.labelcolor      : white          # White labels for visibility
+axes.titlecolor      : white          # White title
+axes.titlesize       : 16             # Larger title for presentations
+axes.labelsize       : 14             # Larger axis labels
+axes.grid            : False          # Enable grid
+axes.grid.axis       : both
+# axes.grid.which    : major
+# grid.color         : lightgray      # Light gray grid lines for subtle contrast
+# grid.linestyle     : --             # Dashed grid lines
+
+# Ticks
+xtick.bottom         : False          # Removes the bottom x-ticks
+# xtick.top            : False          # Removes the top x-ticks
+# xtick.major.size     : 0              # Remove size of major x-ticks
+# xtick.minor.size     : 0              # Remove size of minor x-ticks
+ytick.color          : white
+ytick.labelsize      : 12
+
+# Spines
+axes.spines.left     : True           # Show left spine
+axes.spines.right    : False          # Hide right spine
+axes.spines.top      : False          # Hide top spine
+axes.spines.bottom   : True           # Show bottom spine
+
+# Lines
+lines.linewidth      : 2.5            # Thicker lines for readability
+lines.color          : white          # Default line color
+
+# Fonts
+font.size            : 12             # General font size
+font.family          : sans-serif
+font.sans-serif      : DejaVu Sans    # Clean sans-serif font for presentations
+
+# Legend
+legend.frameon       : False          # Remove legend box
+legend.fontsize      : 12             # Larger legend font size
+legend.loc           : best           # Automatically position legend
+
+# Savefig options
+savefig.facecolor    : 2F504D         # Match savefig background to the presentation
+savefig.edgecolor    : 2F504D
+savefig.transparent  : False          # Do not save with transparency (background will be saved)
+savefig.format       : pdf            # Save figures as PDF file
+# Text
+text.color           : white          # Text color (for annotations)

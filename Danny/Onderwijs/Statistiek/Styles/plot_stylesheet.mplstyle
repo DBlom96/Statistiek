@@ -1,8 +1,0 @@
-axes.titlesize: 14
-axes.labelsize: 12
-xtick.labelsize: 10
-ytick.labelsize: 10
-lines.linewidth: 2
-grid.color: d3d3d3
-font.family: sans-serif
-figure.figsize: 6, 4

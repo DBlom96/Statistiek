@@ -1,0 +1,23 @@
+\begin{center}
+    \begin{tikzpicture}[remember picture]
+        \tikzstyle{vertex} = [cloud, draw=black, fill=gray!30, aspect=2.4, inner sep=0pt, align=center];
+            
+        % Draw instance with proposed solution
+        \onslide<1->{
+            \node[vertex, align=center] (v1) at ($(current page.north)+(-7,-2)$) {\small\begin{tabular}{c} Mixed-integer \\ linear programming \end{tabular}};
+            \node[vertex, align=center] (v2) at ($(current page.north)+(-3,-4.5)$) {\small Samenwerkingen};
+            \node[vertex, align=center] (v3) at ($(current page.north)+(-7.5,-5)$) {\small\begin{tabular}{c} Optimalisatie \\ met \\ onzekerheid \end{tabular}};
+            \node[vertex, align=center] (v4) at ($(current page.north)+(-.5,-2.5)$) {\small\begin{tabular}{c} Cross-match \\ tests \end{tabular}};
+            \node[vertex, align=center] (v5) at ($(current page.north)+(-4,-7)$) {\small\begin{tabular}{c} Multi-objective \\ optimization \end{tabular}};
+            \node[vertex, align=center, inner sep=5pt] (v6) at ($(current page.north)+(0.5,-5.5)$) {\small Ethiek};
+    		\node[vertex, align=center, inner sep=7pt] (v7) at ($(current page.north)+(-3,-1.5)$) {\small...};
+    		\node[vertex, align=center, inner sep=10pt] (v8) at ($(current page.north)+(-8,-7.5)$) {...};
+    		\node[vertex, align=center, inner sep=10pt] (v9) at ($(current page.north)+(0,-7.5)$) {...};       
+    	}
+
+        \onslide<2->{
+            \node[vertex, fill=blue!30] (v7) at ($(current page.north)+(-3,-4.5)$) {\small Samenwerkingen};
+        }
+
+    \end{tikzpicture}
+\end{center}

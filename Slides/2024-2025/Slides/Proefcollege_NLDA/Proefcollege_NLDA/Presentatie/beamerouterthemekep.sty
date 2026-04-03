@@ -1,0 +1,27 @@
+\mode<presentation>
+
+% Frame title
+\setbeamertemplate{frametitle}{%
+    \begin{tikzpicture}[overlay, remember picture]
+        \node[shading = axis, rectangle, left color=KEPLightBlue4, right color=KEPLightBlue3, shading angle=135, anchor=north, minimum width=\the\paperwidth, minimum height=3ex] (headbox) at (current page.north) {};
+        \node[anchor=west, KEPwhite, font=\large] at ($(headbox.west)!0.02!(headbox.east)$) {\insertframetitle};
+    \end{tikzpicture}
+}
+
+\addtobeamertemplate{main text}{\vskip-0.5ex}{}
+
+\setbeamertemplate{footline}{%
+    \ifnum\thepage>1\relax%
+        \ifnum\thepage<1\relax
+            \begin{tikzpicture}[overlay, remember picture]
+                \useasboundingbox (0,0) rectangle (\paperwidth, 2ex);
+                \node[minimum width=\paperwidth, minimum height=4ex, anchor=south] (footbox) at (current page.south) {};
+                \node[anchor=west, font=\tiny] at ($(footbox.west)!0.05!(footbox.east)$) {\insertauthor};
+                \node[font=\tiny] at ($(footbox.west)!0.5!(footbox.east)$)  {\insertsubtitle};
+                \node[anchor=east, font=\tiny] at ($(footbox.west)!0.95!(footbox.east)$)  {\insertdate};
+            \end{tikzpicture}%
+        \fi
+    \fi
+}
+
+\mode<all>
