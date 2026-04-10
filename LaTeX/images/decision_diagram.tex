@@ -1,0 +1,64 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{pdflscape}
+
+\begin{document}
+
+
+    \begin{forest}
+    for tree={
+        draw,
+        rounded corners,
+        align=center,
+        edge={->},
+        grow'=east,
+        parent anchor=east,
+        child anchor=west,
+        l sep=30pt,
+        s sep=20pt,
+        minimum width=3.8cm,
+        font=\footnotesize
+    },
+    % 🎯 stijl voor bladeren (leaf nodes)
+    where n children=0{
+        top color=green!20,
+        bottom color=green!20,
+        font=\bfseries
+    }{}
+    [Is de kansvariabele \\ discreet of continu?, fill=orange!20, l sep=50pt
+        [Uitkomstenruimte:\\ binair of geheeltallig?, fill=orange!20, edge label={node[midway, above, sloped]{\footnotesize discreet}}, l sep=55pt
+            [Bernoulli-\\verdeling, fill=orange!20,
+                edge label={node[midway, above, sloped]{\footnotesize binair}}
+            ]
+            [Aantal gebeurtenissen op \\ 
+            discrete experimenten \\
+            of continu interval?, fill=orange!20, 
+                edge label={node[midway, below, sloped]{\footnotesize geheeltallig}}, l sep=55pt
+                [Binomiale\\verdeling, fill=orange!20,
+                    edge label={node[midway, above, sloped]{\footnotesize discreet}}, l sep=200pt
+                ]
+                [Poisson-\\verdeling, fill=orange!20,
+                    edge label={node[midway, below, sloped]{\footnotesize continu}}, l sep=200pt
+                ]
+            ]
+        ]
+        [Zijn alle uitkomsten \\ even waarschijnlijk?, fill=orange!20,
+            edge label={node[midway, sloped, below]{\footnotesize continu}}, l sep=55pt
+            [Uniforme\\verdeling, fill=orange!20,
+                edge label={node[midway, above, sloped]{\footnotesize ja}}, l sep=100pt
+            ]
+            [Is de kansvariabele \\ symmetrisch verdeeld?, fill=orange!20,
+                edge label={node[midway, below, sloped]{\footnotesize nee}}, l sep=55pt
+                [Normale \\verdeling, fill=orange!20,
+                    edge label={node[midway, sloped, above]{\footnotesize ja}}, l sep=55pt
+                ]
+                [Exponentiële\\verdeling, fill=orange!20,
+                    edge label={node[midway, sloped, below]{\footnotesize nee}}, l sep=55pt
+                ]                   
+            ]
+        ]
+    ]
+    \end{forest}
+
+\end{document}
