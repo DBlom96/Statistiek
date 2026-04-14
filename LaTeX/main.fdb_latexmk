@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1776178060.36524 0
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1776178279.86301 0
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/apalike.bst" 1291972791 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/bibliography/references.bib" 0 -1 0 ""
   "main.aux" 0 -1 0 "pdflatex"
@@ -7,7 +7,7 @@
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776178047.59585 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1776178060.3663 0
+["pdflatex"] 1776178269.16404 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1776178279.86382 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775830754 758860 d82f8d8cfa37c0722b05f4611884c428 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1755601769 13257336 70235e7a1464f0f15c5a7808b591ab6e ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -429,21 +429,21 @@
   "huiswerk/week08/opgave_8.m2.tex" 1770817981 2012 0c29746556bb642eb007142b0af5dc4a ""
   "huiswerk/week08/opgave_8.m5.tex" 1764842055 1228 e814beaca87eba57cdb03cc18529662d ""
   "huiswerk/week09.tex" 1764774796 341 dac5d465d82bfad31c8f809eb20cf963 ""
-  "huiswerk/week09/opgave_8.13.tex" 1770818663 3147 69c4760a90c479013e0e55032444aec0 ""
+  "huiswerk/week09/opgave_8.13.tex" 1776178190 3142 e0551f90c89e4edc1dbb5d10d98f057e ""
   "huiswerk/week09/opgave_8.14.tex" 1770818663 2657 70850437b6bd2fa253618b4eccad256b ""
   "huiswerk/week09/opgave_8.17.tex" 1770821750 3317 d05ebda2ba3aed9c57d4b3730f877b94 ""
   "huiswerk/week09/opgave_8.18.tex" 1770818663 5667 f4be2154755db3f1fdc26a2a9d225101 ""
   "huiswerk/week09/opgave_8.19.tex" 1770818663 5753 39253c7bf696a1581fa7f6be0b65b2c5 ""
-  "huiswerk/week09/opgave_8.2.tex" 1770818663 3393 aa8a9a1cc0317d13dd2c2a306e0df8c5 ""
+  "huiswerk/week09/opgave_8.2.tex" 1776178124 3392 7520619387c677736a2add4ba6524c5c ""
   "huiswerk/week09/opgave_8.6.tex" 1770818663 7042 b3c7916e7d455f04df1da4f93d5908fd ""
   "huiswerk/week09/opgave_8.7.tex" 1770818663 2165 a7ff85cef3aa1bafb1d0ae64648eea6e ""
-  "huiswerk/week09/opgave_8.8.tex" 1770818663 6288 2e845dc6924358030e1a2d9a9531692e ""
+  "huiswerk/week09/opgave_8.8.tex" 1776178149 6288 a0e7c595c810b4bfe1c65aafd7d2fb59 ""
   "huiswerk/week09/opgave_8.m4.tex" 1764679469 786 675fb1297f5409b97c81022eb475b481 ""
   "huiswerk/week09/opgave_8.m6.tex" 1770818663 827 78e6b8ac870838d93793fcb5cab27478 ""
   "huiswerk/week10.tex" 1764774793 326 0146cad69b9034c6d7da4de8530b4743 ""
   "huiswerk/week10/opgave_9.11.tex" 1770820348 2476 cd5259838e96ed71987d3dc1d3672504 ""
   "huiswerk/week10/opgave_9.18.tex" 1770818813 3736 71000292eb89160722f3b97b221c5e19 ""
-  "huiswerk/week10/opgave_9.23.tex" 1770820348 4492 8dae1f89756cf81659722917ee83ef5f ""
+  "huiswerk/week10/opgave_9.23.tex" 1776178268 4418 bf2c81e87baa56414f20f5378588be89 ""
   "huiswerk/week10/opgave_9.3.tex" 1770819562 4827 e98ee0022bcf69136094269bea9a9109 ""
   "huiswerk/week10/opgave_9.5.tex" 1770818813 2423 32ba4f6beff04e833620e1a8f3cb3a7b ""
   "huiswerk/week10/opgave_9.7.tex" 1770818893 4854 b9f412924b3307c8ead1a4e7c372737a ""
@@ -487,11 +487,11 @@
   "huiswerk/week13/opgave_13.m3.tex" 1764860889 482 ef61b847d33abf8df7572bbf741011da ""
   "huiswerk/week13/opgave_13.m4.tex" 1764860888 819 00b6bb682923f3664ba947249babcecd ""
   "huiswerk/week13/opgave_13.m6.tex" 1770820406 1013 8eb67fbf3e6cdfc901eafd4c9bed82b2 ""
-  "main.aux" 1776178058 3208 011e68ee2c3527aee0726cd4c8c7c9e5 "pdflatex"
+  "main.aux" 1776178278 3208 011e68ee2c3527aee0726cd4c8c7c9e5 "pdflatex"
   "main.bbl" 0 -1 0 "bibtex main"
-  "main.out" 1776178058 2323 e718f10faf1a85050c94b79e84994cc0 "pdflatex"
+  "main.out" 1776178278 2323 e718f10faf1a85050c94b79e84994cc0 "pdflatex"
   "main.tex" 1776176825 1028 3c6ed708b295e607f102b412c608c1d0 ""
-  "main.toc" 1776178058 1182 4839aefadea885b3a79420c61d24b564 "pdflatex"
+  "main.toc" 1776178278 1182 4839aefadea885b3a79420c61d24b564 "pdflatex"
   "titlepage.tex" 1764596460 449 abd6d81c7850212d60f59966be0c13ed ""
   (generated)
   "main.aux"
