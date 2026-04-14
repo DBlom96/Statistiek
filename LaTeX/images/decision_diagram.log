@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  10 APR 2026 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  13 APR 2026 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -436,7 +436,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 Non-PDF special ignored!
-<special> papersize=594.08215pt,212.5467pt
+<special> papersize=614.08215pt,232.5467pt
 {C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (decision_diagram.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
@@ -446,13 +446,13 @@ L3 programming layer <2025-07-20>
 Here is how much of TeX's memory you used:
  24142 strings out of 468133
  584926 string characters out of 5430719
- 990723 words of memory out of 5000000
+ 990772 words of memory out of 5000000
  52464 multiletter control sequences out of 15000+600000
  628956 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,11n,132p,1670b,1775s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on decision_diagram.pdf (1 page, 33830 bytes).
+Output written on decision_diagram.pdf (1 page, 33814 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

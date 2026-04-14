@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1775833095.77668 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/images/decision_diagram.tex" "decision_diagram.pdf" "decision_diagram" 1775833097.25028 0
+["pdflatex"] 1776072322.0736 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/images/decision_diagram.tex" "decision_diagram.pdf" "decision_diagram" 1776072323.56944 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775830754 758860 d82f8d8cfa37c0722b05f4611884c428 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1755601769 13257336 70235e7a1464f0f15c5a7808b591ab6e ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -127,9 +127,9 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/images/decision_diagram.tex" 1775833094 2468 51fe2743135206096015663c05ccec8c ""
-  "decision_diagram.aux" 1775833097 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "decision_diagram.tex" 1775833094 2468 51fe2743135206096015663c05ccec8c ""
+  "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/images/decision_diagram.tex" 1776072317 2481 61dbc2178b5f5e4d9109b875c09d0fba ""
+  "decision_diagram.aux" 1776072323 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "decision_diagram.tex" 1776072317 2481 61dbc2178b5f5e4d9109b875c09d0fba ""
   (generated)
   "decision_diagram.aux"
   "decision_diagram.log"
