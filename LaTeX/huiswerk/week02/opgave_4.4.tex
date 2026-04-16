@@ -15,7 +15,7 @@
     \item Teken de kansfunctie.
     \answer{
         \begin{center}
-            \resizebox{0.9\textwidth}{!}{
+            \resizebox{0.5\textwidth}{!}{
                 \includegraphics{opg4.4a.png}
             }
         \end{center}
@@ -37,7 +37,7 @@
         In een grafiekvorm ziet dit er als volgt uit:
         
         \begin{center}
-            \resizebox{0.9\textwidth}{!}{
+            \resizebox{0.7\textwidth}{!}{
                 \includegraphics{opg4.4b.png}
             }
         \end{center}
@@ -54,7 +54,11 @@
     \item Er worden twee willekeurige potten augurken geselecteerd.
     Hoe groot is de kans dat beide potten meer dan $18$ augurken bevatten?
     \answer{
-        Als er twee willekeurige potten geselecteerd worden, dan geldt dat beide potten met kans $P(X > 18) = 1 - P(X \le 18) = 1 - 0.85 = 0.15$ meer dan $18$ augurken bevatten.
+        Stel er worden twee willekeurige potten geselecteerd.
+        De kans dat een pot meer dan $18$ augurken bevat is gelijk aan
+        \[
+            P(X > 18) = 1 - P(X \leq 18) = 1 - F(18) = 1 - 0.85 = 0.15.
+        \]
         Omdat de potten onafhankelijk van elkaar gevuld zijn, is de totale kans gelijk aan $0.15 \cdot 0.15 = 0.0225$.
     }  
 
@@ -68,6 +72,5 @@
                           &= 0.15 \cdot 0.05 + 0.10 \cdot 0.10 + 0.05 \cdot 0.15 \\
                           &= 0.025.
         \end{align*}
-        Met \SI{2.5}{\percent} kans is het totaal aantal augurken in twee willekeurige potten samen gelijk aan $38$.
     }
     \end{enumerate}

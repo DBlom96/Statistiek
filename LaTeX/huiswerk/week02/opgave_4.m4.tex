@@ -16,4 +16,11 @@
     \item $0.10$
     \item $0.16$
 \end{enumerate}
-\answer{Het juiste antwoord is (a)}
+\answer{
+    In dit geval is niet de kansfunctie $f(k)$ gegeven, maar de (cumulatieve) verdelingsfunctie $F(k) = P(X \leq k)$, oftewel de CDF.
+    De kans dat $X$ de waarde $14$ aanneemt, oftewel $P(X=14)$, kunnen we berekenen door het verschil te nemen tussen de verdelingsfunctie bij $14$ en de verdelingsfunctie bij de vorige uitkomst, namelijk $13$:
+    \[
+        P(X=14) = P(X\leq 14) - P(X\leq 13) = F(14) - F(13) = 0.84 - 0.66 = 0.18.
+    \]
+    Het juiste antwoord is (a).
+}

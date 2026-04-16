@@ -5,20 +5,20 @@ De uitkomst van één draai met het rad kan men beschouwen als een willekeurige 
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat een willekeurige draai een uitkomst oplevert tussen $40.00$ en $75.00$?
     \answer{
-        Bij het rad hebben we te maken met een uniforme verdeling tussen linkergrens $a=0$ en rechtergrens $b=100$.
-        Laat $X$ de kansvariabele zijn die de waarde beschrijft van een draai aan het rad.
-        Een uitkomst van deze kansvariabele is een getal $x$ tussen $0$ en $100$.
-        Deze uitkomst komt uit een continue kansverdeling, met een kansdichtheidsfunctie (PDF) van
+        \begin{center}
+            \resizebox{0.7\textwidth}{!}{
+                \includegraphics{opg4.14a_1.png}
+            }
+        \end{center}
+        Laat $X$ de kansvariabele zijn die de resultaat beschrijft van een draai aan het rad.
+        De uitkomstenruimte van $X$ is het interval tussen $0$ en $100$.
+        Deze kansdichtheidsfunctie van $X$ is gelijk aan
         \[
             f(x) = \begin{cases} \frac{1}{b-a} = \frac{1}{100-0} = 0.01, & \text{ als } a \le x \le b\\
                                  0,                                              & \text{ anders.}   
             \end{cases}  
         \]
-        \begin{center}
-            \resizebox{0.9\textwidth}{!}{
-                \includegraphics{opg4.14a_1.png}
-            }
-        \end{center}
+        
         De cumulatieve verdelingsfunctie (CDF) van de uniforme verdeling tussen $0$ en $100$ laat zich beschrijven door
         \[
             F(x) = P(X \le x)=\begin{cases} 0, & \text{ als } x < 0\\ \frac{x-a}{b-a} = \frac{x}{100}, &\text{ als } 0 \le x < 100\\ 1, & \text{ als } x \ge 100 \end{cases}

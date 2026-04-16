@@ -16,18 +16,67 @@ Dat is \SI{40}{\percent} bij Dirk, \SI{60}{\percent} bij Judith en \SI{70}{\perc
         \begin{align*}
             P(S)    &= P(S|D)\cdot P(D) + P(S|J) \cdot P(J) + P(S|I) \cdot P(I) \\
                     &= 0.4 \cdot 0.4 + 0.6 \cdot 0.4 + 0.7 \cdot 0.2 \\
-                    &= 0.54
+                    &= 0.54.
         \end{align*}
         Peter slaagt dus met $\SI{54}{\percent}$ kans voor zijn rijexamen.
-    }
+
+        \textbf{Alternatief:} We kunnen ook een tabel opstellen om de kansen te berekenen.
+        De rijtotalen zijn gegeven in de vraag (namelijk de verdeling van kandidaten over de drie examinatoren):
+        \begin{center}
+            \begin{tabular}{c|cc|c}
+                \toprule
+                    Examinator & wel geslaagd & niet geslaagd & \textbf{Totaal}\\
+                \midrule 
+                    Dirk   & & & \SI{40}{\percent} \\
+                    Judith & & & \SI{40}{\percent} \\
+                    Ilse   & & & \SI{20}{\percent} \\
+                \midrule
+                    \textbf{Totaal} & & & \SI{100}{\percent} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Vervolgens verdelen we per rij het rijtotaal over de cellen in de rij, gebaseerd op de slagingskans bij iedere examinator:
+        \begin{center}
+            \begin{tabular}{c|cc|c}
+                \toprule
+                    Examinator & wel geslaagd & niet geslaagd & \textbf{Totaal}\\
+                \midrule 
+                    Dirk   & \SI{40}{\percent} van \SI{40}{\percent} = \SI{16}{\percent} & \SI{60}{\percent} van \SI{40}{\percent} = \SI{24}{\percent} & \SI{40}{\percent} \\
+                    Judith & \SI{60}{\percent} van \SI{40}{\percent} = \SI{24}{\percent} & \SI{40}{\percent} van \SI{40}{\percent} = \SI{16}{\percent} & \SI{40}{\percent} \\
+                    Ilse   & \SI{70}{\percent} van \SI{20}{\percent} = \SI{14}{\percent} & \SI{30}{\percent} van \SI{20}{\percent} = \SI{6}{\percent} & \SI{20}{\percent} \\
+                \midrule
+                    \textbf{Totaal} & & & \SI{100}{\percent} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Op basis van deze tabel kunnen we ook de kolomtotalen bepalen (oftewel de kansen dat een kandidaat slaagt of niet slaagt, ongeacht de examinator):
+        \begin{center}
+            \begin{tabular}{c|cc|c}
+                \toprule
+                    Examinator & wel geslaagd & niet geslaagd & \textbf{Totaal}\\
+                \midrule 
+                    Dirk   & \SI{16}{\percent} & \SI{24}{\percent} & \SI{40}{\percent} \\
+                    Judith & \SI{24}{\percent} & \SI{16}{\percent} & \SI{40}{\percent} \\
+                    Ilse   & \SI{14}{\percent} & \SI{6}{\percent} & \SI{20}{\percent} \\
+                \midrule
+                    \textbf{Totaal} & \SI{54}{\percent} & \SI{46}{\percent} & \SI{100}{\percent} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Uit deze tabel kunnen we ook aflezen dat de kans dat Peter slaagt gelijk is aan \SI{54}{\percent}.
+    }   
     
     \item Kandidaat Peter blijkt geslaagd te zijn. Hoe groot is de kans dat hij examen heeft afgelegd bij Ilse?
     \answer{
         In dit geval willen we de kans $P(I|S)$ bepalen. Uit de regel van Bayes volgt dan:
         \[
-            P(I|S) = \frac{P(S|I)\cdot P(I)}{P(S)} = \frac{0.7 \cdot 0.2}{0.54} \approx 0.2593
+            P(I|S) = \frac{P(S|I)\cdot P(I)}{P(S)} = \frac{0.7 \cdot 0.2}{0.54} \approx 0.2593.
         \]
         Met \SI{25.93}{\percent} kans heeft Peter zijn examen afgelegd bij Ilse, gegeven dat hij is geslaagd.
+
+        \textbf{Alternatief:} We kunnen opnieuw de tabel gebruiken om deze kans te bepalen. 
+        Uit de tabel kunnen we aflezen dat \SI{54}{\percent} van alle kandidaten slaagt, en dat \SI{14}{\percent} van alle kandidaten slaagt bij Ilse.
+        De kans dat Peter examen heeft afgelegd bij Ilse, gegeven dat hij is geslaagd, is dus gelijk aan $\frac{14}{54} \approx 0.2593$.
     }
 \end{enumerate}
 Sommige gezakte kandidaten dienen een klacht in over het examen. 
@@ -44,9 +93,9 @@ Bij Judith is dat \SI{6}{\percent} en bij Ilse is dat \SI{3}{\percent}.
                 \toprule
                     Examinator & wel geslaagd & niet geslaagd & \textbf{Totaal}\\
                 \midrule 
-                    Dirk & \SI{40}{\percent} van \SI{40}{\percent} = \SI{16}{\percent} & \SI{60}{\percent} van \SI{40}{\percent} = \SI{24}{\percent} & \SI{40}{\percent} \\
-                    Judith & \SI{60}{\percent} van \SI{40}{\percent} = \SI{24}{\percent} & \SI{40}{\percent} van \SI{40}{\percent} = \SI{16}{\percent} & \SI{40}{\percent} \\
-                    Ilse & \SI{70}{\percent} van \SI{20}{\percent} = \SI{14}{\percent} & \SI{30}{\percent} van \SI{20}{\percent} = \SI{6}{\percent} & \SI{20}{\percent} \\
+                    Dirk & \SI{16}{\percent} & \SI{24}{\percent} & \SI{40}{\percent} \\
+                    Judith & \SI{24}{\percent} & \SI{16}{\percent} & \SI{40}{\percent} \\
+                    Ilse & \SI{14}{\percent} & \SI{6}{\percent} & \SI{20}{\percent} \\
                 \midrule
                     \textbf{Totaal} & \SI{54}{\percent} & \SI{46}{\percent} & \SI{100}{\percent} \\
                 \bottomrule
@@ -54,9 +103,11 @@ Bij Judith is dat \SI{6}{\percent} en bij Ilse is dat \SI{3}{\percent}.
         \end{center}
         Het percentage deelnemers dat zakt en een klacht over Dirk instuurt is dus \SI{10}{\percent} van \SI{24}{\percent} = \SI{2.4}{\percent}.
         Daarnaast is het percentage deelnemers dat zakt en een klacht instuurt (over alle examinatoren) gelijk aan
-        \[
-            0.1 \cdot 0.24 + 0.06 \cdot 0.16 + 0.03 \cdot 0.06 = 0.0354 \rightarrow \SI{3.54}{\percent}
-        \]
-        De kans dat een klacht over Dirk gaat is dus gelijk aan $\frac{2.4}{3.54} \approx 0.6779 \rightarrow \SI{67.79}{\percent}$.
+        \begin{align*}
+            &\SI{10}{\percent} \text{ van } \SI{24}{\percent} + \SI{6}{\percent} \text{ van } \SI{16}{\percent} + \SI{3}{\percent} \text{ van } \SI{6}{\percent} \\
+            &= 0.1 \cdot 0.24 + 0.06 \cdot 0.16 + 0.03 \cdot 0.06 \\
+            &=0.0354 \rightarrow \SI{3.54}{\percent}.
+        \end{align*}
+        De kans dat een klacht over Dirk gaat is dus gelijk aan $\frac{2.4}{3.54} \approx 0.6779$, oftewel $\SI{67.79}{\percent}$.
     }
 \end{enumerate}
