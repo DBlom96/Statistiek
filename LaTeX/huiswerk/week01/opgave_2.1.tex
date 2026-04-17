@@ -1,0 +1,59 @@
+\question{2.1}{
+    Aan $20$ personen die allemaal $40$ jaar oud zijn, is gevraagd hoeveel jaar zij volledig dagonderwijs hebben genoten sinds hun eerste levensjaar.
+    De resultaten waren als volgt:
+    \begin{center}
+        \begin{tabular}{cccccccccc}
+            \multicolumn{10}{l}{\textit{Aantal jaren dagonderwijs van 20 personen}} \\
+            \toprule
+                $10$ & $16$ & $18$ & $16$ & $13$ & $21$ & $18$ & $20$ & $12$ & $15$ \\
+                $12$ & $9$ & $14$ & $10$ & $15$ & $12$ & $19$ & $12$ & $13$ & $10$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Bereken voor deze groep van $20$ personen het rekenkundig gemiddelde van het aantal jaren op school.
+    \answer{
+        Voor de berekening van het rekenkundig gemiddelde van $20$ waarden geldt de volgende formule:
+        \begin{align*}
+            \samplemeanx = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{x_1 + x_2 + \ldots + x_{20}}{20}
+        \end{align*}
+
+        De $20$ uitkomsten leveren gesommeerd:
+        \begin{align*}
+            \sum_i x_i = x_1 + x_2 + \ldots + x_{20} = 10 + 16 + \ldots + 10 = 285
+        \end{align*}
+        Voor het rekenkundig gemiddelde vinden we dan:
+        \begin{align*}
+            \samplemeanx = \frac{x_1 + x_2 + \ldots + x_{20}}{20} = \frac{285}{20} = 14.25.
+        \end{align*}
+    }
+
+    \item Bereken de mediaan.
+    \answer{
+        Om de mediaan te kunnen bepalen, zetten we de getallen op volgorde.
+        Dit levert:
+        \begin{center}
+            \begin{tabular}{cccccccccc}
+                \multicolumn{10}{l}{\textit{Aantal jaren dagonderwijs van 20 personen}} \\
+                \toprule
+                    $9$ & $10$ & $10$ & $10$ & $12$ & $12$ & $12$ & $12$ & $13$ & $13$ \\
+                    $14$ & $15$ & $15$ & $16$ & $16$ & $18$ & $18$ & $19$ & $20$ & $21$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Omdat we hier een even aantal uitkomsten hebben, geldt als mediaan het gemiddelde van de twee middelste uitkomsten, oftewel:
+        \begin{align*}
+            \text{mediaan } = \frac{13 + 14}{2} = 13.5.
+        \end{align*}
+    }
+
+    \item Bepaal de modus.
+    \answer{
+        In het geval van afzonderlijke waarnemingen zoals hier, is de modus gedefinieerd als de uitkomst met de hoogste frequentie.
+        Inspectie van de uitkomsten levert ons dat de uitkomst $12$ het meeste voorkomt. De modus is dus $12$, deze komt namelijk vier keer voor, meer dan welke andere uitkomst.
+    }
+    
+\end{enumerate}      
+
