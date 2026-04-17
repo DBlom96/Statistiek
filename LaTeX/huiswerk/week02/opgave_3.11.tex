@@ -68,18 +68,25 @@ Dat is \SI{40}{\percent} bij Dirk, \SI{60}{\percent} bij Judith en \SI{70}{\perc
     
     \item Kandidaat Peter blijkt geslaagd te zijn. Hoe groot is de kans dat hij examen heeft afgelegd bij Ilse?
     \answer{
-        In dit geval willen we de kans $P(I|S)$ bepalen. Uit de regel van Bayes volgt dan:
+        We kunnen opnieuw de tabel gebruiken om deze kans te bepalen. 
+        Uit de tabel kunnen we aflezen dat \SI{54}{\percent} van alle kandidaten slaagt, en dat \SI{14}{\percent} van alle kandidaten slaagt bij Ilse.
+        De kans dat Peter examen heeft afgelegd bij Ilse, gegeven dat hij is geslaagd, is dus gelijk aan $\frac{14}{54} \approx 0.2593$.
+        
+        \textbf{Alternatief:} we kunnen opnieuw in termen van gebeurtenissen kijken naar deze vraag.
+        In dit geval willen we de conditionele kans $P(I|S)$ bepalen. 
+        Hiervoor kun je de regel van Bayes gebruiken om conditionele kansen om te keren, aangezien we $P(S|I)$ en $P(I)$ al kennen, evenals $P(S)$ uit het eerste deel van deze vraag:
+        \[
+            P(I|S) = \frac{P(S|I)\cdot P(I)}{P(S)}.
+        \]
+
+        Uit de regel van Bayes volgt dan:
         \[
             P(I|S) = \frac{P(S|I)\cdot P(I)}{P(S)} = \frac{0.7 \cdot 0.2}{0.54} \approx 0.2593.
         \]
-        Met \SI{25.93}{\percent} kans heeft Peter zijn examen afgelegd bij Ilse, gegeven dat hij is geslaagd.
-
-        \textbf{Alternatief:} We kunnen opnieuw de tabel gebruiken om deze kans te bepalen. 
-        Uit de tabel kunnen we aflezen dat \SI{54}{\percent} van alle kandidaten slaagt, en dat \SI{14}{\percent} van alle kandidaten slaagt bij Ilse.
-        De kans dat Peter examen heeft afgelegd bij Ilse, gegeven dat hij is geslaagd, is dus gelijk aan $\frac{14}{54} \approx 0.2593$.
     }
 \end{enumerate}
-Sommige gezakte kandidaten dienen een klacht in over het examen. 
+
+\noindent Sommige gezakte kandidaten dienen een klacht in over het examen. 
 Op basis van ervaring weten we dat \SI{10}{\percent} van de gezakten van examinator Dirk een klacht indient.
 Bij Judith is dat \SI{6}{\percent} en bij Ilse is dat \SI{3}{\percent}.
 \begin{enumerate}[label=(\alph*)]
@@ -105,9 +112,9 @@ Bij Judith is dat \SI{6}{\percent} en bij Ilse is dat \SI{3}{\percent}.
         Daarnaast is het percentage deelnemers dat zakt en een klacht instuurt (over alle examinatoren) gelijk aan
         \begin{align*}
             &\SI{10}{\percent} \text{ van } \SI{24}{\percent} + \SI{6}{\percent} \text{ van } \SI{16}{\percent} + \SI{3}{\percent} \text{ van } \SI{6}{\percent} \\
-            &= 0.1 \cdot 0.24 + 0.06 \cdot 0.16 + 0.03 \cdot 0.06 \\
-            &=0.0354 \rightarrow \SI{3.54}{\percent}.
+            &= \SI{2.4}{\percent} + \SI{0.96}{\percent} + \SI{0.18}{\percent} \\
+            &= \SI{3.54}{\percent}.
         \end{align*}
-        De kans dat een klacht over Dirk gaat is dus gelijk aan $\frac{2.4}{3.54} \approx 0.6779$, oftewel $\SI{67.79}{\percent}$.
+        De kans dat een klacht over Dirk gaat is dus gelijk aan $\frac{\SI{2.4}{\percent}}{\SI{3.54}{\percent}} \approx 0.6779$.
     }
 \end{enumerate}
