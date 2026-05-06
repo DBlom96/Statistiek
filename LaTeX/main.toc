@@ -1,0 +1,5 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{Inhoudsopgave}{i}{chapter*.1}%
+\contentsline {chapter}{\chapternumberline {1}Grondslagen statistiek en datavisualisatie}{1}{chapter.1}%
+\contentsline {chapter}{\chapternumberline {2}Discrete kansvariabelen}{19}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}Continue kansvariabelen}{39}{chapter.3}%

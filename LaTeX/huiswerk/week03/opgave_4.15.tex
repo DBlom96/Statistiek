@@ -23,6 +23,12 @@
                 \includegraphics{opgave4.15a_1.png}
             }
         \end{center} 
+        {\itshape \textbf{Merk op:} in dit geval is de oppervlakte onder de grafiek van $f$ ook te berekenen als de oppervlakte van een rechthoek met lengte $10-5=5$ en hoogte $0.2$.
+        Dit geeft een oppervlakte van 
+        \[
+            \text{lengte} \cdot \text{hoogte} = 5 \cdot 0.2 = 1.
+        \]
+        }
 
         Voor het tweede geval geldt dat het een stijgende lineaire functie is (de richtingscoëfficiënt $\frac{2}{5} > 0$), dus de minimale waarde van $f$ op
         het interval $5 \le x \le 10$ wordt aangenomen in de kleinste $x$, namelijk $x=5$.
@@ -39,6 +45,13 @@
                 \includegraphics{opgave4.15a_2.png}
             }
         \end{center} 
+        
+        {\itshape \textbf{Merk op:}  in dit geval is de oppervlakte onder de grafiek van $f$ ook te berekenen als de oppervlakte van een driehoek met lengte $10-5=5$ en hoogte $2$.
+            Dit geeft een oppervlakte van 
+            \[
+                \frac{1}{2} \cdot \text{lengte} \cdot \text{hoogte} = \frac{1}{2} \cdot 5 \cdot 2 = 5.
+            \]
+        }
     }
     
     \item Bereken voor de gegevens bij vraag (a) de verdelingsfunctie $F(x)$ van de betreffende variabele.
@@ -47,7 +60,7 @@
         \[
             F(x) = P(X\le x) = \int_{-\infty}^{x} f(y) \dy,
         \]
-        oftewel voor iedere $x$ is $F(x)$ gelijk aan de oppervlakte onder de grafiek van $f$ van $-\infty$ tot en met $x$.
+        oftewel voor iedere $x$ is $F(x)$ gelijk aan de oppervlakte onder de grafiek van $f$ van $-\infty$ tot en met $x$ (links van $x$).
         We gebruiken hier $y$ als variabele, omdat $x$ al is gedefinieerd als bovengrens van de integraal.
 
         Voor $x \le 5$ geldt dat 
@@ -57,7 +70,7 @@
         aangezien $f(y) = 0$ voor alle $y < 5$.
         Voor waarden tussen $5$ en $10$ is de kansdichtheid gelijk aan $0.20$, oftewel voor $x$ tussen $5$ en $10$ geldt:
         \[
-            F(x) = \int_{-\infty}^{x} f(y) \dy = \int_{-\infty}^{5} 0 \dy + \int_{5}^{x} 0.2 \dy = 0.2(x - 5)
+            F(x) = \int_{-\infty}^{x} f(y) \dy = \int_{-\infty}^{5} 0 \dy + \int_{5}^{x} 0.2 \dy = 0.2\cdot (x - 5)
         \]
         Deze laatste stap komt van het feit dat de oppervlakte onder de grafiek een rechthoek is met breedte $x-5$ en hoogte $0.2$.
 
@@ -75,5 +88,7 @@
                 \includegraphics{opg4.15b.png}
             }
         \end{center} 
+
+        
     }
 \end{enumerate}
