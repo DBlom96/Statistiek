@@ -44,8 +44,9 @@ Op grond van ervaring is vastgesteld dat het aantal storingen $X$ per week in de
 
         \item Bereken het verwachte aantal storingen per jaar ($=50$ weken).
         \answer{
-            We kunnen het aantal storingen in 50 weken zien als de som $X_{\text{som}}$ van 50 onderling onafhankelijke kansvariabelen $X_1$, $X_2$, \ldots $X_{50}$.
-            Aangezien de verwachtingswaarde een lineaire functie is, geldt er dat:
+            Het verwachte aantal storingen per week is gelijk aan $0.9$, oftewel het verwachte aantal storing per $50$ weken is gelijk aan $50 \cdot 0.9=45$.
+
+            We mogen dit zeggen omdat de verwachtingswaarde van een som van kansvariabelen $X_{\text{som}} = X_1 + X_2 + X_{50}$ gelijk is aan de som van verwachtingswaarden, oftewel:
             \begin{align*}
                 E(X_{\text{som}})=E(X_{1} + X_2 + \ldots + X_{50})    &= E(X_1) + E(X_2) + \ldots + E(X_{50})\\
                                                     &= 0.9 + 0.9 + \ldots + 0.9 \\

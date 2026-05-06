@@ -4,23 +4,25 @@ Dat is \SI{40}{\percent} bij Dirk, \SI{60}{\percent} bij Judith en \SI{70}{\perc
 \begin{enumerate}[label=(\alph*)]
     \item Kandidaat Peter van der Meer gaat rijexamen doen bij een van de drie examinatoren. Hoe groot is de kans dat hij slaagt?
     \answer{
-        Definieer de gebeurtenissen 
-        \begin{itemize}
-            \item $S = \{\text{Peter slaagt}\}$
-            \item $D = \{\text{Peter doet examen bij Dirk}\}$
-            \item $J = \{\text{Peter doet examen bij Judith}\}$
-            \item $I = \{\text{Peter doet examen bij Ilse}\}$
-        \end{itemize}
-        Uit de vraag volgt dan dat $P(D)=0.4, P(J)=0.4$ en $P(I)=0.2$, evenals de conditionele kansen $P(S|D)=0.4$, $P(S|J)=0.6$ en $P(S|I)=0.7$.
-        In dat geval is de kans dat Peter slaagt gelijk aan
-        \begin{align*}
-            P(S)    &= P(S|D)\cdot P(D) + P(S|J) \cdot P(J) + P(S|I) \cdot P(I) \\
-                    &= 0.4 \cdot 0.4 + 0.6 \cdot 0.4 + 0.7 \cdot 0.2 \\
-                    &= 0.54.
-        \end{align*}
-        Peter slaagt dus met $\SI{54}{\percent}$ kans voor zijn rijexamen.
+        % Definieer de gebeurtenissen 
+        % \begin{itemize}
+        %     \item $S = \{\text{Peter slaagt}\}$
+        %     \item $D = \{\text{Peter doet examen bij Dirk}\}$
+        %     \item $J = \{\text{Peter doet examen bij Judith}\}$
+        %     \item $I = \{\text{Peter doet examen bij Ilse}\}$
+        % \end{itemize}
+        % Uit de vraag volgt dan dat $P(D)=0.4, P(J)=0.4$ en $P(I)=0.2$, evenals de conditionele kansen $P(S|D)=0.4$, $P(S|J)=0.6$ en $P(S|I)=0.7$.
+        % In dat geval is de kans dat Peter slaagt gelijk aan
+        % \begin{align*}
+        %     P(S)    &= P(S|D)\cdot P(D) + P(S|J) \cdot P(J) + P(S|I) \cdot P(I) \\
+        %             &= 0.4 \cdot 0.4 + 0.6 \cdot 0.4 + 0.7 \cdot 0.2 \\
+        %             &= 0.54.
+        % \end{align*}
+        % Peter slaagt dus met $\SI{54}{\percent}$ kans voor zijn rijexamen.
 
-        \textbf{Alternatief:} We kunnen ook een tabel opstellen om de kansen te berekenen.
+        % \textbf{Alternatief:} 
+        We bekijken de gezamenlijke kansverdeling van de variabelen \enquote{examinator} en \enquote{resultaat van het examen}.
+        Hiertoe moeten we een kruistabel opstellen om de discrete kansen te berekenen.
         De rijtotalen zijn gegeven in de vraag (namelijk de verdeling van kandidaten over de drie examinatoren):
         \begin{center}
             \begin{tabular}{c|cc|c}
@@ -63,19 +65,19 @@ Dat is \SI{40}{\percent} bij Dirk, \SI{60}{\percent} bij Judith en \SI{70}{\perc
                 \bottomrule
             \end{tabular}
         \end{center}
-        Uit deze tabel kunnen we ook aflezen dat de kans dat Peter slaagt gelijk is aan \SI{54}{\percent}.
+        Uit deze tabel kunnen we ook aflezen dat \SI{54}{\percent} van de kandidaten slaagt, dus de kans dat Peter slaagt gelijk is aan $0.54$.
     }   
     
     \item Kandidaat Peter blijkt geslaagd te zijn. Hoe groot is de kans dat hij examen heeft afgelegd bij Ilse?
     \answer{
-        In dit geval willen we de kans $P(I|S)$ bepalen. Uit de regel van Bayes volgt dan:
-        \[
-            P(I|S) = \frac{P(S|I)\cdot P(I)}{P(S)} = \frac{0.7 \cdot 0.2}{0.54} \approx 0.2593.
-        \]
-        Met \SI{25.93}{\percent} kans heeft Peter zijn examen afgelegd bij Ilse, gegeven dat hij is geslaagd.
+        % In dit geval willen we de kans $P(I|S)$ bepalen. Uit de regel van Bayes volgt dan:
+        % \[
+        %     P(I|S) = \frac{P(S|I)\cdot P(I)}{P(S)} = \frac{0.7 \cdot 0.2}{0.54} \approx 0.2593.
+        % \]
+        % Met \SI{25.93}{\percent} kans heeft Peter zijn examen afgelegd bij Ilse, gegeven dat hij is geslaagd.
 
-        \textbf{Alternatief:} We kunnen opnieuw de tabel gebruiken om deze kans te bepalen. 
-        Uit de tabel kunnen we aflezen dat \SI{54}{\percent} van alle kandidaten slaagt, en dat \SI{14}{\percent} van alle kandidaten slaagt bij Ilse.
+        We kunnen opnieuw de kruistabel voor de gezamenlijke kansverdeling gebruiken om deze kans te bepalen. 
+        Uit de tabel kunnen we aflezen dat \SI{54}{\percent} van alle kandidaten slaagt, en dat \SI{14}{\percent} van alle kandidaten slaagt en Ilse als examinator heeft.
         De kans dat Peter examen heeft afgelegd bij Ilse, gegeven dat hij is geslaagd, is dus gelijk aan $\frac{14}{54} \approx 0.2593$.
     }
 \end{enumerate}
@@ -87,7 +89,7 @@ Bij Judith is dat \SI{6}{\percent} en bij Ilse is dat \SI{3}{\percent}.
     \item Er komt een klacht binnen over het examen zonder vermelding van de naam van de examinator.
     Hoe groot is de kans dat de klacht over Dirk gaat?
     \answer{
-        De relatieve frequenties van combinaties van \enquote{examinator} en \enquote{wel of niet geslaagd zijn} vinden we als volgt:
+        De relatieve frequenties van combinaties van uitkomsten voor de variabelen \enquote{examinator} en \enquote{resultaat van het examen} zijn als volgt:
         \begin{center}
             \begin{tabular}{c|cc|c}
                 \toprule
