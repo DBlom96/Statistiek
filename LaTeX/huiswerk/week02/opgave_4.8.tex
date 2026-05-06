@@ -1,0 +1,71 @@
+\question{4.8}{
+    Een verzekeringsmaatschappij heeft een analyse gemaakt van de schadeclaims die in een gegeven jaar werden ingediend door mensen met een WA-verzekering.
+    Op basis van deze gegevens is de kansverdeling geformuleerd in de tabel.
+    Hierin staat per individuele verzekerde aangegeven hoe groot in een gegeven jaar de kansen zijn op uitbetaling van een bepaald schadebedrag.
+    \begin{center}
+        \begin{tabular}{cc}
+            \toprule
+                {\bfseries Schadebedrag $k$ (euro)} & {\bfseries Kans $P(X=k)$} \\
+            \cmidrule{1-1} \cmidrule{2-2}
+                $0$ & $0.85$ \\
+                $100$ & $0.05$ \\
+                $200$ & $0.04$ \\
+                $400$ & $0.03$ \\
+                $1000$ & $0.02$ \\
+                $3000$ & $0.01$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Bereken het verwachte schadebedrag per klant.
+        \answer{
+            Het verwachte schadebedrag per klant is de verwachtingswaarde van de kansvariabele $X$ en wordt als volgt berekend:
+            \begin{align*}
+                E(X)    &= \sum_k k \cdot P(X=k) \\
+                        &= 0 \cdot P(X=0) + 100 \cdot P(X=100) + \ldots + 3000 \cdot P(X=3000) \\
+                        &= 0 \cdot 0.85 + 100 \cdot 0.05 + \ldots + 3000 \cdot 0.01 \\
+                        &= 75.
+            \end{align*}
+            Het verwachte schadebedrag per klant is dus \euro $75$.
+        }
+
+        \item Veronderstel dat de schadeclaims per klant voor opeenvolgende jaren mogen worden beschouwd als onderling onafhankelijke kansvariabelen.
+        Hoe groot is de kans dat een willekeurige klant in drie opeenvolgende jaren telkens een bedrag van minstens $1000$ euro claimt?
+        Hoe groot is de kans dat men in drie opeenvolgende jaren geen enkele keer een schadebedrag claimt (dus $X=0$ in alle jaren)?
+        \answer{
+            De kans dat een willekeurige klant in drie opeenvolgende jaren telkens een bedrag van minstens \euro $1000$ claimt, is de kans dat $X$ in elk van de drie jaren gelijk is aan $1000$ of $3000$.
+            We berekenen deze kans (voor een enkel jaar) als volgt:
+            \begin{align*}
+                P(X \ge 1000)   &= P(X=1000) + P(X=3000) \\
+                                &= 0.02 + 0.01 \\
+                                &= 0.03.
+            \end{align*}
+            De kans dat een klant in drie opeenvolgende jaren telkens een bedrag van minstens \euro $1000$ claimt, is dan (aangezien de claims per jaar onafhankelijk zijn):
+            \[
+                P(X \ge 1000)^3 = (0.03)^3 = 0.000027.
+            \]
+
+            Op eenzelfde manier is de kans dat een klant in een enkel jaar geen schadebedrag claimt $P(X=0) = 0.85$.
+            Aangezien de claims per jaar onafhankelijk zijn, is de kans dat een klant in drie opeenvolgende jaren geen enkel schadebedrag claimt:
+            \[
+                P(X=0)^3 = (0.85)^3 \approx 0.6141.
+            \]
+            De kans dat men in drie opeenvolgende jaren geen enkele keer een schadebedrag claimt is dus ongeveer $61.41\%$.
+        }
+
+        \item De WA-verzekering kost \euro $98$ per verzekerde per jaar.
+        De maatschappij heeft $25000$ klanten.
+        Hoe is de verwachte winstbijdrage per jaar?
+        \answer{
+            We kunnen de verwachtewinstbijdrage per klant berekenen als het verschil tussen de premie en het verwachte schadebedrag per klant (berekend in deel (a)):
+            \[
+                \text{Winstbijdrage per klant} = \text{Premie} - E(X) = 98 - 75 = 23.
+            \]
+            Aangezien de maatschappij $25000$ klanten heeft, is de verwachte winstbijdrage per jaar:
+            \[
+                \text{Totale winstbijdrage} = \text{Aantal klanten} \cdot \text{Winstbijdrage per klant} = 25000 \cdot 23 = 575000.
+            \]
+        }
+    \end{enumerate}

@@ -1,16 +1,18 @@
 \question{7.4}{
     Voor een eerstehulpafdeling van een ziekenhuis geldt dat het aantal patiënten met brandwonden dat per dag binnenkomt,
-    kan worden beschreven door een Poissonverdeling met $\mu=0.35$.
+    kan worden beschreven door een Poissonverdeling met $\lambda=0.35$.
     Bereken met de formule van de Poissonverdeling de kans dat het aantal van dergelijke patiënten per dag $\ldots$
 }
 \begin{enumerate}[label=(\alph*)]
     \item precies nul bedraagt.
     \answer{
         Laat $X$ de kansvariabele zijn die het aantal patiënten telt dat op een willekeurige dag met brandwonden binnenkomt op de eerstehulpafdeling van het ziekenhuis.
-        Gegeven is dat $X \sim \poisson{\lambda=0.35}$.
+        We bekijken een interval van één dag met een tijdseenheid van een dag, oftewel $t=1$.
+         De parameter $\mu$ van de Poissonverdeling voor dit interval is gelijk aan $\mu = \lambda \cdot t = 0.35 \cdot 1 = 0.35$.
+        Gegeven is dat $X \sim \poisson{\mu=0.35}$.
         De Poissonformule geeft voor elke mogelijke uitkomst $k = 0, 1, 2, \ldots$ de kans op die uitkomst aan als
         \[
-            P(X=k) = e^{-\lambda} \cdot \frac{\lambda^{k}}{k!}.
+            P(X=k) = e^{-\mu} \cdot \frac{\mu^{k}}{k!}.
         \]
         De kans dat het aantal van dergelijke patiënten per dag precies nul bedraagt is dus gelijk aan
         \[

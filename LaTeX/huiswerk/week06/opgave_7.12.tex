@@ -1,12 +1,14 @@
 \question{7.12}{
-    Het aantal schepen $K$ dat per dag in een bepaalde haven aankomt, is te beschouwen als een variabele met een Poissonverdeling waarvoor geldt $\mu=2\frac{1}{2}$.
+    Het aantal schepen $K$ dat per dag in een bepaalde haven aankomt, is te beschouwen als een variabele met een Poissonverdeling waarvoor geldt $\lambda=2\frac{1}{2}$.
     Per dag kunnen vier schepen worden afgehandeld in de haven.
     Als zich meer dan vier schepen melden, dan worden de overige schepen doorgestuurd naar een andere haven.   
 }
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat op een zekere dag één of meer schepen worden doorgestuurd?
     \answer{
-        De kansvariabele $K$ telt het aantal binnenlopende schepen op een willekeurige dag en volgt een Poissonverdeling met parameter $\mu = 2\frac{1}{2}$.
+        De kansvariabele $K$ telt het aantal binnenlopende schepen op een willekeurige dag.
+        We bekijken een interval van één dag met een tijdseenheid van een dag, oftewel $t=1$.
+        De parameter $\mu$ van de Poissonverdeling voor $X$ is dus gelijk aan $\mu = \lambda \cdot t = 2\frac{1}{2} \cdot 1 = 2\frac{1}{2}$.
         Er wordt minstens één schip doorverwezen naar een andere haven als er meer dan vier schepen zich melden in de haven.
         Dit gebeurt met een kans van
         \[

@@ -24,7 +24,7 @@
             }
         \end{center} 
 
-        Voor het tweede geval geldt dat het een stijgende lineaire functie is (de richtingscoëfficiënt $\frac{2}{5}$ is groter dan $0$), dus de minimale waarde van $f$ op
+        Voor het tweede geval geldt dat het een stijgende lineaire functie is (de richtingscoëfficiënt $\frac{2}{5} > 0$), dus de minimale waarde van $f$ op
         het interval $5 \le x \le 10$ wordt aangenomen in de kleinste $x$, namelijk $x=5$.
         Hier is de functiewaarde $f(5) = \frac{2}{5}\cdot 5 - 2 = 0$. 
         Er volgt dus dat aan de eerste voorwaarde is voldaan, aangezien $f(x) = 0$ (voor $x < 5$ en $x > 10$) of $f(x) \ge 0$ (voor $5 \le x \le 10$).
@@ -67,7 +67,13 @@
         \]
         Samengevat kunnen we de verdelingsfunctie $F$ als volgt beschrijven:
         \[
-            F(x) = \int_{-\infty}^{y} f(y) \dy = \begin{cases} 0, & \text{ als } x < 5, \\ 0.2(x-5), & \text{ als } 5 \le x \le 10, \\ 1, & \text{ als } x > 10. \end{cases}
+            F(x) = \int_{-\infty}^{x} f(y) \dy = \begin{cases} 0, & \text{ als } x < 5, \\ 0.2(x-5), & \text{ als } 5 \le x \le 10, \\ 1, & \text{ als } x > 10. \end{cases}
         \]
+
+        \begin{center}
+            \resizebox{\textwidth}{!}{
+                \includegraphics{opg4.15b.png}
+            }
+        \end{center} 
     }
 \end{enumerate}

@@ -1,13 +1,14 @@
-worden\question{7.6}{
+\question{7.6}{
     In een containerhaven kunnen per dag drie schepen worden afgehandeld met laden en lossen.
-    Bekend is dat het aantal binnenlopende schepen een variabele is met een Poissonverdeling met $\mu=2$ per dag.
+    Bekend is dat het aantal binnenlopende schepen een variabele is met een Poissonverdeling met $\lambda=2$ per dag.
     Schepen die zich melden wanneer op een dag reeds drie schepen in behandeling zijn, worden doorverwezen naar een andere haven.
 }
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat op een willekeurige dag een of meer schepen moeten worden doorverwezen?
     \answer{
         Laat $X$ de kansvariabele zijn die het aantal binnenlopende schepen telt op een willekeurige dag.
-        Dan geldt dat $X$ een Poissonverdeling volgt met parameter $\mu = 2$.
+        We bekijken een interval van één dag met een tijdseenheid van een dag, oftewel $t=1$.
+        Dan geldt dat $X$ een Poissonverdeling volgt met parameter $\mu = \lambda \cdot t = 2 \cdot 1 = 2$.
 
         De situatie waarin een of meer schepen moeten worden doorverwezen vindt plaats als er meer dan drie schepen binnenlopen.
         Dit gebeurt met een kans van

@@ -1,12 +1,14 @@
 \question{7.14}{
-    Op een werkdag van de dierenambulance komen oproepen binnen volgens een Poissonproces met $\mu = 0.50$ oproepen per uur.
+    Op een werkdag van de dierenambulance komen oproepen binnen volgens een Poissonproces met $\lambda = 0.50$ oproepen per uur.
     Men is $10$ uur per dag bereikbaar.   
 }
 \begin{enumerate}[label=(\alph*)]
     \item Bereken de kans dat op een dag minder dan $4$ oproepen binnenkomen.
     \answer{
         Laat $X$ de kansvariabele zijn die het aantal binnenkomende oproepen telt op een werkdag ($10$ werkuren met gemiddelde $0.50$ oproepen per uur) bij de dierenambulance.
-        Gegeven is dat $X \sim \poisson{\mu=10\cdot 0.50=5}$.
+        We bekijken een interval van $10$ uur met tijdseenheden van een uur, dus $t=10$.
+        De parameter $\mu$ van de Poissonverdeling is dus gelijk aan $\mu = \lambda \cdot t = 0.50 \cdot 10 = 5$.
+        Gegeven is dat $X \sim \poisson{\mu=5}$.
 
         De kans dat op een dag minder dan $4$ oproepen binnenkomen is dan gelijk aan
         \[
@@ -17,8 +19,8 @@
     \item Hoe groot is de kans dat er meer dan $3$ uur voorbijgaan zonder dat een enkele oproep is geweest?
     \answer{
         Stel nu dat $X$ de kansvariabele is van het aantal binnenkomende oproepen in drie uur tijd.
-        In dat geval is $X$ Poisson verdeeld met parameter $\lambda = 3 \cdot 0.50 = 1.50$, aangezien er in drie uur gemiddeld $1.5$ oproepen gaan komen.
-        
+        We bekijken een interval van $3$ uur met tijdseenheden van een uur, dus $t=3$.
+        De parameter $\mu$ van de Poissonverdeling is dus gelijk aan $\mu = \lambda \cdot t = 0.50 \cdot 3 = 1.5$.        
         De kans dat er meer dan $3$ uur voorbijgaan zonder dat een enkele oproep is geweest is gelijk aan de kans op geen oproepen in drie uur tijd, oftewel:
         \[
             P(X = 0) = \poissonpdf(\mu=1.5, k=0) \approx 0.2231.
@@ -29,7 +31,7 @@
     Hij wil de tijdsduur van de pauze zodanig kiezen dat de kans hoogstens $0.25$ is dat binnen die periode een oproep binnenkomt.
     Hoelang mag hij pauzeren? 
     \answer{
-        Het aantal inkomende oproepen tijdens een lunchpauze van $t$ uur is Poisson verdeeld met parameter $0.5t$.
+        Het aantal inkomende oproepen tijdens een lunchpauze van $t$ uur is Poisson verdeeld met parameter $\mu = \lambda \cdot t = 0.5 \cdot t$.
         De chauffeur wil de tijdsduur $t$ van zijn pauze zodanig kiezen dat geldt dat $P(X \geq 1) = 1 - P(X \leq 0) \le 0.25$ is.
 
         Om deze ongelijkheid op te lossen, kunnen we opnieuw het \enquote{solver}-menu gebruiken:

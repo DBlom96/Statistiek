@@ -27,9 +27,14 @@
         \begin{align*}
             P(\frac{10}{3} \le X \le \frac{13}{3}) &= \int_{\frac{10}{3}}^{\frac{13}{3}} f(x) \dx \\
                                                    &= \int_{\frac{10}{3}}^{4.00} 0.40 \dx + \int_{4.00}^{\frac{13}{3}} 0.6 \dx \\
-                                                   &= \fnInt(0.40, X, \frac{10}{3}, 4.00) + \fnInt(0.60, X, 4.00, \frac{13}{3}) \\
-                                                   &\approx 0.4667.
+                                                   &\approx 0.4667.%&= \fnInt(0.40, X, \frac{10}{3}, 4.00) + \fnInt(0.60, X, 4.00, \frac{13}{3}) \\
+                                                %    &\approx 0.4667.
         \end{align*}
+        \begin{center}
+            \resizebox{0.9\textwidth}{!}{
+                \includegraphics{opg4.17.png}
+            }
+        \end{center}
     }
     
     \item Wat is de verwachtingswaarde van de dagelijkse studietijd?
@@ -38,12 +43,9 @@
         \begin{align*}
             E(X)    &= \int_{-\infty}^{\infty} x \cdot f(x) \dx \\
                     &= \int_{3.00}^{4.00} x \cdot 0.40 \dx + \int_{4.00}^{5.00} x \cdot 0.60 \dx \\
-                    &= \fnInt(0.40X, X, 3.00, 4.00) + \fnInt(0.60X, X, 4.00, 5.00) \\
-                    &= 4.1.
+                    &= 4.1.%&= \fnInt(0.40X, X, 3.00, 4.00) + \fnInt(0.60X, X, 4.00, 5.00) \\
+                    % &= 4.1.
         \end{align*}
         De verwachte dagelijkse studietijd is $4.1$ uur, oftewel $246$ minuten.
-
-        \textbf{Noot:} als je de opdeling in twee integralen niet intu\"itief vindt, bekijk dan de visualisatie van de kansdichtheidsfunctie bij (a).
-        Kansen berekenen we namelijk aan de hand van oppervlaktes onder de grafiek!
     }
 \end{enumerate}
