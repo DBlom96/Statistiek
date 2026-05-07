@@ -12,10 +12,10 @@ locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
 vaknaam = "Statistiek deel 2 (tweede kans)"
 vakcode = "STA#2"
-datum = "20251113"
-tentamentijd = "9:00-12:00"
+datum = "20260519"
+tentamentijd = "13:30 - 16:30"
 examinator = "Dr. ir. D.A.M.P. Blom"
-peer_review = "Dr. ir. B. Westerweel"
+peer_review = "Dr. M. van Ee"
 aantal_opgaven = "4"
 aantal_paginas = "4"
 

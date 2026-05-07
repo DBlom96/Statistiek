@@ -77,27 +77,27 @@ Gegeven een steekproef met $n$ observaties $x_1, x_2, \ldots, x_n$:
         \midrule
             \textbf{Verdeling} & {\bfseries Kansfunctie $p(k) = P(X = k)$} & {\bfseries CDF $F(k) = P(X \leq k)$} & $E(X)$ & $\Var{X}$ \\ 
         \midrule
-            \uniform{a}{b} & \makecell{$p(k) = \frac{1}{b-a+1}$ \\[1ex] $(k=a, a+1, \ldots, b)$} & $F(k) = \begin{cases} 
+            \uniform{$a$}{$b$} & \makecell{$p(k) = \frac{1}{b-a+1}$ \\[1ex] $(k=a, a+1, \ldots, b)$} & $F(k) = \begin{cases} 
             0, & x < a, \\
             \frac{k - a + 1}{b-a+1}, & a \leq k < b, \\
             1, & k \geq b.
             \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a+1)^2-1}{12}$ \\ 
         \midrule
-            \bernoulli{p} & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
+            \bernoulli{$p$} & $p(k) = \begin{cases} 1-p, & \text{$k=0$} \\ p, & \text{$k=1$} \end{cases}$ & $F(k) = \begin{cases} 
             0, & k < 0, \\
             1-p, & 0 \leq k < 1, \\
             1, & k \geq 1.
             \end{cases}$ & $p$ & $p \cdot (1-p)$ \\ 
         \midrule
-            \binomial{n}{p} & $p(k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$ & $F(k) = \sum\limits_{i=0}^k \binom{n}{i} \cdot p^i \cdot (1-p)^{n-i}$ & $n \cdot p$ & $n \cdot p \cdot (1-p)$ \\ 
+            \binomial{$n$}{$p$} & $p(k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$ & $F(k) = \sum\limits_{i=0}^k \binom{n}{i} \cdot p^i \cdot (1-p)^{n-i}$ & $n \cdot p$ & $n \cdot p \cdot (1-p)$ \\ 
         \midrule
-            \poisson{\lambda} & $p(k) = e^{-\lambda}\cdot \frac{\lambda^k}{k!}$ & $F(k) = \sum\limits_{i=0}^k e^{-\lambda} \cdot \frac{\lambda^i}{i!}$ & $\lambda$ & $\lambda$ \\ 
+            \poisson{$\lambda$} & $p(k) = e^{-\lambda}\cdot \frac{\lambda^k}{k!}$ & $F(k) = \sum\limits_{i=0}^k e^{-\lambda} \cdot \frac{\lambda^i}{i!}$ & $\lambda$ & $\lambda$ \\ 
         \midrule
             \multicolumn{5}{c}{\textbf{CONTINUE KANSVERDELINGEN}} \\ 
         \midrule
             \textbf{Verdeling} & {\bfseries Kansdichtheidsfunctie $f(x)$} & {\bfseries CDF $F(x) = P(X \leq x)$} & $E(X)$ & $\Var{X}$ \\ 
         \midrule
-            \uniform{a}{b} & $f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b, \\ 0, & \text{elders.} \end{cases}$ & $F(x) = \begin{cases} 
+            \uniform{$a$}{$b$} & $f(x) = \begin{cases} \frac{1}{b-a}, & a \leq x \leq b, \\ 0, & \text{elders.} \end{cases}$ & $F(x) = \begin{cases} 
             0, & x < a, \\
             \frac{x-a}{b-a}, & a \leq x < b, \\
             1, & x \geq b. \end{cases}$ & $\frac{a+b}{2}$ & $\frac{(b-a)^2}{12}$ \\ 
@@ -117,13 +117,13 @@ Gegeven een steekproef met $n$ observaties $x_1, x_2, \ldots, x_n$:
         \midrule
             \makecell{Continue verdeling met \\ kansdichtheidsfunctie $f(x)$} & $P(a \le X \le b)$ & $\int_{a}^{b} f(x) \dx$ & $\int_{a}^{b} f(x) \dx$ \\
         \midrule    
-            \multirow{2}{*}{\binomial{n}{p}}    & $P(X = k)$    & $\binompdf(n, p, k)$ & BinomialPD$(k, n, p)$ \\
+            \multirow{2}{*}{\binomial{$n$}{$p$}}    & $P(X = k)$    & $\binompdf(n, p, k)$ & BinomialPD$(k, n, p)$ \\
                                                 & $P(X \le k)$  & $\binomcdf(n, p, k)$ & BinomialCD$(k, n, p)$ \\
         \midrule    
-            \multirow{2}{*}{\normal{\mu}{\sigma}}   & $P(a \le X \le b)$ & $\normalcdf(a,b,\mu,\sigma)$   & NormCD$(a, b, \sigma, \mu)$ \\[1ex]
+            \multirow{2}{*}{$\normal{$\mu$}{$\sigma$}$}   & $P(a \le X \le b)$ & $\normalcdf(a,b,\mu,\sigma)$   & NormCD$(a, b, \sigma, \mu)$ \\[1ex]
                                                     & \makecell{Grenswaarde $g$ zodat \\ $P(X \leq g) = p$}   & $\invnorm(p, \mu, \sigma)$ & InvN$(p, \sigma, \mu)$ \\
         \midrule 
-            \multirow{2}{*}{\poisson{\mu = \lambda \cdot t}}    & $P(X = k)$    & $\poissonpdf(\mu, k)$ & PoissonPD$(k, \mu)$ \\
+            \multirow{2}{*}{\poisson{$\mu = \lambda \cdot t$}}    & $P(X = k)$    & $\poissonpdf(\mu, k)$ & PoissonPD$(k, \mu)$ \\
                                                                 & $P(X \le k)$  & $\poissoncdf(\mu, k)$ & PoissonCD$(k, \mu)$ \\
         \bottomrule
     \end{tabular}

@@ -48,36 +48,6 @@
 \colorlet{highlight}{green!70!black}
 \usepackage{fontawesome}
 
-% HEADERS AND FOOTERS
-\copypagestyle{lecturenotes}{ruled}
-\makeevenhead{lecturenotes}{\leftmark}{}{}
-\makeoddhead{lecturenotes}{}{}{Uitwerkingen huiswerkopgaven}
-
-\makeevenfoot{lecturenotes}{}{\thepage}{}
-\makeoddfoot{lecturenotes}{}{\thepage}{}
-
-% % CHAPTER STYLES
-\chapterstyle{madsen}
-\copypagestyle{mystyle}{ruled}
-\renewcommand{\printchaptername}{\hfill\LARGE Week\space }%
-\makeatletter
-  % \renewcommand{\chaptermark}[1]{%
-  %   \markboth{Week \thechapter\ \ #1.}{}}
-  
-    % Remove page number from header
-  \makeevenhead{mystyle}{Week \leftmark}{}{}
-  \makeoddhead{mystyle}{}{}{Uitwerkingen huiswerkopgaven}
-
-  % Place page number centered in footer
-  \makeevenfoot{mystyle}{}{\thepage}{}
-  \makeoddfoot{mystyle}{}{\thepage}{}
-\makeatother
-\renewcommand{\chapternamenum}{\HUGE\bfseries\sffamily\fontsize{40}{48}\selectfont\thechapter}%
-\renewcommand{\printchapternum}{}%
-
-\pagestyle{mystyle}
-\aliaspagestyle{chapter}{mystyle}
-
 % REFERENCES
 \usepackage{hyperref}
 \usepackage[capitalize]{cleveref}
