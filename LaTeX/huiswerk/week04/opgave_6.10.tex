@@ -35,17 +35,19 @@
     Bereken opnieuw de kans dat vliegtuig neerstort.
     Geef commentaar op het verschil met het antwoord op vraag (b).
     \answer{
-        We kunnen in dit geval de situatie het best opsplitsen in twee binomiaal verdeelde kansvariabelen $X_{L}$ en $X_{R}$ die het aantal uitgevallen motoren telt aan respectievelijk de linker- en rechtervleugel.
-        Deze binomiaal verdeelde kansvariabelen hebben beiden de parameters $n = 2$ en $p = 0.005$.
-        Een vliegtuig stort neer als minstens één van beide kansvariabelen de waarde $2$ aanneemt (beide motoren aan deze vleugel vallen uit).
+        We kunnen in dit geval de situatie het best opsplitsen in twee (onafhankelijke) binomiaal verdeelde kansvariabelen $X_{L}$ en $X_{R}$ die het aantal uitgevallen motoren telt aan respectievelijk de linker- en rechtervleugel.
+        Deze binomiaal verdeelde kansvariabelen hebben beiden de parameters $n = 2$ (aantal motoren per vleugel) en $p = 0.005$ (kans op uitval van een motor).
+        Een vliegtuig stort neer als geldt dat ofwel $X_L = 2$ ofwel $X_R=2$ ofwel beiden.
         Dit gebeurt met kans
         \begin{align*}
-            P(X_{L} = 2 \text{ of } X_{R}=2)    &= 1 - P(X_{L} \le 1 \text{ en } X_{R} \le 1) \\
-                                                &= 1 - P(X_{L} \le 1)\cdot P(X_{R} \le 1) \\
+            P(X_{L} = 2 \text{ of } X_{R}=2)    &= 1 - P(X_{L} \le 1, X_{R} \le 1) \\
+                                                &= 1 - P(X_{L} \le 1)\cdot P(X_{R} \le 1)\\
                                                 &= 1 - \binomcdf(n=2, p=0.005, k=1)^2 \\
                                                 &\approx 4.9999 \cdot 10^{-5}.
         \end{align*}
-        Zoals je ziet is deze kans groter dan de kans die we bij (b) hebben berekend.
-        De reden hiervoor is dat bij (b) het geval op twee uitvallende motoren aan eenzelfde vleugel niet is meegenomen als scenario waarbij het vliegtuig zal neerstorten. 
+        We mogen deze kansen in de tweede stap vermenigvuldigen, omdat $X_L$ en $X_R$ onafhankelijke kansvariabelen zijn.
+
+        Zoals je ziet is de berekende kans groter dan de kans die we bij (b) hebben berekend.
+        De reden hiervoor is dat bij vraag (b) de gevallen (i) $X_L = 2, X_R = 0$ en (ii) $X_L = 0, X_R = 2$ niet zijn meegenomen als scenario waarbij het vliegtuig zal neerstorten. 
     }
 \end{enumerate}

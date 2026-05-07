@@ -6,11 +6,11 @@
 }
 
 \begin{enumerate}[label=(\alph*)]
-    \item Bereken voor de dag met $800$ parkeerbonnen de verwachtingswaarde en de standaarddeviatie van het aantal directe betalers.
+    \item Bereken voor de dag met $800$ parkeerbonnen de verwachtingswaarde en de standaarddeviatie (standaardafwijking) van het aantal directe betalers.
     Stel dat voor deze specifieke dag op de uiterste betaaldatum $520$ bekeurden hun boete hebben voldaan, is dat dan uitzonderlijk gegeven de betaalkans van \SI{75}{\percent}?
     \answer{
         Het aantal directe betalers kan worden geïnterpreteerd als een binomiaal verdeelde kansvariabele met parameters $n = 800$ (aantal parkeerbonnen) en $p = 0.75$ (kans op directe betaling).
-        De verwachtingswaarde $E(X)$ en standaarddeviatie $\sigma(X)$ van deze kansvariabele zijn gelijk aan
+        De verwachtingswaarde $E(X)$ en standaardafwijking $\sigma(X)$ van deze kansvariabele zijn gelijk aan
         \begin{align*}
             E(X) &= n \cdot p = 800 \cdot 0.75 = 600 \\
             \sigma(X) &= \sqrt{n \cdot p \cdot (1-p)} = \sqrt{800 \cdot 0.75 \cdot (1 - 0.75)} \approx 12.2474.
@@ -20,7 +20,7 @@
             P(X \le 520) = \binomcdf(n=800, p=0.75, k=520) = 1.9170 \cdot 10^{-10}.
         \]
         Aangezien deze kans extreem klein is, is een aantal van $520$ directe betalers uitzonderlijk laag.
-        Merk op dat $520$ inderdaad een aantal standaarddeviaties onder de verwachtingswaarde ligt.
+        Merk op dat $520$ inderdaad een aantal standaardafwijkingen onder de verwachtingswaarde ligt.
     }
 
     \item Wat is het verwachte bedrag dat binnenkomt van een dag met 800 bekeurden en wat is de standaarddeviatie?
@@ -30,7 +30,7 @@
         \[
             E(B) = E(40 \cdot X) = 40 \cdot E(X) = 40 \cdot 600 = \text{\euro} 24 000,
         \]
-        en de standaarddeviatie is dus gelijk aan
+        en de standaardafwijking is dus gelijk aan
         \[
             \sigma(B) = \sigma(40 \cdot X) = 40 \cdot \sigma(X) = 40 \cdot 12.2474 \approx \text{\euro} 489.90.
         \]

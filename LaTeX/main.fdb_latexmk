@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1778070036.75988 0
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1778163329.68179 0
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/apalike.bst" 1291972791 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/bibliography/references.bib" 0 -1 0 ""
   "main.aux" 0 -1 0 "pdflatex"
@@ -7,7 +7,7 @@
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1778070030.80652 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1778070036.76067 0
+["pdflatex"] 1778163323.92672 "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" "main.pdf" "main" 1778163329.68258 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775830754 758860 d82f8d8cfa37c0722b05f4611884c428 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1755601769 13257336 70235e7a1464f0f15c5a7808b591ab6e ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -312,7 +312,7 @@
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_2.png" 1778068638 44344 73e36e9b32701f06c34db339fa27ffb2 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/config.sty" 1770823017 3816 75ef4e6ba81ad89cc39a04e2b417fd99 ""
   "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty" 1770820075 4133 c1d28e6c5985af97365a63815faf12f4 ""
-  "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" 1778069728 1033 ada0f6947145184264d7c5ffde10b7c6 ""
+  "c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/main.tex" 1778163317 1035 13f013d3abdba3331e6845ab5fb60452 ""
   "huiswerk/week01.tex" 1776413869 1106 ca353721476951f0fc77dfa6848f798f ""
   "huiswerk/week01/opgave_1.15.tex" 1776238131 2544 91819c93486c644bfe7c0a0ceea5c7fc ""
   "huiswerk/week01/opgave_1.3.tex" 1770300088 963 8825d463f8d21fd3eb05929d787c3538 ""
@@ -352,12 +352,21 @@
   "huiswerk/week03/opgave_4.15.tex" 1778069344 5073 d1e0a35fdd2b42a6dc08ce090be3e168 ""
   "huiswerk/week03/opgave_4.16.tex" 1778069503 1591 d7346a4087f3b36f5e4b9f7dc70ff2bc ""
   "huiswerk/week03/opgave_4.17.tex" 1778069533 2641 628c9b77ddb1bab17ce6b63c03fde7f4 ""
-  "huiswerk/week03/opgave_4.18.tex" 1778070029 10332 f7f5b0c9ef14cc7abc8b40dd83c7eca5 ""
-  "main.aux" 1778070035 1212 8740a53008193968d0ab071532286c46 "pdflatex"
+  "huiswerk/week03/opgave_4.18.tex" 1778070042 10332 f7f5b0c9ef14cc7abc8b40dd83c7eca5 ""
+  "huiswerk/week04.tex" 1764774812 201 7aa25f7e0c312e6d7469fa58c1c95cf2 ""
+  "huiswerk/week04/opgave_6.10.tex" 1778163038 3375 05c8f82888ca108c47dcf7b77ce2dc3f ""
+  "huiswerk/week04/opgave_6.12.tex" 1778163118 3371 02d0475e7a99fbf1dd77ee0723077976 ""
+  "huiswerk/week04/opgave_6.14.tex" 1770813531 3715 6610d1e95dc985012d15e03e331fff2e ""
+  "huiswerk/week04/opgave_6.4.tex" 1778162570 1788 b483ce022147b52b9d33732c41f28bae ""
+  "huiswerk/week04/opgave_6.5.tex" 1770810375 1857 839dc9c07bcc1c5913e17ec0877beea0 ""
+  "huiswerk/week04/opgave_6.6.tex" 1778163154 2177 64997a08c782be0cdc5e1ec95bb7693e ""
+  "huiswerk/week04/opgave_6.7.tex" 1770810920 1582 90fb29844864e5980c590b6a357ee8d4 ""
+  "huiswerk/week04/opgave_6.8.tex" 1770810980 753 a6387555c02f52e8fcb730114ac937e0 ""
+  "main.aux" 1778163328 1411 9ac2a6b4491863ca687c91cfb804bdba "pdflatex"
   "main.bbl" 0 -1 0 "bibtex main"
-  "main.out" 1778070035 693 65df05265ee92c1d868dcb9f65dda761 "pdflatex"
-  "main.tex" 1778069728 1033 ada0f6947145184264d7c5ffde10b7c6 ""
-  "main.toc" 1778070035 362 b1a59a7fd67751c77349529325e366ec "pdflatex"
+  "main.out" 1778163328 852 5adc3cc30aab209b12b3671a03d931da "pdflatex"
+  "main.tex" 1778163317 1035 13f013d3abdba3331e6845ab5fb60452 ""
+  "main.toc" 1778163328 448 40cc3fbb674a44572b67f936ea250c4c "pdflatex"
   "titlepage.tex" 1764596460 449 abd6d81c7850212d60f59966be0c13ed ""
   (generated)
   "main.aux"
