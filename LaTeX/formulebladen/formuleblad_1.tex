@@ -38,9 +38,9 @@ Gegeven een steekproef met $n$ observaties $x_1, x_2, \ldots, x_n$:
         %\midrule
             \textbf{CDF} & $F(k) = P(X \le k) = \sum\limits_{\ell:\ell\le k} p(\ell)$ & $F(x) = P(X \le x) = \int\limits_{-\infty}^{x} f(y)\dy$ \\
         %\midrule
-            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum\limits_{k} k \cdot P(X=k)$ & $E[X] = \int x \cdot f(x)\dx$\\
+            \textbf{Verwachtingswaarde:}                    & $E[X] = \sum\limits_{k} k \cdot P(X=k)$ & $E[X] = \int\limits_{-\infty}^{\infty} x \cdot f(x)\dx$\\
         %\midrule
-            \textbf{Variantie:}                             & $\Var{X} = \sum\limits_{k} (k - E[X])^2 \cdot P(X=k)$   & $\Var{X} = \int (x - E[X])^2 \cdot f(x)\dx$ \\    
+            \textbf{Variantie:}                             & $\Var{X} = \sum\limits_{k} (k - E[X])^2 \cdot P(X=k)$   & $\Var{X} = \int\limits_{-\infty}^{\infty} (x - E[X])^2 \cdot f(x)\dx$ \\    
         %\midrule
             \textbf{Standaardafwijking:}                    & $\sigma(X) = \sqrt{\Var{X}}$   & $\sigma(X) = \sqrt{\Var{X}}$ \\
         \bottomrule
@@ -120,7 +120,7 @@ Gegeven een steekproef met $n$ observaties $x_1, x_2, \ldots, x_n$:
             \multirow{2}{*}{\binomial{$n$}{$p$}}    & $P(X = k)$    & $\binompdf(n, p, k)$ & BinomialPD$(k, n, p)$ \\
                                                 & $P(X \le k)$  & $\binomcdf(n, p, k)$ & BinomialCD$(k, n, p)$ \\
         \midrule    
-            \multirow{2}{*}{$\normal{$\mu$}{$\sigma$}$}   & $P(a \le X \le b)$ & $\normalcdf(a,b,\mu,\sigma)$   & NormCD$(a, b, \sigma, \mu)$ \\[1ex]
+            \multirow{2}{*}{$\normal{\mu}{\sigma}$}   & $P(a \le X \le b)$ & $\normalcdf(a,b,\mu,\sigma)$   & NormCD$(a, b, \sigma, \mu)$ \\[1ex]
                                                     & \makecell{Grenswaarde $g$ zodat \\ $P(X \leq g) = p$}   & $\invnorm(p, \mu, \sigma)$ & InvN$(p, \sigma, \mu)$ \\
         \midrule 
             \multirow{2}{*}{\poisson{$\mu = \lambda \cdot t$}}    & $P(X = k)$    & $\poissonpdf(\mu, k)$ & PoissonPD$(k, \mu)$ \\

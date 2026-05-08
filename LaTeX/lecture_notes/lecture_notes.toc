@@ -1,7 +1,9 @@
-\babel@toc {english}{}\relax 
+\babel@toc {dutch}{}\relax 
 \contentsline {chapter}{\numberline {1}The Role of Statistics in Engineering}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{5}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Maintenance: the reliability of a circuit}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Operations Research: Search and Detection}{6}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Example 1}{7}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Exercises}{7}{section.1.5}%
+\contentsline {chapter}{\numberline {2}The Basics of Probability Theory}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sample spaces and events}{9}{section.2.1}%
