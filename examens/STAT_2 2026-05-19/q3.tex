@@ -1,131 +1,137 @@
-\begin{question}{28}{
-    De Koninklijke Marine is geïnteresseerd in het bepalen van een betrouwbare onderhoudsstrategie voor de maritieme NH90-helikopters.
-    Hiervoor is het belangrijk om data te verzamelen van de \emph{mean time between failures} (MTBF), oftewel de gemiddelde tijd tussen twee faalmomenten van een helikopteronderdeel.
-    Om te onderzoeken wat kritieke onderdelen zijn, worden de \emph{time between failures} (TBF) van de motor ($X$) en rotorbladen ($Y$) van tien NH90-helikopters gemeten.
-
-    De volgende data zijn verzameld over de time between failures van motoren en rotorbladen van NH90-helikopters.
-    
-    \begin{center}
-        \begin{tabular}{c|cccccccccc}
-            \toprule
-                TBF motoren (uren) & $1185$ & $1175$ & $1195$ & $1180$ & $1195$ & $1190$ & $1185$ & $1215$ & $1175$ & $1205$ \\ 
-            \midrule
-                TBF rotorbladen (uren) & $1180$ & $1205$ & $1190$ & $1210$ & $1175$ & $1200$ & $1225$ & $1195$ & $1185$ & $1215$ \\
-            \bottomrule
-        \end{tabular}
-    \end{center}
-    \vspace{1em}
-
-    De centrale vraag is nu om te toetsen of de MTBF $\mu_X$ van de motor significant lager is dan de MTBF $\mu_Y$ van de rotorbladen, oftewel dat de motor gemiddeld genomen sneller faalt dan de rotorbladen.
-    Voor beide steekproeven kan worden aangenomen dat de tijden tussen faalmomenten normaal verdeeld zijn.
+\begin{question}{26}{
+    Bij militaire transportvluchten heeft het gewicht van de lading een directe invloed rol op het brandstofverbruik van een toestel.
+    Naarmate er meer materieel of voorraden worden meegenomen, stijgt het verbruik tijdens de cruise-fase van de vlucht aanzienlijk.
+    In onderstaande tabel zie je voor twaalf vluchten het cargogewicht (in duizenden kilogram) en het gemeten kerosineverbruik tijdens de cruise-fase (in kilogram per minuut)
+    {\footnotesize
+        \begin{center}
+            \begin{tabular}{c|cccccccccc}
+                \toprule
+                    \textbf{Cargogewicht} & $2$ & $4$ & $6$ & $8$ & $10$ & $12$ & $14$ & $16$ & $18$ & $20$ \\
+                \midrule
+                    \textbf{Kerosineverbruik} & $29$ & $17$ & $61$ & $76$ & $49$ & $81$ & $124$ & $102$ & $103$ & $118$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
 }
 
-    \subquestion{8}{
-        Bepaal voor beide populaties de steekproefgemiddelden ($x$ en $y$) en de steekproefvarianties ($s_X^2$ en $s_Y^2$).
+    \subquestion{2}{
+        Als we een regressie-analyse willen uitvoeren, welke variabele zou dan de afhankelijke variabele $Y$ zijn en welke variabele zou de onafhankelijke variabele $X$ zijn?
     }
     \solution{
-
-        \textbf{Time between failures voor motoren:}
-
-        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
-        \begin{align*}
-            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 1185 + 1175 + \ldots + 1205 }{ 10 } = 1190. \rubric{2}
-        \end{align*}
-    
-
-        We berekenen de steekproefvariantie $s_X^2$ als volgt:
-        \begin{align*}
-            s_X^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
-                &= \frac{ (1185 - 1190)^2 + (1175 - 1190)^2 + \ldots + (1205 - 1190)^2 }{ 10 - 1 } \\
-                &\approx 166.6667. \rubric{2}
-        \end{align*}
-        
-        \textbf{Time between failures voor rotorbladen:}
-
-        We berekenen het steekproefgemiddelde $\overline{y}$ als volgt:
-        \begin{align*}
-            \overline{y} = \frac{y_1+y_2+\ldots+y_n}{n} = \frac{ 1180 + 1205 + \ldots + 1215 }{ 10 } = 1198.\rubric{2}
-        \end{align*}
-    
-
-        We berekenen de steekproefvariantie $s_x^2$ als volgt:
-        \begin{align*}
-            s_Y^2 &= \frac{ (y_1 - \overline{y})^2 + (y_2 - \overline{y})^2 + \ldots + (y_n - \overline{y})^2 }{ n - 1 } \\
-                &= \frac{ (1180 - 1198)^2 + (1205 - 1198)^2 + \ldots + (1215 - 1198)^2 }{ 10 - 1 } \\
-                &\approx 256.6667.\rubric{2}
-        \end{align*}
+        Bij een regressie-analyse is de meest logische keuze om cargogewicht als onafhankelijke variabele $X$ te kiezen, en het kerosineverbruik als afhankelijke variabele $Y$. \rubric{1}
+        Een hoger kerosineverbruik verklaart niet het cargogewicht, terwijl dat andersom wellicht wel het geval kan zijn.\rubric{1}
     }
 
-    \subquestion{10}{
-        Voer een $F$-toets uit om te bepalen of de varianties van de times between failures (TBFs) van de twee populaties als gelijk kunnen worden beschouwd ($\sigma_X^2 = \sigma_Y^2$).
-        Gebruik hiervoor een significantieniveau van $\alpha = 0.05$ en bepaal de toetsuitslag op basis van het kritieke gebied.
+    \subquestion{5}{
+        Teken het spreidingsdiagram op basis van je antwoord op vraag (a).
+        Geef hierbij ook duidelijk aan welke as welke variabele beschrijft.
     }
     \solution{
-        In de vraag staat dat we aan mogen nemen dat voor de time between failures $X$ en $Y$ voor respectievelijk motoren en rotorbladen geldt dat
-        $X \sim N(\mu_X=?; \sigma_X=?)$ en $Y \sim N(\mu_Y=?; \sigma_Y=?)$.
-
-        We toetsen op gelijke varianties, oftewel
-        \begin{align*}
-            H_0: \quad \sigma_X^2 = \sigma_Y^2 \\
-            H_1: \quad \sigma_X^2 \neq \sigma_Y^2 \rubric{2}
-        \end{align*}
-
-        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en data is al verzameld voor beide populaties.
-        De toetsingsgrootheid voor een $F$-toets is gelijk aan
-        \[
-            F = \frac{S_X^2}{S_Y^2}, 
-        \]
-        en volgt een $F(n-1, m-1)$-verdeling, oftewel een $F(9,9)$-verdeling. \rubric{1}
-
-        De geobserveerde toetsingsgrootheid is gelijk aan
-        \[
-            f = \frac{s_X^2}{s_Y^2} = \frac{166.6667}{256.6667} = 0.6494. \rubric{2}
-        \]
-        
-        Omdat een $F$-toets altijd tweezijdig toetst, is het kritieke gebied van de vorm $(-\infty; g_1]$ en $[g_2; \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $F(9,9)$-verdeling.
-        \begin{align*}
-            &\fcdf(\text{lower}=0; \text{upper}=g_1; \text{df1}=9; \text{df2}=9)=\alpha/2=0.025 \rightarrow g_1 \approx 0.2484\\
-            &\fcdf(\text{lower}=g_2; \text{upper}=10^{99}; \text{df1}=9; \text{df2}=9)=\alpha/2=0.025 \rightarrow g_2 \approx 4.0260 \rubric{2}
-        \end{align*}
-        Het kritieke gebied is dus $(-\infty; 0.2484]$ en $[4.0260; \infty)$. \rubric{1}
-        De berekende $f = 0.6494$ ligt dus niet in het kritieke gebied, dus we kunnen de nulhypothese $H_0$ niet verwerpen. \rubric{1}
-        Er is onvoldoende bewijs om op basis van deze steekproef de aanname van gelijke varianties te verwerpen. \rubric{1}
+        Het spreidingsdiagram is hieronder weergegeven, waarbij het cargogewicht (in kg) op de $x$-as is uitgezet en het kerosineverbruik (in kg/min) op de $y$-as.\rubric{2}
+        \begin{center}
+            \resizebox{0.9\textwidth}{!}{
+                \includegraphics{exam20260519_regression.png} 
+            }
+        \end{center}\rubric{2}
     }
 
-    \subquestion{10}{
-        Bepaal met behulp van een onafhankelijke $t$-toets of de MTBF van de motor significant lager is dan die van de rotorbladen.
-        Gebruik hiervoor opnieuw een significantieniveau van $\alpha = 0.05$, en bepaal de toetsuitslag op basis van de $p$-waarde.
+    \subquestion{7}{
+        Bereken Pearson's correlatieco\"effici\"ent $r(x,y)$ op basis van de data in de bovenstaande tabel.
+        Wat zegt $r(x, y)$ over de relatie tussen het cargogewicht en het kerosineverbruik?
     }
     \solution{
-        We toetsen of de gemiddelde time to failure $\mu_X$ voor de motoren significant lager is dan de gemiddelde time to failure $\mu_Y$ voor de rotorbladen.
-        De hypotheses kunnen we daarom als volgt defini\"eren:
+        We beginnen met het uitrekenen van Pearson's correlatieco\"effici\"ent 
         \begin{align*}
-            H_0: \quad \mu_X \geq \mu_Y \text{ (niet significant lager) } \\
-            H_1: \quad \mu_X < \mu_Y \text{ (wel significant lager) } \rubric{2}
+            r(x,y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x^2} - \overline{x}^2 ) \cdot (\overline{y^2} - \overline{y}^2) }}
+        \end{align*}
+        Hiervoor hebben we dus de waardes van $\overline{x}$, $\overline{y}$, $\overline{xy}$, $\overline{x^2}$ en $\overline{y^2}$ nodig.
+        Deze bepalen we aan de hand van de volgende rekentabel:
+        \begin{center}
+            \begin{tabular}{ccccc}
+                \toprule
+                    $x$ & $y$ & $xy$ & $x^2$ & $y^2$ \\
+                \midrule
+    		        $2$ & $29$ & $58$ & $4$ & $841$ \\
+                    $4$ & $17$ & $68$ & $16$ & $289$ \\
+                    $6$ & $61$ & $366$ & $36$ & $3721$ \\
+                    $8$ & $76$ & $608$ & $64$ & $5776$ \\
+                    $10$ & $49$ & $490$ & $100$ & $2401$ \\
+                    $12$ & $81$ & $972$ & $144$ & $6561$ \\
+                    $14$ & $124$ & $1736$ & $196$ & $15376$ \\
+                    $16$ & $102$ & $1632$ & $256$ & $10404$ \\
+                    $18$ & $103$ & $1854$ & $324$ & $10609$ \\
+                    $20$ & $118$ & $2360$ & $400$ & $13924$ \\
+                \midrule
+                    $\overline{x} = 11$ & $\overline{y} = 76$ & $\overline{xy} = 1014.4$ & $\overline{x^2} = 154$ & $\overline{y^2} = 6990.2$ \rubric{3} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+
+        De correlatieco\"effici\"ent van Pearson is dus gelijk aan
+        \begin{align*}
+            r(x,y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x^2} - \overline{x}^2) \cdot (\overline{y^2} - \overline{y}^2) } }\\
+                    &= \frac{ 1014.4 - 11 \cdot 76 }{ \sqrt{ (154 - 11^2) \cdot (6990.2 - 76^2) } } \\
+                    &= \frac{178.4}{200.1714} \\
+                    &\approx 0.8912. \rubric{2}
+        \end{align*}
+        De correlatieco\"effici\"ent $r \approx 0.8912$ ligt ver van $0$ af en is positief.
+        Dit houdt in dat er een sterke positieve (stijgende) trend is. \rubric{1}
+        Een hoger gewicht van de lading correleert sterk met een hoger kerosineverbruik. \rubric{1}
+    }
+
+    \subquestion{6}{
+        Bereken de regressielijn $Y = a + b \cdot X$ door berekening van de co\"effici\"enten $a$ en $b$.
+        Bepaal aan de hand van de regressielijn een statistisch verantwoorde voorspelling voor het kerosineverbruik van een transportvliegtuig met een lading van 5500 kilogram.
+    }
+    \solution{
+        Om de co\"effici\"enten $a$ en $b$ van de regressielijn te berekenen, gaan we de rekentabel van vraag (a) hergebruiken.
+        Er volgt namelijk dat
+        \begin{align*}
+            b &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
+              &= \frac{1014.4 - 11 \cdot 76}{154 - (11)^2} \\
+              &= \frac{178.4}{33} \approx 5.4061 \\
+            a &= \overline{y} - b \cdot \overline{x} \\
+              &= 76 - 5.4061 \cdot 11 \\
+              &\approx 16.5333.
+        \end{align*}
+        De formule van de regressielijn behorende bij deze steekproef is dus gelijk aan $Y = 16.5333 + 5.4061 \cdot X$. \rubric{1}
+        Een statistisch verantwoorde voorspelling voor het kerosineverbruik van een transportvliegtuig met een lading van 5500 kilogram vinden we door $X = 5.5$ in te vullen:
+        Dit geeft een waarde van $y_0 = 16.5333 + 5.4061 \cdot 5.5 \approx 46.2667$, oftewel net iets meer dan $46$ kilogram per minuut. \rubric{1} 
+    }
+
+    \subquestion{6}{
+        Bereken een \SI{95}{\percent}-voorspellingsinterval voor het kerosineverbruik van een transportvliegtuig met een laadgewicht van 5500 kilogram.
+        Rond af op gehele getallen zodanig dat het betrouwbaarheidsniveau gewaarborgd blijft.
+    }
+    \solution{
+        In opdracht (d) hebben we een puntschatting van $y_0 = 16.5333 + 5.4061 \cdot 5.5 \approx 46.2667$ bepaald.
+        Daarnaast kunnen we de standaardafwijking $\sigma$ van de storingsterm $\varepsilon$ schatten:
+        \begin{align*}
+            s_{\varepsilon} &= \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
+                            &= \sqrt{ \frac{10}{8} \cdot \left( 6990.2 - 16.5333 \cdot 76 - 5.4061 \cdot 1014.4 \right) } \\ 
+                            &\approx 17.6691. \rubric{1}
         \end{align*}
 
-        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en data is al verzameld voor beide populaties.
-
-        Op basis van ons antwoord bij vraag (b) mogen we nu aannemen dat $\sigma^2 = \sigma_X^2 = \sigma_Y^2$.
-        Dat betekent dat we met de pooled variance mogen werken als schatting voor de gemeenschappelijke onbekende variantie $\sigma^2$. \rubric{1}
-        
+        Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van $Y$ voor gegeven $X = x_0$:
         \begin{align*}
-            s_P^2 = \frac{(n-1)\cdot s_X^2 + (m-1) \cdot s_Y^2}{n-1+m-1} = \frac{9 \cdot 166.6667 + 9 \cdot 256.6667}{18} \approx 211.6667. \rubric{1}
+            s_{f} &= s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) } \\
+                    &= 17.6691 \cdot \sqrt{ 1 + \frac{1}{10} \cdot \left( 1 + \frac{(5.5 - 11)^2}{154 - 11^2} \right) } \\
+                    &\approx 19.2882. \rubric{2}
         \end{align*}
-        
-        De toetsingsgrootheid van de bijbehorende $t$-toets is gelijk aan
+
+        Omdat we de standaardafwijkingen geschat hebben en de storingstermen normaal verdeeld zijn, moeten we werken met de $t$-verdeling met $df = n - 2 = 8$ vrijheidsgraden.
+        De $t$-waarde die hoort bij een betrouwbaarheidsniveau $\alpha = 0.05$ is gelijk aan
         \[
-            t = \frac{(\overline{x}-\overline{y}) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}}} = \frac{(1190-1198) - 0}{\sqrt{\frac{211.6667}{10} + \frac{211.6667}{10}}}\approx -1.2296, 
+            t = \invt(\text{opp} = 1 - \alpha / 2; \text{df} = n - 2) = \invt(\text{opp} = 0.975, \text{df} = 8) \approx 2.306.\rubric{1}
         \]
-        en komt uit een $t$-verdeling met $\text{df}=18$ vrijheidsgraden. \rubric{2}
-        Omdat we linkszijdig toetsen, is de $p$-waarde gelijk aan de linkeroverschrijdingskans van deze geobserveerde toetsingsgrootheid $t$:
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = x_0$ kan dus worden beschreven door
         \begin{align*}
-            p = P(T \leq t) &= \tcdf(\text{lower}=-10^{99}, \text{upper}=t; \text{df}=n+m-2) \\
-                            &= \tcdf(-10^{99}; -1.2296, 18) \\
-                            &\approx 0.1173 \rubric{2}
+            &[y_0 - t \cdot s_{f}, y_0 - t \cdot s_{f}] \\ 
+            &= [46.2667 - 2.306 \cdot 19.2882; 46.2667 + 2.306 \cdot 19.2882] \\ 
+            &\approx [1.7879; 90.7454]. \rubric{1}
         \end{align*}
         
-        Deze $p$-waarde is groter dan het significantieniveau $\alpha = 0.05$, dus $H_0$ wordt geaccepteerd.\rubric{1}
-        Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de MTBF van motoren significant lager is dan de MTBF van rotorbladen.\rubric{1}
+        Met \SI{95}{\percent} betrouwbaarheid zal voor een gegeven $X = 5.5$ een toekomstige uitkomst van $Y$ liggen tussen $1$ en $91$.(naar buiten afronden op betrouwbaarheidsniveau te waarborgen).\rubric{1} 
     }
 \end{question}
