@@ -1,9 +1,9 @@
 \begin{question}{27}{
     De Landmacht onderzoekt de effectiviteit van een nieuw soort camouflagenetten die Fennek-verkenningsvoertuigen moeten beschermen tegen detectie door moderne sensoren en drones.
     Deze camouflagenetten worden in drie terreintypes (bebost gebied, duinlandschap en stedelijk gebied) getest op basis van in totaal $300$ verkenningsvluchten door een vijand-simulerende drone-eenheid.
-    Per vlucht wordt geregistreerd of het voertuig wordt gedetecteerd of niet, zoals te zien in onderstaande tabel:
+    Per vlucht wordt geregistreerd of het voertuig wordt gedetecteerd of niet, zoals te zien in onderstaande tabel:\par\medskip
     \begin{center}
-        \renewcommand{\arraystretch}{1.25}
+        \renewcommand{\arraystretch}{1.2}
         \begin{tabular}{cccc}
             \toprule
                 & \textbf{Detectie} & \textbf{Geen detectie} & \textbf{Totaal} \\
@@ -16,7 +16,7 @@
             \bottomrule
         \end{tabular}
     \end{center}
-
+    \par\medskip
     De Landmacht wil onderzoeken of een Fennek-voertuig in een bepaald terreintype eerder wordt gedetecteerd.
 }
 
@@ -26,12 +26,12 @@
     }
 
     \solution{
-        Om te bepalen of er een statistisch significant verschil is in detectiekansen tussen de drie terreintypen, kunnen we een chi-kwadraattoets voor onafhankelijkheid gebruiken. \rubric{2}
+        Om te bepalen of er een statistisch significant verschil is in detectiekansen tussen de drie terreintypen, kunnen we een chi-kwadraattoets voor onafhankelijkheid gebruiken. \rubric{1}
         De nulhypothese $H_0$ en de alternatieve hypothesetoets $H_1$ kunnen dan als volgt worden geformuleerd:
-        \begin{description}
-            \item[$H_0$:] de detectiekans is niet afhankelijk van het terreintype. \rubric{1}
-            \item[$H_1$:] de detectiekans is wel afhankelijk van het terreintype. \rubric{1}
-        \end{description}
+        \begin{align*}
+            H_0: &\quad \text{de detectiekans is niet afhankelijk van het terreintype.} \rubric{1} \\
+            H_1: &\quad \text{de detectiekans is wel afhankelijk van het terreintype.} \rubric{1}
+        \end{align*}
     }
 
     \subquestion{6}{
@@ -43,9 +43,9 @@
             E_{ij} = \frac{(\text{rijtotaal}_i) \cdot (\text{kolomtotaal}_j)}{\text{totaal}}
         \]
         We berekenen de verwachte frequenties voor elke cel in de tabel:
-        \par\bigskip
+        \par\smallskip
         \begin{center}
-            \renewcommand{\arraystretch}{1.25}
+            \renewcommand{\arraystretch}{1.1}
             \begin{tabular}{cccc}
                 \toprule
                     & \textbf{Detectie} & \textbf{Geen detectie} & \textbf{Totaal} \\
@@ -58,26 +58,25 @@
                 \bottomrule 
             \end{tabular}
         \end{center}
-        \par\bigskip
+        \par\smallskip
         Vervolgens berekenen we de toetsingsgrootheid $X^2$ als volgt:
         \begin{align*}
             \chi^2 &= \frac{(O_{1, 1} - E_{1,1})^2}{E_{1, 1}} + \frac{(O_{1, 2} - E_{1,2})^2}{E_{1, 2}} + \ldots + \frac{(O_{3, 2} - E_{3,2})^2}{E_{3, 2}} \\
                     &= \frac{(26 - 38.8667)^2}{38.8667} + \frac{(84 - 71.1333)^2}{71.1333} + \ldots + \frac{(38 - 45.2667)^2}{45.2667} \\
                     &\approx 11.032. \rubric{3}
         \end{align*}
-    
-        
     }
 
     \subquestion{5}{
-        Wat is de kansverdeling van de toetsingsgrootheid onder $H_0$? Bepaal met behulp van deze kansverdeling de $p$-waarde.
+        Wat is de kansverdeling van de toetsingsgrootheid onder $H_0$? 
+        Bepaal met behulp van deze kansverdeling de $p$-waarde.
     }
     \solution{
         De toetsingsgrootheid $X^2$ volgt onder de nulhypothese een $\chi^2$-verdeling met $\text{df}= (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (3-1)\cdot(2-1) = 2$ vrijheidsgraden. \rubric{2}
         De $p$-waarde is de kans op een nog extremere uitkomst voor de toetsingsgrootheid, in het geval van de chi-kwadraatverdeling een nog grotere uitkomst. \rubric{1}
         De $p$-waarde behorende bij onze toetsingsgrootheid is daarom gelijk aan        
         \begin{align*}
-            p = P(X^2 > 11.032) &= \chi^2\text{cdf}(\text{lower}=11.032, \text{upper}=10^{99}, \text{df}=2) \\
+            p = P(X^2 > 11.032) &= \chi^2\text{cdf}(\lb=11.032, \ub=10^{99}, \df=2) \\
                                 &\approx 0.004.   \rubric{2}
         \end{align*}
 
@@ -129,10 +128,9 @@
             \end{align*}
             De solver optie geeft een waarde van $p_2 \approx 0.2993$.\rubric{1}
         \end{enumerate}
-        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het \SI{95}{\percent}-betrouwbaarheidsinterval voor de detectiekans $p$ van Fennek-voertuigen met de nieuwe camouflagenetten is
-        is gelijk aan $[0.2993, 0.4103]$. \rubric{1}
+        We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het \SI{95}{\percent}-betrouwbaarheidsinterval voor de detectiekans $p$ van Fennek-voertuigen met de nieuwe camouflagenetten is gelijk aan $[0.2993, 0.4103]$. \rubric{1}
 
-        We zien dat de geclaimde succeskans $p = 0.3$ wel in dit interval ligt. \rubric{1}
-        Er is dus onvoldoende reden om aan te nemen dat de succeskans significant hoger is dan \SI{30}{\percent}. \rubric{1}
+        We zien dat de geclaimde succeskans $p = 0.3$ in het Clopper-Pearson interval ligt. \rubric{1}
+        Er is dus onvoldoende reden om aan te nemen dat de succeskans significant hoger is dan \SI{30}{\percent}.\rubric{1}
     }
 \end{question}

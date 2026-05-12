@@ -1,4 +1,4 @@
-\begin{question}{19}{
+\begin{question}{13}{
     De Koninklijke Marine onderzoekt op haar luchtverdedigings- en commandofregatten (LCF) de kwetsbaarheden van het ECDIS-navigatiesysteem op het gebied van GPS-spoofing.
     Tijdens een oefening op de Noordzee wordt de gemiddelde afwijking tussen de werkelijke positie en de door ECDIS weergegeven positie gemeten (in meters).
 
@@ -6,12 +6,24 @@
     Bij een steekproef van achttien metingen wordt een gemiddelde van $14.1$ meter en een standaardafwijking van $1.4$ meter waargenomen.
     Neem aan dat de afwijkingen normaal verdeeld zijn.
 }
-    \subquestion{6}{
+    \subquestion{7}{
         Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde afwijking $\mu$ op basis van de steekproefgegevens.
+        Rond de grenzen van het betrouwbaarheidsinterval af op \'e\'en decimaal, zodanig dat de betrouwbaarheid gewaarborgd blijft.
     }
     \solution{
-        
-    }
+        Omdat $\sigma$ onbekend is en de steekproefgrootte $n = 18 < 30$ is, moeten we gebruik maken van de $t$-verdeling.\rubric{1}
+        De $t$-waarde die hoort bij \SI{95}{\percent} betrouwbaarheid, oftewel $\alpha = 0.05$, is (in het geval van tweezijdige intervallen) gelijk aan
+        \[
+            t = \invt(\opp=1-\frac{\alpha}{2}, \df=n-1) = \invt(\opp=0.975, \df=17) \approx 2.1098.\rubric{2}
+        \]
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval wordt dan gegeven door
+        \begin{align*}
+            &\phantom{=}[\samplemeanx - t \cdot \frac{ \samplestd }{ \sqrt{ n } }, \samplemeanx + t \cdot \frac{ \samplestd }{ \sqrt{ n } }] \\
+            &= [14.1 - 2.1098 \cdot \frac{ 1.4 }{ \sqrt{ 18 } }, 14.1 + 2.1098 \cdot \frac{ 1.4 }{ \sqrt{ 18 } }] \\
+            &= [13.4038, 14.7962].\rubric{3}
+        \end{align*}
+        Om de betrouwbaarheid te waarborgen, moeten we het interval naar buiten afronden, oftewel we krijgen een interval van $[13.4, 14.8]$ meter. \rubric{1}
+}
     
     \subquestion{6}{
         Aangezien precieze lokalisering van essentieel operationeel belang is om de veiligheid van de vloot te waarborgen, wil men de gemiddelde afwijking in posities op $0.1$ meter nauwkeurig kunnen schatten.
@@ -21,19 +33,19 @@
         Omdat de werkelijke populatiestandaardafwijking $\sigma$ onbekend is, moeten we terugvallen op de $t$-verdeling.
         Het betrouwbaarheidsinterval voor $\mu$ is dan gegeven door
         \[
-            [\samplemeanx - \samplestd / \sqrt{n} \cdot \invt(\opp=1-\alpha/2, \df=n-1), \quad \samplemeanx + \samplestd / \sqrt{n} \cdot \invt(\opp=1-\alpha/2, \df=n-1)],
+            [\samplemeanx - t \cdot \samplestd / \sqrt{n}, \quad \samplemeanx + t \cdot \samplestd / \sqrt{n}],
         \]
-        De afwijking van het betrouwbaarheidsinterval ten opzichte van het steekproefgemiddelde is dus $\pm\ \samplestd / \sqrt{n} \cdot \invt(\opp=1-\alpha/2, \df=n-1)$ en we willen dat deze kleiner is dan of gelijk aan $0.1$ meter.
+        De afwijking van het betrouwbaarheidsinterval ten opzichte van het steekproefgemiddelde is dus $\pm\ t \cdot \samplestd / \sqrt{n}$ en we willen dat deze kleiner is dan of gelijk aan $\pm\ 0.1$ meter.\rubric{1}
         Hiertoe voeren we op de grafische rekenmachine het volgende in in het functiescherm:
         \[
-            y_1 = s / \sqrt{X} \cdot \invt(\text{opp}=1-\alpha/2, \text{df}=X-1) = 1.4 / \sqrt{X} \cdot \invt(\text{opp}=0.975, \text{df}=X-1)
+            y_1 = \frac{s}{\sqrt{X}} \cdot \invt(\text{opp}=1-\alpha/2, \text{df}=X-1) = \frac{1.4}{\sqrt{X}} \cdot \invt(\text{opp}=0.975, \text{df}=X-1) \rubric{2}
         \]
         Met behulp van de tabelfunctie krijgen we dan als volgt:
         \begin{align*}
-            X = 755: &\quad s / \sqrt{755} \cdot \invt(\opp=0.975, \df=754) \approx 0.1. \\
-            X = 756: &\quad s / \sqrt{756} \cdot \invt(\opp=0.975, \df=755) \approx 0.1.
+            X = 755: &\quad \frac{1.4}{\sqrt{755}} \cdot \invt(\opp=0.975, \df=754) \approx 0.10002. \\
+            X = 756: &\quad \frac{1.4}{\sqrt{756}} \cdot \invt(\opp=0.975, \df=755) \approx 0.09996. \rubric{2}
         \end{align*}
-        We vinden dus een minimale steekproefgrootte van $n = 756$.
+        Om een betrouwbaarheidsinterval te vinden met de gewenste precisie van maximaal $\pm\ 0.1$ meter, is een minimale steekproefgrootte van $n = 756$ benodigd.\rubric{1}
     }
 
     
