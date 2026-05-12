@@ -7,18 +7,33 @@
     Neem aan dat de afwijkingen normaal verdeeld zijn.
 }
     \subquestion{6}{
-        Voer een geschikte hypothesetoets uit om te onderzoeken of de gemiddelde afwijking voldoet aan de claim in de technische handboeken.
-    }
-    \solution{
-
-    }
-    
-    \subquestion{6}{
-        Aangezien precieze lokalisering van essentieel operationeel belang is om de veiligheid van de vloot te waarborgen, wil men de gemiddelde afwijking in posities op 1 meter nauwkeurig kunnen schatten.
-        Wat is de minimale steekproefomvang $n$ waarbij het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ een afwijking heeft van $\pm 1$ meter.
+        Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde afwijking $\mu$ op basis van de steekproefgegevens.
     }
     \solution{
         
+    }
+    
+    \subquestion{6}{
+        Aangezien precieze lokalisering van essentieel operationeel belang is om de veiligheid van de vloot te waarborgen, wil men de gemiddelde afwijking in posities op $0.1$ meter nauwkeurig kunnen schatten.
+        Wat is de minimale steekproefomvang $n$ waarbij het \SI{95}{\percent}-betrouwbaar\-heids\-interval voor $\mu$ een afwijking heeft van $\pm 0.1$ meter.
+    }
+    \solution{
+        Omdat de werkelijke populatiestandaardafwijking $\sigma$ onbekend is, moeten we terugvallen op de $t$-verdeling.
+        Het betrouwbaarheidsinterval voor $\mu$ is dan gegeven door
+        \[
+            [\samplemeanx - \samplestd / \sqrt{n} \cdot \invt(\opp=1-\alpha/2, \df=n-1), \quad \samplemeanx + \samplestd / \sqrt{n} \cdot \invt(\opp=1-\alpha/2, \df=n-1)],
+        \]
+        De afwijking van het betrouwbaarheidsinterval ten opzichte van het steekproefgemiddelde is dus $\pm\ \samplestd / \sqrt{n} \cdot \invt(\opp=1-\alpha/2, \df=n-1)$ en we willen dat deze kleiner is dan of gelijk aan $0.1$ meter.
+        Hiertoe voeren we op de grafische rekenmachine het volgende in in het functiescherm:
+        \[
+            y_1 = s / \sqrt{X} \cdot \invt(\text{opp}=1-\alpha/2, \text{df}=X-1) = 1.4 / \sqrt{X} \cdot \invt(\text{opp}=0.975, \text{df}=X-1)
+        \]
+        Met behulp van de tabelfunctie krijgen we dan als volgt:
+        \begin{align*}
+            X = 755: &\quad s / \sqrt{755} \cdot \invt(\opp=0.975, \df=754) \approx 0.1. \\
+            X = 756: &\quad s / \sqrt{756} \cdot \invt(\opp=0.975, \df=755) \approx 0.1.
+        \end{align*}
+        We vinden dus een minimale steekproefgrootte van $n = 756$.
     }
 
     
