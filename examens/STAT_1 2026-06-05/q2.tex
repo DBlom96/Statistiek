@@ -1,0 +1,111 @@
+\begin{question}{25}{
+    Tijdens een militaire missie worden Panzerhaubitzes 2000 ingezet voor langdurige operaties.
+    Een kritisch onderdeel, de elevatiemotoren van de kanonnen, heeft een gemiddelde uitvalfrequentie van 1,5 storingen per maand.
+    Gedurende de missie wordt gebruik gemaakt van een logistiek transport voor het leveren van reserveonderdelen (spare parts) voor de Panzerhaubitzes.
+}
+
+    \subquestion{5}{
+        Wat is de kans dat er in een periode van zes maanden precies tien storingen optreden, aangenomen dat de uitvallen volgens een Poissonproces plaatsvinden?
+    }
+    \solution{
+        Laat $X$ het aantal storingen aan de elevatiemotor van het kanon zijn in een periode van zes maanden.
+        De tijdseenheid is in maanden, dus $t = 6$ en $\lambda = 1,5$, oftewel $\mu = \lambda \cdot t = 9$. \rubric{2}
+
+        Er geldt dus dat $X \sim \text{Poisson}(\mu=9)$. \rubric{1}
+
+        De kans dat er in die zes maanden precies tien storingen plaatsvinden is dus gelijk aan
+        \[
+            P(X = 10) = \poissoncdf(\mu=9; k=10) \approx 0,1186. \rubric{2}
+        \]
+    }
+
+    \subquestion{4}{
+        De logistieke eenheid die verantwoordelijk is voor het transport heeft een transportcapaciteit van 12 reservemotoren per zes maanden.
+        Wat is de kans dat er na aankomst van het logistieke transport een tekort aan benodigde reserveonderdelen blijkt te zijn?
+    }
+
+    \solution{
+        Er gaat een tekort aan reserveonderdelen zijn als geldt dat er meer storingen optreden dan het aantal reserveonderdelen dat kan worden getransporteerd? \rubric{1}
+        We willen dus de kans $P(X > 12)$ bepalen, oftewel
+        \begin{align*}
+            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12)   &= 1 - \poissoncdf(\mu=9; k=12) \\
+                                                        &\approx 0,1242. \rubric{3}
+        \end{align*}
+    }
+
+    % \subquestion{3}{
+    %     De elevatiemotor van een Panzerhaubitze 2000 is precies \'e\'en maand geleden vervangen.
+    %     Hoe groot is de kans dat deze nog een maand zonder problemen blijft functioneren?
+    % }
+    % \solution{
+    %     Laat $T$ de tijd meten vanaf de vervanging van de motor tot de eerste storing.
+    %     Aangezien storingen plaatsvinden volgens een Poissonproces, geldt dat
+    %     \[
+    %         P(T > 2 \mid T > 1) = \frac{P(T > 2 \text{ en } T > 1)}{P(T > 1)} = \frac{P(T>2)}{P(T>1)} = \frac{e^{-1.5\cdot 2}}{e^{-1,5\cdot 1}} = \frac{1}{e\sqrt{e}} \approx 0,2231. \rubric{3}
+    %     \]
+    %     \textbf{Alternatief}: aangezien $T$ een exponentieel verdeelde kansvariabele is, hebben we te maken met geheugenloosheid.\rubric{1}
+    %     De kans dat deze nog een maand zonder problemen blijft functioneren is
+    %     \[
+    %         P(T > 1) = e^{-\lambda\cdot 1} = e^{-1,5\cdot 1} = e^{-1,5} \approx 0,2231. \rubric{2} 
+    %     \]
+    % }   
+
+    \subquestion{7}{
+        De eenheid overweegt twee opties om de kans op een tekort aan reserveonderdelen te minimaliseren:
+        \begin{enumerate}
+            \item het doorvoeren van technologische upgrades die de uitvalfrequentie met $10\%$ verminderen.
+            \item een verhoging van de transportcapaciteit naar 13 reservemotoren per zes maanden.
+        \end{enumerate}
+        Welke maatregel is het meest effectief in het verlagen van de kans op een tekort aan reserveonderdelen?
+        Beargumenteer je antwoord aan de hand van berekeningen.
+    }
+    \solution{
+        Zodra optie 1 wordt doorgevoerd, wordt de uitvalfrequentie met $10\%$ vermindert, oftewel de gemiddelde uitvalfrequentie per maand daalt van $1,5$ naar $0,9 \cdot 1,5 = 1,35$ storingen.\rubric{1}
+        Per zes maanden geeft dit $\mu = \lambda \cdot t = 1,35 \cdot 6 = 8,1$ \rubric{1}.
+        De kans op een tekort aan reserveonderdelen is in dat geval:
+        \begin{align*}
+            P(X > 12) = P(X \ge 13) = 1 - P(X \le 12)   &= 1 - \poissoncdf(\mu=8,1; k=12) \\
+                                                        &\approx 0,0687. \rubric{2}
+        \end{align*}
+
+        Zodra optie 2 wordt doorgevoerd, wordt de transportcapaciteit verhoogt tot 13 reservemotoren per zes maanden.
+        De kans op een tekort aan reserveonderdelen is in dat geval:
+        \begin{align*}
+            P(X > 13) = P(X \ge 14) = 1 - P(X \le 13)   &= 1 - \poissoncdf(\mu=9; k=13) \\
+                                                        &\approx 0,0739. \rubric{2}
+        \end{align*}
+
+        Aangezien de kans op een tekort kleiner is als optie 1 wordt doorgevoerd ($0,0687 < 0,0739$), is deze optie ook een effectievere maatregel om het tekort te minimaliseren. \rubric{2}
+    }
+
+    \subquestion{9}{
+        Stel nu dat er niet elke zes maanden een transport is van 12 reserveonderdelen, maar elke maand een transport van twee onderdelen.
+        Het aantal storingen volgt nog steeds een Poissonproces met gemiddelde $\lambda=1,5$ per maand.
+        Wat is het verwachte aantal reserveonderdelen van een enkel transport (dus na een maand) dat gebruikt moet worden om storingen mee op te lossen?
+        Ga hierbij er van uit dat de huidige reservevoorraad leeg is.
+    }
+    \solution{
+        Laat $Y$ het aantal reserveonderdelen zijn dat gebruikt moet worden op storingen mee op te lossen.
+        De uitkomstenruimte van $Y$ bestaat uit $0, 1, 2$, aangezien er maximaal 2 reservemotoren gebruikt kunnen worden als een transport bestaat uit twee reservemotoren.\rubric{2}
+        Deze kansvariabele $Y$ heeft de volgende kansfunctie:
+        \begin{center}
+            \begin{tabular}{cc}
+                \toprule
+                    {\bfseries Uitkomst $k$} & $P(Y=k)$\\
+                \cmidrule{1-1} \cmidrule{2-2}
+                    $0$ & $P(X=0) = \poissonpdf(\lambda=1,5; k=0) \approx 0,2231$ \\
+                    $1$ & $P(X=1) = \poissonpdf(\lambda=1,5; k=1) \approx 0,3347$ \\
+                    $2$ & $P(X\ge 2) = 1 - \poissoncdf(\lambda=1,5; k=1) \approx 0,4422$ \rubric{3} \\ 
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        Het verwachte aantal reservemotoren dat wordt gebruikt om storingen mee te verhelpen is dan gelijk aantal
+        de verwachtingswaarde van deze kansvariabele $Y$, oftewel:
+        \begin{align*}
+            E[Y]    &= 0 \cdot P(Y=0) + 1 \cdot P(Y=1) + 2 \cdot P(Y=2) \\
+                    &\approx 0 \cdot 0,2231 + 1 \cdot 0,3347 + 2 \cdot 0,4422 \\
+                    &\approx 1,2191 \rubric{3}
+        \end{align*}
+        Het verwachte aantal reservemotoren dat moet worden gebruikt om storingen te verhelpen is dus gelijk aan $1,2191$. \rubric{1}
+    }
+\end{question}
