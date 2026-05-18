@@ -50,7 +50,7 @@
     \solution{
         In de vraag staat dat we aan mogen nemen dat $X_A \sim N(\mu_A = \text{ ? }, \sigma_A = \text{ ? })$ en $X_B \sim N(\mu_B = \text{ ? }, \sigma_B = \text{ ? })$.
 
-        Bij een $F$-toets we om de varianties $\sigma_A^2$ en $\sigma_B$ gelijk zouden kunnen zijn, oftewel
+        Bij een $F$-toets toetsen we of de varianties $\sigma_A^2$ en $\sigma_B$ gelijk zouden kunnen zijn, oftewel
         \begin{align*}
             H_0: \quad \sigma_A^2 = \sigma_B^2 \\
             H_1: \quad \sigma_A^2 \neq \sigma_B^2 \rubric{2}
@@ -71,14 +71,14 @@
         We voeren een tweezijdige toets uit (dit is altijd het geval bij een $F$-toets voor gelijke varianties), oftewel de $p$-waarde is gelijk aan het minimum van de linker- en de rechteroverschrijdingskans van $f$.
         In dit geval is de linkeroverschrijdingskans kleiner:
         \begin{align*}
-            p = P(F \ge f) = \text{Fcdf}(\text{lower}=0, \text{upper}=0.3460, \text{df1}=9, \text{df2}=10) \approx 0.0628.\rubric{2}
+            p = P(F \le f) = \text{Fcdf}(\text{lower}=0, \text{upper}=0.3460, \text{df1}=9, \text{df2}=10) \approx 0.0628.\rubric{2}
         \end{align*}
-        Aangezien de $p$-waarde groter is dan $\alpha/2$ (tweezijdige toets!), wordt de nulhypothese $H_0$ aangenomen.\rubric{1}
+        Aangezien de $p$-waarde groter is dan $\alpha/2$ (tweezijdige toets!), wordt de nulhypothese $H_0$ niet verworpen.\rubric{1}
         Er is onvoldoende bewijs om op basis van deze steekproef de aanname van gelijke varianties te verwerpen. \rubric{1}
     }
 
     \subquestion{12}{
-        Bepaal met behulp van een onafhankelijke $t$-toets of de gemiddelde reactietijd significant verschil bij gebruik van de twee verschillende typen boordcomputers.
+        Bepaal met behulp van een onafhankelijke $t$-toets of de gemiddelde reactietijd significant verschilt bij gebruik van de twee verschillende typen boordcomputers.
         Kies opnieuw voor het significantieniveau $\alpha = 0.05$.
     }
     \solution{
@@ -110,7 +110,7 @@
             g_2 &= \invt(\text{opp} = 1-\alpha/2, \text{df}=n+m-2) = \invt(\text{opp}=0.975, \text{df}=19) \approx 2.0930 \rubric{2}
         \end{align*}
         
-        De toetsingsgrootheid $t\approx -0.7542$ ligt dus niet in het kritieke gebied, dus $H_0$ wordt in dit geval aangenomen.\rubric{1}
+        De toetsingsgrootheid $t\approx -0.7542$ ligt dus niet in het kritieke gebied, dus $H_0$ wordt ook in dit geval niet verworpen.\rubric{1}
         Er is op basis van deze steekproeven onvoldoende reden om aan te nemen dat de gemiddelde reactietijd significant verschilt bij gebruik van de twee typen boordcomputers.
         \rubric{1}
     }
