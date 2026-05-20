@@ -11,16 +11,18 @@
 }
 
     \answer{
-        In dit geval willen we een grenswaarde berekenen, dus moeten we gebruik maken van de functie \enquote{invNorm} op de grafische rekenmachine.
-        Noteer met $X$ de normaal verdeelde kansvariabele die het aantal woon-werkkilometers van een willekeurige werknemer beschrijft. 
-        In het bijzonder geldt dat de grenswaarde $g$ van het aantal kilometers zodat \SI{10}{\percent} van de werknemers meer dan $g$ km per persoon per jaar reizen gelijk is aan:
+        De kansvariabele $X$ meet het aantal woon-werkkilometers van een willekeurige werknemer en is normaal verdeeld met $\mu = 8000$ en $\sigma=2500$.
+
+        We willen in dit geval, gegeven een kans van $0.10$, de grenswaarde $g$ berekenen waarvoor geldt $P(X \ge g) = 0.10$, oftewel $P(X \le g) = 1 - 0.10 = 0.90$.
+        Hiervoor moeten we dus gebruik maken van de functie \enquote{invNorm} op de grafische rekenmachine.
+         
         \begin{align*}
-            P(X > g) = 0.10 \rightarrow g   &= \invnorm(\opp= 1 - 0.10=0.90, \mu=8 000, \sigma= 2 500) \\
-                                            &\approx 11204\ \unit{km}.
+            g   &= \invnorm(\opp= 1-0.10=0.90, \mu=8 000, \sigma= 2 500) \\
+                &\approx 11204\ \unit{km}.
         \end{align*}
         Het juiste antwoord is dus (c).
 
         {
-            \noindent \textit{\textbf{Noot:} bij het gebruik van de functie \enquote{InvNorm} wordt in deze uitwerkingen uitgegaan van de oppervlakte links van de grenswaarde $g$ (oftewel Tail$=$LEFT), tenzij expliciet anders aangegeven.}
+            \noindent \textit{\textbf{Noot:} bij het gebruik van de functie \enquote{InvNorm} wordt in de rest van de uitwerkingen altijd uitgegaan van de oppervlakte links van de grenswaarde $g$ (oftewel we gebruiken Tail$=$LEFT), tenzij expliciet anders aangegeven.}
         }
     }

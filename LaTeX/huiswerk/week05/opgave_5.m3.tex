@@ -8,15 +8,10 @@
         \item $4.8$.
     \end{enumerate}
 \answer{
-    Om dit percentage te berekenen, berekenen we eerst de $z$-score behorende bij $x = 85$:
-    \[
-        z = \frac{x-\mu}{\sigma} = \frac{85-75}{6} \approx 1.6667.
-    \]
-    Vervolgens maken we gebruik van de functie \enquote{normalcdf} op de grafische rekenmachine.
-    In het bijzonder geldt namelijk dat de kans op een gewicht van meer dan $85$ kilogram gelijk is aan:
+    De kansvariabele $X$ meet het lichaamsgewicht van een willekeurige mannelijke economiestudent en is normaal verdeeld met $\mu = 75$ en $\sigma=6$.
+    Om de kans te berekenen dat iemand meer dan $85$ kilogram weegt, maken we gebruik van de functie \enquote{normalcdf} op de grafische rekenmachine:
     \begin{align*}
-        P(X > 85)   &= P(Z > 1.6667) \\
-                    &= \normalcdf(\lb=1.6667, \ub=\GRinfinity, \mu=0, \sigma=1) \\
+        P(X > 85)   &= \normalcdf(\lb=85, \ub=\GRinfinity, \mu=75, \sigma=6) \\
                     &\approx 0.0478.
     \end{align*}
     Ongeveer \SI{4.78}{\percent} van de mannelijke economiestudenten heeft een gewicht van meer dan $85$ kilogram. 

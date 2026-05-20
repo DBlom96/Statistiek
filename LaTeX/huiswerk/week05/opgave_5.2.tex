@@ -8,18 +8,17 @@ De standaarddeviatie is echter onbekend.
     \item Bij nauwkeurig nawegen van een groot aantal pakken bleek dat in \SI{20}{\percent} van de gevallen een pak minder dan $1 000$ gram rijst bevat.
     Bereken op basis van deze informatie de standaarddeviatie van de vulgewichten.
     \answer{
-        Laat $X$ de normaal verdeelde kansvariabele zijn met verwachtingswaarde $\mu=1 010$ en onbekende standaarddeviatie $\sigma$ die het gewicht van een pak rijst beschrijft.
-        In dat geval is de kansvariabele $Z = \frac{X - \mu}{\sigma}$ standaardnormaal verdeeld, oftewel $Z \sim \normal{0}{1}$.
-        
-        De $z$-waarde waarvoor geldt dat $P(Z < z) = 0.20$ is gelijk aan
-        \[
-            z = \invnorm(\opp=0.20, \mu=0, \sigma=1) \approx -0.8416.
-        \]
-        
-        In andere woorden: de waarde $1 000$ ligt 0.8416 standaarddeviaties onder het gemiddelde, oftewel:
-        \[
-            \frac{1 000 - 1 010}{\sigma} = -0.8416 \rightarrow 1 000 = 1 010 - 0.8416 \cdot \sigma \rightarrow \sigma \approx 11.8818
-        \]
+        We noteren met $X$ het vulgewicht van een willekeurig pak rijst.
+        Er geldt dat $X$ normaal verdeeld is met verwachtingswaarde $\mu=1 010$ en onbekende standaardafwijking $\sigma$.
+        Verder is gegeven dat de kans op een gewicht van minder dan $1000$ gram is \SI{20}{\percent}, oftewel $P(X \le 1000) = 0.2$.
+
+        We kunnen de standaardafwijking $\sigma$ vinden als we de vergelijking $P(X \leq 1000) = \normalcdf(\lb=-10^{99}, \ub=1000, \mu=1010, \sigma=\text{\ ?}) = 0.2$ kunnen oplossen.
+        Dit doen we met behulp van de \enquote{numeric solver}:
+        \begin{align*}
+            E_1 &= \normalcdf(\lb=-10^{99}, \ub=1000, \mu=1010, \sigma=X) \\
+            E_2 &= 0.2
+        \end{align*}
+        Uit de \enquote{numeric solver} volgt dan een standaardafwijking $\sigma \approx 11.8818$.
 
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
