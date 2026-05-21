@@ -18,56 +18,39 @@ De standaarddeviatie is echter onbekend.
             E_1 &= \normalcdf(\lb=-10^{99}, \ub=1000, \mu=1010, \sigma=X) \\
             E_2 &= 0.2
         \end{align*}
-        Uit de \enquote{numeric solver} volgt dan een standaardafwijking $\sigma \approx 11.8818$.
-
-        \begin{center}
-            \resizebox{0.9\textwidth}{!}{
-                \includegraphics{opg5.2a.png}
-            }
-        \end{center}
+        Uit de functie \enquote{Numeric Solver} volgt dan een standaardafwijking $\sigma = X \approx 11.8818$.
     }
 
     \item Hoe groot is de kans dat een willekeurig pak rijst meer weegt dan $1 020$ gram?
     \answer{
-        Zodra we de verwachtingswaarde $\mu$ en de standaarddeviatie $\sigma$ van een normale verdeling weten, kunnen we de $z$-waarde bepalen van een specifieke uitkomst $x$.
-        In dat geval is de $z$-waarde die hoort bij $1020$ gram gelijk aan 
-        \[
-            z = \frac{x-\mu}{\sigma} = \frac{1020 - 1010}{11.8818} \approx 0.8416.
-        \]
-        De kans dat een willekeurig pak rijst meer dan $1 020$ gram weegt is gelijk aan:
+        Zodra we de verwachtingswaarde $\mu$ en de standaarddeviatie $\sigma$ van een normale verdeling weten, kunnen we de kans berekenen dat een willekeurig pak rijst meer dan $1 020$ gram weegt:
         \begin{align*}
-            P(X > 1 020)    &= P(Z > 0.8416) \\
-                            &= \normalcdf(\lb=0.8416, \ub=\GRinfinity, \mu=0, \sigma=1) \\
+            P(X > 1 020)    &= \normalcdf(\lb=1020, \ub=\GRinfinity, \mu=1010, \sigma=11.8818) \\
                             &\approx 0.2000.
         \end{align*}
         {\itshape Merk op dat we dit ook zonder berekening hadden kunnen inzien.
             We hebben immers te maken met een normale verdeling met gemiddelde $\mu = 1010$, oftewel een symmetrische verdeling rond $1010$.
-            Uit deze symmetrie volgt dat $P(X > 1020) = P(X < 1 000) = 0.20$.
+            Uit deze symmetrie volgt dat $P(X > 1020 = 1010+10) = P(X < 1 000 = 1010 - 10) = 0.20$.
         }
-        \begin{center}
-            \resizebox{0.9\textwidth}{!}{
-                \includegraphics{opg5.2b.png}
-            }
-        \end{center}
     }
 
     \item Stel we kiezen willekeurig $16$ pakken rijst.
     Hoe groot is de kans dat deze gemiddeld minder dan $1 000$ gram rijst bevatten?
     \answer{
         Laat $X_1, X_2, \ldots, X_{16}$ de gewichten zijn van $16$ willekeurig gekozen pakken rijst.
-        Volgens de centrale limietstelling geldt voor het gemiddelde gewicht van deze 16 pakken rijst:
+        Volgens de centrale limietstelling geldt dat het gemiddelde gewicht van deze 16 pakken rijst
         \[
-            \samplemeanvarX = \frac{X_1+X_2+\ldots+X_{16}}{16} \sim N(\mu=1 010, \frac{\sigma}{\sqrt{16}} \approx 2.9705).
-        \]      
-        We berekenen allereerst de $z$-score behorende bij een gemiddeld gewicht van $1000$ gram.
-        Dat is gelijk aan:
-        \[
-            z = \frac{x-\mu}{\sigma} = \frac{1 000 - 1 010}{2.9705} \approx -3.3665.
-        \]
+            \samplemeanvarX = \frac{X_1+X_2+\ldots+X_{16}}{16}
+        \]  
+        normaal verdeeld is met $\mu = 1010$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{11.8818}{\sqrt{16}} \approx 2.9705$. 
+        % We berekenen allereerst de $z$-score behorende bij een gemiddeld gewicht van $1000$ gram.
+        % Dat is gelijk aan:
+        % \[
+        %     z = \frac{x-\mu}{\sigma} = \frac{1 000 - 1 010}{2.9705} \approx -3.3665.
+        % \]
         De kans dat de $16$ willekeurig gekozen pakken rijst gemiddeld minder dan $1 000$ gram rijst bevatten is dan gelijk aan
         \begin{align*}
-            P(\samplemeanvarX < 1 000)   &= P(Z < -3.3665) \\
-                                        &= \normalcdf(\lb=-\GRinfinity, \ub=-3.3665, \mu=0, \sigma=1) \\
+            P(\samplemeanvarX < 1 000)  &= \normalcdf(\lb=-\GRinfinity, \ub=1000, \mu=1010, \sigma=2.9705) \\
                                         &\approx 3.8072 \cdot 10^{-4}.
         \end{align*}
     }

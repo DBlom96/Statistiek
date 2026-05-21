@@ -6,9 +6,9 @@ Het $98$-ste percentiel van een verdeling is het punt op de $x$-as waarboven zic
 \begin{enumerate}[label=(\alph*)]
     \item Welke $x$-waarde geeft hier het $98$-ste percentiel aan?
     \answer{
-        Gegeven is dat de hoeveelheid cholesterol (in mg) per buisje bloed wordt gegeven door $X \sim \normal{\mu=5.20}{\sigma=0.9}$.
-        Percentielen kunnen we berekenen met behulp van de functie \enquote{InvNorm}.
-        Voor het $98$-ste percentiel gebruiken we als oppervlakte $0.98$:
+        De kansvariabele $X$ meet de hoeveelheid cholesterol (in mg) van een willekeurig buisje bloed en is normaal verdeeld met $\mu = 5.20$ en $\sigma=0.9$.
+        Het $98$-ste percentiel berekenen is hetzelfde als een waarde $x$ vinden waarvoor geldt dat $P(X \leq x) = 0.98$.
+        Met andere woorden, we willen een grenswaarde berekenen en dat kunnen we doen met behulp van de functie \enquote{InvNorm}:
         \[
             x = \invnorm(\opp=0.98, \mu=5.20, \sigma=0.9) \approx 7.0484\ \unit{mg}.
         \]
@@ -16,11 +16,11 @@ Het $98$-ste percentiel van een verdeling is het punt op de $x$-as waarboven zic
 
     \item Hoeveel standaarddeviaties ligt dat punt verwijderd van het gemiddelde van $5.20$ mg.
     \answer{
-        Om te bepalen hoeveel standaarddeviaties $x$ verwijderd ligt van het gemiddelde $5.20$ mg, moeten we de $z$-score berekenen:
+        Het aantal standaarddeviaties waarmee $x$ verwijderd ligt van het gemiddelde $5.20$ mg is gelijk aan de $z$-score:
         \[
             z = \frac{x-\mu}{\sigma} = \frac{7.0484 - 5.20}{0.9} \approx 2.0537.
         \]
-        De waarde $x \approx 7.0484$ mg ligt dus meer dan 2 standaarddeviaties boven het gemiddelde $\mu=5.20$ mg.
+        De waarde $x \approx 7.0484$ mg ligt dus net iets meer dan $2$ standaarddeviaties boven het gemiddelde $\mu=5.20$ mg.
     }
 
     \item In een gemeente wordt een bevolkingsonderzoek gehouden naar het cholesterolgehalte.
@@ -29,20 +29,25 @@ Het $98$-ste percentiel van een verdeling is het punt op de $x$-as waarboven zic
     Hoeveel personen krijgt naar verwachting een oproep?
     \answer{
         Per definitie van percentielen, geldt dat \SI{2}{\percent} van de bevolking een cholesterolwaarde heeft boven het $98$-ste percentiel.
-        In een groep van $8 500$ personen verwacht je dus dat $0.02 \cdot 8500 = 170$ mensen een oproep zullen krijgen.
+        In een groep van $8 500$ personen zullen naar verwachting dus $0.02 \cdot 8500 = 170$ mensen een oproep krijgen voor nader onderzoek.
     }
 
     \item Voor een willekeurig persoon uit de groep $50$-plussers bepalen we het cholesterolgehalte.
     Noem deze uitkomst $y$.
     Wat is het twee-sigmagebied voor $y$? en het drie-sigmagebied?
     \answer{
-        Het twee-sigmagebied voor $y$ is het gebied tot maximaal $2$ standaarddeviaties van het gemiddelde $\mu$, oftewel het interval tussen $\mu - 2 \cdot \sigma$ en $\mu + 2 \cdot \sigma$.
+        Het twee-sigmagebied voor $y$ is het interval van uitkomsten binnen $2$ standaarddeviaties van het gemiddelde $\mu$, oftewel het interval van $\mu - 2 \cdot \sigma$ tot $\mu + 2 \cdot \sigma$.
         Er geldt dat:
         \begin{align*}
             \mu - 2 \cdot \sigma &= 5.20 - 2 \cdot 0.9 = 3.40, \\
             \mu + 2 \cdot \sigma &= 5.20 + 2 \cdot 0.9 = 7.00.
         \end{align*}
         Het twee-sigmagebied loopt dus van $3.40$ tot $7.00$.
-        Op een soortgelijke manier vinden we dat het drie-sigmagebied loopt van $2.50$ tot $7.90$.
+        Op een soortgelijke manier vinden we het drie-sigmagebied:
+        \begin{align*}
+            \mu - 3 \cdot \sigma &= 5.20 - 3 \cdot 0.9 = 2.50, \\
+            \mu + 3 \cdot \sigma &= 5.20 + 3 \cdot 0.9 = 7.90.
+        \end{align*}
+        Het drie-sigmagebied loopt dus van $2.50$ tot $7.90$.
     }
 \end{enumerate}

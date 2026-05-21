@@ -4,14 +4,10 @@ Deze kan worden beschouwd als een normaal verdeelde variabele $X$ met $\mu=120$ 
 \begin{enumerate}[label=(\alph*)]
     \item Hoe groot is de kans dat een servicebeurt meer dan $150$ minuten vergt?
     \answer{
-        De $z$-score die hoort bij een uitkomst van $x=150$ minuten is gelijk aan:
-        \[
-            z = \frac{x-\mu}{\sigma} = \frac{150 - 120}{20} = 1.5.
-        \]
+        De kansvariabele $X$ die de tijdsduur meet van de jaarlijkse servicebeurt van een willekeurige auto is normaal verdeeld met $\mu = 120$ en $\sigma=20$ minuten.
         De kans dat een servicebeurt meer dan $150$ minuten vergt is dan gelijk aan
         \begin{align*}
-            P(X > 150)  &= P(Z > 1.5) \\
-                        &= \normalcdf(\lb=1.5, \ub=\GRinfinity, \mu=0,\sigma=1) \\
+            P(X > 150)  &= \normalcdf(\lb=150, \ub=\GRinfinity, \mu=120, \sigma=20) \\
                         &\approx 0.0668.
         \end{align*}
     }

@@ -4,8 +4,7 @@ We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel app
 \begin{enumerate}[label=(\alph*)]
     \item Wat is de klassengrens van de \SI{20}{\percent} appels met het geringste gewicht?
     \answer{
-        Laat $X$ de normaal verdeelde kansvariabele zijn die het gewicht van een appel uit een grote partij meet.
-        Er geldt dus $X \sim \normal{\mu=100}{\sigma=20}$.
+        De kansvariabele $X$ meet het gewicht van een willekeurige appel en is normaal verdeeld met $\mu=100$ en $\sigma=20$ gram.
         Je wilt de appels opdelen in vijf gewichtsklassen die elk evenveel appels bevatten, dat wil zeggen dat de kans dat een appel in een bepaalde gewichtsklasse zit moet gelijk zijn voor elke gewichtsklasse. 
         Er zijn vijf klassen dus die kans is telkens $\frac{1}{5}=0.2$.
         De klasse met de \SI{20}{\percent} lichtste appels loopt van $-\infty$ tot $g_1$ voor een bepaald gewicht $g_1$ en er geldt $P(X<g_1)=0.2$.
@@ -13,8 +12,18 @@ We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel app
         \[
             g_1 = \invnorm(\opp=0.2, \mu=100, \sigma=20) \approx 83.1676 \text{ g}.
         \]
+        {
+            \textit{
+                Noot: het gewicht van een appel kan natuurlijk niet negatief zijn.
+                De normale verdeling heeft echter een uitkomstenruimte bestaande uit alle mogelijke waarden van $-\infty$ tot $\infty$.
+                Dit is een beperking van de normale verdeling als kansmodel, maar de kans dat je uit deze normale verdeling een negatieve uitkomst kan waarnemen is verwaarloosbaar klein.
+                \begin{align*}
+                    P(X < 0)    &=\normalcdf(\lb=-\GRinfinity, \ub=0, \mu=100, \sigma=20) \\
+                                &\approx 0.0000003.
+                \end{align*}
+            }    
+        }
     }
-
     \item Bepaal ook de andere klassengrenzen?
     \answer{
         Om de overige klassengrenzen te bepalen, gebruiken we soortgelijke berekeningen.
@@ -35,17 +44,5 @@ We willen deze appels in vijf gewichtsklassen verdelen die allemaal evenveel app
             g_3 &= \invnorm(\opp=0.6, \mu=100, \sigma=20) \approx 105.0669\ \unit{gram}. \\
             g_4 &= \invnorm(\opp=0.8, \mu=100, \sigma=20) \approx 116.8324\ \unit{gram}.
         \end{align*}
-
-        {\itshape LET OP: de eerste klasse loopt van $-\infty$ tot $g_1$.
-            Aangezien appels geen negatief gewicht kunnen hebben, lijkt dit raar.
-            Dit is echter een gevolg van de aanname dat we met een normale verdeling werken, die ook negatieve getallen als uitkomst kan hebben.
-            De kans dat deze kansvariabele een negatieve waarde aanneemt is echter bijzonder klein.
-            De $z$-score is gelijk aan $z = \frac{0-100}{20} = -5$, dus
-            \begin{align*}
-                P(X < 0)    &= P(Z < -5) \\
-                            &=\normalcdf(\lb=-\GRinfinity, \ub=-5, \mu=0,\sigma=1) \\
-                            &= 2.8711 \cdot 10^{-7}.
-            \end{align*}
-        }
     }
 \end{enumerate}
