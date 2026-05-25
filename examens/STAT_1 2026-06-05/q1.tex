@@ -1,95 +1,71 @@
-\begin{question}{25}{
-    Voor het vergaren van inlichtingen via de lucht worden zwermen van surveillance UAV's ingezet in vijandelijk gebied.
-    De tijd $T$ (in minuten) totdat een zwerm gedetecteerd wordt, is een continue kansvariabele met de volgende kansdichtheidsfunctie:
+\begin{question}{20}{
+    Tijdens een trainingsdag wordt een alarmsituatie gehouden op de Trip van Zoudtlandtkazerne.
+    Van \'e\'en peloton worden de reactietijden (in seconden) gemeten tussen het afgaan van het alarm en het moment dat de militair volledig gevechtsgereed is.
+
+    De gemeten reactietijden van de militairen in het peloton zijn als volgt:
     \[
-        f(t) = \begin{cases} 
-                    \frac{4}{27}\cdot t^2\cdot (3-t), &\text{ als } 0 \le t \le 3, \\
-                                       0, &\text{ anders.} 
-                \end{cases}
+        18,\; 21,\; 19,\; 25,\; 23,\; 22,\; 20,\; 24,\; 26,\; 19,\; 21,\; 23,\; 27,\; 30,\; 18,\; 22,\; 24,\; 35,\; 28,\; 20.
     \]
 }
-        \subquestion{4}{
-            Toon met berekeningen en een schets van de grafiek van $f$ aan dat $f$ inderdaad voldoet aan de twee voorwaarden voor een kansdichtheidsfunctie.
+        \subquestion{10}{
+            Teken een boxplot van de reactietijden.
+            Schrijf hierbij de stappen op die je hebt uitgevoerd om de vijf getallen voor de boxplot te kunnen bepalen.
         }
         \solution{
-            Een functie $f$ kan dienen als een kansdichtheidsfunctie als geldt:
-
-            \textbf{Voorwaarde 1:} de functie $f$ is niet-negatief voor alle waarden van $t$, oftewel \[f(t) \ge 0.\]
+            Om de vijf getallen voor de boxplot te bepalen, volgen we de volgende stappen:
+            \begin{itemize}
+                \item Sorteer de gegevens van laag naar hoog:
+                \[
+                    18,\; 18,\; 19,\; 19,\; 20,\; 20,\; 21,\; 21,\; 22,\; 22,\; 23,\; 23,\; 24,\; 24,\; 25,\; 26,\; 27,\; 28,\; 30,\; 35. \rubric{1}
+                \] 
+                \item De minimumwaarde is $18$ en de maximumwaarde is $35$.\rubric{1}
+                \item Aangezien het aantal waarden $n = 20$, dus $n$ is even, is de mediaan (tweede kwartiel) het gemiddelde van de twee middelste waarden: $\frac{22 + 23}{2} = 22.5$.\rubric{1}
+                \item Het eerste kwartiel $Q_1$ is de mediaan van de laagste \SI{50}{\percent} waarden ($18, 18, 19, 19, 20, 20, 21, 21, 22, 22$).
+                Aangezien er $10$ waarden zijn, is het eerste kwartiel het gemiddelde van de vijfde en zesde waarde: $Q_1=\frac{20 + 20}{2} = 20$.\rubric{2}
+                \item Het derde kwartiel $Q_3$ is de mediaan van de laagste \SI{50}{\percent} waarden ($23, 23, 24, 24, 25, 26, 27, 28, 30, 35$).
+                Aangezien er $10$ waarden zijn, is het derde kwartiel het gemiddelde van de vijfde en zesde waarde: $Q_3=\frac{25 + 26}{2} = 25.5$.\rubric{1}
+            \end{itemize}
+            De vijf getallen voor de boxplot zijn dus:
+            \[
+                \text{Minimum} = 18, \quad Q_1 = 20, \quad \text{Mediaan} = 22.5, \quad Q_3 = 25.5, \quad \text{Maximum} = 35. 
+            \]
             
-            Op het interval $0 \le t \le 3$ geldt dat $f(t) = \frac{4}{27}\cdot t^2\cdot (3-t)$.
-            In dat geval geldt dat $t^2 \ge 0$ en $3 - t \ge 0$, en we hebben te maken met een vermenigvuldiging van niet-negatieve termen, dus $f(t) \ge 0$.
-            Buiten het interval $0 \le t \le 3$ is $f(t) = 0$, dus is ook voldaan aan $f(t) \ge 0$. \rubric{2}
+            We tekenen de boxplot met snorharen van $Q_1 - 1.5 \times \IQR$ tot $Q_3 + 1.5 \times \IQR$, waarbij $\IQR = Q_3 - Q_1 = 25.5 - 20 = 5.5$. \rubric{1}
+            De \enquote{whiskers} lopen van de kleinste niet-outlier boven $20 - 1.5 \times 5.5 = 11.75$ (oftewel $18$) tot de hoogste niet-outlier onder $25.5 + 1.5 \times 5.5 = 33.75$ (oftewel $30$).
+            Er is één outlier, namelijk $35$. \rubric{1}
+            \begin{center}
+                \includegraphics[width=\textwidth]{./20260605_exam_boxplot.png} \rubric{2}
+            \end{center}
 
-            \textbf{Voorwaarde 2:} de oppervlakte onder de grafiek van $f$ is gelijk aan 1, oftewel \[\int_{-\infty}^{\infty} f(t)\, dt=1.\]         
-            
-            Voor de tweede voorwaarde moeten we dus checken of de oppervlakte onder de grafiek van $f$ daadwerkelijk gelijk is aan 1:
-            \begin{align*}
-                \int_{-\infty}^{\infty} f(t)\, dt   &= \int_{0}^{3} \frac{4}{27}\cdot t^2 \cdot (3 - t)\, dt \\
-                                                    &= \text{fnInt}(\frac{4}{27}\cdot x^2 \cdot (3 - x); x; 0; 3) \\
-                                                    &= 1. \rubric{2}
-            \end{align*} 
-            Hiermee is aangetoond dat de gegeven functie $f$ voldoet aan de twee voorwaarden voor kansdichtheidsfuncties.
-        }
-
-        \subquestion{8}{
-            Bereken de verwachtingswaarde $E[T]$ en de standaardafwijking $\sigma(T)$ met behulp van de algemene formules op het formuleblad.
-        }
-        \solution{
-            De verwachtingswaarde $E[T]$ berekenen we door middel van
-            \begin{align*}
-                E[T] = \int_{-\infty}^{\infty} t\cdot f(t)\, dt &= \int_{0}^{3} t \cdot \frac{4}{27}\cdot t^2 \cdot (3 - t)\, dt \\
-                                                                &= \int_{0}^{3} \frac{4}{27}\cdot t^3 \cdot (3 - t)\, dt \\   
-                                                                &= \text{fnInt}(\frac{4}{27}\cdot t^3 \cdot (3 - t); t; 0; 3) \\
-                                                                &= 1,8. \rubric{3}          
-            \end{align*}
-            De standaardafwijking $\sigma(T)$ berekenen we door eerst de variantie $\Var{T}$ te bepalen, en van het resultaat de wortel te nemen:
-            \begin{align*}
-                \Var{T} = \int_{-\infty}^{\infty} (t-E[T])^2 \cdot f(t)\, dt    &= \int_{0}^{3} (t-1,8)^2 \cdot \frac{4}{27}\cdot t^2 \cdot (3 - t)\, dt \\
-                                                                                &= \text{fnInt}(\frac{4}{27}\cdot (t-1,8)^2 \cdot t^2 \cdot (3 - t); t; 0; 3) \\
-                                                                                &= 0,36. \rubric{3}
-            \end{align*} 
-            \begin{align*}
-                \sigma(T) = \sqrt{\Var{T}} = \sqrt{0,36} = 0,6. \rubric{2}
-            \end{align*}
         }
 
         \subquestion{3}{
-            Bereken de mediaan van $T$.\\
-            {\scriptsize \textbf{Hint:} de mediaan van een kansverdeling is de uitkomst $m$ waarvoor geldt dat $P(T \le m) = P(T \ge m) = 0,5$.}
+            Leg met behulp van de boxplot uit wat je kunt zeggen over de ligging van het gemiddelde ten opzichte van de mediaan?
         }
         \solution{
-            Om de mediaan van $T$ te vinden moeten we een grenswaarde $m$ bepalen waarvoor geldt $P(T \le m) = \int_{-\infty}^{m} f(t)\, dt = 0,5$. \rubric{1}
-            Deze vergelijking kunnen we oplossen door het functiemenu te openen en in te voeren:
-            \begin{align*}
-                y_1 &= \text{fnInt}(\frac{4}{27} \cdot t^2 \cdot (3 - t); t; 0; m) \\
-                y_2 &= 0,5  \rubric{1}
-            \end{align*}
-            De optie ``intersect'' geeft een waarde van $m \approx 1,8428$. \rubric{1}
-
-            }
-
-        \subquestion{5}{
-            Bereken het percentage dronezwermen dat binnen \'e\'en minuut wordt gedetecteerd.
+            Aan de boxplot is te zien dat de data een positieve scheefheid vertoont.\rubric{1}
+            Dit is te zien aan de langere snorhaar aan de rechterkant van de boxplot en de aanwezigheid van een outlier aan de rechterkant.
+            In een positief scheve verdeling ligt het gemiddelde hoger dan de mediaan, omdat het gemiddelde wordt beïnvloed door de hogere waarden (zoals de outlier $35$).\rubric{1}
+            Daarom kunnen we concluderen dat het gemiddelde van de reactietijden hoger ligt dan de mediaan van $22.5$ seconden. \rubric{1}
+        }
+        \subquestion{2}{
+            Noem \'e\'en reden waarom deze steekproef mogelijk niet representatief is voor de reactietijden van alle militairen in de Trip van Zoudtlandtkazerne.
         }
         \solution{
-            We starten door de kans $P(T < 1)$ te berekenen:
-            \[
-                P(T < 1) = \int_{-\infty}^{1} f(t)\, dt = \int_{0}^{1} \frac{4}{27} \cdot t^2 \cdot (3-t)\, dt = \text{fnInt}(\frac{4}{27} \cdot t^2 \cdot (3-t); t; 0; 1) \approx 0,1111. 
-            \]\rubric{4}
-            Omrekenen naar percentages geeft dat $11,11\%$ van de dronezwermen binnen \'e\'en minuut wordt gedetecteerd. \rubric{1}
+            Een mogelijke reden waarom deze steekproef niet representatief is, is dat de reactietijden alleen zijn gemeten van \'e\'en specifiek peloton.\rubric{1}
+            De reactietijden kunnen variëren tussen verschillende pelotons vanwege verschillen in training, ervaring of andere factoren.
+            Hierdoor zou de resultaten van deze steekproef mogelijk niet generaliseerbaar kunnen zijn naar alle militairen in de Trip van Zoudtlandtkazerne. \rubric{1}
         }
 
         \subquestion{5}{
-            Stel dat op een gegeven moment zes dronezwermen, onafhankelijk van elkaar, tegelijkertijd naar het vijandelijke gebied worden doorgestuurd.
-            De missie is succesvol als er tenminste een zwerm drones is die meer dan \'e\'en minuut onopgemerkt blijft.
-            Hoe groot is de kans op succes in deze surveillancemissie?
+            Tijdens de analyse ontdekt men dat er een fout is gemaakt bij het invoeren van de reactietijd van een van de militairen, en dat deze reactietijd eigenlijk $40$ seconden had moeten zijn in plaats van $30$ seconden. Geef aan wat er zou veranderen aan de boxplot als deze fout wordt gecorrigeerd.
         }
         \solution{
-            Laat $Y$ nu het aantal dronezwermen zijn dat meer dan \'e\'en minuut onopgemerkt blijft.
-            In dat geval is $Y$ een binomiaal verdeelde kansvariabele met parameters $n = 6$ (aantal dronezwermen) en $p \approx 1-0,1111 = 0,8888$ (kans dat een dronezwerm langer dan een minuut onopgemerkt blijft).\rubric{2}
-            De kans op een succesvolle missie is gelijk aan de kans dat minstens een zwerm drones langer dan \'e\'en minuut onopgemerkt blijft, oftewel
-            \[
-                P(Y \ge 1) = 1 - P(Y=0) = 1 - \binompdf(n=6; p=0,8888; k=0) = 0,999998. \rubric{3}
-            \]
+            Als de fout wordt gecorrigeerd en de reactietijd van $30$ seconden wordt vervangen door $40$ seconden, zal dit de maximumwaarde in de dataset veranderen van $35$ naar $40$.\rubric{1}
+            De minimumwaarde, het eerste kwartiel, de mediaan en het derde kwartiel zullen echter niet veranderen, omdat deze waarden niet worden beïnvloed door de hoogste waarde in de dataset.\rubric{2}
+            De whisker aan de rechterkant van de boxplot zal nu lopen tot de hoogste niet-outlier onder $25.5 + 1.5 \times 5.5 = 33.75$, oftewel $28$, en er zullen nu twee outliers zijn: $35$ en $40$. \rubric{2}
+            \begin{center}
+                \includegraphics[width=\textwidth]{./20260605_exam_boxplot2.png}
+            \end{center}
         }
 \end{question}
