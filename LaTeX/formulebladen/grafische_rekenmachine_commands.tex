@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Laad stijlen via relatieve paden
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\usepackage{\path/LaTeX/styles/config}
+\usepackage{\path/LaTeX/styles/statistics-macros}
+\graphicspath{{\path/LaTeX/figures/}}
+
+\begin{document}
+
+\title{Veelgebruikte functies op de grafische rekenmachine}
+\author{TI-84 Plus CE-T vs. Casio fx-CG50}
+\date{}
+\maketitle
+
+    \section{Sneltoetsen \& Navigatie}
+
+    Hieronder staat een overzicht van de knoppencombinaties om direct op de juiste schermen te komen voor berekeningen en kansverdelingen.
+
+    \begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{m{3.5cm} m{6.1cm} m{6.7cm}}%>{\raggedright\arraybackslash}X X}%>{\raggedright\arraybackslash}X}
+    \toprule
+    \textbf{Categorie} & \textbf{TI-84 Plus CE-T} & \textbf{Casio fx-CG50} \\
+    \midrule
+    \textbf{Rekenen met kansen} \newline \textbf{en grenzen} & 
+    \textbf{[2nd] [VARS]} \newline (Menu: \texttt{DISTR}) & 
+    Vanuit \texttt{RUN-MATRIX}: \newline \textbf{[OPTN] $\rightarrow$ [STAT] $\rightarrow$ [DIST]} \\
+    \addlinespace
+    \textbf{Integralen} & 
+    \textbf{[MATH]} $\rightarrow$ optie \texttt{9:fnInt()} & 
+    Vanuit \texttt{RUN-MATRIX}: \newline \textbf{[OPTN] $\rightarrow$ [CALC] $\rightarrow$ [$\int$dx]} \\
+    \addlinespace
+    \textbf{Vergelijkingen} \newline \textbf{numeriek oplossen} & 
+    \textbf{[MATH]} $\rightarrow$ optie \texttt{C:Numeric Solver$\ldots$} \newline Vul vergelijking $E_1 = E_2$ in \newline Druk op \textbf{[OK]} en op \textbf{[SOLVE]} & 
+    Vanuit \texttt{RUN-MATRIX}: \newline \textbf{[OPTN]} $\rightarrow$ \textbf{[CALC]} $\rightarrow$ \textbf{[SolveN]} \newline Vul vergelijking in en geef de variabele aan \newline \textbf{Bijv:} SolveN$\left(\text{NormCD}(-10^{99}, 0, 2, x) = 0.1, x\right)$
+    \\
+
+    \bottomrule
+    \end{tabularx}
+    \end{table}
+
+    \section{Belangrijke verschillen om op te letten:}
+    \begin{itemize}
+        \item \textbf{Volgorde van parameters:} Bij de normale verdeling vraagt de TI-84 Plus CE-T om $(\mu, \sigma)$, terwijl de Casio fx-CG50 exact de omgekeerde volgorde hanteert: $(\sigma, \mu)$.
+        \item \textbf{Plaats van de variabele $k$ of $x$:} Bij discrete verdelingen (bv. binomiaal of Poisson) zet de TI-84 de $k$-waarde (het aantal successen) helemaal achteraan. De Casio fx-CG50 zet de $k$-waarde juist vooraan.
+    \end{itemize}
+
+    \section{Examenstand}
+    \subsection*{TI-84 Plus CE-T}
+    Bij de TI-84 Plus CE-T herken je de examenstand aan een knipperend LED-lampje aan de bovenkant van de rekenmachine.
+
+    \subsubsection*{In examenstand zetten:}
+    \begin{enumerate}
+        \item Zet de rekenmachine uit.
+        \item Houd de toetsen [+] en [=] tegelijkertijd ingedrukt.
+        \item Druk, terwijl je [+] en [=] ingedrukt houdt, kort op de [on]-knop.
+        \item Er verschijnt een scherm met RESET OPTIONS.
+        \item Druk op [Zoom] (om de standaardinstellingen te kiezen) of navigeer naar OK en druk op [enter]. 
+        De machine geeft nu RESET COMPLETE, daarmee staat hij nu in de examenstand. Dit is te herkennen aan de oranje balk in het scherm met TEST MODE ENABLED.
+    \end{enumerate}
+
+    \subsubsection*{Uit examenstand halen:}
+    \begin{enumerate}
+        \item De TI-84 Plus CE-T kan niet via een knoppencombinatie op de machine zelf uit de examenstand worden gehaald. Dit kan alleen op de volgende twee manieren:
+        \item Verbind jouw rekenmachine via een mini-USB kabel met een andere TI-84 Plus CE-T (die wel of niet in examenstand staat) en zet ze allebei aan.
+        \item Druk op jouw machine op [2nd] [LINK].
+        \item Ga naar het tabblad SEND en kies de optie LIST.
+        \item Selecteer een willekeurige lijst met het rode pijltje.
+        \item Druk op de andere machine op [2nd] [LINK] en ga naar het tabblad RECEIVE en druk op [ENTER]. Er staat nu WAITING in beeld.
+        \item Ga weer op de eerste machine naar tabblad RECEIVE en druk op [ENTER].
+        \item Er verschijnt nu op de andere machine een nieuw scherm. Kies voor de optie 2: Overschrijven en druk op [ENTER].
+        \item Er wordt nu een lijst verstuurd waardoor beide machines uit examenstand worden gehaald (zodra DONE in beeld staat).
+    \end{enumerate}
+
+    \subsection*{Casio fx-CG50}
+    Bij de Casio fx-CG50 herken je de examenstand aan een knipperend icoontje (R) rechtsboven in het scherm en een glanzende, gekleurde rand om het scherm.
+
+    \subsubsection*{In examenstand zetten:}
+    \begin{enumerate}
+        \item Zet de rekenmachine uit.
+        \item Houd de knoppen [8] en [$\rightarrow$] tegelijkertijd ingedrukt.
+        \item Druk, terwijl je deze twee knoppen ingedrukt houdt, op [AC/ON].
+        \item Er verschijnt een dialoogvenster met de vraag: "Enter Examination Mode?".
+        \item Druk op [F1] (Yes) en daarna nogmaals op [F2] om te bevestigen.
+        \item Er komt een melding over dat de examenstand niet is toegestaan op internationale scholen. Dit is niet erg, dus druk op [F1].
+        \item De machine start nu op in de examenmodus. Dit is te zien aan het gele kader aan de rand van het scherm en de knipperende N aan de rand (Nederlandse examenstand).
+    \end{enumerate}
+
+    \subsubsection*{Uit examenstand halen:}
+    \begin{enumerate}
+        \item De examenstand gaat na 12 uur automatisch uit. Je hoeft hem hiervoor niet 12 uur lang aan te laten staan; de interne klok houdt dit bij, zelfs als de machine uitstaat.
+    \end{enumerate}
+
+\end{document}
