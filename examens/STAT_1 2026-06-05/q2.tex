@@ -1,10 +1,103 @@
-\begin{question}{25}{
-    a
+\begin{question}{23}{
+    Een verkenningseenheid zet kleine, hand-gelanceerde verkenningsdrones (micro-UAV's) in om vijandelijke stellingen te filmen.
+    Door wisselende weersomstandigheden, temperatuurverschillen en het gebruik van de camera varieert de operationele batterijduur $X$ (in tientallen minuten, dus $x=1$ betekent tien minuten).
+    De batterijduur $X$ heeft de volgende kansdichtheidsfunctie:
+    \begin{align*}
+        f(x) = 
+        \begin{cases}
+            c \cdot (x-1)\cdot(3-x)\cdot(4-x),&\text{ als } 1 \leq x \leq 3,\\
+            0,&\text{ anders.}
+        \end{cases}
+    \end{align*}
+
 }
-    \subquestion{10}{
-        
+    \subquestion{6}{
+        Bepaal de unieke waarde van de constante $c$ zodanig dat $f$ voldoet aan de eisen van een goed gedefinieerde kansdichtheidsfunctie.
+
+        {\underline{Hint}: voor een constante $c$ en een functie $g(x)$ geldt dat $\int c \cdot g(x) \dx = c \cdot \int g(x) \dx$.}
     }
     \solution{
+        De eisen voor een goed gedefinieerde kansdichtheidsfunctie zijn als volgt:
+
+        \begin{description}
+            \item \textbf{Voorwaarde 1:} voor elke waarde $x$ in het domein van $f$ geldt $f(x) \ge 0$.\rubric{1}
+            \item \textbf{Voorwaarde 2:} de oppervlakte onder de grafiek van $f$ is gelijk aan $1$, oftewel
+            \[
+                \int_{x=-\infty}^{\infty} f(x)\dx = 1.\rubric{1}
+            \]
+        \end{description}
         
+        Aan de eerste voorwaarde wordt voldaan indien voor alle $1 \leq x \leq 3$ geldt dat $c \cdot (x-1) \cdot (3-x) \cdot (4-x) \ge 0$.
+        Merk op dat $x-1 \ge 0$,  $3-x \geq 0$ en $4-x \geq 0$ indien $1 \leq x \leq 3$, oftewel er moet gelden dat $c \ge 0$. Voor  \rubric{1}
+
+        Aan de tweede voorwaarde wordt voldaan indien geldt:
+        \begin{align*}
+            1 = \int_{x=-\infty}^{\infty} f(x)\dx   &= \int_{x=-\infty}^{1} 0\dx + \int_{x=1}^{3} c\cdot(x-1)\cdot(3-x)\cdot(4-x)\dx + \int_{x=3}^{\infty} 0\dx \\
+                                                &= \int_{x=1}^{3} c\cdot(x-1)\cdot(3-x)\cdot(4-x)\dx \\
+                                                &\overset{\text{hint}}{=}c \cdot \int_{x=1}^{3} (x-1)\cdot(3-x)\cdot(4-x)\dx \\
+                                                &= c \cdot \frac{8}{3}.\rubric{2}
+        \end{align*}
+        De enige waarde van $c$ waarbij aan de vergelijking $\frac{8}{3}c = 1$ wordt voldaan, is $c = \frac{3}{8}$.\rubric{1}
     }
+
+    \subquestion{3}{
+        Teken een schets van deze kansdichtheidsfunctie op het interval $[0, 4]$. Geef hierbij duidelijk aan wat de betekenis is van de assen.
+    }
+    \solution{
+        \begin{center}
+            \includegraphics[width=\textwidth]{./20260605_exam_pdf_sketch.png} \rubric{3}
+        \end{center}
+        2 punten aftrek indien de functie $f(x) = \frac{3}{8}(x-1)(3-x)(4-x)$ is getekend op het gehele interval $[0, 4]$.       
+    }
+
+    \subquestion{8}{
+        Bereken de verwachtingswaarde $E(X)$ en de standaardafwijking $\sigma(X)$ van de operationele batterijduur $X$.
+    }
+    \solution{
+        De verwachtingswaarde $E(X)$ berekenen we met behulp van de algemene formule:
+        \begin{align*}
+            E(X)    &= \int_{x = -\infty}^{\infty} x \cdot f(x) \dx \\
+                    &= \int_{x = -\infty}^{1} x \cdot 0 \dx + \int_{x = 1}^{3} x \cdot \frac{3}{8}(x-1)(3-x)(4-x) \dx + \int_{x = 3}^{\infty} x \cdot 0 \dx \\
+                    &= \int_{x = 1}^{3} x \cdot \frac{3}{8}(x-1)(3-x)(4-x) \dx \\
+                    &= 1.9.\rubric{3}          
+        \end{align*}
+        Om de standaardafwijking $\sigma(X)$ te berekenen, dienen we eerst de variantie $\Var{X}$ te bepalen:
+        \begin{align*}
+            \Var{X} &= \int_{x = -\infty}^{\infty} (x - E(X))^2 \cdot f(x) \dx \\
+                    &= \int_{x = -\infty}^{1} (x-1.9)^2 \cdot 0 \dx + \int_{x = 1}^{3} (x-1.9)^2 \cdot \frac{3}{8}(x-1)(3-x)(4-x) \dx \\
+                    &\qquad \qquad + \int_{x = 3}^{\infty} (x-1.9)^2 \cdot 0 \dx \\
+                    &= \int_{x = 1}^{3} (x-1.9)^2 \cdot \frac{3}{8}(x-1)(3-x)(4-x) \dx \\
+                    &= 0.19. \rubric{3}
+        \end{align*} 
+        De standaardafwijking $\sigma(X)$ vinden we nu door de wortel uit de variantie te nemen:
+        \begin{align*}
+            \sigma(X) = \sqrt{\Var{X}} = \sqrt{0.19} \approx 0.4359. \rubric{2}
+        \end{align*}      
+    }
+
+    \subquestion{6}{
+        De commandant wil dat de drone met minstens \SI{90}{\percent} zekerheid weer terugkeert naar de basis en dus niet neerstort door een lege batterij.
+        Wat is in dat geval de maximale vliegtijd van de drone in het vijandelijke gebied? Geef je antwoord afgerond op gehele minuten.
+    }
+    \solution{
+        In dit geval wil de commandant de grenswaarde $g$ bepalen waarvoor geldt dat de kans dat de batterijduur $X$ groter dan $g$ is, omdat in dat geval de batterijduur langer is dan de vliegtijd en de drone dan niet zal neerstorten.
+        Met andere woorden, we willen $g$ bepalen zodanig dat $P(X \geq g) = 0.90$.\rubric{1}
+        
+        Hiervoor gebruiken we de numerieke solver en vullen we het volgende in:
+        \begin{align*}
+            E_1 &= \int_{X}^{3} \frac{3}{8}\cdot (X-1) \cdot (3-X) \cdot (4-X) \;\mathrm{d}X \\
+            E_2 &= 0.90. \rubric{2}
+        \end{align*}
+        De numerieke solver geeft dan twee mogelijke uitkomsten $X \approx 1.3279$ of $X \approx 0.7232$ (afhankelijk van de ingevoerde beginwaarde $X=$).\rubric{1}
+        Omdat de variabele $X$ alleen waarden kan aannemen tussen $1$ en $3$ kan alleen $X \approx 1.3279$ het juiste antwoord zijn.\rubric{1}
+        Aangezien we in tientallen minuten meten, kan de vliegtijd hoogstens $13$ minuten bedragen om met \SI{90}{\percent} zekerheid weer veilig terug te keren naar de basis.\rubric{1}
+    }
+
+    % \subquestion{4}{
+    %     Bereken de mediaan van $X$.
+    %     {\scriptsize \textbf{Hint:} de mediaan van een kansverdeling is de uitkomst $m$ waarvoor geldt dat $P(X \le m) = P(X \ge m) = 0.5$.}
+    % }
+    % \solution{
+              
+    % }
 \end{question}

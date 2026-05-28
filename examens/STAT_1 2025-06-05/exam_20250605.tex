@@ -4,22 +4,23 @@
 \usepackage[dutch]{babel}
 
 % Importeer configuratie-instellingen
-\RequirePackage{C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/exam_config}
-\RequirePackage{C:/Users/danny/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros}
+\newcommand{\folder}{C:/Users/Admin/Documents/Github/Statistiek}
+\RequirePackage{\folder/LaTeX/styles/exam_config}
+\RequirePackage{\folder/LaTeX/styles/statistics-macros}
 
 \renewcommand{\baselinestretch}{1.5}
 % Begin van het document
 \begin{document}
 
 % FMW-specifiek titelblad voordat het examen begint
-\includepdf[pages=-]{\folder/Python/FMW_titelblad_20260605.pdf}
+\includepdf[pages=-]{\folder/Python/FMW_titelblad_20250605.pdf}
 
 % \title{Tentamen statistiek}
 % \author{Nederlandse Defensie Academie}
 % \date{\today}
 % \maketitle
 
-\includepdf[pages=-]{\folder/LaTeX/formulebladen/formuleblad_1.pdf}
+\includepdf[pages=-]{\folder/LaTeX/formulebladen/Formuleblad_STA1_2026.pdf}
 
 % Include questions from external files
 \input{q1.tex}

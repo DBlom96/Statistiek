@@ -1,10 +1,83 @@
 \begin{question}{25}{
-    a
+    De Westelijke Balkanroute is een belangrijke migratieroute richting de Europese Unie. 
+    Mensensmokkelnetwerken proberen migranten clandestien vanuit Bosnië en Herzegovina de grens over te loodsen naar EU-lidstaat Kroatië. 
+    De Koninklijke Marechaussee (KMar) ondersteunt de Kroatische grenspolitie met geavanceerde thermische bewakingscamera's en mobiele sensorsystemen. 
+    
+    De tijd $X$ (in minuten) die het sensorsysteem van de KMar nodig heeft voor initiële detectie en beeldverificatie van illegale overstekers is normaal verdeeld met gemiddelde $\mu=4.12$ minuten en een standaardafwijking $\sigma=0.76$ minuten.
 }
-    \subquestion{10}{
-        
+    \subquestion{7}{
+        Zodra de illegale overstekers de grens oversteken, moeten ze zorgen dat ze zo snel mogelijk aan het zicht verdwijnen van de thermische camera's door de dichte bebossing aan de Kroatische zijde te bereiken.
+        De tijd $Y$ die een groep overstekers hiervoor nodig heeft is normaal verdeeld met een gemiddelde van $\mu(Y) = 5.0$ minuten en een standaardafwijking van $\sigma(Y) = 0.34$ minuten.
+        Bereken de kans dat een individuele smokkelpoging \textit{succesvol} is omdat de analyse en verificatie pas voltooid zijn nadat de overstekers uit het zicht zijn verdwenen.
     }
     \solution{
+        We hebben in deze situatie te maken met twee kansvariabelen $X$ en $Y$, zoals die hierboven gedefinieerd zijn.
+        De kans dat een individuele smokkelpoging succesvol is, is gelijk aan de kans dat de overstekers sneller uit het zicht verdwijnen $P(X > Y)$.\rubric{1}
+        Definieer hiertoe de verschilvariabele $V = X - Y$. We willen dus de kans $P(X > Y)$, oftewel $P(V = X - Y > 0)$ berekenen.\rubric{1}
+
+        Aangezien zowel $X$ als $Y$ normaal verdeeld zijn, geldt in dit geval dat de verschilvariabele $V = X - Y$ ook normaal verdeeld is met:
+        \begin{align*}
+            E(V)        &= \mu(X) - \mu(Y) = 4.12 - 5.0 = -0.78 \\
+            \sigma(V)   &= \sqrt{\sigma(X)^2 + \sigma(Y)^2} = \sqrt{0.76^2 + 0.34^2} \approx 0.8326 \rubric{2}
+        \end{align*}
+
+        De gevraagde kans $P(V > 0)$ berekenen we dan als volgt:
+        \begin{align*}
+            P(V > 0)    &= \normalcdf(\lb=0, \ub=10^{99}, \mu=-0.78, \sigma=0.8326) \\
+                        &\approx 0.1744. \rubric{2}  
+        \end{align*}
+        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).\rubric{1}
+    }
+
+    \subquestion{7}{
+        De KMar wil de effectiviteit van het grensbeheer verhogen. 
+        Technici stellen voor om de processors in de sensorsystemen te vervangen door snellere AI-chips. 
+        Hierdoor zal de gemiddelde verificatietijd $\mu(X)$ dalen.
+        De standaardafwijking $\sigma(X)$ van de sensorsystemen en de kansverdeling van $Y$ blijven ongewijzigd.
+        Bereken met hoeveel minuten de gemiddelde verificatietijd $\mu(X)$ gereduceerd moet worden zodat de kans op een succesvolle oversteek nog maar \SI{5}{\percent} is.
+    }
+    \solution{
+        We hebben in deze situatie weer te maken met twee kansvariabelen $X$ en $Y$, maar nu is de verwachtingswaarde $\mu(X)$ een te bepalen onbekende.\rubric{1}
+        Met andere woorden, de verschilvariabele $V = X - Y$ is nu normaal verdeeld met:
+        \begin{align*}
+            E(V)        &= \mu(X) - \mu(Y) = \mu(X) - 5.0 \\
+            \sigma(V)   &= \sqrt{\sigma(X)^2 + \sigma(Y)^2} = \sqrt{0.76^2 + 0.34^2} \approx 0.8326 \rubric{1}
+        \end{align*}
+
+        Om de gevraagde $\mu(X)$ te berekenen, gebruiken we opnieuw de \enquote{numeric solver}:
+        \begin{align*}
+            E_1     &= \normalcdf(\lb=0, \ub=10^{99}, \mu=X-5.0, \sigma=0.8326) \\
+            E_2     &\approx 0.05. \rubric{2}  
+        \end{align*}
+        Hieruit volgt een waarde van $X \approx 3.6305$.\rubric{1}
+        Dit betekent dat de gemiddelde verificatietijd $\mu(X)$ gereduceerd moet worden met ongeveer $4.12 - 3.6305 = 0.4895$ minuten, oftewel net iets minder dan een halve minuut.\rubric{1}
+        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).\rubric{1}
+    }
+
+    \subquestion{8}{
+        De bevelhebber van de Kroatische grenspatrouille eist strengere maatregelen om de controle te behouden. 
+        Door de inzet van extra KMar-drone-ondersteuning dalen de verificatietijden, waardoor de kans dat een groep ongedetecteerd wegglipt, afneemt naar $p = 0.05$ (\SI{5}{\percent}). 
+        De operationele opvang- en detentiecapaciteit van de lokale Kroatische politiepost is echter strikt beperkt: de eenheden kunnen per nacht maximaal 2 groepen fysiek onderscheppen en administratief verwerken. Als er in één nacht \textit{meer dan 2} groepen door de mazen van de wet glippen, raakt de capaciteit op de grond overbelast en faalt de grensmissie.
         
+        Bereken via een numerieke benadering (of systematisch uitproberen) hoeveel groepen ($n$) het smokkelnetwerk in één nacht maximaal kan inzetten, zodat de kans op overbelasting van de grensbewaking \textit{hoogstens} \SI{10}{\percent} is.
+    }
+    \solution{
+        Laat $Y$ het aantal succesvol doorgeglipte groepen zijn met $Y \sim \text{Bin}(n, 0.05)$. 
+        De capaciteit raakt overbelast als $Y > 2$. De harde eis is dat deze kans maximaal \SI{10}{\percent} mag zijn:\rubric{1}
+        \[
+            P(Y > 2) \leq 0.10 \implies P(Y \leq 2) \geq 0.90
+        \]
+        We schrijven de cumulatieve binomiale kans uit voor $Y \leq 2$:\rubric{1}
+        \[
+            P(Y \leq 2) = \binom{n}{0}(0.05)^0(0.95)^n + \binom{n}{1}(0.05)^1(0.95)^{n-1} + \binom{n}{2}(0.05)^2(0.95)^{n-2}
+        \]
+        Studenten moeten nu numeriek of via een tabel doorrekenen voor verschillende waarden van $n$ om de grens te bepalen:\rubric{2}
+        \begin{itemize}
+            \item $n = 20 \implies P(Y \leq 2) = 0.3585 + 0.3774 + 0.1887 = 0.9246 \geq 0.90$ (Veilig)
+            \item $n = 21 \implies P(Y \leq 2) = 0.3406 + 0.3764 + 0.1981 = 0.9151 \geq 0.90$ (Veilig)
+            \item $n = 22 \implies P(Y \leq 2) = 0.3235 + 0.3751 + 0.2073 = 0.9059 \geq 0.90$ (Veilig)
+            \item $n = 23 \implies P(Y \leq 2) = 0.3074 + 0.3734 + 0.2163 = 0.8971 < 0.90$ (Onveilig)\rubric{3}
+        \end{itemize}
+        Het netwerk kan maximaal \textbf{22 groepen} tegelijk inzetten om de kans op een succesvolle overbelasting (het wegglippen van meer dan 2 groepen) onder de \SI{10}{\percent} te houden. Vanaf 23 groepen wordt het operationele risico voor de grensbewaking te groot.\rubric{1}
     }
 \end{question}
