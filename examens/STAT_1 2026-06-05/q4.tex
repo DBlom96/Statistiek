@@ -1,36 +1,106 @@
-\begin{question}{25}{
-    Het Space Operations Centre (SpOC) van de NAVO bewaakt een constellatie van militaire communicatiesatellieten (MILSATCOM) die cruciale data-uplinks verzorgen voor grondtroepen in een operatiegebied. 
-    Vijandelijke actoren passen regelmatig RF-jamming (radiofrequentie-storing) toe om deze uplinks tijdelijk te onderbreken.
+\begin{question}{26}{
+    Het NATO Space Operations Centre (NSpOC) bewaakt een constellatie van militaire communicatiesatellieten die cruciale dataverbindingen verzorgen voor grondtroepen in een operatiegebied. 
+    Vijandelijke actoren passen regelmatig RF-jamming (radiofrequentie-storing) toe om deze verbindingen tijdelijk te onderbreken.
 
     Uit operationele data over de afgelopen 18 maanden blijkt dat vijandelijke jamming-aanvallen gemiddeld $\lambda=3.2$ aanvallen per dag voorkomen volgens een Poissonproces.
-    Elke aanval duurt gemiddeld $25$ minuten met een standaardafwijking van $3.5$ minuten, en verstoort de communicatieverbinding volledig voor de duur van de aanval. 
-
-    Het SpOC beschikt over een Counter-Space Response Team (CSRT) dat actief tegenmaatregelen kan inzetten (frequentiehoppen, uplink-switching).
+    
+    Het NSpOC beschikt over een Counter-Space Response Team (CSRT) dat actief tegenmaatregelen kan inzetten.
     Het team kan per dag maximaal $5$ aanvallen effectief neutraliseren. 
     Aanvallen boven deze capaciteit leiden tot een communicatieblackout voor de grondtroepen.
 }
     \subquestion{5}{
-        Bereken de kans dat het SpOC in een willekeurige week \emph{minimaal} $20$ jamming-aanvallen registreert.
+        Bereken de kans dat het NSpOC in een willekeurige week \emph{minimaal} $20$ jamming-aanvallen registreert.
     }
     \solution{
-        
+        Laat $X$ het aantal aanvallen in een week (7 dagen) zijn. 
+        Aangezien de meeteenheid in dagen is, geldt dat we meten over een periode van $t = 7$ meeteenheden. \rubric{1}
+        Aangezien het daggemiddelde $\lambda = 3.2$ is, geldt voor de weekintensiteit:
+        \[
+            \mu = \lambda \cdot t = 3.2 \cdot 7 = 22.4. \rubric{1}
+        \]
+        Het aantal aanvallen per week $X$ is dus Poisson verdeeld met gemiddelde $\mu = 22.4$.\rubric{1}
+        We zoeken de kans $P(X \geq 20)$, die we als volgt berekenen:
+        \begin{align*}
+            P(X \geq 20)    &= 1 - P(X \leq 19) \\
+                            &= 1 - \poissoncdf(\mu=22.4, k=19) \\
+                            &\approx 0.7226. \rubric{2}
+        \end{align*}
+        De kans dat er in een willekeurige week minimaal $20$ aanvallen plaatsvinden is \textbf{0.7226} (of \SI{71.89}{\percent}).
     }
 
     \subquestion{5}{
         Bereken de kans dat het CSRT op een willekeurige dag overbelast raakt. 
     }
     \solution{
+        Laat $Y$ nu het aantal aanvallen zijn op een willekeurige dag.
+        Aangezien de meeteenheid in dagen is, geldt nu dat we meten over een periode van $t = 1$ meeteenheden. \rubric{1}
+        Aangezien het daggemiddelde $\lambda = 3.2$ is, geldt voor de weekintensiteit:
+        \[
+            \mu = \lambda \cdot t = 3.2 \cdot 1 = 3.2. \rubric{1}
+        \]
         
+        Het team raakt overbelast als er strikt meer dan $5$ aanvallen op een dag plaatsvinden. We zoeken dus de kans $P(Y > 5)$.\rubric{1}
+        
+        \begin{align*}
+            P(Y > 5) = P(Y \geq 6)  &= 1 - P(Y \leq 5) \\
+                                    &= 1 - \poissoncdf(\mu=3.2, k=5) \\
+                                    &\approx 0.1054. \rubric{2}
+        \end{align*} 
+        De kans dat het team op een willekeurige dag overbelast raakt is \textbf{0.1054} (of \SI{10.54}{\percent}).
     }
 
-    \subquestion{5}{
-        De NAVO-norm stelt dat de kans op een communicatieblackout per etmaal kleiner dan \SI{5}{\percent} moet zijn. 
-        Bepaal de minimale CSRT-capaciteit (in aantallen aanvallen per dag die geneutraliseerd kunnen worden) waarmee aan deze norm wordt voldaan.
+    \subquestion{3}{
+        Leg zonder berekening uit welke van de volgende twee gebeurtenissen waarschijnlijker is:
+        \begin{itemize}
+            \item Er vinden op twee opeenvolgende dagen telkens vijf jamming-aanvallen plaats.
+            \item Er vinden in een periode van twee dagen in totaal tien jamming-aanvallen plaats.
+        \end{itemize}
     }
     \solution{
-
+        De tweede gebeurtenis is waarschijnlijker.\rubric{1}
+        Dit komt omdat de eerste gebeurtenis specifiek alleen de kans op uitkomst $(5, 5)$ beschouwt,
+        terwijl de tweede gebeurtenis ook de uitkomsten $(0, 10)$, $(1, 9)$, enz. beschouwt.\rubric{2}
     }
 
-    \subquestion{}
+    \subquestion{6}{
+        Bereken de kans dat er in een willekeurige maand (30 dagen) minstens $3$ dagen zijn waarop het CSRT overbelast raakt.
+    }
+    \solution{
+        Laat $Z$ het aantal dagen in een maand zijn waarop het team overbelast raakt.
+        De jamming-aanvallen zijn onafhankelijk van dag tot dag, omdat ze volgens een Poissonproces plaatsvinden. \rubric{1}
+        Door deze onafhankelijkheid kunnen we $Z$ modelleren als een binomiale kansvariabele met parameters $n=30$ en $p=0.1054$.\rubric{2}
+            
+        We zoeken de kans $P(Z \geq 3)$, die we als volgt berekenen:
+        \begin{align*}
+            P(Z \geq 3)     &= 1 - P(Z \leq 2) \\
+                            &= 1 - \binomcdf(n=30, p=0.1054, k=2) \\
+                            &\approx 0.6259. \rubric{3}
+        \end{align*}
+        De kans dat er in een willekeurige maand minstens $3$ dagen zijn waarop het team overbelast raakt, is dus ongeveer \textbf{0.6259} (of \SI{62.59}{\percent}).
+    }
 
+    \subquestion{7}{
+        De NAVO-norm stelt dat de kans op een communicatieblackout per etmaal kleiner dan \SI{0.1}{\percent} moet zijn. 
+        Bepaal de minimale CSRT-capaciteit (in aantallen aanvallen per dag die geneutraliseerd kunnen worden) die benodigd zou zijn om aan de eigen norm te kunnen voldoen.
+    }
+    \solution{
+        Laat $C$ de gezochte capaciteit per dag zijn. Er moet gelden dat de kans op overbelasting kleiner is dan $0.001$:
+        \[
+            P(Y > C) = 1 - \poissoncdf(\mu=3.2, k=C) < 0.001 \rubric{1}
+        \]
+        Voer hiervoor de volgende uitdrukkingen in het functiescherm van de grafische rekenmachine in:
+        \begin{align*}
+            y_1 &= 1 - \poissoncdf(\mu=3.2, k=X) \\
+            y_2 &= 0.001 \rubric{2}
+        \end{align*}
+        Aangezien de capaciteit $C$ een geheel getal moet zijn, zoeken we de kleinste waarde van $C$ waarvoor $y_1 < y_2$ geldt.\rubric{1}
+        Dit doen we doen door een tabel te maken van $y_1$ voor opeenvolgende waarden van $C$:
+        \begin{itemize}
+            \item Voor $C = 9 \implies P(Y > 9) \approx 0.00176 > 0.001$ (voldoet nog niet)\rubric{1}
+            \item Voor $C = 10 \implies P(Y > 10) \approx 5 \cdot 10^{-4} < 0.001$ (voldoet wel)\rubric{1}
+        \end{itemize}
+        De minimale capaciteit die nodig is om aan de NAVO-norm te voldoen is \textbf{10 aanvallen per dag}.\rubric{1}
+    }
+
+    
 \end{question}

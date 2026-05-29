@@ -1,14 +1,17 @@
-\begin{question}{25}{
-    De Westelijke Balkanroute is een belangrijke migratieroute richting de Europese Unie. 
-    Mensensmokkelnetwerken proberen migranten clandestien vanuit Bosnië en Herzegovina de grens over te loodsen naar EU-lidstaat Kroatië. 
-    De Koninklijke Marechaussee (KMar) ondersteunt de Kroatische grenspolitie met geavanceerde thermische bewakingscamera's en mobiele sensorsystemen. 
+\begin{question}{27}{
+    De Westelijke Balkanroute is een belangrijke route voor mensensmokkel naar de EU (via lidstaat Kroatië). 
+    De Koninklijke Marechaussee ondersteunt de Kroatische grenspolitie met thermische bewakingscamera's en mobiele sensorsystemen. 
     
-    De tijd $X$ (in minuten) die het sensorsysteem van de KMar nodig heeft voor initiële detectie en beeldverificatie van illegale overstekers is normaal verdeeld met gemiddelde $\mu=4.12$ minuten en een standaardafwijking $\sigma=0.76$ minuten.
+    De verwerkingstijd $X$ (in minuten) die het sensorsysteem van de Marechaussee nodig heeft voor de verificatie van smokkelpogingen is normaal verdeeld met $\mu(X) = 4.12$ en $\sigma(X) = 0.76$.
 }
-    \subquestion{7}{
-        Zodra de illegale overstekers de grens oversteken, moeten ze zorgen dat ze zo snel mogelijk aan het zicht verdwijnen van de thermische camera's door de dichte bebossing aan de Kroatische zijde te bereiken.
-        De tijd $Y$ die een groep overstekers hiervoor nodig heeft is normaal verdeeld met een gemiddelde van $\mu(Y) = 5.0$ minuten en een standaardafwijking van $\sigma(Y) = 0.34$ minuten.
-        Bereken de kans dat een individuele smokkelpoging \textit{succesvol} is omdat de analyse en verificatie pas voltooid zijn nadat de overstekers uit het zicht zijn verdwenen.
+    \subquestion{6}{
+        Zodra een groep migranten illegaal de Kroatische grens over gesmokkeld zijn, moet de groep ervoor zorgen dat ze zo snel mogelijk aan het zicht verdwijnt van de thermische camera's.
+        De tijd $Y$ die een willekeurige groep hiervoor nodig heeft is normaal verdeeld met $\mu(Y) = $ \SI{5.0}{\min} en $\sigma(Y) = $ \SI{0.34}{\min}.
+        Bereken de kans dat een individuele smokkelpoging \textit{succesvol} is, omdat het sensorsysteem een te grote verwerkingstijd nodig heeft.
+
+        {
+            \small \textbf{Hint:} gebruik de verschilvariabele $V = X - Y$ en het feit dat $V$ normaal verdeeld is met $\mu(V) = \mu(X) - \mu(Y)$ en $\sigma(V) = \sqrt{\sigma(X)^2 + \sigma(Y)^2}$.
+        }
     }
     \solution{
         We hebben in deze situatie te maken met twee kansvariabelen $X$ en $Y$, zoals die hierboven gedefinieerd zijn.
@@ -26,15 +29,43 @@
             P(V > 0)    &= \normalcdf(\lb=0, \ub=10^{99}, \mu=-0.78, \sigma=0.8326) \\
                         &\approx 0.1744. \rubric{2}  
         \end{align*}
-        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).\rubric{1}
+        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).
+    }
+    
+    \subquestion{9}{
+        Van het sensorsysteem worden de prestaties over een maand geanalyseerd, waarbij in totaal $50$ losse, onafhankelijke oversteekpogingen zijn geregistreerd.
+        Bereken de kans dat de \textit{totale} verwerkingstijd van het sensorsysteem voor deze $50$ oversteekpogingen samen meer dan $3\frac{1}{2}$ uur bedraagt.
+    }
+    \solution{
+        Laat $X_i$ de verwerkingstijd zijn voor oversteekpoging $i$ (met $i = 1, 2, \dots, 50$). 
+        Voor elke individuele oversteekpoging geldt dat $\mu(X_i) = 4.12$ minuten en standaardafwijking $\sigma(X_i) = 0.76$ minuten. \rubric{1}
+        
+        We definiëren de totale verwerkingstijd $T$ voor de $50$ pogingen als de somvariabele:
+        \[
+            T = X_1 + X_2 + \dots + X_{50} \rubric{1}
+        \]
+        Volgens de centrale limietstelling is de som $T$ van $n=50$ onafhankelijke normaal verdeelde variabelen ook normaal verdeeld. \rubric{1}
+        
+        Voor de parameters van deze totale verwerkingstijd $T$ geldt:
+        \begin{align*}
+            E(T)      &= n \cdot \mu(X) = 50 \cdot 4.12 = 206 \text{ minuten}\rubric{1} \\
+            \sigma(T) &= \sqrt{n} \cdot \sigma(X) = \sqrt{50} \cdot 0.76 \approx 5.3740 \text{ minuten}\rubric{1}
+        \end{align*}
+        
+        De gevraagde kans is $P(T > 3\frac{1}{2} \times 60) = P(T > 210)$. \rubric{1}
+        Dit berekenen we als volgt:
+        \begin{align*}
+            P(T > 210) &= \normalcdf(\lb=210, \ub=10^{99}, \mu=206, \sigma=5.3740) \\
+                       &\approx 0.2283 \rubric{2}
+        \end{align*}
+        De kans dat de totale verwerkingstijd voor deze $50$ groepen meer dan $210$ minuten bedraagt, is dus ongeveer \textbf{0.2283} (of \SI{22.83}{\percent}).\rubric{1}
     }
 
-    \subquestion{7}{
-        De KMar wil de effectiviteit van het grensbeheer verhogen. 
-        Technici stellen voor om de processors in de sensorsystemen te vervangen door snellere AI-chips. 
-        Hierdoor zal de gemiddelde verificatietijd $\mu(X)$ dalen.
-        De standaardafwijking $\sigma(X)$ van de sensorsystemen en de kansverdeling van $Y$ blijven ongewijzigd.
-        Bereken met hoeveel minuten de gemiddelde verificatietijd $\mu(X)$ gereduceerd moet worden zodat de kans op een succesvolle oversteek nog maar \SI{5}{\percent} is.
+    \subquestion{6}{
+        De Marechaussee wil de effectiviteit van het grensbeheer verhogen. 
+        Technici stellen voor om de processors in de sensorsystemen te vervangen door snellere chips. 
+        Hierdoor zal de gemiddelde verwerkingstijd $\mu(X)$ dalen.
+        Bereken met hoeveel minuten de gemiddelde verwerkingstijd $\mu(X)$ gereduceerd moet worden zodat de kans op een succesvolle oversteek nog maar \SI{5}{\percent} is.
     }
     \solution{
         We hebben in deze situatie weer te maken met twee kansvariabelen $X$ en $Y$, maar nu is de verwachtingswaarde $\mu(X)$ een te bepalen onbekende.\rubric{1}
@@ -47,37 +78,30 @@
         Om de gevraagde $\mu(X)$ te berekenen, gebruiken we opnieuw de \enquote{numeric solver}:
         \begin{align*}
             E_1     &= \normalcdf(\lb=0, \ub=10^{99}, \mu=X-5.0, \sigma=0.8326) \\
-            E_2     &\approx 0.05. \rubric{2}  
+            E_2     &= 0.05. \rubric{2}  
         \end{align*}
         Hieruit volgt een waarde van $X \approx 3.6305$.\rubric{1}
-        Dit betekent dat de gemiddelde verificatietijd $\mu(X)$ gereduceerd moet worden met ongeveer $4.12 - 3.6305 = 0.4895$ minuten, oftewel net iets minder dan een halve minuut.\rubric{1}
-        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).\rubric{1}
+        Dit betekent dat de gemiddelde verwerkingstijd $\mu(X)$ gereduceerd moet worden met ongeveer $4.12 - 3.6305 = 0.4895$ minuten, oftewel net iets minder dan een halve minuut.\rubric{1}
     }
 
-    \subquestion{8}{
-        De bevelhebber van de Kroatische grenspatrouille eist strengere maatregelen om de controle te behouden. 
-        Door de inzet van extra KMar-drone-ondersteuning dalen de verificatietijden, waardoor de kans dat een groep ongedetecteerd wegglipt, afneemt naar $p = 0.05$ (\SI{5}{\percent}). 
-        De operationele opvang- en detentiecapaciteit van de lokale Kroatische politiepost is echter strikt beperkt: de eenheden kunnen per nacht maximaal 2 groepen fysiek onderscheppen en administratief verwerken. Als er in één nacht \textit{meer dan 2} groepen door de mazen van de wet glippen, raakt de capaciteit op de grond overbelast en faalt de grensmissie.
-        
-        Bereken via een numerieke benadering (of systematisch uitproberen) hoeveel groepen ($n$) het smokkelnetwerk in één nacht maximaal kan inzetten, zodat de kans op overbelasting van de grensbewaking \textit{hoogstens} \SI{10}{\percent} is.
+    \subquestion{6}{
+        In plaats van het vervangen van de processors (de maatregel uit subvraag c), overwegen de technici een alternatieve software-update.
+        Deze update verandert de gemiddelde verwerkingstijd $\mu(X) = 4.12$ minuten niet, maar zorgt er wel voor dat de standaardafwijking $\sigma(X)$ afneemt.        
+        Beredeneer, zonder een berekening uit te voeren, of de kans op een succesvolle oversteekpoging door deze software-update zal \textit{toenemen}, \textit{afnemen} of \textit{gelijk blijven}.
     }
     \solution{
-        Laat $Y$ het aantal succesvol doorgeglipte groepen zijn met $Y \sim \text{Bin}(n, 0.05)$. 
-        De capaciteit raakt overbelast als $Y > 2$. De harde eis is dat deze kans maximaal \SI{10}{\percent} mag zijn:\rubric{1}
-        \[
-            P(Y > 2) \leq 0.10 \implies P(Y \leq 2) \geq 0.90
-        \]
-        We schrijven de cumulatieve binomiale kans uit voor $Y \leq 2$:\rubric{1}
-        \[
-            P(Y \leq 2) = \binom{n}{0}(0.05)^0(0.95)^n + \binom{n}{1}(0.05)^1(0.95)^{n-1} + \binom{n}{2}(0.05)^2(0.95)^{n-2}
-        \]
-        Studenten moeten nu numeriek of via een tabel doorrekenen voor verschillende waarden van $n$ om de grens te bepalen:\rubric{2}
-        \begin{itemize}
-            \item $n = 20 \implies P(Y \leq 2) = 0.3585 + 0.3774 + 0.1887 = 0.9246 \geq 0.90$ (Veilig)
-            \item $n = 21 \implies P(Y \leq 2) = 0.3406 + 0.3764 + 0.1981 = 0.9151 \geq 0.90$ (Veilig)
-            \item $n = 22 \implies P(Y \leq 2) = 0.3235 + 0.3751 + 0.2073 = 0.9059 \geq 0.90$ (Veilig)
-            \item $n = 23 \implies P(Y \leq 2) = 0.3074 + 0.3734 + 0.2163 = 0.8971 < 0.90$ (Onveilig)\rubric{3}
-        \end{itemize}
-        Het netwerk kan maximaal \textbf{22 groepen} tegelijk inzetten om de kans op een succesvolle overbelasting (het wegglippen van meer dan 2 groepen) onder de \SI{10}{\percent} te houden. Vanaf 23 groepen wordt het operationele risico voor de grensbewaking te groot.\rubric{1}
+        Uit de beginsituatie (subvraag a) blijkt dat het gemiddelde van de verschilvariabele $V = X - Y$ gelijk is aan $E(V) = -0.78$.\rubric{1}
+        
+        Omdat $E(V) < 0$, ligt het overgrote deel van de normale verdeling van $V$ links van de grens $0$. 
+        De succeskans is de rechterstaart: $P(V > 0)$. \rubric{1}
+        
+        Wanneer de standaardafwijking $\sigma(X)$ afneemt, neemt ook de standaardafwijking van de verschilvariabele, $\sigma(V) = \sqrt{\sigma(X)^2 + \sigma(Y)^2}$, af.\rubric{1}
+        
+        Een kleinere standaardafwijking $\sigma(V)$ betekent dat de verdeling smaller wordt en zich compacter rondom het negatieve gemiddelde ($-0.78$) groepeert.\rubric{1}
+        
+        Hierdoor komt er minder data in de rechterstaart (het gebied rechts van $0$) te liggen, waardoor de kans $P(V > 0)$ kleiner wordt.\rubric{1}
+        
+        De kans op een succesvolle oversteekpoging zal door deze software-update dus \textbf{afnemen}.\rubric{1}
     }
+    
 \end{question}
