@@ -4,34 +4,6 @@
     
     De verwerkingstijd $X$ (in minuten) die het sensorsysteem van de Marechaussee nodig heeft voor de verificatie van smokkelpogingen is normaal verdeeld met $\mu(X) = 4.12$ en $\sigma(X) = 0.76$.
 }
-    \subquestion{6}{
-        Zodra een groep migranten illegaal de Kroatische grens over gesmokkeld zijn, moet de groep ervoor zorgen dat ze zo snel mogelijk aan het zicht verdwijnt van de thermische camera's.
-        De tijd $Y$ die een willekeurige groep hiervoor nodig heeft is normaal verdeeld met $\mu(Y) = $ \SI{5.0}{\min} en $\sigma(Y) = $ \SI{0.34}{\min}.
-        Bereken de kans dat een individuele smokkelpoging \textit{succesvol} is, omdat het sensorsysteem een te grote verwerkingstijd nodig heeft.
-
-        {
-            \small \textbf{Hint:} gebruik de verschilvariabele $V = X - Y$ en het feit dat $V$ normaal verdeeld is met $\mu(V) = \mu(X) - \mu(Y)$ en $\sigma(V) = \sqrt{\sigma(X)^2 + \sigma(Y)^2}$.
-        }
-    }
-    \solution{
-        We hebben in deze situatie te maken met twee kansvariabelen $X$ en $Y$, zoals die hierboven gedefinieerd zijn.
-        De kans dat een individuele smokkelpoging succesvol is, is gelijk aan de kans dat de overstekers sneller uit het zicht verdwijnen $P(X > Y)$.\rubric{1}
-        Definieer hiertoe de verschilvariabele $V = X - Y$. We willen dus de kans $P(X > Y)$, oftewel $P(V = X - Y > 0)$ berekenen.\rubric{1}
-
-        Aangezien zowel $X$ als $Y$ normaal verdeeld zijn, geldt in dit geval dat de verschilvariabele $V = X - Y$ ook normaal verdeeld is met:
-        \begin{align*}
-            E(V)        &= \mu(X) - \mu(Y) = 4.12 - 5.0 = -0.78 \\
-            \sigma(V)   &= \sqrt{\sigma(X)^2 + \sigma(Y)^2} = \sqrt{0.76^2 + 0.34^2} \approx 0.8326 \rubric{2}
-        \end{align*}
-
-        De gevraagde kans $P(V > 0)$ berekenen we dan als volgt:
-        \begin{align*}
-            P(V > 0)    &= \normalcdf(\lb=0, \ub=10^{99}, \mu=-0.78, \sigma=0.8326) \\
-                        &\approx 0.1744. \rubric{2}  
-        \end{align*}
-        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).
-    }
-    
     \subquestion{9}{
         Van het sensorsysteem worden de prestaties over een maand geanalyseerd, waarbij in totaal $50$ losse, onafhankelijke oversteekpogingen zijn geregistreerd.
         Bereken de kans dat de \textit{totale} verwerkingstijd van het sensorsysteem voor deze $50$ oversteekpogingen samen meer dan $3\frac{1}{2}$ uur bedraagt.
@@ -62,10 +34,38 @@
     }
 
     \subquestion{6}{
+        Zodra een groep migranten illegaal de Kroatische grens over gesmokkeld zijn, moet de groep ervoor zorgen dat ze zo snel mogelijk aan het zicht verdwijnt van de thermische camera's.
+        De tijd $Y$ die een willekeurige groep hiervoor nodig heeft is normaal verdeeld met $\mu(Y) = $ \SI{5.0}{\min} en $\sigma(Y) = $ \SI{0.34}{\min}.
+        Bereken de kans dat een individuele smokkelpoging \textit{succesvol} is, omdat het sensorsysteem een te grote verwerkingstijd nodig heeft.
+
+        {
+            \small\textbf{\underline{Hint}:} gebruik de verschilvariabele $V = X - Y$: deze is normaal verdeeld met $\mu(V) = \mu(X) - \mu(Y)$ en $\sigma(V) = \sqrt{\sigma(X)^2 + \sigma(Y)^2}$.
+        }
+    }
+    \solution{
+        We hebben in deze situatie te maken met twee kansvariabelen $X$ en $Y$, zoals die hierboven gedefinieerd zijn.
+        De kans dat een individuele smokkelpoging succesvol is, is gelijk aan de kans dat de overstekers sneller uit het zicht verdwijnen $P(X > Y)$.\rubric{1}
+        Definieer hiertoe de verschilvariabele $V = X - Y$. We willen dus de kans $P(X > Y)$, oftewel $P(V = X - Y > 0)$ berekenen.\rubric{1}
+
+        Aangezien zowel $X$ als $Y$ normaal verdeeld zijn, geldt in dit geval dat de verschilvariabele $V = X - Y$ ook normaal verdeeld is met:
+        \begin{align*}
+            E(V)        &= \mu(X) - \mu(Y) = 4.12 - 5.0 = -0.78 \\
+            \sigma(V)   &= \sqrt{\sigma(X)^2 + \sigma(Y)^2} = \sqrt{0.76^2 + 0.34^2} \approx 0.8326 \rubric{2}
+        \end{align*}
+
+        De gevraagde kans $P(V > 0)$ berekenen we dan als volgt:
+        \begin{align*}
+            P(V > 0)    &= \normalcdf(\lb=0, \ub=10^{99}, \mu=-0.78, \sigma=0.8326) \\
+                        &\approx 0.1744. \rubric{2}  
+        \end{align*}
+        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).
+    }
+
+    \subquestion{6}{
         De Marechaussee wil de effectiviteit van het grensbeheer verhogen. 
         Technici stellen voor om de processors in de sensorsystemen te vervangen door snellere chips. 
-        Hierdoor zal de gemiddelde verwerkingstijd $\mu(X)$ dalen.
-        Bereken met hoeveel minuten de gemiddelde verwerkingstijd $\mu(X)$ gereduceerd moet worden zodat de kans op een succesvolle oversteek nog maar \SI{5}{\percent} is.
+        Hierdoor zal de gemiddelde verwerkingstijd $\mu(X)$ dalen, terwijl de standaardafwijking $\sigma(X)$ en de kansverdeling van $Y$ gelijk blijven.
+        Bereken de minimale reductie van de gemiddelde verwerkingstijd $\mu(X)$ (in minuten) zodat de kans op een succesvolle oversteek nog maar \SI{5}{\percent} is.
     }
     \solution{
         We hebben in deze situatie weer te maken met twee kansvariabelen $X$ en $Y$, maar nu is de verwachtingswaarde $\mu(X)$ een te bepalen onbekende.\rubric{1}

@@ -13,8 +13,10 @@
 }
     \subquestion{6}{
         Bepaal de unieke waarde van de constante $c$ zodanig dat $f$ voldoet aan de eisen van een goed gedefinieerde kansdichtheidsfunctie.
-
-        {\underline{Hint}: voor een constante $c$ en een functie $g(x)$ geldt dat $\int c \cdot g(x) \dx = c \cdot \int g(x) \dx$.}
+        
+        {
+            \small\textbf{\underline{Hint}:} gebruik het feit dat $\int_{1}^{3} c \cdot (x-1)\cdot(3-x)\cdot(4-x) \dx = c \cdot \int_{1}^{3} (x-1)\cdot(3-x)\cdot(4-x) \dx$.
+        }
     }
     \solution{
         De eisen voor een goed gedefinieerde kansdichtheidsfunctie zijn als volgt:
@@ -39,15 +41,18 @@
         \end{align*}
         De enige waarde van $c$ waarbij aan de vergelijking $\frac{8}{3}c = 1$ wordt voldaan, is $c = \frac{3}{8}$.\rubric{1}
     }
-
+    
+    {\itshape Als het niet lukt om de constante $c$ te berekenen, ga dan in het vervolg uit van $c = \frac{2}{5}$.} 
+    
     \subquestion{4}{
+        
         Teken een schets van deze kansdichtheidsfunctie op het interval $[0, 4]$. Geef hierbij duidelijk aan wat de betekenis is van de assen.
     }
     \solution{
         \begin{center}
             \includegraphics[width=\textwidth]{./20260605_exam_pdf_sketch.png} \rubric{4}
         \end{center}
-        2 punten aftrek indien de functie $f(x) = \frac{3}{8}(x-1)(3-x)(4-x)$ is getekend op het gehele interval $[0, 4]$.       
+        2 punten aftrek indien de functie $f(x) = \frac{3}{8}(x-1)(3-x)(4-x)$ is getekend op het gehele interval $[0, 4]$ in plaats van beperkt tot het interval $[1, 3]$.       
     }
 
     \subquestion{8}{
@@ -85,7 +90,7 @@
         
         Hiervoor gebruiken we de numerieke solver en vullen we het volgende in:
         \begin{align*}
-            E_1 &= \int_{X}^{3} \frac{3}{8}\cdot (X-1) \cdot (3-X) \cdot (4-X) \;\mathrm{d}X \\
+            E_1 &= \int_{X}^{3} \frac{3}{8}\cdot (X-1) \cdot (3-X) \cdot (4-X) \dX \\
             E_2 &= 0.90. \rubric{2}
         \end{align*}
         De numerieke solver geeft dan twee mogelijke uitkomsten $X \approx 1.3279$ of $X \approx 0.7232$ (afhankelijk van de ingevoerde beginwaarde $X=$).\rubric{1}

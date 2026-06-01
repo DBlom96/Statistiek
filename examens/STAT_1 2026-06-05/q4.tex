@@ -2,7 +2,7 @@
     Het NATO Space Operations Centre (NSpOC) bewaakt een constellatie van militaire communicatiesatellieten die cruciale dataverbindingen verzorgen voor grondtroepen in een operatiegebied. 
     Vijandelijke actoren passen regelmatig RF-jamming (radiofrequentie-storing) toe om deze verbindingen tijdelijk te onderbreken.
 
-    Uit operationele data over de afgelopen 18 maanden blijkt dat vijandelijke jamming-aanvallen gemiddeld $\lambda=3.2$ aanvallen per dag voorkomen volgens een Poissonproces.
+    Uit operationele data over de afgelopen 18 maanden blijkt dat er gemiddeld $\lambda = 3.2$ vijandelijke jamming-aanvallen per dag plaatsvinden volgens een Poissonproces.
     
     Het NSpOC beschikt over een Counter-Space Response Team (CSRT) dat actief tegenmaatregelen kan inzetten.
     Het team kan per dag maximaal $5$ aanvallen effectief neutraliseren. 
@@ -25,7 +25,7 @@
                             &= 1 - \poissoncdf(\mu=22.4, k=19) \\
                             &\approx 0.7226. \rubric{2}
         \end{align*}
-        De kans dat er in een willekeurige week minimaal $20$ aanvallen plaatsvinden is \textbf{0.7226} (of \SI{71.89}{\percent}).
+        De kans dat er in een willekeurige week minimaal $20$ aanvallen plaatsvinden is \textbf{0.7226} (of \SI{72.26}{\percent}).
     }
 
     \subquestion{5}{
@@ -49,19 +49,6 @@
         De kans dat het team op een willekeurige dag overbelast raakt is \textbf{0.1054} (of \SI{10.54}{\percent}).
     }
 
-    \subquestion{3}{
-        Leg zonder berekening uit welke van de volgende twee gebeurtenissen waarschijnlijker is:
-        \begin{itemize}
-            \item Er vinden op twee opeenvolgende dagen telkens vijf jamming-aanvallen plaats.
-            \item Er vinden in een periode van twee dagen in totaal tien jamming-aanvallen plaats.
-        \end{itemize}
-    }
-    \solution{
-        De tweede gebeurtenis is waarschijnlijker.\rubric{1}
-        Dit komt omdat de eerste gebeurtenis specifiek alleen de kans op uitkomst $(5, 5)$ beschouwt,
-        terwijl de tweede gebeurtenis ook de uitkomsten $(0, 10)$, $(1, 9)$, enz. beschouwt.\rubric{2}
-    }
-
     \subquestion{6}{
         Bereken de kans dat er in een willekeurige maand (30 dagen) minstens $3$ dagen zijn waarop het CSRT overbelast raakt.
     }
@@ -77,6 +64,19 @@
                             &\approx 0.6259. \rubric{3}
         \end{align*}
         De kans dat er in een willekeurige maand minstens $3$ dagen zijn waarop het team overbelast raakt, is dus ongeveer \textbf{0.6259} (of \SI{62.59}{\percent}).
+    }
+
+    \subquestion{3}{
+        Leg zonder berekening uit welke van de volgende twee gebeurtenissen waarschijnlijker is:
+        \begin{itemize}
+            \item Er vinden op twee opeenvolgende dagen telkens vijf jamming-aanvallen plaats.
+            \item Er vinden in een periode van twee dagen in totaal tien jamming-aanvallen plaats.
+        \end{itemize}
+    }
+    \solution{
+        De tweede gebeurtenis is waarschijnlijker.\rubric{1}
+        Dit komt omdat de eerste gebeurtenis specifiek alleen de kans op uitkomst $(5, 5)$ beschouwt,
+        terwijl de tweede gebeurtenis ook de uitkomsten $(0, 10)$, $(1, 9)$, enz. beschouwt.\rubric{2}
     }
 
     \subquestion{7}{
