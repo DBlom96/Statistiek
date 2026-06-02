@@ -1,0 +1,86 @@
+\begin{question}{22}{
+    De Defensie Materieel Organisatie test de betrouwbaarheid van automatische hoogtemeters die gebruikt worden bij \enquote{High Altitude Low Opening} parachutesprongen.
+    Deze hoogtemeters sturen op basis van luchtdruk een signaal naar het \enquote{Automatic Activation Device}, dat ervoor zorgt dat de parachute automatisch geopend wordt bij kritieke luchtdrukwaarden.
+    
+    De hoogte $X$ (in meters) waarop een willekeurige hoogtemeter uit de fabriek de kritieke luchtdruk meet, is normaal verdeeld met een gemiddelde van $\mu = \SI{1200}{\meter}$ en een standaardafwijking van $\sigma = \SI{35}{\meter}$.
+}
+
+    \subquestion{4}{
+        De fabrikant van de hoogtemeters keurt de slechtst presterende \SI{2.5}{\percent} van de geproduceerde hoogtemeters direct af 
+        (oftewel de hoogtemeters die een veel te lage hoogte registreren).
+        Bereken de kritieke grenswaarde $g$ (in meters) waaronder een hoogtemeter wordt afgekeurd.
+        Rond je antwoord af op één decimaal.
+    }
+    \solution{
+        Er is gegeven dat de kansvariabele $X$ de hoogte meet waarop een willekeurige hoogtemeter uit de fabriek de kritieke luchtdruk meet, 
+        en dat $X$ normaal verdeeld is met $\mu = 1200$ en $\sigma = 35$.
+
+        We willen de grenswaarde $g$ berekenen waarvoor $X$ slechts met \SI{2.5}{\percent} kans, oftewel kans is $0.025$, een kleinere waarde aanneemt.
+        Met andere woorden, we willen $g$ vinden met $P(X \le g) = 0.025$.\rubric{1}
+
+        Dit kunnen we berekenen met de functie \enquote{InvNorm}:
+        \begin{align*}
+            g   &= \invnorm(\opp=0.025, \mu=1200, \sigma=35) \\
+                &\approx 1131.40126.\rubric{2}
+        \end{align*}
+
+        Afgerond op één decimaal is de kritieke grenswaarde gelijk aan $g \approx 1131.4$. \rubric{1}
+    }
+
+    \subquestion{4}{
+        De fabrikant slaagt erin om de hoogtemeters beter te kalibreren, waardoor de standaardafwijking onder operationele omstandigheden kan worden verkleind tot $\sigma=25$. 
+        De gemiddelde hoogte $\mu = \SI{1200}{\meter}$ blijft wel gelijk.
+        Een hoogtemeter weigert dienst als deze een hoogte meet die lager is dan de zojuist in subvraag (a) berekende grenswaarde $g$.
+        Bereken de kans dat een willekeurige hoogtemeter dienst weigert.
+    }
+    \solution{
+        De kansvariabele $X$ is in dit geval normaal verdeeld is met $\mu = 1200$ en $\sigma = 25$.\rubric{1}
+        De hoogtemeter weigert dienst als de hoogte $X$ waarop de exacte luchtdruk wordt gemeten kleiner dan de berekende grenswaarde $1131.4$ is, oftewel $P(X \leq 1131.4)$.\rubric{1}
+        Dit kunnen we berekenen met de functie \enquote{normalcdf}:
+        \begin{align*}
+            P(X \leq g \approx 1131.4)  &= \normalcdf(\lb=-\GRinfinity, \ub=1131.4, \mu=1200, \sigma=25) \\
+                                        &\approx 0.0030.\rubric{2}
+        \end{align*}
+    }
+
+    \subquestion{8}{
+        De commandant wil een peloton van $n$ parachutisten tegelijk laten springen onder deze operationele omstandigheden.
+        De hoogtemeters functioneren onafhankelijk van elkaar. 
+        De commandant eist dat de kans dat er minstens één hoogtemeter dienst weigert binnen het peloton, hoogstens \SI{10}{\percent} mag zijn.
+        Bepaal het maximale aantal parachutisten $n$ dat aan deze sprong mag deelnemen om nog aan de veiligheidseis van de commandant te voldoen.
+    }
+    \solution{
+        Stel $Y$ is de kansvariabele die het aantal dienstweigerende hoogtemeters telt.
+        Aangezien de hoogtemeters onafhankelijk van elkaar worden ingezet, is $Y$ een binomiale kansvariabele. \rubric{1}
+        De parameters van deze binomiale verdeling zijn een onbekende $n$ en de succeskans $p \approx 0.0030$ (kans dat een hoogtemeter dienst weigert).\rubric{2}
+        
+        We willen nu de maximale waarde voor $n$ bepalen zodanig dat geldt $P( Y \geq 1) = 1 - P(Y \leq 0) \leq 0.10$. \rubric{1}
+
+        Aangezien $n$ een geheel getal moet zijn, maken we met de grafische rekenmachine een tabel:
+        \begin{align*}
+            y_1 = 1 - \binomcdf(n=X, p=0.0030, k=0) \rubric{1}
+        \end{align*}
+
+        Dit geeft ons de volgende waarde voor $X$:
+        \begin{align*}
+            n = 35: &\qquad 1 - \binomcdf(n=35, p=0.0030, k=0) \approx 0.09982\ (\text{voldoet}) \\
+            n = 36: &\qquad 1 - \binomcdf(n=36, p=0.0030, k=0) \approx 0.10252\ (\text{voldoet niet meer}) \rubric{2} 
+        \end{align*}
+
+        Het maximale aantal parachutisten dat aan deze sprong mag deelnemen om nog aan de veiligheidseis van de commandant te voldoen is dus $n = 35$.
+    }
+
+    \subquestion{6}{
+        Stel dat de fabrikant de hoogtemeters nog verder doorontwikkelt, waardoor de kans op een dienstweigerende hoogtemeter nog verder daalt tot $0.001$.
+        Bereken de verwachtingswaarde en de standaardafwijking van het aantal dienstweigerende hoogtemeters, gegeven het maximale aantal parachutisten zoals berekend bij subvraag (c).
+    }
+    \solution{
+        In dat geval is het aantal dienstweigerende hoogtemeters $Y$ binomiaal verdeeld met parameters $n = 35$ en $p = 0.001$.\rubric{2}
+
+        De formules voor de verwachtingswaarde $E(Y)$ en de standaardafwijking $\sigma(Y)$ zijn dan als volgt:
+        \begin{align*}
+            E(Y) &= n \cdot p = 35 \cdot 0.001 = 0.035. \rubric{2} \\
+            \sigma(Y) &= \sqrt{n \cdot p \cdot (1 - p)} = \sqrt{35 \cdot 0.001 \cdot (1 - 0.001)} \approx 0.1870.\rubric{2}
+        \end{align*}
+    }
+\end{question}
