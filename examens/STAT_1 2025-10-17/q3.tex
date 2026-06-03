@@ -4,14 +4,14 @@
     De doorzoektijd $T$ van deze auto's is uniform verdeeld tussen $11$ en $17$ minuten.
 } 
     \subquestion{5}{
-        Wat zijn de verwachtingswaarde $E[T]$ en de standaardafwijking $\sigma(T)$ van de doorzoektijd van een willekeurige auto?
+        Wat zijn de verwachtingswaarde $E(T)$ en de standaardafwijking $\sigma(T)$ van de doorzoektijd van een willekeurige auto?
     }
 
     \solution{
         Gegeven is dat de doorzoektijd $T$ is uniform verdeeld tussen $a = 11$ en $b = 17$.\rubric{1}
-        De verwachtingswaarde $E[T]$ van een uniform verdeelde kansvariabele $T$ is gelijk aan
+        De verwachtingswaarde $E(T)$ van een uniform verdeelde kansvariabele $T$ is gelijk aan
         \[
-            E[T] = \frac{a+b}{2} = \frac{11 + 17}{2} = 14. \rubric{1}
+            E(T) = \frac{a+b}{2} = \frac{11 + 17}{2} = 14. \rubric{1}
         \]
         Vervolgens is de variantie $\Var{T}$ van een uniform verdeelde kansvariabele $T$ gelijk aan
         \begin{align*}
@@ -80,9 +80,9 @@
         In dit geval hebben we nog steeds te maken met de centrale limietstelling, alleen zal de verwachtingswaarde afhangen van de nog onbekende $x$.
         Merk op dat de variantie hetzelfde blijft, omdat de spreiding tussen mogelijke uitkomsten hetzelfde blijft.\rubric{1}
 
-        De verwachtingswaarde $E[T]$ van de nieuwe doorzoektijd $T$ is gelijk aan
+        De verwachtingswaarde $E(T)$ van de nieuwe doorzoektijd $T$ is gelijk aan
         \[
-            E[T] = \frac{a+b}{2} = \frac{11 - x + 17 - x}{2} = 14 - x. \rubric{1}
+            E(T) = \frac{a+b}{2} = \frac{11 - x + 17 - x}{2} = 14 - x. \rubric{1}
         \]
 
         Volgens de centrale limietstelling is de som van de doorzoektijden $\sum T = T_1 + T_2 + \ldots + T_{29}$ 
@@ -91,15 +91,15 @@
 
         We willen de waarde $x$ bepalen zodanig dat geldt dat:
         \[
-            P(\sum T \geq 360) = \normalcdf(a = 360, b = 10^{99}, \mu = 406 - 29x, \sigma = 9.3274) \geq 0.90 \rubric{1}
+            P(\sum T \leq 360) = \normalcdf(a = -10^{99}, b = 360, \mu = 406 - 29x, \sigma = 9.3274) \geq 0.90 \rubric{1}
         \]
         
         Om deze vergelijking op te lossen, gebruik de solver optie op de grafische rekenmachine en voer in:
         \begin{align*}
-            &y_1: \qquad \normalcdf(a = 360, b = 10^{99}, \mu = 406 - 29X, \sigma = 9.3274) \\
+            &y_1: \qquad \normalcdf(a = -10^{99}, b = 360, \mu = 406 - 29X, \sigma = 9.3274) \\
             &y_2: \qquad 0.90 
         \end{align*}
-        Hieruit volgt dat $x \approx 1.1740$.\rubric{2}
-        De doorzoektijd moet met minstens $1$ minuut en $10$ seconden versnellen om met \SI{90}{\percent} zekerheid binnen zes uur de $29$ doorzoekingen af te ronden.\rubric{1}
+        Hieruit volgt dat $x \approx 3.4482$.\rubric{2}
+        De doorzoektijd moet gemiddeld met minstens $3$ minuten en $26$ seconden versnellen om met \SI{90}{\percent} zekerheid binnen zes uur de $29$ doorzoekingen af te ronden.\rubric{1}
     }
 \end{question}

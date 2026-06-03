@@ -15,7 +15,7 @@
 
         De kans dat er in die zeven dagen precies $30$ aanvragen worden geplaatst is dus gelijk aan
         \[
-            P(X = 30) = \poissonpdf(\mu=29.4; k=30) \approx 0.0722. \rubric{2}
+            P(X = 30) = \poissonpdf(\mu=29.4, k=30) \approx 0.0722. \rubric{2}
         \]
     }
 
@@ -30,7 +30,7 @@
         We willen dus de kans $P(X > 5)$ bepalen, oftewel
         \begin{align*}
             P(X > 5) = P(X \geq 6)  &= 1 - P(X \leq 5)   \\
-                                    &= 1 - \poissoncdf(\mu=4.2; k=5) \\
+                                    &= 1 - \poissoncdf(\mu=4.2, k=5) \\
                                     &\approx 0.2469. \rubric{2}
         \end{align*}
     }
@@ -56,14 +56,14 @@
     }
     
     \subquestion{6}{
-        Met welk aantal zal de productie moeten worden opgeschroefd om met \SI{95}{\percent} kans te kunnen voldoen aan de vraag naar een nieuw gevechtstenue?
+        Met welk aantal zal de productie moeten worden opgeschroefd om met minstens \SI{95}{\percent} kans te kunnen voldoen aan de vraag naar een nieuw gevechtstenue?
     }
 
     \solution{
         We willen in deze vraag dus bepalen voor welke productiegrootte per dag $k$ geldt dat de kans op hoogstens $k$ aanvragen op een willekeurige dag groter dan of gelijk aan \SI{95}{\percent}. \rubric{1}
         In andere woorden, voor welke $k$ geldt dat 
         \begin{align*}
-            P(X \leq k) = \poissoncdf(\mu=4.2, k?) \geq 0.95. \rubric{1}
+            P(X \leq k) = \poissoncdf(\mu=4.2, k = \text{ ?}) \geq 0.95. \rubric{1}
         \end{align*}
 
         Om deze vergelijking op te lossen, gebruik de tabel optie op de grafische rekenmachine en voer in:
@@ -88,7 +88,7 @@
         Het bleek echter niet mogelijk om de productiecapaciteit te verhogen.
         De afdeling werkt een tijdje vooruit om alvast genoeg gevechtstenues klaar te hebben liggen voor de grote drukte.
 
-        Uitgaande van de productiecapaciteit van $5$ gevechtstenues per dag, hoe lang van tevoren moet de productie worden opgestart om met \SI{95}{\percent} kans genoeg gevechtstenues klaar te hebben liggen voor de reservisten én langmodellers om de eerste dag door te komen?
+        Uitgaande van de productiecapaciteit van $5$ gevechtstenues per dag, hoe lang van tevoren moet de productie worden opgestart om met minstens \SI{95}{\percent} kans genoeg gevechtstenues klaar te hebben liggen voor de reservisten én langmodellers om de eerste dag door te komen?
     }
 
     \solution{
@@ -97,7 +97,7 @@
 
         We berekenen eerst de waarde $k$ waarvoor geldt dat de kans dat het totale aantal aanvragen hoogstens $k$ is gelijk is aan $0.95$, oftewel:
         \begin{align*}
-            P(Z \leq k) = \poissoncdf(\mu=12.9, k?) \geq 0.95. \rubric{1}
+            P(Z \leq k) = \poissoncdf(\mu=12.9, k=\text{ ?}) \geq 0.95. \rubric{1}
         \end{align*}
         Om deze vergelijking op te lossen, gebruik de tabel optie op de grafische rekenmachine en voer in:
         \begin{itemize}

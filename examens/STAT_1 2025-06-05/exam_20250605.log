@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  28 MAY 2026 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  3 JUN 2026 15:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1138,15 +1138,248 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) (q2.tex
+)
+Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 31.
+Package marginnote Info: right page because not two side mode on input line 31.
+Package marginnote Info: xpos seems to be 143.657pt on input line 31.
+Package marginnote Info: right page because not two side mode on input line 31.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 31.
+Package marginnote Info: Margin note 5.3 is on absolute page 5 on input line 31.
+Package marginnote Info: right page because not two side mode on input line 31.
+Package marginnote Info: xpos seems to be 311.98051pt on input line 31.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 51.
+Package marginnote Info: Margin note 5.5 is on absolute page 6 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 342.55138pt on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 51.
+Package marginnote Info: Margin note 5.7 is on absolute page 6 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 359.37616pt on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 51.
+Package marginnote Info: Margin note 5.9 is on absolute page 6 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 403.27863pt on input line 51.
 
-[5{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (q3.tex
 
-[6]) (q4.tex
+[5{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 72.
+Package marginnote Info: right page because not two side mode on input line 72.
+Package marginnote Info: xpos seems to be 297.43361pt on input line 72.
+Package marginnote Info: right page because not two side mode on input line 72.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 72.
+Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 72.
+Package marginnote Info: right page because not two side mode on input line 72.
+Package marginnote Info: xpos seems to be 294.07838pt on input line 72.
+Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 72.
+Package marginnote Info: right page because not two side mode on input line 72.
+Package marginnote Info: xpos seems to be 437.05673pt on input line 72.
 
-[7])
 
-[8] (exam_20250605.aux)
+[6]
+Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 83.
+Package marginnote Info: right page because not two side mode on input line 83.
+Package marginnote Info: xpos seems to be 468.22075pt on input line 83.
+Package marginnote Info: Margin note 7.2 is on absolute page 7 on input line 83.
+Package marginnote Info: right page because not two side mode on input line 83.
+Package marginnote Info: xpos seems to be 230.81935pt on input line 83.
+Package marginnote Info: Margin note 7.3 is on absolute page 7 on input line 98.
+Package marginnote Info: right page because not two side mode on input line 98.
+Package marginnote Info: xpos seems to be 242.32552pt on input line 98.
+Package marginnote Info: Margin note 7.4 is on absolute page 7 on input line 98.
+Package marginnote Info: right page because not two side mode on input line 98.
+Package marginnote Info: xpos seems to be 526.39998pt on input line 98.
+
+
+[7]) (q2.tex
+
+[8]
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be 93.85147pt on input line 20.
+Package marginnote Info: Margin note 9.2 is on absolute page 9 on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be 466.96774pt on input line 20.
+Package marginnote Info: Margin note 9.3 is on absolute page 9 on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be 447.64618pt on input line 20.
+Package marginnote Info: Margin note 9.4 is on absolute page 9 on input line 34.
+Package marginnote Info: right page because not two side mode on input line 34.
+Package marginnote Info: xpos seems to be 454.46751pt on input line 34.
+Package marginnote Info: right page because not two side mode on input line 34.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 34.
+Package marginnote Info: Margin note 9.6 is on absolute page 9 on input line 34.
+Package marginnote Info: right page because not two side mode on input line 34.
+Package marginnote Info: xpos seems to be 398.50734pt on input line 34.
+
+
+[9]
+Package marginnote Info: Margin note 10.1 is on absolute page 10 on input line 79.
+Package marginnote Info: right page because not two side mode on input line 79.
+Package marginnote Info: xpos seems to be 146.2074pt on input line 79.
+Package marginnote Info: Margin note 10.2 is on absolute page 10 on input line 79.
+Package marginnote Info: right page because not two side mode on input line 79.
+Package marginnote Info: xpos seems to be 421.16522pt on input line 79.
+Package marginnote Info: right page because not two side mode on input line 79.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 79.
+Package marginnote Info: Margin note 10.4 is on absolute page 10 on input line 79.
+Package marginnote Info: right page because not two side mode on input line 79.
+Package marginnote Info: xpos seems to be 393.93794pt on input line 79.
+Package marginnote Info: right page because not two side mode on input line 79.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 79.
+Package marginnote Info: Margin note 10.6 is on absolute page 10 on input line 79.
+Package marginnote Info: right page because not two side mode on input line 79.
+Package marginnote Info: xpos seems to be 398.50734pt on input line 79.
+Package marginnote Info: Margin note 10.7 is on absolute page 10 on input line 79.
+Package marginnote Info: right page because not two side mode on input line 79.
+Package marginnote Info: xpos seems to be 540.36961pt on input line 79.
+Package marginnote Info: Margin note 10.8 is on absolute page 11 on input line 110.
+Package marginnote Info: right page because not two side mode on input line 110.
+Package marginnote Info: xpos seems to be 179.1114pt on input line 110.
+Package marginnote Info: Margin note 10.9 is on absolute page 11 on input line 110.
+Package marginnote Info: right page because not two side mode on input line 110.
+Package marginnote Info: xpos seems to be 491.99406pt on input line 110.
+Package marginnote Info: right page because not two side mode on input line 110.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 110.
+Package marginnote Info: Margin note 10.11 is on absolute page 11 on input line 110.
+Package marginnote Info: right page because not two side mode on input line 110.
+Package marginnote Info: xpos seems to be 262.0982pt on input line 110.
+Package marginnote Info: Margin note 10.12 is on absolute page 11 on input line 110.
+Package marginnote Info: right page because not two side mode on input line 110.
+Package marginnote Info: xpos seems to be 259.86984pt on input line 110.
+
+
+[10]) (q3.tex
+
+[11]
+Package marginnote Info: Margin note 12.1 is on absolute page 12 on input line 18.
+Package marginnote Info: right page because not two side mode on input line 18.
+Package marginnote Info: xpos seems to be 294.16414pt on input line 18.
+Package marginnote Info: right page because not two side mode on input line 18.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 18.
+Package marginnote Info: Margin note 12.3 is on absolute page 12 on input line 18.
+Package marginnote Info: right page because not two side mode on input line 18.
+Package marginnote Info: xpos seems to be 524.28131pt on input line 18.
+Package marginnote Info: Margin note 12.4 is on absolute page 12 on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be 163.8568pt on input line 33.
+Package marginnote Info: Margin note 12.5 is on absolute page 12 on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be 209.61758pt on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 33.
+Package marginnote Info: Margin note 12.7 is on absolute page 12 on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be 332.40219pt on input line 33.
+Package marginnote Info: Margin note 12.8 is on absolute page 13 on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be 156.52739pt on input line 33.
+
+
+[12]
+Package marginnote Info: Margin note 13.1 is on absolute page 13 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 287.5887pt on input line 51.
+Package marginnote Info: Margin note 13.2 is on absolute page 13 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 235.14381pt on input line 51.
+Package marginnote Info: Margin note 13.3 is on absolute page 13 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 145.16344pt on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 51.
+Package marginnote Info: Margin note 13.5 is on absolute page 13 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 530.5786pt on input line 51.
+Package marginnote Info: Margin note 13.6 is on absolute page 13 on input line 51.
+Package marginnote Info: right page because not two side mode on input line 51.
+Package marginnote Info: xpos seems to be 175.76337pt on input line 51.
+Package marginnote Info: Margin note 13.7 is on absolute page 13 on input line 70.
+Package marginnote Info: right page because not two side mode on input line 70.
+Package marginnote Info: xpos seems to be 544.44353pt on input line 70.
+Package marginnote Info: Margin note 13.8 is on absolute page 14 on input line 70.
+Package marginnote Info: right page because not two side mode on input line 70.
+Package marginnote Info: xpos seems to be 508.68356pt on input line 70.
+Package marginnote Info: Margin note 13.9 is on absolute page 14 on input line 70.
+Package marginnote Info: right page because not two side mode on input line 70.
+Package marginnote Info: xpos seems to be 498.16922pt on input line 70.
+Package marginnote Info: right page because not two side mode on input line 70.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 70.
+Package marginnote Info: Margin note 13.11 is on absolute page 14 on input line 70.
+Package marginnote Info: right page because not two side mode on input line 70.
+Package marginnote Info: xpos seems to be 285.83244pt on input line 70.
+Package marginnote Info: Margin note 13.12 is on absolute page 14 on input line 70.
+Package marginnote Info: right page because not two side mode on input line 70.
+Package marginnote Info: xpos seems to be 458.89952pt on input line 70.
+
+
+[13]
+Package marginnote Info: Margin note 14.1 is on absolute page 14 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 446.47011pt on input line 88.
+Package marginnote Info: Margin note 14.2 is on absolute page 14 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 460.92473pt on input line 88.
+Package marginnote Info: Margin note 14.3 is on absolute page 14 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 150.08182pt on input line 88.
+Package marginnote Info: Margin note 14.4 is on absolute page 14 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 469.94865pt on input line 88.
+) (q4.tex
+
+[14]
+Package marginnote Info: Margin note 15.1 is on absolute page 15 on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be 93.85147pt on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 20.
+Package marginnote Info: Margin note 15.4 is on absolute page 15 on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be 238.45042pt on input line 20.
+Package marginnote Info: Margin note 15.5 is on absolute page 15 on input line 20.
+Package marginnote Info: right page because not two side mode on input line 20.
+Package marginnote Info: xpos seems to be 317.29556pt on input line 20.
+Package marginnote Info: Margin note 15.6 is on absolute page 15 on input line 32.
+Package marginnote Info: right page because not two side mode on input line 32.
+Package marginnote Info: xpos seems to be 427.10005pt on input line 32.
+Package marginnote Info: Margin note 15.7 is on absolute page 15 on input line 32.
+Package marginnote Info: right page because not two side mode on input line 32.
+Package marginnote Info: xpos seems to be 527.76395pt on input line 32.
+Package marginnote Info: Margin note 15.8 is on absolute page 15 on input line 32.
+Package marginnote Info: right page because not two side mode on input line 32.
+Package marginnote Info: xpos seems to be 132.95943pt on input line 32.
+Package marginnote Info: Margin note 15.9 is on absolute page 16 on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be 353.79922pt on input line 56.
+Package marginnote Info: Margin note 15.10 is on absolute page 16 on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be 414.18633pt on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 56.
+Package marginnote Info: Margin note 15.12 is on absolute page 16 on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be 254.23222pt on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 56.
+Package marginnote Info: Margin note 15.14 is on absolute page 16 on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be 475.84982pt on input line 56.
+Package marginnote Info: Margin note 15.15 is on absolute page 16 on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be 313.99904pt on input line 56.
+Package marginnote Info: Margin note 15.16 is on absolute page 16 on input line 56.
+Package marginnote Info: right page because not two side mode on input line 56.
+Package marginnote Info: xpos seems to be 247.19928pt on input line 56.
+
+
+[15])
+
+[16] (exam_20250605.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
@@ -1155,17 +1388,17 @@ Package rerunfilecheck Info: File `exam_20250605.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47631 strings out of 468133
- 1128421 string characters out of 5430719
- 1635054 words of memory out of 5000000
- 75486 multiletter control sequences out of 15000+600000
- 646422 words of font info for 71 fonts, out of 8000000 for 9000
+ 47837 strings out of 468133
+ 1131975 string characters out of 5430719
+ 1646054 words of memory out of 5000000
+ 75681 multiletter control sequences out of 15000+600000
+ 652291 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,129p,862b,1306s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on exam_20250605.pdf (8 pages, 344940 bytes).
+ 128i,19n,129p,862b,1655s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on exam_20250605.pdf (16 pages, 392871 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

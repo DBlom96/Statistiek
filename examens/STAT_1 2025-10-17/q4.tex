@@ -21,8 +21,9 @@
     }
 
     \solution{
-        Gegeven is dat het aantal donaties per uur tijdens de campagne gemiddeld op $3$ ligt.
-        Als we mogen aannemen dat de donaties proportioneel binnenkomen volgens de verdeling van bloedgroepen, dan houdt dat in dat er gemiddeld $0.46 \cdot 3 = 1.38$ donaties per uur binnenkomen. \rubric{2}
+        Gegeven is dat het aantal donaties per uur tijdens de campagne gemiddeld op $\lambda=3$ ligt.
+        Als we mogen aannemen dat de donaties proportioneel binnenkomen volgens de verdeling van bloedgroepen,
+        dan houdt dat in dat er gemiddeld $0.46\lambda = 0.46 \cdot 3 = 1.38$ donaties per uur binnenkomen. \rubric{2}
     }
 
     \subquestion{6}{
@@ -62,18 +63,18 @@
 
     \solution{
         In deze situatie hebben we te maken met een discrete kansvariabele $X$ die het aantal bruikbare donaties telt voor pati\"enten met bloedgroep $O$. \rubric{1}
-        Merk op dat \SI{46}{\percent} van de donaties van bloedgroep $O$ zijn, en dus bruikbaar voor pati\"enten van bloedgroep $O$.
+        Merk op dat \SI{46}{\percent} van de donaties van bloedgroep $O$ zijn, en dus bruikbaar voor patiënten van bloedgroep $O$.
 
         De kansvariabele $X$ dus binomiaal verdeeld is met als parameters een nader te bepalen $n$ en een succeskans $p = 0.46$. \rubric{2}
 
         We willen nu de waarde van $n$ bepalen zodanig dat
         \begin{align*}
-            P(X \geq 5) = 1 - P(X \leq 4) = 1 - \binomcdf(n?, p=0.46, k=4) \geq 0.95. \rubric{2}
+            P(X \geq 5) = 1 - P(X \leq 4) = 1 - \binomcdf(n = \text{ ?}, p=0.46, k=4) \geq 0.95. \rubric{2}
         \end{align*}
 
         Voer deze vergelijking in in de tabel optie van de grafische rekenmachine (merk op: $n$ moet een geheel getal zijn):
         \begin{itemize}
-            \item[] $y_1: 1 - \binomcdf(n?, p=0.86, k=4)$
+            \item[] $y_1: 1 - \binomcdf(n = \text{ ?}, p=0.86, k=4)$
             \item[] $y_2: 0.95$ \rubric{1}
         \end{itemize}
 
