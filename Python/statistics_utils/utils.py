@@ -26,7 +26,7 @@ FIGURE_PATH = "../../../LaTeX/figures/"
 
 def pretty_print(x, num_decimals = 4):
     """Formatteer floats netjes, zonder overbodige nullen."""
-    pretty_x = (f"%.{num_decimals}f" % x).rstrip("0").rstrip(".")
+    pretty_x = (f"%.{num_decimals}f" % x).rstrip(".")
     return pretty_x
 
 def get_y_annotation(ax):
