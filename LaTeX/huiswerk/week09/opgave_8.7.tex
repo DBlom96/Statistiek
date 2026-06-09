@@ -12,26 +12,39 @@
 
     De Clopper-Pearson methode werkt als volgt:
     \begin{enumerate}
-        \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=160$ gelijk is aan $\alpha/2$, oftewel 
+        \item Bepaal de succeskans $p_1$ zodat de kans op minstens uitkomst $k=160$ gelijk is aan $\alpha/2$, oftewel 
         \[
-            P(X \le 160) = \alpha/2 = 0.005.
+            P(X \geq 160) = 1 - P(X \leq 159) = \alpha/2 = 0.005.
+        \]
+        Dit kun je berekenen met behulp van \enquote{numeric solver} in de grafische rekenmachine:
+        \begin{align*}
+            E_1 &= 1 - \binomcdf(n=400, p_1=X, k=159) \\
+            E_2 &= 0.005
+        \end{align*}
+        Dit geeft een waarde van $p_1 \approx 0.3372$.
+        \item Bepaal de succeskans $p_2$ zodat de kans op hoogstens uitkomst $k=160$ gelijk is aan $\alpha/2$, oftewel 
+        \[
+            P(X \leq 160) = \alpha/2 = 0.005.
         \]
         Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
         \begin{align*}
             E_1 &= \binomcdf(n=400, p_1=X, k=160) \\
             E_2 &= 0.005
         \end{align*}
-        Dit geeft een waarde van $p_1 \approx 0.4653$.
-        \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=160$ gelijk is aan $\alpha/2$, oftewel 
-        \[
-            P(X \ge 160) = 1 - P(X \le 159) = \alpha/2 = 0.005.
-        \]
-        Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
-        \begin{align*}
-            E_1 &= 1 - \binomcdf(n=400, p_1=X, k=159) \\
-            E_2 &= 0.005
-        \end{align*}
-        Dit geeft een waarde van $p_2 \approx 0.3372$.
+        Dit geeft een waarde van $p_2 \approx 0.4653$.
     \end{enumerate}
-    We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen, oftewel het \SI{99}{\percent}-betrouwbaarheidsinterval voor de fractie aanhangers van de politieke partij is gelijk aan $[0.3372,  0.4653]$.
+    We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen,
+    oftewel het \SI{99}{\percent}-betrouwbaarheidsinterval voor de fractie aanhangers van de politieke partij is gelijk aan $[0.3372,  0.4653]$.
+    \vspace{1cm}
+    
+    {
+        \noindent\itshape Met de Casio fx-CG50 is de numerieke solver aan te roepen met de functie \enquote{SolveN} (OPTN-CALC-SolveN). De syntax hierbij is als volgt:
+        \begin{align*}
+            &\text{SolveN}(1-\text{BinomialCD}(159, 400, x)=0.005,x) \\
+            &\text{SolveN}(\text{BinomialCD}(160, 400, x)=0.005,x)
+        \end{align*}
+        Zodra je op ENTER drukt, kan het zijn dat je een waarschuwing krijgt dat er meerdere oplossingen mogelijk zijn.
+        Negeer deze waarschuwing en klik op EXIT.
+        Je krijgt nu de uitkomst te zien op het scherm.
+    }
 }

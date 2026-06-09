@@ -34,17 +34,17 @@
 
     \item Bereken voor $\mu$ een betrouwbaarheidsinterval dat een betrouwbaarheid heeft van \SI{95}{\percent}.
     \answer{
-        Noteer met $X$ de kansvariabele die het aantal \unit{mg} eiwit in een willekeurig monster meet.
-        Gegeven is dat $X \sim \normal{\mu=\ ?}{\sigma=\ ?}$.
-        Volgens de centrale limietstelling geldt dat het gemiddelde aantal \unit{mg} eiwit $\samplemeanvarX$ in $10$ willekeurige monsters
-        normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{\sigma}{\sqrt{10}}$.
+        De kansvariabele $X$ meet de hoeveelheid eiwit (in mg) in een willekeurig monster.
+        Gegeven is dat $X$ een onbekende verwachtingswaarde $\mu$ heeft en een onbekende standaardafwijking $\sigma$.
+        Volgens de centrale limietstelling geldt dat de gemiddelde hoeveelheid eiwit (in mg) $\samplemeanvarX$ in $10$ willekeurige monsters
+        bij benadering normaal verdeeld is met verwachtingswaarde $\mu$ en een standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{\sigma}{\sqrt{10}}$.
         
-        We hebben een geobserveerde steekproef van $10$ zakken genomen met steekproefgemiddelde $\samplemeanx = 40.4$ \unit{mg} en steekproefstandaardafwijking 
+        We hebben een geobserveerde steekproef van $10$ zakken genomen met steekproefgemiddelde $\samplemeanx = 40.4$ en steekproefstandaardafwijking 
         \[
-            \samplestd = \sqrt{\samplevar} = \sqrt{7.0533} \approx 2.6558\ \unit{mg}.
+            \samplestd = \sqrt{\samplevar} = \sqrt{7.0533} \approx 2.6558.
         \] 
         Aangezien we een betrouwbaarheid van \SI{95}{\percent} willen, is $\alpha = 0.05$.
-        Verder, omdat de standaardafwijking $\sigma$ onbekend is en de steekproefomvang $n < 30$, moeten we de $t$-verdeling met $\df=n-1$ vrijheidsgraden gebruiken.
+        Verder, omdat de standaardafwijking $\sigma$ onbekend is, moeten we de $t$-verdeling met $\df=n-1=9$ vrijheidsgraden gebruiken.
         In het bijzonder gebruiken we
         \[
             t = \invt(\opp=1-\alpha/2, \df=n-1) = \invt(\opp=0.975, \df=9) \approx 2.2622.
@@ -55,6 +55,6 @@
             &=[40.4 - 2.2622 \cdot \frac{2.6558}{\sqrt{10}}, 40.4 + 2.2622 \cdot \frac{2.6558}{\sqrt{10}}] \\
             &=[38.50, 42.30]
         \end{align*}
-        Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde hoeveelheid eiwit in een monster tussen $38.50$ en $42.30$ \unit{mg}.
+        Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde hoeveelheid eiwit $\mu$ in een monster tussen $38.50$ en $42.30$ \unit{mg}.
     }
 \end{enumerate}
