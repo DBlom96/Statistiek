@@ -3,16 +3,17 @@
     Deze dienen een behoorlijk groot gewicht te kunnen dragen.
     We willen weten hoe sterk die tasjes zijn.
     Bij proeven worden de tasjes steeds zwaarder belast totdat zij stukgaan.
-    Bekend is dat de breeksterkte van een tasje, uitgedrukt in kilogram belasting, beschreven kan worden door een normale verdeling met $\mu=11.5$ en $\sigma=1.3$ kg.
+    Bekend is dat de breeksterkte van een tasje, uitgedrukt in kilogram belasting, 
+    beschreven kan worden door een normale verdeling met $\mu=11.5$ en $\sigma=1.3$ kg.
 }
 \begin{enumerate}[label=(\alph*)]
     \item Hoeveel procent van de tasjes breekt reeds bij een belasting van hoogstens $10$ kg?
     \answer{
-        Laat $X$ de kansvariabele zijn die de breeksterkte van een tasje (in kg) meet.
-        Gegeven is dat $X \sim \normal{\mu = 11.5}{\sigma = 1.3}$.
+        De kansvariabele $X$ meet de breeksterkte (in kg) van een willekeurig tasje.
+        Gegeven is dat $X$ normaal verdeeld is met verwachtingswaarde $\mu = 11.5$ en standaardafwijking $\sigma=1.3$.
         De kans dat een tasje breekt bij een belasting van hoogstens $10$ kg is gelijk aan
         \begin{align*}
-            P(X \le 10) = \normalcdf(a=-\GRinfinity; b=10; \mu=11.5; \sigma=1.3) \approx 0.1243.
+            P(X \le 10) = \normalcdf(a=-\GRinfinity, b=10, \mu=11.5, \sigma=1.3) \approx 0.1243.
         \end{align*}
         Dat betekent dus dat \SI{12.43}{\percent} van de tasjes al breekt bij een belasting van hoogstens $10$ kg.
     }
@@ -23,17 +24,28 @@
     Ga ervan uit dat de standaarddeviatie nog hetzelfde is.
     Bepaal een \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$: de gemiddelde breeksterkte.
     \answer{
-        Laat nu $X \sim \normal{\mu=\ ?}{\sigma=1.3}$ de kansvariabele zijn die de breeksterkte (in kg) meet van een willekeurige tasje van het nieuw soort plastic.
-        Volgens de centrale limietstelling is het steekproefgemiddelde $\samplemeanvarX$ van $25$ tasjes dan ook normaal verdeeld met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{1.3}{\sqrt{25}}$.
-        Omdat de gewenste betrouwbaarheid gelijk is aan \SI{95}{\percent}, hebben we te maken met $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
+        We hebben nu te maken met een kansvariabele $X$ die nog steeds normaal verdeeld is, maar met onbekende verwachtingswaarde $\mu = \text{ ?}$
+        en nog steeds standaardafwijking $\sigma = 1.3$ kg.
+        Een theoretische steekproef van $25$ tasjes bekijkt dus $25$ kansvariabelen $X_1, X_2, \ldots, X_{25}$.
+        Volgens de centrale limietstelling is het steekproefgemiddelde $\samplemeanvarX$ van $25$ tasjes bij benadering normaal verdeeld met
+        verwachtingswaarde $\mu = \text{ ?}$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{1.3}{\sqrt{25}}=0.26$.
+        Omdat de gewenste betrouwbaarheid gelijk is aan \SI{95}{\percent}, hebben we te maken met$\alpha = 0.05$, dus
+        \[
+            z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975, \mu=0, \sigma=1) \approx 1.9600.
+        \]
         Verder is gegeven dat $n=25$ en $\samplemeanx=12.8$ kg.
         Het \SI{95}{\percent}-betrouwbaarheidsinterval is dus gelijk aan
         \begin{align*}
-            &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
-            &=[12.8 - 1.9600 \cdot \frac{1.3}{\sqrt{25}}; 12.8 + 1.9600 \cdot \frac{1.3}{\sqrt{25}}] \\
-            &=[12.29; 13.31]
+            &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}},\qquad \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[12.8 - 1.9600 \cdot \frac{1.3}{\sqrt{25}},\qquad 12.8 + 1.9600 \cdot \frac{1.3}{\sqrt{25}}] \\
+            &=[12.29, \qquad 13.31]
         \end{align*}
         De gemiddelde breeksterkte van tasjes van het nieuw soort plastic zal met \SI{95}{\percent} betrouwbaarheid tussen $12.29$ en $13.31$ kg liggen.
+
+        {
+            \itshape Merk op dat dit interval in zijn geheel voorbij het oude gemiddelde van $11.5$ kg ligt.
+            We kunnen dus met hoge betrouwbaarheid zeggen dat de gemiddelde breeksterkte $\mu$ van de tasjes groter is met het nieuwe soort plastic.
+        }
     }
 
     \item Hoeveel procent van de tasjes breekt bij een belasting van minder dan $10$ kg als de nieuwe waarde van $\mu$ $12.8$ is?
@@ -41,20 +53,20 @@
     \answer{
         In het geval dat de nieuwe waarde van $\mu=12.8$, kunnen we weer de kans berekenen met de \enquote{normalcdf} functie:
         \begin{align*}
-            P(X \le 10) = \normalcdf(a=-\GRinfinity; b=10; \mu=12.8; \sigma=1.3) \approx 0.0156.
+            P(X \le 10) = \normalcdf(a=-\GRinfinity, b=10, \mu=12.8, \sigma=1.3) \approx 0.0156.
         \end{align*}
-        Als $\mu=12.8$ kg, dan breekt \SI{1.56}{\percent} van de tasjes van het nieuw soort plastic.
+        Als $\mu=12.8$ kg, dan breekt \SI{1.56}{\percent} van de tasjes van het nieuwe soort plastic bij een belasting van minder dan $10$ kg.
 
         In het geval dat de nieuwe waarde van $\mu=L=12.29$, kunnen we weer de kans berekenen met de \enquote{normalcdf} functie:
         \begin{align*}
-            P(X \le 10) = \normalcdf(a=-\GRinfinity; b=10; \mu=12.29; \sigma=1.3) \approx 0.0391.
+            P(X \le 10) = \normalcdf(a=-\GRinfinity, b=10, \mu=12.29, \sigma=1.3) \approx 0.0391.
         \end{align*}
-        Als $\mu=12.29$ kg, dan breekt \SI{3.91}{\percent} van de tasjes van het nieuw soort plastic.
+        Als $\mu=12.29$ kg, dan breekt \SI{3.91}{\percent} van de tasjes van het nieuwe soort plastic bij een belasting van minder dan $10$ kg.
 
         In het geval dat de nieuwe waarde van $\mu=R=13.31$, kunnen we weer de kans berekenen met de \enquote{normalcdf} functie:
         \begin{align*}
-            P(X \le 10) = \normalcdf(a=-\GRinfinity; b=10; \mu=13.31; \sigma=1.3) \approx 0.0054.
+            P(X \le 10) = \normalcdf(a=-\GRinfinity, b=10, \mu=13.31, \sigma=1.3) \approx 0.0054.
         \end{align*}
-        Als $\mu=13.31$ kg, dan breekt \SI{0.54}{\percent} van de tasjes van het nieuw soort plastic.
+        Als $\mu=13.31$ kg, dan breekt \SI{0.54}{\percent} van de tasjes van het nieuwe soort plastic bij een belasting van minder dan $10$ kg.
     }
 \end{enumerate}

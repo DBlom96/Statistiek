@@ -1,5 +1,6 @@
 \question{8.4}{
-    De montagetijd van een apparaat in een fabriek is te beschouwen als een kansvariabele $X$ die normaal is verdeeld met een verwachtingswaarde van $40$ minuten en een standaarddeviatie van vier minuten.
+    De montagetijd van een apparaat in een fabriek is te beschouwen als een kansvariabele $X$ die normaal is verdeeld met een 
+    verwachtingswaarde van $40$ minuten en een standaarddeviatie van vier minuten.
     Na het invoeren van een nieuw systeem voor de montage is de chef van de afdeling benieuwd of de gemiddelde montagetijd hierdoor korter is geworden.
     Voor een aantal ($n$) montages vond hij als gemiddelde montagetijd $\samplemeanx=36$ minuten.
     We gaan ervan uit dat de montagetijden nog steeds normaal zijn verdeeld met $\sigma=4$ minuten.
@@ -8,16 +9,20 @@
 \begin{enumerate}[label=(\alph*)]
     \item als $n=16$ waarnemingen zijn gebruikt voor het berekenen van $\samplemeanx = 36$ minuten.
     \answer{
-        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$ en $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
-        Verder is gegeven dat $\samplemeanx = 36$.
-        In algemene zin geldt dat een \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ van de vorm
-        \begin{align*}
-            &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
-            &=[36 - 1.9600 \cdot \frac{4}{\sqrt{n}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{n}}]
-        \end{align*}
-        In het geval van $n=16$ waarnemingen is het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ dus gelijk aan
+        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat het onbetrouwbaarheidsniveau $\alpha = 0.05$ en 
         \[
-            [36 - 1.9600 \cdot \frac{4}{\sqrt{16}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{16}}] = [34.04; 37.96]
+            z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975, \mu=0, \sigma=1) \approx 1.9600.
+        \]
+        Verder is gegeven dat het geobserveerde steekproefgemiddelde $\samplemeanx = 36$.
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is van de vorm
+        \begin{align*}
+            &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[36 - 1.9600 \cdot \frac{4}{\sqrt{n}}, 36 + 1.9600 \cdot \frac{4}{\sqrt{n}}]
+        \end{align*}
+        Merk op dat de grenzen van het interval nu alleen nog maar afhankelijk zijn van de steekproefgrootte $n$.
+        In het geval van $n=16$ waarnemingen krijgen we dus
+        \[
+            [36 - 1.9600 \cdot \frac{4}{\sqrt{16}}, 36 + 1.9600 \cdot \frac{4}{\sqrt{16}}] = [34.04, 37.96]
         \]
         Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde montagetijd tussen $34.04$ en $37.96$ minuten.
     }
@@ -27,7 +32,7 @@
         In het geval van $n=100$ waarnemingen is de berekening op eenzelfde manier uit te voeren.
         Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
         \[
-            [36 - 1.9600 \cdot \frac{4}{\sqrt{100}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{100}}] = [35.22; 36.78]
+            [36 - 1.9600 \cdot \frac{4}{\sqrt{100}}, 36 + 1.9600 \cdot \frac{4}{\sqrt{100}}] = [35.22, 36.78]
         \]
         Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde montagetijd tussen $35.22$ en $36.78$ minuten.
     }
@@ -37,8 +42,12 @@
         In het geval van $n=4$ waarnemingen is de berekening weer op eenzelfde manier uit te voeren.
         Het \SI{95}{\percent}-betrouwbaarheidsinterval voor $\mu$ is dan gelijk aan
         \[
-            [36 - 1.9600 \cdot \frac{4}{\sqrt{4}}; 36 + 1.9600 \cdot \frac{4}{\sqrt{4}}] = [32.08; 39.92]
+            [36 - 1.9600 \cdot \frac{4}{\sqrt{4}}, 36 + 1.9600 \cdot \frac{4}{\sqrt{4}}] = [32.08, 39.92]
         \]
         Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde montagetijd tussen $32.08$ en $39.92$ minuten.
+    
+        {\itshape Noot: de belangrijkste boodschap van deze verhaal is de volgende: naarmate de steekproefgrootte $n$ groter wordt, krijgen we met dezelfde betrouwbaarheid $1 - \alpha$ een steeds smaller interval.
+        Dit is logisch, aangezien een grotere steekproef ook meer informatie geeft over de samenstelling van de gehele populatie en daarmee ook een steeds nauwkeurigere schatting van $\mu$ kan bepalen.
+        }
     }
 \end{enumerate}

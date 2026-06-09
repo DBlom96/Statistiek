@@ -1,5 +1,5 @@
 \question{8.m2}{Bij een grote financiële instelling worden jaarlijks vele honderden net afgestudeerden aangenomen als trainee.
-Bedoeling is dat deze trainees na een zekere tijd $T$ een eerste aanbod ontvangen voor een officiële baan bij deze instelling.
+Bedoeling is dat deze trainees na een zekere tijd ($T$) een eerste aanbod ontvangen voor een officiële baan bij deze instelling.
 Bij een onderzoek onder $36$ trainees is gebleken dat men gemiddeld na zestien maanden het eerste aanbod kreeg.
 Voor $T$ is gegeven dat de standaarddeviatie drie maanden is.
 Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde tijd tot het eerste aanbod is dan gelijk aan $\ldots$}
@@ -9,20 +9,27 @@ Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde tijd tot het e
     \item $15.02 < \mu < 16.98$
     \item $14.84 < \mu < 17.17$
 \end{enumerate}
-\answer{De tijd $T$ (in maanden) tot een willekeurige trainee een eerste aanbod ontvangt is normaal verdeeld met onbekende verwachtingswaarde $\mu$ en standaardafwijking $\sigma=3$ maanden.
-In algemene zin kunnen we een $100\cdot(1-\alpha)$\si{\percent}-betrouwbaarheidsinterval vinden met de formule
-\begin{align*}
-    [\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
-\end{align*}
-In dit geval hebben we te maken met een steekproef $x_1, x_2, \ldots, x_{36}$ waaruit is gebleken dat het steekproefgemiddelde $\samplemeanx = 16$ maanden.
-Verder is $\alpha = 0.05$, omdat we een \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde tijd $\mu$ willen vinden.
-Er geldt dus dat $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-\frac{\alpha}{2}, \mu=0, \sigma=1) \approx 1.9600$.
 
-Het \SI{95}{\percent}-betrouwbaarheidsinterval voor het gemiddelde $\mu$ is dus gelijk aan
-\begin{align*}
-    &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
-    &\approx [16 - 1.9600 \cdot \frac{3}{\sqrt{36}}, 16 + 1.9600 \cdot \frac{3}{\sqrt{36}}] \\
-    &\approx [15.0200, 16.9800] 
-\end{align*}
-Het juiste antwoord is dus (c).
+\answer{
+    De tijd $T$ (in maanden) tot een willekeurige trainee een eerste aanbod ontvangt is een kansvariabele met
+    een onbekende verwachtingswaarde $\mu$ en standaardafwijking $\sigma = 3$.
+    Uit de centrale limietstelling volgt dat de gemiddelde tijd $\overline{T}$ tot eerste aanbod van $36$ willekeurige trainees bij benadering
+    normaal verdeeld is met verwachtingswaarde $\mu = \text{ ?}$ en $\sigma = \frac{3}{\sqrt{36}} = \frac{1}{2}$.
+    Omdat we een \SI{95}{\percent}-betrouwbaarheidsinterval willen berekenen, is het onbetrouwbaarheidsniveau $\alpha = 0.05$.
+
+    Het betrouwbaarheidsinterval op basis van deze geobserveerde steekproef kunnen berekenen met de formule
+    \begin{align*}
+        [\overline{t} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}},\qquad \overline{t} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}].
+    \end{align*}
+    Gegeven is dat het steekproefgemiddelde $\overline{t} = 16$, en verder geldt dat 
+    \[
+        z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-\frac{\alpha}{2}, \mu=0, \sigma=1) \approx 1.9600.
+    \]
+    Het \SI{95}{\percent}-betrouwbaarheidsinterval voor het gemiddelde $\mu$ is dus gelijk aan
+    \begin{align*}
+        &[\overline{t} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}},\qquad \overline{t} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+        &\approx [16 - 1.9600 \cdot \frac{3}{\sqrt{36}},\qquad 16 + 1.9600 \cdot \frac{3}{\sqrt{36}}] \\
+        &\approx [15.0200,\qquad 16.9800] 
+    \end{align*}
+    Het juiste antwoord is dus (c).
 }

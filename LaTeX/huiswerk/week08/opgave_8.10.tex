@@ -8,19 +8,25 @@
     \item Bereken op basis van de verstrekte gegevens de omvang van de steekproef.
     (Ga er hierbij van uit dat de nog onbekende steekproefomvang groot genoeg is om toepassing van de normale verdeling te rechtvaardigen.)
     \answer{
-        Laat $X \sim \normal{\mu=\ ?}{\sigma=\ ?}$ de kansvariabele zijn die de snelheid (in km/uur) meet van een willekeurige passerende auto.
-        Volgens de centrale limietstelling geldt dat de gemiddelde snelheid $\samplemeanvarX$ van $n$ willekeurige auto's ook normaal verdeeld is met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
-        Hoewel we strikt gezien de populatiestandaardafwijking $\sigma$ niet kennen, mogen we de steekproefschatting $\samplestd = 8.2$ in dit geval als dusdanig gebruiken omdat de steekproefomvang $n$ groot genoeg wordt verondersteld.
+        De kansvariabele $X$ meet de snelheid (in km/uur) van een willekeurige passerende auto.
+        Deze kansvariabele heeft een onbekende verwachtingswaarde $\mu = \text{ ?}$ en standaardafwijking $\sigma = 8.2$.
 
-        De formule voor de steekproefomvang bij een \SI{95}{\percent}-betrouwbaarheidsinterval van lengte $2a$ wordt gegeven door 
-        \begin{align*}
-            n = \left(\frac{z_{\alpha/2}\cdot \sigma}{a}\right)^2.
-        \end{align*}
-        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$ en $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
-        Verder benaderen we $\sigma$ met $\samplestd=8.2$, en is de maximale afwijking $a = \frac{76.8 - 74.2}{2} = 1.3$ (de helft van de lengte van het interval tussen $74.2$ en $76.8$).
-        Dit geeft
+        Volgens de centrale limietstelling geldt dat de gemiddelde snelheid $\samplemeanvarX$ van $n$ willekeurige auto's bij benadering normaal verdeeld is
+        met verwachtingswaarde $\mu = \text{ ?}$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{8.2}{\sqrt{n}}$.
+
+        Merk op dat de breedte van het interval gelijk is aan
         \[
-            n = \left(\frac{z_{\alpha/2}\cdot \sigma}{a}\right)^2 = \left(\frac{1.9600 \cdot 8.2}{1.3}\right)^2 \approx 152.8400.
+            \text{rechtergrens} - \text{linkergrens} = 76.8 - 74.2 = 2.6,
+        \]
+        oftewel de maximale afwijking van de daadwerkelijke $\mu$ is maximaal $a = \frac{2.6}{2} = 1.3$.
+
+        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$ en 
+        \[
+            z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975, \mu = 0, \sigma = 1) \approx 1.9600.
+        \]
+        Dit geeft een minimaal benodigde steekproefgrootte
+        \[
+            n \geq \left(\frac{z_{\alpha/2}\cdot \sigma}{a}\right)^2 = \left(\frac{1.9600 \cdot 8.2}{1.3}\right)^2 \approx 152.8400.
         \]
         Afronden naar boven naar het eerstvolgende gehele getal geeft een minimale steekproefomvang van $n=153$.
     }
@@ -33,28 +39,31 @@
     Hoeveel procent van de automobilisten krijgt dan een bekeuring?
     Formuleer dit als een interval.
     \answer{
-        Laat $X \sim \normal{\mu=\ ?}{\sigma=\ ?}$ de kansvariabele zijn die de snelheid (in km/uur) meet van een willekeurige passerende auto.
+        Gegeven is nu dat de kansvariabele $X$ normaal verdeeld is met onbekende $\mu = \text{ ?}$ en standaardafwijking $\sigma = 8.2$.
+        We bekijken nu de extreme gevallen $\mu = 74.2$ en $\mu = 76.8$ en berekenen de kans dat een automobilist te hard rijdt ($P(X > 80)$) 
+        en de kans dat een automobilist een bekeuring krijgt $(P(X > 85)$),
 
         In het geval dat $\mu = 74.2$, geldt dat de kans dat een willekeurige passerende auto te hard rijdt gelijk is aan 
         \begin{align*}
-            P(X > 80) = \normalcdf(a=80; b=\GRinfinity; \mu=74.2; \sigma=8.2) \approx 0.2397.
+            P(X > 80) = \normalcdf(a=80, b=\GRinfinity, \mu=74.2, \sigma=8.2) \approx 0.2397.
         \end{align*}
         Verder geldt dat de kans dat een willekeurige passerende auto een bekeuring krijgt gelijk is aan 
         \begin{align*}
-            P(X > 85) = \normalcdf(a=85; b=\GRinfinity; \mu=74.2; \sigma=8.2) \approx 0.0939.
+            P(X > 85) = \normalcdf(a=85, b=\GRinfinity, \mu=74.2, \sigma=8.2) \approx 0.0939.
         \end{align*}
         Als de gemiddelde snelheid van passerende auto's $\mu=74.2$ km/uur is, zal \SI{23.97}{\percent} van de bestuurders te hard rijden en \SI{9.39}{\percent} van de bestuurders een bekeuring krijgen.
 
         In het geval dat $\mu = 76.8$, geldt dat de kans dat een willekeurige passerende auto te hard rijdt gelijk is aan 
         \begin{align*}
-            P(X > 80) = \normalcdf(a=80; b=\GRinfinity; \mu=76.8; \sigma=8.2) \approx 0.3482.
+            P(X > 80) = \normalcdf(a=80, b=\GRinfinity, \mu=76.8, \sigma=8.2) \approx 0.3482.
         \end{align*}
         In het geval dat $\mu = 76.8$, geldt dat de kans dat een willekeurige passerende auto een bekeuring krijgt gelijk is aan 
         \begin{align*}
-            P(X > 85) = \normalcdf(a=85; b=\GRinfinity; \mu=76.8; \sigma=8.2) \approx 0.1587
+            P(X > 85) = \normalcdf(a=85, b=\GRinfinity, \mu=76.8, \sigma=8.2) \approx 0.1587.
         \end{align*}
         Als de gemiddelde snelheid van passerende auto's $\mu=76.8$ km/uur is, zal \SI{34.82}{\percent} van de bestuurders te hard rijden en \SI{15.87}{\percent} van de bestuurders een bekeuring krijgen.
 
-        Het percentage automobilisten dat een bekeuring krijgt ligt met \SI{95}{\percent} betrouwbaarheid in het interval $[9.39; 15.87]$.
+        Het percentage automobilisten dat te hard rijdt ligt met \SI{95}{\percent} betrouwbaarheid in het interval
+        $[0.2397, 0.3482]$ en het percentage automobilisten dat een bekeuring krijgt ligt met \SI{95}{\percent} betrouwbaarheid in het interval $[9.39, 15.87]$.
     }
 \end{enumerate}

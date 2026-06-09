@@ -9,14 +9,20 @@
     \item De gemiddelde leeftijd moet plus of min $2$ jaar worden bepaald.
     Ga ervan uit dat de standaarddeviatie van de leeftijden $12$ jaar is.
     \answer{
-        Laat $X \sim \normal{\mu=\ ?}{\sigma=\ ?}$ de kansvariabele zijn die de leeftijd (in jaren) meet van een willekeurige kijker.
-        Volgens de centrale limietstelling geldt dat de gemiddelde snelheid $\samplemeanvarX$ van $n$ willekeurige kijkers ook normaal verdeeld is met gemiddelde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$.
-        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$ en $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
-        Verder is gegeven dat $\sigma=12$ jaar en de breedte van het interval is $4$ jaar ($\pm\ 2$ jaar)
+        De kansvariabele $X$ meet de leeftijd (in jaren) van een willekeurige kijker.
+        Gegeven is dat $X$ een onbekende verwachtingswaarde $\mu = \text{ ?}$ en een bekende standaardafwijking $\sigma = 12$ heeft.
+
+        Volgens de centrale limietstelling geldt dat de gemiddelde leeftijd $\samplemeanvarX$ van $n$ willekeurige kijkers 
+        bij benadering normaal verdeeld is met verwachtingswaarde $\mu = \text{ ?}$ en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{12}{n}$.
+        Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$ en 
+        \[
+            z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975, \mu=0, \sigma=1) \approx 1.9600.
+        \]
+        Verder is gegeven dat de afwijking maximaal $\pm 2$ jaar mag zijn, oftewel $a = 2$.
         De steekproefomvang bij dit \SI{95}{\percent}-betrouwbaarheidsinterval berekenen we als volgt:
         \begin{align*}
             n = \left(\frac{z_{\alpha/2}\cdot \sigma}{a}\right)^2 = \left(\frac{1.9600 \cdot 12}{2}\right)^2 \approx 138.2976.
         \end{align*}
-        Afronden naar boven naar het eerstvolgende gehele getal geeft een steekproefomvang van $n=139$ kijkers.
+        Afronden naar boven naar het eerstvolgende gehele getal geeft een minimaal benodigde steekproefomvang van $n=139$ kijkers.
     }
 \end{enumerate}

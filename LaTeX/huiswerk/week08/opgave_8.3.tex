@@ -8,19 +8,25 @@
 }
 
 \answer{
-    Gegeven is de standaardafwijking $\sigma = 1.2$ mg en de gewenste betrouwbaarheid van \SI{95}{\percent}, dus $\alpha=0.05$.
-    Het steekproefgemiddelde van een steekproef van zes monsters is volgens de centrale limietstelling weer normaal verdeeld met gemiddelde $\mu$ en standaarddeviatie $\frac{\sigma}{\sqrt{n}} = \frac{1.2}{\sqrt{6}}$.
-    Om het betrouwbaarheidsinterval te berekenen, bepalen we eerst het steekproefgemiddelde:
+    De kansvariabele $X$ meet de hoeveelheid stof (in mg) die aanwezig is in een oplossing.
+    Gegeven is dat $X$ normaal verdeeld is met onbekende verwachtingswaarde $\mu = \text{ ?}$ en standaardafwijking $\sigma = 1.2$ mg.
+    Aangezien we een \SI{95}{\percent}-betrouwbaarheidsinterval willen berekenen, is het onbetrouwbaarheidsniveau $\alpha = 0.05$.
+    Volgens de centrale limietstelling is het gemiddelde $\overline{X}$ van zes normaal verdeelde kansvariabelen weer normaal verdeeld met gemiddelde $\mu = \text{ ?}$ 
+    en standaardafwijking $\frac{\sigma}{\sqrt{n}} = \frac{1.2}{\sqrt{6}}$.
+    Om het specifieke betrouwbaarheidsinterval voor de geobserveerde steekproef te berekenen, bepalen we eerst het steekproefgemiddelde:
     \begin{align*}
-        \samplemeanx = \frac{x_1+x_2+\ldots+x_6}{6} = \frac{14.7+13.2+\ldots+15.0}{6} = 14.85
+        \samplemeanx = \frac{x_1+x_2+\ldots+x_6}{6} = \frac{14.7+13.2+\ldots+15.0}{6} = 14.85.
     \end{align*} 
 
-    Omdat $\alpha = 0.05$, werken we verder met $z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975) \approx 1.9600$.
+    Omdat $\alpha = 0.05$, werken we verder met 
+    \[
+        z_{\alpha/2} = z_{0.025} = \invnorm(\opp=1-0.025=0.975, \mu=0, \sigma=1) \approx 1.9600.
+    \]
     Dit geeft een betrouwbaarheidsinterval van
     \begin{align*}
-        &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}; \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
-        &=[14.85 - 1.9600 \cdot \frac{1.2}{\sqrt{6}}; 14.85 + 1.9600 \cdot \frac{1.2}{\sqrt{6}}] \\
-        &=[13.89; 15.81]
+        &[\samplemeanx - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \samplemeanx + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+        &=[14.85 - 1.9600 \cdot \frac{1.2}{\sqrt{6}}, 14.85 + 1.9600 \cdot \frac{1.2}{\sqrt{6}}] \\
+        &=[13.89, 15.81]
     \end{align*}
-    Met \SI{95}{\percent} ligt de gemiddelde hoeveelheid stof per monster tussen $13.89$ en $15.81$ mg.
+    Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde hoeveelheid stof in een oplossing tussen $13.89$ en $15.81$ mg.
 }

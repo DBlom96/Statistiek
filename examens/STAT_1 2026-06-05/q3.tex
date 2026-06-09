@@ -49,16 +49,16 @@
 
         Aangezien zowel $X$ als $Y$ normaal verdeeld zijn, geldt in dit geval dat de verschilvariabele $V = X - Y$ ook normaal verdeeld is met:
         \begin{align*}
-            E(V)        &= \mu(X) - \mu(Y) = 4.12 - 5.0 = -0.78 \\
+            E(V)        &= \mu(X) - \mu(Y) = 4.12 - 5.0 = -0.88 \\
             \sigma(V)   &= \sqrt{\sigma(X)^2 + \sigma(Y)^2} = \sqrt{0.76^2 + 0.34^2} \approx 0.8326 \rubric{2}
         \end{align*}
 
         De gevraagde kans $P(V > 0)$ berekenen we dan als volgt:
         \begin{align*}
-            P(V > 0)    &= \normalcdf(\lb=0, \ub=10^{99}, \mu=-0.78, \sigma=0.8326) \\
-                        &\approx 0.1744. \rubric{2}  
+            P(V > 0)    &= \normalcdf(\lb=0, \ub=10^{99}, \mu=-0.88, \sigma=0.8326) \\
+                        &\approx 0.1453. \rubric{2}  
         \end{align*}
-        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1744} (of \SI{17.44}{\percent}).
+        De kans dat een smokkelpoging slaagt vanwege een trage reactie van het systeem, bedraagt dus \textbf{0.1453} (of \SI{14.53}{\percent}).
     }
 
     \subquestion{6}{
@@ -90,14 +90,14 @@
         Beredeneer, zonder een berekening uit te voeren, of de kans op een succesvolle oversteekpoging door deze software-update zal \textit{toenemen}, \textit{afnemen} of \textit{gelijk blijven}.
     }
     \solution{
-        Uit de beginsituatie (subvraag a) blijkt dat het gemiddelde van de verschilvariabele $V = X - Y$ gelijk is aan $E(V) = -0.78$.\rubric{1}
+        Uit de beginsituatie (subvraag a) blijkt dat het gemiddelde van de verschilvariabele $V = X - Y$ gelijk is aan $E(V) = -0.88$.\rubric{1}
         
         Omdat $E(V) < 0$, ligt het overgrote deel van de normale verdeling van $V$ links van de grens $0$. 
         De succeskans is de rechterstaart: $P(V > 0)$. \rubric{1}
         
         Wanneer de standaardafwijking $\sigma(X)$ afneemt, neemt ook de standaardafwijking van de verschilvariabele, $\sigma(V) = \sqrt{\sigma(X)^2 + \sigma(Y)^2}$, af.\rubric{1}
         
-        Een kleinere standaardafwijking $\sigma(V)$ betekent dat de verdeling smaller wordt en zich compacter rondom het negatieve gemiddelde ($-0.78$) groepeert.\rubric{1}
+        Een kleinere standaardafwijking $\sigma(V)$ betekent dat de verdeling smaller wordt en zich compacter rondom het negatieve gemiddelde ($-0.88$) groepeert.\rubric{1}
         
         Hierdoor komt er minder data in de rechterstaart (het gebied rechts van $0$) te liggen, waardoor de kans $P(V > 0)$ kleiner wordt.\rubric{1}
         
