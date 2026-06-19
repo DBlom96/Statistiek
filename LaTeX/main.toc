@@ -7,4 +7,3 @@
 \contentsline {chapter}{\chapternumberline {5}De normale verdeling en de centrale limietstelling}{63}{chapter.5}%
 \contentsline {chapter}{\chapternumberline {6}De Poissonverdeling}{75}{chapter.6}%
 \contentsline {chapter}{\chapternumberline {7}Schatten en betrouwbaarheid (1/2)}{87}{chapter.7}%
-\contentsline {chapter}{\chapternumberline {8}Schatten en betrouwbaarheid (2/2)}{97}{chapter.8}%

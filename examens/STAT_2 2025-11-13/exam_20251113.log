@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  26 NOV 2025 15:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  19 JUN 2026 10:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -142,24 +142,15 @@ LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) o
 *
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 12.
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/babel-dutch\dutch.ldf
+Language: dutch 2021/08/29 v3.8l Dutch support from the babel system
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/nl\babel-dutch.tex
+Package babel Info: Importing font and identification data for dutch
+(babel)             from babel-nl.ini. Reported on input line 12.
 )
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
+Package babel Info: Making " an active character on input line 127.
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks22
-\inpenc@posthook=\toks23
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -178,8 +169,8 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
+\XKV@toks=\toks22
+\XKV@tempa@toks=\toks23
 )
 \XKV@depth=\count298
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -191,7 +182,23 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count299
+\csq@gtype=\count300
+\csq@glevel=\count301
+\csq@qlevel=\count302
+\csq@maxlvl=\count303
+\csq@tshold=\count304
+\csq@ltx@everypar=\toks24
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/06/16 v2.17y AMS math features
 \@mathmargin=\skip56
 
@@ -200,7 +207,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2024/11/17 v2.01 AMS text
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks26
+\@emptytoks=\toks25
 \ex@=\dimen167
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -208,14 +215,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count299
+\inf@bad=\count305
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count300
-\leftroot@=\count301
+\uproot@=\count306
+\leftroot@=\count307
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count302
-\DOTSCASE@=\count303
+\classnum@=\count308
+\DOTSCASE@=\count309
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -228,31 +235,31 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen169
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count304
+\macc@depth=\count310
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count305
+\c@MaxMatrixCols=\count311
 \dotsspace@=\muskip18
-\c@parentequation=\count306
-\dspbrk@lvl=\count307
-\tag@help=\toks27
-\row@=\count308
-\column@=\count309
-\maxfields@=\count310
-\andhelp@=\toks28
+\c@parentequation=\count312
+\dspbrk@lvl=\count313
+\tag@help=\toks26
+\row@=\count314
+\column@=\count315
+\maxfields@=\count316
+\andhelp@=\toks27
 \eqnshift@=\dimen170
 \alignsep@=\dimen171
 \tagshift@=\dimen172
 \tagwidth@=\dimen173
 \totwidth@=\dimen174
 \lineht@=\dimen175
-\@envbody=\toks29
+\@envbody=\toks28
 \multlinegap=\skip57
 \multlinetaggap=\skip58
-\mathdisplay@stack=\toks30
+\mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
@@ -266,15 +273,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks31
-\thm@bodyfont=\toks32
-\thm@headfont=\toks33
-\thm@notefont=\toks34
-\thm@headpunct=\toks35
+\thm@style=\toks30
+\thm@bodyfont=\toks31
+\thm@headfont=\toks32
+\thm@notefont=\toks33
+\thm@headpunct=\toks34
 \thm@preskip=\skip59
 \thm@postskip=\skip60
 \thm@headsep=\skip61
-\dth@everypar=\toks36
+\dth@everypar=\toks35
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box57
@@ -283,7 +290,7 @@ Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count311
+\g_MT_multlinerow_int=\count317
 \l_MT_multwidth_dim=\dimen176
 \origjot=\skip62
 \l_MT_shortvdotswithinadjustabove_dim=\dimen177
@@ -296,20 +303,20 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \xmathstrut@dim=\dimen183
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count312
-\l__siunitx_number_exponent_fixed_int=\count313
-\l__siunitx_number_min_decimal_int=\count314
-\l__siunitx_number_min_integer_int=\count315
-\l__siunitx_number_round_precision_int=\count316
-\l__siunitx_number_lower_threshold_int=\count317
-\l__siunitx_number_upper_threshold_int=\count318
-\l__siunitx_number_group_first_int=\count319
-\l__siunitx_number_group_size_int=\count320
-\l__siunitx_number_group_minimum_int=\count321
+\l__siunitx_number_uncert_offset_int=\count318
+\l__siunitx_number_exponent_fixed_int=\count319
+\l__siunitx_number_min_decimal_int=\count320
+\l__siunitx_number_min_integer_int=\count321
+\l__siunitx_number_round_precision_int=\count322
+\l__siunitx_number_lower_threshold_int=\count323
+\l__siunitx_number_upper_threshold_int=\count324
+\l__siunitx_number_group_first_int=\count325
+\l__siunitx_number_group_size_int=\count326
+\l__siunitx_number_group_minimum_int=\count327
 \l__siunitx_angle_tmp_dim=\dimen184
 \l__siunitx_angle_marker_box=\box59
 \l__siunitx_angle_unit_box=\box60
-\l__siunitx_compound_count_int=\count322
+\l__siunitx_compound_count_int=\count328
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
@@ -331,15 +338,15 @@ Package pdftexcmds Info: \pdfdraftmode found.
 \l__siunitx_table_after_box=\box66
 \l__siunitx_table_before_dim=\dimen187
 \l__siunitx_table_carry_dim=\dimen188
-\l__siunitx_unit_tmp_int=\count323
-\l__siunitx_unit_position_int=\count324
-\l__siunitx_unit_total_int=\count325
+\l__siunitx_unit_tmp_int=\count329
+\l__siunitx_unit_position_int=\count330
+\l__siunitx_unit_total_int=\count331
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 \col@sep=\dimen189
 \ar@mcellbox=\box67
 \extrarowheight=\dimen190
-\NC@list=\toks37
+\NC@list=\toks36
 \extratabsurround=\skip63
 \backup@length=\skip64
 \ar@cellbox=\box68
@@ -348,13 +355,13 @@ Package: bigstrut 2024/11/12 v2.9 Provide larger struts in tabulars
 \bigstrutjot=\dimen191
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/blkarray\blkarray.sty
 Package: blkarray 2015/02/27 v0.07 Block array (dpc)
-\c@BAenumi=\count326
-\BA@col=\count327
-\BA@block@cnt=\count328
+\c@BAenumi=\count332
+\BA@col=\count333
+\BA@block@cnt=\count334
 \BA@final@box=\box69
 \BA@first@box=\box70
 \BA@colsep=\dimen192
-\BA@ftn=\toks38
+\BA@ftn=\toks37
 \BAextrarowheight=\dimen193
 \BAextraheightafterhline=\dimen194
 \BAarrayrulewidth=\dimen195
@@ -374,21 +381,21 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen261
 \cmidrulekern=\dimen262
 \defaultaddspace=\dimen263
-\@cmidla=\count329
-\@cmidlb=\count330
+\@cmidla=\count335
+\@cmidlb=\count336
 \@aboverulesep=\dimen264
 \@belowrulesep=\dimen265
-\@thisruleclass=\count331
-\@lastruleclass=\count332
+\@thisruleclass=\count337
+\@lastruleclass=\count338
 \@thisrulewidth=\dimen266
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip65
 \enit@outerparindent=\dimen267
-\enit@toks=\toks39
+\enit@toks=\toks38
 \enit@inbox=\box73
-\enit@count@id=\count333
-\enitdp@description=\count334
+\enit@count@id=\count339
+\enitdp@description=\count340
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/gauss\gauss.sty
 Package: gauss 2003/01/14
 \g@trash=\box74
@@ -399,12 +406,12 @@ Package: gauss 2003/01/14
 \g@b@tmp=\box79
 \g@b@tmpa=\box80
 \g@b@tmpb=\box81
-\g@maxrow=\count335
-\g@maxcol=\count336
-\g@maxrow@old=\count337
-\g@maxcol@old=\count338
-\g@c@tmp=\count339
-\g@c@tmpa=\count340
+\g@maxrow=\count341
+\g@maxcol=\count342
+\g@maxrow@old=\count343
+\g@maxcol@old=\count344
+\g@c@tmp=\count345
+\g@c@tmpa=\count346
 \g@axisHeight=\dimen268
 \g@linethickness=\dimen269
 \g@tab=\dimen270
@@ -416,35 +423,40 @@ Package: gauss 2003/01/14
 \g@d@tmpc=\dimen276
 \g@d@tmpd=\dimen277
 \g@d@tmpe=\dimen278
-\g@loopCount=\count341
-\g@loopEnd=\count342
-\g@loopStep=\count343
+\g@loopCount=\count347
+\g@loopEnd=\count348
+\g@loopStep=\count349
 \colarrowsep=\dimen279
 \rowarrowsep=\dimen280
 \opskip=\dimen281
 \labelskip=\dimen282
 \colopminsize=\dimen283
 \rowopminsize=\dimen284
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen285
+\c@nlinenum=\count350
+\TeXr@lab=\toks39
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
-\c@tracingmulticols=\count344
+\c@tracingmulticols=\count351
 \mult@box=\box82
-\multicol@leftmargin=\dimen285
-\c@unbalance=\count345
-\c@collectmore=\count346
-\doublecol@number=\count347
-\multicoltolerance=\count348
-\multicolpretolerance=\count349
-\full@width=\dimen286
-\page@free=\dimen287
-\premulticols=\dimen288
-\postmulticols=\dimen289
+\multicol@leftmargin=\dimen286
+\c@unbalance=\count352
+\c@collectmore=\count353
+\doublecol@number=\count354
+\multicoltolerance=\count355
+\multicolpretolerance=\count356
+\full@width=\dimen287
+\page@free=\dimen288
+\premulticols=\dimen289
+\postmulticols=\dimen290
 \multicolsep=\skip66
 \multicolbaselineskip=\skip67
 \partial@page=\box83
 \last@line=\box84
 \mc@boxedresult=\box85
-\maxbalancingoverflow=\dimen290
+\maxbalancingoverflow=\dimen291
 \mult@rightbox=\box86
 \mult@grightbox=\box87
 \mult@firstbox=\box88
@@ -485,40 +497,40 @@ Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
 \@tempa=\box123
 \@tempa=\box124
 \@tempa=\box125
-\c@minrows=\count350
-\c@columnbadness=\count351
-\c@finalcolumnbadness=\count352
-\last@try=\dimen291
-\multicolovershoot=\dimen292
-\multicolundershoot=\dimen293
+\c@minrows=\count357
+\c@columnbadness=\count358
+\c@finalcolumnbadness=\count359
+\last@try=\dimen292
+\multicolovershoot=\dimen293
+\multicolundershoot=\dimen294
 \mult@nat@firstbox=\box126
 \colbreak@box=\box127
-\mc@col@check@num=\count353
-\g__mc_curr_col_int=\count354
+\mc@col@check@num=\count360
+\g__mc_curr_col_int=\count361
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip68
-\multirow@cntb=\count355
+\multirow@cntb=\count362
 \multirow@dima=\skip69
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen294
-\TX@old@table=\dimen295
-\TX@old@col=\dimen296
-\TX@target=\dimen297
-\TX@delta=\dimen298
-\TX@cols=\count356
+\TX@col@width=\dimen295
+\TX@old@table=\dimen296
+\TX@old@col=\dimen297
+\TX@target=\dimen298
+\TX@delta=\dimen299
+\TX@cols=\count363
 \TX@ftn=\toks40
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \everycr=\toks41
 \minrowclearance=\skip70
-\rownum=\count357
+\rownum=\count364
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count358
+\c@float@type=\count365
 \float@exts=\toks42
 \float@box=\box128
 \@float@everytoks=\toks43
@@ -527,8 +539,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: tcolorbox 2025/07/08 version 6.7.1 text color boxes
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks44
-\pgfutil@tempdima=\dimen299
-\pgfutil@tempdimb=\dimen300
+\pgfutil@tempdima=\dimen300
+\pgfutil@tempdimb=\dimen301
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box130
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -543,26 +555,26 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks47
 ))
-\pgf@x=\dimen301
-\pgf@y=\dimen302
-\pgf@xa=\dimen303
-\pgf@ya=\dimen304
-\pgf@xb=\dimen305
-\pgf@yb=\dimen306
-\pgf@xc=\dimen307
-\pgf@yc=\dimen308
-\pgf@xd=\dimen309
-\pgf@yd=\dimen310
+\pgf@x=\dimen302
+\pgf@y=\dimen303
+\pgf@xa=\dimen304
+\pgf@ya=\dimen305
+\pgf@xb=\dimen306
+\pgf@yb=\dimen307
+\pgf@xc=\dimen308
+\pgf@yc=\dimen309
+\pgf@xd=\dimen310
+\pgf@yd=\dimen311
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count359
-\c@pgf@countb=\count360
-\c@pgf@countc=\count361
-\c@pgf@countd=\count362
+\c@pgf@counta=\count366
+\c@pgf@countb=\count367
+\c@pgf@countc=\count368
+\c@pgf@countd=\count369
 \t@pgf@toka=\toks48
 \t@pgf@tokb=\toks49
 \t@pgf@tokc=\toks50
-\pgf@sys@id@count=\count363
+\pgf@sys@id@count=\count370
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -573,59 +585,59 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count364
-\pgfsyssoftpath@bigbuffer@items=\count365
+\pgfsyssoftpath@smallbuffer@items=\count371
+\pgfsyssoftpath@bigbuffer@items=\count372
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen311
-\pgfmath@count=\count366
+\pgfmath@dimen=\dimen312
+\pgfmath@count=\count373
 \pgfmath@box=\box131
 \pgfmath@toks=\toks51
 \pgfmath@stack@operand=\toks52
 \pgfmath@stack@operation=\toks53
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count367
+\c@pgfmathroundto@lastzeros=\count374
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen312
-\pgf@picmaxx=\dimen313
-\pgf@picminy=\dimen314
-\pgf@picmaxy=\dimen315
-\pgf@pathminx=\dimen316
-\pgf@pathmaxx=\dimen317
-\pgf@pathminy=\dimen318
-\pgf@pathmaxy=\dimen319
-\pgf@xx=\dimen320
-\pgf@xy=\dimen321
-\pgf@yx=\dimen322
-\pgf@yy=\dimen323
-\pgf@zx=\dimen324
-\pgf@zy=\dimen325
+\pgf@picminx=\dimen313
+\pgf@picmaxx=\dimen314
+\pgf@picminy=\dimen315
+\pgf@picmaxy=\dimen316
+\pgf@pathminx=\dimen317
+\pgf@pathmaxx=\dimen318
+\pgf@pathminy=\dimen319
+\pgf@pathmaxy=\dimen320
+\pgf@xx=\dimen321
+\pgf@xy=\dimen322
+\pgf@yx=\dimen323
+\pgf@yy=\dimen324
+\pgf@zx=\dimen325
+\pgf@zy=\dimen326
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen326
-\pgf@path@lasty=\dimen327
+\pgf@path@lastx=\dimen327
+\pgf@path@lasty=\dimen328
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen328
-\pgf@shorten@start@additional=\dimen329
+\pgf@shorten@end@additional=\dimen329
+\pgf@shorten@start@additional=\dimen330
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box132
 \pgf@hbox=\box133
 \pgf@layerbox@main=\box134
-\pgf@picture@serial@count=\count368
+\pgf@picture@serial@count=\count375
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen330
+\pgflinewidth=\dimen331
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen331
-\pgf@pt@y=\dimen332
-\pgf@pt@temp=\dimen333
+\pgf@pt@x=\dimen332
+\pgf@pt@y=\dimen333
+\pgf@pt@temp=\dimen334
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -634,12 +646,12 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen334
+\pgfarrowsep=\dimen335
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen335
-\pgf@sys@shading@range@num=\count369
-\pgf@shadingcount=\count370
+\pgf@max=\dimen336
+\pgf@sys@shading@range@num=\count376
+\pgf@shadingcount=\count377
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
@@ -660,46 +672,46 @@ File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen336
-\pgf@nodesepend=\dimen337
+\pgf@nodesepstart=\dimen337
+\pgf@nodesepend=\dimen338
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen338
-\pgffor@skip=\dimen339
+\pgffor@iter=\dimen339
+\pgffor@skip=\dimen340
 \pgffor@stack=\toks54
 \pgffor@toks=\toks55
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count371
-\pgfplotmarksize=\dimen340
+\pgf@plot@mark@count=\count378
+\pgfplotmarksize=\dimen341
 )
-\tikz@lastx=\dimen341
-\tikz@lasty=\dimen342
-\tikz@lastxsaved=\dimen343
-\tikz@lastysaved=\dimen344
-\tikz@lastmovetox=\dimen345
-\tikz@lastmovetoy=\dimen346
-\tikzleveldistance=\dimen347
-\tikzsiblingdistance=\dimen348
+\tikz@lastx=\dimen342
+\tikz@lasty=\dimen343
+\tikz@lastxsaved=\dimen344
+\tikz@lastysaved=\dimen345
+\tikz@lastmovetox=\dimen346
+\tikz@lastmovetoy=\dimen347
+\tikzleveldistance=\dimen348
+\tikzsiblingdistance=\dimen349
 \tikz@figbox=\box137
 \tikz@figbox@bg=\box138
 \tikz@tempbox=\box139
 \tikz@tempbox@bg=\box140
-\tikztreelevel=\count372
-\tikznumberofchildren=\count373
-\tikznumberofcurrentchild=\count374
-\tikz@fig@count=\count375
+\tikztreelevel=\count379
+\tikznumberofchildren=\count380
+\tikznumberofcurrentchild=\count381
+\tikz@fig@count=\count382
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count376
-\pgfmatrixcurrentcolumn=\count377
-\pgf@matrix@numberofcolumns=\count378
+\pgfmatrixcurrentrow=\count383
+\pgfmatrixcurrentcolumn=\count384
+\pgf@matrix@numberofcolumns=\count385
 )
-\tikz@expandcount=\count379
+\tikz@expandcount=\count386
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
@@ -716,21 +728,21 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box142
 \tcb@lowerbox=\box143
 \tcb@phantombox=\box144
-\c@tcbbreakpart=\count380
-\c@tcblayer=\count381
-\c@tcolorbox@number=\count382
+\c@tcbbreakpart=\count387
+\c@tcblayer=\count388
+\c@tcolorbox@number=\count389
 \l__tcobox_tmpa_box=\box145
-\l__tcobox_tmpa_dim=\dimen349
+\l__tcobox_tmpa_dim=\dimen350
 \tcb@temp=\box146
 \tcb@temp=\box147
 \tcb@temp=\box148
 \tcb@temp=\box149
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.7.1'
-\c@tcbrastercolumn=\count383
-\c@tcbrasterrow=\count384
-\c@tcbrasternum=\count385
-\c@tcbraster=\count386
+\c@tcbrastercolumn=\count390
+\c@tcbrasterrow=\count391
+\c@tcbrasternum=\count392
+\c@tcbraster=\count393
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.7.1'
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image.sty
@@ -757,74 +769,57 @@ Library (tcolorbox): 'tcbhooks.code.tex' version '6.7.1'
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.7.1'
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.7.1'
-\tcbfitdim=\dimen350
-\tcb@lowerfitdim=\dimen351
-\tcb@upperfitdim=\dimen352
-\tcb@cur@hbadness=\count387
+\tcbfitdim=\dimen351
+\tcb@lowerfitdim=\dimen352
+\tcb@upperfitdim=\dimen353
+\tcb@cur@hbadness=\count394
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
 \t@pgfplots@toka=\toks58
 \t@pgfplots@tokb=\toks59
 \t@pgfplots@tokc=\toks60
-\pgfplots@tmpa=\dimen353
-\c@pgfplots@coordindex=\count388
-\c@pgfplots@scanlineindex=\count389
+\pgfplots@tmpa=\dimen354
+\c@pgfplots@coordindex=\count395
+\c@pgfplots@scanlineindex=\count396
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
 \t@pgf@toka=\toks61
 \t@pgf@tokb=\toks62
 \t@pgf@tokc=\toks63
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count390
+\c@pgfplotsarray@tmp=\count397
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count391
+\c@pgfplotstable@counta=\count398
 \t@pgfplotstable@a=\toks64
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count392
+\c@pgfplotslibrarysurf@no=\count399
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen354
-\pgfdecoratedremainingdistance=\dimen355
-\pgfdecoratedinputsegmentcompleteddistance=\dimen356
-\pgfdecoratedinputsegmentremainingdistance=\dimen357
-\pgf@decorate@distancetomove=\dimen358
-\pgf@decorate@repeatstate=\count393
-\pgfdecorationsegmentamplitude=\dimen359
-\pgfdecorationsegmentlength=\dimen360
+\pgfdecoratedcompleteddistance=\dimen355
+\pgfdecoratedremainingdistance=\dimen356
+\pgfdecoratedinputsegmentcompleteddistance=\dimen357
+\pgfdecoratedinputsegmentremainingdistance=\dimen358
+\pgf@decorate@distancetomove=\dimen359
+\pgf@decorate@repeatstate=\count400
+\pgfdecorationsegmentamplitude=\dimen360
+\pgfdecorationsegmentlength=\dimen361
 )
 \tikz@lib@dec@box=\box154
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count394
-\pgfplots@xmin@reg=\dimen361
-\pgfplots@xmax@reg=\dimen362
-\pgfplots@ymin@reg=\dimen363
-\pgfplots@ymax@reg=\dimen364
-\pgfplots@zmin@reg=\dimen365
-\pgfplots@zmax@reg=\dimen366
+\pgfplots@numplots=\count401
+\pgfplots@xmin@reg=\dimen362
+\pgfplots@xmax@reg=\dimen363
+\pgfplots@ymin@reg=\dimen364
+\pgfplots@ymax@reg=\dimen365
+\pgfplots@zmin@reg=\dimen366
+\pgfplots@zmax@reg=\dimen367
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-generic.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-pdftex.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
-Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip71
-\f@nch@offset@elh=\skip72
-\f@nch@offset@erh=\skip73
-\f@nch@offset@olh=\skip74
-\f@nch@offset@orh=\skip75
-\f@nch@offset@elf=\skip76
-\f@nch@offset@erf=\skip77
-\f@nch@offset@olf=\skip78
-\f@nch@offset@orf=\skip79
-\f@nch@height=\skip80
-\f@nch@footalignment=\skip81
-\f@nch@widthL=\skip82
-\f@nch@widthC=\skip83
-\f@nch@widthR=\skip84
-\@temptokenb=\toks65
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-generic.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-pdftex.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -839,13 +834,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count395
+\c@section@level=\count402
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen367
-\Hy@linkcounter=\count396
-\Hy@pagecounter=\count397
+\@linkdim=\dimen368
+\Hy@linkcounter=\count403
+\Hy@pagecounter=\count404
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -853,7 +848,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count398
+\Hy@SavedSpaceFactor=\count405
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -866,17 +861,17 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count399
+\c@Hy@tempcnt=\count406
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen368
+\XeTeXLinkMargin=\dimen369
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count400
-\Field@Width=\dimen369
-\Fld@charsize=\dimen370
+\Fld@menulength=\count407
+\Field@Width=\dimen370
+\Fld@charsize=\dimen371
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -884,15 +879,15 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count401
-\c@Item=\count402
-\c@Hfootnote=\count403
+\Hy@abspage=\count408
+\c@Item=\count409
+\c@Hfootnote=\count410
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count404
-\c@bookmark@seq@number=\count405
+\Fld@listcount=\count411
+\c@bookmark@seq@number=\count412
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -900,7 +895,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
-\Hy@SectionHShift=\skip85
+\Hy@SectionHShift=\skip71
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -921,18 +916,25 @@ Package cleveref Info: always capitalise cross-reference names on input line 785
 ==> First Aid for cleveref.sty applied!
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/marginnote\marginnote.sty
 Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count406
+\c@mn@abspage=\count413
 )
-\c@question=\count407
-\c@subquestion=\count408
+\c@question=\count414
+\c@subquestion=\count415
 )) (../../LaTeX/styles/statistics-macros.sty)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'dutch'.
 LaTeX Font Info:    Trying to load font information for T1+bch on input line 12.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count409
-) (exam_20251113.aux)
+\l__color_backend_stack_int=\count416
+) (exam_20251113.aux (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex)
+Package babel Info: Importing data for english
+(babel)             from babel-en.ini. Reported on input line 7.
+)
 \openout1 = `exam_20251113.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -955,17 +957,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count410
-\scratchdimen=\dimen371
+\scratchcounter=\count417
+\scratchdimen=\dimen372
 \scratchbox=\box155
-\nofMPsegments=\count411
-\nofMParguments=\count412
-\everyMPshowfont=\toks66
-\MPscratchCnt=\count413
-\MPscratchDim=\dimen372
-\MPnumerator=\count414
-\makeMPintoPDFobject=\count415
-\everyMPtoPDFconversion=\toks67
+\nofMPsegments=\count418
+\nofMParguments=\count419
+\everyMPshowfont=\toks65
+\MPscratchCnt=\count420
+\MPscratchDim=\dimen373
+\MPnumerator=\count421
+\makeMPintoPDFobject=\count422
+\everyMPtoPDFconversion=\toks66
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -984,20 +986,20 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: a4paper
+* paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(57.81621pt, 481.87546pt, 57.81621pt)
-* v-part:(T,H,B)=(57.81621pt, 729.41443pt, 57.81621pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=481.87546pt
-* \textheight=729.41443pt
-* \oddsidemargin=-14.45378pt
-* \evensidemargin=-14.45378pt
-* \topmargin=-51.45378pt
-* \headheight=15.2pt
+* h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=505.89pt
+* \textheight=686.56499pt
+* \oddsidemargin=-18.06749pt
+* \evensidemargin=-18.06749pt
+* \topmargin=-55.06749pt
+* \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
@@ -1014,12 +1016,14 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count416
-\c@mv@boldtabular=\count417
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+Package babel Info: 'dutch' activates 'dutch' shorthands.
+(babel)             Reported on input line 12.
+\c@mv@tabular=\count423
+\c@mv@boldtabular=\count424
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
+File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 12.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 12.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
@@ -1041,21 +1045,21 @@ Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page1 used on
 File: ../../Python/FMW_titelblad_20251113.pdf Graphic file (type pdf)
 <use ../../Python/FMW_titelblad_20251113.pdf, page 1>
 Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page1 used on input line 15.
-(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+(pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 File: ../../Python/FMW_titelblad_20251113.pdf Graphic file (type pdf)
 <use ../../Python/FMW_titelblad_20251113.pdf, page 1>
 Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page1 used on input line 15.
-(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+(pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 File: ../../Python/FMW_titelblad_20251113.pdf Graphic file (type pdf)
 <use ../../Python/FMW_titelblad_20251113.pdf, page 1>
 Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page1 used on input line 15.
-(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+(pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 
 
 File: ../../Python/FMW_titelblad_20251113.pdf Graphic file (type pdf)
 <use ../../Python/FMW_titelblad_20251113.pdf, page 1>
 Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page1 used on input line 15.
-(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+(pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 [1
 
 
@@ -1064,17 +1068,17 @@ Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page1 used on
 File: ../../Python/FMW_titelblad_20251113.pdf Graphic file (type pdf)
 <use ../../Python/FMW_titelblad_20251113.pdf, page 2>
 Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page2 used on input line 15.
-(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+(pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 File: ../../Python/FMW_titelblad_20251113.pdf Graphic file (type pdf)
 <use ../../Python/FMW_titelblad_20251113.pdf, page 2>
 Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page2 used on input line 15.
-(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+(pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 
 
 File: ../../Python/FMW_titelblad_20251113.pdf Graphic file (type pdf)
 <use ../../Python/FMW_titelblad_20251113.pdf, page 2>
 Package pdftex.def Info: ../../Python/FMW_titelblad_20251113.pdf , page2 used on input line 15.
-(pdftex.def)             Requested size: 597.55899pt x 844.98047pt.
+(pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 [2
 
  <../../Python/FMW_titelblad_20251113.pdf>]
@@ -1091,21 +1095,21 @@ Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page1 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 1>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page1 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 1>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page1 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 1>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page1 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 
 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 1>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page1 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 [3
 
  <../../LaTeX/formulebladen/formuleblad_STA2.pdf{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}>]
@@ -1113,17 +1117,17 @@ Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page1 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 2>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page2 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 2>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page2 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 
 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 2>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page2 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 [4
 
  <../../LaTeX/formulebladen/formuleblad_STA2.pdf>]
@@ -1131,17 +1135,17 @@ Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page2 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 3>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page3 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 3>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page3 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 
 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 3>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page3 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 [5
 
  <../../LaTeX/formulebladen/formuleblad_STA2.pdf>]
@@ -1149,17 +1153,17 @@ Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page3 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 4>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page4 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 4>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page4 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 
 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 4>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page4 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 [6
 
  <../../LaTeX/formulebladen/formuleblad_STA2.pdf>]
@@ -1167,35 +1171,35 @@ Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page4 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 5>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page5 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 5>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page5 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 
 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 5>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page5 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 [7
 
  <../../LaTeX/formulebladen/formuleblad_STA2.pdf>]
-<../../LaTeX/formulebladen/formuleblad_STA2.pdf, id=201, page=6, 597.50829pt x 845.0471pt>
+<../../LaTeX/formulebladen/formuleblad_STA2.pdf, id=235, page=6, 597.50829pt x 845.0471pt>
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 6>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page6 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 6>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page6 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 
 
 File: ../../LaTeX/formulebladen/formuleblad_STA2.pdf Graphic file (type pdf)
 <use ../../LaTeX/formulebladen/formuleblad_STA2.pdf, page 6>
 Package pdftex.def Info: ../../LaTeX/formulebladen/formuleblad_STA2.pdf , page6 used on input line 16.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 [8
 
  <../../LaTeX/formulebladen/formuleblad_STA2.pdf>] (q1.tex
@@ -1206,329 +1210,15 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 23.
-Package marginnote Info: right page because not two side mode on input line 23.
-Package marginnote Info: xpos seems to be 334.81291pt on input line 23.
-Package marginnote Info: Margin note 9.2 is on absolute page 9 on input line 35.
-Package marginnote Info: right page because not two side mode on input line 35.
-Package marginnote Info: xpos seems to be 121.67282pt on input line 35.
-<../../LaTeX/figures/20251113_scatterplot.png, id=212, 518.1759pt x 327.3831pt>
-File: ../../LaTeX/figures/20251113_scatterplot.png Graphic file (type png)
-<use ../../LaTeX/figures/20251113_scatterplot.png>
-Package pdftex.def Info: ../../LaTeX/figures/20251113_scatterplot.png  used on input line 35.
-(pdftex.def)             Requested size: 518.17462pt x 327.3823pt.
-Package marginnote Info: Margin note 9.3 is on absolute page 10 on input line 35.
-Package marginnote Info: right page because not two side mode on input line 35.
-Package marginnote Info: xpos seems to be 97.46518pt on input line 35.
+)) (q2.tex
 
+[9{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (q3.tex
 
-[9{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-Package marginnote Info: Margin note 10.1 is on absolute page 11 on input line 80.
-Package marginnote Info: right page because not two side mode on input line 80.
-Package marginnote Info: xpos seems to be 490.02283pt on input line 80.
-Package marginnote Info: right page because not two side mode on input line 80.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 80.
-Package marginnote Info: Margin note 10.3 is on absolute page 11 on input line 80.
-Package marginnote Info: right page because not two side mode on input line 80.
-Package marginnote Info: xpos seems to be 266.14449pt on input line 80.
-Package marginnote Info: Margin note 10.4 is on absolute page 11 on input line 80.
-Package marginnote Info: right page because not two side mode on input line 80.
-Package marginnote Info: xpos seems to be 343.36455pt on input line 80.
-Package marginnote Info: Margin note 10.5 is on absolute page 11 on input line 80.
-Package marginnote Info: right page because not two side mode on input line 80.
-Package marginnote Info: xpos seems to be 354.63693pt on input line 80.
+[10]) (q4.tex
 
+[11])
 
-[10 <../../LaTeX/figures/20251113_scatterplot.png>]
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 100.
-Package marginnote Info: Margin note 11.3 is on absolute page 12 on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be 233.69983pt on input line 100.
-Package marginnote Info: Margin note 11.4 is on absolute page 12 on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be 303.52002pt on input line 100.
-Package marginnote Info: Margin note 11.5 is on absolute page 12 on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be 203.61494pt on input line 100.
-Package marginnote Info: Margin note 11.6 is on absolute page 12 on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be 268.3778pt on input line 100.
-
-
-[11]
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 137.
-Package marginnote Info: Margin note 12.2 is on absolute page 12 on input line 137.
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be 200.51405pt on input line 137.
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 137.
-Package marginnote Info: Margin note 12.4 is on absolute page 13 on input line 137.
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be 271.46297pt on input line 137.
-Package marginnote Info: Margin note 12.5 is on absolute page 13 on input line 137.
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be 506.11438pt on input line 137.
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 137.
-Package marginnote Info: Margin note 12.7 is on absolute page 13 on input line 137.
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be 283.8862pt on input line 137.
-Package marginnote Info: Margin note 12.8 is on absolute page 13 on input line 137.
-Package marginnote Info: right page because not two side mode on input line 137.
-Package marginnote Info: xpos seems to be 449.77286pt on input line 137.
-
-
-[12]) (q2.tex
-
-[13]
-Package marginnote Info: Margin note 14.1 is on absolute page 14 on input line 40.
-Package marginnote Info: right page because not two side mode on input line 40.
-Package marginnote Info: xpos seems to be 121.39314pt on input line 40.
-Package marginnote Info: Margin note 14.2 is on absolute page 14 on input line 40.
-Package marginnote Info: right page because not two side mode on input line 40.
-Package marginnote Info: xpos seems to be 519.84294pt on input line 40.
-Package marginnote Info: Margin note 14.3 is on absolute page 14 on input line 40.
-Package marginnote Info: right page because not two side mode on input line 40.
-Package marginnote Info: xpos seems to be 426.52303pt on input line 40.
-Package marginnote Info: Margin note 14.4 is on absolute page 14 on input line 55.
-Package marginnote Info: right page because not two side mode on input line 55.
-Package marginnote Info: xpos seems to be 243.47821pt on input line 55.
-Package marginnote Info: Margin note 14.5 is on absolute page 15 on input line 55.
-Package marginnote Info: right page because not two side mode on input line 55.
-Package marginnote Info: xpos seems to be 276.95819pt on input line 55.
-Package marginnote Info: Margin note 14.6 is on absolute page 15 on input line 55.
-Package marginnote Info: right page because not two side mode on input line 55.
-Package marginnote Info: xpos seems to be 488.22011pt on input line 55.
-
-
-[14]
-Package marginnote Info: Margin note 15.1 is on absolute page 15 on input line 80.
-Package marginnote Info: right page because not two side mode on input line 80.
-Package marginnote Info: xpos seems to be 141.65744pt on input line 80.
-Package marginnote Info: Margin note 15.2 is on absolute page 15 on input line 80.
-Package marginnote Info: right page because not two side mode on input line 80.
-Package marginnote Info: xpos seems to be 493.99341pt on input line 80.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 100.
-Package marginnote Info: Margin note 15.4 is on absolute page 15 on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be 179.03703pt on input line 100.
-Package marginnote Info: Margin note 15.5 is on absolute page 16 on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be 457.49535pt on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 100.
-Package marginnote Info: Margin note 15.7 is on absolute page 16 on input line 100.
-Package marginnote Info: right page because not two side mode on input line 100.
-Package marginnote Info: xpos seems to be 265.7004pt on input line 100.
-
-
-[15]
-Package marginnote Info: Margin note 16.1 is on absolute page 16 on input line 113.
-Package marginnote Info: right page because not two side mode on input line 113.
-Package marginnote Info: xpos seems to be 124.30954pt on input line 113.
-Package marginnote Info: Margin note 16.2 is on absolute page 16 on input line 113.
-Package marginnote Info: right page because not two side mode on input line 113.
-Package marginnote Info: xpos seems to be 347.79533pt on input line 113.
-Package marginnote Info: Margin note 16.3 is on absolute page 16 on input line 113.
-Package marginnote Info: right page because not two side mode on input line 113.
-Package marginnote Info: xpos seems to be 297.73993pt on input line 113.
-
-Overfull \hbox (4.016pt too wide) in paragraph at lines 105--113
-[]\T1/bch/m/n/12 Formuleer een con-clusie voor deze chik-wadraat-toets (op ba-sis van een sig-nif-i-cantieniveau
- []
-
-
-Overfull \hbox (5.05115pt too wide) in paragraph at lines 122--122
-[]\T1/bch/m/n/12 Bereken een $\OT1/cmr/m/n/12 95$$%$\T1/bch/m/n/12 -betrouwbaarheidsinterval voor de suc-ceskans $\OML/cmm/m/it/12 p$ \T1/bch/m/n/12 met de Clopper-Pearson
- []
-
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 155.
-Package marginnote Info: Margin note 16.5 is on absolute page 16 on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be 438.46092pt on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 155.
-Package marginnote Info: Margin note 16.7 is on absolute page 17 on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be 266.78983pt on input line 155.
-Package marginnote Info: Margin note 16.8 is on absolute page 17 on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be 386.44139pt on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 155.
-Package marginnote Info: Margin note 16.10 is on absolute page 17 on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be 256.51904pt on input line 155.
-Package marginnote Info: Margin note 16.11 is on absolute page 17 on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be 386.44139pt on input line 155.
-Package marginnote Info: Margin note 16.12 is on absolute page 17 on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be 441.91754pt on input line 155.
-Package marginnote Info: Margin note 16.13 is on absolute page 17 on input line 155.
-Package marginnote Info: right page because not two side mode on input line 155.
-Package marginnote Info: xpos seems to be 184.95497pt on input line 155.
-
-
-[16]) (q3.tex
-
-[17]
-Overfull \hbox (8.71399pt too wide) in paragraph at lines 21--21
- [] 
- []
-
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 57.
-Package marginnote Info: Margin note 18.2 is on absolute page 18 on input line 57.
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be 463.63391pt on input line 57.
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 57.
-Package marginnote Info: Margin note 18.4 is on absolute page 18 on input line 57.
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be 230.1922pt on input line 57.
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 57.
-Package marginnote Info: Margin note 18.6 is on absolute page 18 on input line 57.
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be 461.95331pt on input line 57.
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 57.
-Package marginnote Info: Margin note 18.8 is on absolute page 19 on input line 57.
-Package marginnote Info: right page because not two side mode on input line 57.
-Package marginnote Info: xpos seems to be 229.7922pt on input line 57.
-
-
-[18]
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 93.
-Package marginnote Info: Margin note 19.2 is on absolute page 19 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 351.25832pt on input line 93.
-Package marginnote Info: Margin note 19.3 is on absolute page 19 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 465.89885pt on input line 93.
-Package marginnote Info: Margin note 19.4 is on absolute page 19 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 387.36885pt on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 93.
-Package marginnote Info: Margin note 19.6 is on absolute page 19 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 514.22609pt on input line 93.
-Package marginnote Info: Margin note 19.7 is on absolute page 20 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 390.47195pt on input line 93.
-Package marginnote Info: Margin note 19.8 is on absolute page 20 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 134.661pt on input line 93.
-Package marginnote Info: Margin note 19.9 is on absolute page 20 on input line 93.
-Package marginnote Info: right page because not two side mode on input line 93.
-Package marginnote Info: xpos seems to be 265.417pt on input line 93.
-
-
-[19]
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 130.
-Package marginnote Info: Margin note 20.2 is on absolute page 20 on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be 413.4505pt on input line 130.
-Package marginnote Info: Margin note 20.3 is on absolute page 20 on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be 351.19592pt on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 130.
-Package marginnote Info: Margin note 20.5 is on absolute page 20 on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be 500.73224pt on input line 130.
-Package marginnote Info: Margin note 20.6 is on absolute page 20 on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be 411.1731pt on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 130.
-Package marginnote Info: Margin note 20.8 is on absolute page 20 on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be 263.29384pt on input line 130.
-Package marginnote Info: Margin note 20.9 is on absolute page 21 on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be 169.4171pt on input line 130.
-Package marginnote Info: Margin note 20.10 is on absolute page 21 on input line 130.
-Package marginnote Info: right page because not two side mode on input line 130.
-Package marginnote Info: xpos seems to be 162.3371pt on input line 130.
-
-
-[20]) (q4.tex
-
-[21]
-Package marginnote Info: Margin note 22.1 is on absolute page 22 on input line 21.
-Package marginnote Info: right page because not two side mode on input line 21.
-Package marginnote Info: xpos seems to be 354.11955pt on input line 21.
-Package marginnote Info: Margin note 22.2 is on absolute page 22 on input line 21.
-Package marginnote Info: right page because not two side mode on input line 21.
-Package marginnote Info: xpos seems to be 324.83958pt on input line 21.
-Package marginnote Info: Margin note 22.3 is on absolute page 22 on input line 41.
-Package marginnote Info: right page because not two side mode on input line 41.
-Package marginnote Info: xpos seems to be 192.59526pt on input line 41.
-Package marginnote Info: Margin note 22.4 is on absolute page 23 on input line 41.
-Package marginnote Info: right page because not two side mode on input line 41.
-Package marginnote Info: xpos seems to be 344.59637pt on input line 41.
-Package marginnote Info: Margin note 22.5 is on absolute page 23 on input line 41.
-Package marginnote Info: right page because not two side mode on input line 41.
-Package marginnote Info: xpos seems to be 500.23944pt on input line 41.
-Package marginnote Info: right page because not two side mode on input line 41.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 41.
-Package marginnote Info: Margin note 22.7 is on absolute page 23 on input line 41.
-Package marginnote Info: right page because not two side mode on input line 41.
-Package marginnote Info: xpos seems to be 322.47734pt on input line 41.
-
-
-[22]
-Package marginnote Info: Margin note 23.1 is on absolute page 23 on input line 52.
-Package marginnote Info: right page because not two side mode on input line 52.
-Package marginnote Info: xpos seems to be 501.3267pt on input line 52.
-Package marginnote Info: Margin note 23.2 is on absolute page 23 on input line 52.
-Package marginnote Info: right page because not two side mode on input line 52.
-Package marginnote Info: xpos seems to be 375.83765pt on input line 52.
-Package marginnote Info: Margin note 23.3 is on absolute page 23 on input line 52.
-Package marginnote Info: right page because not two side mode on input line 52.
-Package marginnote Info: xpos seems to be 428.16522pt on input line 52.
-Package marginnote Info: Margin note 23.4 is on absolute page 23 on input line 52.
-Package marginnote Info: right page because not two side mode on input line 52.
-Package marginnote Info: xpos seems to be 358.30885pt on input line 52.
-Package marginnote Info: Margin note 23.5 is on absolute page 24 on input line 75.
-Package marginnote Info: right page because not two side mode on input line 75.
-Package marginnote Info: xpos seems to be 166.34937pt on input line 75.
-Package marginnote Info: right page because not two side mode on input line 75.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 75.
-Package marginnote Info: Margin note 23.7 is on absolute page 24 on input line 75.
-Package marginnote Info: right page because not two side mode on input line 75.
-Package marginnote Info: xpos seems to be 363.04031pt on input line 75.
-Package marginnote Info: Margin note 23.8 is on absolute page 24 on input line 75.
-Package marginnote Info: right page because not two side mode on input line 75.
-Package marginnote Info: xpos seems to be 142.24901pt on input line 75.
-Package marginnote Info: Margin note 23.9 is on absolute page 24 on input line 75.
-Package marginnote Info: right page because not two side mode on input line 75.
-Package marginnote Info: xpos seems to be 349.00436pt on input line 75.
-Package marginnote Info: Margin note 23.10 is on absolute page 24 on input line 75.
-Package marginnote Info: right page because not two side mode on input line 75.
-Package marginnote Info: xpos seems to be 186.62509pt on input line 75.
-
-Overfull \hbox (6.0047pt too wide) in paragraph at lines 56--75
-[]\T1/bch/m/n/12 Nog steeds uit-gaande van een steekproe-fgemid-delde van $\OT1/cmr/m/n/12 11\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 2$ \T1/bch/m/n/12 sec-on-den en een steekproef-
- []
-
-
-
-[23])
-
-[24] (exam_20251113.aux)
+[12] (exam_20251113.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
@@ -1537,17 +1227,17 @@ Package rerunfilecheck Info: File `exam_20251113.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47409 strings out of 468133
- 1125986 string characters out of 5430719
- 1636412 words of memory out of 5000000
- 75252 multiletter control sequences out of 15000+600000
- 661944 words of font info for 90 fonts, out of 8000000 for 9000
+ 47821 strings out of 468133
+ 1130591 string characters out of 5430719
+ 1637177 words of memory out of 5000000
+ 75671 multiletter control sequences out of 15000+600000
+ 651097 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,19n,129p,856b,1609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on exam_20251113.pdf (24 pages, 567704 bytes).
+ 128i,17n,129p,856b,1306s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on exam_20251113.pdf (12 pages, 589238 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

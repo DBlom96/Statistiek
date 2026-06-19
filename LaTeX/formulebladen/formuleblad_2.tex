@@ -1,14 +1,15 @@
-\subsection*{Betrouwbaarheidsintervallen voor het gemiddelde $\mu$ ($\sigma$ bekend)}
-    \begin{itemize}
-        \item \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
+\subsection*{\SI{100\qtyproduct(1-\alpha)}{\percent}-betrouwbaarheidsinterval voor het gemiddelde $\mu$ (als $\sigma$ bekend is)}
+    \begin{align*}
+        z_{\alpha/2} = \invnorm(\opp=1-\alpha/2, \mu=0, \sigma=1)
+    \end{align*}
         \[
-            z_{\alpha/2} = \text{InvNorm}(\text{area}=1-\alpha/2, \mu=0, \sigma=1)
+            z_{\alpha/2} = \invnorm(\opp=1-\alpha/2, \mu=0, \sigma=1)
         \]
         \[
             [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \quad  \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
         \]
 
-        \item \textbf{Minimale steekproefomvang voor \boldmath$100\cdot(1-\alpha)\%$-BI als \boldmath$\mu$ maximaal \boldmath$\pm\ a$ mag afwijken:}
+        \item \textbf{Minimale steekproefomvang voor \boldmath$\SI{100(1-\alpha)}{\percent}$-BI als \boldmath$\mu$ maximaal \boldmath$\pm\ a$ mag afwijken:}
         \[
             n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{a} \right)^2
         \]
@@ -16,15 +17,15 @@
 
 \subsection*{Betrouwbaarheidsintervallen voor het gemiddelde $\mu$ ($\sigma$ onbekend)}
     \begin{itemize}
-        \item \textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
+        \item \textbf{\boldmath$\SI{100(1-\alpha)}{\percent}$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
             \[
-                t = \invt(\text{area}=1-\alpha/2, \text{df}=n-1)
+                t = \invt(\opp=1-\alpha/2, \text{df}=n-1)
             \]
             \[
                 [\overline{x} - t \cdot \frac{s}{\sqrt{n}}, \quad \overline{x} + t \cdot \frac{s}{\sqrt{n}}]
             \]
 
-        \item \textbf{Minimale steekproefomvang voor $100\cdot(1-\alpha)\%$-BI als $\mu$ maximaal \boldmath$\pm\ a$ mag afwijken:}
+        \item \textbf{Minimale steekproefomvang voor $\SI{100(1-\alpha)}{\percent}$-BI als $\mu$ maximaal \boldmath$\pm\ a$ mag afwijken:}
             \[
                 \text{GR tabel (voor verschillende $n$):} \quad \frac{s}{\sqrt{n}} \cdot \text{InvT}(\text{area}=1-\alpha/2, \text{df}=n-1) \le a
             \]
@@ -224,7 +225,7 @@
     s_{\varepsilon}^2 &= \frac{\sum e_i^2}{n - 2} = \frac{\sum \left(y_i - (a + b \cdot x_i)\right)^2}{n - 2}=  \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) \\ 
 \end{align*}
 
-\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor de gemiddelde $Y$ bij een gegeven $X = x_0$:}
+\textbf{\boldmath$\SI{100\cdot(1-\alpha)}{\percent}$-betrouwbaarheidsinterval voor de gemiddelde $Y$ bij een gegeven $X = x_0$:}
 \[
     t = \invt(\text{opp} = 1 - \alpha/2, \text{df} = n - 2)
 \]
@@ -235,7 +236,7 @@
     [a+b\cdot x_0 - t \cdot s_\mu, \quad a+b\cdot x_0 + t \cdot s_\mu]
 \]
 
-\textbf{\boldmath$100\cdot(1-\alpha)\%$-betrouwbaarheidsinterval voor $Y$ bij een gegeven $X = x_0$:}
+\textbf{\boldmath$\SI{100\cdot(1-\alpha)}{\percent}$-betrouwbaarheidsinterval voor $Y$ bij een gegeven $X = x_0$:}
 \[
     t = \invt(\text{opp} = 1 - \alpha/2, \text{df} = n - 2)
 \]
