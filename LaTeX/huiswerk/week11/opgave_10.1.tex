@@ -3,9 +3,9 @@
     De resultaten waren als volgt:
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
-        \begin{tabular}{ccccc}
+        \begin{tabular}{lcccc}
             \toprule
-                \multicolumn{5}{c}{{\bfseries Leeftijd}} \\
+                & \multicolumn{4}{c}{{\bfseries Leeftijd}} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
                 & $\mathbf{18-<30}$ & $\mathbf{30-<45}$ & $\mathbf{45}$ \textbf{en ouder} & {\bfseries Totaal} \\
             \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3} \cmidrule{4-4} \cmidrule{5-5}
@@ -23,7 +23,7 @@
 \begin{enumerate}[label=(\alph*)]
     \item Bereken de \emph{expected}-tabel.
     \answer{
-        Om de \emph{expected}-tabel te bepalen, starten we vanuit een lege tabel waarin alleen de totalen (van de rijen en kolommen respectievelijk) gegeven zijn:
+        Om de \emph{expected}-tabel te bepalen, starten we vanuit een lege tabel waarin alleen de rij- en kolomtotalen gegeven zijn:
         \begin{center}
             \renewcommand{\arraystretch}{1.25}
             \begin{tabular}{ccccc}
@@ -65,7 +65,7 @@
 
     \item Bereken de toetsingsgrootheid $\chi^2$.
     \answer{
-        De theoretische toetsingsgrootheid $X^2$ bepalen we aan de hand van de volgende formule:
+        De theoretische toetsingsgrootheid van een chikwadraattoets is $X^2$ en bepalen we in algemene zin aan de hand van de volgende formule:
         \begin{align*}
             X^2  &= \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}},
         \end{align*}
@@ -82,39 +82,46 @@
     \item Hoeveel vrijheidsgraden heeft de chikwadraatverdeling die gebruikt moet worden?
     \answer{
         Bij een $\chi^2$-toets voor onafhankelijkheid van twee nominale variabelen is het aantal vrijheidsgraden gelijk aan het aantal cellen waarvoor je een waarde vrij kunt kiezen.
-        Dit is gelijk aan 
+        Merk op dat zodra je in een rij alle waarden op één na hebt gekozen, de laatste waarde vastligt omdat het rijtotaal al bekend is.
+        Hetzelfde geldt voor een kolom, omdat het kolomtotaal bekend is.
+
+        Het aantal vrijheidsgraden is dus gelijk aan 
         \[
             \df = (\nrows-1) \cdot (\ncols-1) = (2-1)\cdot(3-1) = 2.
         \]
-        In deze hypothesetoets voor onafhankelijkheid heeft de toetsingsgrootheid een chikwadraatverdeling met $\df=2$ vrijheidsgraden.
+        De toetsingsgrootheid heeft voor deze chikwadraattoets dus een chikwadraatverdeling met $\df=2$ vrijheidsgraden.
     }
 
-    \item Geef het kritieke gebied aan van de grootheid $X$.
+    \item Geef het kritieke gebied aan van de grootheid $X^2$.
     \answer{
-        Merk op dat onafhankelijkheid waarschijnlijker is als de toetsingsgrootheid dichter bij $0$ ligt.
-        Dit volgt uit de formule van de toetsingsgrootheid $X$, omdat in dat geval de observed frequenties dicht in de buurt van de expected frequenties liggen.
+        Merk op dat onafhankelijkheid tussen de twee variabelen \enquote{leeftijd} en \enquote{rookgewoonte} waarschijnlijker is zodra de geobserveerde toetsingsgrootheid $\chi^2$ dichter bij $0$ ligt.
+        Dit volgt uit de formule van de toetsingsgrootheid $X^2$, omdat in dat geval de geobserveerde (\enquote{observed}) frequenties dicht in de buurt van de verwachte (\enquote{expected}) frequenties liggen.
 
-        Het kritieke gebied is dus van de vorm $[g, \infty)$, waarbij $g$ de grenswaarde is waarvoor geldt $P(X \ge g) = \alpha=0.01$.
-        Dit kunnen we met de grafische rekenmachine berekenen met behulp van de \enquote{solver}-functie, waarbij we het volgende systeem van vergelijkingen oplossen: 
+        Omdat een chikwadraattoets dus altijd een rechtszijdig toets is, is het kritieke gebied dus van de vorm $[g, \infty)$, waarbij $g$ de grenswaarde is waarvoor geldt $P(X \ge g) = \alpha = 0.01$.
+        Deze grenswaarde $g$ kunnen we dus berekenen met behulp van de \enquote{numerieke solver}, door het volgende in te vullen:
         \begin{align*}
             E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=2) \\
             E_2 &= 0.01.
         \end{align*}
-        Dit geeft een kritieke grenswaarde van $x \approx 9.2103$.
-        Dat betekent dat het kritieke gebied gelijk is aan $[9.2103, \infty)$.
+        of op de Casio:
+        \begin{align*}
+            \solveNC(\text{ChiCD}(x, \GRinfinity, 2)=0.01, x)
+        \end{align*}
+        Dit geeft een grenswaarde $g \approx 9.2103$.
+        Het kritieke gebied is dus gelijk aan $[9.2103, \infty)$.
     }
 
     \item Wat is uw eindconclusie?
     \answer{
-        De geobserveerde toetsingsgrootheid $\chi^2 \approx 12.0660$ ligt in het kritieke gebied, omdat $12.0660 > 9.2103$.
-        Dit betekent dat de nulhypothese $H_0$ wordt verworpen.
+        De geobserveerde toetsingsgrootheid $\chi^2 \approx 12.0660$ ligt binnen het kritieke gebied $[9.2103, \infty)$, dus besluiten we om $H_0$ te verwerpen.
         Er is voldoende bewijs om aan te nemen dat de twee nominale variabelen \enquote{leeftijd} en \enquote{rookgewoonte} afhankelijk zijn van elkaar.
-        Om te bekijken hoe deze afhankelijkheid eruit ziet, is een analyse van de ruwe data (observed frequenties) nodig.
-        Als we kijken naar de ruwe data, zien we dat het aandeel rokers in de leeftijdsgroep 30-<45 een stuk hoger ligt dan in de andere leeftijdsgroepen.
-        Hierdoor kun je dus concluderen dat rookgewoontes niet vergelijkbaar zijn over alle leeftijdscategorie\"en.
+        Om te bekijken hoe deze afhankelijkheid eruit ziet, moeten we de geobserveerde frequenties analyseren.
+        
+        Hieruit is op te maken dat het aandeel rokers in de leeftijdsgroep $30-<45$ een stuk hoger ligt dan in de andere leeftijdsgroepen.
+        Hierdoor kun je dus concluderen dat rookgewoontes niet vergelijkbaar zijn over alle leeftijdscategorieën.
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
-                \includegraphics{opg_10.1.png}
+                \includegraphics{opg10.1.png}
             }
         \end{center}
     }

@@ -25,9 +25,9 @@
             \item[$H_0$:] \enquote{leeftijd} en \enquote{internetgebruik} zijn onafhankelijk van elkaar.
             \item[$H_1$:] \enquote{leeftijd} en \enquote{internetgebruik} zijn wel afhankelijk van elkaar.
         \end{itemize}
-        Het significantieniveau $\alpha=0.01$ is gegeven in de opdracht, net als de geobserveerde data.
-        Om de toetsingsgrootheid $X^2$ te kunnen bepalen, moeten we eerst de \emph{expected}-tabel berekenen.
-        Hiervoor starten we vanuit een lege tabel waarin alleen de totalen (van de rijen en kolommen respectievelijk) gegeven zijn:
+        Het significantieniveau $\alpha=0.01$ is gegeven in de opdracht, net als de geobserveerde frequenties (data).
+        Om de toetsingsgrootheid $X^2$ te kunnen bepalen, moeten we eerst de \emph{expected} frequenties berekenen.
+        Hiervoor starten we vanuit een lege tabel waarin alleen de rij- en kolomtotalen gegeven zijn:
         \begin{center}
             \renewcommand{\arraystretch}{1.25}
             \begin{tabular}{cccc}
@@ -46,7 +46,7 @@
         \[
             E_{ij} = \frac{\text{rijtotaal}_{i} \cdot \text{kolomtotaal}_{j}}{\text{totaal}}
         \]
-        Dit geeft de volgende \emph{expected}-tabel:
+        Dit geeft de volgende tabel met \enquote{expected} frequenties:
         \begin{center}
             \renewcommand{\arraystretch}{1.5}
             \begin{tabular}{cccc}
@@ -68,8 +68,8 @@
         waarbij $i = 1, 2$ de index van de rij is, en $j = 1, 2$ de index van de kolom is.
         Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
         \begin{align*}
-            \chi^2  &= \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}} \\
-                    &=\frac{(O_{11} - E_{11})^2}{E_{11}} + \frac{(O_{12} - E_{12})^2}{E_{12}} + \frac{(O_{21} - E_{21})^2}{E_{21}} + \frac{(O_{22} - E_{22})^2}{E_{22}} \\
+            \chi^2  &= \sum_{i,j} \frac{(o_{ij} - e_{ij})^2}{e_{ij}} \\
+                    &=\frac{(o_{11} - e_{11})^2}{e_{11}} + \frac{(o_{12} - e_{12})^2}{E_{12}} + \frac{(o_{21} - e_{21})^2}{e_{21}} + \frac{(o_{22} - e_{22})^2}{e_{22}} \\
                     &= \frac{(143 - 132)^2}{132} + \frac{(77 - 88)^2}{88} + \frac{(97 - 108)^2}{108} + \frac{(83-72)^2}{72}\\
                     &\approx 4.6402.
         \end{align*}
@@ -88,7 +88,7 @@
         Er is onvoldoende bewijs om de hypothese te verwerpen dat de twee nominale variabelen \enquote{leeftijd} en \enquote{internetgebruik} onafhankelijk zijn van elkaar.
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
-                \includegraphics{opg_10.5.png}
+                \includegraphics{opg10.5.png}
             }
         \end{center}
     }
