@@ -16,12 +16,17 @@
 }
 \answer{
     In deze hypothesetoets geldt dat de nulhypothese $H_0: \mu = 51$ (gemiddeld $51$ klachten per week) getest wordt tegen de alternatieve hypothese $H_1: \mu \neq 51$ (gemiddeld een ander aantal dan $51$ klachten per week).
-    In acht weken wordt het aantal klachten geteld, oftewel $n=8$.
+    In acht weken wordt het aantal klachten geteld, oftewel de steekproefgrootte is $n=8$.
+
+    Omdat de standaardafwijking $\sigma$ onbekend is, maken we gebruik van de toetsingsgrootheid $T = \frac{\overline{X} - \mu_0}{s / \sqrt{n}}$, waarbij
+    $s$ een steekproefschatting is van $\sigma$.
+    Onder aanname van de nulhypothese $H_0$ volgt deze toetsingsgrootheid een $t$-verdeling met $\df = n-1 = 7$ vrijheidsgraden.
+
+    Om de geobserveerde toetsingsgrootheid te berekenen moeten we eerst het steekproefgemiddelde $\samplemeanx$ en de steekproefstandaardafwijking $s$ bepalen.
     Het geobserveerde steekproefgemiddelde is gelijk aan 
     \begin{align*}
         \samplemeanx = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{30+45+\ldots+28}{8} = 40.
     \end{align*}
-    Verder is de standaarddeviatie $\sigma$ niet gegeven, dus moeten we die schatten aan de hand van de gegevens.
     De schatting $\samplevar$ van de steekproefvariantie vinden we als volgt
     \begin{align*}
         \samplevar  &= \frac{(x_n-\samplemeanx)^2 + \ldots + (x_n-\samplemeanx)^2}{n-1} \\
@@ -33,24 +38,44 @@
     \[
         \samplestd = \sqrt{\samplevar} = \sqrt{87.1429} \approx 9.3350.
     \]
-    De steekproefomvang $n = 8 < 30$ en de standaardafwijking $\sigma$ onbekend is, dus we moeten een $t$-waarde bepalen.
-    Omdat we tweezijdig toetsen, berekenen we die als volgt
+
+    Met behulp van deze waarden kunnen we de geobserveerde toetsingsgrootheid $t$ berekenen:
     \[
-        t = \invt(\opp=1-\alpha/2, \df=n-1) = \invt(\opp=0.975, \df=7) \approx 2.3646.
+        t = \frac{\samplemeanx - \mu_0}{\samplestd / \sqrt{n}} = \frac{40 - 51}{9.3350 / \sqrt{8}} \approx -3.3329.
     \]
-    De toetsingsgrootheid is in dit geval het (theoretische) steekproefgemiddelde $\samplemeanvarX$, die dus een $t$-verdeling volgt.
-    Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu=51$.
-    Merk op dat hoe verder het steekproefgemiddelde $\mu$ afligt van $51$ (zowel ver daaronder als ver daarboven), hoe waarschijnlijker dat de alternatieve hypothese waar is.
-    Het kritieke gebied $Z$ is dus van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij $g_1$ en $g_2$ kunnen worden berekend als volgt:
-        \begin{align*}
-            g_1 &= \mu - t \cdot \frac{\samplestd}{\sqrt{n}} \\
-                &= 51 - 2.3646 \cdot \frac{9.3350}{\sqrt{8}}\\
-                &\approx 43.1957.\\
-            g_2 &= \mu + t \cdot \frac{\samplestd}{\sqrt{n}} \\
-                &= 51 + 2.3646 \cdot \frac{9.3350}{\sqrt{8}} \\
-                &\approx 58.8043.    
-        \end{align*}
-    Het kritieke gebied $Z$ is dus gelijk aan $(-\infty, 43.1957]$ en $[58.8043, \infty)$.
-    De geobserveerde toetsingsgrootheid $\samplemeanx=40$ ligt in het kritieke gebied, dus verwerpen we de nulhypothese $H_0$.
+
+    \noindent\textbf{Methode 1 (kritieke gebied)}
+
+    \noindent Omdat we tweezijdig toetsen, berekenen we de grenswaarden $g_1$ en $g_2$ van het kritieke gebied als volgt:
+    \begin{align*}
+        g_1 &= \invt(\opp=\alpha/2=0.025, \df=n-1=7) \approx -2.3646 \\
+        g_1 &= \invt(\opp=1-\alpha/2=0.975, \df=n-1=7) \approx 2.3646
+    \end{align*}
+
+    Het kritieke gebied bestaat dus uit $(-\infty, -2.3646]$ en $[2.3646, \infty)$.
+    De geobserveerde toetsingsgrootheid $t \approx -3.3329$ ligt in het kritieke gebied, dus besluiten we de nulhypothese $H_0$ te verwerpen.
     Er is voldoende reden om aan te nemen dat het gemiddelde aantal klachten per week significant afwijkt van $51$.
+
+    \noindent\textbf{Methode 2 ($p$-waarde)}
+
+    \noindent Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als het minimum van twee kansen:
+    \begin{itemize}
+        \item De kans dat de toetsingsgrootheid $T$ een waarde aanneemt \underline{kleiner dan} de geobserveerde toetsingsgrootheid $t$:
+        \[
+            P(T \leq t) = \tcdf(\lb=-\GRinfinity, \ub=t=-3.3329, \df=n-1=7) = 0.0063
+        \]
+        \item De kans dat de toetsingsgrootheid $T$ een waarde aanneemt \underline{groter dan} de geobserveerde toetsingsgrootheid $t$:
+        \[
+            P(T \geq t) = \tcdf(\lb=t=-3.3329, \ub=\GRinfinity, \df=n-1=7) = 0.9937
+        \]
+    \end{itemize}
+    De $p$-waarde is dus gelijk aan $p = 0.0063$.
+    Deze $p$-waarde is veel kleiner dan $\alpha/2$ (tweezijdig!), dus besluiten we de nulhypothese $H_0$ te verwerpen.
+    Er is voldoende reden om aan te nemen dat het gemiddelde aantal klachten per week significant afwijkt van $51$.
+
+    \begin{center}
+        \resizebox{0.9\textwidth}{!}{
+            \includegraphics{opg_9.18.png}
+        }
+    \end{center}
 }

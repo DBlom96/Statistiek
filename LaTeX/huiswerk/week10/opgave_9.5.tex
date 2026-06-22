@@ -8,24 +8,16 @@
 }
 \answer{
     In deze hypothesetoets geldt dat de nulhypothese $H_0: \mu \ge 42$ (geen daling) getest wordt tegen de alternatieve hypothese $H_1: \mu < 42$ (wel een daling).
-    Omdat we linkszijdig toetsen, berekenen we de $z$-waarde
+    Omdat de standaardafwijking $\sigma = 5$ bekend is, is in dit geval de theoretische grootheid gelijk aan $\samplemeanvarX$.
+    Onder de aanname van de nulhypothese $H_0$, is deze toetsingsgrootheid normaal verdeeld met verwachtingswaarde $\mu = 42$ en standaardafwijking
+    $\sigma / \sqrt{n} = 5 / \sqrt{50}$.
+
+    Omdat we linkszijdig toetsen, berekenen we de grenswaarde $g$ van het kritieke gebied $(-\infty, g]$:
     \[
-        z_{\alpha} = \invnorm(\opp=1-\alpha) = \invnorm(\opp=0.95) \approx 1.6449.
+        g = \invnorm(\opp=\alpha=0.05, \mu=42, \sigma=5/\sqrt{50}) \approx 40.8369.
     \]
-    De toetsingsgrootheid is in dit geval het (theoretische) steekproefgemiddelde $\samplemeanvarX$.
-    Uit de centrale limietstelling volgt dat $\samplemeanvarX \sim \normal{\mu=\ ?}{\frac{\sigma}{\sqrt{n}}}$.
-    Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu = 42$.
-    Verder geldt dat de standaardafwijking $\sigma = 5$ bekend is en de eigenaar $50$ waarnemingen doet, oftewel $n=50$.
-    Er volgt dus dat $\samplemeanvarX \sim \normal{\mu=50}{\sigma=\frac{5}{\sqrt{50}}}$.
-    Merk op dat hoe kleiner de toetsingsgrootheid is, hoe waarschijnlijker dat de alternatieve hypothese waar is.
-    Het kritieke gebied is dus van de vorm $Z = (-\infty, g]$, waarbij $g$ kan worden berekend als volgt:
-    \begin{align*}
-        g   &= \mu - z_{\alpha} \cdot \frac{\sigma}{\sqrt{n}} \\
-            &= 42 - 1.6449 \cdot \frac{5}{\sqrt{50}} \\
-            &\approx 40.8369.
-    \end{align*}
-    Het kritieke gebied is dus gelijk aan $Z = (-\infty, 40.8369)$.
-    De geobserveerde toetsingsgrootheid $\samplemeanx=37.8$ ligt in het kritieke gebied, dus we verwerpen $H_0$.
+    Het kritieke gebied is dus gelijk aan $Z = (-\infty, 40.8369]$.
+    De geobserveerde toetsingsgrootheid $\samplemeanx=37.8$ ligt wel in het kritieke gebied, dus we besluiten om de nulhypothese $H_0$ te verwerpen.
     Er is voldoende reden om aan te nemen dat het gemiddelde aantal klanten per dag in de broodjeszaak significant is gedaald. 
     \begin{center}
         \resizebox{0.9\textwidth}{!}{

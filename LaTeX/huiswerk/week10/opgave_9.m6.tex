@@ -1,23 +1,21 @@
-\question{9.m6}{Voor een normaal verdeelde variabele met onbekende $\mu$ en $\sigma$ wordt een toets voor $\mu$ verricht.
-De volgende gegevens zijn van belang: $H_0: \mu=60$, $H_1: \mu < 60$, $\alpha=0.05$, $\samplevar=16$, $n=25$, het steekproefgemiddelde is $62$.
-Bij deze toets vinden we dus een berekende $t^*$-waarde of $z^*$-waarde die gelijk is aan $\ldots$}
-\begin{enumerate}[label=(\alph*)]
-    \item $2.50$.
-    \item $0.625$.
-    \item $1.568$.
-    \item $1.316$.
-\end{enumerate}
+\question{9.m6}{
+    Voor een normaal verdeelde variabele met onbekende $\mu$ en $\sigma$ wordt een toets voor $\mu$ verricht.
+    De volgende gegevens zijn van belang: $H_0: \mu=60$, $H_1: \mu < 60$, $\alpha=0.05$, $\samplevar=16$, $n=25$, het steekproefgemiddelde is $62$.
+    Bij deze toets vinden we dus een berekende $t^*$-waarde of $z^*$-waarde die gelijk is aan $\ldots$}
+    \begin{enumerate}[label=(\alph*)]
+        \item $2.50$.
+        \item $0.625$.
+        \item $1.568$.
+        \item $1.316$.
+    \end{enumerate}
+
 \answer{
-    Omdat de standaardafwijking $\sigma$ onbekend is, gebruiken we de $t$-verdeling.
-    De formule voor de kritieke $t^*$-waarde is gegeven door
+    In dit geval is de berekende $t^*$-waarde wat wij de geobserveerde toetsingsgrootheid $t$ noemen.
+    Omdat de standaardafwijking $\sigma$ onbekend is, gebruiken we de theoretische toetsingsgrootheid $T = \frac{\overline{X} - \mu_0}{s/\sqrt{n}}$ met steekproefschatting $s = \sqrt{16} = 4$ voor de onbekende standaardafwijking $\sigma$.
+    Deze toetsingsgrootheid volgt een $t$-verdeling met $\df=n-1$ vrijheidsgraden.
+    De geobserveerde toetsingsgrootheid is dus gelijk aan
     \[
-        t^* = \frac{\samplemeanx - \mu}{\frac{\samplestd}{\sqrt{n}}}
+        t = \frac{\samplemeanx - \mu_0}{s / \sqrt{n}} = \frac{62 - 60}{4 / \sqrt{25}} = 2.5.
     \]
-    Omdat geldt dat $\samplevar=16$, weten we dat $\samplestd = 4$.
-    Verder kunnen we onder de nulhypothese aannemen dat $\mu=60$ en is het steekproefgemiddelde $\samplemeanx = 62$.
-    De bijbehorende $t^*$-waarde is gelijk aan
-    \[
-        t^* = \frac{\samplemeanx - \mu}{\frac{s}{\sqrt{n}}} = \frac{62 - 60}{\frac{4}{\sqrt{25}}} = 2.5.
-    \]
-    Het juiste antwoord is (a).
+    Het juiste antwoord is dus (a).
 }

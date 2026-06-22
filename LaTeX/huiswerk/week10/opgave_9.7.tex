@@ -1,19 +1,21 @@
 \question{9.7}{
     Capsules die zijn gevuld met een bepaald medicijn, moeten \SI{5}{\mg} werkzaam bestanddeel bevatten.
-    Het is bekend dat door onnauwkeurigheden met de machine die de capsules vult de hoeveelheid werkzaam bestanddeel te beschouwen is als een normaal verdeelde kansvariabele $X$ met verwachtingswaarde \SI{5.0}{\mg} en standaarddeviatie \SI{0.15}{\mg}.
-    Ge\"eist wordt dat de hoeveelheid werkzaam bestanddeel per capsule tussen \SI{4.6}{\mg} en \SI{5.4}{\mg} ligt.
+    Het is bekend dat door onnauwkeurigheden met de machine die de capsules vult de hoeveelheid werkzaam bestanddeel te beschouwen is
+    als een normaal verdeelde kansvariabele $X$ met verwachtingswaarde \SI{5.0}{\mg} en standaarddeviatie \SI{0.15}{\mg}.
+    Geëist wordt dat de hoeveelheid werkzaam bestanddeel per capsule tussen \SI{4.6}{\mg} en \SI{5.4}{\mg} ligt.
 }
 \begin{enumerate}[label=(\alph*)]
     \item Hoeveel procent van de capsules heeft een inhoud buiten de gestelde normen als de vulmachine correct is ingesteld?
     \answer{
-        Gegeven is dat de hoeveelheid (in \si{mg}) werkzaam bestanddeel $X \sim \normal{\mu=5.0}{\sigma=0.15}$.
+        Gegeven is dat de hoeveelheid (in \si{mg}) werkzaam bestanddeel $X$ normaal verdeeld is met $\mu=5.0$ en $\sigma=0.15$.
         De norm is dat deze hoeveelheid tussen de \SI{4.6}{\mg} en \SI{5.4}{\mg} ligt.
         De kans hierop kunnen we uitrekenen als volgt:
         \begin{align*}
             P(4.6 \le X \le 5.4) = \normalcdf(\lb=4.6, \ub=5.4, \mu=5.0, \sigma=0.15) \approx 0.9923.
         \end{align*}
 
-        Met \SI{99.23}{\percent} kans wordt een willekeurige capsule gevuld met een hoeveelheid werkzaam bestanddeel dat binnen de norm valt, oftewel \SI{0.77}{\percent} van de capsules heeft een inhoud buiten de gestelde normen.
+        Met \SI{99.23}{\percent} kans wordt een willekeurige capsule gevuld met een hoeveelheid werkzaam bestanddeel dat binnen de norm valt, 
+        oftewel \SI{0.77}{\percent} van de capsules heeft een inhoud buiten de gestelde normen.
     }
 
     \item De instelling van de machine kan tijdens het gebruik veranderen.
@@ -24,43 +26,33 @@
     \answer{
         In deze hypothesetoets geldt dat de nulhypothese $H_0: \mu = 5.0$ (geen verandering in de instelling) getest wordt tegen de alternatieve hypothese $H_1: \mu \neq 5.0$ (wel een verandering in het gemiddelde).
             
-        Omdat we tweezijdig toetsen, berekenen we de $z$-waarde
-        \[
-            z_{\alpha/2} = \invnorm(\opp=1-\alpha/2) = \invnorm(\opp=0.995) \approx 2.5758.
-        \]
-        De toetsingsgrootheid is opnieuw het (theoretische) steekproefgemiddelde $\samplemeanvarX$.
-        Uit de centrale limietstelling volgt dat $\samplemeanvarX \sim \normal{\mu}{\frac{\sigma}{\sqrt{n}}}$.
-        Onder de aanname dat $H_0$ waar is, geldt dat het gemiddelde $\mu = 5.0$.
-        Verder geldt dat de standaardafwijking $\sigma = 0.15$ bekend is en dat er $n = 25$ capsules worden getest.
-        Er volgt dus dat $\sigma(\samplemeanvarX) = \frac{\sigma}{\sqrt{n}} = \frac{0.15}{\sqrt{25}}=0.03$, oftewel $\samplemeanvarX \sim N(\mu=5.0, \sigma=0.03)$.
-        
-        Merk op dat hoe verder de toetsingsgrootheid afligt van $5.0$ (zowel ver daaronder als ver daarboven), hoe waarschijnlijker dat de alternatieve hypothese waar is.
-        Het kritieke gebied $Z$ is dus van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij $g_1$ en $g_2$ kunnen worden berekend als volgt:
+        De standaardafwijking $\sigma = 0.15$ is bekend, dus we gebruiken de toetsingsgrootheid $\overline{X}$.
+        Onder aanname van de nulhypothese $H_0$ is deze toetsingsgrootheid normaal verdeeld met verwachtingswaarde $\mu = 5.0$ en standaardafwijking $\sigma / \sqrt{n} = 0.15 / \sqrt{25} = 0.03$.
+        Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$:
         \begin{align*}
-            g_1 &= \mu - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} \\
-                &= 5.0 - 2.5758 \cdot \frac{0.15}{\sqrt{25}}\\
-                &\approx 4.9227. \\
-            g_2 &= \mu + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} \\
-                &= 5.0 + 2.5758 \cdot \frac{0.15}{\sqrt{25}} \\
-                &\approx 5.0773.    
+            g_1 &= \invnorm(\opp=\alpha/2 = 0.005, \mu = 5.0, \sigma = 0.03) \approx 4.9227 \\
+            g_2 &= \invnorm(\opp=1-\alpha/2 = 0.995, \mu = 5.0, \sigma = 0.03) \approx 5.0773
         \end{align*}
-        Het kritieke gebied $Z$ is dus gelijk aan $(-\infty, 4.9227]$ en $[5.0773, \infty)$.
+        Het kritieke gebied is dus gelijk aan $(-\infty, 4.9227]$ en $[5.0773, \infty)$.
         De geobserveerde toetsingsgrootheid $\samplemeanx=4.70$ ligt in het kritieke gebied, dus we verwerpen $H_0$.
         Er is voldoende reden om aan te nemen dat de instelling van de machine is gewijzigd. 
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
-                \includegraphics{opg_9.7b.png}
+                \includegraphics{opg_9.7.png}
             }
         \end{center}
     }
 
-    \item Als de capsules worden gevuld met gemiddelde \SI{4.70}{\mg} werkzaam bestanddeel ($\sigma$ is nog steeds gelijk aan \SI{0.15}{\mg}), hoeveel procent van de capsules voldoet dan niet meer aan de norm?
+    \item Als de capsules worden gevuld met gemiddelde \SI{4.70}{\mg} werkzaam bestanddeel ($\sigma$ is nog steeds gelijk aan \SI{0.15}{\mg}),
+    hoeveel procent van de capsules voldoet dan niet meer aan de norm?
     \answer{
-        Stel nu dat het gemiddelde $\mu = 4.70$ \unit{\mg}, en de standaarddeviatie is nog steeds $\sigma = 0.15$, oftewel $X \sim \normal{\mu=4.70}{\sigma=0.15}$.
+        Stel nu dat het werkelijke gemiddelde gelijk is aan $\mu = 4.70$ \unit{\mg}, 
+        en de standaarddeviatie is nog steeds $\sigma = 0.15$, oftewel $X$ is normaal verdeeld met $\mu = 4.70$ en $\sigma=0.15$.
         In dat geval is de kans dat een willekeurige capsule niet meer voldoet aan de norm gelijk aan
-        \begin{align*}
+        \[
             P(4.6 \le X \le 5.4) = \normalcdf(\lb=4.6, \ub=5.4, \mu=4.7, \sigma=0.15) \approx 0.7475.
-        \end{align*}
-        Van alle capsules zal \SI{74.75}{\percent} een hoeveelheid werkzaam bestanddeel bevatten dat voldoet aan de norm, oftewel \SI{25.25}{\percent} van de capsules voldoen niet aan de norm.
+        \]
+        Van alle capsules zal \SI{74.75}{\percent} een hoeveelheid werkzaam bestanddeel bevatten dat voldoet aan de norm, 
+        oftewel \SI{25.25}{\percent} van de capsules voldoen niet meer aan de norm.
     }
 \end{enumerate}
