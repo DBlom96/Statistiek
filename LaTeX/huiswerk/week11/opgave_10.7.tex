@@ -19,7 +19,7 @@
 Toets of rookgedrag en bloeddrukniveau significant samenhangen (kies $\alpha=0.01$).
 \answer{
     Omdat we weer te maken hebben met twee \emph{nominale} variabelen, namelijk \enquote{rookgedrag} en \enquote{bloeddrukniveau}, kunnen we een chikwadraattoets uitvoeren om de onafhankelijkheid tussen beide variabelen te toetsen.
-    We beginnen met het defini\"eren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
+    We beginnen met het definiëren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
     \begin{itemize}
         \item[$H_0$:] de categorische variabelen \enquote{rookgedrag} en \enquote{bloeddrukniveau} zijn onafhankelijk van elkaar.
         \item[$H_1$:] de categorische variabelen \enquote{rookgedrag} en \enquote{bloeddrukniveau} zijn wel afhankelijk van elkaar.
@@ -67,8 +67,8 @@ Toets of rookgedrag en bloeddrukniveau significant samenhangen (kies $\alpha=0.0
     waarbij $i = 1,2,3$ de index van de rij is, en $j = 1,2,3$ de index van de kolom is.
     Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid   
     \begin{align*}
-        \chi^2  &= \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}} \\
-                &=\frac{(O_{11} - E_{11})^2}{E_{11}} + \frac{(O_{12} - E_{12})^2}{E_{12}} + \ldots + \frac{(O_{33} - E_{33})^2}{E_{33}} \\
+        \chi^2  &= \sum_{i,j} \frac{(o_{ij} - e_{ij})^2}{e_{ij}} \\
+                &=\frac{(o_{11} - e_{11})^2}{e_{11}} + \frac{(o_{12} - e_{12})^2}{e_{12}} + \ldots + \frac{(o_{33} - e_{33})^2}{e_{33}} \\
                 &= \frac{(6 - 20)^2}{20} + \frac{(8 - 15)^2}{15} + \ldots + \frac{(22-39)^2}{39}\\
                 &\approx 43.8214.
     \end{align*}
@@ -86,10 +86,16 @@ Toets of rookgedrag en bloeddrukniveau significant samenhangen (kies $\alpha=0.0
     Aangezien de $p$-waarde extreem klein is, betekent dit dat de geobserveerde toetsingsgrootheid $\chi^2$ extreem hoge waarde heeft onder de aanname van onafhankelijkheid.
     Omdat de $p$-waarde veel kleiner is dan het significantieniveau $\alpha=0.01$, wordt $H_0$  verworpen.
     Er is voldoende bewijs om aan te nemen dat de twee nominale variabelen \enquote{rookgedrag} en \enquote{bloeddrukniveau} afhankelijk zijn van elkaar.
-    \vspace{1em}
+    \begin{center}
+        \resizebox{0.9\textwidth}{!}{
+            \includegraphics{opg10.7.png}
+        }
+    \end{center}
     {
         \itshape Noot: de toetsuitslag van het verwerpen van $H_0$ laat niet zien hoe deze afhankelijkheid eruit ziet.
         Als je de ruwe data bekijkt, zie je echter dat onder de niet-rokers een groot deel gewoon een normale bloeddruk heeft, terwijl voor stevige rokers de meeste juist een ernstig verhoogde bloeddruk hebben.
         Een analyse van de data is dus nodig om te bekijken wat de daadwerkelijke samenhang is tussen de variabelen.
     }
+
+
 }

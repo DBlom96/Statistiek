@@ -1,3 +1,5 @@
+\newpage 
+
 \question{10.12}{
     Soms wil men voor een getrokken steekproef beoordelen of die als representatief mag worden beschouwd met betrekking tot een bepaald kenmerk of een bepaalde variabele.
     Met de chikwadraattoets voor aanpassing kan worden getoetst of de waargenomen verdeling in dit opzicht voldoende gelijkenis vertoont met de populatieopbouw.
@@ -19,14 +21,16 @@
 Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd.
 \answer{
     In deze opgave willen we kijken of de steekproef representatief is of niet.
-    Hierbij horen de volgende nulhypothese $H_0$ en de alternatieve hypothese $H_1$:
+    Hiervoor moeten we een chikwadraattoets uitvoeren op basis van de gegeven verdeling van opleidingsniveaus onder de gehele populatie.
+    Allereerst definiëren we de volgende nulhypothese $H_0$ en de alternatieve hypothese $H_1$:
     \begin{itemize}
         \item[$H_0$:] de gekozen steekproef is representatief voor de populatie, oftewel de steekproef bestaat uit aantallen personen per opleidingsniveau naar rato van hoe vaak deze voorkomt in de totale Nederlandse bevolking.
-        \item[$H_1$:] de gekozen steekproef is NIET representatief voor de populatie
+        \item[$H_1$:] de gekozen steekproef is NIET representatief voor de .
     \end{itemize}
-        Verder is het significantieniveau $\alpha = 0.05$ en de steekproefdata (zie tabel) gegeven.
-    Om te toetsen of de gegeven steekproefdata (observed) overeenkomen representatief zijn, moeten we allereerst de verwachte frequenties berekenen gebaseerd op de populatiepercentages.
-    Dit kunnen we doen door de populatiepercentages om te rekenen naar verwachte frequenties op basis van het kiezen van $480$ kiesgerechtigde Nederlanders:
+    Verder is het significantieniveau $\alpha = 0.05$ en de steekproefdata (zie tabel) gegeven.
+    Om te toetsen of de gegeven steekproefdata (observed) overeenkomen representatief zijn,
+    moeten we allereerst de verwachte frequenties berekenen gebaseerd op de populatiepercentages.
+    Dit kunnen we doen door de populatiepercentages om te rekenen naar verwachte frequenties gegeven dat de steekproef uit $480$ kiesgerechtigde Nederlanders bestaat:
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
@@ -43,13 +47,8 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
             \bottomrule
         \end{tabular}
     \end{center}
-    Omdat we willen kijken of de geobserveerde data overeenkomen met de verwachte frequenties (van een nominale variabele), gaan we een chikwadraattoets voor aanpassing (goodness-of-fit test) uitvoeren.
-    Laat $X$ een kansvariabele zijn die het aantal verwijzingen naar de afdeling intensive care telt op een willekeurige dag.
-    Verder is gegeven dat er per dag $5$ orthopedische operaties zijn, die in \SI{20}{\percent} van de gevallen leidt tot complicaties.
-    Bij een chikwadraattoets voor aanpassing beginnen we met het defini\"eren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
     De verwachte frequenties zijn allemaal groter dan of gelijk aan $5$, dus kunnen we de toetsingsgrootheid direct berekenen.
     Merk op dat we de chikwadraatverdeling enkel konden gebruiken zodra de verwachte frequenties allemaal minstens $5$ zijn.
-    
     De toetsingsgrootheid $X^2$ bepalen we aan de hand van de volgende formule:
     \begin{align*}
         X^2  &= \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}},
@@ -57,8 +56,8 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     waarbij $i = 1,2,3,4$ de index van de kolom is.
     Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
     \begin{align*}
-        \chi^2  &= \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}} \\
-                &=\frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \frac{(O_{3} - E_{3})^2}{E_{3}} + \frac{(O_{4} - E_{4})^2}{E_{4}} \\
+        \chi^2  &= \sum_{i} \frac{(o_{i} - e_{i})^2}{e_{i}} \\
+                &=\frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \frac{(o_{3} - e_{3})^2}{e_{3}} + \frac{(o_{4} - e_{4})^2}{e_{4}} \\
                 &= \frac{(134 - 134.4)^2}{134.4} + \frac{(144-172.8)^2}{172.8} + \frac{(129-115.2)^2}{115.2} + \frac{(73-57.6)^2}{57.6} \\
                 &\approx 10.5717.
     \end{align*}
@@ -72,7 +71,7 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     \begin{align*}
         \chi^2\text{cdf}(\lb=g, \ub=\GRinfinity, \df=3) = \alpha = 0.05
     \end{align*}
-    Deze grenswaarde berekenen we met de \enquote{solver}-optie door het volgende in te voeren:
+    Deze grenswaarde berekenen we met de \enquote{numerieke solver} door het volgende in te voeren:
     \begin{align*}
         E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=3) \\
         E_2 &= 0.05.

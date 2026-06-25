@@ -1,98 +1,145 @@
-\subsection*{\SI{100\qtyproduct(1-\alpha)}{\percent}-betrouwbaarheidsinterval voor het gemiddelde $\mu$ (als $\sigma$ bekend is)}
-    \begin{align*}
-        z_{\alpha/2} = \invnorm(\opp=1-\alpha/2, \mu=0, \sigma=1)
-    \end{align*}
-        \[
-            z_{\alpha/2} = \invnorm(\opp=1-\alpha/2, \mu=0, \sigma=1)
-        \]
-        \[
-            [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \quad  \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
-        \]
+\subsection*{$100(1-\alpha)$\si{\percent}-betrouwbaarheidsinterval (BI) voor het gemiddelde $\mu$ (als $\sigma$ bekend is)}
+    \begin{multicols}{2}
+        \centering\textbf{TI84-Plus}
+            \begin{itemize}
+                \item $z_{\alpha/2} = \invnorm(\opp=1-\alpha/2, \mu=0, \sigma=1)$
+                \item $[\overline{x} - z_{\alpha/2} \cdot \sigma / \sqrt{n}, \quad  \overline{x} + z_{\alpha/2} \cdot \sigma / \sqrt{n}]$
+            \end{itemize}
 
-        \item \textbf{Minimale steekproefomvang voor \boldmath$\SI{100(1-\alpha)}{\percent}$-BI als \boldmath$\mu$ maximaal \boldmath$\pm\ a$ mag afwijken:}
+            \columnbreak
+
+            \centering\textbf{Casio fx-CG50}
+            \begin{itemize}
+                \item $z_{\alpha/2} = \invnormC(\opp=1-\alpha/2, \sigma=1, \mu=0)$
+                \item $[\overline{x} - z_{\alpha/2} \cdot \sigma / \sqrt{n}, \quad  \overline{x} + z_{\alpha/2} \cdot \sigma / \sqrt{n}]$
+            \end{itemize}
+    \end{multicols}
+
+    \subsubsection*{Minimale steekproefomvang $n$ voor een $100(1-\alpha)$\si{\percent}-BI met maximale afwijking $\pm a$:}
         \[
             n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{a} \right)^2
         \]
-    \end{itemize}
-
-\subsection*{Betrouwbaarheidsintervallen voor het gemiddelde $\mu$ ($\sigma$ onbekend)}
-    \begin{itemize}
-        \item \textbf{\boldmath$\SI{100(1-\alpha)}{\percent}$-betrouwbaarheidsinterval (BI) voor \boldmath$\mu$:}
-            \[
-                t = \invt(\opp=1-\alpha/2, \text{df}=n-1)
-            \]
-            \[
-                [\overline{x} - t \cdot \frac{s}{\sqrt{n}}, \quad \overline{x} + t \cdot \frac{s}{\sqrt{n}}]
-            \]
-
-        \item \textbf{Minimale steekproefomvang voor $\SI{100(1-\alpha)}{\percent}$-BI als $\mu$ maximaal \boldmath$\pm\ a$ mag afwijken:}
-            \[
-                \text{GR tabel (voor verschillende $n$):} \quad \frac{s}{\sqrt{n}} \cdot \text{InvT}(\text{area}=1-\alpha/2, \text{df}=n-1) \le a
-            \]
-            
-            {\itshape NB: zodra $n \ge 30$, vallen de normale en de $t$-verdeling nagenoeg samen. Je mag dan rekenen met de schatting $s$ (steekproefstandaardafwijking) in plaats van de daadwerkelijke (onbekende) $\sigma$.}
-    \end{itemize}
-\subsection*{Betrouwbaarheidsintervallen voor de binomiale succeskans $p$}
-    \textbf{Betrouwbaarheidsinterval voor \boldmath$p$ (Clopper-Pearson):}
-    Gegeven een binomiale verdeling met $n$ Bernoulli-experimenten en onbekende $p$, en uitkomst $k$.
-    \begin{enumerate}
-        \item Bereken (met \enquote{numeric solver}) de succeskans $p_1$ zodat geldt $P(X \le k) = \binomcdf(n, p_1, k) = \alpha/2$.
-        \item Bereken (met \enquote{numeric solver}) de succeskans $p_2$ zodat geldt $P(X \ge k) = 1 - \binomcdf(n, p_2, k-1) = \alpha/2$.
-        \item De berekende waarden voor $p_1$ en $p_2$ zijn de grenzen van het Clopper-Pearson interval.
-    \end{enumerate}
-
-\subsection*{Stappenplan hypothesetoetsen}
-    \begin{enumerate}
-        \item Definieer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
-        \item Bepaal het significantieniveau $\alpha$ (kans op onterecht verwerpen van $H_0$ $\rightarrow$ type-I fout).
-        \item Verzamel data voor de toetsingsgrootheid.
-        \item Bereken de toetsingsgrootheid.
-        \item Bepaal de toetsuitslag (wel of niet verwerpen van $H_0$).
-        \begin{itemize}
-            \item De toetsingsgrootheid volgt, uitgaande van $H_0$, een bepaalde kansverdeling.
-            \item Op basis van deze kansverdeling kun je (i) een kritiek gebied bepalen, of (ii) een $p$-waarde berekenen.
+\hrule 
+\subsection*{$100(1-\alpha)$\si{\percent}-betrouwbaarheidsinterval (BI) voor het gemiddelde $\mu$ (als $\sigma$ NIET bekend is)}
+    \begin{multicols}{2}
+        \centering\textbf{TI84-Plus}
             \begin{itemize}
-                \item Kritiek gebied: verwerp $H_0$ als de toetsingsgrootheid een waarde aanneemt in het kritiek gebied, anders accepteer $H_0$.
-                \item $p$-waarde: verwerp $H_0$ als $p \le \alpha$ (links-/rechtszijdig) of $p \le \frac{\alpha}{2}$ (tweezijdig), anders accepteer $H_0$.
+                \item $t_{\alpha/2} = \invt(\opp=1-\alpha/2, \df=n-1)$
+                \item $[\overline{x} - t_{\alpha/2} \cdot s / \sqrt{n}, \quad  \overline{x} + t_{\alpha/2} \cdot s / \sqrt{n}]$
             \end{itemize}
-        \end{itemize}
-        \item Vertaal de toetsuitslag naar de originele probleemcontext.
+
+            \columnbreak
+
+            \centering\textbf{Casio fx-CG50}
+            \begin{itemize}
+                \item $t_{\alpha/2} = \invtC(\opp=\alpha/2, \df=n-1)$
+                \item $[\overline{x} - t_{\alpha/2} \cdot s / \sqrt{n}, \quad  \overline{x} + t_{\alpha/2} \cdot s / \sqrt{n}]$
+            \end{itemize}
+    \end{multicols}
+    \subsubsection*{Minimale steekproefomvang $n$ voor een $100(1-\alpha)$\si{\percent}-BI met maximale afwijking $\pm a$:}
+        Gebruik het functiescherm en maak een tabel:
+        \begin{multicols}{2}
+            \centering\textbf{TI84-Plus ($y=$)}
+                \begin{itemize}
+                    \item $y_1 = s / \sqrt{X} \cdot \invt(\opp=1-\alpha/2, \df=X-1)$
+                    \item Bepaal de laagste waarde voor $X$ zodat $y_1 \leq a$
+                \end{itemize}
+
+                \columnbreak
+
+                \centering\textbf{Casio fx-CG50 (MENU 5)}
+                \begin{itemize}
+                    \item $y_1 = s / \sqrt{X} \cdot \invtC(\opp=1-\alpha/2, \df=X-1)$
+                    \item Bepaal de laagste waarde van $X$ zodat $y_1 \leq a$
+                \end{itemize}
+        \end{multicols}
+\hrule 
+
+\subsection*{$100(1-\alpha)$\si{\percent}-BI voor de binomiale succeskans $p$ (Clopper-Pearson methode)}
+    Gegeven is een binomiale verdeelde kansvariabele met bekende $n$ en uitkomst $k$, en onbekende $p = \text{ ?}$.
+    \begin{enumerate}
+        \item Bereken ondergrens van het ineterval: de kleinste succeskans $p_1$ zodat geldt $P(X \geq k) \geq \alpha/2$.
+        \item Bereken bovengrens van het interval: de grootste succeskans $p_2$ zodat geldt $P(X \leq k) \geq \alpha/2$.
     \end{enumerate}
+    \begin{multicols}{2}
+        \centering\textbf{TI84-Plus}
+            \begin{enumerate}
+                \item Gebruik numerieke solver met 
+                \begin{itemize}
+                    \item[$E_1$] $= 1 - \binomcdf(n, p=X, k-1)$
+                    \item[$E_2$] $=\alpha/2$
+                \end{itemize}
+                \item Gebruik numerieke solver met
+                \begin{itemize}
+                    \item[$E_1$] $= \binomcdf(n, p=X, k)$
+                    \item[$E_2$] $=\alpha/2$
+                \end{itemize}
+            \end{enumerate}
 
-    \newpage
-    \textbf{Drie typen hypothesetoetsen: linkszijdig, tweezijdig, rechtszijdig}
-    
-    \begin{minipage}{0.32\linewidth}
-        \begin{center}
-            {\bfseries Linkszijdige toets}
-            
-            Kritiek gebied: {\color{red} $(-\infty, g]$}
-            
-            \includegraphics[width=\linewidth]{left_sided.png}
-        \end{center}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{center}
-            {\bfseries Tweezijdige toets}
-            
-            Kritiek gebied: {\color{red} $(-\infty, g_1]$ en $[g_2, \infty)$}
-            
-            \includegraphics[width=\linewidth]{two_sided.png}
-        \end{center}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{center}
-            {\bfseries Rechtszijdige toets}
-            
-            Kritiek gebied: {\color{red} $[g, \infty)$}
-            
-            \includegraphics[width=\linewidth]{right_sided.png}
-        \end{center}
-    \end{minipage}
+            \columnbreak
 
-    \textbf{Kritieke gebieden uitrekenen}
+            \centering\textbf{Casio fx-CG50}
+            \begin{enumerate}
+                \item Gebruik numerieke solver met \[\solveNC\left(1-\binomcdfC(k-1,n,x)=\alpha/2, x\right)\]
+                \item Gebruik numerieke solver met \[\solveNC\left(\binomcdfC(k,n,x)=\alpha/2, x\right)\]
+            \end{enumerate}
+    \end{multicols}
+\hrule 
+
+\subsection*{Stappenplan voor iedere hypothesetoets}
+\begin{enumerate}
+    \item Definieer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
+    \item Bepaal het significantieniveau $\alpha$ (kans op onterecht verwerpen van $H_0$ $\rightarrow$ type-I fout).
+    \item Verzamel data voor de toetsingsgrootheid.
+    \item Bereken de toetsingsgrootheid.
+    \item Bepaal de toetsuitslag (wel of niet verwerpen van $H_0$).
+    \item Vertaal de toetsuitslag naar de originele probleemcontext.
+\end{enumerate}
+
+\newpage 
+
+\subsection*{Toetsuitslag bepalen}
+\begin{itemize}
+    \item De toetsingsgrootheid volgt, uitgaande van $H_0$, een bepaalde kansverdeling.
+    \item Op basis van deze kansverdeling kun je (i) een kritiek gebied bepalen, of (ii) een $p$-waarde berekenen.
+    \begin{itemize}
+        \item \textbf{Kritiek gebied:} verwerp $H_0$ alleen als de geobserveerde toetsingsgrootheid in het kritieke gebied ligt.
+        \item \textbf{$p$-waarde:} verwerp $H_0$ alleen als $p \le \alpha$ (links-/rechtszijdig) of $p \le \frac{\alpha}{2}$ (tweezijdig).
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Soorten hypothesetoetsen}
+    \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{m{0.17\textwidth}m{0.23\textwidth}m{0.21\textwidth}m{0.3\textwidth}}
+            \toprule
+                \textbf{Soort toets} & \textbf{$H_0$} & \textbf{Toetsingsgrootheid} & \textbf{Kansverdeling (onder $H_0$)} \\
+            \midrule
+                \multicolumn{4}{c}{\textbf{Toetsen voor het gemiddelde $\mu$ van een normale verdeling}} \\ 
+            \midrule
+                $\sigma$ bekend    & $\mu \leq/=/\geq \mu_0$ & $\overline{X}$ & $N(\mu_0, \sigma / \sqrt{n})$ \\
+                $\sigma$ onbekend  & $\mu \leq/=/\geq \mu_0$ & $T = \frac{\overline{X} - \mu_0}{s / \sqrt{n}}$ & $t(\text{df}=n-1)$ \\
+            \midrule
+                \multicolumn{4}{c}{\textbf{Chikwadraattoetsen ($\chi^2$)}} \\
+            \midrule
+                Onafhankelijkheid & Variabelen zijn \newline onafhankelijk & $X^2 = \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ & $\chi^2(\text{df}=\text{(\#rijen-1)} \cdot \text{(\#kolom'n-1)})$ \\
+                Goodness-of-fit & Variabele volgt bepaalde \newline discrete kansverdeling & $X^2 = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}$ & $\chi^2(\text{df}=\text{\#categorieën-1})$ \\
+            \midrule
+                \multicolumn{4}{c}{\textbf{Toetsen op basis van twee onafhankelijke populaties $A$ en $B$}} \\
+            \midrule
+                $F$-toets & $\sigma_A^2 = \sigma_B^2$ & $F = \frac{S_A^2}{S_B^2}$ & $F(\text{df}_A, \text{df}_B)$ \\
+                $z$-toets & $\mu_A \leq/=/\geq \mu_B$ & $V = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}}$ & $N(0, 1)$ \\
+                $t$-toets ($\sigma_A^2 = \sigma_B^2$) & $\mu_A \leq/=/\geq \mu_B$ & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_P^2}{n} + \frac{S_P^2}{m}}}$ & $t(\text{df}=n+m-2)$ \\
+                $t$-toets ($\sigma_A^2 \neq \sigma_B^2$) & $\mu_A \leq/=/\geq \mu_B$ & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_A^2}{n} + \frac{S_B^2}{m}}}$ & $t(\text{df}=\min(n-1, m-1))$ \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+
+% \newpage
+
+\subsection*{Kritieke gebieden}
     \begin{table}[H]
         \centering
         \renewcommand{\arraystretch}{1.5}
@@ -108,20 +155,22 @@
             \midrule
                 \multicolumn{4}{c}{\emph{Grenzen die met de \enquote{numeric solver} moeten worden opgelost:}} \\
             \midrule
-                $\chi^2(\text{df})$ & \multirow{2}*{$\chi^2\text{cdf}(0, g, \text{df}) = \alpha$} & $\chi^2\text{cdf}(0, g_1, \text{df}) = \frac{\alpha}{2}$ & \multirow{2}*{$\chi^2\text{cdf}(g, 10^{99}, \text{df}) = \alpha$}\\
-                & & $\chi^2\text{cdf}(g_2, 10^{99}, \text{df}) = \frac{\alpha}{2}$ & \\
+                $\chi^2(\text{df})$ & - & - & $\chi^2\text{cdf}(g, 10^{99}, \text{df}) = \alpha$\\
+                % & & $\chi^2\text{cdf}(g_2, 10^{99}, \text{df}) = \frac{\alpha}{2}$ & \\
             \midrule
-                $F(\text{df}_A, \text{df}_B)$ & \multirow{2}*{$\text{Fcdf}(0, g, \text{df}_A, \text{df}_B) = \alpha$} & $\text{Fcdf}(0, g_1, \text{df}_A, \text{df}_B) = \frac{\alpha}{2}$ & \multirow{2}*{$\text{Fcdf}(g, 10^{99}, \text{df}_A, \text{df}_B) = \alpha$}\\
+                $F(\text{df}_A, \text{df}_B)$ & - & $\text{Fcdf}(0, g_1, \text{df}_A, \text{df}_B) = \frac{\alpha}{2}$ & - \\
                 & & $\text{Fcdf}(g_2, 10^{99}, \text{df}_A, \text{df}_B) = \frac{\alpha}{2}$ & \\
             \bottomrule
         \end{tabular}
     \end{table}
+    {\itshape NB: bij de Casio kun je Invt, InvChiCD, InvFCD, etc. gebruiken in plaats van SolveN. Let op dat de Casio standaard kijkt naar oppervlaktes RECHTS van de grenswaarde (behalve bij invNormalCD), dus gebruik $\alpha/2$ in plaats van $1 - \alpha/2$, $\alpha$ in plaats van $1-\alpha$, etc.!}
 
-    \textbf{$p$-waardes uitrekenen (gegeven een theoretische en geobserveerde toetsingsgrootheid $T$ en $t$)}
+
+\subsection*{$p$-waardes (gegeven theoretische en geobserveerde toetsingsgrootheid $T$ en $t$)}
     \begin{table}[H]
         \centering
         \renewcommand{\arraystretch}{1.5}
-        \begin{tabular}{m{2.5cm}|cc}
+        \begin{tabular}{m{4.5cm}|cc}
             \toprule
                 \textbf{Kansverdeling (onder $H_0$)} & \textbf{Linkszijdig ($P(T \le t)$)} & \textbf{Rechtszijdig ($P(T \ge t)$)} \\
             \midrule
@@ -129,7 +178,7 @@
             \midrule
                 $t(\text{df})$ & $p = \tcdf(-10^{99}, t, \text{df})$ & $p = \tcdf(t, 10^{99}, \text{df})$\\
             \midrule
-                $\chi^2(\text{df})$ & $p = \chi^2\text{cdf}(0, t, \text{df})$ & $p = \chi^2\text{cdf}(t, 10^{99}, \text{df})$ \\
+                $\chi^2(\text{df})$ & - & $p = \chi^2\text{cdf}(t, 10^{99}, \text{df})$ \\
             \midrule
                 $F(\text{df}_A, \text{df}_B)$ & $p = \text{Fcdf}(0, t, \text{df}_A, \text{df}_B)$ & $p = \text{Fcdf}(t, 10^{99}, \text{df}_A, \text{df}_B)$ \\
             \bottomrule
@@ -137,45 +186,59 @@
     \end{table}
 
     {\itshape NB: bij tweezijdige toetsen is de $p$-waarde gelijk aan het minimum van de linkszijdige en rechtszijdige $p$-waarde.}
+\vspace{0.5cm}
+    \subsection*{Linkszijdige, tweezijdige en rechtszijdige hypothesetoetsen}
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            {\bfseries Linkszijdige toets}
+            \[
+                H_0: \mu \geq \mu_0 \text{ vs. } H_1: \mu < \mu_0
+            \]
+            Acceptatiegebied: {\color{green!50!black} $[g, \infty)$}
 
-    \textbf{Onderscheidend vermogen $1 - \beta$ van een $z$-toets voor het gemiddelde $\mu$ (gegeven dat $\mu = \mu_1 \neq \mu_0$):}
-    \begin{align*}
-        1 - \beta = 
-        \begin{cases}
-            P(\overline{X} \le g \mid \mu = \mu_1) = \normalcdf(-10^{99}, g, \mu_1, \frac{\sigma}{\sqrt{n}}) & \text{(linkszijdige toets)}\\
-            P(\overline{X} \le g_1 \text{ of } \overline{X} \ge g_2 \mid \mu = \mu_1) = 1 - \normalcdf(g_1, g_2, \mu_1, \frac{\sigma}{\sqrt{n}}) & \text{(tweezijdige toets)}\\
-            P(\overline{X} \ge g \mid \mu = \mu_1) = \normalcdf(g, 10^{99}, \mu_1, \frac{\sigma}{\sqrt{n}}) & \text{(rechtszijdige toets)}
-        \end{cases}
-    \end{align*}
+            Kritiek gebied: {\color{red} $(-\infty, g)$}
+            
+            \includegraphics[width=\linewidth]{linkszijdig.png}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            {\bfseries Tweezijdige toets}
+            \[
+                H_0: \mu = \mu_0 \text{ vs. } H_1: \mu \neq \mu_0
+            \]
+            Acceptatiegebied: {\color{green!50!black} $[g_1, g_2]$}
 
-    \newpage
-    \textbf{Soorten hypothesetoetsen}
-    \begin{table}[H]
-        \centering
-        \renewcommand{\arraystretch}{1.5}
-        \begin{tabular}{c|c|c}
-            \toprule
-                \textbf{Soort toets} & \textbf{Toetsingsgrootheid} & \textbf{Kansverdeling (onder $H_0$)} \\
-            \midrule
-                \multicolumn{3}{c}{\textbf{Toetsen voor het gemiddelde $\mu \leq \mu_0$ of $\mu = \mu_0$ of $\mu \geq \mu_0$}} \\ 
-            \midrule
-                $z$-toets ($\sigma$ bekend)    & $\overline{X}$ & $N(\mu_0, \frac{\sigma}{\sqrt{n}})$ \\
-                $t$-toets ($\sigma$ onbekend)  & $T = \frac{\overline{X} - \mu_0}{\frac{s}{\sqrt{n}}}$ & $t(\text{df}=n-1)$ \\
-            \midrule
-                \multicolumn{3}{c}{\textbf{Chikwadraattoetsen ($\chi^2$)}} \\
-            \midrule
-                Onafhankelijkheid & $X^2 = \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ & $\chi^2(\text{df}=\text{(\#rijen-1)} \cdot \text{(\#kolommen-1)})$ \\
-                Aanpassing (goodness-of-fit) & $X^2 = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}$ & $\chi^2(\text{df}=\text{(\#categorie\"en-1)})$ \\
-            \midrule
-                \multicolumn{3}{c}{\textbf{Verschiltoetsen (op basis van twee populaties $A$ en $B$)}} \\
-            \midrule
-                $F$-toets: $\sigma_A^2 = \sigma_B^2$ & $F = \frac{S_A^2}{S_B^2}$ & $F(\text{df}_A, \text{df}_B)$ \\
-                $z$-toets & $V =\overline{X_A} - \overline{X_B}$ & $N\left(\mu_A - \mu_B, \sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}\right)$ \\
-                $t$-toets (geval $\sigma_A^2 = \sigma_B^2$) & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_P^2}{n} + \frac{S_P^2}{m}}}$ & $t(\text{df}=n+m-2)$ \\
-                $t$-toets (geval $\sigma_A^2 \neq \sigma_B^2$) & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_A^2}{n} + \frac{S_B^2}{m}}}$ & $t(\text{df}=\min(n-1, m-1))$ \\
-            \bottomrule
-        \end{tabular}
-    \end{table}
+            Kritiek gebied: {\color{red} $(-\infty, g_1)$ en $(g_2, \infty)$}
+            
+            \includegraphics[width=\linewidth]{tweezijdig.png}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            {\bfseries Rechtszijdige toets}
+            \[
+                H_0: \mu \leq \mu_0 \text{ vs. } H_1: \mu > \mu_0
+            \]
+            Acceptatiegebied: {\color{green!50!black} $(-\infty, g]$}
+
+            Kritiek gebied: {\color{red} $[g, \infty)$}
+            
+            \includegraphics[width=\linewidth]{rechtszijdig.png}
+        \end{center}
+    \end{minipage}
+
+    % \textbf{Onderscheidend vermogen $1 - \beta$ van een $z$-toets voor het gemiddelde $\mu$ (gegeven dat $\mu = \mu_1 \neq \mu_0$):}
+    % \begin{align*}
+    %     1 - \beta = 
+    %     \begin{cases}
+    %         P(\overline{X} \le g \mid \mu = \mu_1) = \normalcdf(-10^{99}, g, \mu_1, \frac{\sigma}{\sqrt{n}}) & \text{(linkszijdige toets)}\\
+    %         P(\overline{X} \le g_1 \text{ of } \overline{X} \ge g_2 \mid \mu = \mu_1) = 1 - \normalcdf(g_1, g_2, \mu_1, \frac{\sigma}{\sqrt{n}}) & \text{(tweezijdige toets)}\\
+    %         P(\overline{X} \ge g \mid \mu = \mu_1) = \normalcdf(g, 10^{99}, \mu_1, \frac{\sigma}{\sqrt{n}}) & \text{(rechtszijdige toets)}
+    %     \end{cases}
+    % \end{align*}    
 
     \textbf{Beslisboom hypothesetoetsen}
 
@@ -225,27 +288,43 @@
     s_{\varepsilon}^2 &= \frac{\sum e_i^2}{n - 2} = \frac{\sum \left(y_i - (a + b \cdot x_i)\right)^2}{n - 2}=  \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) \\ 
 \end{align*}
 
-\textbf{\boldmath$\SI{100\cdot(1-\alpha)}{\percent}$-betrouwbaarheidsinterval voor de gemiddelde $Y$ bij een gegeven $X = x_0$:}
-\[
-    t = \invt(\text{opp} = 1 - \alpha/2, \text{df} = n - 2)
-\]
-\[
-    s_\mu = s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }
-\]
-\[
-    [a+b\cdot x_0 - t \cdot s_\mu, \quad a+b\cdot x_0 + t \cdot s_\mu]
-\]
+\textbf{\boldmath$100\cdot(1-\alpha)$\si{\percent}-betrouwbaarheidsinterval voor de gemiddelde $Y$ bij een gegeven $X = x_0$:}
+    \begin{multicols}{2}
+        \centering\textbf{TI84-Plus}
+            \begin{itemize}
+                \item $t_{\alpha/2} = \invt(\opp=1-\alpha/2, \df = n - 2)$
+                \item $s_\mu = s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
+                \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_\mu, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_\mu]$
+            \end{itemize}
 
-\textbf{\boldmath$\SI{100\cdot(1-\alpha)}{\percent}$-betrouwbaarheidsinterval voor $Y$ bij een gegeven $X = x_0$:}
-\[
-    t = \invt(\text{opp} = 1 - \alpha/2, \text{df} = n - 2)
-\]
-\[
-    s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }
-\]
-\[
-    [a+b\cdot x_0 - t \cdot s_f,\quad a+b\cdot x_0 + t \cdot s_f]
-\]
+            \columnbreak
+
+            \centering\textbf{Casio fx-CG50}
+            \begin{itemize}
+                \item $t_{\alpha/2} = \invtC(\opp=\alpha/2, \df = n - 2)$
+                \item $s_\mu = s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
+                \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_\mu, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_\mu]$
+            \end{itemize}
+    \end{multicols}
+
+\textbf{\boldmath$100\cdot(1-\alpha)$\si{\percent}-betrouwbaarheidsinterval voor $Y$ bij een gegeven $X = x_0$:}
+    \begin{multicols}{2}
+        \centering\textbf{TI84-Plus}
+            \begin{itemize}
+                \item $t_{\alpha/2} = \invt(\opp=1-\alpha/2, \df = n - 2)$
+                \item $s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
+                \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_f, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_f]$
+            \end{itemize}
+
+            \columnbreak
+
+            \centering\textbf{Casio fx-CG50}
+            \begin{itemize}
+                \item $t_{\alpha/2} = \invtC(\opp=\alpha/2, \df = n - 2)$
+                \item $s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
+                \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_f, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_f]$
+            \end{itemize}
+    \end{multicols}
 
 % \textbf{Covariance:}
 % \[

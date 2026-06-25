@@ -1,3 +1,5 @@
+\newpage
+
 \question{10.11}{
     In een ziekenhuis worden dagelijks vijf orthopedische operaties uitgevoerd.
     Bekend is dat deze in \SI{20}{\percent} van de gevallen leiden tot complicaties waardoor de pati\"ent enige tijd moet verblijven op de afdeling intensive care.
@@ -19,20 +21,24 @@
         \end{tabular}
     \end{center}
 }
-Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomiale verdeling met $p=0.20$.
+\noindent Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomiale verdeling met $p=0.20$.
 \answer{
-    Omdat we willen kijken of de gegeven data overeenkomen met een specifieke discrete kansverdeling, in dit geval de binomiale verdeling met $p=0.20$, kunnen we een chikwadraattoets voor aanpassing (goodness-of-fit test) uitvoeren.
-    Laat $X$ een kansvariabele zijn die het aantal verwijzingen naar de afdeling intensive care telt op een willekeurige dag.
-    Verder is gegeven dat er per dag $5$ orthopedische operaties zijn, die in $20\%$ van de gevallen leidt tot complicaties.
-    Bij een chikwadraattoets voor aanpassing beginnen we met het defini\"eren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
+    We hebben steekproefdata verzameld met geobserveerde frequenties van uitkomsten van een categorische variabele (dus discreet) $X$.
+    Deze kansvariabele $X$ (aantal verwijzingen naar de IC op een willekeurige dag) heeft een bepaalde kansverdeling, maar we weten niet precies hoe deze eruit ziet.\medskip
+
+    We willen toetsen of $X$ binomiaal verdeeld is met succeskans $n = 5$ en $p = 0.20$ (er geldt niet dat $n \neq 100$, maar wel dat we $100$ trekkingen doen voor deze kansvariabele en turven hoe vaak iedere uitkomst voorkomt).
+    Hiertoe voeren we een chikwadraat-aanpassingstoets uit (\enquote{goodness-of-fit test}).
+    Allereerst definiëren we de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.\medskip
     \begin{itemize}
         \item[$H_0$:] de kansvariabele $X$ is binomiaal verdeeld met parameters $n=5$ en $p=0.20$.
-        \item[$H_1$:] de kansvariabele $X$ volgt een andere kansverdeling (merk op: dit kan nog steeds een binomiale verdeling zijn, maar met andere parameters!).
+        \item[$H_1$:] de kansvariabele $X$ volgt een andere kansverdeling.
     \end{itemize}
-    Het significantieniveau $\alpha=0.05$ is gegeven in de opdracht, net als de geobserveerde data.
+    Merk op dat in het geval dat $H_0$ verworpen wordt, dit niet betekent dat $X$ niet binomiaal verdeeld is. 
+    Dat kan nog steeds, maar dan met een andere succeskans $p$.
+    Het significantieniveau $\alpha=0.05$ is gegeven in de opdracht, net als de geobserveerde frequenties.
     Om de toetsingsgrootheid $X^2$ te kunnen bepalen, moeten we eerst de \emph{expected}-tabel berekenen.
-    Omdat onder de nulhypothese $H_0$ geldt dat $X \sim \binomial{n=5}{p=0.20}$, kunnen we deze verwachte aantallen uitrekenen. 
-    Omdat we $100$ afzonderlijke dagen bekijken, moet dit ook worden meegenomen in de verwachte frequenties.   
+    Hiervoor gebruiken we de nulhypothese $H_0$ dat $X$ binomiaal verdeeld is met parameters $n = 5$ en $p = 0.20$.
+    Omdat we $100$ trekkingen van $X$ bekijken, kunnen we de verwachte frequenties van uitkomst $k$ uitrekenen als $100 \cdot P(X=k)$.   
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
@@ -51,7 +57,7 @@ Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomia
         \end{tabular}
     \end{center}
     Merk op dat we de chikwadraatverdeling enkel konden gebruiken zodra de verwachte frequenties allemaal minstens $5$ zijn.
-    Om dit te bereiken, moeten we categorie\"en samennemen, namelijk $3$ tot en met $5$:
+    Om dit te bereiken, moeten we categorieëen samennemen, namelijk $3$ tot en met $5$:
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
@@ -74,8 +80,8 @@ Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomia
     waarbij $i = 1,2,3,4$ de index van de rij is.
     Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
     \begin{align*}
-        \chi^2  &= \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}} \\
-                &=\frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \frac{(O_{3} - E_{3})^2}{E_{3}} + \frac{(O_{4} - E_{4})^2}{E_{4}} \\
+        \chi^2  &= \sum_{i} \frac{(o_{i} - e_{i})^2}{e_{i}} \\
+                &=\frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \frac{(o_{3} - e_{3})^2}{e_{3}} + \frac{(o_{4} - e_{4})^2}{e_{4}} \\
                 &= \frac{(15 - 32.768)^2}{32.768} + \frac{(25-40.96)^2}{40.96} + \frac{(36-20.48)^2}{20.48} + \frac{(24-5.792)^2}{5.792} \\
                 &\approx 84.8540.
     \end{align*}
@@ -91,9 +97,13 @@ Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomia
             &\approx 2.7893 \cdot 10^{-18}.
     \end{align*}
     Aangezien de $p$-waarde extreem klein is, betekent dit dat de geobserveerde toetsingsgrootheid $\chi^2$ extreem hoge waarde heeft onder de aanname van een binomiale verdeling met $n=5$ en $p=0.20$.
-    Omdat de $p$-waarde veel kleiner is dan het significantieniveau $\alpha=0.01$, wordt $H_0$  verworpen.
+    Omdat de $p$-waarde veel kleiner is dan het significantieniveau $\alpha=0.01$, wordt $H_0$ verworpen.
     Er is voldoende bewijs om aan te nemen dat het aantal verwijzingen naar de afdeling intensive care niet binomiaal verdeeld is met parameters $n=5$ en $p=0.20$. 
-    \vspace{1em}
+    \begin{center}
+        \resizebox{0.9\textwidth}{!}{
+            \includegraphics{opg10.11.png}
+        }
+    \end{center}
     {
         \itshape Noot: eigenlijk moet je nog doordenken over wat de toetsuitslag betekent.
         Merk op dat volgens de metingen het totaal aantal doorverwijzingen in $100$ dagen gelijk is aan
@@ -101,7 +111,7 @@ Toets met $\alpha=0.05$ of de waargenomen verdeling overeenstemt met een binomia
             0\cdot 15 + 1 \cdot 25 + 2 \cdot 36 + 3 \cdot 12 + 4 \cdot 10 + 5 \cdot 2 = 183
         \]
         Aangezien er elke dag $5$ operaties plaatsvinden, is het totaal aantal operaties gelijk aan $500$.
-        Dit betekent dat de fractie doorverwezen pati\"enten gelijk is aan $\frac{183}{500} = 0.366$.
+        Dit betekent dat de fractie doorverwezen patiënten gelijk is aan $\frac{183}{500} = 0.366$.
         Deze fractie is veel groter dan $p=0.20$, dus misschien is het niet zo realistisch om te verwachten dat de nulhypothese gaat kloppen.
         Een analyse van de ruwe data is dus nodig om te bekijken wat de daadwerkelijke samenhang is tussen de variabelen.
     }

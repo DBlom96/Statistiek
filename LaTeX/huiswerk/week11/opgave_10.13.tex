@@ -18,20 +18,19 @@
     \end{center}
 }
 \answer{
-    Omdat we willen kijken of de gegeven data overeenkomen met een specifieke discrete kansverdeling, in dit geval de Poissonverdeling met $\mu=1$, kunnen we een chikwadraattoets voor aanpassing (goodness-of-fit test) uitvoeren.
+    Omdat we willen kijken of de gegeven data overeenkomen met een specifieke discrete kansverdeling,
+    in dit geval de Poissonverdeling met $\mu=1$, kunnen we een chikwadraattoets voor aanpassing (\enquote{goodness-of-fit test}) uitvoeren.
     Laat $X$ een kansvariabele zijn die het aantal branden telt in een willekeurige week.
     Verder is gegeven dat over een periode van $100$ weken het aantal branden is geteld.
-    Bij een chikwadraattoets voor aanpassing beginnen we met het defini\"eren van de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
-
+    Allereerst definiëren we de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.
     \begin{itemize}
         \item[$H_0$:] de kansvariabele $X$ is Poisson verdeeld met gemiddelde $\mu=1$.
         \item[$H_1$:] de kansvariabele $X$ volgt een andere kansverdeling (Dit kan nog steeds een Poissonverdeling zijn, maar met een andere gemiddelde).
     \end{itemize}
-
     Het significantieniveau $\alpha=0.05$ is gegeven in de opdracht, net als de geobserveerde data.
     Om de toetsingsgrootheid $X^2$ te kunnen bepalen, moeten we eerst de \emph{expected}-tabel berekenen.
-    Omdat onder de nulhypothese $H_0$ geldt dat $X \sim \poisson{\mu=1}$, kunnen we deze verwachte aantallen uitrekenen. 
-    Omdat we $100$ afzonderlijke weken bekijken, moet dit ook worden meegenomen in de verwachte frequenties.   
+    Als we aannemen dat de nulhypothese $H_0$ waar is, dan geldt dat $X$ Poisson verdeeld is met $\mu=1$.
+    Verder is gegeven dat we $100$ afzonderlijke weken bekijken, dus we kunnen deze verwachte frequenties uitrekenen:
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
@@ -50,7 +49,7 @@
         \end{tabular}
     \end{center}
     Merk op dat we de chikwadraatverdeling enkel konden gebruiken zodra de verwachte frequenties allemaal minstens $5$ zijn.
-    Om dit te bereiken, moeten we categorie\"en samenvoegen, namelijk $3$ en $4$ of meer:
+    Om dit te bereiken, moeten we categorieën samenvoegen, namelijk $3$ en $4$ of meer:
     \begin{center}
         \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
@@ -76,8 +75,8 @@
     
     Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
     \begin{align*}
-        \chi^2  &= \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}} \\
-                &=\frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \frac{(O_{3} - E_{3})^2}{E_{3}} + \frac{(O_{4} - E_{4})^2}{E_{4}} \\
+        \chi^2  &= \sum_{i} \frac{(o_{i} - e_{i})^2}{e_{i}} \\
+                &=\frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \frac{(o_{3} - e_{3})^2}{e_{3}} + \frac{(o_{4} - e_{4})^2}{e_{4}} \\
                 &= \frac{(48 - 36.7879)^2}{36.7879} + \frac{(24-36.7879)^2}{36.7879} + \frac{(16-18.3940)^2}{18.3940} + \frac{(12-8.0301)^2}{8.0301} \\
                 &\approx 10.1366.
     \end{align*}
@@ -108,13 +107,12 @@
         }
     \end{center}
 
-    {\bfseries Alternatief:} de $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
+    {\noindent\bfseries Alternatief:} de $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
     \begin{align*}
         p   &= P(X^2 \ge \chi^2) \\
             &= \chi^2\text{cdf}(\lb=\chi^2\approx 10.1366, \ub=\GRinfinity, \df=3) \\
             &\approx 0.0174
     \end{align*}
-
     Aangezien de $p$-waarde kleiner is dan het significantieniveau $\alpha$, betekent dit dat de geobserveerde toetsingsgrootheid $\chi^2$ een extreem hoge waarde heeft onder de aanname van een Poissonverdeling met $\mu=1$.
     Dit betekent dat op basis van deze steekproef de nulhypothese $H_0$ wordt verworpen.
     Er is voldoende bewijs om aan te nemen dat het aantal branden per week niet een Poissonverdeling met gemiddelde $\mu=1$ volgt.
