@@ -7,7 +7,7 @@
     Van alle ondervraagden is het opleidingsniveau genoteerd.
     In de volgende tabel wordt dit opleidingsniveau vergeleken met de totale Nederlandse bevolking:
     \begin{center}
-        \renewcommand{\arraystretch}{1.25}
+        % \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{cccccc}
             \toprule
                 & {\bfseries Laag} & {\bfseries Matig} & {\bfseries Redelijk} & {\bfseries Hoog} & {\bfseries Totaal} \\
@@ -20,19 +20,19 @@
 }
 Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd.
 \answer{
-    In deze opgave willen we kijken of de steekproef representatief is of niet.
-    Hiervoor moeten we een chikwadraattoets uitvoeren op basis van de gegeven verdeling van opleidingsniveaus onder de gehele populatie.
-    Allereerst definiëren we de volgende nulhypothese $H_0$ en de alternatieve hypothese $H_1$:
+    We willen in deze opgave toetsen of de getrokken steekproef representatief is of niet.
+    Om die reden voeren we een chikwadraat-aanpassingstoets uit op basis van de gegeven populatieverdeling van opleidingsniveaus.
+
+    Allereerst definiëren we de hypothesen van deze toets:
     \begin{itemize}
-        \item[$H_0$:] de gekozen steekproef is representatief voor de populatie, oftewel de steekproef bestaat uit aantallen personen per opleidingsniveau naar rato van hoe vaak deze voorkomt in de totale Nederlandse bevolking.
-        \item[$H_1$:] de gekozen steekproef is NIET representatief voor de .
+        \item[$H_0$:] de gekozen steekproef is representatief voor de populatie, oftewel de steekproef bestaat uit personen met opleidingsniveaus naar rato van de gehele Nederlandse populatie.
+        \item[$H_1$:] de gekozen steekproef is NIET representatief voor de populatie.
     \end{itemize}
     Verder is het significantieniveau $\alpha = 0.05$ en de steekproefdata (zie tabel) gegeven.
-    Om te toetsen of de gegeven steekproefdata (observed) overeenkomen representatief zijn,
-    moeten we allereerst de verwachte frequenties berekenen gebaseerd op de populatiepercentages.
-    Dit kunnen we doen door de populatiepercentages om te rekenen naar verwachte frequenties gegeven dat de steekproef uit $480$ kiesgerechtigde Nederlanders bestaat:
+    Om te toetsen of de geobserveerde steekproefdata overeenkomen met de populatieverdeling, moeten we de verwachte frequenties berekenen.
+    Dit kunnen we doen door de populatiepercentages om te rekenen naar frequenties gegeven dat de steekproef in totaal uit $480$ personen bestaat:
     \begin{center}
-        \renewcommand{\arraystretch}{1.25}
+        % \renewcommand{\arraystretch}{1.25}
         \begin{tabular}{ccc}
             \toprule
                 {\bfseries Opleidingsniveau} & {\bfseries Steekproeffrequenties} & {\bfseries Verwachte frequenties} \\                            
@@ -56,8 +56,7 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     waarbij $i = 1,2,3,4$ de index van de kolom is.
     Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
     \begin{align*}
-        \chi^2  &= \sum_{i} \frac{(o_{i} - e_{i})^2}{e_{i}} \\
-                &=\frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \frac{(o_{3} - e_{3})^2}{e_{3}} + \frac{(o_{4} - e_{4})^2}{e_{4}} \\
+        \chi^2  &= \sum_{i} \frac{(o_{i} - e_{i})^2}{e_{i}} =\frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \frac{(o_{3} - e_{3})^2}{e_{3}} + \frac{(o_{4} - e_{4})^2}{e_{4}} \\
                 &= \frac{(134 - 134.4)^2}{134.4} + \frac{(144-172.8)^2}{172.8} + \frac{(129-115.2)^2}{115.2} + \frac{(73-57.6)^2}{57.6} \\
                 &\approx 10.5717.
     \end{align*}
@@ -71,7 +70,7 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     \begin{align*}
         \chi^2\text{cdf}(\lb=g, \ub=\GRinfinity, \df=3) = \alpha = 0.05
     \end{align*}
-    Deze grenswaarde berekenen we met de \enquote{numerieke solver} door het volgende in te voeren:
+    Deze grenswaarde berekenen we als volgt met behulp van de \enquote{numerieke solver}:
     \begin{align*}
         E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=3) \\
         E_2 &= 0.05.
@@ -81,11 +80,11 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     Er is voldoende bewijs om aan te nemen dat de steekproef niet representatief is voor de populatie kiesgerechtigde Nederlanders.
     \begin{center}
         \resizebox{0.9\textwidth}{!}{
-            \includegraphics{opg_10.12_kritiek.png}
+            \includegraphics{opg10.12_kritiek.png}
         }
     \end{center}
 
-    {\bfseries Alternatief}: de $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
+    \noindent{\bfseries Alternatief}: de $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
     \begin{align*}
         p   &= P(X^2 \ge \chi^2) \\
             &= \chi^2\text{cdf}(\lb=\chi^2 \approx 10.5717, \ub=\GRinfinity, \df=3) \\
@@ -96,14 +95,12 @@ Toets met $\alpha=0.05$ of de steekproef als representatief mag worden beschouwd
     Er is voldoende bewijs om aan te nemen dat de steekproef niet representatief is voor de populatie kiesgerechtigde Nederlanders.
     \begin{center}
         \resizebox{0.9\textwidth}{!}{
-            \includegraphics{opg_10.12_p_waarde.png}
+            \includegraphics{opg10.12_p_waarde.png}
         }
     \end{center}
-
-    \vspace{1em}
     {
-        \itshape Noot: eigenlijk moet je nog doordenken over wat de toetsuitslag betekent.
+        \noindent\itshape Noot: eigenlijk moet je nog doordenken over wat de toetsuitslag betekent.
         Merk op dat volgens de metingen het aantal respondenten met redelijk en hoog opleidingsniveau (veel) groter is dan verwacht, terwijl dit voor mensen met een matig opleidingsniveau een stuk lager dan verwacht is.
-        Dit kan erop duiden dat mensen met een hoger opleidingsniveau eerder geneigd zijn om deel te nemen aan een dergelijk opinieonderzoek.
+        Dit kan erop duiden dat mensen met een hoger opleidingsniveau eerder geneigd zijn om deel te nemen aan een dergelijk opinieonderzoek en dat er een bias in de antwoorden van het onderzoek zit doordat de steekproef niet representatief is.
     }
 }

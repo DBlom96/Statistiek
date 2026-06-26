@@ -1,3 +1,4 @@
+\newpage
 \question{10.13}{
     Het aantal brandmeldingen dat in een stad per week is geregistreerd gedurende een periode van $100$ weken blijkt uit de tabel.
     Toets of het aantal branden per week is te beschouwen als een kansvariabele die een Poissonverdeling volgt met $\mu = 1$ (kies $\alpha = 0.05$).
@@ -32,7 +33,7 @@
     Als we aannemen dat de nulhypothese $H_0$ waar is, dan geldt dat $X$ Poisson verdeeld is met $\mu=1$.
     Verder is gegeven dat we $100$ afzonderlijke weken bekijken, dus we kunnen deze verwachte frequenties uitrekenen:
     \begin{center}
-        \renewcommand{\arraystretch}{1.25}
+        \renewcommand{\arraystretch}{1.1}
         \begin{tabular}{ccc}
             \toprule
                 {\bfseries Aantal branden} & {\bfseries Frequentie} & {\bfseries Frequentie} \\
@@ -48,37 +49,37 @@
             \bottomrule
         \end{tabular}
     \end{center}
-    Merk op dat we de chikwadraatverdeling enkel konden gebruiken zodra de verwachte frequenties allemaal minstens $5$ zijn.
-    Om dit te bereiken, moeten we categorieën samenvoegen, namelijk $3$ en $4$ of meer:
-    \begin{center}
-        \renewcommand{\arraystretch}{1.25}
-        \begin{tabular}{ccc}
-            \toprule
-                {\bfseries Aantal branden} & {\bfseries Frequentie} & {\bfseries Frequentie} \\
-                {\bfseries per week} & {\bfseries (observed)} & {\bfseries (expected)} \\
-            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                $0$         & $48$ & $36.7879$ \\
-                $1$         & $24$ & $36.7879$ \\
-                $2$         & $16$ & $18.3940$ \\
-                $3$ of meer & $12$ & $8.0301$ \\
-            \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
-                Totaal & $100$ dagen & $100$ dagen \\
-            \bottomrule
-        \end{tabular}
-    \end{center}
+    % Merk op dat we de chikwadraatverdeling enkel konden gebruiken zodra de verwachte frequenties allemaal minstens $5$ zijn.
+    % Om dit te bereiken, moeten we categorieën samenvoegen, namelijk $3$ en $4$ of meer:
+    % \begin{center}
+    %     \renewcommand{\arraystretch}{1.25}
+    %     \begin{tabular}{ccc}
+    %         \toprule
+    %             {\bfseries Aantal branden} & {\bfseries Frequentie} & {\bfseries Frequentie} \\
+    %             {\bfseries per week} & {\bfseries (observed)} & {\bfseries (expected)} \\
+    %         \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+    %             $0$         & $48$ & $36.7879$ \\
+    %             $1$         & $24$ & $36.7879$ \\
+    %             $2$         & $16$ & $18.3940$ \\
+    %             $3$ of meer & $12$ & $8.0301$ \\
+    %         \cmidrule{1-1} \cmidrule{2-2} \cmidrule{3-3}
+    %             Totaal & $100$ dagen & $100$ dagen \\
+    %         \bottomrule
+    %     \end{tabular}
+    % \end{center}
 
     De toetsingsgrootheid $X^2$ bepalen we aan de hand van de volgende formule:
     \begin{align*}
         X^2  &= \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}},
     \end{align*}
-    waarbij $i = 1,2,3,4$ de index van de rij is.
+    waarbij $i = 0,1,2,3,\geq 4$ een mogelijke uitkomst is.
     
     Dit geeft in dit specifieke geval een geobserveerde toetsingsgrootheid 
     \begin{align*}
         \chi^2  &= \sum_{i} \frac{(o_{i} - e_{i})^2}{e_{i}} \\
-                &=\frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \frac{(o_{3} - e_{3})^2}{e_{3}} + \frac{(o_{4} - e_{4})^2}{e_{4}} \\
-                &= \frac{(48 - 36.7879)^2}{36.7879} + \frac{(24-36.7879)^2}{36.7879} + \frac{(16-18.3940)^2}{18.3940} + \frac{(12-8.0301)^2}{8.0301} \\
-                &\approx 10.1366.
+                &=\frac{(o_{0} - e_{0})^2}{e_{0}} + \frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \frac{(o_{3} - e_{3})^2}{e_{3}} + \frac{(o_{\geq 4} - e_{\geq 4})^2}{e_{\geq 4}} \\
+                &= \frac{(48 - 36.7879)^2}{36.7879} + \frac{(24 - 36.7879)^2}{36.7879} + \frac{(16 - 18.394)^2}{18.394} + \frac{(8 - 6.1313)^2}{6.1313} + \frac{(4 - 1.8988)^2}{1.8988}\\
+                &\approx 11.0686
     \end{align*}
     Onder de nulhypothese volgt de toetsingsgrootheid $X$ een chikwadraatverdeling met
     \[
@@ -99,26 +100,26 @@
     \end{align*}
     krijgen we een waarde van $g \approx 7.8147$.
     Het kritieke gebied is dus $[7.8147, \infty)$.
-    De geobserveerde toetsingsgrootheid $\chi^2 \approx 10.1366$ ligt daarmee in het kritieke gebied en dus wordt $H_0$ verworpen.
+    De geobserveerde toetsingsgrootheid $\chi^2 \approx 11.0686$ ligt daarmee in het kritieke gebied en dus wordt $H_0$ verworpen.
     Er is voldoende bewijs om aan te nemen dat het aantal branden per week niet een Poissonverdeling met gemiddelde $\mu=1$ volgt.
     \begin{center}
         \resizebox{0.9\textwidth}{!}{
-            \includegraphics{opg_10.13_kritiek.png}
+            \includegraphics{opg10.13_kritiek.png}
         }
     \end{center}
 
     {\noindent\bfseries Alternatief:} de $p$-waarde (rechteroverschrijdingskans) die hoort bij deze geobserveerde toetsingsgrootheid $\chi^2$ is gelijk aan
     \begin{align*}
         p   &= P(X^2 \ge \chi^2) \\
-            &= \chi^2\text{cdf}(\lb=\chi^2\approx 10.1366, \ub=\GRinfinity, \df=3) \\
-            &\approx 0.0174
+            &= \chi^2\text{cdf}(\lb=\chi^2\approx 11.0686, \ub=\GRinfinity, \df=3) \\
+            &\approx 0.0258
     \end{align*}
     Aangezien de $p$-waarde kleiner is dan het significantieniveau $\alpha$, betekent dit dat de geobserveerde toetsingsgrootheid $\chi^2$ een extreem hoge waarde heeft onder de aanname van een Poissonverdeling met $\mu=1$.
     Dit betekent dat op basis van deze steekproef de nulhypothese $H_0$ wordt verworpen.
     Er is voldoende bewijs om aan te nemen dat het aantal branden per week niet een Poissonverdeling met gemiddelde $\mu=1$ volgt.
     \begin{center}
         \resizebox{0.9\textwidth}{!}{
-            \includegraphics{opg_10.13_p_waarde.png}
+            \includegraphics{opg10.13_p_waarde.png}
         }
     \end{center}
 }
