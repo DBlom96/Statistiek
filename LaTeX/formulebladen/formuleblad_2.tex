@@ -112,7 +112,7 @@
     \begin{table}[H]
         \centering
         \renewcommand{\arraystretch}{1.5}
-        \begin{tabular}{m{0.17\textwidth}m{0.23\textwidth}m{0.21\textwidth}m{0.3\textwidth}}
+        \begin{tabular}{m{0.16\textwidth}m{0.22\textwidth}m{0.21\textwidth}m{0.33\textwidth}}
             \toprule
                 \textbf{Soort toets} & \textbf{$H_0$} & \textbf{Toetsingsgrootheid} & \textbf{Kansverdeling (onder $H_0$)} \\
             \midrule
@@ -123,13 +123,13 @@
             \midrule
                 \multicolumn{4}{c}{\textbf{Chikwadraattoetsen ($\chi^2$)}} \\
             \midrule
-                Onafhankelijkheid & Variabelen zijn \newline onafhankelijk & $X^2 = \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ & $\chi^2(\text{df}=\text{(\#rijen-1)} \cdot \text{(\#kolom'n-1)})$ \\
+                Onafhankelijkheid & Variabelen zijn \newline onafhankelijk & $X^2 = \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ & $\chi^2\left(\text{df}=\text{(\#rijen-1)} \cdot \text{(\#kolommen-1)}\right)$ \\
                 Goodness-of-fit & Variabele volgt bepaalde \newline discrete kansverdeling & $X^2 = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}$ & $\chi^2(\text{df}=\text{\#categorieën-1})$ \\
             \midrule
                 \multicolumn{4}{c}{\textbf{Toetsen op basis van twee onafhankelijke populaties $A$ en $B$}} \\
             \midrule
                 $F$-toets & $\sigma_A^2 = \sigma_B^2$ & $F = \frac{S_A^2}{S_B^2}$ & $F(\text{df}_A, \text{df}_B)$ \\
-                $z$-toets & $\mu_A \leq/=/\geq \mu_B$ & $V = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}}$ & $N(0, 1)$ \\
+                $z$-toets & $\mu_A \leq/=/\geq \mu_B$ & $Z = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{\sigma_A^2}{n} + \frac{\sigma_B^2}{m}}}$ & $N(0, 1)$ \\
                 $t$-toets ($\sigma_A^2 = \sigma_B^2$) & $\mu_A \leq/=/\geq \mu_B$ & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_P^2}{n} + \frac{S_P^2}{m}}}$ & $t(\text{df}=n+m-2)$ \\
                 $t$-toets ($\sigma_A^2 \neq \sigma_B^2$) & $\mu_A \leq/=/\geq \mu_B$ & $T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_A^2}{n} + \frac{S_B^2}{m}}}$ & $t(\text{df}=\min(n-1, m-1))$ \\
             \bottomrule
@@ -224,7 +224,7 @@
             \]
             Acceptatiegebied: {\color{green!50!black} $(-\infty, g]$}
 
-            Kritiek gebied: {\color{red} $[g, \infty)$}
+            Kritiek gebied: {\color{red} $(g, \infty)$}
             
             \includegraphics[width=\linewidth]{rechtszijdig.png}
         \end{center}

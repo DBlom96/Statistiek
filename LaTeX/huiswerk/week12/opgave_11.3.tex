@@ -8,40 +8,47 @@
     Toets of beide variabelen dezelfde verwachtingswaarde kunnen hebben (kies $\alpha=0.05$).
 }
 \answer{
-    We hebben te maken met twee normaal verdeelde kansvariabelen 
-    \begin{align*}
-        X &\sim \normal{\mu_X =\ ?}{\sigma_X = \sqrt{100}=10}, \\
-        Y &\sim \normal{\mu_Y =\ ?}{\sigma_Y = \sqrt{30}}. 
-    \end{align*}
+    We hebben te maken met twee normaal verdeelde kansvariabelen
+    \begin{itemize}
+        \item De eerste kansvariabele is $X$: deze is normaal verdeeld met verwachtingswaarde $\mu_X = \text{ ?}$ en standaardafwijking $\sigma_X = \sqrt{100}=10$.
+        \item De tweede kansvariabele is $Y$: deze is normaal verdeeld met verwachtingswaarde $\mu_Y = \text{ ?}$ en standaardafwijking $\sigma_Y = \sqrt{30}$.
+    \end{itemize} 
     Om te toetsen of de gemiddeldes van beide kansvariabelen gelijk zijn, gebruiken we de volgende nulhypothese $H_0$ en alternatieve hypothese $H_1$:
     \begin{itemize}
         \item[$H_0$:] De verwachtingswaarden zijn gelijk, oftewel $\mu_X = \mu_Y$.
         \item[$H_1$:] De verwachtingswaarden zijn niet gelijk, oftewel $\mu_X \neq \mu_Y$.
     \end{itemize}
     Verder zijn het significantieniveau $\alpha = 0.05$ en de steekproefgemiddeldes $\samplemeanx = 50$ en $\samplemeany = 55$ gegeven.
-    Als toetsingsgrootheid kijken we naar de verschilvariabele $V = \samplemeanvarX - \samplemeanvarY$.
-    Hiervoor geldt dat
+    Omdat de standaardafwijkingen $\sigma_X$ en $\sigma_Y$ bekend zijn, is de toetsingsgrootheid gelijk aan
+    \[
+        Z = \frac{(\samplemeanvarX - \samplemeanvarY) - (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_X^2}{n}+\frac{\sigma_Y^2}{m}}}
+    \]
+    Onder de nulhypothese geldt $\mu_X = \mu_Y$, oftewel de geobserveerde toetsingsgrootheid $z$ heeft een waarde van
     \begin{align*}
-        V = \samplemeanvarX - \samplemeanvarY = \normal{\mu_V = \mu_X - \mu_Y}{\sigma_V = \sqrt{\frac{\sigma_X^2}{n}+\frac{\sigma_Y^2}{m}} = \sqrt{\frac{100}{10}+\frac{30}{5}} = 4}.
+        z   &= \frac{(\samplemeanx - \samplemeany) - (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_X^2}{n}+\frac{\sigma_Y^2}{m}}} \\
+            &= \frac{(50-55) - 0}{\sqrt{\frac{100}{10}+\frac{30}{5}}} \\
+            &= -1.25.
     \end{align*}
-    Onder de nulhypothese geldt $\mu_X = \mu_Y$, oftewel de verschilvariabele heeft verwachtingswaarde $\mu_V = \mu_X - \mu_Y = 0$.
 
-    {\bfseries Methode 1 (kritiek gebied):}\\
-    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen bepaald kunnen worden met:
+    {\noindent\bfseries Methode 1 (kritiek gebied):}\\
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen bepaald kunnen worden aan de hand 
+    van de standaardnormale verdeling (normale verdeling met $\mu = 0$ en $\sigma=1$):
     \begin{align*}
-        g_1 &= \invnorm(\opp=\alpha/2=0.025, \mu = \mu_V=0, \sigma = \sigma_V=4) \approx -7.8399, \\
-        g_2 &= \invnorm(\opp=1-\alpha/2=0.975, \mu = \mu_V=0, \sigma = \sigma_V=4) \approx 7.8399.
+        g_1 &= \invnorm(\opp=\alpha/2=0.025, \mu=0, \sigma=1) \approx -1.9600, \\
+        g_2 &= \invnorm(\opp=1-\alpha/2=0.975, \mu=0, \sigma=1) \approx 1.9600.
     \end{align*}
-    Het geobserveerde verschil is $v = \samplemeanx - \samplemeany = 50 - 55 = -5$.
-    Deze waarde ligt niet in het kritieke gebied, dus we accepteren de nulhypothese $H_0$.
-    Er is onvoldoende bewijs om de aanname te verwerpen dat beide variabelen dezelfde verwachtingswaarde zouden hebben.
+    De geobserveerde toetsingsgrootheid $z = -1.25$ ligt niet in het kritieke gebied, dus we besluiten om de nulhypothese $H_0$ niet te verwerpen.
+    Er is onvoldoende bewijs tegen de aanname van gelijke verwachtingswaarden van de twee variabelen.\\
+    \medskip
 
-    {\bfseries Methode 2 ($p$-waarde):}\\
-    Het geobserveerde verschil is $v = \samplemeanx - \samplemeany = 50 - 55 = -5$ en ligt dus links van het gemiddelde $\mu_V = 0$.
-    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de linkeroverschrijdingskans van de waarde $-5$ en vergelijken deze met $\alpha/2 = 0.025$.
+    {\noindent\bfseries Methode 2 ($p$-waarde):}\\
+    De geobserveerde toetsingsgrootheid is $z = -1.25$.
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als het minimum van $P(Z \leq z)$ en $P(Z \geq z)$ behorende bij de geobserveerde toetsingsgrootheid $z=-1.25$ en vergelijken deze met $\alpha/2 = 0.025$.
     \begin{align*}
-        p &= \normalcdf(\lb=-\GRinfinity, \ub=-5, \mu = 0, \sigma = 4) = 0.1056
+        P(Z \leq z=-1.25) &= \normalcdf(\lb=-\GRinfinity, \ub=-1.25, \mu = 0, \sigma = 1) = 0.1056. \\
+        P(Z \geq z=-1.25) &= \normalcdf(\lb=-1.25, \ub=\GRinfinity, \mu = 0, \sigma = 1) = 0.8944.
     \end{align*}
-    De $p$-waarde is groter dan $\alpha/2$, dus we accepteren de nulhypothese $H_0$.
-    Er is onvoldoende bewijs om de aanname te verwerpen dat beide variabelen dezelfde verwachtingswaarde zouden hebben.
+    De $p$-waarde is dus gelijk aan $p \approx 0.1056$.
+    Aangezien de $p$-waarde groter is dan $\alpha/2$, besluiten we om de nulhypothese $H_0$ niet te verwerpen.
+    Er is onvoldoende bewijs tegen de aanname van gelijke verwachtingswaarden van de twee variabelen.
 }

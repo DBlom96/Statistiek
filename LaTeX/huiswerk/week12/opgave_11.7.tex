@@ -7,12 +7,12 @@
 }
 \answer{
     We hebben te maken met twee normaal verdeelde kansvariabelen die het aantal microgram schadelijke stof per $m^3$ meet, respectievelijk in de omgeving van een bepaalde fabriek en in een grote stad.
-    \begin{align*}
-        X &\sim \normal{\mu_X =\ ?}{\sigma_X =\ ?}, \\
-        Y &\sim \normal{\mu_Y =\ ?}{\sigma_Y =\ ?}. 
-    \end{align*}
+    \begin{itemize}
+        \item De eerste kansvariabele is $X$: deze is normaal verdeeld met verwachtingswaarde $\mu_X = \text{ ?}$ en standaardafwijking $\sigma_X = \text{ ?}$.
+        \item De tweede kansvariabele is $Y$: deze is normaal verdeeld met verwachtingswaarde $\mu_Y = \text{ ?}$ en standaardafwijking $\sigma_Y = \text{ ?}$.
+    \end{itemize} 
     Tevens is gegeven dat we mogen aannemen dat beide verdelingen dezelfde onbekende variantie hebben, oftewel $\sigma^2 = \sigma_X^2 = \sigma_Y^2$.
-    Hierdoor is een $F$-toets niet meer benodigd.
+    Hierdoor is een $F$-toets niet meer noodzakelijk.
     Om te toetsen of de gemiddeldes van beide kansvariabelen gelijk zijn, gebruiken we de volgende nulhypothese $H_0$ en alternatieve hypothese $H_1$:
     \begin{itemize}
         \item[$H_0$:] De verwachtingswaarden zijn gelijk, oftewel $\mu_X = \mu_Y$ (geen significant verschil in luchtvervuiling tussen grote stad en omgeving van een fabriek)
@@ -27,7 +27,12 @@
     \begin{align*}
         s_P^2 = \frac{(n-1)s_X^2+(m-1)s_Y^2}{n-1+m-1} = \frac{7\cdot 0.56^2 + 9 \cdot 0.42^2}{16} \approx 0.2364.
     \end{align*}
-    Onder de nulhypothese geldt $\mu_1 = \mu_2$, oftewel $\mu_1 - \mu_2 = 0$.
+    De toetsingsgrootheid voor deze hypothesetoets is gelijk aan
+    \[
+        T = \frac{(\samplemeanvarX - \samplemeanvarY) - (\mu_X - \mu_Y)}{\sqrt{\frac{S_P^2}{m}+\frac{S_P^2}{n}}}
+    \]
+    en volgt onder aanname van de nulhypothese een $t$-verdeling met $\df = n + m - 2 = 16$ vrijheidsgraden.
+    Onder aanname van de nulhypothese geldt $\mu_1 = \mu_2$, oftewel $\mu_1 - \mu_2 = 0$.
     De bijbehorende geobserveerde toetsingsgrootheid $t$ berekenen we dan als volgt:
     \begin{align*}
         t   &= \frac{(\samplemeanx - \samplemeany) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}}} \\
@@ -36,20 +41,23 @@
     \end{align*}
 
     {\noindent\bfseries Methode 1 (kritiek gebied):}\\    
-    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden met de $t$-verdeling.
-    Omdat we met de pooled variance werken, is het aantal vrijheidsgraden gelijk aan $\df=n+m-2=16$.
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen $g_1$ en $g_2$ bepaald kunnen worden 
+    aan de hand van de $t$-verdeling met $\df=16$ vrijheidsgraden.
     \begin{align*}
-        g_1 &= \invt(\opp=\alpha/2 = 0.005, \df=16) \approx -2.9208, \\
+        g_1 &= \invt(\opp=\alpha/2=0.005, \df=16) \approx -2.9208, \\
         g_2 &= \invt(\opp=1-\alpha/2=0.975, \df=16) \approx 2.9208.
     \end{align*}
-    De berekende $t \approx 3.1217$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
-    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde luchtvervuiling significant hoger is in de omgeving van de fabriek.
+    De geobserveerde toetsingsgrootheid $t \approx 3.1217$ ligt dus in het kritieke gebied, dus besluiten we om de nulhypothese $H_0$ te verwerpen.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde luchtvervuiling significant hoger is in de omgeving van de fabriek.\\
+    \medskip
 
     {\noindent\bfseries Methode 2 ($p$-waarde):}\\
-    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3.1217$ (omdat deze waarde groter dan $0$ is) en vergelijken deze met $\alpha/2 = 0.005$.
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als het minimum van $P(T \leq t)$ en $P(T \geq t)$ behorende bij de geobserveerde toetsingsgrootheid $t \approx 3.1217$ en vergelijken deze met $\alpha/2 = 0.005$.
     \begin{align*}
-        p &= \tcdf(\lb=3.1217, \ub=\GRinfinity, \df=16) \approx 0.0033.
+        P(T \leq t \approx 3.1217) &= \tcdf(\lb=-\GRinfinity, \ub=3.1217, \df=16) \approx 0.9967.\\
+        P(T \geq t \approx 3.1217) &= \tcdf(\lb=3.1217, \ub=\GRinfinity, \df=16) \approx 0.0033.
     \end{align*}
-    De $p$-waarde is kleiner dan $\alpha/2$ , dus we verwerpen de nulhypothese $H_0$.
+    De $p$-waarde is dus gelijk aan $p \approx 0.0033$.
+    Aangezien de $p$-waarde kleiner is dan $\alpha/2$, besluiten we om de nulhypothese $H_0$ te verwerpen.
     Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde luchtvervuiling significant hoger is in de omgeving van de fabriek.
 }

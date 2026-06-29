@@ -16,11 +16,10 @@
 }
 \answer{
    We hebben te maken met twee normaal verdeelde kansvariabelen 
-    \begin{align*}
-        X &\sim \normal{\mu_X =\ ?}{\sigma_X =\ ?} \\
-        Y &\sim \normal{\mu_Y =\ ?}{\sigma_Y =\ ?}. 
-    \end{align*}
-
+    \begin{itemize}
+        \item De eerste kansvariabele is $X$: deze is normaal verdeeld met verwachtingswaarde $\mu_X = \text{ ?}$ en standaardafwijking $\sigma_X = \text{ ?}$.
+        \item De tweede kansvariabele is $Y$: deze is normaal verdeeld met verwachtingswaarde $\mu_Y = \text{ ?}$ en standaardafwijking $\sigma_Y = \text{ ?}$.
+    \end{itemize} 
     Om te toetsen of de gemiddeldes van beide kansvariabelen gelijk zijn, gebruiken we de volgende nulhypothese $H_0$ en alternatieve hypothese $H_1$:
     \begin{itemize}
         \item[$H_0$:] De verwachtingswaarden zijn gelijk, oftewel $\mu_X = \mu_Y$,
@@ -39,11 +38,16 @@
         s_X^2 &= \frac{(x_1-\samplemeanx)^2 + \ldots + (x_n-\samplemeanx)^2}{n-1} = \frac{(40-40)^2 + \ldots + (43-40)^2}{11} = 30.2, \\
         s_Y^2 &= \frac{(y_1-\samplemeany)^2 + \ldots + (y_m-\samplemeany)^2}{m-1} = \frac{(25-30)^2 + \ldots + (22-30)^2}{6} = 31.
     \end{align*}
-    Omdat we mogen uitgaan van gelijke varianties $\sigma^2 = \sigma_X^2 = \sigma_Y^2$, kunnen we de gezamenlijke standaardafwijking $\sigma$ schatten met behulp van de formule voor de \enquote{pooled variance}:
+    Omdat we mogen uitgaan van gelijke varianties $\sigma^2 = \sigma_X^2 = \sigma_Y^2$, kunnen we de gezamenlijke variantie $\sigma^2$ schatten met behulp van de formule voor de \enquote{pooled variance}:
     \begin{align*}
         s_P^2 = \frac{(n-1)s_X^2+(m-1)s_Y^2}{n-1+m-1} = \frac{11\cdot 30.2 + 6 \cdot 31}{17} = 30.4824.
     \end{align*}
-    Onder de nulhypothese geldt $\mu_X = \mu_Y$, oftewel $\mu_X - \mu_Y = 0$.
+    De toetsingsgrootheid is gelijk aan
+    \[
+        T = \frac{(\samplemeanvarX - \samplemeanvarY) - (\mu_X - \mu_Y)}{\sqrt{\frac{S_P^2}{m}+\frac{S_P^2}{n}}}
+    \]
+    en volgt onder aanname van de nulhypothese een $t$-verdeling met $\df = n + m - 2 = 17$ vrijheidsgraden.
+    Onder aanname van de nulhypothese geldt $\mu_X = \mu_Y$, oftewel $\mu_X - \mu_Y = 0$.
     De geobserveerde toetsingsgrootheid $t$ kunnen we dus als volgt berekenen:
     \begin{align*}
         t   &= \frac{(\samplemeanx - \samplemeany) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_P^2}{n} + \frac{s_P^2}{m}}} \\
@@ -52,21 +56,24 @@
     \end{align*}
 
     {\noindent\bfseries Methode 1 (kritiek gebied):}\\
-    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen bepaald kunnen worden met de $t$-verdeling.
-    Omdat we met de pooled variance werken, is het aantal vrijheidsgraden gelijk aan $\df=n+m-2=17$.
+    Omdat we tweezijdig toetsen, is het kritieke gebied van de vorm $(-\infty, g_1]$ en $[g_2, \infty)$, waarbij de grenzen bepaald kunnen worden 
+    aan de hand van de $t$-verdeling met $\df=17$ vrijheidsgraden:
     \begin{align*}
         g_1 &= \invt(\opp=\alpha/2=0.025, \df=17) \approx -2.1098, \\
-        g_2 &= \invt(\opp=1-\alpha/2=0.975, \df=17) \approx 2.1098. \\
+        g_2 &= \invt(\opp=1-\alpha/2=0.975, \df=17) \approx 2.1098.
     \end{align*}
-    De berekende $t \approx 3.8084$ ligt dus in het kritieke gebied, dus we verwerpen de nulhypothese $H_0$.
-    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het gemiddelde jaarsalaris significant verschilt tussen beide groepen werknemers.
+    De geobserveerde toetsingsgrootheid $t \approx 3.8084$ ligt dus in het kritieke gebied, dus we besluiten om de nulhypothese $H_0$ te verwerpen.
+    Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het gemiddelde jaarsalaris significant verschilt tussen beide groepen werknemers.\\
+    \medskip
 
     {\noindent\bfseries Methode 2 ($p$-waarde):}\\
-    De berekende $t \approx 3.8084$ ligt rechts van het gemiddelde $\mu_V = 0$.
-    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als de rechteroverschrijdingskans van de waarde $3.8084$ en vergelijken deze met $\alpha/2 = 0.025$.
+    Omdat we tweezijdig toetsen, berekenen we de $p$-waarde als het minimum van $P(T \leq t)$ en $P(T \geq t)$ behorende bij de geobserveerde toetsingsgrootheid $t\approx 3.8084$ 
+    en vergelijken deze met $\alpha/2 = 0.025$.
     \begin{align*}
-        p &= \tcdf(\lb=3.8084, \ub=\GRinfinity, \df=17) \approx 7.0254 \cdot 10^{-4}.
+        P(T \leq t \approx 3.8084) &= \tcdf(\lb=-\GRinfinity, \ub=3.8084, \df=17) \approx 0.9999.
+        P(T \geq t \approx 3.8084) &= \tcdf(\lb=3.8084, \ub=\GRinfinity, \df=17) \approx 7.0254 \cdot 10^{-4}.
     \end{align*}
-    De $p$-waarde is (veel) kleiner dan $\alpha/2$, dus we verwerpen de nulhypothese $H_0$.
+    De $p$-waarde is dus $p \approx 7.0254 \cdot 10^{-4}$.
+    Aangezien de $p$-waarde (veel) kleiner is dan $\alpha/2$, besluiten we om de nulhypothese $H_0$ te verwerpen.
     Er is op basis van deze steekproeven voldoende reden om aan te nemen dat het gemiddelde jaarsalaris significant verschilt tussen beide groepen werknemers.
 }

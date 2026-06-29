@@ -12,13 +12,15 @@
 \end{enumerate}
 \answer{
     We hebben te maken met twee normaal verdeelde kansvariabelen:
-    \begin{align*}
-        X_1 &\sim \normal{\mu_1 =\ ?}{\sigma_1 =\ ?}, \\
-        X_2 &\sim \normal{\mu_2 =\ ?}{\sigma_2 =\ ?}. 
-    \end{align*} 
-    Beide kansvariabelen hebben dezelfde onbekende variantie, dat wil zeggen $\sigma = \sigma_1 = \sigma_2$.
-    In dat geval mogen de twee steekproefschattingen $s_1$ en $s_2$ voor de standaardafwijking (op basis van steekproeven van grootte $n = m = 10$ respectievelijk) worden gecombineerd tot \'e\'en schatter (de zogenaamde \enquote{pooled variance}).
+    \begin{itemize}
+        \item De eerste kansvariabele is $X$: deze is normaal verdeeld met verwachtingswaarde $\mu_X = \text{ ?}$ en standaardafwijking $\sigma_X = \text{ ?}$.
+        \item De tweede kansvariabele is $Y$: deze is normaal verdeeld met verwachtingswaarde $\mu_Y = \text{ ?}$ en standaardafwijking $\sigma_Y = \text{ ?}$.
+    \end{itemize}
+    Er wordt verondersteld dat beide kansvariabelen dezelfde onbekende variantie hebben, oftewel $\sigma = \sigma_X = \sigma_Y$.
+    In dat geval mogen de twee steekproefschattingen $s_X$ en $s_Y$ voor de standaardafwijking 
+    (op basis van steekproeven van grootte $n = m = 10$ respectievelijk) 
+    worden gecombineerd tot één schatter (de zogenaamde \enquote{pooled variance}).
 
-    De kansverdeling die de bijbehorende toetsingsgrootheid volgt is de $t$-verdeling met $\df = n + m - 2 = 10 + 10 - 2 = 18$ vrijheidsgraden. 
+    De kansverdeling die de bijbehorende toetsingsgrootheid $T$ volgt is de $t$-verdeling met $\df = n + m - 2 = 10 + 10 - 2 = 18$ vrijheidsgraden. 
     Het juiste antwoord is dus (b).
 }

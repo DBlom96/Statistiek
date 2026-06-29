@@ -10,3 +10,4 @@
 \contentsline {chapter}{\chapternumberline {8}Schatten en betrouwbaarheid (2/2)}{97}{chapter.8}%
 \contentsline {chapter}{\chapternumberline {9}Hypothesetoetsen}{115}{chapter.9}%
 \contentsline {chapter}{\chapternumberline {10}De chikwadraatverdeling}{129}{chapter.10}%
+\contentsline {chapter}{\chapternumberline {11}Verschiltoetsen}{149}{chapter.11}%

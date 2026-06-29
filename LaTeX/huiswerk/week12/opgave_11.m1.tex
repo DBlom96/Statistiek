@@ -1,5 +1,5 @@
 \question{11.m1}{
-    Voor een tweetal normale verdelingen is gegeven dat hun standaarddeviatie respectievelijk $\sigma_1 = 4$ en $\sigma_2 = 6$ bedragen.
+    Voor een tweetal normale verdelingen is gegeven dat hun standaarddeviaties respectievelijk $\sigma_1 = 4$ en $\sigma_2 = 6$ bedragen.
     Men wil toetsen $H_0: \mu_1 = \mu_2$.
     Een steekproef van negen waarnemingen uit de eerste verdeling leverde een gemiddelde uitkomst op van $48$, en een steekproef van zestien waarnemingen uit de tweede verdeling leverde een gemiddelde op van $42$.
     De toetsingsgrootheid bij deze toets levert een $z$-waarde op van $\ldots$
@@ -11,20 +11,30 @@
     \item $2.67$.
 \end{enumerate}
 \answer{
-    We hebben te maken met twee normaal verdeelde kansvariabelen, namelijk $X \sim \normal{\mu_1=\ ?}{\sigma_1 = 4}$ en $Y \sim \normal{\mu_2=\ ?}{\sigma_2 = 6}$.
-    Aangezien we steekproeven hebben van respectievelijke groottes $n = 9$ en $m = 16$, geldt voor de theoretische steekproefgemiddeldes:
-    \begin{align*}
-        \samplemeanvarX &\sim \normal{\mu=\mu_1}{\sigma = \frac{\sigma_1}{\sqrt{n}}} = \normal{\mu_1=\ ?}{\sigma = \frac{4}{3}}, \\
-        \samplemeanvarY &\sim \normal{\mu=\mu_2}{\sigma = \frac{\sigma_2}{\sqrt{m}}} = \normal{\mu_2=\ ?}{\sigma = \frac{3}{2}}.
-    \end{align*}
-    De verschilvariabele $V = \samplemeanvarX - \samplemeanvarY$ is dan normaal verdeeld met verwachtingswaarde $\mu_V = \mu_1 - \mu_2$ en standaardafwijking $\sigma_V = \sqrt{\frac{\sigma_1^2}{n} + \frac{\sigma_2^2}{m}} = \sqrt{\frac{16}{9} + \frac{9}{4}} \approx 2.0069$.
-    Onder de nulhypothese $H_0$ nemen we aan dat $\mu_1 = \mu_2$, oftewel dat 
+    We hebben te maken met twee normaal verdeelde kansvariabelen:
+    \begin{itemize}
+        \item De eerste kansvariabele is $X$: deze is normaal verdeeld met verwachtingswaarde $\mu_1 = \text{ ?}$ en standaardafwijking $\sigma_1 = 4$.
+        \item De tweede kansvariabele is $Y$: deze is normaal verdeeld met verwachtingswaarde $\mu_2 = \text{ ?}$ en standaardafwijking $\sigma_2 = 6$.
+    \end{itemize}
+    Aangezien we steekproeven hebben van respectievelijke groottes $n = 9$ en $m = 16$, geldt voor de (theoretische) steekproefgemiddeldes:
+    \begin{itemize}
+        \item Het steekproefgemiddelde $\samplemeanvarX$ is normaal verdeeld met verwachtingswaarde $\mu_1 = \text{ ?}$ en standaardafwijking $\sigma_1 / \sqrt{n} = 4 / \sqrt{9} = 4/3$.
+        \item Het steekproefgemiddelde $\samplemeanvarY$ is normaal verdeeld met verwachtingswaarde $\mu_2 = \text{ ?}$ en standaardafwijking $\sigma_2 / \sqrt{m} = 6 / \sqrt{16} = 3/2$.
+    \end{itemize}
+        
+    De verschilvariabele $V = \samplemeanvarX - \samplemeanvarY$ is dan normaal verdeeld met verwachtingswaarde $\mu_V = \mu_1 - \mu_2$ 
+    en standaardafwijking $\sigma_V = \sqrt{\frac{\sigma_1^2}{n} + \frac{\sigma_2^2}{m}}$.
+    Onder aanname van de nulhypothese $H_0$ nemen we aan dat $\mu_1 = \mu_2$, oftewel dat 
     $\mu_V = \mu_1 - \mu_2 = 0$.
-    Het geobserveerde verschil is $v = \samplemeanx - \samplemeany = 48 - 42 = 6$.
-
-    De $z$-score die hoort bij deze uitkomst is gelijk aan
+    Omdat de standaardafwijkingen $\sigma_1$ en $\sigma_2$ bekend zijn, is de toetsingsgrootheid gelijk aan
     \[
-        z = \frac{v - \mu_V}{\sigma_V} = \frac{6 - 0}{2.0069} \approx 2.99.
+        Z = \frac{(\samplemeanvarX - \samplemeanvarY) - (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}}}
     \]
+    De $z$-score (oftewel de geobserveerde toetsingsgrootheid $z$) die hoort bij deze uitkomst is gelijk aan
+    \begin{align*}
+        z   &= \frac{(\samplemeanx-\samplemeany)- (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}}} \\
+            &= \frac{(48 - 42) - 0}{\sqrt{\frac{16}{9} + \frac{9}{4}}} \\
+            &\approx 2.99.
+    \end{align*}
     Het juiste antwoord is dus (b).
 }
