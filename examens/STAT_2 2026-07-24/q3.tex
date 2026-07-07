@@ -1,0 +1,148 @@
+\begin{question}{30}{
+    Een officier logistiek bij het Commando Materieel en IT (COMMIT) voert een onderzoek uit naar de leveringsbetrouwbaarheid 
+    van twee leveranciers, $A$ en $B$, van kritieke onderdelen voor Chinook-transporthelikopters.
+    Hieronder staat een dataset weergeven in een tabel, waarbij voor beide leveranciers de levertijd (in weken) is geregistreerd voor een aantal orders voor kritieke helikopteronderdelen:     
+    \begin{center}
+        \begin{tabular}{m{2.7cm}|cccccccccccc}
+            \toprule
+                \textbf{Levertijd $A$} \newline \textbf{(in maanden)} & $12.1$ & $11.9$ & $12.3$ & $11.8$ & $12.2$ & $12.0$ & $11.9$ & $12.4$ & $11.7$ & $12.1$ & $12.0$ & $11.8$\\
+            \midrule
+                \textbf{Levertijd $B$} \newline \textbf{(in maanden)} & $11.9$ & $7.3$ & $14.7$ & $6.0$ & $13.6$ & $8.0$ & $9.3$ & $5.0$ & $7.6$ & $11.4$ & & \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    Het doel van COMMIT is op basis van de resultaten van dit onderzoek een keuze te maken voor één van beide leveranciers voor het leveren van Chinook-onderdelen.
+    Gebruik gedurende de hele vraag een significantieniveau van $\alpha = 0.05$.
+}
+
+    \subquestion{8}{
+        Bereken de steekproefgemiddelden en de steekproefvarianties van de levertijden $X$ en $Y$ van beide leveranciers.
+    }
+    \solution{
+        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 12.1 + 11.9 + \ldots + 11.8 }{ 12 } \approx 12.0167.\rubric{2}
+        \end{align*}
+    
+
+        We berekenen de steekproefvariantie $s_X^2$ als volgt:
+        \begin{align*}
+            s_X^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (12.1 - 12.0167)^2 + (11.9 - 12.0167)^2 + \ldots + (11.8 - 12.0167)^2 }{ 12 - 1 } \\
+                &\approx 0.0452.\rubric{3}
+        \end{align*}
+
+        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
+        \begin{align*}
+            \overline{y} = \frac{y_1+y_2+\ldots+y_m}{m} = \frac{ 11.9 + 7.3 + \ldots + 11.4 }{ 10 } = 9.48.\rubric{1}
+        \end{align*}
+    
+
+        We berekenen de steekproefvariantie $s_Y^2$ als volgt:
+        \begin{align*}
+            s_Y^2 &= \frac{ (y_1 - \overline{y})^2 + (y_2 - \overline{y})^2 + \ldots + (y_n - \overline{y})^2 }{ m - 1 } \\
+                &= \frac{ (11.9 - 9.48)^2 + (7.3 - 9.48)^2 + \ldots + (11.4 - 9.48)^2 }{ 10 - 1 } \\\rubric{2}
+                &\approx 10.7173.
+        \end{align*}
+    }
+
+    \subquestion{9}{
+        Voer een $F$-toets uit om te bepalen of de varianties in de levertijden gelijk kunnen zijn voor beide leveranciers.
+        Geef hierbij expliciet de stappen aan van het algemene stappenplan voor hypothesetoetsen.
+        Bepaal de toetsuitslag op basis van het kritieke gebied.
+    }
+    \solution{
+        Bij een $F$-toets toetsen we of de varianties $\sigma_X^2$ en $\sigma_Y^2$ gelijk zouden kunnen zijn, oftewel
+        \begin{align*}
+            H_0: \quad \sigma_X^2 = \sigma_Y^2 \\
+            H_1: \quad \sigma_X^2 \neq \sigma_Y^2 \rubric{1}
+        \end{align*}
+        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en steekproefdata is al verzameld voor beide populaties.
+        De theoretische toetsingsgrootheid bij een $F$-toets is gelijk aan
+        \[
+            F = \frac{S_X^2}{S_Y^2}, 
+        \]
+        en volgt onder $H_0$ een $F$-verdeling met $\dfn = n-1 = 11$ en $\dfd = m-1 = 9$ vrijheidsgraden.\rubric{1}
+
+        De geobserveerde toetsingsgrootheid is gelijk aan
+        \[
+            f = \frac{s_X^2}{s_Y^2} = \frac{0.0452}{10.7173} \approx 0.0042. \rubric{1}
+        \]
+        
+        We voeren een tweezijdige toets uit (dit is altijd het geval bij een $F$-toets voor gelijke varianties), oftewel het kritieke gebied is van de vorm $(-\infty, g_1)$ en $(g_2, \infty)$, waarbij geldt:
+        \begin{enumerate}
+            \item Bepaal de grenswaarde $g_1$ waarvoor geldt dat $P(F \leq g_1) = \alpha/2 = 0.025$.
+            Voer hiervoor in de \enquote{numerieke solver} van de grafische rekenmachine in:
+            \begin{align*}
+                E_1 &= \fcdf(\lb=0, \ub=X, \df_1=11, \df_2=9) \\
+                E_2 &= 0.025 \rubric{1}
+            \end{align*}
+            De \enquote{numerieke solver} geeft een waarde van $g_1 \approx 0.2787$.\rubric{1}
+            \item Bepaal de grenswaarde $g_2$ waarvoor geldt dat $P(F \geq g_2) = \alpha/2 = 0.025$.
+            Voer hiervoor in de \enquote{numerieke solver} van de grafische rekenmachine in:
+            \begin{align*}
+                E_1 &= \fcdf(\lb=X, \ub=10^{99}, \df_1=9, \df_2=9) \\
+                E_2 &= 0.025 \rubric{1}
+            \end{align*}
+            De \enquote{numerieke solver} geeft een waarde van $g_2 \approx 3.9121$.\rubric{1}
+        \end{enumerate}
+        
+        Het kritieke gebied is dus gelijk aan $(-\infty, 0.2787)$ en $(3.9121, \infty)$.
+        De geobserveerde toetsingsgrootheid $f \approx 0.0042$ ligt in het kritieke gebied, dus we besluiten om $H_0$ te verwerpen.\rubric{1}
+        Er is voldoende reden om op basis van deze steekproeven de aanname van gelijke varianties te verwerpen. \rubric{1}
+        \begin{center}
+            \resizebox{0.9\textwidth}{!}{
+                \includegraphics{exam20260724-f-kritiek.png} 
+            }
+        \end{center}
+    }
+
+    \subquestion{10}{
+        Bepaal met behulp van een geschikte $t$-toets of de gemiddelde levertijd significant verschilt tussen de twee leveranciers.
+        Geef hierbij expliciet de stappen aan van het algemene stappenplan voor hypothesetoetsen.
+        Bepaal hierbij de toetsuitslag met behulp van de $p$-waarde.
+    }
+    \solution{
+        We toetsen of de gemiddelde levertijden $\mu_X$ en $\mu_Y$ voor beide leveranciers significant van elkaar verschillen.
+        De hypotheses kunnen we daarom als volgt definiëren:
+        \begin{align*}
+            H_0: &\quad \mu_X = \mu_Y \text{ (geen significant verschil in de gemiddelde levertijd) } \\
+            H_1: &\quad \mu_X \neq \mu_Y \text{ (wel een significant verschil in de gemiddelde levertijd) } \rubric{2}
+        \end{align*}
+        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en steekproefdata zijn al verzameld voor beide populaties.
+        Op basis van ons antwoord bij vraag (b) mogen we aannemen dat $\sigma_X^2 \neq \sigma_Y^2$.
+        Dat betekent dat we $\sigma_X^2$ en $\sigma_Y^2$ afzonderlijk van elkaar moeten schatten met respectievelijk steekproefvarianties $s_X^2$ en $s_Y^2$. \rubric{1}      
+        
+        De geobserveerde toetsingsgrootheid is (onder aanname van $H_0: \mu_X = \mu_Y)$ gelijk aan
+        \begin{align*}
+            t   &= \frac{(\overline{x}-\overline{y}) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}} \\
+                &=\frac{(12.0167 - 9.48) - 0}{\sqrt{\frac{0.0452}{12} + \frac{10.7173}{10}}} \\
+                & \approx 2.4460 \rubric{2}
+        \end{align*}
+        en is een uitkomst van de theoretische toetsingsgrootheid $T$ met een $t$-verdeling met $\text{df}=\min(n-1,m-1)=9$ vrijheidsgraden. \rubric{1}
+
+        Omdat we tweezijdig toetsen, is de $p$-waarde gelijk aan het minimum van $P(T \leq t)$ en $P(T \geq t)$:
+        Deze kansen kunnen we met de $t$-verdeling bepalen, namelijk
+        \begin{align*}
+            P(T \leq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.9815 \\ 
+            P(T \leq t) &= \tcdf(\lb = -10^{99}, \ub=2.4452, \df=9) \approx 0.0185 \rubric{2} 
+        \end{align*}
+        De $p$-waarde is dus gelijk aan $p \approx 0.0185$ en is daarmee kleiner dan $\alpha/2$ (tweezijdige toets!).
+        We besluiten dus om de nulhypothese te verwerpen.\rubric{1}
+        Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde levertijd significant verschilt 
+        tussen de twee leveranciers. \rubric{1}     
+    }
+
+    \subquestion{3}{
+        Is er op basis van deze hypothesetoetsen een eenduidige voorkeur aan te wijzen voor één leverancier?
+        Zo ja, aan welke leverancier zou je de voorkeur geven?
+        Zo nee, geef voor beide leveranciers een reden die in het voordeel spreekt in vergelijking met de andere leverancier.
+    }
+    \solution{
+        Er is geen eenduidige voorkeur aan te wijzen voor de ene of de andere leverancier. \rubric{1}
+        Uit de hypothesetoets bij vraag (c) is op te maken dat de gemiddelde levertijd van leverancier $B$ met grote betrouwbaarheid significant 
+        korter is dan bij leverancier $A$, wat in het voordeel van leverancier $B$ zou spreken.\rubric{1}
+        Uit de $F$-toets voor gelijke varianties blijkt echter dat de variantie in de levertijden bij leverancier $B$ veel groter is, waardoor
+        leverancier $A$ als betrouwbaarder en voorspelbaarder gezien kan worden.\rubric{1}
+    }
+\end{question}

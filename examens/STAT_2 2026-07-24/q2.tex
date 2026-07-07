@@ -1,0 +1,150 @@
+\begin{question}{30}{
+    Instructeurs van de KMA voeren een evaluatie uit om te bepalen of een nieuwe Virtual Reality (VR) schietsimulator net zo effectief is als de traditionele \emph{live-fire} schietbaan voor Close Quarters Battle (CQB) training.
+    Hieronder zijn de beoordelingsresultaten van $400$ cadetten (verdeeld in twee groepen van $200$ per trainingsmethode) gegeven.
+    \par\medskip
+    \begin{center}
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{cccc}
+            \toprule
+                & \textbf{Fysieke training} & \textbf{VR-training} & \textbf{Totaal} \\
+            \midrule
+                Onvoldoende & $24$ & $46$ & $80$  \\
+                Voldoende   & $100$ & $132$ & $230$  \\
+                Uitmuntend  & $48$ & $50$ & $90$  \\
+            \midrule
+                \textbf{Totaal} & $172$ & $228$ & $400$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \par\medskip
+    Het doel van de instructeurs is om te bepalen of de keuze voor de trainingsmethode een statistisch significant effect heeft op de schietprestaties.
+    Je mag in deze opgave gebruik maken van een significantieniveau $\alpha = 0.05$.
+}
+
+    \subquestion{3}{
+        Wat voor type hypothesetoets zou geschikt zijn om dit te kunnen toetsen?
+        Formuleer de bijbehorende nulhypothese $H_0$ en de alternatieve hypothese $H_1$ voor deze toets.
+    }
+
+    \solution{
+        Om te bepalen of er een statistisch significant effect is in de trainingsmethode voor de schietprestaties van cadetten,
+        dienen we een chikwadraattoets voor onafhankelijkheid uit te voeren. \rubric{1}
+        De nulhypothese $H_0$ en de alternatieve hypothesetoets $H_1$ kunnen dan als volgt worden geformuleerd:
+        \begin{itemize}
+            \item[$H_0$:] de trainingsmethode heeft geen significant effect op de schietprestaties van cadetten. \rubric{1}
+            \item[$H_1$:] de trainingsmethode heeft wel een significant effect op de schietprestaties van cadetten. \rubric{1}
+        \end{itemize}
+    }
+
+    \subquestion{8}{
+        Wat is de kansverdeling van de theoretische toetsingsgrootheid onder de nulhypothese $H_0$?
+        Bereken de geobserveerde toetsingsgrootheid van deze hypothesetoets.
+    }
+    \solution{
+        De (theoretische) toetsingsgrootheid voor een chikwadraattoets voor onafhankelijkheid is gelijk aan
+        \[
+            X^2 = \sum_{i,j} \frac{(O_{ij}-E_{ij})^2}{E_{ij}}.\rubric{1}
+        \]    
+        Voordat we de toetsingsgrootheid kunnen berekenen, moeten we dus de verwachte frequenties $E_{ij}$ bepalen.
+        Dit doen we aan de hand van de volgende formule:
+        \[
+            E_{ij} = \frac{(\text{rijtotaal}_i) \cdot (\text{kolomtotaal}_j)}{\text{totaal}}
+        \]
+        We berekenen de verwachte frequenties voor elke cel in de tabel:
+        \par\medskip
+        \begin{center}
+            \begin{tabular}{c|cc|c}
+                \toprule
+                    & Fysieke training & VR-training & Totaal \\
+                \midrule
+                    Onvoldoende & $30.1$  & $39.9$   & $70$ \\ 
+                    Voldoende   & $99.76$ & $132.24$ & $232$ \\ 
+                    Uitmuntend  & $42.14$ & $55.86$  & $98$ \\ 
+                \midrule
+                    Totaal & $172$ & $228$ & $400$ \rubric{3} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+        \par\medskip
+        Vervolgens berekenen we de geobserveerde toetsingsgrootheid $\chi^2$ als volgt:
+        \begin{align*}
+            \chi^2 &= \frac{(o_{1, 1} - e_{1,1})^2}{e_{1, 1}} + \frac{(o_{1, 2} - e_{1,2})^2}{e_{1, 2}} + \ldots + \frac{(o_{3, 2} - e_{3,2})^2}{e_{3, 2}} \\
+                   &= \frac{(24 - 30.1)^2}{30.1} + \frac{(46 - 39.9)^2}{39.9} + \ldots + \frac{(50 - 55.86)^2}{55.86} \\
+                   &\approx 3.5994. \rubric{3}
+        \end{align*}
+    }
+
+    % \subquestion{5}{
+    %     Wat is de kansverdeling van deze toetsingsgrootheid onder $H_0$? 
+    %     Bepaal de $p$-waarde behorende bij de geobserveerde toetsingsgrootheid op basis van deze kansverdeling.
+    % }
+    % \solution{
+    %     De toetsingsgrootheid $X^2$ volgt onder de nulhypothese een chikwadraatverdeling met $\df = (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (3-1)\cdot(2-1) = 2$ vrijheidsgraden. \rubric{2}
+    %     De $p$-waarde is de kans op een nog extremere uitkomst voor de toetsingsgrootheid dan de geobserveerde toetsingsgrootheid $\chi^2$. \rubric{1}
+        
+    %     Aangezien een chikwadraattoets altijd rechtszijdig is, is de $p$-waarde gelijk aan
+    %     \begin{align*}
+    %         p = P(X^2 > 3.5994) &= \chi^2\text{cdf}(\lb=3.5994, \ub=10^{99}, \df=2) \\
+    %                             &\approx 0.1653. \rubric{2}
+    %     \end{align*}
+
+    %     \begin{center}
+    %         \resizebox{0.9\textwidth}{!}{
+    %             \includegraphics{../figures/exam20260724-chi2-pwaarde.png} 
+    %         }
+    %     \end{center}
+    % }
+
+    % \subquestion{5}{
+    %     Bepaal de toetsuitslag op basis van de berekende $p$-waarde en vertaal deze terug naar de originele probleemcontext.
+    %     Geef een verklaring voor deze toetsuitslag aan de hand van de gegeven tabel van schietprestaties.
+    % }
+    % \solution{
+    %     Aangezien de $p$-waarde $p \approx 0.1653$ strikt groter is dan het significantieniveau $\alpha = 0.05$,
+    %     besluiten we om de nulhypothese $H_0$ niet te verwerpen. \rubric{1}
+    %     Er is onvoldoende reden om aan te nemen dat het type trainingsmethode significant effect heeft op de schietprestaties van cadetten. \rubric{1}
+        
+    %     Als we kijken naar de tabellen van geobserveerde en verwachte frequenties,
+    %     dan zien we dat voor veel van de cellen in de tabellen de geobserveerde en verwachte frequenties $O_{ij}$ en $E_{ij}$ niet heel ver uit elkaar liggen.\rubric{1}
+    %     Deze (beperkte) verschillen kunnen binnen de chikwadraatverdeling dus aan het toeval wordt toegeschreven. \rubric{1}
+    % }
+    
+    % \subquestion{9}{
+    %     De instructeurs beweren dat de kans dat een willekeurige cadet die de VR-training volgt een voldoende of hoger haalt, minstens \SI{85}{\percent} is.
+    %     Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor deze succeskans $p$ met behulp van de Clopper-Pearson methode.
+    %     Wat kunnen we concluderen over de claim van de instructeurs?
+    % }
+
+    % \solution{
+    %     Als we kijken naar het gedeelte van de steekproef dat gaat over cadetten die de VR-training volgen,
+    %     zien we dat $132 + 50 = 182$ van de $228$ cadetten (steekproefschatting!) een voldoende heeft gehaald. \rubric{1}
+    %     Merk op dat $182$ een uitkomst is van de variabele $X$ die het aantal voldoende telt uit $228$ pogingen, oftewel 
+    %     $X$ is binomiaal verdeeld met $n = 228$ en een onbekende $p = \text{ ?}$. \rubric{1}
+    %     Op basis van deze aantallen gaan we een betrouwbaarheidsinterval bepalen voor de kans $p$ dat een willekeurige cadet een voldoende
+    %     na het volgen van de VR-training (populatieparameter!).
+    %     Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$.
+
+    %     De Clopper-Pearson methode werkt als volgt:
+    %     \begin{enumerate}
+    %         \item Bepaal de minimale succeskans $p_1$ waarvoor de uitkomst $k = 182$ niet extreem groot, oftewel $P(X \geq 182) = \alpha/2 \geq 0.025$.
+    %         Voer hiervoor in de \enquote{numerieke solver} van de grafische rekenmachine in:
+    %         \begin{align*}
+    %             E_1 &= 1 - \binomcdf(n=228, p_1=X, k=181) \\
+    %             E_2 &= 0.025 \rubric{1}
+    %         \end{align*}
+    %         De \enquote{numerieke solver} geeft een waarde van $p_1 \approx 0.7402$.\rubric{1}
+    %         \item Bepaal de maximale succeskans $p_2$ waarvoor de uitkomst $k = 182$ niet extreem klein is, oftewel $P(X \leq 182) = \alpha/2 \geq 0.025$.
+    %         Voer hiervoor in de \enquote{numerieke solver} van de grafische rekenmachine in:
+    %         \begin{align*}
+    %             E_1 &= \binomcdf(n=228, p_1=X, k=182) \\
+    %             E_2 &= 0.025 \rubric{1}
+    %         \end{align*}
+    %         De solver optie geeft een waarde van $p_2 \approx 0.8483$.\rubric{1}
+    %     \end{enumerate}
+    %     We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen,
+    %     oftewel het \SI{95}{\percent}-betrouwbaarheidsinterval voor de kans $p$ dat een willekeurige cadet een voldoende haalt is gelijk aan $[0.7402, 0.8483]$. \rubric{1}
+
+    %     We zien dat de geclaimde succeskans $p = 0.85$ niet in het Clopper-Pearson interval ligt. \rubric{1}
+    %     We kunnen dus met \SI{95}{\percent} betrouwbaarheid zeggen dat de kans op een voldoende significant lager is dan \SI{85}{\percent}.\rubric{1}
+    % }
+\end{question}

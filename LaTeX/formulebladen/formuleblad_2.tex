@@ -188,47 +188,57 @@
     {\itshape NB: bij tweezijdige toetsen is de $p$-waarde gelijk aan het minimum van de linkszijdige en rechtszijdige $p$-waarde.}
 \vspace{0.5cm}
     \subsection*{Linkszijdige, tweezijdige en rechtszijdige hypothesetoetsen}
-    \begin{minipage}{0.32\linewidth}
-        \begin{center}
-            {\bfseries Linkszijdige toets}
-            \[
-                H_0: \mu \geq \mu_0 \text{ vs. } H_1: \mu < \mu_0
-            \]
-            Acceptatiegebied: {\color{green!50!black} $[g, \infty)$}
+    \begin{tabular}{@{}c@{}c@{}c@{}}
+        \textbf{Linkszijdig} & \textbf{Tweezijdig} & \textbf{Rechtszijdig} \\
+        $H_0: \mu \geq \mu_0 \text{ vs. } H_1: \mu < \mu_0$ & $H_0: \mu = \mu_0 \text{ vs. } H_1: \mu \neq \mu_0$ & $H_0: \mu \leq \mu_0 \text{ vs. } H_1: \mu > \mu_0$ \\
+        Acceptatiegebied: {\color{green!50!black} $[g, \infty)$} & Acceptatiegebied: {\color{green!50!black} $[g_1, g_2]$} & Acceptatiegebied: {\color{green!50!black} $(-\infty, g]$} \\
+        Kritiek gebied: {\color{red} $(-\infty, g)$} & Kritiek gebied: {\color{red} $(-\infty, g_1)$ en $(g_2, \infty)$} & Kritiek gebied: {\color{red} $(g, \infty)$} \\
+        \includegraphics[width=0.36\textwidth]{linkszijdig.png} & \includegraphics[width=0.36\textwidth]{tweezijdig.png} & \includegraphics[width=0.36\textwidth]{rechtszijdig.png}\\
+    \end{tabular}
 
-            Kritiek gebied: {\color{red} $(-\infty, g)$}
-            
-            \includegraphics[width=\linewidth]{linkszijdig.png}
-        \end{center}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{center}
-            {\bfseries Tweezijdige toets}
-            \[
-                H_0: \mu = \mu_0 \text{ vs. } H_1: \mu \neq \mu_0
-            \]
-            Acceptatiegebied: {\color{green!50!black} $[g_1, g_2]$}
 
-            Kritiek gebied: {\color{red} $(-\infty, g_1)$ en $(g_2, \infty)$}
-            
-            \includegraphics[width=\linewidth]{tweezijdig.png}
-        \end{center}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{center}
-            {\bfseries Rechtszijdige toets}
-            \[
-                H_0: \mu \leq \mu_0 \text{ vs. } H_1: \mu > \mu_0
-            \]
-            Acceptatiegebied: {\color{green!50!black} $(-\infty, g]$}
+    % \end{tabular}
+    % \begin{minipage}{0.32\linewidth}
+    %     \begin{center}
+    %         {\bfseries Linkszijdige toets}
+    %         \[
+    %             H_0: \mu \geq \mu_0 \text{ vs. } H_1: \mu < \mu_0
+    %         \]
+    %         Acceptatiegebied: {\color{green!50!black} $[g, \infty)$}
 
-            Kritiek gebied: {\color{red} $(g, \infty)$}
+    %         Kritiek gebied: {\color{red} $(-\infty, g)$}
             
-            \includegraphics[width=\linewidth]{rechtszijdig.png}
-        \end{center}
-    \end{minipage}
+    %         \includegraphics[width=1.25\linewidth]{linkszijdig.png}
+    %     \end{center}
+    % \end{minipage}
+    % \hfill
+    % \begin{minipage}{0.32\linewidth}
+    %     \begin{center}
+    %         {\bfseries Tweezijdige toets}
+    %         \[
+    %             H_0: \mu = \mu_0 \text{ vs. } H_1: \mu \neq \mu_0
+    %         \]
+    %         Acceptatiegebied: {\color{green!50!black} $[g_1, g_2]$}
+
+    %         Kritiek gebied: {\color{red} $(-\infty, g_1)$ en $(g_2, \infty)$}
+            
+    %         \includegraphics[width=1.25\linewidth]{tweezijdig.png}
+    %     \end{center}
+    % \end{minipage}
+    % \hfill
+    % \begin{minipage}{0.32\linewidth}
+    %     \begin{center}
+    %         {\bfseries Rechtszijdige toets}
+    %         \[
+    %             H_0: \mu \leq \mu_0 \text{ vs. } H_1: \mu > \mu_0
+    %         \]
+    %         Acceptatiegebied: {\color{green!50!black} $(-\infty, g]$}
+
+    %         Kritiek gebied: {\color{red} $(g, \infty)$}
+            
+    %         \includegraphics[width=1.25\linewidth]{rechtszijdig.png}
+    %     \end{center}
+    % \end{minipage}
 
     % \textbf{Onderscheidend vermogen $1 - \beta$ van een $z$-toets voor het gemiddelde $\mu$ (gegeven dat $\mu = \mu_1 \neq \mu_0$):}
     % \begin{align*}

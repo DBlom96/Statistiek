@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  29 JUN 2026 14:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  1 JUL 2026 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1112,25 +1112,30 @@ Overfull \hbox (1.1148pt too wide) in paragraph at lines 146--165
 
 
 [4]
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/linkszijdig.png, id=64, 867.24pt x 542.025pt>
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/linkszijdig.png, id=64, 1156.32pt x 650.43pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/linkszijdig.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/linkszijdig.png>
-Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/linkszijdig.png  used on input line 201.
-(pdftex.def)             Requested size: 156.5165pt x 97.81667pt.
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/tweezijdig.png, id=66, 867.24pt x 542.025pt>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/linkszijdig.png  used on input line 196.
+(pdftex.def)             Requested size: 176.07733pt x 99.03908pt.
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/tweezijdig.png, id=66, 1156.32pt x 650.43pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/tweezijdig.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/tweezijdig.png>
-Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/tweezijdig.png  used on input line 215.
-(pdftex.def)             Requested size: 156.5165pt x 97.81667pt.
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/rechtszijdig.png, id=67, 867.24pt x 542.025pt>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/tweezijdig.png  used on input line 196.
+(pdftex.def)             Requested size: 176.07733pt x 99.03908pt.
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/rechtszijdig.png, id=67, 1156.32pt x 650.43pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/rechtszijdig.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/rechtszijdig.png>
-Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/rechtszijdig.png  used on input line 229.
-(pdftex.def)             Requested size: 156.5165pt x 97.81667pt.
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/rechtszijdig.png  used on input line 196.
+(pdftex.def)             Requested size: 176.07733pt x 99.03908pt.
+
+Overfull \hbox (39.12912pt too wide) in paragraph at lines 191--198
+[] 
+ []
+
 <beslisboom_hypothesetoetsen.pdf, id=68, 892.07178pt x 502.76933pt>
 File: beslisboom_hypothesetoetsen.pdf Graphic file (type pdf)
 <use beslisboom_hypothesetoetsen.pdf>
-Package pdftex.def Info: beslisboom_hypothesetoetsen.pdf  used on input line 263.
+Package pdftex.def Info: beslisboom_hypothesetoetsen.pdf  used on input line 273.
 (pdftex.def)             Requested size: 489.10287pt x 275.65709pt.
 
 
@@ -1159,15 +1164,15 @@ Package rerunfilecheck Info: File `main_formulebladen.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) ) 
 Here is how much of TeX's memory you used:
- 47856 strings out of 468133
- 1137566 string characters out of 5430719
+ 47854 strings out of 468133
+ 1137506 string characters out of 5430719
  1707887 words of memory out of 5000000
- 75714 multiletter control sequences out of 15000+600000
+ 75712 multiletter control sequences out of 15000+600000
  660771 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,24n,107p,852b,1128s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main_formulebladen.pdf (6 pages, 333169 bytes).
+Output written on main_formulebladen.pdf (6 pages, 352285 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  36 named destinations out of 1000 (max. 500000)
