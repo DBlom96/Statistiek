@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  7 JUL 2026 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  7 JUL 2026 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1327,22 +1327,18 @@ Package marginnote Info: xpos seems to be 494.57912pt on input line 137.
 Package marginnote Info: Margin note 16.1 is on absolute page 16 on input line 35.
 Package marginnote Info: right page because not two side mode on input line 35.
 Package marginnote Info: xpos seems to be 93.85147pt on input line 35.
+Package marginnote Info: Margin note 16.2 is on absolute page 16 on input line 35.
 Package marginnote Info: right page because not two side mode on input line 35.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 35.
+Package marginnote Info: xpos seems to be 411.59914pt on input line 35.
+Package marginnote Info: Margin note 16.3 is on absolute page 16 on input line 35.
 Package marginnote Info: right page because not two side mode on input line 35.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 35.
-Package marginnote Info: Margin note 16.4 is on absolute page 16 on input line 35.
-Package marginnote Info: right page because not two side mode on input line 35.
-Package marginnote Info: xpos seems to be 477.4926pt on input line 35.
-Package marginnote Info: Margin note 16.5 is on absolute page 16 on input line 35.
-Package marginnote Info: right page because not two side mode on input line 35.
-Package marginnote Info: xpos seems to be 475.94461pt on input line 35.
-Package marginnote Info: Margin note 16.6 is on absolute page 17 on input line 68.
+Package marginnote Info: xpos seems to be 410.05115pt on input line 35.
+Package marginnote Info: Margin note 16.4 is on absolute page 17 on input line 68.
 Package marginnote Info: right page because not two side mode on input line 68.
 Package marginnote Info: xpos seems to be 449.94579pt on input line 68.
 Package marginnote Info: right page because not two side mode on input line 68.
 Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 68.
-Package marginnote Info: Margin note 16.8 is on absolute page 17 on input line 68.
+Package marginnote Info: Margin note 16.6 is on absolute page 17 on input line 68.
 Package marginnote Info: right page because not two side mode on input line 68.
 Package marginnote Info: xpos seems to be 218.77065pt on input line 68.
 
@@ -1381,34 +1377,26 @@ Overfull \hbox (18.81334pt too wide) in paragraph at lines 106--107
 \T1/bch/m/n/12 mou-fla-ge-net-ten be-weert dat de de-tec-tie-kans $\OT1/cmr/m/n/12 30$$%$ \T1/bch/m/n/12 is. Be-re-ken een $\OT1/cmr/m/n/12 95$$%$\T1/bch/m/n/12 -betrouwbaarheidsinterval
  []
 
-Package marginnote Info: Margin note 18.4 is on absolute page 18 on input line 135.
-Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 424.49101pt on input line 135.
 Package marginnote Info: right page because not two side mode on input line 135.
 Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
-Package marginnote Info: Margin note 18.6 is on absolute page 19 on input line 135.
-Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 282.5427pt on input line 135.
-Package marginnote Info: Margin note 18.7 is on absolute page 19 on input line 135.
-Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 386.96768pt on input line 135.
 Package marginnote Info: right page because not two side mode on input line 135.
 Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
-Package marginnote Info: Margin note 18.9 is on absolute page 19 on input line 135.
 Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 272.27191pt on input line 135.
-Package marginnote Info: Margin note 18.10 is on absolute page 19 on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
 Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 386.96768pt on input line 135.
-Package marginnote Info: Margin note 18.11 is on absolute page 19 on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
 Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 480.79582pt on input line 135.
-Package marginnote Info: Margin note 18.12 is on absolute page 19 on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
 Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 532.94753pt on input line 135.
-Package marginnote Info: Margin note 18.13 is on absolute page 19 on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
 Package marginnote Info: right page because not two side mode on input line 135.
-Package marginnote Info: xpos seems to be 124.86934pt on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
+Package marginnote Info: right page because not two side mode on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
+Package marginnote Info: right page because not two side mode on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
+Package marginnote Info: right page because not two side mode on input line 135.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 135.
 
 
 [18 <../../LaTeX/figures/exam20260519_chisq_pval.png>]) (q1.tex
@@ -1495,19 +1483,23 @@ Package marginnote Info: xpos seems to be 285.91127pt on input line 116.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `exam_20260519.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47824 strings out of 468133
- 1131179 string characters out of 5430719
- 1652177 words of memory out of 5000000
- 75676 multiletter control sequences out of 15000+600000
+ 47830 strings out of 468133
+ 1131252 string characters out of 5430719
+ 1651177 words of memory out of 5000000
+ 75682 multiletter control sequences out of 15000+600000
  644355 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,129p,856b,1655s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on exam_20260519.pdf (22 pages, 673073 bytes).
+Output written on exam_20260519.pdf (22 pages, 673108 bytes).
 PDF statistics:
  405 PDF objects out of 1000 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)

@@ -120,17 +120,21 @@
                 & \approx 2.4460 \rubric{2}
         \end{align*}
         en is een uitkomst van de theoretische toetsingsgrootheid $T$ met een $t$-verdeling met $\text{df}=\min(n-1,m-1)=9$ vrijheidsgraden. \rubric{1}
-
         Omdat we tweezijdig toetsen, is de $p$-waarde gelijk aan het minimum van $P(T \leq t)$ en $P(T \geq t)$:
         Deze kansen kunnen we met de $t$-verdeling bepalen, namelijk
         \begin{align*}
             P(T \leq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.9815 \\ 
-            P(T \leq t) &= \tcdf(\lb = -10^{99}, \ub=2.4452, \df=9) \approx 0.0185 \rubric{2} 
+            P(T \geq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.0185 \rubric{2} 
         \end{align*}
         De $p$-waarde is dus gelijk aan $p \approx 0.0185$ en is daarmee kleiner dan $\alpha/2$ (tweezijdige toets!).
         We besluiten dus om de nulhypothese te verwerpen.\rubric{1}
         Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde levertijd significant verschilt 
-        tussen de twee leveranciers. \rubric{1}     
+        tussen de twee leveranciers. \rubric{1}    
+        \begin{center}
+            \resizebox{0.9\textwidth}{!}{
+                \includegraphics{exam20260724-two-sample-t-test-pvalue.png} 
+            }
+        \end{center}
     }
 
     \subquestion{3}{
