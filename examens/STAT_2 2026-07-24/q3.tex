@@ -12,16 +12,16 @@
         \end{tabular}
     \end{center}
     Het doel van COMMIT is op basis van de resultaten van dit onderzoek een keuze te maken voor één van beide leveranciers voor het leveren van Chinook-onderdelen.
-    Gebruik gedurende de hele vraag een significantieniveau van $\alpha = 0.05$.
+    Gebruik bij iedere deelvraag het significantieniveau $\alpha = 0.05$.
 }
 
-    \subquestion{8}{
+    \subquestion{7}{
         Bereken de steekproefgemiddelden en de steekproefvarianties van de levertijden $X$ en $Y$ van beide leveranciers.
     }
     \solution{
         We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
         \begin{align*}
-            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 12.1 + 11.9 + \ldots + 11.8 }{ 12 } \approx 12.0167.\rubric{2}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 12.1 + 11.9 + \ldots + 11.8 }{ 12 } \approx 12.0167.\rubric{1}
         \end{align*}
     
 
@@ -46,50 +46,71 @@
         \end{align*}
     }
 
-    \subquestion{9}{
+    \subquestion{10}{
         Voer een $F$-toets uit om te bepalen of de varianties in de levertijden gelijk kunnen zijn voor beide leveranciers.
         Geef hierbij expliciet de stappen aan van het algemene stappenplan voor hypothesetoetsen.
         Bepaal de toetsuitslag op basis van het kritieke gebied.
     }
     \solution{
+        \subsubsection*{Stap 1: formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.}
         Bij een $F$-toets toetsen we of de varianties $\sigma_X^2$ en $\sigma_Y^2$ gelijk zouden kunnen zijn, oftewel
         \begin{align*}
             H_0: \quad \sigma_X^2 = \sigma_Y^2 \\
             H_1: \quad \sigma_X^2 \neq \sigma_Y^2 \rubric{1}
         \end{align*}
-        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en steekproefdata is al verzameld voor beide populaties.
-        De theoretische toetsingsgrootheid bij een $F$-toets is gelijk aan
-        \[
-            F = \frac{S_X^2}{S_Y^2}, 
-        \]
-        en volgt onder $H_0$ een $F$-verdeling met $\dfn = n-1 = 11$ en $\dfd = m-1 = 9$ vrijheidsgraden.\rubric{1}
 
-        De geobserveerde toetsingsgrootheid is gelijk aan
+        \subsubsection*{Stap 2: bepaal het significantieniveau $\alpha$.}
+        Er is in de vraag gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$.
+        
+        \subsubsection*{Stap 3: verzamel data voor het berekenen van de toetsingsgrootheid.}
+        Ook zijn er in de vraag al steekproefdata verzameld voor beide populaties. 
+        Op basis van deze steekproefdata hebben we in vraag (a) bepaald dat:
+        
+        \begin{center}
+            \begin{tabular}{C{.3\textwidth} C{.3\textwidth} C{.3\textwidth}}
+                $\samplemeanx \approx 12.0167$ & $s_X^2 \approx 0.0452$ & $n = 12$ \\
+                $\samplemeany = 9.48$ & $s_Y^2 \approx 10.7173$ & $m = 10$
+            \end{tabular}
+        \end{center}
+
+        \subsubsection*{Stap 4: bereken de toetsingsgrootheid.}
+        De theoretische toetsingsgrootheid (hoofdletter!) bij een $F$-toets is gelijk aan
+        \[
+            F = \frac{S_X^2}{S_Y^2}, \rubric{1}
+        \]
+        en volgt onder $H_0$ een $F$-verdeling met $\dfn = n-1 = 11$ en $\dfd = m-1 = 9$ vrijheidsgraden. \rubric{1}
+
+        De geobserveerde toetsingsgrootheid (kleine letter!) is gelijk aan
         \[
             f = \frac{s_X^2}{s_Y^2} = \frac{0.0452}{10.7173} \approx 0.0042. \rubric{1}
         \]
         
-        We voeren een tweezijdige toets uit (dit is altijd het geval bij een $F$-toets voor gelijke varianties), oftewel het kritieke gebied is van de vorm $(-\infty, g_1)$ en $(g_2, \infty)$, waarbij geldt:
+        \subsubsection*{Stap 5: bepaal de toetsuitslag (met behulp van het kritieke gebied).}
+
+        Een $F$-toets voor gelijke varianties is altijd tweezijdig, oftewel het kritieke gebied is van de vorm $(0, g_1)$ en $(g_2, \infty)$, waarbij de grenswaarden $g_1$ en $g_2$ als volgt kunnen worden berekend:
         \begin{enumerate}
             \item Bepaal de grenswaarde $g_1$ waarvoor geldt dat $P(F \leq g_1) = \alpha/2 = 0.025$.
             Voer hiervoor in de \enquote{numerieke solver} van de grafische rekenmachine in:
             \begin{align*}
                 E_1 &= \fcdf(\lb=0, \ub=X, \df_1=11, \df_2=9) \\
-                E_2 &= 0.025 \rubric{1}
+                E_2 &= 0.025
             \end{align*}
-            De \enquote{numerieke solver} geeft een waarde van $g_1 \approx 0.2787$.\rubric{1}
+            De \enquote{numerieke solver} geeft een waarde van $g_1 \approx 0.2787$.
             \item Bepaal de grenswaarde $g_2$ waarvoor geldt dat $P(F \geq g_2) = \alpha/2 = 0.025$.
             Voer hiervoor in de \enquote{numerieke solver} van de grafische rekenmachine in:
             \begin{align*}
-                E_1 &= \fcdf(\lb=X, \ub=10^{99}, \df_1=9, \df_2=9) \\
-                E_2 &= 0.025 \rubric{1}
+                E_1 &= \fcdf(\lb=X, \ub=\GRinfinity, \df_1=11, \df_2=9) \\
+                E_2 &= 0.025
             \end{align*}
-            De \enquote{numerieke solver} geeft een waarde van $g_2 \approx 3.9121$.\rubric{1}
+            De \enquote{numerieke solver} geeft een waarde van $g_2 \approx 3.9121$.
         \end{enumerate}
         
-        Het kritieke gebied is dus gelijk aan $(-\infty, 0.2787)$ en $(3.9121, \infty)$.
+        Het kritieke gebied is dus gelijk aan $(0, 0.2787)$ en $(3.9121, \infty)$. \rubric{4}
+
         De geobserveerde toetsingsgrootheid $f \approx 0.0042$ ligt in het kritieke gebied, dus we besluiten om $H_0$ te verwerpen.\rubric{1}
-        Er is voldoende reden om op basis van deze steekproeven de aanname van gelijke varianties te verwerpen. \rubric{1}
+
+        \subsubsection*{Stap 6: vertaal de toetsuitslag terug naar de originele context van het probleem.}
+        Er is voldoende reden om op basis van deze steekproeven de aanname van gelijke varianties (van de levertijden van de twee leveranciers) te verwerpen, oftewel we gaan er nu van uit dat $\sigma_X^2 \neq \sigma_Y^2$. \rubric{1}
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
                 \includegraphics{exam20260724-f-kritiek.png} 
@@ -103,31 +124,54 @@
         Bepaal hierbij de toetsuitslag met behulp van de $p$-waarde.
     }
     \solution{
-        We toetsen of de gemiddelde levertijden $\mu_X$ en $\mu_Y$ voor beide leveranciers significant van elkaar verschillen.
-        De hypotheses kunnen we daarom als volgt definiëren:
+        \subsubsection*{Stap 1: formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.}
+        We gaan toetsen of de gemiddelde levertijden $\mu_X$ en $\mu_Y$ voor beide leveranciers significant van elkaar verschillen.
+        De hypothesen zijn daarom als volgt:
         \begin{align*}
             H_0: &\quad \mu_X = \mu_Y \text{ (geen significant verschil in de gemiddelde levertijd) } \\
             H_1: &\quad \mu_X \neq \mu_Y \text{ (wel een significant verschil in de gemiddelde levertijd) } \rubric{2}
         \end{align*}
-        Verder is gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$, en steekproefdata zijn al verzameld voor beide populaties.
-        Op basis van ons antwoord bij vraag (b) mogen we aannemen dat $\sigma_X^2 \neq \sigma_Y^2$.
-        Dat betekent dat we $\sigma_X^2$ en $\sigma_Y^2$ afzonderlijk van elkaar moeten schatten met respectievelijk steekproefvarianties $s_X^2$ en $s_Y^2$. \rubric{1}      
+
+        \subsubsection*{Stap 2: bepaal het significantieniveau $\alpha$.}
+        Er is opnieuw gegeven dat we mogen werken met een significantieniveau $\alpha=0.05$.
         
-        De geobserveerde toetsingsgrootheid is (onder aanname van $H_0: \mu_X = \mu_Y)$ gelijk aan
+        \subsubsection*{Stap 3: verzamel data voor het berekenen van de toetsingsgrootheid}
+        Ook zijn er in de vraag al steekproefdata verzameld voor beide populaties. 
+        Op basis van deze steekproefdata hebben we in vraag (a) bepaald dat:
+        
+        \begin{center}
+            \begin{tabular}{C{.3\textwidth} C{.3\textwidth} C{.3\textwidth}}
+                $\samplemeanx \approx 12.0167$ & $s_X^2 \approx 0.0452$ & $n = 12$ \\
+                $\samplemeany = 9.48$ & $s_Y^2 \approx 10.7173$ & $m = 10$
+            \end{tabular}
+        \end{center}
+
+        \subsubsection*{Stap 4: bereken de toetsingsgrootheid.}
+        Op basis van ons antwoord bij vraag (b) mogen we aannemen dat de varianties ongelijk zijn, oftewel $\sigma_X^2 \neq \sigma_Y^2$.
+        De theoretische toetsingsgrootheid (hoofdletter!) bij een $t$-toets met twee steekproeven (met ongelijke varianties) is gelijk aan
+        \[
+            T = \frac{(\overline{X} - \overline{Y}) - (\mu_X - \mu_Y)}{\sqrt{\frac{S_X^2}{n} + \frac{S_Y^2}{m}}}, \rubric{1}
+        \]
+        en volgt onder $H_0$ een $t$-verdeling met $\df=\min(n-1,m-1)=9$ vrijheidsgraden. \rubric{1}
+
+        De geobserveerde toetsingsgrootheid (kleine letter!) is gelijk aan
         \begin{align*}
             t   &= \frac{(\overline{x}-\overline{y}) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}} \\
-                &=\frac{(12.0167 - 9.48) - 0}{\sqrt{\frac{0.0452}{12} + \frac{10.7173}{10}}} \\
-                & \approx 2.4460 \rubric{2}
+                &= \frac{(12.0167 - 9.48) - 0}{\sqrt{\frac{0.0452}{12} + \frac{10.7173}{10}}} \\
+                &\approx 2.4460. \rubric{2}
         \end{align*}
-        en is een uitkomst van de theoretische toetsingsgrootheid $T$ met een $t$-verdeling met $\text{df}=\min(n-1,m-1)=9$ vrijheidsgraden. \rubric{1}
+
+        \subsubsection*{Stap 5: bepaal de toetsuitslag (met behulp van de $p$-waarde).}
         Omdat we tweezijdig toetsen, is de $p$-waarde gelijk aan het minimum van $P(T \leq t)$ en $P(T \geq t)$:
-        Deze kansen kunnen we met de $t$-verdeling bepalen, namelijk
+        Deze kansen kunnen we met de $t$-verdeling bepalen, namelijk:
         \begin{align*}
-            P(T \leq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.9815 \\ 
-            P(T \geq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.0185 \rubric{2} 
+            P(T \leq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.9815, \\ 
+            P(T \geq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.0185.
         \end{align*}
-        De $p$-waarde is dus gelijk aan $p \approx 0.0185$ en is daarmee kleiner dan $\alpha/2$ (tweezijdige toets!).
-        We besluiten dus om de nulhypothese te verwerpen.\rubric{1}
+        De $p$-waarde is dus gelijk aan $p \approx 0.0185$. \rubric{2}
+
+        Aangezien de $p$-waarde daarmee kleiner is dan $\alpha/2$ (tweezijdige toets!), besluiten we om de nulhypothese te verwerpen.\rubric{1}
+        
         Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde levertijd significant verschilt 
         tussen de twee leveranciers. \rubric{1}    
         \begin{center}

@@ -1,42 +1,70 @@
-\begin{question}{20}{
-    De Explosieven Opruimingsdienst Defensie (EOD) onderzoekt de betrouwbaarheid van chemisch-mechanische ontstekers in onontplofte WO2-bommen.
-    Bij deze bommen is de oorspronkelijke ontstekingsvertraging ontworpen op $\mu_0 = 120$ milliseconden.
-    Door decennialange corrosie bestaat het risico dat deze gemiddelde vertragingstijd is gedaald.
+\begin{question}{15}{
+    De Explosieven Opruimingsdienst Defensie (EOD) onderzoekt de vertragingstijd van ontstekingsmechanismen van onontplofte bommen uit de Tweede Wereldoorlog.
+    Oorspronkelijk is deze vertragingstijd ontworpen dat een bom gemiddeld na $\mu_0 = 120$ milliseconden ontploft.
+    Het risico bestaat dat door decennialange corrosie de gemiddelde vertragingstijd significant is veranderd.
 
-    In een gecontroleerde testomgeving heeft de EOD een steekproef van twaalf ontstekers uit een geborgen batch getest.
-    De gemeten vertragingstijden (in milliseconden) zijn als volgt:
-    \[
-        118, 122, 119, 121, 120, 117, 123, 119, 120, 121, 118, 122
-    \] 
+    In een gecontroleerde testomgeving heeft de EOD een steekproef van $49$ WO2-bommen tot ontploffing gebracht, waarbij een gemiddelde van $117.5$ milliseconden en een standaardafwijking van $3.2$ milliseconden is waargenomen.
+    Je mag hierbij aannemen dat de vertragingstijden normaal verdeeld zijn.
 }
 
     \subquestion{8}{
-        Bereken voor beide steekproeven het steekproefgemiddelde en de steekproefvariantie.
+        Bereken een \SI{98}{\percent}-betrouwbaarheidsinterval voor de gemiddelde vertragingstijd $\mu$ op basis van de steekproefgegevens.
+        Rond de grenzen van het betrouwbaarheidsinterval af op \'e\'en decimaal, zodanig dat de betrouwbaarheid gewaarborgd blijft.
+        Is er reden om aan te nemen dat de gemiddelde vertragingstijd significant is veranderd ten opzichte van de oorspronkelijke waarde van $\mu_0 = 120$ milliseconden?
     }
 
     \solution{
+        In de vraag is het volgende gegeven: 
+        \begin{itemize}
+            \item de oorspronkelijke waarde $\mu_0 = 120$ milliseconden, 
+            \item het steekproefgemiddelde $\samplemeanx = 117.5$,
+            \item de steekproefstandaardafwijking $\samplestd = 3.2$, en
+            \item de steekproefgrootte $n = 49$.
+        \end{itemize}
 
+        De vertragingstijd $X$ van een willekeurige WO2-bom is normaal verdeeld met $\mu = \text{ ?}$ en $\sigma = \text{ ?}$. 
+        We willen een betrouwbaarheidsinterval voor de onbekende $\mu$ berekenen op basis van de steekproefgegevens. 
+        
+        Omdat de standaardafwijking $\sigma$ ook onbekend is, moeten we die schatten met $\samplestd = 3.2$ en voor het betrouwbaarheidsinterval moeten we gebruik maken van de $t$-verdeling.\rubric{1}
+
+        Verder is $\alpha = 0.02$, omdat we een \SI{98}{\percent}-betrouwbaarheidsinterval willen berekenen.\rubric{1}
+
+        De bijbehorende $t$-waarde is gelijk aan
+        \[
+            t = \invt(\opp=1-\frac{\alpha}{2}, \df=n-1) = \invt(\opp=1 - \frac{0.02}{2} = 0.99, \df=48) \approx 2.4066.\rubric{2}
+        \]
+        Het \SI{98}{\percent}-betrouwbaarheidsinterval wordt dan gegeven door
+        \begin{align*}
+            &\phantom{=}[\samplemeanx - t \cdot \frac{ \samplestd }{ \sqrt{ n } }, \samplemeanx + t \cdot \frac{ \samplestd }{ \sqrt{ n } }] \\
+            &= [117.5 - 2.4066 \cdot \frac{ 3.2 }{ \sqrt{ 49 } }, 117.5 + 2.4066 \cdot \frac{ 3.2 }{ \sqrt{ 49 } }] \\
+            &= [116.3998, 118.6002].\rubric{2}
+        \end{align*}
+        Om de betrouwbaarheid te waarborgen, moeten we het interval naar buiten afronden, oftewel op \'e\'en decimaal afgerond krijgen we een interval van $[116.3, 118.7]$ milliseconden. \rubric{1}
+
+        Omdat de oorspronkelijke waarde $\mu_0 = 120$ milliseconden niet in het betrouwbaarheidsinterval ligt, is er voldoende reden om aan te nemen dat de gemiddelde vertragingstijd significant is veranderd ten opzichte van de oorspronkelijke waarde. \rubric{1}
     }
 
-    \subquestion{5}{
-
+    \subquestion{7}{
+        De EOD wil een nauwkeurigere schatting bepalen van de gemiddelde vertragingstijd van WO2-bommen, namelijk met een marge van $\pm 0.5$ milliseconden.
+        Wat is de minimale steekproefomvang $n$ waarvoor het \SI{98}{\percent}-betrouwbaarheidsinterval voor $\mu$ maximaal deze afwijking heeft van het gemiddelde?
+        Je mag aannemen dat de steekproefstandaardafwijking nog steeds gelijk is aan $3.2$ milliseconden.
     }
     \solution{
+        Het betrouwbaarheidsinterval voor $\mu$ wordt gegeven door
+        \[
+            [\samplemeanx - t \cdot \samplestd / \sqrt{n}, \quad \samplemeanx + t \cdot \samplestd / \sqrt{n}],
+        \]
+        De afwijking van het betrouwbaarheidsinterval ten opzichte van het steekproefgemiddelde is dus $\pm\ t \cdot \samplestd / \sqrt{n}$ en we willen dat deze kleiner is dan of gelijk aan $\pm 0.5$ milliseconden.\rubric{2}
 
+        Hiertoe voeren we op de grafische rekenmachine het volgende in in het functiescherm:
+        \[
+            y_1 = \frac{s}{\sqrt{X}} \cdot \invt(\opp=1-\alpha/2, \df=X-1) = \frac{3.2}{\sqrt{X}} \cdot \invt(\opp=0.99, \df=X-1) \rubric{2}
+        \]
+        Met behulp van de tabelfunctie krijgen we dan als volgt:
+        \begin{align*}
+            X = 224: &\quad \frac{3.2}{\sqrt{224}} \cdot \invt(\opp=0.99, \df=224-1) \approx 0.5010. \\
+            X = 225: &\quad \frac{3.2}{\sqrt{225}} \cdot \invt(\opp=0.99, \df=225-1) \approx 0.4999. \rubric{2}
+        \end{align*}
+        Om een betrouwbaarheidsinterval te vinden met de gewenste precisie van maximaal $\pm\ 0.5$ meter, is een minimale steekproefgrootte van $n = 225$ WO2-bommen benodigd.\rubric{1}
     }
-
-    \subquestion{5}{
-
-    }
-    \solution{
-
-    }
-
-    \subquestion{2}{
-
-    }
-    \solution{
-
-    }
-
 \end{question}
