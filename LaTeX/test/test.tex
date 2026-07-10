@@ -1,0 +1,138 @@
+\documentclass{article}
+
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\usepackage{\path/LaTeX/styles/config}
+\usepackage{\path/LaTeX/styles/statistics-macros}
+\graphicspath{{\path/LaTeX/figures/}}
+
+\begin{document}
+    \begin{center}
+            \begin{tabular}{ccccc}
+                \toprule
+                    $x$ & $y$ & $xy$ & $x^2$ & $y^2$ \\
+                \midrule
+    		$20.0000$ & $5.2000$ & $104.0000$ & $400.0000$ & $27.0400$ \\
+		$25.0000$ & $4.5000$ & $112.5000$ & $625.0000$ & $20.2500$ \\
+		$30.0000$ & $5.7000$ & $171.0000$ & $900.0000$ & $32.4900$ \\
+		$35.0000$ & $5.3000$ & $185.5000$ & $1225.0000$ & $28.0900$ \\
+		$40.0000$ & $5.0000$ & $200.0000$ & $1600.0000$ & $25.0000$ \\
+		$45.0000$ & $6.4000$ & $288.0000$ & $2025.0000$ & $40.9600$ \\
+		$50.0000$ & $6.2000$ & $310.0000$ & $2500.0000$ & $38.4400$ \\
+		$55.0000$ & $8.0000$ & $440.0000$ & $3025.0000$ & $64.0000$ \\
+		$60.0000$ & $9.3000$ & $558.0000$ & $3600.0000$ & $86.4900$ \\
+		$65.0000$ & $8.8000$ & $572.0000$ & $4225.0000$ & $77.4400$ \\
+
+                \midrule
+                    $\overline{x} = 42.5000$ & $\overline{y} = 6.4400$ & $\overline{xy} = 294.1000$ & $\overline{x^2} = 2012.5000$ & $\overline{y^2} = 44.0200$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    
+
+        \begin{align*}
+            b &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
+              &= \frac{294.1000 - 42.5000 \cdot 6.4400}{2012.5000 - (42.5000)^2} \\
+              &= \frac{20.4000}{206.2500} \approx 0.0989 \\
+            a &= \overline{y} - b \cdot \overline{x} \\
+              &= 6.4400 - 0.0989 \cdot 42.5000 \\
+              &\approx 2.2364.
+        \end{align*}
+
+        De formule van de regressielijn behorende bij deze steekproef is dus gelijk aan $Y = 2.2364+0.0989X$.
+    
+Voorspelde waarde voor $Y$ bij $X = 38$ is gelijk aan 5.99490909090909
+
+        \begin{align*}
+            r(x,y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x^2} - \overline{x}^2) \cdot (\overline{y^2} - \overline{y}^2) } }\\
+                    &= \frac{ 294.1000 - 42.5000 \cdot 6.4400 }{ \sqrt{ (2012.5000 - 42.5000^2) \cdot (44.0200 - 6.4400^2) } } \\
+                    &= \frac{20.4000}{22.9171} \\
+                    &\approx 0.8902.
+        \end{align*}
+    
+[ 1.  2.  3.  4.  5.  6.  7.  8.  9. 10.] [ 3.  1.  5.  4.  2.  7.  6.  8. 10.  9.]
+
+        De eerste stap bij het berekenen van Spearman's correlatieco\"effici\"ent is het bepalen van de rankings van de uitkomsten voor $X$ en $Y$:
+        \begin{center}
+            \begin{tabular}{ccccccccccc}
+                \toprule
+                    {\bfseries Rangnummers $X$-waarden} & $1.0$ & $2.0$ & $3.0$ & $4.0$ & $5.0$ & $6.0$ & $7.0$ & $8.0$ & $9.0$ & $10.0$ \\
+                    {\bfseries Rangnummers $Y$-waarden} & $3.0$ & $1.0$ & $5.0$ & $4.0$ & $2.0$ & $7.0$ & $6.0$ & $8.0$ & $10.0$ & $9.0$ \\
+                \midrule
+                    {\bfseries Verschillen $d_i$} & $-2.0$ & $1.0$ & $-2.0$ & $0.0$ & $3.0$ & $-1.0$ & $1.0$ & $0.0$ & $-1.0$ & $1.0$ \\
+                    {\bfseries Kwadratische verschillen $d_i^2$} & $4.0$ & $1.0$ & $4.0$ & $0.0$ & $9.0$ & $1.0$ & $1.0$ & $0.0$ & $1.0$ & $1.0$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+
+        De som van de kwadratische rangnummerverschillen is gelijk aan $\sum_i d_i^2 = 22.0$.
+        Aangezien de steekproefgrootte gelijk is aan $n = 10$, is de rangcorrelatieco\"effici\"ent van Spearman gelijk aan
+        \begin{align*}
+            r_s &= 1 - \frac{ 6 \cdot \sum_i d_i^2 }{ n^3 - n }  \\
+                &= 1 - \frac{ 6 \cdot 22.0 }{ 10^3 - 10 }  \\
+                &\approx 0.8667.
+        \end{align*}
+    
+
+        De eerste stap is om de puntschatting voor $Y$ te bepalen aan de hand van de regressielijn $Y = 2.2364+0.0989X$ door $X = 38$ in te vullen.
+        Dit geeft ons een puntschatting van $y_0 = 2.2364 +0.0989 \cdot 38 \approx 5.9949$.
+        Daarnaast kunnen we de standaardafwijking $\sigma$ van de storingsterm $\varepsilon$ schatten:
+        \begin{align*}
+            s_{\varepsilon} &= \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
+                               &= \sqrt{ \frac{10}{8} \cdot \left( 44.0200 - 2.2364 \cdot 6.4400 - 0.0989 \cdot 294.1000 \right) } \\ 
+                               &\approx 0.8129.
+        \end{align*}
+
+        Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van de verwachtingswaarde van $Y$ voor gegeven $X = x_0$:
+        \begin{align*}
+        s_{\mu}  &= s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) } \\
+                    &= 0.8129 \cdot \sqrt{ \frac{1}{10} \cdot \left( 1 + \frac{(38.0000 - 42.5000)^2}{2012.5000 - 42.5000^2} \right) } \\
+                    &\approx 0.2694.   
+        \end{align*}
+
+        Omdat we de standaardafwijkingen geschat hebben en de storingstermen normaal verdeeld zijn, moeten we werken met de $t$-verdeling met $df = n - 2 = 8$ vrijheidsgraden.
+        De $t$-waarde die hoort bij een betrouwbaarheidsniveau $\alpha = 0.050000000000000044$ is gelijk aan
+        \[
+            t = \invt(\text{opp} = 1 - \alpha / 2; \text{df} = n - 2) = \invt(\text{opp} = 0.975; \text{df} = 8) \approx 2.3060.
+        \]
+        Het $95\%$-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = x_0$ kan dus worden beschreven door
+        \begin{align*}
+            &[y_0 - t \cdot s_{\mu}; y_0 - t \cdot s_{\mu}] \\
+            &= [5.9949 - 2.3060 \cdot 0.2694; 5.9949 + 2.3060 \cdot 0.2694] \\
+            &\approx [5.3737; 6.6161].
+        \end{align*}
+        
+        Met \SI{95}{\percent} betrouwbaarheid ligt het gemiddelde van $Y$ voor gegeven $X = 38$ tussen $5.3737$ en $6.6161$.       
+    
+
+        De eerste stap is om de puntschatting voor $Y$ te bepalen aan de hand van de regressielijn $Y = 2.2364+0.0989 \cdot X$ door $X = 38$ in te vullen.
+        Dit geeft ons een puntschatting van $y_0 = 2.2364 +0.0989 \cdot 38 \approx 5.9949$.
+        Daarnaast kunnen we de standaardafwijking $\sigma$ van de storingsterm $\varepsilon$ schatten:
+        \begin{align*}
+            s_{\varepsilon} &= \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
+                               &= \sqrt{ \frac{10}{8} \cdot \left( 44.0200 - 2.2364 \cdot 6.4400 - 0.0989 \cdot 294.1000 \right) } \\ 
+                               &\approx 0.8129. 
+        \end{align*}
+
+        Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van $Y$ voor gegeven $X = x_0$:
+        \begin{align*}
+            s_{f} &= s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) } \\
+                    &= 0.8129 \cdot \sqrt{ 1 + \frac{1}{10} \cdot \left( 1 + \frac{(38 - 42.5000)^2}{2012.5000 - 42.5000^2} \right) } \\
+                    &\approx 0.8564.         
+        \end{align*}
+
+        Omdat we de standaardafwijkingen geschat hebben en de storingstermen normaal verdeeld zijn, moeten we werken met de $t$-verdeling met $df = n - 2 = 8$ vrijheidsgraden.
+        De $t$-waarde die hoort bij een betrouwbaarheidsniveau $\alpha = 0.050000000000000044$ is gelijk aan
+        \[
+            t = \invt(\text{opp} = 1 - \alpha / 2; \text{df} = n - 2) = \invt(\text{opp} = 0.975; \text{df} = 8) \approx 2.3060.
+        \]
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = x_0$ kan dus worden beschreven door
+        \begin{align*}
+            &[y_0 - t \cdot s_{f}; y_0 - t \cdot s_{f}] \\ 
+            &= [5.9949 - 2.3060 \cdot 0.8564; 5.9949 + 2.3060 \cdot 0.8564] \\ 
+            &\approx [4.0201; 7.9697]. 
+        \end{align*}
+        
+        Met \SI{95}{\percent} betrouwbaarheid ligt een toekomstige uitkomst van $Y$ voor gegeven $X = 38$ tussen $4.0201$ en $7.9697$.
+
+
+\end{document}
