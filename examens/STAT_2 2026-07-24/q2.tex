@@ -1,4 +1,4 @@
-\begin{question}{28}{
+\begin{question}{29}{
     Instructeurs van de KMA voeren een evaluatie uit om te bepalen of een nieuwe Virtual Reality (VR) schietsimulator net zo effectief is als de traditionele \emph{live-fire} schietbaan voor Close Quarters Battle (CQB) training.
     Hieronder zijn de beoordelingsresultaten van $400$ cadetten gegeven.
     \par\medskip
@@ -37,8 +37,8 @@
     }
 
     \subquestion{8}{
-        Wat is de kansverdeling van de theoretische toetsingsgrootheid onder de nulhypothese $H_0$?
-        Bereken de geobserveerde toetsingsgrootheid van deze hypothesetoets.
+        Wat is de theoretische toetsingsgrootheid van deze hypothesetoets?
+        Bereken de geobserveerde toetsingsgrootheid met behulp van de data in bovenstaande tabel.
     }
     \solution{
         De (theoretische) toetsingsgrootheid voor een chikwadraattoets voor onafhankelijkheid is gelijk aan
@@ -48,7 +48,7 @@
         Voordat we de toetsingsgrootheid kunnen berekenen, moeten we dus de verwachte frequenties $E_{ij}$ bepalen.
         Dit doen we aan de hand van de volgende formule:
         \[
-            E_{ij} = \frac{(\text{rijtotaal}_i) \cdot (\text{kolomtotaal}_j)}{\text{totaal}}
+            E_{ij} = \frac{(\text{rijtotaal}_i) \cdot (\text{kolomtotaal}_j)}{\text{totaal}} \rubric{1}
         \]
         We berekenen de verwachte frequenties voor elke cel in de tabel:
         \par\medskip
@@ -76,7 +76,7 @@
 
     \subquestion{5}{
         Wat is de kansverdeling van de theoretische toetsingsgrootheid onder $H_0$? 
-        Bepaal met deze kansverdeling de $p$-waarde behorende bij de geobserveerde toetsingsgrootheid.
+        Bereken met deze kansverdeling de $p$-waarde behorende bij de geobserveerde toetsingsgrootheid.
     }
     \solution{
         De theoretische toetsingsgrootheid $X^2$ volgt onder de nulhypothese een chikwadraatverdeling met $\df = (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (3-1)\cdot(2-1) = 2$ vrijheidsgraden. \rubric{2}
@@ -95,7 +95,7 @@
         \end{center}
     }
 
-    \subquestion{4}{
+    \subquestion{5}{
         Bepaal de toetsuitslag op basis van de berekende $p$-waarde en vertaal deze terug naar de originele probleemcontext.
         Geef een verklaring voor deze toetsuitslag aan de hand van de gegeven tabel van schietprestaties.
     }
@@ -106,7 +106,7 @@
         Er is onvoldoende reden om aan te nemen dat het type trainingsmethode significant effect heeft op de schietprestaties van cadetten. \rubric{1}
         
         Als we kijken naar de tabellen van geobserveerde en verwachte frequenties,
-        dan zien we dat voor veel van de cellen in de tabellen de geobserveerde en verwachte frequenties $o_{ij}$ en $e_{ij}$ niet heel ver uit elkaar liggen.\rubric{1}
+        dan zien we dat voor veel van de cellen in de tabellen de geobserveerde en verwachte frequenties $o_{ij}$ en $e_{ij}$ niet heel ver uit elkaar liggen.\rubric{2}
         Op basis van deze steekproefdata is er onvoldoende reden om aan te nemen dat het type trainingsmethode significant effect heeft op de schietprestaties van cadetten. \rubric{1}
     }
     

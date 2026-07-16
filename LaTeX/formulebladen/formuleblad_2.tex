@@ -49,7 +49,7 @@
 
                 \centering\textbf{Casio fx-CG50 (MENU 5)}
                 \begin{itemize}
-                    \item $y_1 = s / \sqrt{X} \cdot \invtC(\opp=1-\alpha/2, \df=X-1)$
+                    \item $y_1 = s / \sqrt{X} \cdot \invtC(\opp=\alpha/2, \df=X-1)$
                     \item Bepaal de laagste waarde van $X$ zodat $y_1 \leq a$
                 \end{itemize}
         \end{multicols}
@@ -58,7 +58,7 @@
 \subsection*{$100(1-\alpha)$\si{\percent}-BI voor de binomiale succeskans $p$ (Clopper-Pearson methode)}
     Gegeven is een binomiale verdeelde kansvariabele met bekende $n$ en uitkomst $k$, en onbekende $p = \text{ ?}$.
     \begin{enumerate}
-        \item Bereken ondergrens van het ineterval: de kleinste succeskans $p_1$ zodat geldt $P(X \geq k) \geq \alpha/2$.
+        \item Bereken ondergrens van het interval: de kleinste succeskans $p_1$ zodat geldt $P(X \geq k) \geq \alpha/2$.
         \item Bereken bovengrens van het interval: de grootste succeskans $p_2$ zodat geldt $P(X \leq k) \geq \alpha/2$.
     \end{enumerate}
     \begin{multicols}{2}
@@ -104,7 +104,7 @@
     \item Op basis van deze kansverdeling kun je (i) een kritiek gebied bepalen, of (ii) een $p$-waarde berekenen.
     \begin{itemize}
         \item \textbf{Kritiek gebied:} verwerp $H_0$ alleen als de geobserveerde toetsingsgrootheid in het kritieke gebied ligt.
-        \item \textbf{$p$-waarde:} verwerp $H_0$ alleen als $p \le \alpha$ (links-/rechtszijdig) of $p \le \frac{\alpha}{2}$ (tweezijdig).
+        \item \textbf{$p$-waarde:} verwerp $H_0$ alleen als $p \le \alpha$ (links-/rechtszijdig) of $p \le \alpha / 2$ (tweezijdig).
     \end{itemize}
 \end{itemize}
 
@@ -147,19 +147,19 @@
             \toprule
                 \textbf{Kansverdeling (onder $H_0$)} & \textbf{Linkszijdig} $(-\infty, g)$ & \textbf{Tweezijdig} $(-\infty, g_1)$ en $(g_2, \infty)$ & \textbf{Rechtszijdig} $(g, \infty)$ \\
             \midrule
-                \multirow{2}*{$N\left(\mu, \sigma\right)$} & \multirow{2}*{$g = \invnorm(\alpha, \mu, \sigma)$} & $g_1 = \invnorm(\frac{\alpha}{2}, \mu, \sigma)$ & \multirow{2}*{$g = \invnorm(1-\alpha, \mu, \sigma)$}\\
-                & & $g_2 = \invnorm(1-\frac{\alpha}{2}, \mu, \sigma)$ & \\
+                \multirow{2}*{$N\left(\mu, \sigma\right)$} & \multirow{2}*{$g = \invnorm(\alpha, \mu, \sigma)$} & $g_1 = \invnorm(\alpha / 2, \mu, \sigma)$ & \multirow{2}*{$g = \invnorm(1-\alpha, \mu, \sigma)$}\\
+                & & $g_2 = \invnorm(1-\alpha / 2, \mu, \sigma)$ & \\
             \midrule
-                \multirow{2}*{$t(\df)$} & \multirow{2}*{$g = \invt(\alpha, \df)$} & $g_1 = \invt(\frac{\alpha}{2}, \df)$ & \multirow{2}*{$g = \invt(1-\alpha, \df)$}\\
-                & & $g_2 = \invt(1-\frac{\alpha}{2}, \df)$ & \\
+                \multirow{2}*{$t(\df)$} & \multirow{2}*{$g = \invt(\alpha, \df)$} & $g_1 = \invt(\alpha / 2, \df)$ & \multirow{2}*{$g = \invt(1-\alpha, \df)$}\\
+                & & $g_2 = \invt(1-\alpha / 2, \df)$ & \\
             \midrule
                 \multicolumn{4}{c}{\emph{Grenzen die met de \enquote{numeric solver} moeten worden opgelost:}} \\
             \midrule
                 $\chi^2(\df)$ & - & - & $\chi^2\text{cdf}(g, 10^{99}, \df) = \alpha$\\
-                % & & $\chi^2\text{cdf}(g_2, 10^{99}, \df) = \frac{\alpha}{2}$ & \\
+                % & & $\chi^2\text{cdf}(g_2, 10^{99}, \df) = \alpha / 2$ & \\
             \midrule
-                $F(\df_A, \df_B)$ & - & $\text{Fcdf}(0, g_1, \df_A, \df_B) = \frac{\alpha}{2}$ & - \\
-                & & $\text{Fcdf}(g_2, 10^{99}, \df_A, \df_B) = \frac{\alpha}{2}$ & \\
+                $F(\df_A, \df_B)$ & - & $\text{Fcdf}(0, g_1, \df_A, \df_B) = \alpha / 2$ & - \\
+                & & $\text{Fcdf}(g_2, 10^{99}, \df_A, \df_B) = \alpha / 2$ & \\
             \bottomrule
         \end{tabular}
     \end{table}
@@ -364,10 +364,10 @@
 % \[ L(x_1, x_2, \ldots, x_n; \theta) = f(x_1; \theta)\cdot f(x_2; \theta)\cdot\ldots\cdot f(x_n; \theta)\]
 
 % \textbf{Minimum sample size with given accuracy $E$:}
-% \[ n \ge \left(\frac{z_{\frac{\alpha}{2}} \cdot \sigma}{E}\right)^2\]
+% \[ n \ge \left(\frac{z_{\alpha / 2} \cdot \sigma}{E}\right)^2\]
 
 % \textbf{Minimum sample size for bounding type II error $\beta$}
-% \[ n \ge \frac{(z_{\frac{\alpha}{2}}+z_{\beta})^2 \cdot \sigma^2}{\delta^2}\]
+% \[ n \ge \frac{(z_{\alpha / 2}+z_{\beta})^2 \cdot \sigma^2}{\delta^2}\]
 
 % \textbf{Veelgebruikte functies op de grafische rekenmachine}
 % \begin{table}[H]

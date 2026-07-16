@@ -116,14 +116,14 @@
             \item Bepaal de succeskans $p_1$ waarvoor geldt dat de linkeroverschrijdingskans van de uitkomst $k=106$ gelijk is aan $\alpha/2$, oftewel $P(X \leq 106) = \alpha/2 = 0.025$.
             Voer hiervoor in het solver menu van de grafische rekenmachine in:
             \begin{align*}
-                E_1 &= \binomcdf(n=300; p_1=X; k=106) \\
+                E_1 &= \binomcdf(n=300, p_1=X, k=106) \\
                 E_2 &= 0.025 \rubric{1}
             \end{align*}
             De solver optie geeft een waarde van $p_1 \approx 0.4103$.\rubric{1}
             \item Bepaal de succeskans $p_2$ waarvoor geldt dat de rechteroverschrijdingskans van de uitkomst $k=106$ gelijk is aan $\alpha/2$, oftewel $P(X \geq 106) = 1 - P(X \le 105) = \alpha/2 = 0.025$.
             Voer hiervoor in het solver menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= 1 - \binomcdf(n=300, p_1=X; k=105) \\
+                E_1 &= 1 - \binomcdf(n=300, p_1=X, k=105) \\
                 E_2 &= 0.025 \rubric{1}
             \end{align*}
             De solver optie geeft een waarde van $p_2 \approx 0.2993$.\rubric{1}

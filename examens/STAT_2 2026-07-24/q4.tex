@@ -1,38 +1,54 @@
-\begin{question}{27}{
+\begin{question}{26}{
+    In het kader van logistieke planning en munitiebeheer is een artillerie-eenheid belast met het optimaliseren van vuursteun bij gevechtsoperaties.
+    Om deze optimalisaties te kunnen onderbouwen zijn op basis van een steekproef van elf gevechtsoperaties data verzameld voor het aantal verbruikte munitiekisten (onafhankelijke variabele $X$) 
+    en het percentage succesvol geneutraliseerde doelen (afhankelijke variabele $Y$). 
+    Deze data zijn te vinden in onderstaande tabel
     {\par\bigskip
         \begin{center}
-            \begin{tabular}{c|cccccccccc}
+            \begin{tabular}{c|ccccccccccc}
                 \toprule
+                    \textbf{$X$} & $14.2$ & $27.8$ & $33.5$ & $46.1$ & $52.4$ & $61.9$ & $74.3$ & $85.6$ & $93.2$ & $108.7$ & $119.4$ \\
                 \midrule
+                    \textbf{$Y$} & $43.5$ & $26.2$ & $41.1$ & $64.4$ & $28.2$ & $45.6$ & $66.8$ & $62.3$ & $89.5$ & $71.2$ & $94.6$ \\
                 \bottomrule
             \end{tabular}
         \end{center}\par\bigskip
     }
 }
 
-    \subquestion{2}{
-        Als we een regressie-analyse willen uitvoeren, welke variabele zou dan de afhankelijke variabele $Y$ zijn en welke variabele zou de onafhankelijke variabele $X$ zijn?
-    }
-    \solution{
+    % \subquestion{2}{
+    %     Als we een regressie-analyse willen uitvoeren, welke variabele zou dan de afhankelijke variabele $Y$ zijn en welke variabele zou de onafhankelijke variabele $X$ zijn?
+    % }
+    % \solution{
+    %     Bij een regressie-analyse is de meest logische keuze om het aantal verbruikte munitiekisten als onafhankelijke variabele $X$ te kiezen,
+    %     en het percentage succesvolle geneutraliseerde doelen als afhankelijke variabele $Y$. \rubric{1}
+    %     s
+    %     Een hoger munitieverbruik zou een hoger percentage succesvol geneutraliseerde doelen kunnen verklaren, andersom is dat minder evident.\rubric{1}
+    % }
 
-    }
-
-    \subquestion{5}{
+    \subquestion{4}{
         Teken het spreidingsdiagram (scatter plot) op basis van je antwoord op vraag (a).
         Geef hierbij ook duidelijk aan welke as welke variabele beschrijft.
     }
     \solution{
+        De $x$-as duidt de onafhankelijke variabele $X$ uit, oftewel het aantal verbruikte munitiekisten. \rubric{1}
 
+        De $y$-as duidt de afhankelijke variabele $Y$ uit, oftewel het percentage succesvol geneutraliseerde doelen.\rubric{1}
+        \begin{center}
+            \resizebox{\textwidth}{!}{
+                \includegraphics{exam20260724-scatterplot.png} \rubric{2}
+            }
+        \end{center}
     }
 
     \subquestion{8}{
-        Bereken Pearson's correlatieco\"effici\"ent $r(x,y)$ op basis van de data in de bovenstaande tabel.
+        Bereken Pearson's correlatiecoëfficiënt $r(x,y)$ op basis van de data in de bovenstaande tabel.
         Wat zegt $r(x, y)$ over de relatie tussen het cargogewicht en het kerosineverbruik?
     }
     \solution{
-        We beginnen met het uitrekenen van Pearson's correlatieco\"effici\"ent 
+        We beginnen met het uitrekenen van Pearson's correlatiecoëfficiënt 
         \begin{align*}
-            r(x,y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x^2} - \overline{x}^2 ) \cdot (\overline{y^2} - \overline{y}^2) }}
+            r(x, y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x^2} - \overline{x}^2 ) \cdot (\overline{y^2} - \overline{y}^2) }}
         \end{align*}
         Hiervoor hebben we dus de waardes van $\overline{x}$, $\overline{y}$, $\overline{xy}$, $\overline{x^2}$ en $\overline{y^2}$ nodig.
         Deze bepalen we aan de hand van de volgende rekentabel:
@@ -41,87 +57,98 @@
                 \toprule
                     $x$ & $y$ & $xy$ & $x^2$ & $y^2$ \\
                 \midrule
-    		        $2$ & $29$ & $58$ & $4$ & $841$ \\
-                    $4$ & $17$ & $68$ & $16$ & $289$ \\
-                    $6$ & $61$ & $366$ & $36$ & $3721$ \\
-                    $8$ & $76$ & $608$ & $64$ & $5776$ \\
-                    $10$ & $49$ & $490$ & $100$ & $2401$ \\
-                    $12$ & $81$ & $972$ & $144$ & $6561$ \\
-                    $14$ & $124$ & $1736$ & $196$ & $15376$ \\
-                    $16$ & $102$ & $1632$ & $256$ & $10404$ \\
-                    $18$ & $103$ & $1854$ & $324$ & $10609$ \\
-                    $20$ & $118$ & $2360$ & $400$ & $13924$ \\
+    		        $14.2$ & $43.5$ & $617.7$ & $201.64$ & $1892.25$ \\
+                    $27.8$ & $26.2$ & $728.36$ & $772.84$ & $686.44$ \\
+                    $33.5$ & $41.1$ & $1376.85$ & $1122.25$ & $1689.21$ \\
+                    $46.1$ & $64.4$ & $2968.84$ & $2125.21$ & $4147.36$ \\
+                    $52.4$ & $28.2$ & $1477.68$ & $2745.76$ & $795.24$ \\
+                    $61.9$ & $45.6$ & $2822.64$ & $3831.61$ & $2079.36$ \\
+                    $74.3$ & $66.8$ & $4963.24$ & $5520.49$ & $4462.24$ \\
+                    $85.6$ & $62.3$ & $5332.88$ & $7327.36$ & $3881.29$ \\
+                    $93.2$ & $89.5$ & $8341.4$ & $8686.24$ & $8010.25$ \\
+                    $108.7$ & $71.2$ & $7739.44$ & $11815.69$ & $5069.44$ \\
+                    $119.4$ & $94.6$ & $11295.24$ & $14256.36$ & $8949.16$ \\
                 \midrule
-                    $\overline{x} = 11$ & $\overline{y} = 76$ & $\overline{xy} = 1014.4$ & $\overline{x^2} = 154$ & $\overline{y^2} = 6990.2$ \rubric{4} \\
+                    $\overline{x} = 65.1909$ & $\overline{y} = 57.5818$ & $\overline{xy} = 4333.1155$ & $\overline{x^2} = 5309.5864$ & $\overline{y^2} = 3787.4764$ \rubric{4} \\ 
                 \bottomrule
             \end{tabular}
         \end{center}
         \par\medskip
-        De correlatieco\"effici\"ent van Pearson is dus gelijk aan
+        De correlatiecoëfficiënt van Pearson is dus gelijk aan
         \begin{align*}
             r(x,y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x^2} - \overline{x}^2) \cdot (\overline{y^2} - \overline{y}^2) } }\\
-                    &= \frac{ 1014.4 - 11 \cdot 76 }{ \sqrt{ (154 - 11^2) \cdot (6990.2 - 76^2) } } \\
-                    &= \frac{178.4}{200.1714} \\
-                    &\approx 0.8912. \rubric{2}
+                    &= \frac{ 4333.1155 - 65.1909 \cdot 57.5818 }{ \sqrt{ (5309.5864 - 65.1909^2) \cdot (3787.4764 - 57.5818^2) } } \\
+                    &= \frac{579.3044}{707.1016} \\
+                    &\approx 0.8193.\rubric{2}
         \end{align*}
-        De correlatieco\"effici\"ent $r \approx 0.8912$ ligt ver van $0$ af en is positief.
+        De correlatiecoëfficiënt $r \approx 0.8193$ ligt ver van $0$ af en is positief.
         Dit houdt in dat er een sterke positieve (stijgende) trend is. \rubric{1}
-        Een hoger gewicht van de lading correleert sterk met een hoger kerosineverbruik. \rubric{1}
+        Een hoger munitieverbruik correleert sterk met een hoger percentage succesvol uitgeschakelde doelen. \rubric{1}
+
+        (Maximaal $2$ punten indien de student een negatieve waarde heeft berekend voor $r(x, y)$ en inziet dat dit niet rijmt met het spreidingsdiagram.
+        $0$ punten indien de student dit besef niet laat zien in zijn/haar uitwerking.)
     }
 
     \subquestion{6}{
-        Bereken de regressielijn $Y = a + b \cdot X$ door berekening van de co\"effici\"enten $a$ en $b$.
-        Bepaal aan de hand van de regressielijn een statistisch verantwoorde voorspelling voor het kerosineverbruik van een transportvliegtuig met een lading van 5500 kilogram.
+        Bereken de coëfficiënten $a$ en $b$ van de regressielijn $\hat{Y} = a + b \cdot X$.
+        Bepaal aan de hand van de regressielijn een statistisch verantwoorde voorspelling voor het 
+        percentage succesvol geneutraliseerde doelen bij een operatie waarbij $80$ munitiekisten worden verschoten.
     }
     \solution{
-        Om de co\"effici\"enten $a$ en $b$ van de regressielijn te berekenen, gaan we de rekentabel van vraag (a) hergebruiken.
+        Om de coëfficiënten $a$ en $b$ van de regressielijn te berekenen, gaan we de rekentabel van vraag (a) hergebruiken.
         Er volgt namelijk dat
         \begin{align*}
             b &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
-              &= \frac{1014.4 - 11 \cdot 76}{154 - (11)^2} \\
-              &= \frac{178.4}{33} \approx 5.4061, \rubric{2}\\
+              &= \frac{4333.1155 - 65.1909 \cdot 57.5818}{5309.5864 - (65.1909)^2} \\
+              &= \frac{579.3044}{1059.7317} \approx 0.5467 \rubric{2} \\
             a &= \overline{y} - b \cdot \overline{x} \\
-              &= 76 - 5.4061 \cdot 11 \\
-              &\approx 16.5333. \rubric{2}
+              &= 57.5818 - 0.5467 \cdot 65.1909 \\
+              &\approx 21.9451. \rubric{2}
         \end{align*}
-        De formule van de regressielijn behorende bij deze steekproef is dus gelijk aan $Y = 16.5333 + 5.4061 \cdot X$. \rubric{1}
-        Een statistisch verantwoorde voorspelling voor het kerosineverbruik van een transportvliegtuig met een lading van 5500 kilogram vinden we door $X = 5.5$ in te vullen:
-        Dit geeft een waarde van $y_0 = 16.5333 + 5.4061 \cdot 5.5 \approx 46.2667$, oftewel net iets meer dan $46$ kilogram per minuut. \rubric{1} 
+        De formule van de regressielijn behorende bij deze steekproef is dus gelijk aan $\hat{Y} = 21.9451 + 0.5467 \cdot X$. \rubric{1}
+        Een statistisch verantwoorde voorspelling voor het percentage succesvol geneutraliseerde doelen bij een operatie met $80$ verbruikte munitiekisten
+        vinden we door $X = 80$ in te vullen:
+        Dit geeft een waarde van $\hat{Y}_0 = 21.9451 + 0.5467 \cdot 80 \approx 65.6772$, oftewel 
+        onze voorspelling zegt dat bijna twee derde van de doelen succesvol worden geneutraliseerd. \rubric{1} 
+
+        (Geen punten indien $b < 0$ zonder besef dat dit niet kan kloppen. \\
+        Maximaal $2$ punten indien de coëfficiënten dusdanige waarden hebben dat deze niet logischerwijs een passende lijn vormen door de steekproefdata.)
     }
 
-    \subquestion{9}{
-        Bereken een \SI{95}{\percent}-voorspellingsinterval voor het kerosineverbruik van een transportvliegtuig met een laadgewicht van 5500 kilogram.
-        Wat kun je concluderen aan de hand van dit interval over de betrouwbaarheid van de voorspelling die je in vraag (d) hebt gemaakt?
+    \subquestion{8}{
+        Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor het verwachte succespercentage van geneutraliseerde doelen bij een operatie
+        waarbij $80$ munitiekisten worden verschoten.
+        Rond het interval af op gehele percentages zodat de betrouwbaarheid van het interval gewaarborgd blijft.
     }
     \solution{
-        In opdracht (d) hebben we een puntschatting van $y_0 = 16.5333 + 5.4061 \cdot 5.5 \approx 46.2667$ bepaald.
+        In opdracht (d) hebben we een puntschatting van $\hat{Y}_0 = 21.9451 + 0.5467 \cdot 80 \approx 65.6772$ bepaald.
         Daarnaast kunnen we de standaardafwijking $\sigma$ van de storingsterm $\varepsilon$ schatten:
         \begin{align*}
             s_{\varepsilon} &= \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
-                            &= \sqrt{ \frac{10}{8} \cdot \left( 6990.2 - 16.5333 \cdot 76 - 5.4061 \cdot 1014.4 \right) } \\ 
-                            &\approx 17.6691. \rubric{2}
+                               &= \sqrt{ \frac{11}{9} \cdot \left( 3787.4764 - 21.9451 \cdot 57.5818 - 0.5467 \cdot 4333.1155 \right) } \\ 
+                               &\approx 13.7698.\rubric{2}
         \end{align*}
 
-        Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van $Y$ voor gegeven $X = x_0$:
+        Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van de verwachtingswaarde van $Y$ voor gegeven $X = x_0$:
         \begin{align*}
-            s_{f} &= s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) } \\
-                    &= 17.6691 \cdot \sqrt{ 1 + \frac{1}{10} \cdot \left( 1 + \frac{(5.5 - 11)^2}{154 - 11^2} \right) } \\
-                    &\approx 19.2882. \rubric{2}
+        s_{\mu}  &= s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) } \\
+                    &= 13.7698 \cdot \sqrt{ \frac{1}{11} \cdot \left( 1 + \frac{(80 - 65.1909)^2}{5309.5864 - 65.1909^2} \right) } \\
+                    &\approx 4.5612.\rubric{2}
         \end{align*}
 
-        Omdat we de standaardafwijkingen geschat hebben en de storingstermen normaal verdeeld zijn, moeten we werken met de $t$-verdeling met $df = n - 2 = 8$ vrijheidsgraden.
+        Omdat we de standaardafwijkingen geschat hebben en de storingstermen normaal verdeeld zijn, moeten we werken met de $t$-verdeling met $\df = n - 2 = 9$ vrijheidsgraden.
         De $t$-waarde die hoort bij een betrouwbaarheidsniveau $\alpha = 0.05$ is gelijk aan
         \[
-            t = \invt(\opp = 1 - \alpha / 2, \df = n - 2) = \invt(\opp = 0.975, \df = 8) \approx 2.306.\rubric{1}
+            t = \invt(\opp = 1 - \alpha / 2, \df = n - 2) = \invt(\opp = 0.975, \df = 9) \approx 2.2622.\rubric{1}
         \]
-        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = x_0$ kan dus worden beschreven door
+        Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = 80$ kan dus worden beschreven door
         \begin{align*}
-            &[y_0 - t \cdot s_{f}, y_0 - t \cdot s_{f}] \\ 
-            &= [46.2667 - 2.306 \cdot 19.2882; 46.2667 + 2.306 \cdot 19.2882] \\ 
-            &\approx [1.7879, 90.7454]. \rubric{2}
+            &[y_0 - t \cdot s_{\mu}, y_0 - t \cdot s_{\mu}] \\
+            &= [65.6772 - 2.2622 \cdot 4.5612, 65.6772 + 2.2622 \cdot 4.5612] \\
+            &\approx [55.3592, 75.9953]. \rubric{2}
         \end{align*}
         
-        Met \SI{95}{\percent} betrouwbaarheid zal voor een gegeven $X = 5.5$ een bijbehorende uitkomst van $Y$ liggen tussen $1$ en $91$. 
-        Dit interval is erg breed, wat betekent dat de voorspelling van $Y\approx 46.2667$ voor gegeven $X = 5.5$ niet per se nauwkeurig hoeft te zijn. \rubric{2}
+        Met \SI{95}{\percent} betrouwbaarheid ligt het gemiddelde van $Y$ voor gegeven $X = 80$ tussen $55.3592$ en $75.9953$ procent.       
+        Om de betrouwbaarheid te waarborgen, moeten we het interval naar buiten afronden, dus $[55, 76]$. \rubric{1}
     }
 \end{question}
