@@ -1,46 +1,45 @@
 \begin{question}{30}{
     Een officier logistiek bij het Commando Materieel en IT (COMMIT) voert een onderzoek uit naar de leveringsbetrouwbaarheid 
     van twee leveranciers, $A$ en $B$, van kritieke onderdelen voor Chinook-transporthelikopters.
-    Hieronder staat een dataset weergeven in een tabel, waarbij voor beide leveranciers de levertijd (in weken) is geregistreerd voor een aantal orders voor kritieke helikopteronderdelen:     
+    Hieronder staat een dataset weergegeven in een tabel, waarbij voor beide leveranciers de levertijd (in weken) is geregistreerd voor een aantal orders voor kritieke helikopteronderdelen:     
     \begin{center}
         \begin{tabular}{m{2.7cm}|cccccccccccc}
             \toprule
-                \textbf{Levertijd $A$} \newline \textbf{(in maanden)} & $12.1$ & $11.9$ & $12.3$ & $11.8$ & $12.2$ & $12.0$ & $11.9$ & $12.4$ & $11.7$ & $12.1$ & $12.0$ & $11.8$\\
+                \textbf{Levertijd $A$} \newline \textbf{(in weken)} & $12.1$ & $11.9$ & $12.3$ & $11.8$ & $12.2$ & $12.0$ & $11.9$ & $12.4$ & $11.7$ & $12.1$ & $12.0$ & $11.8$\\
             \midrule
-                \textbf{Levertijd $B$} \newline \textbf{(in maanden)} & $11.9$ & $7.3$ & $14.7$ & $6.0$ & $13.6$ & $8.0$ & $9.3$ & $5.0$ & $7.6$ & $11.4$ & & \\
+                \textbf{Levertijd $B$} \newline \textbf{(in weken)} & $11.9$ & $7.3$ & $14.7$ & $6.0$ & $13.6$ & $8.0$ & $9.3$ & $5.0$ & $7.6$ & $11.4$ & & \\
             \bottomrule
         \end{tabular}
     \end{center}
-    Het doel van COMMIT is op basis van de resultaten van dit onderzoek een keuze te maken voor één van beide leveranciers voor het leveren van Chinook-onderdelen.
-    Gebruik bij iedere deelvraag het significantieniveau $\alpha = 0.05$.
+    Het doel van COMMIT is om op basis van de resultaten van dit onderzoek een keuze te maken voor één van beide leveranciers voor het leveren van Chinook-onderdelen.
+    Je mag in deze vraag bij hypothesetoetsen gebruik maken van een significantieniveau $\alpha = 0.05$.
 }
 
     \subquestion{7}{
-        Bereken de steekproefgemiddelden en de steekproefvarianties van de levertijden $X$ en $Y$ van beide leveranciers.
+        Bereken de steekproefgemiddelden en de steekproefvarianties van de levertijden van beide leveranciers.
     }
     \solution{
-        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
+        We berekenen het steekproefgemiddelde $\overline{x_A}$ voor de $n = 12$ levertijden van leverancier $A$ als volgt:
         \begin{align*}
-            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 12.1 + 11.9 + \ldots + 11.8 }{ 12 } \approx 12.0167.\rubric{1}
+            \overline{x_A} = \frac{a_1+a_2+\ldots+a_n}{n} = \frac{ 12.1 + 11.9 + \ldots + 11.8 }{ 12 } \approx 12.0167.\rubric{1}
         \end{align*}
     
-
-        We berekenen de steekproefvariantie $s_X^2$ als volgt:
+        We berekenen de steekproefvariantie $s_A^2$ als volgt:
         \begin{align*}
-            s_X^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+            s_A^2 &= \frac{ (a_1 - \overline{x_A})^2 + (a_2 - \overline{x_A})^2 + \ldots + (a_n - \overline{x_A})^2 }{ n - 1 } \\
                 &= \frac{ (12.1 - 12.0167)^2 + (11.9 - 12.0167)^2 + \ldots + (11.8 - 12.0167)^2 }{ 12 - 1 } \\
                 &\approx 0.0452.\rubric{3}
         \end{align*}
 
-        We berekenen het steekproefgemiddelde $\overline{x}$ als volgt:
+        We berekenen het steekproefgemiddelde $\overline{x_B}$ voor de $m = 10$ levertijden van leverancier $B$ als volgt:
         \begin{align*}
-            \overline{y} = \frac{y_1+y_2+\ldots+y_m}{m} = \frac{ 11.9 + 7.3 + \ldots + 11.4 }{ 10 } = 9.48.\rubric{1}
+            \overline{x_B} = \frac{b_1+b_2+\ldots+b_m}{m} = \frac{ 11.9 + 7.3 + \ldots + 11.4 }{ 10 } = 9.48.\rubric{1}
         \end{align*}
     
 
-        We berekenen de steekproefvariantie $s_Y^2$ als volgt:
+        We berekenen de steekproefvariantie $s_B^2$ als volgt:
         \begin{align*}
-            s_Y^2 &= \frac{ (y_1 - \overline{y})^2 + (y_2 - \overline{y})^2 + \ldots + (y_n - \overline{y})^2 }{ m - 1 } \\
+            s_B^2 &= \frac{ (b_1 - \overline{x_B})^2 + (b_2 - \overline{x_B})^2 + \ldots + (b_m - \overline{x_B})^2 }{ m - 1 } \\
                 &= \frac{ (11.9 - 9.48)^2 + (7.3 - 9.48)^2 + \ldots + (11.4 - 9.48)^2 }{ 10 - 1 } \\\rubric{2}
                 &\approx 10.7173.
         \end{align*}
@@ -53,10 +52,10 @@
     }
     \solution{
         \subsubsection*{Stap 1: formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.}
-        Bij een $F$-toets toetsen we of de varianties $\sigma_X^2$ en $\sigma_Y^2$ gelijk zouden kunnen zijn, oftewel
+        Bij een $F$-toets toetsen we of de varianties $\sigma_A^2$ en $\sigma_B^2$ gelijk zouden kunnen zijn, oftewel
         \begin{align*}
-            H_0: \quad \sigma_X^2 = \sigma_Y^2 \\
-            H_1: \quad \sigma_X^2 \neq \sigma_Y^2 \rubric{1}
+            H_0: \quad \sigma_A^2 = \sigma_B^2 \\
+            H_1: \quad \sigma_A^2 \neq \sigma_B^2 \rubric{1}
         \end{align*}
 
         \subsubsection*{Stap 2: bepaal het significantieniveau $\alpha$.}
@@ -68,21 +67,21 @@
         
         \begin{center}
             \begin{tabular}{C{.3\textwidth} C{.3\textwidth} C{.3\textwidth}}
-                $\samplemeanx \approx 12.0167$ & $s_X^2 \approx 0.0452$ & $n = 12$ \\
-                $\samplemeany = 9.48$ & $s_Y^2 \approx 10.7173$ & $m = 10$
+                $\overline{x_A} \approx 12.0167$ & $s_A^2 \approx 0.0452$ & $n = 12$ \\
+                $\overline{x_B} = 9.48$ & $s_B^2 \approx 10.7173$ & $m = 10$
             \end{tabular}
         \end{center}
 
         \subsubsection*{Stap 4: bereken de toetsingsgrootheid.}
         De theoretische toetsingsgrootheid (hoofdletter!) bij een $F$-toets is gelijk aan
         \[
-            F = \frac{S_X^2}{S_Y^2}, \rubric{1}
+            F = \frac{S_A^2}{S_B^2}, \rubric{1}
         \]
         en volgt onder $H_0$ een $F$-verdeling met $\dfn = n-1 = 11$ en $\dfd = m-1 = 9$ vrijheidsgraden. \rubric{1}
 
         De geobserveerde toetsingsgrootheid (kleine letter!) is gelijk aan
         \[
-            f = \frac{s_X^2}{s_Y^2} = \frac{0.0452}{10.7173} \approx 0.0042. \rubric{1}
+            f = \frac{s_A^2}{s_B^2} = \frac{0.0452}{10.7173} \approx 0.0042. \rubric{1}
         \]
         
         \subsubsection*{Stap 5: bepaal de toetsuitslag (met behulp van het kritieke gebied).}
@@ -125,11 +124,11 @@
     }
     \solution{
         \subsubsection*{Stap 1: formuleer de nulhypothese $H_0$ en de alternatieve hypothese $H_1$.}
-        We gaan toetsen of de gemiddelde levertijden $\mu_X$ en $\mu_Y$ voor beide leveranciers significant van elkaar verschillen.
+        We gaan toetsen of de gemiddelde levertijden $\mu_A$ en $\mu_B$ voor beide leveranciers significant van elkaar verschillen.
         De hypothesen zijn daarom als volgt:
         \begin{align*}
-            H_0: &\quad \mu_X = \mu_Y \text{ (geen significant verschil in de gemiddelde levertijd) } \\
-            H_1: &\quad \mu_X \neq \mu_Y \text{ (wel een significant verschil in de gemiddelde levertijd) } \rubric{2}
+            H_0: &\quad \mu_A = \mu_B \text{ (geen significant verschil in de gemiddelde levertijd) } \\
+            H_1: &\quad \mu_A \neq \mu_B \text{ (wel een significant verschil in de gemiddelde levertijd) } \rubric{2}
         \end{align*}
 
         \subsubsection*{Stap 2: bepaal het significantieniveau $\alpha$.}
@@ -141,8 +140,8 @@
         
         \begin{center}
             \begin{tabular}{C{.3\textwidth} C{.3\textwidth} C{.3\textwidth}}
-                $\samplemeanx \approx 12.0167$ & $s_X^2 \approx 0.0452$ & $n = 12$ \\
-                $\samplemeany = 9.48$ & $s_Y^2 \approx 10.7173$ & $m = 10$
+                $\overline{x_A} \approx 12.0167$ & $s_A^2 \approx 0.0452$ & $n = 12$ \\
+                $\overline{x_B} = 9.48$ & $s_B^2 \approx 10.7173$ & $m = 10$
             \end{tabular}
         \end{center}
 
@@ -150,13 +149,13 @@
         Op basis van ons antwoord bij vraag (b) mogen we aannemen dat de varianties ongelijk zijn, oftewel $\sigma_X^2 \neq \sigma_Y^2$.
         De theoretische toetsingsgrootheid (hoofdletter!) bij een $t$-toets met twee steekproeven (met ongelijke varianties) is gelijk aan
         \[
-            T = \frac{(\overline{X} - \overline{Y}) - (\mu_X - \mu_Y)}{\sqrt{\frac{S_X^2}{n} + \frac{S_Y^2}{m}}}, \rubric{1}
+            T = \frac{(\overline{X_A} - \overline{X_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{S_A^2}{n} + \frac{S_B^2}{m}}}, \rubric{1}
         \]
         en volgt onder $H_0$ een $t$-verdeling met $\df=\min(n-1,m-1)=9$ vrijheidsgraden. \rubric{1}
 
         De geobserveerde toetsingsgrootheid (kleine letter!) is gelijk aan
         \begin{align*}
-            t   &= \frac{(\overline{x}-\overline{y}) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}} \\
+            t   &= \frac{(\overline{x_A}-\overline{x_B}) - (\mu_A - \mu_B)}{\sqrt{\frac{s_A^2}{n} + \frac{s_B^2}{m}}} \\
                 &= \frac{(12.0167 - 9.48) - 0}{\sqrt{\frac{0.0452}{12} + \frac{10.7173}{10}}} \\
                 &\approx 2.4460. \rubric{2}
         \end{align*}
@@ -165,13 +164,14 @@
         Omdat we tweezijdig toetsen, is de $p$-waarde gelijk aan het minimum van $P(T \leq t)$ en $P(T \geq t)$:
         Deze kansen kunnen we met de $t$-verdeling bepalen, namelijk:
         \begin{align*}
-            P(T \leq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.9815, \\ 
-            P(T \geq t) &= \tcdf(\lb = -10^{99}, \ub=2.4460, \df=9) \approx 0.0185.
+            P(T \leq t) &= \tcdf(\lb = -\GRinfinity, \ub=2.4460, \df=9) \approx 0.9815, \\ 
+            P(T \geq t) &= \tcdf(\lb = 2.4460, \ub=\GRinfinity, \df=9) \approx 0.0185.
         \end{align*}
         De $p$-waarde is dus gelijk aan $p \approx 0.0185$. \rubric{2}
 
         Aangezien de $p$-waarde daarmee kleiner is dan $\alpha/2$ (tweezijdige toets!), besluiten we om de nulhypothese te verwerpen.\rubric{1}
         
+        \subsubsection*{Stap 6: vertaal de toetsuitslag terug naar de originele context van het probleem.}
         Er is op basis van deze steekproeven voldoende reden om aan te nemen dat de gemiddelde levertijd significant verschilt 
         tussen de twee leveranciers. \rubric{1}    
         \begin{center}
@@ -183,14 +183,14 @@
 
     \subquestion{3}{
         Is er op basis van deze hypothesetoetsen een eenduidige voorkeur aan te wijzen voor één leverancier?
-        Zo ja, aan welke leverancier zou je de voorkeur geven?
+        Zo ja, aan welke leverancier zou je de voorkeur geven en waarom?
         Zo nee, geef voor beide leveranciers een reden die in het voordeel van deze leverancier spreekt.
     }
     \solution{
         Er is geen eenduidige voorkeur aan te wijzen voor de ene of de andere leverancier. \rubric{1}
         Uit de hypothesetoets bij vraag (c) is op te maken dat de gemiddelde levertijd van leverancier $B$ met grote betrouwbaarheid significant 
-        korter is dan bij leverancier $A$, wat in het voordeel van leverancier $B$ zou spreken.\rubric{1}
-        Uit de $F$-toets voor gelijke varianties blijkt echter dat de variantie in de levertijden bij leverancier $B$ veel groter is, waardoor
+        korter is dan bij leverancier $A$ ($\mu_A < \mu_B$), wat in het voordeel van leverancier $B$ zou spreken.\rubric{1}
+        Uit de $F$-toets voor gelijke varianties blijkt echter dat de variantie in de levertijden bij leverancier $B$ veel groter is ($\sigma_A^2 << \sigma_B^2$), waardoor
         leverancier $A$ als betrouwbaarder en voorspelbaarder gezien kan worden.\rubric{1}
     }
 \end{question}

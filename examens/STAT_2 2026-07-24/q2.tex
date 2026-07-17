@@ -127,7 +127,7 @@
 
         De Clopper-Pearson methode werkt als volgt:
         \begin{enumerate}
-            \item Bepaal de minimale succeskans $p_1$ waarvoor de uitkomst $k = 182$ niet extreem groot, oftewel $P(X \geq 182) = \alpha/2 \geq 0.025$.
+            \item Bepaal de minimale succeskans $p_1$ waarvoor de uitkomst $k = 182$ niet extreem groot is, oftewel $P(X \geq 182) = \alpha/2 \geq 0.025$.
             Voer hiervoor in de \enquote{numerieke solver} van de grafische rekenmachine in:
             \begin{align*}
                 E_1 &= 1 - \binomcdf(n=228, p_1=X, k=181) \\
@@ -140,7 +140,7 @@
                 E_1 &= \binomcdf(n=228, p_1=X, k=182) \\
                 E_2 &= 0.025 
             \end{align*}
-            De solver optie geeft een waarde van $p_2 \approx 0.8483$.
+            De \enquote{numerieke solver} geeft een waarde van $p_2 \approx 0.8483$.
         \end{enumerate}
         We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen,
         oftewel het \SI{95}{\percent}-betrouwbaarheidsinterval voor de kans $p$ dat een willekeurige cadet een voldoende haalt is gelijk aan $[0.7402, 0.8483]$. \rubric{4}

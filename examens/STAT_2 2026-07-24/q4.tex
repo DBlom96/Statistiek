@@ -1,8 +1,8 @@
 \begin{question}{26}{
     In het kader van logistieke planning en munitiebeheer is een artillerie-eenheid belast met het optimaliseren van vuursteun bij gevechtsoperaties.
-    Om deze optimalisaties te kunnen onderbouwen zijn op basis van een steekproef van elf gevechtsoperaties data verzameld voor het aantal verbruikte munitiekisten (onafhankelijke variabele $X$) 
+    Om deze optimalisatie te kunnen onderbouwen zijn op basis van een steekproef van elf gevechtsoperaties data verzameld voor het aantal verbruikte munitiekisten (onafhankelijke variabele $X$) 
     en het percentage succesvol geneutraliseerde doelen (afhankelijke variabele $Y$). 
-    Deze data zijn te vinden in onderstaande tabel
+    Deze gegevens zijn te vinden in onderstaande tabel:
     {\par\bigskip
         \begin{center}
             \begin{tabular}{c|ccccccccccc}
@@ -16,18 +16,8 @@
     }
 }
 
-    % \subquestion{2}{
-    %     Als we een regressie-analyse willen uitvoeren, welke variabele zou dan de afhankelijke variabele $Y$ zijn en welke variabele zou de onafhankelijke variabele $X$ zijn?
-    % }
-    % \solution{
-    %     Bij een regressie-analyse is de meest logische keuze om het aantal verbruikte munitiekisten als onafhankelijke variabele $X$ te kiezen,
-    %     en het percentage succesvolle geneutraliseerde doelen als afhankelijke variabele $Y$. \rubric{1}
-    %     s
-    %     Een hoger munitieverbruik zou een hoger percentage succesvol geneutraliseerde doelen kunnen verklaren, andersom is dat minder evident.\rubric{1}
-    % }
-
     \subquestion{4}{
-        Teken het spreidingsdiagram (scatter plot) op basis van je antwoord op vraag (a).
+        Teken het spreidingsdiagram (scatter plot) op basis van de bovenstaande tabel.
         Geef hierbij ook duidelijk aan welke as welke variabele beschrijft.
     }
     \solution{
@@ -43,7 +33,7 @@
 
     \subquestion{8}{
         Bereken Pearson's correlatiecoëfficiënt $r(x,y)$ op basis van de data in de bovenstaande tabel.
-        Wat zegt $r(x, y)$ over de relatie tussen het cargogewicht en het kerosineverbruik?
+        Wat zegt $r(x, y)$ over de relatie tussen het aantal verbruikte munitiekisten en het percentage succesvol geneutraliseerde doelen?
     }
     \solution{
         We beginnen met het uitrekenen van Pearson's correlatiecoëfficiënt 
@@ -92,7 +82,7 @@
     \subquestion{6}{
         Bereken de coëfficiënten $a$ en $b$ van de regressielijn $\hat{Y} = a + b \cdot X$.
         Bepaal aan de hand van de regressielijn een statistisch verantwoorde voorspelling voor het 
-        percentage succesvol geneutraliseerde doelen bij een operatie waarbij $80$ munitiekisten worden verschoten.
+        percentage succesvol geneutraliseerde doelen bij een operatie waarbij $x_0=80$ munitiekisten worden verschoten.
     }
     \solution{
         Om de coëfficiënten $a$ en $b$ van de regressielijn te berekenen, gaan we de rekentabel van vraag (a) hergebruiken.
@@ -116,8 +106,8 @@
     }
 
     \subquestion{8}{
-        Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor het verwachte succespercentage van geneutraliseerde doelen bij een operatie
-        waarbij $80$ munitiekisten worden verschoten.
+        Bereken een \SI{95}{\percent}-betrouwbaarheidsinterval voor het gemiddelde succespercentage van geneutraliseerde doelen bij een operatie
+        waarbij $x_0 = 80$ munitiekisten worden verschoten.
         Rond het interval af op gehele percentages zodat de betrouwbaarheid van het interval gewaarborgd blijft.
     }
     \solution{
@@ -125,13 +115,13 @@
         Daarnaast kunnen we de standaardafwijking $\sigma$ van de storingsterm $\varepsilon$ schatten:
         \begin{align*}
             s_{\varepsilon} &= \sqrt{ \frac{n}{n-2} \cdot \left( \overline{y^2} - a \cdot \overline{y} - b \cdot \overline{xy} \right) } \\ 
-                               &= \sqrt{ \frac{11}{9} \cdot \left( 3787.4764 - 21.9451 \cdot 57.5818 - 0.5467 \cdot 4333.1155 \right) } \\ 
-                               &\approx 13.7698.\rubric{2}
+                            &= \sqrt{ \frac{11}{9} \cdot \left( 3787.4764 - 21.9451 \cdot 57.5818 - 0.5467 \cdot 4333.1155 \right) } \\ 
+                            &\approx 13.7698.\rubric{2}
         \end{align*}
 
         Vervolgens kunnen we een puntschatting berekenen van de standaardafwijking van de verwachtingswaarde van $Y$ voor gegeven $X = x_0$:
         \begin{align*}
-        s_{\mu}  &= s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) } \\
+            s_{\mu} &= s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) } \\
                     &= 13.7698 \cdot \sqrt{ \frac{1}{11} \cdot \left( 1 + \frac{(80 - 65.1909)^2}{5309.5864 - 65.1909^2} \right) } \\
                     &\approx 4.5612.\rubric{2}
         \end{align*}
@@ -143,12 +133,12 @@
         \]
         Het \SI{95}{\percent}-betrouwbaarheidsinterval voor de gemiddelde $Y$ voor gegeven $X = 80$ kan dus worden beschreven door
         \begin{align*}
-            &[y_0 - t \cdot s_{\mu}, y_0 - t \cdot s_{\mu}] \\
+            &[\hat{Y}_0 - t \cdot s_{\mu}, \hat{Y}_0 - t \cdot s_{\mu}] \\
             &= [65.6772 - 2.2622 \cdot 4.5612, 65.6772 + 2.2622 \cdot 4.5612] \\
             &\approx [55.3592, 75.9953]. \rubric{2}
         \end{align*}
         
-        Met \SI{95}{\percent} betrouwbaarheid ligt het gemiddelde van $Y$ voor gegeven $X = 80$ tussen $55.3592$ en $75.9953$ procent.       
+        Met \SI{95}{\percent} betrouwbaarheid ligt de gemiddelde $Y$ gegeven $X = x_0 = 80$ tussen $55.3592$ en $75.9953$ procent.       
         Om de betrouwbaarheid te waarborgen, moeten we het interval naar buiten afronden, dus $[55, 76]$. \rubric{1}
     }
 \end{question}
