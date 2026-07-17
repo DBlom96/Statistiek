@@ -18,7 +18,7 @@
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 % Laad stijlen via relatieve paden
-\newcommand{\path}{C:/Users/danny/Documents/GitHub/Statistiek}
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
 \usepackage{\path/LaTeX/styles/config}
 \usepackage{\path/LaTeX/styles/statistics-macros}
 \graphicspath{{\path/LaTeX/figures/}}
@@ -34,7 +34,7 @@
         % Discrete tak
         \node[decision, below left=25mm and 20mm of discreteOrContinuous] (vars) {1 of 2 variabelen?};
 
-        \node[process, below left=10mm and -10mm of vars, align=center] (aanpassing) {$\chi^2$-toets \\ voor aanpassing};
+        \node[process, below left=10mm and -10mm of vars, align=center] (aanpassing) {$\chi^2$-goodness-of-fit toets \\ (aanpassingstoets)};
         \node[process, below right=10mm and -10mm of vars, align=center] (onafhankelijkheid) {$\chi^2$-toets \\ voor onafhankelijkheid};
         % Arrows discrete tak
         \draw [arrow] (discreteOrContinuous) -- node[above, sloped] {discreet} (vars);

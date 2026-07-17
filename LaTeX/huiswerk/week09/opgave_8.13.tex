@@ -10,6 +10,7 @@
         De kansvariabele $X$ telt het aantal voorstemmers bij het referendum.
         Omdat iedere stemmer onafhankelijk van elkaar stemt, hebben we te maken met een binomiale verdeling.
         Op basis van de steekproef geldt dat $X$ binomiaal verdeeld is met $n=5000$ en een onbekende succeskans $p = \text{ ?}$.
+        Verder is de uitkomst $k = 1918$, dit is het aantal voorstemmers in onze steekproef van $n=5000$ proefpersonen.
         
         We willen een \SI{99.74}{\percent}-betrouwbaarheidsinterval voor $p$ bepalen.
         Dit doen we met behulp van de Clopper-Pearson methode.
@@ -17,36 +18,36 @@
 
         De Clopper-Pearson methode werkt als volgt:
         \begin{enumerate}
-            \item Bepaal de succeskans $p_1$ zodat de kans op minstens uitkomst $k=3082$ gelijk is aan $\alpha/2$, oftewel 
+            \item Bepaal de succeskans $p_1$ zodat de kans op minstens uitkomst $k=1918$ gelijk is aan $\alpha/2$, oftewel 
             \[
-                P(X \ge 3082) = 1 - P(X \leq 3081) = \alpha/2 = 0.0013.
+                P(X \ge 1918) = 1 - P(X \leq 1917) = \alpha/2 = 0.0013.
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= 1- \binomcdf(n=5000, p_1=X, k=3081) \\
+                E_1 &= 1- \binomcdf(n=5000, p_1=X, k=1917) \\
                 E_2 &= 0.0013
             \end{align*}
-            Dit geeft een waarde van $p_1 \approx 0.5955$.
+            Dit geeft een waarde van $p_1 \approx 0.3630$.
             \item Bepaal de succeskans $p_2$ zodat de kans op hoogstens uitkomst $k=3082$ gelijk is aan $\alpha/2$, oftewel 
             \[
-                P(X \le 3082) = \alpha/2 = 0.0013.
+                P(X \le 1918) = \alpha/2 = 0.0013.
             \]
             Dit kun je berekenen met behulp van het \enquote{solver}-menu van de grafische rekenmachine:
             \begin{align*}
-                E_1 &= \binomcdf(n=5000, p_1=X, k=3082) \\
+                E_1 &= \binomcdf(n=5000, p_1=X, k=1918) \\
                 E_2 &= 0.0013
             \end{align*}
-            Dit geeft een waarde van $p_2 \approx 0.6370$.
+            Dit geeft een waarde van $p_2 \approx 0.4045$.
         \end{enumerate}
         We vinden het Clopper-Pearson interval door de twee gevonden waarden als grenzen te nemen.
-        Het \SI{99.74}{\percent}-betrouwbaarheidsinterval voor de fractie voorstemmers is dus gelijk aan $[0.5955, 0.6370]$.
+        Het \SI{99.74}{\percent}-betrouwbaarheidsinterval voor de fractie voorstemmers is dus gelijk aan $[0.3630, 0.4045]$.
     }
 
     \item Vind je het houden van een referendum nog zinvol, gegeven het antwoord bij vraag (a)?
     \answer{
         Het antwoord op deze vraag is afhankelijk van het kiessysteem waarmee gewerkt wordt. 
         Indien het gaat om een strikte meerderheid van \SI{50}{\percent} $+ 1$ stem,
-        dan is het vrijwel zeker dat de voorstemmers gaan winnen, omdat het hele interval ver voorbij de \SI{50}{\percent} ligt.
+        dan is het vrijwel zeker dat de voorstemmers gaan verliezen, omdat het hele interval (ver) onder de \SI{50}{\percent} ligt.
         Als het quotum op een andere waarde ligt of als er andere zwaarwegende politieke redenen in het spel zijn,
         kan het uiteraard wel van meerwaarde zijn om een referendum te houden.
     }

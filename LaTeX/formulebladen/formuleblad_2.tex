@@ -118,13 +118,13 @@
             \midrule
                 \multicolumn{4}{c}{\textbf{Toetsen voor het gemiddelde $\mu$ van een normale verdeling}} \\ 
             \midrule
-                $\sigma$ bekend    & $\mu \leq/=/\geq \mu_0$ & $\overline{X}$ & $N(\mu_0, \sigma / \sqrt{n})$ \\
+                $\sigma$ bekend    & $\mu \leq/=/\geq \mu_0$ & $\overline{X}$ & Normaal verdeeld met $\mu_0$ en $\sigma / \sqrt{n}$ \\
                 $\sigma$ onbekend  & $\mu \leq/=/\geq \mu_0$ & $T = \frac{\overline{X} - \mu_0}{s / \sqrt{n}}$ & $t(\df=n-1)$ \\
             \midrule
                 \multicolumn{4}{c}{\textbf{Chikwadraattoetsen ($\chi^2$)}} \\
             \midrule
                 Onafhankelijkheid & Variabelen zijn \newline onafhankelijk & $X^2 = \sum_{i,j} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ & $\chi^2\left(\df=\text{(\#rijen-1)} \cdot \text{(\#kolommen-1)}\right)$ \\
-                Goodness-of-fit & Variabele volgt bepaalde \newline discrete kansverdeling & $X^2 = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}$ & $\chi^2\left(\df=\text{\#categorieën-1}\right)$ \\
+                Goodness-of-fit \newline (aanpassing) & Variabele volgt bepaalde \newline discrete kansverdeling & $X^2 = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}$ & $\chi^2\left(\df=\text{\#categorieën-1}\right)$ \\
             \midrule
                 \multicolumn{4}{c}{\textbf{Toetsen op basis van twee onafhankelijke populaties $A$ en $B$ (met steekproefgroottes $n$ en $m$)}} \\
             \midrule
@@ -277,17 +277,17 @@
 
 \subsection*{Correlatie en regressie}
 
-\textbf{Correlatieco\"effici\"ent van Pearson:}
+\textbf{Correlatiecoëfficiënt van Pearson:}
 \[
     r = \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\sqrt{(\overline{x^2} - \overline{x}^2)\cdot(\overline{y^2} - \overline{y}^2)}}
 \]
 
-% \textbf{Correlatieco\"effici\"ent van Spearman:}
+% \textbf{Correlatiecoëfficiënt van Spearman:}
 % \[
 %     r_s = 1 - \frac{6 \cdot \sum_i d_i^2}{n^3-n}
 % \]
 
-\textbf{Co\"effici\"enten van de lineaire regressielijn $Y = a + b\cdot X$:}
+\textbf{Coëfficiënten van de lineaire regressielijn $\hat{Y} = a + b\cdot X$:}
 \begin{align*}
     b &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
     a &= \overline{y} - b \cdot \overline{x}
@@ -306,9 +306,7 @@
                 \item $s_\mu = s_{\varepsilon} \cdot \sqrt{ \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
                 \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_\mu, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_\mu]$
             \end{itemize}
-
             \columnbreak
-
             \centering\textbf{Casio fx-CG50}
             \begin{itemize}
                 \item $t_{\alpha/2} = \invtC(\opp=\alpha/2, \df = n - 2)$
@@ -317,23 +315,21 @@
             \end{itemize}
     \end{multicols}
 
-\textbf{\boldmath$100\cdot(1-\alpha)$\si{\percent}-betrouwbaarheidsinterval voor $Y$ bij een gegeven $X = x_0$:}
+\textbf{\boldmath$100\cdot(1-\alpha)$\si{\percent}-voorspellingsinterval voor $Y$ bij een gegeven $X = x_0$:}
     \begin{multicols}{2}
         \centering\textbf{TI84-Plus}
-            \begin{itemize}
-                \item $t_{\alpha/2} = \invt(\opp=1-\alpha/2, \df = n - 2)$
-                \item $s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
-                \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_f, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_f]$
-            \end{itemize}
-
-            \columnbreak
-
-            \centering\textbf{Casio fx-CG50}
-            \begin{itemize}
-                \item $t_{\alpha/2} = \invtC(\opp=\alpha/2, \df = n - 2)$
-                \item $s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
-                \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_f, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_f]$
-            \end{itemize}
+        \begin{itemize}
+            \item $t_{\alpha/2} = \invt(\opp=1-\alpha/2, \df = n - 2)$
+            \item $s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
+            \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_f, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_f]$
+        \end{itemize}
+        \columnbreak
+        \centering\textbf{Casio fx-CG50}
+        \begin{itemize}
+            \item $t_{\alpha/2} = \invtC(\opp=\alpha/2, \df = n - 2)$
+            \item $s_f = s_{\varepsilon} \cdot \sqrt{ 1 + \frac{1}{n} \cdot \left( 1 + \frac{(x_0 - \overline{x})^2}{\overline{x^2} - \overline{x}^2} \right) }$
+            \item $[a+b\cdot x_0 - t_{\alpha/2} \cdot s_f, \quad a+b\cdot x_0 + t_{\alpha/2} \cdot s_f]$
+        \end{itemize}
     \end{multicols}
 
 % \textbf{Covariance:}

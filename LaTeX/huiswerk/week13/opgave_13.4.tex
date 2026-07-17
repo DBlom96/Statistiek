@@ -81,7 +81,7 @@
     \answer{
         De correlatiecoëfficiënt $r(x, y)$ berekenen we op basis van de formule
         \[
-            r(x, y) = \frac{\overline{x \cdot y} - \samplemeanx \cdot \samplemeany}{\sqrt{(\samplemeanxsquared - \samplemeanx^2) \cdot (\samplemeanysquared - \samplemeany^2)}}.
+            r(x, y) = \frac{\samplemeanxy - \samplemeanx \cdot \samplemeany}{\sqrt{(\samplemeanxsquared - \samplemeanx^2) \cdot (\samplemeanysquared - \samplemeany^2)}}
         \]
         Dat betekent dat we naast de bovenstaande tabel moeten uitbreiden met een kolom voor $y^2$:
         \begin{center}
@@ -100,7 +100,7 @@
                     $75$ & $0.84$ & $63$ & $5625$ & $0.7056$ \\
                     $73$ & $0.96$ & $70.08$ & $5329$ & $0.9216$ \\
                 \midrule       			
-                    $\samplemeanx = 78$ & $\samplemeany = 0.85$ & $\samplemeanxy = 65.013$ & $\samplemeanxsquared = 6190$ & $\samplemeanysquared = 0.739$ \\
+                    $\samplemeanx = 78$ & $\samplemeany = 0.85$ & $\samplemeanxy = 65.013$ & $\samplemeanxsquared = 6190$ & $\samplemeanysquared = 0.7389$ \\
                 \bottomrule
             \end{tabular}
         \end{center}
