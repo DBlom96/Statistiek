@@ -1,0 +1,116 @@
+\begin{question}{24}{
+    Een inlichtingenofficier analyseert de spreiding van vijandelijke artillerie-inslagen langs een verdedidingslinie die is onderverdeeld in vijf sectoren (Alpha t/m Echo).
+    De commandant wil weten of de vijand willekeurig vuurt of dat er sprake is van een significante concentratie op specifieke sectoren.
+    Er zijn in totaal $200$ inslagen geregistreerd. 
+    De waargenomen (\enquote{observed}) frequenties per sector zijn als volgt:
+    \par\medskip
+    \begin{center}
+        \renewcommand{\arraystretch}{1}
+        \begin{tabular}{cc}
+            \toprule
+                \textbf{Sector} & \textbf{Waargenomen frequenties} \\
+            \midrule
+                Alpha & $32$ \\
+                Bravo & $51$\\
+                Charlie & $44$ \\
+                Delta & $28$ \\
+                Echo & $45$ \\
+            \midrule
+                \textbf{Totaal} & $200$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \par\medskip
+    Je mag in deze hypothesetoets uitgaan van een significantieniveau van $\alpha = 0.05$.
+}
+
+    \subquestion{4}{
+        Wat voor type hypothesetoets zou geschikt zijn om dit te kunnen toetsen?
+        Formuleer de bijbehorende nulhypothese $H_0$ en de alternatieve hypothese $H_1$ voor deze toets.
+    }
+    \solution{
+        Bij deze hypothesetoets willen we kijken of de waargenomen frequenties waarschijnlijk zijn als we $200$ keer een trekking doen uit
+        een uniforme verdeling over vijf mogelijke uitkomsten. \rubric{1}
+        Het type hypothesetoets om dit te toetsen is de chikwadraat goodness-of-fit toets. \rubric{1}
+        
+        De hypotheses kunnen we dan als volgt definiëren:
+        \begin{align*}
+            H_0: \quad \text{de locatie van artillerie-inslagen is uniform verdeeld over de drie sectoren} \rubric{1} \\
+            H_1: \quad \text{de locatie van artillerie-inslagen is niet uniform verdeeld over de drie sectoren} \rubric{1}
+        \end{align*}
+    }
+
+    \subquestion{2}{
+        Bereken de verwachte (\enquote{expected}) frequenties voor elke sector onder de aanname van de geformuleerde nulhypothese $H_0$.
+    }
+    \solution{
+        Omdat we uitgaan van een uniforme verdeling voor de vijf sectoren, zal naar verwachting het aantal inslagen per sector gelijkelijk verdeeld zijn. \rubric{1}
+        Als we $200$ inslagen verdelen over vijf sectoren, is dat dus $200 / 5 = 40$ per sector. \rubric{1}
+        \begin{center}
+                \renewcommand{\arraystretch}{1}
+                \begin{tabular}{ccc}
+                    \toprule
+                        \multirow{2}{*}{\textbf{Sector}} & \textbf{Waargenomen} & \textbf{Verwachte} \\
+                        & \textbf{frequentie} & \textbf{frequentie}\\
+                    \midrule
+                        Alpha & $32$ & $40$ \\
+                        Bravo & $51$ & $40$\\
+                        Charlie & $44$ & $40$ \\
+                        Delta & $28$ & $40$\\
+                        Echo & $45$ & $40$\\
+                    \midrule
+                        \textbf{Totaal} & $200$ & $200$\\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+
+    }
+
+    \subquestion{6}{
+        Wat is de theoretische toetsingsgrootheid van deze hypothesetoets en de kansverdeling van deze toetsingsgrootheid.
+        Bereken op basis van deze informatie de geobserveerde toetsingsgrootheid en bepaal de toetsuitslag op basis van het kritieke gebied.
+    }
+    \solution{
+        De (theoretische) toetsingsgrootheid voor een chikwadraattoets voor goodness-of-fit is gelijk aan
+        \[
+            X^2 = \sum_{i,j} \frac{(O_{i}-E_{i})^2}{E_{i}}.\rubric{1}
+        \]    
+        De kansverdeling van deze toetsingsgrootheid is de chikwadraatverdeling met $\df = \#$categorieën $-1 = 5-1=4$ vrijheidsgraden. \rubric{2}
+
+        Vervolgens berekenen we de geobserveerde toetsingsgrootheid $\chi^2$ als volgt:
+        \begin{align*}
+            \chi^2 &= \frac{(o_{1} - e_{1})^2}{e_{1}} + \frac{(o_{2} - e_{2})^2}{e_{2}} + \ldots + \frac{(o_{5} - e_{5})^2}{e_{5}} \\
+                   &= \frac{(32 - 40)^2}{40} + \frac{(51 - 40)^2}{40} + \frac{(44 - 40)^2}{40} + \frac{(28 - 40)^2}{40} + \frac{(45 - 40)^2}{40}\\
+                &\approx 9.25 \rubric{3}
+        \end{align*}
+    \end{align*}
+    }
+
+    \subquestion{7}{
+        Bepaal de toetsuitslag (wel of niet verwerpen van $H_0$) op basis van het kritieke gebied.
+    }
+    \solution{
+        Een chikwadraattoets is altijd rechtszijdig, dus het kritieke gebied is van de vorm $(g,\infty)$. \rubric{1}
+        De grenswaarde $g$ kan als volgt worden berekend:
+        \begin{enumerate}
+            \item Voer in de \enquote{numerieke solver} van de grafische rekenmachine in:
+            \begin{align*}
+                E_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=4) \\
+                E_2 &= 0.05 \rubric{2}
+            \end{align*}
+            De \enquote{numerieke solver} geeft een waarde van $g \approx 9.4877$.\rubric{2}
+
+        \end{enumerate}
+        De geobserveerde toetsingsgrootheid $\chi^2 \approx 9.25$ ligt niet in het kritieke gebied $(9.4877, \infty)$.\rubric{1}
+        We besluiten dus om de nulhypothese $H_0$ niet te verwerpen.\rubric{1}
+    }
+
+    \subquestion{5}{
+        Welke conclusie kun je trekken op basis van deze hypothesetoets over de spreiding van de artillerie-inslagen?
+        Geef op basis van de verwachte en waargenomen frequenties een advies aan de commandant of er wel of niet maatregelen genomen moeten worden tegen gerichte aanvallen op bepaalde sectoren.
+    }
+    \solution{
+        Uit de vorige subvraag is gebleken dat we de nulhypothese niet hebben verworpen, oftewel dat er onvoldoende reden is om aan te nemen dat de waargenomen frequenties significant afwijken van de uniforme verdeling.\rubric{2}
+        Er is dus ook geen reden om aan de commandant te adviseren om maatregelen in te voeren waarbij bepaalde sectoren beter moeten worden verdedigen dan anderen. \rubric{3}
+    }
+\end{question}
