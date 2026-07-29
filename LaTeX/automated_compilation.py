@@ -33,7 +33,6 @@ for i in range(1, num_chapters + 1):
     if i > 1:
         subprocess.run(["pdflatex", "-interaction=nonstopmode", "./main.tex"], check=True)
     
-    print("We reacht hsi")
     # Copy the resulting PDF (Moved inside the loop)
     output_name = f"./uitwerkingen_week_0{i}.pdf" if i < 10 else f"./uitwerkingen_week_{i}.pdf"
     
