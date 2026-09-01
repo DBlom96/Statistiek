@@ -1,0 +1,250 @@
+\documentclass[11pt,a4paper]{article}
+
+% Importeer configuratie-instellingen
+\usepackage{../../LaTeX/styles/exam_config}
+\usepackage{../../LaTeX/styles/statistics-macros}
+\include{../../LaTeX/styles/tikz_macros.tex}
+\graphicspath{{../../LaTeX/figures/}}
+
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, decorations.markings, patterns}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+
+\definecolor{QuestionBlue}{HTML}{2563A6}
+
+\newcommand{\courseLogo}{course_logo.png}
+\newcommand{\instituteLogo}{inst_logo.png}
+\newcommand{\notestitle}{Introduction to Probability}
+\newcommand{\courseid}{Course Code}
+\newcommand{\instructorname}{Instructor Name}
+\newcommand{\classdate}{\today}
+\newcommand{\documentlabel}{\textsc Learning task}
+
+\newcommand{\makeclassnotesheader}{%
+    \begin{tcolorbox}[
+        enhanced,
+        colback=QuestionBlue!3,
+        colframe=QuestionBlue,
+        boxrule=1.1pt,
+        arc=3pt,
+        left=12pt,
+        right=12pt,
+        top=12pt,
+        bottom=10pt
+    ]
+    \noindent
+    \begin{minipage}[c]{0.16\linewidth}
+        \centering
+        \IfFileExists{\courseLogo}
+        {\includegraphics[width=0.94\linewidth, keepaspectratio]{\courselogo}}
+        {\fbox{\scriptsize Course Logo}}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[c]{0.16\linewidth}
+        \centering
+        \IfFileExists{\instituteLogo}
+        {\includegraphics[width=0.94\linewidth, keepaspectratio]{\institutelogo}}
+        {\fbox{\scriptsize Institute Logo}}
+    \end{minipage}
+    \vspace{5pt}
+    \hrule
+    \vspace{8pt}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+        \textbf{Course ID:} \courseid &
+        \textbf{Instructor:} \instructorname &
+        \textbf{Date:} \classdate        
+    \end{tabular*}
+    \end{tcolorbox}
+}
+
+\begin{document}
+\pagestyle{empty} % Remove this line if page numbers are desired.
+
+\makeclassnotesheader
+
+\section{Learning task 1: the role of statistics in engineering}
+
+We start with two examples from the bachelor Military Systems and Technology.
+
+\subsection*{Maintenance: the reliability of a circuit}
+A circuit operates only if there is a path of functional devices from left to right. 
+Devices $A$ and $B$ are connected in parallel, device $C$ is in series.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.9, >=stealth]
+        % Main line input/output
+        \draw[thick] (-0.5, 0) -- (1, 0);
+        \draw[thick] (4, 0) -- (5.5, 0);
+        \draw[thick] (7.5, 0) -- (9, 0);
+
+        % Parallel split
+        \draw[thick] (1, -1.2) -- (1, 1.2);
+        \draw[thick] (1, 1.2) -- (2, 1.2);
+        \draw[thick] (1, -1.2) -- (2, -1.2);
+
+        % Blocks A and B
+        \draw[thick] (2, 0.6) rectangle (3.5, 1.8) node[pos=.5] {$A$};
+        \draw[thick] (2, -1.8) rectangle (3.5, -0.6) node[pos=.5] {$B$};
+
+        % Parallel rejoin
+        \draw[thick] (3.5, 1.2) -- (4, 1.2);
+        \draw[thick] (3.5, -1.2) -- (4, -1.2);
+        \draw[thick] (4, -1.2) -- (4, 1.2);
+
+        % Block C
+        \draw[thick] (5.5, -0.6) rectangle (7.5, 0.6) node[pos=.5] {$C$};
+    \end{tikzpicture}
+    \caption*{Figure 1.1 \\ Circuit with three devices}
+\end{figure}
+
+For example, the circuit operates if the devices $A$ and $C$ function, but the circuit fails, if device $C$ does not function.
+Assume that all devices function on average for $10$ hours. 
+What is the probability that the circuit will operate for at least $9$ hours?
+
+We look at this problem in two different ways, first deterministic (i.e. there is no variability), then stochastic (i.e. there is variability).
+\begin{itemize}
+    \item In the deterministic setting, all devices will function for precisely $10$ hours. The requested probability is therefore equal to $1$.
+    \item In the stochastic case, both a simulation using Excel and a calculation (later in this course) result in a probability of approximately $0.26$.
+\end{itemize}
+See the Excel-file "PMTPS\_STAT\_1\_stochastic.xlsx" or the print screen in Figure 1.2.
+
+In this file, the above circuit is simulated $10.000$ times. 
+In each row, three life times for the devices $A$, $B$ and $C$ are generated. 
+The life time of the circuit is calculated in column "D".
+Next, in column "E", it is determined whether the circuit still functions after $9$ hours. 
+In that case, the number $1$ is shown in column "E".
+
+The requested probability is then calculated in cell "E10003".
+The magnitude of this probability is partly dependent on the number of simulations. 
+Use the button "F9" to examine the sensitivity at this point.
+
+\begin{figure}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \toprule
+            & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} \\ 
+        \midrule
+            \textbf{1} & Device A & Device B & Device C & Circuit & $>$ 9 \\ \midrule
+            \textbf{9988} & 6,841 & 14,873 & 8,209 & 8,209 & 0 \\ \midrule
+            \textbf{9989} & 4,240 & 8,650 & 15,175 & 8,650 & 0 \\ \midrule
+            \textbf{9990} & 18,044 & 6,365 & 38,085 & 18,044 & 1 \\ \midrule
+            \textbf{9991} & 1,194 & 1,557 & 5,246 & 1,557 & 0 \\ \midrule
+            \textbf{9992} & 38,282 & 8,686 & 0,611 & 0,611 & 0 \\ \midrule
+            \textbf{9993} & 7,397 & 14,077 & 18,563 & 14,077 & 1 \\ \midrule
+            \textbf{9994} & 4,863 & 1,553 & 14,752 & 4,863 & 0 \\ \midrule
+            \textbf{9995} & 6,554 & 5,390 & 2,647 & 2,647 & 0 \\ \midrule
+            \textbf{9996} & 6,162 & 32,267 & 10,679 & 10,679 & 1 \\ \midrule
+            \textbf{9997} & 3,081 & 1,041 & 11,934 & 3,081 & 0 \\ \midrule
+            \textbf{9998} & 15,068 & 5,047 & 97,078 & 15,068 & 1 \\ \midrule
+            \textbf{9999} & 3,645 & 0,658 & 5,429 & 3,645 & 0 \\ \midrule
+            \textbf{10000} & 9,057 & 14,896 & 0,006 & 0,006 & 0 \\ \midrule
+            \textbf{10001} & 3,125 & 17,618 & 7,873 & 7,873 & 0 \\ \midrule
+            \textbf{10002} & Mean A & Mean B & Mean C & Mean Circuit & Probability \\ \midrule
+            \textbf{10003} & 9,983 & 10,122 & 9,876 & 6,644 & 0,2638 \\ 
+        \bottomrule
+        \end{tabular}
+    \caption*{Figure 1.2 \\ Life length of a circuit}
+\end{figure}
+
+\subsection*{Operations Research: Search and Detection}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.8, >=stealth]
+    % Boundaries
+    \draw[thick] (0,0) -- (0,5);
+    \draw[thick] (6,0) -- (6,5);
+    
+    % Hatching on edges
+    \foreach \y in {0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5} {
+        \draw (0,\y) -- (-0.3,\y+0.2);
+        \draw (6,\y) -- (6.3,\y+0.2);
+    }
+    
+    % Edge Labels
+    \node[left] at (-0.5,2.5) {left edge};
+    \node[right] at (6.5,2.5) {right edge};
+    
+    % Target Arrows
+    \foreach \x in {1, 1.8, 2.6, 3.4, 4.2, 5} {
+        \draw[->, thick] (\x, 4.8) -- (\x, 3.8);
+    }
+    \draw[->, thick] (2.6, 4.8) -- (2.6, 3.2);
+    \draw[->, thick] (4.2, 4.8) -- (4.2, 2.8);
+    
+    \node at (2, 3.5) {targets};
+    \node at (3.5, 3.5) {$U$};
+
+    % Observer horizontal arrows
+    \draw[very thick, ->] (0, 1.5) -- (2.3, 1.5);
+    \draw[very thick, ->] (5, 1.5) -- (3.7, 1.5);
+    \draw[very thick] (2.3, 1.5) -- (3.7, 1.5);
+    
+    \node at (1.5, 1) {observer};
+    \node at (4.0, 1) {$V$};
+    
+    % Bottom Curly Brace D
+    \draw[thick] (0,0.5) .. controls (0,0.1) and (1.5,0.1) .. (3,0.1) node[below=4pt] {$D$} .. controls (4.5,0.1) and (6,0.1) .. (6,0.5);
+\end{tikzpicture}
+\caption*{Figure 1.3 \\ Linear barrier (reversing course at the edge)}
+\end{figure}
+
+An observer is protecting a lane with width $D$ while moving at speed $V$ through the lane according some fixed pattern. Any target that closes the observer to within his sweep radius $R$ is detected. So the observer's detecting device is binary: the target is either detected or not detected.
+
+We assume that targets intend to traverse this lane southwards. We also assume that the target speed $U$ is constant along its path. A further assumption is that we know the intent and the capabilities of the target. More precisely, we assume that we know its speed. Its position,
+however, is unknown, so arbitrary. In stochastic terms: all positions have an equal probability of occurrence.
+
+Since the target knows that a preference for the edges (i.e. positions nearby the edges of the lane are more likely than positions in the centre of the lane) leads to a lower probability of detection, the target chooses its position based on the probability function in Figure 1.4.
+
+% \begin{figure}[h]
+%     \centering
+%     \begin{tikzpicture}
+%         \begin{axis}[
+%             width=0.85\textwidth,
+%             height=5.5cm,
+%             xmin=-12, xmax=12,
+%             ymin=0, ymax=0.12,
+%             xtick={-12,-10,-8,-6,-4,-2,0,2,4,6,8,10,12},
+%             ytick={0.00, 0.05, 0.10},
+%             yticklabels={0.00, 0.05, 0.10},
+%             grid=both,
+%             grid style={line width=.1pt, draw=gray!40},
+%             major grid style={line width=.2pt, draw=gray!60},
+%             axis lines=middle,
+%             xlabel={$x$},
+%             ylabel={$f(x)$},
+%             every axis x label={at={(axis description cs:0.5,-0.1)},anchor=north},
+%             every axis y label={at={(axis description cs:-0.08,0.5)},rotate=90,anchor=south}
+%         ]
+%         \addplot[red, ultra thick] coordinates {
+%             (-10, 0.10)
+%             (0, 0.00)
+%             (10, 0.10)
+%         };
+%         \end{axis}
+%     \end{tikzpicture}
+%     \caption{Probability function}
+% \end{figure}
+
+So if $D=20\text{ nm}$, the probability that the target chooses a position between $-5\text{ nm}$ and $+5\text{ nm}$ is equal to $0.25$ (i.e. the area under the graph of the probability function between $x=-5$ and $x=+5$), while the probability that the target chooses a position between $-10\text{ nm}$ and $-5\text{ nm}$ or between $5\text{ nm}$ and $10\text{ nm}$ is equal to 0.75.
+
+What is the probability that the target will be detected?
+
+Using probability, calculus and geometry, it is not difficult to derive the following formula
+\[
+P_{\text{det}} = \left\{ \frac{4R^3}{3D^3} \cdot \left(1 + \left(\frac{V}{U}\right)^2\right) - \frac{2R^2}{D^2} \cdot \sqrt{1 + \left(\frac{V}{U}\right)^2} + \frac{2R}{D} \right\} \cdot \sqrt{1 + \left(\frac{V}{U}\right)^2}.
+\]
+
+\paragraph{Example 1}
+\begin{align*}
+D &= 20 \\
+R &= 4 \\
+V &= 18 \\
+U &= 12 \\
+P_{\text{det}} &= 0.5236
+\end{align*}
+
+\end{document}

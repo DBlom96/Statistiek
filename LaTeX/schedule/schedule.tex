@@ -1,0 +1,190 @@
+\documentclass[12pt, a4paper]{article}
+
+% Laad stijlen via relatieve paden
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\usepackage{\path/LaTeX/styles/config}
+\usepackage{\path/LaTeX/styles/statistics-macros}
+\graphicspath{{\path/LaTeX/figures/}}
+
+\definecolor{highlightColor}{RGB}{0, 0, 0}
+\definecolor{dimmedColor}{RGB}{230, 230, 230}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Define custom colors matching the image
+\definecolor{highlightyellow}{RGB}{255, 255, 0}
+\definecolor{highlightgray}{RGB}{200, 200, 200}
+\definecolor{highlightgreen}{RGB}{0,200,0}
+\definecolor{highlightcyan}{RGB}{0, 255, 255}
+\definecolor{versionred}{RGB}{204, 0, 0}
+\newcommand{\hyellow}[1]{\colorbox{highlightyellow}{\strut #1}}
+\newcommand{\hgray}[1]{\colorbox{highlightgray}{\strut #1}}
+\newcommand{\hgreen}[1]{\colorbox{highlightgreen}{\strut #1}}
+\newcommand{\hcyan}[1]{\colorbox{highlightcyan}{\strut #1}}
+\newcommand{\cbox}[2]{\colorbox{#1}{\hspace*{1.8ex}\rule{0pt}{1.3ex}}\hspace{0.5em}#2}
+
+% \newcommand{\weekrow}[2]{%
+%     \ifnum#1=#2\RowStyle{\color{highlightColor}}\rowcolor{highlightgreen}\else\RowStyle{\color{dimmedColor}}\fi
+% }
+
+\newcommand{\weekrow}[5]{%
+  \ifnum#1=#2%
+    % Active Week: Bold, normal black text, plain white background
+    % \noalign{\global\let\currentrowcolor\relax}%
+    \rowcolor{highlightgreen!20}
+    \textcolor{highlightgreen}{\textbf{#3}} & \textcolor{highlightgreen}{\textbf{#4}} & \textcolor{highlightgreen}{\textbf{#5}} \\
+  \else
+    % Inactive Week: Gray background + dimmed text
+    \textcolor{dimmedColor}{#3} & \textcolor{dimmedColor}{#4} & \textcolor{dimmedColor}{#5} \\
+  \fi
+} % Syntax: \weekrow{target_week}{current_week}{Dates}{Topic}{Deliverables}
+
+
+\newcommand{\renderTable}[1]{%
+    \begin{center}
+        \begin{longtable}{m{.1\textwidth}m{.4\textwidth}m{.45\textwidth}}
+            \toprule
+                \textbf{Learning task} & \textbf{Content} & \textbf{Exercises} \\
+            \midrule
+                \multicolumn{3}{c}{1. The Role of Statistics in Engineering, Probability} \\
+            \midrule
+                \weekrow{#1}{1}{1a}{Sections 1-1, 1-2, 1-3, 1-4 \newline
+                    See \hyellow{PMTPS\_STAT\_Ch1.pdf} \newline
+                    Sections 2-1, 2-2, 2-3, 2-4, 2-5 \newline
+                   See \hyellow{PMTPS\_STAT\_Ch2\#1.pdf}}{Chapter 2: 1, 8, 17, 20, 29, 31, 55, \hgray{74}, 77, 87, 91, 106, \hgray{113}}
+            \midrule
+                \weekrow{#1}{2}{1b}{Sections 2-6, 2-7, 2-8 \newline
+                See \hyellow{PMTPS\_STAT\_Ch2\#2.pdf}}{Chapter 2: 122, 129, \hgray{136}, 137, \hcyan{147}, 149, 154, 180, 193}
+            \midrule
+                \multicolumn{3}{c}{2. Discrete and Continuous Random Variables; Probability Distributions} \\
+            \midrule
+                \weekrow{#1}{3}{2a}{Sections 3-1, 3-2, 3-3, 3-4, 3-5 \newline
+                                    See PMTPS\_STAT\_Ch3\#1.pdf}{Chapter 3: 1, 5, 14, 17, 29, 35, 43, 51, 53, 67, 68, 70}
+            \midrule
+                \weekrow{#1}{4}{2b}{Sections 3-6, 3-7.1, 3-9\newline
+                                    See PMTPS\_STAT\_Ch3\#2.pdf}{Chapter 3: 79, 91, 95, 103, 105, 131, 133, 134, 141, 171}
+            \midrule
+                \weekrow{#1}{5}{2c}{Sections 4-1, 4-2, 4-3, 4-4, 4-5 \newline
+                                    See PMTPS\_STAT\_Ch4\#1.pdf}{Chapter 4: 1, 7, 11, 13, 15, 21, 29, 37, 41}
+            \midrule
+                \weekrow{#1}{6}{2d}{Sections 4-6, 4-8 \newline
+                                    See PMTPS\_STAT\_Ch4\#2.pdf}{Chapter 4: 51, 55, 56, 63, 69, 91, 103, 165}
+            \midrule
+                \multicolumn{3}{c}{3. Joint Probability Distributions; Central Limit Theorem} \\
+            \midrule
+                \weekrow{#1}{7}{3a}{Sections 5-1, 5-2 (discrete) \newline
+                                     See PMTPS\_STAT\_Ch5\#1.pdf}{Chapter 5: 1, 5, 31, 39, 85}
+            \midrule
+                \weekrow{#1}{8}{3b}{Sections 5-1, 5-2 (continuous), 5-3.2 \newline
+                                     See PMTPS\_STAT\_Ch5\#2.pdf}{Chapter 5: 13, 15, 27, 35, 47, 49}
+            \midrule
+                \weekrow{#1}{9}{3c}{Sections 5-4 \newline
+                                     See PMTPS\_STAT\_Ch5\#3.pdf}{Chapter 5: 55, 57, 60, 63, 64, 90}
+            \midrule
+                \weekrow{#1}{10}{3d}{Sections 7-1, 7-2 \newline
+                                     See PMTPS\_STAT\_Ch7\#1.pdf}{Chapter 7: 3, 7, 10, 11, 12, 13}
+            \midrule
+                \multicolumn{3}{c}{4. Point Estimation and Interval Estimation} \\
+            \midrule
+                \weekrow{#1}{11}{4a}{Section 7-3 \newline
+                                     See PMTPS\_STAT\_Ch7\#2.pdf}{Chapter7: 21, 23, 25, 29, 32}
+            \midrule
+                \weekrow{#1}{12}{4b}{Section 7-4.2 (until: Invariance Property) \newline
+                                     See PMTPS\_STAT\_Ch7\#3.pdf}{Chapter 7: 34, 35, 38, $40^{\text{a, c}}$, $41^{\text{a, b}}$, 42}
+            \midrule
+                \weekrow{#1}{13}{4c}{Section 8-1 \newline
+                                     See PMTPS\_STAT\_Ch8\#1.pdf}{Chapter 8: 4, 7, 9, 11, 17, 29 (use the $N(0,1)$-distribution) \newline
+                                                                                             Chapter 7: 63}
+            \midrule
+                \weekrow{#1}{14}{4d}{Sections 6-7, 8-2 \newline
+                                     See PMTPS\_STAT\_Ch8\#2.pdf}{Chapter 6: 81 \newline Chapter 8: 29 (use the $t$-distribution), 37, 39, 41}
+            \midrule
+                \multicolumn{3}{c}{5. Tests of Hypotheses for a Single Sample} \\
+            \midrule
+                \weekrow{#1}{15}{5a}{Sections 9-1.1, 9-1.2, 9-1.3, 9-1.4, 9-2.1 \newline
+                                     See PMTPS\_STAT\_Ch9\#1.pdf}{Chapter 9: 1, 5, 7, 9, 15, $17^{\text{a}}$, 19, 31, 33}
+            \midrule
+                \weekrow{#1}{16}{5b}{Sections 9-1.5, 9-1.6, 9-3.1 \newline
+                                     See PMTPS\_STAT\_Ch9\#2.pdf}{Chapter 9: $42^{\text{a, b, c}}$, $47^{\text{a, b, c}}$, 51, $59^{\text{a, c}}$, $60^{\text{a, c}}$, 126, 127} \\
+            \midrule
+                \weekrow{#1}{17}{5c}{Sections 9-2.2 \newline
+                                     See PMTPS\_STAT\_Ch9\#3.pdf}{Chapter 9: $42^{\text{d}}$, $47^{\text{d, e}}$, 128, 130, 131}
+            \midrule
+                \weekrow{#1}{19}{5d}{Sections 4-9, 9-7 \newline
+                                     See PMTPS\_STAT\_Ch9\#4.pdf}{Chapter 9: 96, 97, 99, 144}
+            \midrule
+                \multicolumn{3}{c}{6. Simple Linear Regression and Correlation} \\
+            \midrule
+                \weekrow{#1}{20}{6a}
+                {Sections 11-1, 11-2 \newline See PMTPS\_STAT\_Ch11\#1.pdf}
+                {Chapter 11: 1, 4, 6, 8, 18}
+            \midrule
+                \weekrow{#1}{21}{6b}
+                {Section 11-8 \newline See PMTPS\_STAT\_Ch11\#2.pdf}
+                {Chapter 11: $70^{\text{a, b}}$, $72^{\text{a, c, d}}$, 76, 88} 
+            \bottomrule
+        \end{longtable}
+    \end{center}
+}
+ 
+            
+
+
+\begin{document}
+
+% Automatically loop through row indices 1 to 4
+\foreach \i in {1,...,21}{
+  \renderTable{\i}
+  \newpage
+}
+
+% {\Huge Schedule Probability \}{ Statistics (2026-2027)}
+
+%     \begin{NiceTabular}{ccc}
+%         \toprule
+%             \textbf{Learning task}}{\textbf{Content}}{\textbf{Exercises} \\
+%         \midrule
+%             \rowcolor
+%         % Default: lightgray everywhere, highlight color on specific slide
+%         \rowcolor<1>{highlightyellow}\rowcolor<2-4>{lightgray!50}%
+%         Row 1}{Value A}{Value B \\
+
+%         \rowcolor<2>{highlightyellow}\rowcolor<1,3-4>{lightgray!50}%
+%         Row 2}{Value C}{Value D \\
+
+%         \rowcolor<3>{highlightyellow}\rowcolor<1-2,4>{lightgray!50}%
+%         Row 3}{Value E}{Value F \\
+
+%         \rowcolor<4>{highlightyellow}\rowcolor<1-3>{lightgray!50}%
+%         Row 4}{Value G}{Value H \\
+
+%         \bottomrule
+%     \end{NiceTabular}
+  
+% \renewcommand{\arraystretch}{1.15}
+
+
+
+
+
+% \vspace{0.8em}
+% {\small
+% For Exercises marked in \textbf{\textcolor{red}{red}}, first consult the documents ``PMTPS\_STAT\_Answers\_Task*.pdf''. Take note of the texts marked in \textbf{\textcolor{red}{red}}.
+
+% \vspace{0.4em}
+% \cbox{highlightyellow}{Tutorial available}
+
+% \vspace{0.2em}
+% \cbox{highlightgray}{PowerPoint presentation available}
+
+% \vspace{0.2em}
+% \cbox{highlightcyan}{Video presentation available}
+% }
+
+% \vspace{1.5em}
+% \begin{center}
+% {\small 1}
+% \end{center}
+
+\end{document}
