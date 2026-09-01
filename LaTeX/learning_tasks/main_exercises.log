@@ -1,16 +1,16 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  31 AUG 2026 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  1 SEP 2026 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/learning_tasks/lt1.tex
-(c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/learning_tasks/lt1.tex
+**c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/learning_tasks/main_exercises.tex
+(c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/learning_tasks/main_exercises.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
-File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
 \c@section=\count276
@@ -23,7 +23,7 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (../../LaTeX/styles/exam_config.sty (../../LaTeX/styles/config.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+) (C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/config.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
@@ -1014,11 +1014,7 @@ Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
 )
 \c@question=\count451
 \c@subquestion=\count452
-)) (../../LaTeX/styles/statistics-macros.sty)
-
-LaTeX Warning: \include should only be used after \begin{document} on input line 6.
-
-(../../LaTeX/styles/tikz_macros.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
+) (C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/statistics-macros.sty) (C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/styles/tikz_macros.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@layerbox@background=\box158
 \pgf@layerboxsaved@background=\box159
@@ -1095,36 +1091,36 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'dutch'.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 62.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 17.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count454
-) (lt1.aux
+) (main_exercises.aux
 Package babel Info: 'dutch' activates 'dutch' shorthands.
 (babel)             Reported on input line 9.
 )
-\openout1 = `lt1.aux'.
+\openout1 = `main_exercises.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1145,12 +1141,12 @@ LaTeX Font Info:    ... okay on input line 62.
 * \topmargin=-55.06749pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=50.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1165,7 +1161,7 @@ LaTeX Font Info:    ... okay on input line 62.
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
 File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 62.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 17.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count457
@@ -1194,57 +1190,47 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 62.
-(lt1.out) (lt1.out)
+Package hyperref Info: Link coloring OFF on input line 17.
+(main_exercises.out) (main_exercises.out)
 \@outlinefile=\write4
-\openout4 = `lt1.out'.
+\openout4 = `main_exercises.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+ (lt2_exercises.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 109.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
-File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
-)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 [1
 
 {C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 
-[2]
+[2])
 
-[3] (lt1.aux)
+[3] (main_exercises.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
-Package rerunfilecheck Info: File `lt1.out' has not changed.
-(rerunfilecheck)             Checksum: E4B512C886747196ED4157D18502223A;337.
+Package rerunfilecheck Info: File `main_exercises.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 53223 strings out of 468133
- 1316031 string characters out of 5430719
- 1872013 words of memory out of 5000000
- 81014 multiletter control sequences out of 15000+600000
- 652579 words of font info for 73 fonts, out of 8000000 for 9000
+ 53219 strings out of 468133
+ 1315898 string characters out of 5430719
+ 1866084 words of memory out of 5000000
+ 81000 multiletter control sequences out of 15000+600000
+ 649676 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,11n,125p,839b,1144s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on lt1.pdf (3 pages, 95458 bytes).
+ 102i,6n,111p,849b,1256s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main_exercises.pdf (3 pages, 78715 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 74 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
