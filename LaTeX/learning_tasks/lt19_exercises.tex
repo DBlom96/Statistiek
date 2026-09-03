@@ -1,0 +1,116 @@
+\enquestion{11.1}{
+    An article in \textit{Concrete Research} [\enquote{Near Surface Characteristics of Concrete: Intrinsic Permeability} (1989, Vol. 41)] presented data on compressive strength $x$ and intrinsic permeability $y$ of various concrete mixes and cures.
+    Summary quantities are $n = 14$, $\sum y_{i} = 572$, $\sum y_{i}^{2} = 23,530$, $\sum x_{i} = 43$, $\sum x_{i}^{2} = 157.42$, and $\sum x_{i} y_{i} = 1697.80$.
+    Assume that the two variables are related according to the simple linear regression model.
+    \begin{enumerate}[label=(\alph*)]
+        \item Calculate the least squares estimates of the slope and intercept.
+        Estimate $\sigma^{2}$.
+        Graph the regression line.
+        \item Use the equation of the fitted line to predict what permeability would be observed when the compressive strength is $x = 4.5$.
+        \item Give a point estimate of the mean permeability when compressive strength is $x = 3.3$.
+        \item Suppose that the observed value of permeability at $x = 3.3$ is $y = 45.6$.
+        Calculate the value of the corresponding residual.
+    \end{enumerate}
+}
+
+\enquestion{11.4}{
+    An article in \textit{Technometrics} by S. C. Narula and J. F. Wellington [\enquote{Prediction, Linear Regression, and a Minimum Sum of Relative Errors} (Vol. 19, 1977)] presents data on the selling price and annual taxes for $24$ houses.
+    The data are in the following table.
+
+    \begin{center}
+        \begin{tabular}{m{.15\textwidth}m{.3\textwidth}m{.15\textwidth}m{.3\textwidth}}
+            \toprule
+                \textbf{Sale Price \newline / 1000} & \textbf{Taxes\newline (local, school, county) \newline /1000} & \textbf{Sale Price \newline / 1000} & \textbf{Taxes \newline(local, school, county)\newline/1000} \\
+            \midrule
+                $25.9$ & $4.9176$ & $30.0$ & $5.0500$ \\
+                $29.5$ & $5.0208$ & $36.9$ & $8.2464$ \\
+                $27.9$ & $4.5429$ & $41.9$ & $6.6969$ \\
+                $25.9$ & $4.5573$ & $40.5$ & $7.7841$ \\
+                $29.9$ & $5.0597$ & $43.9$ & $9.0384$ \\
+                $29.9$ & $3.8910$ & $37.5$ & $5.9894$ \\
+                $30.9$ & $5.8980$ & $37.9$ & $7.5422$ \\
+                $28.9$ & $5.6039$ & $44.5$ & $8.7951$ \\
+                $35.9$ & $5.8282$ & $37.9$ & $6.0831$ \\
+                $31.5$ & $5.3003$ & $38.9$ & $8.3607$ \\
+                $31.0$ & $6.2712$ & $36.9$ & $8.1400$ \\
+                $30.9$ & $5.9592$ & $45.8$ & $9.1416$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Assuming that a simple linear regression model is appropriate, obtain the least squares fit relating selling price to taxes paid.
+        What is the estimate of $\sigma^{2}$?
+        \item Find the mean selling price given that the taxes paid are $x = 7.30$.
+        \item Calculate the fitted value of $y$ corresponding to $x = 5.6039$.
+        Find the corresponding residual.
+        \item Calculate the fitted $\hat{y}_{i}$ for each value of $x_{i}$ used to fit the model.
+        Then construct a graph of $\hat{y}_{i}$ versus the corresponding observed value $y_{i}$ and comment on what this plot would look like if the relationship between $y$ and $x$ was a deterministic (no random error) straight line.
+        Does the plot actually obtained indicate that taxes paid is an effective regressor variable in predicting selling price?
+    \end{enumerate}
+}
+
+\enquestion{11.6}{
+    The following table presents the highway gasoline mileage performance and engine displacement for DaimlerChrysler vehicles for model year $2005$ (U.S. Environmental Protection Agency).
+
+    \begin{center}
+        \begin{tabular}{m{.35\textwidth}m{.35\textwidth}m{.2\textwidth}}
+            \toprule
+                \textbf{Carline} & \textbf{Engine Displacement ($\text{inch}^3$)} & \textbf{MPG (highway)} \\
+            \midrule
+                300C/SRT-8              & $215$ & $30.8$ \\
+                CARAVAN 2WD             & $201$ & $32.5$ \\
+                CROSSFIRE ROADSTER      & $196$ & $35.4$ \\
+                DAKOTA PICKUP 2WD       & $226$ & $28.1$ \\
+                DAKOTA PICKUP 4WD       & $226$ & $24.4$ \\
+                DURANGO 2WD             & $348$ & $24.1$ \\
+                GRAND CHEROKEE 2WD      & $226$ & $28.5$ \\
+                GRAND CHEROKEE 4WD      & $348$ & $24.2$ \\
+                LIBERTY/CHEROKEE 2WD    & $148$ & $32.8$ \\
+                LIBERTY/CHEROKEE 4WD    & $226$ & $28  $ \\
+                NEON/SRT-4/SX 2.0       & $122$ & $41.3$ \\
+                PACIFICA 2WD            & $215$ & $30.0$ \\
+                PACIFICA 4WD            & $215$ & $28.2$ \\
+                PT CRUISER              & $148$ & $34.1$ \\
+                RAM 1500 PICKUP 4WD     & $500$ & $18.7$ \\
+                RAM 1500 PICKUP 4WD     & $348$ & $20.3$ \\
+                SEBRING 4-DR            & $165$ & $35.1$ \\
+                STRATUS 4-DR            & $148$ & $37.9$ \\
+                TOWN \& COUNTRY 2WD     & $148$ & $33.8$ \\
+                VIPER CONVERTIBLE       & $500$ & $25.9$ \\
+                WRANGLER/TJ 4WD         & $148$ & $26.4$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Fit a simple linear model relating highway miles per gallon ($y$) to engine displacement ($x$) in cubic inches using least squares.
+        \item Find an estimate of the mean highway gasoline mileage performance for a car with $175$ cubic inches engine displacement.
+        \item Obtain the fitted value of $y$ and the corresponding residual for a car, the Neon, with an engine displacement of $134$ cubic inches.
+    \end{enumerate}
+}
+
+\enquestion{11.8}{
+    An article in the \emph{Journal of Sound and Vibration} (Vol. 151, 1991, pp. 383-394) described a study investigating the relationship between noise exposure and hypertension.
+    The following data are representative of those reported in the article
+
+    \begin{center}
+        \begin{tabular}{*{11}{m{0.06\textwidth}}}
+            \toprule
+            $y$ & $1$ & $0$ & $1$ & $2$ & $5$ & $1$ & $4$ & $6$ & $2$ & $3$ \\
+            $x$ & $60$ & $63$ & $65$ & $70$ & $70$ & $70$ & $80$ & $90$ & $80$ & $80$ \\
+            \bottomrule
+        \end{tabular}
+
+        \begin{tabular}{*{11}{m{0.06\textwidth}}}
+            \toprule
+            $y$ & $5$ & $4$ & $6$ & $8$ & $4$ & $5$ & $7$ & $9$ & $7$ & $6$ \\
+            $x$ & $85$ & $89$ & $90$ & $90$ & $90$ & $90$ & $94$ & $100$ & $100$ & $100$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+}
+\newpage
+\enquestion{11.18}{
+    Show that in a simple linear regression model the point $(\bar{x}, \bar{y})$ lies exactly on the least squares regression line.
+}

@@ -1,19 +1,55 @@
 \enquestion{7.21}{
-
+    Let $X_{1}, X_{2}, \ldots, X_{7}$ denote a random sample from a population having mean $\mu$ and variance $\sigma^{2}$.
+    Consider the following estimators of $\mu$:
+    \[
+        \hat{\Theta}_{1} = \frac{X_{1} + X_{2} + \dots + X_{7}}{7}
+    \]
+    \[
+        \hat{\Theta}_{2} = \frac{2X_{1} - X_{6} + X_{4}}{2}
+    \]
+    \begin{enumerate}[label=(\alph*)]
+        \item Is either estimator unbiased?
+        \item Which estimator is better?
+        In what sense is it better?
+        Calculate the relative efficiency of the two estimators.
+    \end{enumerate}
 }
 
 \enquestion{7.23}{
-
+    Suppose that $\hat{\Theta}_{1}$ and $\hat{\Theta}_{2}$ are estimators of the parameter $\theta$.
+    We know that $E(\hat{\Theta}_{1}) = \theta$, $E(\hat{\Theta}_{2}) = \theta / 2$, $V(\hat{\Theta}_{1}) = 10$, $V(\hat{\Theta}_{2}) = 5$.
+    Which estimator is better?
+    In what sense is it better?
 }
 
 \enquestion{7.25}{
-
+    Let three random samples of sizes $n_{1} = 8$, $n_{2} = 14$, and $n_{3} = 6$ be taken from a population with mean $\mu$ and variance $\sigma^{2}$.
+    Let $S_{1}^{2}$, $S_{2}^{2}$, and $S_{3}^{2}$ be the sample variances.
+    Show that $S^{2} = (7S_{1}^{2} + 13S_{2}^{2} + 5S_{3}^{2}) / 25$ is an unbiased estimator of $\sigma^{2}$.
 }
 
 \enquestion{7.29}{
-
+    Data on the oxide thickness of semiconductor wafers are as follows: $425$, $431$, $416$, $420$, $421$, $436$, $418$, $410$, $431$, $433$, $423$, $426$, $411$, $435$, $436$, $428$, $411$, $426$, $407$, $437$, $422$, $428$, $413$, $416$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Calculate a point estimate of the mean oxide thickness for all wafers in the population.
+        \item Calculate a point estimate of the standard deviation of oxide thickness for all wafers in the population.
+        \item Calculate the standard error of the point estimate from part (a).
+        \item Calculate a point estimate of the median oxide thickness for all wafers in the population.
+        \item Calculate a point estimate of the proportion of wafers in the population that have oxide thickness of more than $430$ angstroms.
+    \end{enumerate}
 }
 
 \enquestion{7.32}{
-
+    Two different plasma etchers in a semiconductor factory have the same mean etch rate $\mu$.
+    However, machine $1$ is newer than machine $2$ and consequently has smaller variability in etch rate.
+    We know that the variance of etch rate for machine $1$ is $\sigma_{1}^{2}$, and for machine $2$, it is $\sigma_{2}^{2} = a\sigma_{1}^{2}$.
+    Suppose that we have $n_{1}$ independent observations on etch rate from machine $1$ and $n_{2}$ independent observations on etch rate from machine $2$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Show that $\hat{\mu} = \alpha \bar{X}_{1} + (1 - \alpha) \bar{X}_{2}$ is an unbiased estimator of $\mu$ for any value of $\alpha$ between zero and one.
+        \item Find the standard error of the point estimate of $\mu$ in part (a).
+        \item What value of $\alpha$ would minimize the standard error of the point estimate of $\mu$?
+        \item Suppose that $a = 4$ and $n_{1} = 0.5 n_{2}$.
+        What value of $\alpha$ would you select to minimize the standard error of the point estimate of $\mu$?
+        How \enquote{bad} would it be to arbitrarily choose $\alpha = 0.5$ in this case?
+    \end{enumerate}
 }
