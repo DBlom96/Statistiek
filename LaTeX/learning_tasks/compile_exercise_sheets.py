@@ -4,7 +4,7 @@ import os
 # Configuration
 num_learning_tasks = 14
 
-for i in range(14, num_learning_tasks + 1):
+for i in range(1, num_learning_tasks + 1):
     print(f"COMPILING LEARNING TASK {i}")
         
     # Write the includeonly list to the file

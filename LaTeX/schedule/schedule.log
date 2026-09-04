@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  28 AUG 2026 17:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  4 SEP 2026 11:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -855,13 +855,25 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '6.7.1'
 \tcb@lowerfitdim=\dimen396
 \tcb@upperfitdim=\dimen397
 \tcb@cur@hbadness=\count431
-)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
+)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikz-cd.sty
+Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen398
+\pgfarrowlength=\dimen399
+\pgfarrowwidth=\dimen400
+\pgfarrowlinewidth=\dimen401
+))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
 \t@pgfplots@toka=\toks56
 \t@pgfplots@tokb=\toks57
 \t@pgfplots@tokc=\toks58
-\pgfplots@tmpa=\dimen398
+\pgfplots@tmpa=\dimen402
 \c@pgfplots@coordindex=\count432
 \c@pgfplots@scanlineindex=\count433
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)
@@ -877,24 +889,24 @@ Package pgfplots: loading complementary utilities for your pgf version...
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
 \c@pgfplotslibrarysurf@no=\count436
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen399
-\pgfdecoratedremainingdistance=\dimen400
-\pgfdecoratedinputsegmentcompleteddistance=\dimen401
-\pgfdecoratedinputsegmentremainingdistance=\dimen402
-\pgf@decorate@distancetomove=\dimen403
+\pgfdecoratedcompleteddistance=\dimen403
+\pgfdecoratedremainingdistance=\dimen404
+\pgfdecoratedinputsegmentcompleteddistance=\dimen405
+\pgfdecoratedinputsegmentremainingdistance=\dimen406
+\pgf@decorate@distancetomove=\dimen407
 \pgf@decorate@repeatstate=\count437
-\pgfdecorationsegmentamplitude=\dimen404
-\pgfdecorationsegmentlength=\dimen405
+\pgfdecorationsegmentamplitude=\dimen408
+\pgfdecorationsegmentlength=\dimen409
 )
 \tikz@lib@dec@box=\box157
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
 \pgfplots@numplots=\count438
-\pgfplots@xmin@reg=\dimen406
-\pgfplots@xmax@reg=\dimen407
-\pgfplots@ymin@reg=\dimen408
-\pgfplots@ymax@reg=\dimen409
-\pgfplots@zmin@reg=\dimen410
-\pgfplots@zmax@reg=\dimen411
+\pgfplots@xmin@reg=\dimen410
+\pgfplots@xmax@reg=\dimen411
+\pgfplots@ymin@reg=\dimen412
+\pgfplots@ymax@reg=\dimen413
+\pgfplots@zmin@reg=\dimen414
+\pgfplots@zmax@reg=\dimen415
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
@@ -920,7 +932,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen412
+\@linkdim=\dimen416
 \Hy@linkcounter=\count440
 \Hy@pagecounter=\count441
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
@@ -945,15 +957,15 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count443
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen413
+\XeTeXLinkMargin=\dimen417
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count444
-\Field@Width=\dimen414
-\Fld@charsize=\dimen415
+\Field@Width=\dimen418
+\Fld@charsize=\dimen419
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1007,7 +1019,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'dutch'.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 134.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 109.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -1019,24 +1031,24 @@ Package babel Info: 'dutch' activates 'dutch' shorthands.
 )
 \openout1 = `schedule.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1077,17 +1089,17 @@ LaTeX Font Info:    ... okay on input line 134.
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
 File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 134.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 109.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count456
-\scratchdimen=\dimen416
+\scratchdimen=\dimen420
 \scratchbox=\box158
 \nofMPsegments=\count457
 \nofMParguments=\count458
 \everyMPshowfont=\toks63
 \MPscratchCnt=\count459
-\MPscratchDim=\dimen417
+\MPscratchDim=\dimen421
 \MPnumerator=\count460
 \makeMPintoPDFobject=\count461
 \everyMPtoPDFconversion=\toks64
@@ -1097,8 +1109,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c__nicematrix_shift_Ldots_last_row_dim=\dimen418
-\c__nicematrix_innersep_middle_dim=\dimen419
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen422
+\c__nicematrix_innersep_middle_dim=\dimen423
 \c@tabularnotesi=\count462
 \enitdp@tabularnotes=\count463
 \c@tabularnotes*i=\count464
@@ -1106,173 +1118,21 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 134.
+Package hyperref Info: Link coloring OFF on input line 109.
 (schedule.out) (schedule.out)
 \@outlinefile=\write4
 \openout4 = `schedule.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 140.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 140.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
+
+Overfull \hbox (11.54333pt too wide) in alignment at lines 113--113
  [] [] [] 
  []
+
+
 
 [1
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-
-[2]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[3]
-
-[4]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[5]
-
-[6]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[7]
-
-[8]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[9]
-
-[10]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[11]
-
-[12]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[13]
-
-[14]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[15]
-
-[16]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[17]
-
-[18]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[19]
-
-[20]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[21]
-
-[22]
-Underfull \hbox (badness 1577) in paragraph at lines 140--140
-[]|[]\T1/bch/b/n/12 Section 7-4.2 (un-til: In-va-ri-ance
- []
-
-
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[23]
-
-[24]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[25]
-
-[26]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[27]
-
-[28]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[29]
-
-[30]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[31]
-
-[32]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[33]
-
-[34]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[35]
-
-[36]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[37]
-
-[38]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[39]
-
-[40]
-Overfull \hbox (11.54333pt too wide) in alignment at lines 140--140
- [] [] [] 
- []
-
-[41]
-
-[42] (schedule.aux)
+{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (schedule.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
@@ -1281,17 +1141,17 @@ Package rerunfilecheck Info: File `schedule.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49123 strings out of 468133
- 1187923 string characters out of 5430719
- 1729105 words of memory out of 5000000
- 76985 multiletter control sequences out of 15000+600000
- 647612 words of font info for 69 fonts, out of 8000000 for 9000
+ 49861 strings out of 468133
+ 1214538 string characters out of 5430719
+ 1756001 words of memory out of 5000000
+ 77788 multiletter control sequences out of 15000+600000
+ 633816 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,107p,837b,1361s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on schedule.pdf (42 pages, 139366 bytes).
+ 102i,6n,111p,837b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb>
+Output written on schedule.pdf (1 page, 34251 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
+ 26 PDF objects out of 1000 (max. 8388607)
+ 3 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
