@@ -1,0 +1,128 @@
+\enquestion{5.1}{
+    Show that the following function satisfies the properties of a joint probability mass function.
+
+    \begin{center}
+        \begin{tabular}{*{3}{c}}
+            \toprule
+                $x$     & $y$   & $f_{XY}(x,y)$ \\
+            \midrule
+                $1$     & $1$   & $1/4$ \\
+                $1.5$   & $2$   & $1/8$ \\
+                $1.5$   & $3$   & $1/4$ \\
+                $2.5$   & $4$   & $1/4$ \\
+                $3$     & $5$   & $1/8$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    
+    Determine the following:
+    
+    \begin{tabular}{*{2}{m{.45\textwidth}}}
+        (a) $P(X<2.5, Y<3)$ & (b) $P(X<2.5)$ \\
+        (c) $P(Y<3)$        & (d) $P(X>1.8, Y>4.7)$ \\
+        \multicolumn{2}{l}{(e) $E(X)$, $E(Y)$, $V(X)$, $V(Y)$} \\
+    \end{tabular}
+}
+\enanswer{
+    \begin{tabular}{*{2}{m{.45\textwidth}}}
+        (a) $0.375$ & (b) $0.625$ \\
+        (c) $0.375$ & (d) $0.125$ \\
+        \multicolumn{2}{l}{(e) $E(X) = 1.8125, \quad E(Y) = 2.875, \quad V(X) = 0.4961, \quad V(Y) = 1.8594$} \\
+    \end{tabular}
+}
+
+\enquestion{5.5}{
+    In the transmission of digital information, the probability that a bit has high, moderate and low distortion is $0.01$, $0.04$, and $0.95$, respectively.
+    Suppose that three bits are transmitted and that the amount of distortion of each bit is assumed to be independent.
+    Let $X$ and $Y$ denote the number of bits with high and moderate distortion out of the three, respectively.
+    Determine:
+
+    \begin{tabular}{*{2}{C{.45\textwidth}}}
+        (a) $f_{XY}(x,y)$   & (b) $f_X(x)$ \\
+        (c) $E(Y)$          & (d) $f_{Y|2}(y)$ \\
+        (e) $E(Y|X=1)$      & (f) Are $X$ and $Y$ independent? \\
+    \end{tabular}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item 
+        \begin{tabular}{rlll}
+            $(0,0): 0.857375,$ & $(0,1): 0.1083,$ & $(0,2): 0.00456,$ & $(0,3): 0.000064,$ \\
+            $(1,0): 0.027075,$ & $(1,1): 0.00228,$ & $(1,2): 0.000048,$ & $(1,3): 0,$ \\
+            $(2,0): 0.000285,$ & $(2,1): 0.000012,$ & $(2,2): 0,$ & $(2,3): 0,$ \\
+            $(3,0): 0.000001,$ & $(3,1): 0,$ & $(3,2): 0,$ & $(3,3): 0$
+        \end{tabular}
+        \item $0: 0.970299, \quad 1: 0.029403, \quad 2: 0.000297, \quad 3: 0.000001$
+        \item $0.12$
+        \item $0: 0.9596, \quad 1: 0.0404$
+        \item $0.0808$
+        \item No
+    \end{enumerate}
+}
+
+\enquestion{5.31}{
+    Determine the value for $c$ and the covariance and correlation for the joint probability mass function $f_{XY}(x,y)=c(x+y)$ for $x=1,2,3$ and $y=1,2$.
+}
+\enanswer{
+    $c = \frac{1}{21}, \quad \text{cov}(X,Y) = -0.0136, \quad \rho(X,Y) = -0.0346$
+}
+
+\enquestion{5.39}{
+    The joint probability distribution is
+
+    \begin{center}
+        \begin{tabular}{c|*{4}{c}}
+            \toprule
+                $x$ & $-1$ & $0$ & $0$ & $1$ \\
+                $y$ & $0$ & $-1$ & $1$ & $0$ \\
+                $f_{XY}(x,y)$ & $1/6$ & $1/3$ & $1/3$ & $1/6$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    $\text{cov}(X,Y) = 0$, $X, Y$ dependent, because $P(X=0) \cdot P(Y=0) = \frac{2}{9} \neq P(X=0, Y=0) = 0$
+}
+
+\enquestion{5.85}{
+    Show that the following function satisfies the properties of a joint probability mass function:
+   
+    \begin{center}
+        \begin{tabular}{*{3}{c}}
+            \toprule
+                $x$ & $y$ & $f(x,y)$ \\
+                $0$ & $0$ & $1/4$ \\
+                $0$ & $1$ & $1/8$ \\
+                $1$ & $0$ & $1/8$ \\
+                $1$ & $1$ & $1/4$ \\
+                $2$ & $2$ & $1/4$ \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    Determine the following:
+
+    \begin{tabular}{*{2}{m{.45\textwidth}}}
+        (a) $P(X<0.5, Y<1)$     & (b) $P(X\leq 1)$ \\
+        (c) $P(X<1.5)$          & (d) $P(X>0.5, Y<1.5)$ \\
+        \multicolumn{2}{l}{(e) $E(X), E(Y), V(X), V(Y)$} \\
+        \multicolumn{2}{l}{(f) Marginal probability distribution of the random variable $X$} \\
+        \multicolumn{2}{l}{(g) Conditional probability distribution of $Y$ given that $X=1$} \\
+        \multicolumn{2}{l}{(h) $E(Y|X=1)$} \\
+        \multicolumn{2}{l}{(i) Are $X$ and $Y$ independent? Why or why not?} \\
+        \multicolumn{2}{l}{(j) Correlation between $X$ and $Y$} \\               
+    \end{tabular}
+}
+
+\enanswer{
+    \begin{tabular}{*{2}{m{.45\textwidth}}}
+        (a) $0.25$ & (b) $0.75$ \\
+        (c) $0.75$ & (d) $0.375$ \\
+        \multicolumn{2}{l}{(e) $E(X) = 0.875, \quad E(Y) = 0.875, \quad V(X) = 0.6094, \quad V(Y) = 0.6094$} \\
+        \multicolumn{2}{l}{(f) $f_X(0) = 0.375, \quad f_X(1) = 0.375, \quad f_X(2) = 0.25$} \\
+        \multicolumn{2}{l}{(g) $f_{Y|1}(0) = 1/3, \quad f_{Y|1}(1) = 2/3$} \\
+        \multicolumn{2}{l}{(h) $2/3$} \\
+        \multicolumn{2}{l}{(i) No, because $f_{XY}(1,1) = 1/4 \neq f_X(1) f_Y(1) = 9/64$} \\
+        \multicolumn{2}{l}{(j) $0.5902$} \\
+    \end{tabular}
+}

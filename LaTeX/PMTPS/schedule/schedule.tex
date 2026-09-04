@@ -1,0 +1,118 @@
+\documentclass[12pt, a4paper]{article}
+
+% Laad stijlen via relatieve paden
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\usepackage{\path/LaTeX/styles/config}
+\usepackage{\path/LaTeX/styles/statistics-macros}
+\graphicspath{{\path/LaTeX/figures/}}
+
+\definecolor{highlightColor}{RGB}{0, 0, 0}
+\definecolor{dimmedColor}{RGB}{230, 230, 230}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\newcommand{\learningtask}{1}
+
+% Define custom colors matching the image
+\definecolor{highlightyellow}{RGB}{255, 255, 0}
+\definecolor{highlightgray}{RGB}{200, 200, 200}
+\definecolor{highlightgreen}{RGB}{0,200,0}
+\definecolor{highlightcyan}{RGB}{0, 255, 255}
+\definecolor{versionred}{RGB}{204, 0, 0}
+\newcommand{\hyellow}[1]{\colorbox{highlightyellow}{\strut #1}}
+\newcommand{\hgray}[1]{\colorbox{highlightgray}{\strut #1}}
+\newcommand{\hgreen}[1]{\colorbox{highlightgreen}{\strut #1}}
+\newcommand{\hcyan}[1]{\colorbox{highlightcyan}{\strut #1}}
+\newcommand{\cbox}[2]{\colorbox{#1}{\hspace*{1.8ex}\rule{0pt}{1.3ex}}\hspace{0.5em}#2}
+
+\newcommand{\weekrow}[5]{%
+  \ifnum#1=#2%
+    % Active Week: Bold, normal black text, plain white background
+    \rowcolor{highlightgreen!20}
+    \textcolor{highlightgreen}{\textbf{#3}} & \textcolor{highlightgreen}{\textbf{#4}} & \textcolor{highlightgreen}{\textbf{#5}} \\
+  \else
+    % Inactive Week: Gray background + dimmed text
+    \textcolor{dimmedColor}{#3} & \textcolor{dimmedColor}{#4} & \textcolor{dimmedColor}{#5} \\
+  \fi
+} % Syntax: \weekrow{target_week}{current_week}{Dates}{Topic}{Deliverables}
+
+
+\newcommand{\renderTable}[1]{%
+    \begin{center}
+        \begin{longtable}{m{.1\textwidth}m{.4\textwidth}m{.45\textwidth}}
+            \toprule
+                \textbf{Learning task} & \textbf{Book sections (6th SI version)} & \textbf{Lecture notes} \\
+            \midrule
+                \multicolumn{3}{c}{\textbf{The Role of Statistics in Engineering, Introduction to Probability}} \\
+            \midrule
+                \weekrow{#1}{1}{1}{Sections 1-1, 1-2, 1-3, 1-4 \newline Sections 2-1, 2-2, 2-3, 2-4, 2-5}
+                {PMTPS\_STAT\_Ch1.pdf \newline PMTPS\_STAT\_Ch2\#1.pdf}
+            \midrule
+                \weekrow{#1}{2}{2}{Sections 2-6, 2-7, 2-8}{PMTPS\_STAT\_Ch2\#2.pdf}
+            \midrule
+                \multicolumn{3}{c}{\textbf{Discrete and Continuous Random Variables; Probability Distributions}} \\
+            \midrule
+                \weekrow{#1}{3}{3}{Sections 3-1, 3-2, 3-3, 3-4, 3-5}{PMTPS\_STAT\_Ch3\#1.pdf}
+            \midrule
+                \weekrow{#1}{4}{4}{Sections 3-6, 3-7.1, 3-9}{PMTPS\_STAT\_Ch3\#2.pdf}
+            \midrule
+                \weekrow{#1}{5}{5}{Sections 4-1, 4-2, 4-3, 4-4, 4-5 }{PMTPS\_STAT\_Ch4\#1.pdf}
+            \midrule
+                \weekrow{#1}{6}{6}{Sections 4-6, 4-8}{PMTPS\_STAT\_Ch4\#2.pdf}
+            \midrule
+                \multicolumn{3}{c}{\textbf{Joint Probability Distributions, Central Limit Theorem}} \\
+            \midrule
+                \weekrow{#1}{7}{7}{Sections 5-1, 5-2 (discrete)}{PMTPS\_STAT\_Ch5\#1.pdf}
+            \midrule
+                \weekrow{#1}{8}{8}{Sections 5-1, 5-2 (continuous), 5-3.2 }{PMTPS\_STAT\_Ch5\#2.pdf}
+            \midrule
+                \weekrow{#1}{9}{9}{Sections 5-4}{PMTPS\_STAT\_Ch5\#3.pdf}
+            \midrule
+                \weekrow{#1}{10}{10}{Sections 7-1, 7-2}{PMTPS\_STAT\_Ch7\#1.pdf}
+            \midrule
+                \multicolumn{3}{c}{\textbf{Point and Interval Estimation}} \\
+            \midrule
+                \weekrow{#1}{11}{11}{Section 7-3}{PMTPS\_STAT\_Ch7\#2.pdf}
+            \midrule
+                \weekrow{#1}{12}{12}{Section 7-4.2 (until: Invariance Property)}{PMTPS\_STAT\_Ch7\#3.pdf}
+            \midrule
+                \weekrow{#1}{13}{13}{Section 8-1}{PMTPS\_STAT\_Ch8\#1.pdf}
+            \midrule
+                \weekrow{#1}{14}{14}{Sections 6-7, 8-2}{PMTPS\_STAT\_Ch8\#2.pdf}
+            \midrule
+                \multicolumn{3}{c}{\textbf{Tests of Hypotheses for a Single Sample}} \\
+            \midrule
+                \weekrow{#1}{15}{15}{Sections 9-1.1, 9-1.2, 9-1.3, 9-1.4, 9-2.1}{PMTPS\_STAT\_Ch9\#1.pdf}
+            \midrule
+                \weekrow{#1}{16}{16}{Sections 9-1.5, 9-1.6, 9-3.1}{PMTPS\_STAT\_Ch9\#2.pdf} \\
+            \midrule
+                \weekrow{#1}{17}{17}{Sections 9-2.2}{PMTPS\_STAT\_Ch9\#3.pdf}
+            \midrule
+                \weekrow{#1}{19}{18}{Sections 4-9, 9-7}{PMTPS\_STAT\_Ch9\#4.pdf}
+            \midrule
+                \multicolumn{3}{c}{\textbf{Simple Linear Regression and Correlation}} \\
+            \midrule
+                \weekrow{#1}{20}{19}
+                {Sections 11-1, 11-2}{PMTPS\_STAT\_Ch11\#1.pdf}
+            \midrule
+                \weekrow{#1}{21}{20}
+                {Section 11-8}{PMTPS\_STAT\_Ch11\#2.pdf}
+            \bottomrule
+        \end{longtable}
+    \end{center}
+}
+ 
+            
+
+
+\begin{document}
+\pagestyle{empty}
+% Automatically loop through row indices 1 to 4
+% \foreach \i in {1,...,21}{
+  \section*{Schedule premaster PMTPS - Probability \& Statistics (2026-2027)}
+  \renderTable{\learningtask}
+%   \newpage
+% }
+
+\end{document}

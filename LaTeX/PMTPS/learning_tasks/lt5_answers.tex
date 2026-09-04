@@ -1,0 +1,165 @@
+\enquestion{4.1}{
+    Suppose that $f(x) = e^{-2x}$ for $0 < x$. Determine the following:
+    \begin{center}
+        \begin{tabular}{*{3}{m{0.3\textwidth}}}
+            (a) $P(1 < X)$ & (b) $P(1 < X < 2.5)$ & \multirow{2}{*}{(e) $P(3 \leq X)$}\\
+            (c) $P(X = 3)$ & (d) $P(X < 4)$ & \\
+            \multicolumn{2}{l}{(f) Determine $x$ such that $P(x < X) = 0.20$.} \\
+            \multicolumn{2}{l}{(g) Determine $x$ such that $P(X \le x) = 0.10$.}
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{center}
+        \begin{tabular}{*{3}{m{0.3\textwidth}}}
+            (a) $0.1353$ & (b) $0.1286$ & \multirow{2}{*}{(e) $0.0025$}\\
+            (c) $0$ & (d) $0.9997$ & \\
+            \multicolumn{2}{l}{(f) $0.8047$} \\
+            \multicolumn{2}{l}{(g) $0.0527$}
+        \end{tabular}
+    \end{center}
+}
+
+\enquestion{4.7}{
+    Suppose that $f(x) = 2x^2$ for $-1 < x < 1$. Determine the following:
+
+    \begin{center}
+        \begin{tabular}{*{2}{m{0.45\textwidth}}}
+            (a) $P(0 < X)$ & (b) $P(0.5 < X)$ \\
+            (c) $P(-0.5 \le X \le 0.5)$ & (d) $P(X < -2)$ \\
+            (e) $P(X < 0\text{ or } X > -0.5)$ & (f) $x$ such that $P(x < X) = 0.05$.
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{center}
+        \begin{tabular}{*{2}{m{0.45\textwidth}}}
+            (a) $0.5$ & (b) $0.4375$ \\
+            (c) $0.125$ & (d) $0$ \\
+            (e) $1$ & (f) $0.9655$
+        \end{tabular}
+    \end{center}
+}
+
+\enquestion{4.11}{
+    The probability density function of the length of a metal rod is $f(x) = 2$ for $2.3 < x < 2.9$ meters.
+    \begin{enumerate}[label=(\alph*)]
+        \item If the specifications for this process are from $2.25$ to $2.75$ meters, what proportion of rods fail to meet the specifications?
+        \item Assume that the probability density function is $f(x) = 2$ for an interval of length $0.5$ meters. Over what value should the density be centered to achieve the greatest proportion of rods within specifications?
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $0.1$
+        \item $2.5$, thus $f(x) = 2$ for $2.25 < x < 2.75$
+    \end{enumerate}
+}
+
+\enquestion{4.13}{
+    Suppose that the cumulative distribution function of the random variable $X$ is
+    \[
+        F(x) = \begin{cases}
+            0 & x < 0 \\
+            0.2x & 0 \le x < 5 \\
+            1 & 5 \le x
+        \end{cases}
+    \]
+    Determine the following:
+
+    \begin{center}
+        \begin{tabular}{*{2}{m{0.45\textwidth}}}
+            (a) $P(X < 2.8)$ & (b) $P(X > 1.5)$ \\
+            (c) $P(X < -2)$ & (d) $P(X > 6)$
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{center}
+        \begin{tabular}{*{2}{m{0.45\textwidth}}}
+            (a) $0.56$ & (b) $0.7$ \\
+            (c) $0$ & (d) $0$
+        \end{tabular}
+    \end{center}
+}
+
+\enquestion{4.15}{
+    Determine the cumulative distribution function given the following probability density function:
+    \[
+        f(x) = e^{-2x} \qquad \text{ for } 0 < x
+    \]
+}
+\enanswer{
+    \[
+        F(x) = \begin{cases}
+            0 & x \le 0 \\
+            1 - e^{-2x} & x \ge 0
+        \end{cases}
+    \]
+}
+
+\enquestion{4.21}{
+    Determine the cumulative distribution function for the following probability density function:
+    \[
+        f(x) = \begin{cases}
+                    2, & \text{ for } 2.3 < x < 2.9 \\
+                    0, & \text{ otherwise.}
+        \end{cases}
+    \]
+    Use the cumulative distribution function to determine the probability that a length exceeds $2.7$ meters.
+}
+\enanswer{
+    \[
+        F(x) = \begin{cases}
+            0 & x \le 2.3 \\
+            2x - 4.6 & 2.3 \le x \le 2.8 \\
+            1 & x \ge 2.8
+        \end{cases}
+    \]
+    \[
+        P(X > 2.7) = 0.2
+    \]
+}
+
+\enquestion{4.29}{
+    Suppose that $f(x) = 2x^2$ for $-1 < x < 1$. 
+    Determine the mean and variance of $X$.
+}
+\enanswer{
+    $E(X) = 0, \quad V(X) = 0.6$
+}
+
+\enquestion{4.37}{
+    Integration by parts is required.
+    The probability density function of the diameter of a drilled hole in millimeters is $10 e^{-10(x-5)}$ for $x > 5$ mm.
+    Although the target diameter is $5$ millimeters, vibrations, tool wear, and other nuisances produce diameters greater than $5$ millimeters.
+    \begin{enumerate}[label=(\alph*)]
+        \item Determine the mean and variance of the diameter of the holes.
+        \item Determine the probability that a diameter exceeds $5.1$ millimeters.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $E(X) = 5.1, \quad V(X) = 0.01$
+        \item $0.3679$
+    \end{enumerate}
+}
+
+\enquestion{4.41}{
+    The thickness of a flange on an aircraft component is uniformly distributed between $0.90$ and $1.05$ millimeters.
+    \begin{enumerate}[label=(\alph*)]
+        \item Determine the cumulative distribution function of flange thickness.
+        \item Determine the proportion of flanges that exceeds 1.02 millimeters.
+        \item What thickness is exceeded by \SI{90}{\percent} of the flanges?
+        \item Determine the mean and variance of flange thickness.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item \[
+            F(x) = \frac{20}{3}x - 6 \quad \text{for } 0.9 \le x \le 1.05
+        \]
+        \item $0.2$
+        \item $0.915$
+        \item $E(X) = 0.975, \quad V(X) = 0.001875$
+    \end{enumerate}
+}
