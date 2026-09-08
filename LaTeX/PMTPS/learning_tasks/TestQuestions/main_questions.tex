@@ -1,0 +1,25 @@
+\documentclass[preview, border=0.5cm]{standalone}
+
+% Laad stijlen via relatieve paden
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\usepackage{\path/LaTeX/styles/config}
+\usepackage{\path/LaTeX/styles/statistics-macros}
+\input{\path/LaTeX/styles/tikz_macros}
+
+\graphicspath{{\path/LaTeX/figures/}}
+
+% \newcommand{\learningtask}{1}
+
+\input{./compilation_macros.tex} % Indicates which learning task to compile
+
+\begin{document}
+
+
+\setcounter{section}{\learningtask}
+
+\section*{Question \learningtask}
+
+\input{./lt\learningtask_questions.tex}
+
+\end{document}
+    

@@ -1,0 +1,107 @@
+\enquestion{9.42}{
+    A melting point test of $n = 15$ samples of a binder used in manufacturing a rocket propellant resulted in $\bar{x} = 68^\circ\text{C}$.
+    Assume that the melting point is normally distributed with $\sigma = 0.83^\circ\text{C}$.
+    \begin{enumerate}
+        \item[(d)] What value of $n$ would be required if we want $\beta < 0.1$ when $\mu = 65.5$?
+        Assume that $\alpha = 0.01$.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}
+        \item[(d)] $2$
+    \end{enumerate}
+}
+
+\enquestion{9.47}{
+    Medical researchers have developed a new artificial heart constructed primarily of titanium and plastic.
+    The heart will last and operate almost indefinitely once it is implanted in the patient's body, but the battery pack needs to be recharged about every four hours.
+    A random sample of $50$ battery packs is selected and subjected to a life test.
+    The average life of these batteries is $4.05\text{ h}$.
+    Assume that battery life is normally distributed with standard deviation $\sigma = 0.2\text{ h}$.
+    \begin{enumerate}
+        \item[(d)] What sample size would be required to detect a true mean battery life of $4.5\text{ h}$ if you wanted the power of the test to be at least $0.9$?
+        \item[(e)] Is there evidence to support the claim that mean battery life exceeds $4$ hours? 
+        Explain how this question could be answered by constructing a one-sided confidence bound on the mean life.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}
+        \item[(d)] $2$
+        \item[(e)] $4 \notin [4.0035, \infty) \implies \text{reject } H_0$
+    \end{enumerate}
+}
+
+\enquestion{9.128}{
+    Consider the following computer output.
+
+    \begin{center}
+        \begin{tabular}{*{7}{C{.11428571428\textwidth}}}
+            \toprule
+                \multicolumn{7}{l}{\textbf{One-Sample $T$:}} \\                
+                \multicolumn{7}{l}{Test of $\mu = 85$ vs $\mu<85$} \\
+                Variable & $n$ & Mean & StDev & SE Mean & $Z$ & $p$ \\
+                $X$ & $31$ & $84.331$ & ? & $0.631$ & ? & ? \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item How many degrees of freedom are there on the $t$-statistic?
+        \item Fill in the missing information. You may use bounds on the $P$-value.
+        \item What are your conclusions if $\alpha = 0.05$?
+        \item Find a \SI{95}{\percent} upper-confidence bound on the mean.
+        \item What are your conclusions if the hypothesis is $H_{0}: \mu = 100$ versus $H_{0}: \mu > 100$?
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $30$
+        \item $s = 3.5133$, $t_0 = -1.0602$, $p = .1488$
+        \item $p = 0.1488 > \alpha = 0.05$, don't reject $H_0$
+        \item $\mu < 85.4020$
+        \item $t_0 = -24.8320 \notin [1.6973, \infty)$, don't reject $H_0$
+    \end{enumerate}
+}
+
+\enquestion{9.130}{
+    An article in \emph{Fire Technology} [\enquote{An Experimental Examination of Dead Air Space for Smoke Alarms} (2009, Vol.45,pp.97.115)] studied the performance of smoke detectors installed not less than $100\text{ mm}$ from any adjoining wall if mounted on a flat ceiling, and not closer than $100\text{ mm}$ and not farther than $300\text{ mm}$ from the adjoining ceiling surface if mounted on walls.
+    The purpose of this rule is to avoid installation of smoke alarms in the \enquote{dead air space,} where it is assumed to be difficult for smoke to reach.
+    The paper described a number of interesting experiments.
+    Results on the time to signal (in seconds) for one such experiment with pine stick fuel in an open bedroom using photoelectric smoke alarms are as follows: $220$, $225$, $297$, $315$, $282$, and $313$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Is there sufficient evidence to support a claim that the mean time to signal is less than $285$ seconds?
+        \item Is there practical concern about the assumption of a normal distribution as a model for the time-to-signal data?
+        \item Find a \SI{95}{\percent} two-sided CI on the mean time to signal.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $t_0 = -.5550 \notin (-\infty, -2.0150]$, $p = .3014 > \alpha = .05$, don't reject $H_0$
+        \item Yes, the sample size is small, also, the imaginary pencil must be very fat:
+        
+        \begin{center}
+            \includegraphics[scale=0.7]{opg9.130b.png}
+        \end{center}
+
+        \item $[230.5596, 320.1071]$
+    \end{enumerate}
+}
+
+\enquestion{9.131}{
+    Suppose we wish to test the hypothesis $H_{0}: \mu = 85$ versus the alternative $H_{1}: \mu > 85$ where $\sigma = 16$.
+    Suppose that the true mean is $\mu = 86$ and that in the practical context of the problem this is not a departure from $\mu_{0} = 85$ that has practical significance.
+    \begin{enumerate}[label=(\alph*)]
+        \item For a test with $\alpha = 0.01$, compute $\beta$ for the sample sizes $n = 30$, $100$, $400$, and $2550$ assuming that $\mu = 86$.
+        \item Suppose that the sample average is $\bar{x} = 86$.
+        Find the $p$-value for the test statistic for the different sample sizes specified in part (a).
+        Would the data be statistically significant at $\alpha = 0.01$?
+        \item Comment on the use of a large sample size in this problem.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $.9764$, $.9556$, $.8591$, $.2033$
+        \item $.3661$, $.2660$, $.1056$, $.0008$, significant at $\alpha = .01$ when $n = 2550$
+        \item When $n = 30, 100$ or $400$: don't reject $H_0$, but $\beta = P(H_0 \mid H_1)$ is large, so there is a large type II error
+    \end{enumerate}
+}

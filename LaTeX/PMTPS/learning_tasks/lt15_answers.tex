@@ -1,0 +1,137 @@
+\enquestion{9.1}{
+    State whether each of the following situations is a correctly stated hypothesis testing problem and why.
+    \begin{center}
+        \begin{tabular}{*{2}{m{.45\textwidth}}}
+            (a) $H_{0}: \mu = 25$, $H_{1}: \mu \ne 25$ & (b) $H_{0}: \sigma > 10$, $H_{1}: \sigma = 10$ \\
+            (c) $H_{0}: \bar{x} = 50$, $H_{1}: \bar{x} \ne 50$ & (d) $H_{0}: p = 0.1$, $H_{1}: p = 0.5$ \\
+            (e) $H_{0}: s = 20$, $H_{1}: s < 20$ &
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item Correct.
+        \item Incorrect, swap $H_0$ and $H_1$.
+        \item Incorrect, $\bar{x}$ is a sample statistic, not a population parameter.
+        \item $H_1$ is incorrect, $H_1: p \ne 0.1$ is correct.
+        \item Incorrect, $s$ is a sample statistic, not a population parameter.
+    \end{enumerate}
+}
+
+\enquestion{9.5}{
+    A textile fiber manufacturer is investigating a new drapery yarn, which the company claims has a mean thread elongation of $12\text{ kg}$ with a standard deviation of $1.5\text{ kg}$.
+    The company wishes to test the hypothesis $H_{0}: \mu = 12$ against $H_{1}: \mu < 12$, using a random sample of four specimens.
+    \begin{enumerate}[label=(\alph*)]
+        \item What is the type I error probability if the critical region is defined as $\bar{x} < 11.5\text{ kg}$?
+        \item Find $\beta$ for the case in which the true mean elongation is $11.25\text{ kg}$.
+        \item Find $\beta$ for the case in which the true mean is $11.5\text{ kg}$.
+    \end{enumerate}
+}
+\enanswer{
+    Note: Calculations use $\sigma = 0.5\text{ kg}$.
+    \begin{enumerate}[label=(\alph*)]
+        \item $0.0228$
+        \item $0.1587$
+        \item $0.5000$
+    \end{enumerate}
+}
+
+\enquestion{9.7}{
+    In Exercise 9.5, find the boundary of the critical region if the type I error probability is
+    \begin{center}
+        \begin{tabular}{*{2}{m{.45\textwidth}}}
+            (a) $\alpha = 0.01$ and $n = 5$ & (c) $\alpha = 0.01$ and $n = 20$ \\
+            (b) $\alpha = 0.05$ and $n = 5$ & (d) $\alpha = 0.05$ and $n = 20$
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{tabular}{*{4}{C{.22\textwidth}}}
+        (a) $11.4798$ & (b) $11.6322$ & (c) $11.7399$ & (d) $11.8161$
+    \end{tabular}
+}
+
+\enquestion{9.9}{
+    In Exercise 9.5, calculate the $p$-value if the observed statistic is
+    \begin{center}
+        \begin{tabular}{*{3}{m{.3\textwidth}}}
+            (a) $\bar{x} = 11.25$ & (b) $\bar{x} = 11.0$ & (c) $\bar{x} = 11.75$
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{tabular}{*{3}{m{.3\textwidth}}}
+        (a) $0.0013$ & (b) $0.000032$ & (c) $0.1587$
+    \end{tabular}
+}
+
+\enquestion{9.15}{
+    A consumer products company is formulating a new shampoo and is interested in foam height (in millimeters).
+    Foam height is approximately normally distributed and has a standard deviation of $25\text{ mm}$.
+    The company wishes to test $H_{0}: \mu = 175\text{ mm}$ versus $H_{1}: \mu > 175\text{ mm}$, using the results of $n = 15$ samples.
+    \begin{enumerate}[label=(\alph*)]
+        \item Find the type I error probability $\alpha$ if the critical region is $\bar{x} > 185$.
+        \item What is the probability of type II error if the true mean foam height is $185\text{ mm}$?
+        \item Find $\beta$ for the true mean of $195\text{ mm}$.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $0.0607$
+        \item $0.5$
+        \item $0.0607$
+    \end{enumerate}
+}
+
+\enquestion{9.17}{
+    In Exercise 9.15, find the boundary of the critical region if the type I error probability is
+    \begin{enumerate}[label=(\alph*)]
+        \item $\alpha = 0.01$ and $n = 10$ 
+    \end{enumerate}
+}
+\enanswer{
+    $193.3914$
+}
+
+\enquestion{9.19}{
+    In Exercise 9.15, calculate the $p$-value if the observed statistic is
+    \begin{center}
+        \begin{tabular}{*{3}{m{.3\textwidth}}}
+            (a) $\bar{x} = 180$ & (b) $\bar{x} = 190$ & (c) $\bar{x} = 170$
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{tabular}{*{3}{m{.3\textwidth}}}
+        (a) $0.2193$ & (b) $0.0101$ & (c) $0.7807$
+    \end{tabular}
+}
+
+\enquestion{9.31}{
+    A hypothesis will be used to test that a population mean equals $4$ against the alternative that the population mean is more than $4$ with known variance $\sigma$.
+    What is the critical value for the test statistic $Z_{0}$ for the following significance levels?
+    \begin{center}
+        \begin{tabular}{*{3}{m{.3\textwidth}}}
+            (a) $0.01$ & (b) $0.05$ & (c) $0.10$
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{tabular}{*{3}{m{.3\textwidth}}}
+        (a) $2.3263$ & (b) $1.6449$ & (c) $1.2816$
+    \end{tabular}
+}
+
+\enquestion{9.33}{
+    For the hypothesis test $H_{0}: \mu = 6$ against $H_{1}: \mu \ne 6$ and variance known, calculate the $p$-value for each of the following test statistics.
+    \begin{center}
+        \begin{tabular}{*{3}{m{.3\textwidth}}}
+            (a) $z_{0} = 2.05$ & (b) $z_{0} = -1.84$ & (c) $z_{0} = 0.4$
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{tabular}{*{3}{m{.3\textwidth}}}
+        (a) $0.0404$ & (b) $0.0658$ & (c) $0.6892$
+    \end{tabular}
+}

@@ -1,0 +1,102 @@
+\enquestion{8.4}{
+    A confidence interval estimate is desired for the gain in a circuit on a semiconductor device.
+    Assume that gain is normally distributed with standard deviation $\sigma = 25$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Find a \SI{95}{\percent} CI for $\mu$ when $n = 10$ and $\bar{x} = 1000$.
+        \item Find a \SI{95}{\percent} CI for $\mu$ when $n = 25$ and $\bar{x} = 1000$.
+        \item Find a \SI{99}{\percent} CI for $\mu$ when $n = 10$ and $\bar{x} = 1000$.
+        \item Find a \SI{99}{\percent} CI for $\mu$ when $n = 25$ and $\bar{x} = 1000$.
+        \item How does the length of the CIs computed above change with the changes in sample size and confidence level?
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $[984.5051, 1015.4949]$
+        \item $[990.2002, 1009.7998]$
+        \item $[979.6363, 1020.3637]$
+        \item $[987.1209, 1012.8791]$
+        \item Increasing the sample size $n$ decreases the length of the CI, whereas increasing the confidence level increases the length of the CI.
+    \end{enumerate}
+}
+
+\enquestion{8.7}{
+    Consider the gain estimation problem in Exercise 8.4.
+    \begin{enumerate}[label=(\alph*)]
+        \item How large must $n$ be if the length of the \SI{95}{\percent} CI is to be $30$?
+        \item How large must $n$ be if the length of the \SI{99}{\percent} CI is to be $30$?
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $n \ge 11$
+        \item $n \ge 19$
+    \end{enumerate}
+}
+
+\enquestion{8.9}{
+    Suppose that $n = 100$ random samples of water from a freshwater lake were taken and the calcium concentration ($\text{mg/L}$) measured.
+    A \SI{95}{\percent} CI on the mean calcium concentration is $0.52 \le \mu \le 0.74$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Would a \SI{99}{\percent} CI calculated from the same sample data be longer or shorter?
+        \item Consider the following statement: \enquote{There is a \SI{95}{\percent} chance that $\mu$ is between $0.52$ and $0.74$.} Is this statement correct?
+        Explain your answer.
+        \item Consider the following statement: \enquote{If $n = 100$ random samples of water from the lake were taken and the \SI{95}{\percent} CI on $\mu$ computed, and this process were repeated $1000$ times, $950$ of the CIs would contain the true value of $\mu$.} Is this statement correct?
+        Explain your answer.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item Longer
+        \item No, when the construction of a \SI{95}{\percent}-confidence interval for $\mu$ is repeated a large number of times, the true mean will belong to the calculated interval in \SI{95}{\percent} of the cases.
+        \item Yes, see explanation part (b).
+    \end{enumerate}
+}
+
+\enquestion{8.11}{
+    The yield of a chemical process is being studied.
+    From previous experience, yield is known to be normally distributed and $\sigma = 3$.
+    The past five days of plant operation have resulted in the following percent yields: $91.6$, $87.34$, $90.8$, $89.65$, and $91.3$.
+    Find a \SI{95}{\percent} two-sided confidence interval on the true mean yield.
+}
+\enanswer{
+    $[87.5084, 92.7676]$
+}
+
+\enquestion{8.17}{
+    The life in hours of a $75$-watt light bulb is known to be normally distributed with $\sigma=20$ hours.
+    Suppose you wanted the total width of the two-sided confidence interval on mean life to be six hours at \SI{95}{\percent} confidence.
+    What sample size should be used?
+}
+\enanswer{
+    $n \ge 171$
+}
+
+\enquestion{8.29}{
+    A postmix beverage machine is adjusted to release a certain amount of syrup into a chamber where it is mixed with carbonated water.
+    A random sample of $25$ beverages was found to have a mean syrup content of $\bar{x} = 30\text{ mL}$.
+    Suppose the standard deviation is known and equal to $\sigma = 0.5\text{ mL}$.
+    Find a \SI{95}{\percent} CI on the mean volume of syrup dispensed.
+}
+\enanswer{
+    $[29.8040, 30.1960]$
+}
+
+\enquestion{7.63}{
+    Let $f(x) = (1 / \theta) x^{(1 - \theta) / \theta}$, $0 < x < 1$, and $0 < \theta < \infty$.
+    Show that $\hat{\Theta} = -(1 / n) \sum_{i=1}^{n} \ln(X_{i})$ is the maximum likelihood estimator for $\theta$ and that $\hat{\Theta}$ is an unbiased estimator for $\theta$.
+}
+\enanswer{
+    The likelihood function is $L(\theta) = \theta^{-n} \prod_{i=1}^n x_i^{(1-\theta)/\theta}$. Taking the natural log gives:
+    \[
+        \ln L(\theta) = -n \ln(\theta) + \frac{1-\theta}{\theta} \sum_{i=1}^n \ln(x_i)
+    \]
+    Setting the derivative with respect to $\theta$ equal to zero:
+    \[
+        \frac{d \ln L(\theta)}{d\theta} = -\frac{n}{\theta} - \frac{1}{\theta^2} \sum_{i=1}^n \ln(x_i) = 0 \implies \hat{\Theta} = -\frac{1}{n} \sum_{i=1}^n \ln(X_i)
+    \]
+    To show it is unbiased, let $Y = -\ln(X)$. The CDF of $Y$ for $y > 0$ is $P(-\ln(X) \le y) = P(X \ge e^{-y}) = 1 - e^{-y/\theta}$, so $Y \sim \text{Exponential}(\theta)$ with $E(Y) = \theta$. Thus:
+    \[
+        E(\hat{\Theta}) = E\left(\frac{1}{n} \sum_{i=1}^n Y_i\right) = \frac{1}{n} \cdot n\theta = \theta
+    \]
+    Hence, $\hat{\Theta}$ is an unbiased estimator for $\theta$.
+}

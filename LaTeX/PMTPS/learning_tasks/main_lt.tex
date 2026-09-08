@@ -1,18 +1,17 @@
 \documentclass[11pt,a4paper]{article}
 
 % Importeer configuratie-instellingen
-\usepackage{../../LaTeX/styles/exam_config}
-\usepackage{../../LaTeX/styles/statistics-macros}
-\include{../../LaTeX/styles/tikz_macros.tex}
-\graphicspath{{../../LaTeX/figures/}}
+\newcommand{\path}{C:/Users/Admin/Documents/GitHub/Statistiek}
+\usepackage{\path/LaTeX/styles/config}
+\usepackage{\path/LaTeX/styles/statistics-macros}
+\input{\path/LaTeX/styles/tikz_macros}
 
-\pgfplotsset{compat=1.18}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, decorations.markings, patterns}
+\graphicspath{{\path/LaTeX/figures/}}
 
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{\baselineskip}
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{\baselineskip}
 
-\definecolor{QuestionBlue}{HTML}{2563A6}
+\definecolor{HeaderBlue}{HTML}{2563A6}
 
 \newcommand{\courseLogo}{course_logo.png}
 \newcommand{\instituteLogo}{inst_logo.png}
@@ -25,8 +24,8 @@
 \newcommand{\makeclassnotesheader}{%
     \begin{tcolorbox}[
         enhanced,
-        colback=QuestionBlue!3,
-        colframe=QuestionBlue,
+        colback=HeaderBlue!3,
+        colframe=HeaderBlue,
         boxrule=1.1pt,
         arc=3pt,
         left=12pt,
@@ -35,35 +34,27 @@
         bottom=10pt
     ]
     \noindent
-    \begin{minipage}[c]{0.16\linewidth}
-        \centering
-        \IfFileExists{\courseLogo}
-        {\includegraphics[width=0.94\linewidth, keepaspectratio]{\courselogo}}
-        {\fbox{\scriptsize Course Logo}}
-    \end{minipage}%
-    \hfill
-    \begin{minipage}[c]{0.16\linewidth}
-        \centering
-        \IfFileExists{\instituteLogo}
-        {\includegraphics[width=0.94\linewidth, keepaspectratio]{\institutelogo}}
-        {\fbox{\scriptsize Institute Logo}}
-    \end{minipage}
-    \vspace{5pt}
+    \begin{center}
+            {\scshape\Huge Learning Task \learningtask}
+    \end{center}
+    
+    \vspace{10pt}
     \hrule
-    \vspace{8pt}
-    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
-        \textbf{Course ID:} \courseid &
-        \textbf{Instructor:} \instructorname &
-        \textbf{Date:} \classdate        
+    \vspace{10pt}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ll@{}}
+        \textbf{Course ID:} Probability \& Statistics &
+        \textbf{Instructor:} Dr. ir. D.A.M.P. Blom
     \end{tabular*}
     \end{tcolorbox}
 }
 
+\newcommand{\learningtask}{2}
+
 \begin{document}
-\pagestyle{empty} % Remove this line if page numbers are desired.
 
 \makeclassnotesheader
 
-
+\setcounter{section}{\learningtask}
+\input{./lt\learningtask_lecturenotes.tex}
 
 \end{document}

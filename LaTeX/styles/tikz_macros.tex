@@ -1,4 +1,4 @@
-\usetikzlibrary{arrows.meta, backgrounds, bending, calc, decorations.markings, decorations.pathreplacing, intersections, patterns, positioning, shapes}
+\usetikzlibrary{arrows.meta, backgrounds, bending, calc, decorations.markings, decorations.pathreplacing, intersections, patterns, positioning, shapes, trees}
 \usepgfplotslibrary{fillbetween, statistics}
 
 % \input{../styles/macros.tex}
@@ -56,4 +56,10 @@
   \foreach \y in {1, ..., #2}
     \draw (-0.1, \y) -- (0.1, \y) node[left] {\y};
   \node (origin) at (0,0) [anchor=north east] {$O$};
+}
+
+
+% PMTPS
+\tikzset{
+  device/.style={rectangle, draw=blue, fill=blue!20, minimum size=0.6cm}
 }

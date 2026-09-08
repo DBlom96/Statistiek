@@ -1,0 +1,161 @@
+\subsection*{Discrete Random Variables}
+
+Given a random experiment $E$, for example eliminating a target in a maximum of five attempts, with a corresponding sample space $S$
+\[
+    S = \set{h, mh, mmh, mmmh, mmmmh},
+\]
+where $m$ denotes a miss and $h$ denotes a hit. 
+
+Let $X$ be the number of the attempt at which the target is ruled out.
+The range of $X$ is $\set{1,2,3,4,5}$, hence $X$ is a discrete random variable.
+
+\subsection*{Probability Mass Functions \& Cumulative Distribution Functions}
+
+\begin{definition}[PMF \& CDF]
+    The \textbf{probability mass function} (pmf) is defined as $f(x) = P(X = x)$.
+
+    The \textbf{cumulative distribution function} (cdf) is defined as $F(x) = P(X \le x)$.
+\end{definition}
+
+\begin{example}
+    Ruling out a target in a maximum of five attempts.
+    Suppose that the probability of hitting at attempt $i$, given that the previous $i-1$ attempts were misses, is equal to $\frac{i}{5}$.
+    Determine the probability mass function $f(x)$ and the cumulative distribution function $F(x)$ of $X$.
+    Draw the graphs of $f(x)$ and $F(x)$.
+\end{example}
+
+\begin{solution}
+    The probability mass function values are calculated as follows:
+    \begin{align*}
+        P(X = 1) &= P(h_1) = \frac{1}{5} = 0.2000 \\
+        P(X = 2) &= P(m_1h_2) = P(m_1) \cdot P(h_2 \mid m_1) = \left(1 - \frac{1}{5}\right) \cdot \frac{2}{5} = 0.3200 \\
+        P(X = 3) &= P(m_1m_2h_3) = P(m_1) \cdot P(m_2 \mid m_1) \cdot P(h_3 \mid m_1 m_2) = \left(1 - \frac{1}{5}\right) \cdot \left(1 - \frac{2}{5}\right) \cdot \frac{3}{5} = 0.2880 \\
+        P(X = 4) &= \ldots = 0.1536 \\
+        P(X = 5) &= \ldots = 0.0384
+    \end{align*}
+
+    The probability mass function for $X$ can also be described as a table:\medskip
+
+    \begin{center}
+        \begin{tabular}{*{6}{c}}
+            \toprule
+            $x$ & $1$ & $2$ & $3$ & $4$ & $5$ \\ \midrule
+            $f(x)$ & $0.2000$ & $0.3200$ & $0.2880$ & $0.1536$ & $0.0384$ \\ \bottomrule
+        \end{tabular}
+        \captionof{figure}{Probability mass function of the discrete random variable $X$.}
+        \label{tab:pmf-dist-target}
+    \end{center}
+
+    The cumulative distribution function $F(x)$ is evaluated at piecewise intervals:
+    \[
+        F(x) = \begin{cases}
+            0.0000 & x < 1 \\
+            0.2000 & 1 \le x < 2 \\
+            0.5200 & 2 \le x < 3 \\
+            0.8080 & 3 \le x < 4 \\
+            0.9616 & 4 \le x < 5 \\
+            1.0000 & x \ge 5
+        \end{cases}
+    \]
+    Notice that the cumulative distribution function is a step function, in which vertical steps occur at each of the possible outcomes of $X$, and the height of the jump at outcome $x$ is equal to $P(X=x)$.
+
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{lt3_pmf_targets.png}
+        \captionof{figure}{Graph of the probability mass function of $X$.}
+        \label{fig:pmf-plot}
+    \end{center}
+
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{lt3_cdf_targets.png}
+        \captionof{figure}{Graph of the cumulative distribution function of $X$.}
+        \label{fig:cdf-plot}
+    \end{center}
+\end{solution}
+
+\paragraph{General Properties}
+    \begin{itemize}
+        \item $f(x) \ge 0$ for all $x$, and $\sum f(x) = 1$.
+        \item $F(x)$ is a non-decreasing step function.
+    \end{itemize}
+
+\subsection*{Mean and Variance}
+
+\begin{definition}[Expected value and variance of a random variable]
+The \emph{expected value} of a random variable $X$ is defined as
+\[
+    E(X) = \sum_{x \in S} x \cdot f(x),
+\]
+where $\sum_{x \in S}$ denotes the sum over all possible outcomes $x$ in the sample space $S$.
+Similarly, the \emph{variance} of a discrete random variable $X$ is defined as
+\[
+    \sigma^2 = V(X) = \sum_{x \in S} (x - E(X))^2 \cdot f(x).
+\]
+
+\end{definition}
+
+As a result of this definition, one can also define the expected value of a \emph{function} of the random variable $X$:
+
+\[
+    E\left(g(X)\right) = \sum_{x \in S} g(x) \cdot f(x).
+\]
+
+An alternative formula for the variance $V(X)$ is as follows:
+\[
+    V(X) = E\left(X^2\right) - [E(X)]^2.
+\]
+
+\begin{example}
+    Using data from the target engagement distribution:
+    \begin{align*}
+        E(X) &= 1\cdot(0.2) + 2\cdot(0.32) + 3\cdot(0.288) + 4\cdot(0.1536) + 5\cdot(0.0384) = 2.5104 \\
+        E(X^2) &= 1^2\cdot(0.2) + 2^2\cdot(0.32) + 3^2\cdot(0.288) + 4^2\cdot(0.1536) + 5^2\cdot(0.0384) = 7.4896 \\
+        V(X) &= E(X^2) - [E(X)]^2 = 7.4896 - (2.5104)^2 \approx 1.1875
+    \end{align*}
+    The standard deviation is $\sigma = \sqrt{V(X)} \approx 1.0897$.
+\end{example}
+
+\paragraph{Linear Transformation Properties}
+For constants $a$ and $b$:
+\begin{align*}
+    E(aX + b) &= a E(X) + b \\
+    V(aX + b) &= a^2 V(X)
+\end{align*}
+
+\paragraph{Cost Function Example}
+Let total cost $C = 1000X + 2000$, with \euro $2.000$ fixed costs and \euro $1.000$ variable cost per attempt:
+\begin{align*}
+    E(C) &= 1000 E(X) + 2000 = 1000(2.5104) + 2000 = \text{\euro}4.510,40 \\
+    V(C) &= 1000^2 V(X) = 1000^2 (1.18749184) = 1.187.491,84 \\
+    \sigma_C &= \sqrt{V(C)} = \text{\euro}1.089,72
+\end{align*}
+
+\subsection*{Discrete Uniform Distribution}
+
+A discrete random variable $X$ has a discrete \emph{uniform} distribution over $n$ values $x_1, x_2, \dots, x_n$ if:
+\[
+    P(X = x_i) = \frac{1}{n} \quad (i = 1, 2, \dots, n)
+\]
+
+If the range consists of $n$ consecutive integers $a, a+1, \dots, b = a + n - 1$, the mean and variance are:
+\begin{align*}
+    E(X) &= \frac{a + b}{2} \\
+    V(X) &= \frac{(b - a + 1)^2 - 1}{12}
+\end{align*}
+
+\begin{example}[Fair die]
+For a fair six-sided die, $X \in \set{1, 2, 3, 4, 5, 6}$ with $a=1, b=6, n=6$:
+\begin{align*}
+    E(X) &= \frac{1 + 6}{2} = 3.5 \\
+    V(X) &= \frac{6^2 - 1}{12} = \frac{35}{12} \approx 2.9167.
+\end{align*}
+\end{example}
+
+
+\begin{example}[Coating thickness]
+    Thickness measurements $X \in \set{2.1, 2.2, 2.3, 2.4, 2.5}$. Let $X = 0.1Y$, where $Y$ is uniformly distributed over integers $a=21$ to $b=25$:
+    \begin{align*}
+        E(Y) &= \frac{21 + 25}{2} = 23 \implies E(X) = 0.1(23) = 2.3 \\
+        V(Y) &= \frac{5^2 - 1}{12} = 2 \implies V(X) = (0.1)^2 (2) = 0.02 \\
+        \sigma(X) &= \sqrt{0.02} \approx 0.1414
+    \end{align*}
+\end{example}

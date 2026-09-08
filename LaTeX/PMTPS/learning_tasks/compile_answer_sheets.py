@@ -2,7 +2,7 @@ import subprocess
 import os
 
 # Configuration
-num_learning_tasks = 14
+num_learning_tasks = 20
 
 for i in range(1, num_learning_tasks + 1):
     print(f"COMPILING LEARNING TASK {i}")

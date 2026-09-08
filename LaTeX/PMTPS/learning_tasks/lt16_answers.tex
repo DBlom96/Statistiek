@@ -1,0 +1,147 @@
+\enquestion{9.42}{
+    A melting point test of $n = 15$ samples of a binder used in manufacturing a rocket propellant resulted in $\bar{x} = 68^\circ\text{C}$.
+    Assume that the melting point is normally distributed with $\sigma = 0.83^\circ\text{C}$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Test $H_{0}: \mu = 68.3$ versus $H_{1}: \mu \ne 68.3$ using $\alpha = 0.01$.
+        \item What is the $p$-value for this test?
+        \item What is the $\beta$-error if the true mean is $\mu = 65.5$?
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $z_0 = -1.40 \notin (-\infty, -2.576] \cup [2.576, \infty)$, do not reject $H_0$.
+        \item $0.1616$
+        \item $0.0000$
+    \end{enumerate}
+}
+
+\enquestion{9.47}{
+    Medical researchers have developed a new artificial heart constructed primarily of titanium and plastic.
+    The heart will last and operate almost indefinitely once it is implanted in the patient's body, but the battery pack needs to be recharged about every four hours.
+    A random sample of $50$ battery packs is selected and subjected to a life test.
+    The average life of these batteries is $4.05\text{ h}$.
+    Assume that battery life is normally distributed with standard deviation $\sigma = 0.2\text{ h}$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Is there evidence to support the claim that mean battery life exceeds $4\text{ h}$?
+        Use $\alpha = 0.05$.
+        \item What is the $p$-value for the test in part (a)?
+        \item Compute the power of the test if the true mean battery life is $4.5\text{ h}$.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $z_0 = 1.77 \in [1.6449, \infty)$, reject $H_0$.
+        \item $0.0385$
+        \item $1.0000$
+    \end{enumerate}
+}
+
+\enquestion{9.51}{
+    For the hypothesis test $H_{0}: \mu = 7$ against $H_{1}: \mu \ne 7$ with variance unknown and $n = 25$, approximate the $p$-value for each of the following test statistics.
+    
+    \begin{center}
+        \begin{tabular}{*{3}{m{0.3\textwidth}}}
+            (a) $t_{0} = 2.05$ & (b) $t_{0} = -1.84$ & (c) $t_{0} = 0.4$
+        \end{tabular}
+    \end{center}
+}
+\enanswer{
+    \begin{tabular}{*{3}{m{.3\textwidth}}}
+        (a) $0.0514$ & (b) $0.0782$ & (c) $0.6927$
+    \end{tabular}
+}
+
+\enquestion{9.59}{
+    A 1992 article in the \textit{Journal of the American Medical Association} (\enquote{A Critical Appraisal of 98.6 Degrees F, the Upper Limit of the Normal Body Temperature, and Other Legacies of Carl Reinhold August Wunderlich}) reported body temperature, gender, and heart rate for a number of subjects.
+    The body temperatures for $25$ female subjects follow: $97.8$, $97.2$, $97.4$, $97.6$, $97.8$, $97.9$, $98.0$, $98.0$, $98.0$, $98.1$, $98.2$, $98.3$, $98.3$, $98.4$, $98.4$, $98.4$, $98.5$, $98.6$, $98.6$, $98.7$, $98.8$, $98.8$, $98.9$, $98.9$, and $99.0$.
+    \begin{enumerate}
+        \item[(a)] Test the hypothesis $H_{0}: \mu = 98.6$ versus $H_{1}: \mu \ne 98.6$, using $\alpha = 0.05$.
+        Find the $p$-value.
+        \item[(e)] Explain how the question in part (a) could be answered by constructing a two-sided confidence interval on the mean female body temperature.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}
+        \item[(a)] $t = -3.4849 \in (-\infty, -2.064] \cup [2.064, \infty)$, reject $H_0$. $p = 0.0019 \le \alpha = 0.05$, reject $H_0$.
+        \item[(e)] $\mu = 98.6 \notin [98.065, 98.463]$, reject $H_0$.
+    \end{enumerate}
+}
+
+\enquestion{9.60}{
+    Cloud seeding has been studied for many decades as a weather modification procedure (for an interesting study of this subject, see the article in \textit{Technometrics}, \enquote{A Bayesian Analysis of a Multiplicative Treatment Effect in Weather Modification,} Vol. 17, pp. 161–166).
+    The rainfall in cubic-meters from $20$ clouds that were selected at random and seeded with silver nitrate follows: $22.2 \times 10^{3}$, $37.9 \times 10^{3}$, $24.4 \times 10^{3}$, $33.4 \times 10^{3}$, $27.5 \times 10^{3}$, $23.2 \times 10^{3}$, $39.2 \times 10^{3}$, $28.9 \times 10^{3}$, $26.1 \times 10^{3}$, $34.4 \times 10^{3}$, $39.3 \times 10^{3}$, $33.4 \times 10^{3}$, $30.8 \times 10^{3}$, $30.4 \times 10^{3}$, $33.2 \times 10^{3}$, $26.9 \times 10^{3}$, $36.2 \times 10^{3}$, $42.9 \times 10^{3}$, $32.9 \times 10^{3}$, and $38.9 \times 10^{3}$.
+    \begin{enumerate}
+        \item[(a)] Can you support a claim that the mean rainfall from seeded clouds exceeds $30 \times 10^3\text{ m}^3$?
+        Use $\alpha = 0.01$.
+        Find the $p$-value.
+        \item[(e)] Explain how the question in part (a) could be answered by constructing a one-sided confidence bound on the mean diameter.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}
+        \item[(a)] $t = 1.5953 \notin [2.539, \infty)$, don't reject $H_0$. $p = 0.0636 > \alpha = 0.05$, don't reject $H_0$.
+        \item[(e)] $\mu = 30 \in [28.754, \infty)$, don't reject $H_0$.
+    \end{enumerate}
+}
+
+\enquestion{9.126}{
+    Consider the following computer output.
+
+    \begin{center}
+        \begin{tabular}{*{7}{C{0.11428571428\textwidth}}}
+            \toprule
+                \multicolumn{7}{l}{\textbf{One-Sample $Z$:}} \\                
+                \multicolumn{7}{l}{Test of $\mu = 26$ vs $\mu>26$} \\
+                \multicolumn{7}{l}{The assumed standard deviation $= 1.7$} \\   
+                Variable & $n$ & Mean & StDev & SE Mean & $Z$ & $p$ \\
+                $X$ & ? & $26.541$ & $2.032$ & $0.401$ & ? & ? \\                  
+            \bottomrule
+        \end{tabular}
+    \end{center}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Fill in the missing information.
+        \item Is this a one-sided or a two-sided test?
+        \item What are your conclusions if $\alpha = 0.05$?
+        \item Find a \SI{95}{\percent} two-sided CI on the mean.
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $n = 18$, $\sigma = 1.7$, ignore StDev and SE Mean, $z_0 = 1.3502$, $p = .0885$
+        \item One-sided
+        \item $p = 0.0885 > \alpha = 0.05$, don't reject $H_0$
+        \item $[25.7557, 27.3263]$
+    \end{enumerate}
+}
+
+\enquestion{9.127}{
+    Consider the following computer output.
+
+    \begin{center}
+        \begin{tabular}{*{8}{C{0.1\textwidth}}}
+            \toprule
+                \multicolumn{8}{l}{\textbf{One-Sample $T$:}} \\                
+                \multicolumn{8}{l}{Test of $\mu = 100$ vs $\mu\neq 100$} \\
+                Variable & $n$ & Mean & StDev & SE Mean & \SI{95}{\percent} CI & $t$ & $p$ \\
+                $X$ & $16$ & $98.33$ & $4.61$ & ? & $($?,?$)$ & ? & ? \\                  
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    
+    \begin{enumerate}[label=(\alph*)]
+        \item How many degrees of freedom are there on the $t$-statistic?
+        \item Fill in the missing information.
+        You may use bounds on the $p$-value.
+        \item What are your conclusions if $\alpha = 0.01$?
+        \item What are your conclusions if the hypothesis is $H_{0}: \mu = 100$ versus $H_{0}: \mu > 100$?
+    \end{enumerate}
+}
+\enanswer{
+    \begin{enumerate}[label=(\alph*)]
+        \item $15$
+        \item $\text{SE} = 1.1525$, $\text{CI} = [95.8735, 100.7865]$, $t_0 = -1.4490$, $p = .1679$
+        \item $p = .1679 > \alpha = 0.01$, don't reject $H_0$
+        \item $t_0 = -1.4490 \notin [2.6025, \infty)$, $p = .9160 > \alpha = .01$, don't reject $H_0$
+    \end{enumerate}
+}
