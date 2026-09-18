@@ -1,0 +1,555 @@
+\title[P\&S 2026/2027]{Probability \& Statistics (Premaster MTPS)}
+\subtitle[College 1: introductie in kansrekening]{College 1: introductie in kansrekening}  
+\author{Dr. ir. D.A.M.P. Blom}
+\institute[NLDA]{Nederlandse Defensie Academie}
+\date{25 september 2026}
+\begin{document}
+
+\begin{frame}
+    \maketitle
+    % \begin{center}
+    %     \includegraphics[width=3cm]{1_marine}
+    %     \includegraphics[width=3cm]{1_luchtmacht}
+    %     \includegraphics[width=3cm]{1_landmacht}
+    % \end{center}
+\end{frame}
+
+%------------------------------------------------%	
+
+\begin{frame}{Even voorstellen}
+    \begin{minipage}{0.65\textwidth}
+        \begin{itemize}\setlength\itemsep{2em}
+            \item Dr. ir. Danny Blom
+            \item BSc, MSc, PhD toegepaste wiskunde @ TU Eindhoven
+            \item 2024 - heden: universitair docent wiskunde en operations research bij de Faculteit Militaire Wetenschappen (Breda / Den Helder)
+            \item Contactinfo:\\ \url{damp.blom@mindef.nl} / forum op Moodle
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+        \includegraphics[width=\linewidth]{../figures/1_danny_blom.jpg}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Structuur van het vak}
+    \begin{itemize}
+        \item $20$ \enquote{learning tasks} --- streef naar twee learning tasks per week.
+        \item Voornamelijk op zelfstudie, maar ook vier fysieke colleges:
+    \end{itemize}
+    \vfill
+    \begin{center}
+        \begin{tabular}{lll}
+            \toprule
+                \textbf{College 1} & 25 september 2026 & 12.50-16.40 uur \\
+                \textbf{College 2} & 16 oktober 2026 & 9.20-16.40 uur \\
+                \textbf{College 3} & 6 november 2026 & 9.20-16.40 uur\\
+                \textbf{College 4} & 27 november 2026 & 9.20-16.40 uur \\
+            \midrule
+                \textbf{Tentamen (\SI{100}{\percent})} & 4 december 2026 & n.n.b. \\
+                \textbf{Hertentamen} & 12 maart 2026 & n.n.b. \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \vfill
+    \textbf{Locatie:} Kromhoutkazerne, gebouw K2 (Pontonnierszaal)
+\end{frame}
+
+\begin{frame}{Cursusdoelen}
+    Aan het eind van deze premaster cursus is de student in staat om:
+    \begin{enumerate}
+        \item verzamelde data met statistische maten te beschrijven.
+        \item deze data te verwerken met statistische software (grafische rekenmachine)
+        \item te rekenen met (conditionele) kansen.
+        \item de principes van discrete / continue kansverdelingen te hanteren.
+        \item te rekenen met een aantal veelgebruikte kansverdelingen.
+        \item kwantitatieve maten (verwachtingswaarde, variantie, covariantie, regressielijn en de correlatiecoëfficiënt) te berekenen
+        \item de centrale limietstelling toe te passen.
+        \item te werken met een aantal schattingsmethoden, betrouwbaarheidsintervallen en hypothesetoetsen en benodigde steekproefgroottes te berekenen.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Leermiddelen}
+    \begin{itemize}\setlength\itemsep{2em}
+        \item Slides van de vier hoorcolleges 
+        \item Boek:
+        \begin{itemize}
+            \item Douglas Montgomery and George Runger. \emph{Applied Statistics and Probability for Engineers}. 6th International Student Version. ISBN 978-1-118-74412-3
+        \end{itemize}
+        \item Moodle pagina met lecture notes, opgavensets, antwoorden en uitgebreide uitwerkingen van geselecteerde opgaven.
+        \item Grafische rekenmachine: TI84-Plus CE-T of Casio fx-CG50    
+    \end{itemize}
+    \vfill
+    \begin{center}
+        \underline{\bfseries Maak gebruik van het forum op Moodle op vragen te stellen!}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Kansrekening in de militaire praktijk}
+    Een circuit van componenten is functioneel als geldt dat er een pad van werkende componenten van begin tot eind:
+    \vfill
+    \textbf{Deterministisch:} iedere component functioneert met kans $1$.
+    Wat is de kans dat het circuit functioneert?
+    \vfill
+    \begin{center}
+        \def\shift{1}
+        \begin{tikzpicture}[
+            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
+            line width=0.6pt
+        ]
+            \node (start) at (-2, 0) {};
+            \node (stop) at (4, 0) {};
+
+            % Top branch nodes
+            \node[device] (A) at (0, 1) {$A$};
+            \node[device] (B) at (0, -1) {$B$};
+            \node[device] (C) at (2, 0) {$C$};
+            
+            \node (TL) at ($(A)+(-\shift,0)$) {};
+            \node (TR) at ($(A)+(\shift,0)$) {};
+            \node (BL) at ($(B)+(-\shift,0)$) {};
+            \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+            % Add connections
+            \draw (A.west) -- (TL.center) |- (start);
+            \draw (B.west) -- (BL.center) |- (start);
+            \draw (A.east) -- (TR.center) |- (C.west);
+            \draw (B.east) -- (BR.center) |- (C.west);
+            \draw (C.east) -- (stop);
+        \end{tikzpicture}
+    \end{center}
+    \vfill\pause
+    \textbf{Heel flauw voorbeeld: het circuit blijft met kans $1$ functioneren.}
+\end{frame}
+
+\begin{frame}{Kansrekening in de militaire praktijk}
+    In de praktijk is er echter een hoop onzekerheid over het faalgedrag van componenten.
+    \vfill
+    \textbf{Stochastisch:} voor iedere component is de kans op functioneren een getal op het interval $[0, 1]$ (zie getallen), onafhankelijk van elkaar.
+    Wat is de kans dat het circuit functioneert?
+    \vfill
+    \begin{center}
+        \def\shift{1}
+        \begin{tikzpicture}[
+            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
+            line width=0.6pt
+        ]
+            \node (start) at (-2, 0) {};
+            \node (stop) at (4, 0) {};
+
+            % Top branch nodes
+            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
+            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
+            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
+            
+            \node (TL) at ($(A)+(-\shift,0)$) {};
+            \node (TR) at ($(A)+(\shift,0)$) {};
+            \node (BL) at ($(B)+(-\shift,0)$) {};
+            \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+            % Add connections
+            \draw (A.west) -- (TL.center) |- (start);
+            \draw (B.west) -- (BL.center) |- (start);
+            \draw (A.east) -- (TR.center) |- (C.west);
+            \draw (B.east) -- (BR.center) |- (C.west);
+            \draw (C.east) -- (stop);
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Kansrekening in de militaire praktijk}
+    \begin{center}
+        \def\shift{1}
+        \begin{tikzpicture}[
+            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
+            line width=0.6pt
+        ]
+            \node (start) at (-2, 0) {};
+            \node (stop) at (4, 0) {};
+
+            % Top branch nodes
+            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
+            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
+            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
+            
+            \node (TL) at ($(A)+(-\shift,0)$) {};
+            \node (TR) at ($(A)+(\shift,0)$) {};
+            \node (BL) at ($(B)+(-\shift,0)$) {};
+            \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+            % Add connections
+            \draw (A.west) -- (TL.center) |- (start);
+            \draw (B.west) -- (BL.center) |- (start);
+            \draw (A.east) -- (TR.center) |- (C.west);
+            \draw (B.east) -- (BR.center) |- (C.west);
+            \draw (C.east) -- (stop);
+        \end{tikzpicture}
+    \end{center}
+    \vfill
+    Dit stochastische geval is al lastiger. 
+    We gaan vandaag de nodige tools bekijken om dit op te kunnen lossen!
+\end{frame}
+
+\begin{frame}{Kansrekening in de militaire praktijk}
+    In de militaire praktijk hebben we heel vaak te maken met onzekerheid.
+    \begin{itemize}\setlength\itemsep{2em}
+        \item Hoe kunnen we onze strategie coördineren bij zoeken en detecteren van vijandelijke onderzeeboten?
+        \item Hoe kunnen we de betrouwbaarheid van communicatiesystemen analyseren?
+        \item Hoeveel reserveonderdelen (\enquote{spare parts}) moeten we op een missie meenemen?
+        \item Hoeveel slachtoffers krijgt de medische keten te verwerken bij een \enquote{mass casualty event}?
+        \item Welke invloed hebben meteorologische verschijnselen op raketbanen?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Kansexperiment: worp met twee dobbelstenen}
+    Wat voor eigenschappen heeft een dergelijk \textbf{\color{concept} kansexperiment}?\medskip
+
+    \pause
+    \only<+>{
+        \begin{itemize}
+            \item De \textbf{\color{concept} uitkomstenruimte} (\emph{sample space}) is als volgt:\medskip
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \def\xscale{1.5}
+
+                    \node at (0, 1) {\faDiceOne};
+                    \node at (0, 2) {\faDiceTwo};
+                    \node at (0, 3) {\faDiceThree};
+                    \node at (0, 4) {\faDiceFour};
+                    \node at (0, 5) {\faDiceFive};
+                    \node at (0, 6) {\faDiceSix};
+                    \node[align=center, rotate=90] at (-0.75, 3.5) {Dobbelsteen $1$};
+
+                    \node at (1, 0) {\faDiceOne};
+                    \node at (2, 0) {\faDiceTwo};
+                    \node at (3, 0) {\faDiceThree};
+                    \node at (4, 0) {\faDiceFour};
+                    \node at (5, 0) {\faDiceFive};
+                    \node at (6, 0) {\faDiceSix};
+                    \node[align=center] at (3.5, -0.75) {Dobbelsteen $2$};
+
+                    \foreach \x in {1, ..., 6}
+                    {
+                        \foreach \y in {1, ..., 6}
+                        {
+                            \node (\x-\y) at (\x, \y) {\scriptsize$(\x, \y)$};
+                        }
+                    }
+                    
+                    \foreach \x in {1, ..., 7}
+                    {
+                        \draw (\x-0.5, 0.5) -- (\x-0.5, 6.5);
+                    }
+
+
+                    \foreach \y in {1, ..., 7}
+                    {
+                        \draw (0.5, \y-0.5) -- (6.5, \y-0.5);
+                    }
+
+                \end{tikzpicture}
+            \end{center}
+        \end{itemize}
+    }
+
+    \only<+>{
+        \begin{itemize}
+            \item De \textbf{\color{concept} kansverdeling over de uitkomstenruimte} is als volgt:\medskip
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \def\xscale{1.5}
+
+                    \node at (0, 1) {\faDiceOne};
+                    \node at (0, 2) {\faDiceTwo};
+                    \node at (0, 3) {\faDiceThree};
+                    \node at (0, 4) {\faDiceFour};
+                    \node at (0, 5) {\faDiceFive};
+                    \node at (0, 6) {\faDiceSix};
+                    \node[align=center, rotate=90] at (-0.75, 3.5) {Dobbelsteen $1$};
+
+                    \node at (1, 0) {\faDiceOne};
+                    \node at (2, 0) {\faDiceTwo};
+                    \node at (3, 0) {\faDiceThree};
+                    \node at (4, 0) {\faDiceFour};
+                    \node at (5, 0) {\faDiceFive};
+                    \node at (6, 0) {\faDiceSix};
+                    \node[align=center] at (3.5, -0.75) {Dobbelsteen $2$};
+
+                    \foreach \x in {1, ..., 6}
+                    {
+                        \foreach \y in {1, ..., 6}
+                        {
+                            \node (\x-\y) at (\x, \y) {\scriptsize$1/36$};
+                        }
+                    }
+                    
+                    \foreach \x in {1, ..., 7}
+                    {
+                        \draw (\x-0.5, 0.5) -- (\x-0.5, 6.5);
+                    }
+
+
+                    \foreach \y in {1, ..., 7}
+                    {
+                        \draw (0.5, \y-0.5) -- (6.5, \y-0.5);
+                    }
+
+                    % \draw (0.5, 0.5) grid[1.5] (9.5, 9.5);
+                \end{tikzpicture}
+            \end{center}
+        \end{itemize}
+    }
+
+    \only<+>{
+        \begin{itemize}
+            \item Exact één van de uitkomsten in de uitkomstenruimte wordt gerealiseerd (resultaat van een \textbf{\color{concept} trekking}):
+            \begin{center}
+                \begin{tikzpicture}[scale=0.8]
+                    \def\xscale{1.5}
+
+                    \node at (0, 1) {\faDiceOne};
+                    \node at (0, 2) {\faDiceTwo};
+                    \node at (0, 3) {\faDiceThree};
+                    \node at (0, 4) {\faDiceFour};
+                    \node at (0, 5) {\faDiceFive};
+                    \node at (0, 6) {\faDiceSix};
+                    \node[align=center, rotate=90] at (-0.75, 3.5) {Dobbelsteen $1$};
+
+                    \node at (1, 0) {\faDiceOne};
+                    \node at (2, 0) {\faDiceTwo};
+                    \node at (3, 0) {\faDiceThree};
+                    \node at (4, 0) {\faDiceFour};
+                    \node at (5, 0) {\faDiceFive};
+                    \node at (6, 0) {\faDiceSix};
+                    \node[align=center] at (3.5, -0.75) {Dobbelsteen $2$};
+
+                    \foreach \x in {1, ..., 6}
+                    {
+                        \foreach \y in {1, ..., 6}
+                        {
+                            \node (\x-\y) at (\x, \y) {\scriptsize$1/36$};
+                        }
+                    }
+                    \fill[blue!25] (2.5, 3.5) rectangle (3.5, 4.5);
+                    \node (3-4) at (3, 4) {\scriptsize$1/36$};
+                    
+                    \foreach \x in {1, ..., 7}
+                    {
+                        \draw (\x-0.5, 0.5) -- (\x-0.5, 6.5);
+                    }
+
+
+                    \foreach \y in {1, ..., 7}
+                    {
+                        \draw (0.5, \y-0.5) -- (6.5, \y-0.5);
+                    }
+
+                    % \draw (0.5, 0.5) grid[1.5] (9.5, 9.5);
+                \end{tikzpicture}
+            \end{center}
+        \end{itemize}
+    }
+\end{frame}
+
+\begin{frame}{Kansexperiment}
+    \textbf{Input:} \medskip
+
+    \begin{itemize}
+        \item Uitkomstenruimte $S$
+        \item Onderliggende kansverdeling over $S$
+    \end{itemize}\medskip
+
+    \textbf{Experiment:} \medskip
+
+    \begin{itemize}
+        \item Lab-meting
+        \item Afname van een enquête
+        \item Simulatie
+        \item $\ldots$
+    \end{itemize}\medskip
+
+    \textbf{Output:} \medskip
+
+    \begin{itemize}
+        \item Precies één van de uitkomsten in de uitkomstenruimte (trekking)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Worp met twee dobbelstenen}
+    Vaak zijn er niet geïnteresseerd in de kans op één specifieke uitkomst, maar de kans op een \textbf{\color{concept} gebeurtenis} (\emph{event}), oftewel een samenstelling van meerdere uitkomsten:
+
+    \begin{itemize}
+        \item Gebeurtenis $A$: er wordt minstens één drie gegooid:
+        \[
+            A = \set{(3,1), (3,2), (3,3), \ldots, (4, 3), (5, 3), (6, 3)}
+        \]
+        \item Gebeurtenis $B$: de som van de twee worpen is gelijk aan $7$:
+        \[
+            B = \set{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)}
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Samenstellingen van gebeurtenissen}
+    Gebeurtenissen kunnen we ook grafisch weergeven met behulp van \textbf{\color{concept} Venndiagrammen}:\medskip
+
+    Hiermee kunnen we ook weer samenstellingen van gebeurtenissen bekijken:
+    \vfill
+    \begin{center}
+        \centering
+        \foreach \ov in {1,...,5}{% 
+            \only<\ov>{%
+                \includegraphics[page=\ov, width=0.6\textwidth]{../tikz/venn_diagrams.pdf}%
+            }%
+        }%
+    \end{center}
+\end{frame}
+
+\begin{frame}{Axioma's van de kansrekening}
+    Stel nu dat we een kansexperiment hebben met een uitkomstenruimte $S$, en een gebeurtenis $E \subseteq S$ ($E$ is een \enquote{deelverzameling} van de uitkomstenruimte).
+    \vfill
+    Een \textbf{\color{concept} kansfunctie} $P$ is een functie die aan iedere gebeurtenis $E$ een getal toekent zodat het volgende geldt:
+    \begin{itemize}[<+->]
+        \item $P(S) = 1$
+        \item $0 \leq P(E) \leq 1$ voor iedere gebeurtenis $E$.
+        \item Als twee gebeurtenissen $E_1$ en $E_2$ geen overlap hebben ($E_1 \cap E_2 = \emptyset$), dan geldt $P(E_1 \cup E_2) = P(E_1) + P(E_2)$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Handige rekenregels voor kansrekening}
+    Met deze axioma's kunnen we een aantal handige rekenregels afleiden:
+    \begin{itemize}\setlength\itemsep{4em}
+        \item Voor een gebeurtenis $E$ geldt voor iedere uitkomst $i$ dat $i$ onderdeel is van $E$ of van $\bar{E}$, oftewel $P(S) = P(E \cup \bar{E}) = P(E) + P(\bar{E}) = 1$:
+        \bigskip
+       
+        $P(E) = 1 - P(\bar{E})$ \hfill (\emph{complementregel})
+
+        \item Als we twee gebeurtenissen hebben $E_1$ en $E_2$ met een overlap, dan tellen we de overlap dubbel als we $P(E_1)$ en $P(E_2)$ optellen.
+        Met andere woorden: \bigskip
+        
+        $P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2)$ \hfill (\emph{algemene optelregel})
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Oefening: worp met twee dobbelstenen}
+    \begin{itemize}
+        \item Gebeurtenis $A$: er wordt minstens één vier gegooid:
+        \item Gebeurtenis $B$: de som van de twee worpen is gelijk aan $7$:
+        \item Gebeurtenis $C$: het product van de twee worpen is gelijk aan $10$:
+    \end{itemize}
+    \vfill
+    \begin{enumerate}\setlength\itemsep{2em}
+        \item Teken de gebeurtenissen $A$, $B$ en $C$ als een Venndiagram.
+        \item Wat is de kans dat gebeurtenis $B$ \textbf{niet} plaatsvindt?
+        \item Wat is de kans dat minstens één van beide gebeurtenissen $A$ of $B$ plaatsvindt?
+        \item Wat is de kans dat zowel $A$ als $C$ plaatsvindt?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Oefening: worp met twee dobbelstenen}
+    \only<+>{
+        \textbf{Teken de gebeurtenissen $A$, $B$ en $C$ als een Venndiagram.}\bigskip
+
+        \begin{center}
+            \includegraphics[scale=0.7]{../tikz/1_example_events.pdf}
+        \end{center}
+    }
+
+    \only<+>{
+        \textbf{Wat is de kans dat gebeurtenis $B$ niet plaatsvindt?}\bigskip
+
+        $B$ bestaat uit $6$ uitkomsten, dus $P(B) = \frac{6}{36}$.
+        Met de complementregel vinden we dan 
+        \begin{align*}
+            P(\bar{B})  &= 1 - P(B) \\
+                        &= 1 - \frac{6}{36} \\
+                        &= \frac{30}{36} = \frac{5}{6}.
+        \end{align*}
+    }
+
+    \only<+>{
+        \textbf{Wat is de kans dat minstens één van beide gebeurtenissen $A$ of $B$ plaatsvindt?}\bigskip
+
+        $A$ bestaat uit $11$ uitkomsten, $B$ bestaat uit $6$ uitkomsten, en $A \cap B$ bestaat uit $2$ uitkomsten, oftewel 
+        \begin{itemize}
+            \item $P(A) = \frac{11}{36}$
+            \item $P(B) = \frac{6}{36}$
+            \item $P(A \cap B) = \frac{2}{36}$
+        \end{itemize}
+        Met de algemene optelregel vinden we dan 
+        \begin{align*}
+            P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\
+                        &= \frac{11}{36} + \frac{6}{36} - \frac{2}{36} \\
+                        &= \frac{15}{36}.
+        \end{align*}
+    }
+
+    \only<+>{
+        \textbf{Wat is de kans dat zowel $A$ als $C$ plaatsvindt?}\bigskip
+
+        Deze kans is gelijk aan $0$. 
+        
+        Gebeurtenis $C$ vindt alleen plaats als er een $2$ en een $5$ worden gegooid. 
+        
+        In dat geval is er geen vier gegooid, dus kan $A$ niet tegelijkertijd met $C$ plaatsvinden.
+    }
+\end{frame}
+
+\begin{frame}{Bereken de kans op functioneren van dit circuit}
+    \begin{center}
+        \def\shift{1}
+        \begin{tikzpicture}[scale=0.75,
+            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
+            line width=0.6pt
+        ]
+            \node (start) at (-2, 0) {};
+            \node (stop) at (4, 0) {};
+
+            % Top branch nodes
+            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
+            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
+            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
+            
+            \node (TL) at ($(A)+(-\shift,0)$) {};
+            \node (TR) at ($(A)+(\shift,0)$) {};
+            \node (BL) at ($(B)+(-\shift,0)$) {};
+            \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+            % Add connections
+            \draw (A.west) -- (TL.center) |- (start);
+            \draw (B.west) -- (BL.center) |- (start);
+            \draw (A.east) -- (TR.center) |- (C.west);
+            \draw (B.east) -- (BR.center) |- (C.west);
+            \draw (C.east) -- (stop);
+        \end{tikzpicture}
+    \end{center}\pause
+    \vfill
+    Introduceer gebeurtenissen $A, B, C$ dat de respectievelijke componenten blijven functioneren.
+    We willen dan $P\left((A\cup B) \cap C\right)$ berekenen:\pause
+    \begin{itemize}[<+->]
+        \item $P(A) = 0.95$, $P(B) = 0.88$ en $P(C) = 0.92$.
+        \item $P(A \cup B) = P(A) + P(B) - P(A \cap B) = P(A) + P(B) - P(A)\cdot P(B) =  0.95 + 0.88 - 0.95 \cdot 0.88 = 0.994$.
+        \item $P((A\cup B) \cap C) = P(A \cup B) \cdot P(C) = 0.994 \cdot 0.92 = 0.91448$.
+    \end{itemize}\pause
+    \textbf{De kans dat het circuit blijft functioneren is dus $0.91448$.}
+\end{frame}
+
+\begin{frame}{Conditionele kansen}
+    Het C-UAS peloton van 11 Luchtverdedigingsbatterij bewaakt een sector rond een tijdelijke operatiebasis.
+    Ze gebruiken een radar/RF-detectiesysteem dat automatisch alarm slaat wanneer het een mogelijk vijandelijke drone waarneemt.
+    Als er daadwerkelijk een vijandelijke drone is, wordt in \SI{94}{\percent} van de gevallen daadwerkelijk alarm geslagen.
+    Als het systeem alarm slaat, blijkt het in \SI{10}{\percent} vals alarm: dit komt door een vogel, onwetende hobbydronepiloten of andere ruis.
+    In \SI{10}{\percent} van de gevallen dat er een object de basis nadert is het een vijandelijke drone.
+
+    \textbf{Wat is de kans dat het dronesysteem de verkeerde beslissing neemt bij een willekeurig naderend object?}
+    
+\end{frame}
+
+\begin{frame}
+
+\end{frame}
+
+\end{document}

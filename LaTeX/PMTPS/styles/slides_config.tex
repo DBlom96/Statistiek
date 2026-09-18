@@ -1,0 +1,92 @@
+% --- Theme settings ---
+\usetheme{Madrid}                   % Main theme
+\usecolortheme{dolphin}             % Color theme
+% \useoutertheme{infolines}           % Outer theme
+% \useinnertheme{default}             % Inner theme
+% \usefonttheme{default}              % Font theme
+
+% --- Language & encoding ---
+\usepackage[utf8]{inputenc}         % For UTF-8 encoding
+\usepackage[T1]{fontenc}            % Better font output
+\usepackage[dutch]{babel}           % Language settings
+\usepackage{fontawesome5}
+
+% --- Typography ---
+\usepackage{lmodern}                % Latin Modern font (nice & scalable)
+\usepackage{microtype}              % Better spacing
+\setbeamerfont{title}{family=\sffamily,series=\bfseries,size=\Large}
+\setbeamerfont{frametitle}{family=\sffamily,series=\bfseries,size=\large}
+\setbeamerfont{normal text}{family=\rmfamily,size=\normalsize}
+\setbeamerfont{item}{family=\sffamily}
+
+% --- Math & optimization
+\usepackage{amsmath, amssymb, amsfonts, amsthm, eurosym}
+\usepackage{mathtools}              % Better math alignment
+\usepackage{bm}                     % Bold math symbols
+\usepackage{optidef}
+\usepackage{listings}
+\usepackage{siunitx}
+
+% --- Tables ---
+\usepackage{booktabs}               % Professional tables
+\usepackage{multirow}               % Multirow cells
+\usepackage{multicol}               % Multiple columns
+\usepackage{array}                  % Custom column types
+\usepackage{colortbl}               % Shaded rows/columns
+\usepackage{adjustbox}              % Scale tables if needed
+\usepackage{nicematrix}
+
+\renewcommand{\arraystretch}{1.5}
+
+% --- Figures ---
+\usepackage{graphicx}
+\graphicspath{{../figures}}
+
+% --- TikZ / PGF ---
+\usepackage{tikz, tkz-euclide}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\usetikzlibrary{arrows.meta, backgrounds, calc, decorations.pathreplacing, intersections, positioning, shapes}
+\usepgfplotslibrary{fillbetween, statistics}
+
+\input{../styles/macros.tex}
+
+\usepackage{csquotes} % For quotation marks
+
+% -- Custom beamer changes
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+% --- Colors for progress bar ---
+\setbeamercolor{progress bar in head/foot}{bg=gray!20}  % background bar
+\setbeamercolor{progress bar filled}{bg=frametitle.fg}  % filled part
+
+% --- Custom headline with progress bar ---
+\addtobeamertemplate{frametitle}{}{
+  % Progress bar underneath 
+  \vspace{-12.5pt}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=.25ex,dp=0ex]{progress bar in head/foot} 
+    \begin{beamercolorbox}[wd=\dimexpr\paperwidth*\insertframenumber/   \inserttotalframenumber\relax,ht=.25ex,dp=0ex]{progress bar filled}
+    \end{beamercolorbox} 
+  \end{beamercolorbox} 
+}
+\setbeamercolor{frametitle}{bg=blue!25}
+
+
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.25\paperwidth,ht=2.5ex,dp=2ex,center]{author in head/foot}%
+      \insertshorttitle{}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.65\paperwidth,ht=2.5ex,dp=2ex,center]{title in head/foot}%
+      \insertshortsubtitle{}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.10\paperwidth,ht=2.5ex,dp=2ex,center]{date in head/foot}%
+      \insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+

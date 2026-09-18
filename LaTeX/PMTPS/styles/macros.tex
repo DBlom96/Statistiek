@@ -1,0 +1,35 @@
+% GENERAL COMMANDS
+\newcommand{\set}[1]{\left\{#1\right\}}
+
+\newcommand{\comboptproblem}[2]{
+    \begin{center}
+        \framebox[0.9\width][c]{
+            \begin{quote}
+                \renewcommand{\arraystretch}{1.5}%
+                \begin{tabular}{@{}lp{.7\textwidth}}
+                    \textbf{Gegeven:} & #1 \\
+                    \textbf{Vind:} & #2
+                \end{tabular}
+            \end{quote}
+        }
+    \end{center}
+}
+
+% THEOREMS
+\newtheorem{stelling}{Stelling}
+
+% MATH OPERATORS
+\DeclareMathOperator{\suchthat}{zodanig\;dat}
+
+% DEFINED COLORS
+\definecolor{octahedroncolor}{RGB}{104, 129, 174}
+\colorlet{highlight}{green!80!black}
+\colorlet{concept}{cyan!80!black}
+
+\setlength{\arraycolsep}{2pt}
+\renewcommand<>\cellcolor[1]{\only#2{\beameroriginal\cellcolor{#1}}}
+
+% Solution Toggle (to show/hide solutions)
+\newif\ifshowanswers
+% \showanswerstrue % Toggle this to hide / show solutions
+\showanswersfalse % Uncomment to hide solutions

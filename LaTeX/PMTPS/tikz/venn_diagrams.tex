@@ -1,0 +1,111 @@
+\documentclass[tikz, beamer, preview]{standalone}
+\input{../styles/tikz_config.tex}
+
+\newcommand{\radius}{1.5}
+
+
+\begin{document}
+    \begin{standaloneframe}
+        \begin{tikzpicture}[scale=1.5]
+            % Sample space S
+            \draw[thick] (0, 0) rectangle (8,5);
+            \node at (0.4, 4.7) {$S$};
+
+            \only<+>{
+                \begin{scope}
+                    \clip (3, 3) circle (\radius cm);
+                    \draw[black, pattern=north west lines, pattern color=blue] (3, 3) circle (\radius cm);
+                \end{scope} 
+                
+                % Draw circles A and B
+                \foreach \label/\x/\y/\angle in {A/3/3/135, B/5/3/45}
+                {
+                    \draw[thick] (\x, \y) circle (\radius cm) node[left] {};
+                    \node[font=\bfseries] (\label) at ($(\x,\y)+(\angle:1.2*\radius)$) {$\label$};
+                }
+
+                \node (event) at (4, 0.75) {\Huge\bfseries Gebeurtenis $A$};
+            }
+
+            \only<+>{
+                \begin{scope}
+                    \clip (5, 3) circle (\radius cm);
+                    \draw[black, pattern=north west lines, pattern color=blue] (5, 3) circle (\radius cm);
+                \end{scope} 
+                
+                % Draw circles A and B
+                \foreach \label/\x/\y/\angle in {A/3/3/135, B/5/3/45}
+                {
+                    \draw[thick] (\x, \y) circle (\radius cm) node[left] {};
+                    \node[font=\bfseries] (\label) at ($(\x,\y)+(\angle:1.2*\radius)$) {$\label$};
+                }
+
+                \node (event) at (4, 0.75) {\Huge\bfseries Gebeurtenis $B$};
+            }
+
+            \only<+>{
+                \begin{scope}
+                    \draw[black, pattern=north west lines, pattern color=blue] (3, 3) circle (\radius cm);
+                    \draw[black, pattern=north west lines, pattern color=blue] (5, 3) circle (\radius cm);
+                \end{scope} 
+                
+                % Draw circles A and B
+                \foreach \label/\x/\y/\angle in {A/3/3/135, B/5/3/45}
+                {
+                    \draw[thick] (\x, \y) circle (\radius cm) node[left] {};
+                    \node[font=\bfseries] (\label) at ($(\x,\y)+(\angle:1.2*\radius)$) {$\label$};
+                }
+
+                \node (event) at (4, 0.75) {\Huge\bfseries Gebeurtenis $A \cup B$};
+            }
+
+            \only<+>{
+                \begin{scope}
+                    \clip (3, 3) circle (\radius cm);
+                    \draw[black, pattern=north west lines, pattern color=blue] (5, 3) circle (\radius cm);
+                \end{scope} 
+                
+                % Draw circles A and B
+                \foreach \label/\x/\y/\angle in {A/3/3/135, B/5/3/45}
+                {
+                    \draw[thick] (\x, \y) circle (\radius cm) node[left] {};
+                    \node[font=\bfseries] (\label) at ($(\x,\y)+(\angle:1.2*\radius)$) {$\label$};
+                }
+
+                \node (event) at (4, 0.75) {\Huge\bfseries Gebeurtenis $A \cap B$};
+            }
+
+            \only<+>{
+                \begin{scope}
+                    \draw[black, pattern=north west lines, pattern color=blue] (0, 0) rectangle (8, 5);
+                    \filldraw[draw=black, fill=white] (3, 3) circle (\radius cm);
+                \end{scope} 
+                
+                % Draw circles A and B
+                \foreach \label/\x/\y/\angle in {A/3/3/135, B/5/3/45}
+                {
+                    \draw[thick] (\x, \y) circle (\radius cm) node[left] {};
+                    \node[font=\bfseries] (\label) at ($(\x,\y)+(\angle:1.2*\radius)$) {$\label$};
+                }
+
+                \node (event) at (4, 0.75) {\Huge\bfseries Gebeurtenis $\bar{A}$};
+            }
+            
+            % % Fill Union (A or B)
+            % \begin{scope}
+            %     \clip (2.5, 2.5) circle (\radius cm);
+            %     \fill[blue!20] (2.5, 2.5) circle (\radius cm);
+            % \end{scope}
+            % \begin{scope}
+            %     \clip (0.8,0) circle (\radius cm);
+            %     \fill[blue!20] (0.8,0) circle (\radius cm);
+            % \end{scope}
+
+            % Draw circles and labels
+            % \draw[thick] (-0.5,0) circle (\radius cm) node[left] {$A$};
+            % \draw[thick] (0.8,0) circle (\radius cm) node[right] {$B$};
+            
+            % \node at (0.15,0) {$A \cup B$};
+        \end{tikzpicture}
+    \end{standaloneframe}
+\end{document}
