@@ -10,10 +10,10 @@ import locale
 doc = Document(fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\Tentamenvoorblad.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
-vaknaam = "Statistiek deel 2"
-vakcode = "STA#2"
-datum = "20260724"
-tentamentijd = "9:00 - 12:00"
+vaknaam = "Statistiek deel 1 (herkansing)"
+vakcode = "STA#1"
+datum = "20261016"
+tentamentijd = "13:30 - 16:30"
 examinator = "Dr. ir. D.A.M.P. Blom"
 peer_review = "Dr. M. van Ee"
 aantal_opgaven = "4"

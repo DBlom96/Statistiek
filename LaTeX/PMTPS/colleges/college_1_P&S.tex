@@ -161,7 +161,7 @@
     }
     \only<4>{
         \begin{itemize}
-            \item Exact één van de uitkomsten in de uitkomstenruimte wordt gerealiseerd (resultaat van een \concept{trekking}):
+            \item \concept{Trekking} van exact één van de uitkomsten in de uitkomstenruimte:
         \end{itemize}
     }
     \begin{center}
@@ -198,8 +198,8 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Worp met twee dobbelstenen}
-    Vaak zijn er niet geïnteresseerd in de kans op één specifieke uitkomst, maar de kans op een \concept{gebeurtenis} (\emph{event}), oftewel een samenstelling van meerdere uitkomsten:
+\begin{frame}{Gebeurtenissen}
+    Vaak zijn er niet geïnteresseerd in de kans op één specifieke uitkomst, maar de kans op een \concept{gebeurtenis} (\emph{event}):
 
     \begin{itemize}
         \item Gebeurtenis $A$: er wordt minstens één drie gegooid:
@@ -264,9 +264,9 @@
 
 \begin{frame}{Oefening: worp met twee dobbelstenen}
     \begin{itemize}
-        \item Gebeurtenis $A$: er wordt minstens één vier gegooid:
-        \item Gebeurtenis $B$: de som van de twee worpen is gelijk aan $7$:
-        \item Gebeurtenis $C$: het product van de twee worpen is gelijk aan $10$:
+        \item Gebeurtenis $A$: er wordt minstens één vier gegooid.
+        \item Gebeurtenis $B$: de som van de twee worpen is gelijk aan $7$.
+        \item Gebeurtenis $C$: het product van de twee worpen is gelijk aan $10$.
     \end{itemize}
     \vfill
     \begin{enumerate}\setlength\itemsep{2em}
@@ -329,7 +329,7 @@
 \begin{frame}{Voorbeeld: performance van een C-UAS systeem}
     Het C-UAS peloton van 11 Luchtverdedigingsbatterij bewaakt een sector rond een tijdelijke operatiebasis.
     Ze gebruiken een radar/RF-detectiesysteem dat automatisch alarm slaat wanneer het een mogelijk vijandelijke drone waarneemt.
-    Van alle objecten die door de lucht de basis naderen, blijkt \SI{6}{\percent} een vijandelijke drone te zijn.
+    Van alle objecten die door de lucht de basis naderen, blijkt \SI{10}{\percent} een vijandelijke drone te zijn.
     Als er daadwerkelijk een vijandelijke drone is, wordt in \SI{94}{\percent} van de gevallen daadwerkelijk alarm geslagen.
     Als het niet om een vijandelijke drone gaat, wordt in \SI{5}{\percent} van de gevallen alarm geslagen, bijvoorbeeld wanneer het systeem
     niet kan onderscheiden van vogels of onwetende hobbydrones.
@@ -355,7 +355,7 @@
     \begin{itemize}
         \item Kans op een drone is $P(D) = 0.06$.
         \item Kans op alarm gegeven dat het een drone is: $P(A | D) = 0.94$
-        \item Kans op alarm gegeven dat het niet een drone is $P(A | D') = 0.05$. 
+        \item Kans op alarm gegeven dat het niet een drone is: $P(A | D') = 0.05$. 
     \end{itemize}
 \end{frame}
 
@@ -364,7 +364,7 @@
     \begin{center}
         \includegraphics[page=2, width=\textwidth]{../tikz/1_cuas_system.pdf}%
     \end{center}
-    In \SI{94}{\percent} van de \SI{10}{\percent} gevallen van een vijandelijke drone wordt ook alarm geslagen.
+    In \SI{10}{\percent} van de gevallen gaat het om een vijandelijke drone, en weer \SI{94}{\percent} van de gevallen daarvan wordt alarm geslagen:
     Met andere woorden:
     \[
         P(D \cap A) = P(D) \cdot P(A | D) \Rightarrow P(A | D) = \frac{P(D \cap A)}{P(D)}
@@ -406,13 +406,13 @@
                 &= P(B_1) \cdot P(A | B_1) + P(B_2) \cdot P(A | B_2) + \ldots + P(B_n) \cdot P(A | B_n)
     \end{align*}
     \vfill
-    \textbf{In ons specifieke geval hadden we twee gebeurtenissen: $D$ en $D'$!}
+    \textbf{Merk op: $D$ en $D'$ delen de uitkomstenruimte op in twee!}
 \end{frame}
 
 \begin{frame}{Oefening: performance van een C-UAS systeem}
     Het C-UAS peloton van 11 Luchtverdedigingsbatterij bewaakt een sector rond een tijdelijke operatiebasis.
     Ze gebruiken een radar/RF-detectiesysteem dat automatisch alarm slaat wanneer het een mogelijk vijandelijke drone waarneemt.
-    Van alle objecten die door de lucht de basis naderen, blijkt \SI{6}{\percent} een vijandelijke drone te zijn.
+    Van alle objecten die door de lucht de basis naderen, blijkt \SI{10}{\percent} een vijandelijke drone te zijn.
     Als er daadwerkelijk een vijandelijke drone is, wordt in \SI{94}{\percent} van de gevallen daadwerkelijk alarm geslagen.
     Als het niet om een vijandelijke drone gaat, wordt in \SI{5}{\percent} van de gevallen alarm geslagen, bijvoorbeeld wanneer het systeem
     niet kan onderscheiden van vogels of onwetende hobbydrones.
@@ -430,7 +430,7 @@
     \[
         P(A | B) = P(A)
     \]
-    Het gevolg hiervan is dat we kansen mogen vermenigvuldigen als we de doorsnede $A \cap B$ bekijken:
+    \textbf{Gevolg:} bij onafhankelijke gebeurtenissen $A$ en $B$ mogen we kansen vermenigvuldigen als we de doorsnede $A \cap B$ bekijken:
     \[
         P(A \cap B) = P(B) \cdot P(A | B) = P(B) \cdot P(A)
     \]
@@ -438,32 +438,7 @@
 
 \begin{frame}{Recap: faalgedrag van componenten}
     \begin{center}
-        \def\shift{1}
-        \begin{tikzpicture}[
-            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
-            line width=0.6pt
-        ]
-            \node (start) at (-2, 0) {};
-            \node (stop) at (4, 0) {};
-
-            % Top branch nodes
-            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
-            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
-            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
-            
-            \node (TL) at ($(A)+(-\shift,0)$) {};
-            \node (TR) at ($(A)+(\shift,0)$) {};
-            \node (BL) at ($(B)+(-\shift,0)$) {};
-            \node (BR) at ($(B)+(\shift,0)$) {};
-
-
-            % Add connections
-            \draw (A.west) -- (TL.center) |- (start);
-            \draw (B.west) -- (BL.center) |- (start);
-            \draw (A.east) -- (TR.center) |- (C.west);
-            \draw (B.east) -- (BR.center) |- (C.west);
-            \draw (C.east) -- (stop);
-        \end{tikzpicture}
+        \includegraphics[page=2, width=0.5\textwidth]{../tikz/1_example_circuit.pdf}%
     \end{center}
     \vfill
     Het circuit functioneert wanneer er een pad van links naar rechts is van functionerende componenten.
@@ -473,52 +448,28 @@
 \end{frame}
 
 \begin{frame}{Bereken de kans op functioneren van dit circuit}
-    \begin{center}
-        \def\shift{1}
-        \begin{tikzpicture}[scale=0.6,
-            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
-            line width=0.6pt
-        ]
-            \node (start) at (-2, 0) {};
-            \node (stop) at (4, 0) {};
+    We bekijken gebeurtenissen $A, B, C$ dat component $A, B, C$ blijven functioneren.
+    Het circuit functioneert als:
+    \begin{itemize}
+        \item Minstens één van $A$ of $B$ blijft functioneren.
+        \item $C$ blijft functioneren.
+    \end{itemize}
+    We willen dus $P\left((A\cup B) \cap C\right)$ berekenen:
 
-            % Top branch nodes
-            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
-            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
-            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
-            
-            \node (TL) at ($(A)+(-\shift,0)$) {};
-            \node (TR) at ($(A)+(\shift,0)$) {};
-            \node (BL) at ($(B)+(-\shift,0)$) {};
-            \node (BR) at ($(B)+(\shift,0)$) {};
-
-
-            % Add connections
-            \draw (A.west) -- (TL.center) |- (start);
-            \draw (B.west) -- (BL.center) |- (start);
-            \draw (A.east) -- (TR.center) |- (C.west);
-            \draw (B.east) -- (BR.center) |- (C.west);
-            \draw (C.east) -- (stop);
-        \end{tikzpicture}
-    \end{center}\pause
-    \vfill
-    Introduceer gebeurtenissen $A, B, C$ dat de respectievelijke componenten blijven functioneren.
-    We willen dan $P\left((A\cup B) \cap C\right)$ berekenen:\pause
-    \begin{itemize}[<+->]
-        \item $P(A) = 0.95$, $P(B) = 0.88$ en $P(C) = 0.92$.
-        \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)
-                        = P(A) + P(B) - P(A) \cdot P(B)
-                        = 0.95 + 0.88 - 0.95 \cdot 0.88
-                        = 0.994.$
-        \item $P((A\cup B) \cap C) = P(A \cup B) \cdot P(C) = 0.994 \cdot 0.92 = 0.91448$.
-    \end{itemize}\pause
-    \textbf{De kans dat het circuit blijft functioneren is dus $0.91448$.}
+    \begin{align*}
+        \uncover<1->{P(A) &= 0.95,\qquad P(B) = 0.88 \qquad \text{ en } P(C) = 0.92. \\[2ex]}
+        \uncover<2->{P(A \cup B)     &= P(A) + P(B) - P(A \cap B) \\
+                            &= P(A) + P(B) - P(A) \cdot P(B) \\
+                            &= 0.95 + 0.88 - 0.95 \cdot 0.88 \\
+                            &= 0.994.\\[2ex]}
+        \uncover<3->{P((A\cup B) \cap C) &= P(A \cup B) \cdot P(C) = 0.994 \cdot 0.92 = 0.91448}
+    \end{align*}
 \end{frame}
 
 \begin{frame}{Voorbeeld: performance van een C-UAS systeem}
     Het C-UAS peloton van 11 Luchtverdedigingsbatterij bewaakt een sector rond een tijdelijke operatiebasis.
     Ze gebruiken een radar/RF-detectiesysteem dat automatisch alarm slaat wanneer het een mogelijk vijandelijke drone waarneemt.
-    Van alle objecten die door de lucht de basis naderen, blijkt \SI{6}{\percent} een vijandelijke drone te zijn.
+    Van alle objecten die door de lucht de basis naderen, blijkt \SI{10}{\percent} een vijandelijke drone te zijn.
     Als er daadwerkelijk een vijandelijke drone is, wordt in \SI{94}{\percent} van de gevallen daadwerkelijk alarm geslagen.
     Als het niet om een vijandelijke drone gaat, wordt in \SI{5}{\percent} van de gevallen alarm geslagen, bijvoorbeeld wanneer het systeem
     niet kan onderscheiden van vogels of onwetende hobbydrones.
@@ -533,13 +484,13 @@
     Uit het boomdiagram kunnen we een aantal kansen afleiden:
     \begin{itemize}
         \item $P(D) = 0.10$ en $P(D') = 0.90$.
-        \item $P(A | D) = 0.94$,  $P(A' | D) = 0.06$, $P(A | D') = 0.05$, $P(A | D') = 0.95$.
+        \item $P(A | D) = 0.94$,  $P(A' | D) = 0.06$, $P(A | D') = 0.05$, $P(A' | D') = 0.95$.
     \end{itemize}
     \vfill
     \textbf{We willen echter de kans $P(D | A)$ berekenen! Hoe kunnen we dat doen?}
 \end{frame}
 
-\begin{frame}{Bayes' Rule}
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
     Merk op dat we de kans $P(A \cap D)$ op twee manieren kunnen schrijven:
     \begin{itemize}
         \item $P(A \cap D) = P(A) \cdot P(D | A)$
@@ -556,7 +507,7 @@
     \]
 \end{frame}
 
-\begin{frame}{Bayes' Rule}
+\begin{frame}{Bayes' regel}
     Deze rekenregel, waarbij we voorwaardelijke kans kunnen \enquote{omdraaien}, noemen we ook wel \concept{Bayes' regel}:\vfill
 
     Voor gebeurtenissen $A$ en $B$ waarbij $P(A) > 0$ geldt dat:
@@ -567,16 +518,18 @@
 \end{frame}
 
 \begin{frame}{Kansvariabelen}
-    Tot nu toe hebben we vooral gerekend met eenvoudige gebeurtenissen:
+    Tot nu toe hebben we vooral gewerkt met kansexperimenten, zoals het werpen van twee dobbelstenen.
     \begin{itemize}
-        \item wel / niet falen van een component
-        \item wel / niet alarm slaan
-        \item wel / niet een vijandelijke drone
-    \end{itemize} 
-
-    Een commandant wil vaak niet alleen weten \emph{of} er een dreiging is, maar vooral ook deze dreiging \emph{kwantificeren} (bv. aantal vijandelijke drones per uur).
-    \vfill
-    Hiervoor bekijken we een \concept{kansvariabele}, oftewel een variabele $X$ waarvan de uitkomst afhangt van het toeval en de uitkomst van een kansexperiment.   
+        \item Uitkomstenruimte $S$
+        \item Kansverdeling over $S$
+        \item Een trekking uit de uitkomstenruimte $S$.
+    \end{itemize}
+    \vfill\pause
+    Bij een worp met twee dobbelstenen krijg je een uitkomst als $(3, 5)$, maar hier kun je niet handig mee rekenen.
+    \vfill\pause
+    Hiervoor bekijken we een \concept{kansvariabele} of \concept{stochast}, oftewel een variabele $X$ die iedere mogelijke uitkomst \enquote{vertaalt} naar een getal. 
+    \vfill\pause
+    \textbf{Voorbeeld:} $X$ is de som van het aantal ogen van twee geworpen dobbelstenen. De uitkomst $(3, 5)$ wordt vertaald naar $8$. 
 \end{frame}
 
 \begin{frame}{Kansvariabelen}
@@ -593,11 +546,11 @@
         \end{tabular}
     \end{center}
     \vfill
-    Vandaag: focus op \concept{discrete kansvariabelen}
+    \textbf{Vandaag:} focus op \concept{discrete kansvariabelen}
 \end{frame}
 
 \begin{frame}{Discrete kansvariabelen}
-    Een \concept{discrete kansvariabele} is een variabele waarvan de uitkomst afhangt van het toeval en uit een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte komt.
+    Een \concept{discrete kansvariabele} is een kansvariabele met een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte van numerieke waarden.
 
     \textbf{Voorbeelden:}
     \begin{itemize}
@@ -610,13 +563,13 @@
 \end{frame}
 
 \begin{frame}{Discrete kansvariabelen: kansmassafunctie}
-    Een \concept{discrete kansvariabele} is een variabele waarvan de uitkomst afhangt van het toeval en uit een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte komt.
+    Een \concept{discrete kansvariabele} is een kansvariabele met een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte van numerieke waarden.
     \vfill
-    De onzekerheid in de uitkomst die een discrete kansvariabele aanneemt kunnen we beschrijven met behulp van een kansmassafunctie:
+    De kansverdeling van een discrete kansvariabele kunnen we beschrijven met een \concept{kansmassafunctie} (\emph{probability measure function (PMF)}):
     \vfill
-    Voor iedere mogelijke uitkomst $x$ in de uitkomstenruimte $S$:
+    Voor iedere mogelijke uitkomst $x$ van de discrete kansvariabele $X$ is de kansmassafunctie $f$ gedefinieerd als:
     \[
-        f(x) = P(X = x) \qquad \text{ kans dat de discrete kansvariabele $X$ uitkomst $x$ aanneemt.}
+        f(x) = P(X = x)
     \]
 \end{frame}
 
@@ -624,11 +577,9 @@
     Een diepe verkenningspeloton infiltreert 's nachts vijandelijk terrein.
     De inlichtingendienst kan niet met zekerheid zeggen hoeveel vijandelijke patrouilles het peloton zal kruisen.
     \vfill
-
     Op basis van eerdere satellietbeelden en drone-observaties kan de inlichtingendienst de volgende kansmassafunctie opstellen voor het aantal vijandelijke patrouilles $X$ dat het peloton doorkruist:
     \vfill
-    
-    {\small
+   {\small
         \begin{center}
             \begin{tabular}{*{11}{c}}
                 \toprule
@@ -686,14 +637,15 @@
                 &= 0 \cdot 0.10 + 1 \cdot 0.09 + \ldots + 9 \cdot 0.13 \\
                 &= 4.53.
     \end{align*}
-    \vfill
+    \vfill\pause
     \textbf{Merk op:} de verwachtingswaarde hoeft geen geheel getal te zijn, het gaat om een \enquote{gemiddelde uitkomst} wanneer je dit hypothetische experiment heel vaak zou herhalen
 \end{frame}
 
-\begin{frame}{\enquote{Averages do not tell the whole story}}
-    \begin{center}
+\begin{frame}{Een gemiddelde vertelt niet het hele verhaal $\ldots$}
+    \begin{figure}
         \includegraphics[width=\textwidth]{1_drowning_statistician.png}
-    \end{center}
+        \caption{https://sketchplanations.com/sneaky-averages}
+    \end{figure}
 
     Ook in de militaire context is het belangrijk om niet alleen naar gemiddelden te kijken, maar ook naar \concept{maten van spreiding}.
 \end{frame}
@@ -701,7 +653,7 @@
 \begin{frame}{Variantie}
     De \concept{variantie} (\enquote{variance}) van een discrete kansvariabele $X$ is de \concept{kwadratische afstand} tot de verwachtingswaarde $E(X)$ die $X$ \enquote{gemiddeld genomen} zal aannemen:
     \[
-        Var(X) = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x) = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot P(X = x)
+        \Var{X} = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x) = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot P(X = x)
     \]
     \vfill
     \textbf{Intuitie: } gewogen gemiddelde van alle mogelijke kwadratische afstanden $(x - E(X))^2$, met als weging per uitkomst $x$ de kans op die uitkomst $P(X=x)$.
@@ -722,12 +674,12 @@
     }
     We berekenen de variantie als volgt:
     \begin{align*}
-        Var(X)    &= \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x) \\
+        \Var{X} &= \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x) \\
                 &= \left(0 - E(X)\right)^2 \cdot f(0) + \ldots + \left(9 - E(X)\right)^2 \cdot f(9) \\
                 &= \left(0 - 4.53\right)^2 \cdot 0.10 + \ldots + \left(9 - 4.53\right)^2 \cdot 0.13 \\
                 &\approx 8.5691.
     \end{align*}
-    \vfill
+    \vfill\pause
     \textbf{Merk op:} de verwachtingswaarde hoeft geen geheel getal te zijn, het gaat om een \enquote{gemiddelde uitkomst} wanneer je dit hypothetische experiment heel vaak zou herhalen
 \end{frame}
 
@@ -737,14 +689,132 @@
     Om die reden wordt vaker de \concept{standaardafwijking} $\sigma(X)$ bestudeerd.
     Deze vinden we door de wortel uit de variantie te nemen:
     \[
-        \sigma(X) = \sqrt{Var(X)}.
+        \sigma(X) = \sqrt{\Var{X}}.
     \]\pause
     \vfill
-    In ons voorbeeld krijgen we dan
-
+    \textbf{Voorbeeld:}
     \[
-        \sigma(X)  = \sqrt{Var(X)} = \sqrt{8.5691} \approx 2.9273.
+        \sigma(X)  = \sqrt{\Var{X}} = \sqrt{8.5691} \approx 2.9273.
     \]
+\end{frame}
+
+\begin{frame}{Discrete kansvariabelen: cumulatieve verdelingsfunctie}
+    Een \concept{discrete kansvariabele} is een kansvariabele met een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte van numerieke waarden.
+    \vfill
+    Een alternatieve manier om de kansverdeling van een discrete kansvariabele te beschrijven is door middel van
+    de \concept{cumulatieve verdelingsfunctie} (\emph{cumulative distribution function (CDF)}):
+    \vfill
+    Nu kijken we niet naar de kans op een uitkomst $x$, maar de kans op \emph{hoogstens} een uitkomst $x$:
+    \[
+        F(x) = P(X \leq x)
+    \]
+\end{frame}
+
+\begin{frame}{Cumulatieve verdelingsfunctie}
+    Een diepe verkenningspeloton infiltreert 's nachts vijandelijk terrein.
+    De inlichtingendienst kan niet met zekerheid zeggen hoeveel vijandelijke patrouilles het peloton zal kruisen.
+    \vfill
+    Op basis van eerdere satellietbeelden en drone-observaties kan de inlichtingendienst de volgende kansmassafunctie opstellen voor het aantal vijandelijke patrouilles $X$ dat het peloton doorkruist:
+    \vfill
+   {\small
+        \begin{center}
+            \begin{tabular}{*{11}{c}}
+                \toprule
+                    $x$     & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\
+                \midrule    
+                    $f(x)$  & \cellcolor<1,3,5,7,9,11,13,15,17,19>{highlightcolor}$0.10$ & \cellcolor<3,5,7,9,11,13,15,17,19>{highlightcolor}$0.09$ & \cellcolor<5,7,9,11,13,15,17,19>{highlightcolor}$0.12$ & \cellcolor<7,9,11,13,15,17,19>{highlightcolor}$0.07$ & \cellcolor<9,11,13,15,17,19>{highlightcolor}$0.15$ & \cellcolor<11,13,15,17,19>{highlightcolor}$0.09$ & \cellcolor<13,15,17,19>{highlightcolor}$0.08$ & \cellcolor<15,17,19>{highlightcolor}$0.07$ & \cellcolor<17,19>{highlightcolor}$0.10$ & \cellcolor<19>{highlightcolor}$0.13$ \\
+                \midrule
+                    $F(x)$  & \uncover<2->{\cellcolor<2>{highlightcolor}$0.10$} & \uncover<4->{\cellcolor<4>{highlightcolor}$0.19$} & \uncover<6->{\cellcolor<6>{highlightcolor}$0.31$} & \uncover<8->{\cellcolor<8>{highlightcolor}$0.38$} & \uncover<10->{\cellcolor<10>{highlightcolor}$0.53$} & \uncover<12->{\cellcolor<12>{highlightcolor}$0.62$} & \uncover<14->{\cellcolor<14>{highlightcolor}$0.70$} & \uncover<16->{\cellcolor<16>{highlightcolor}$0.77$} & \uncover<18->{\cellcolor<18>{highlightcolor}$0.87$} & \uncover<20->{\cellcolor<20>{highlightcolor}$1$} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+\end{frame}
+
+\begin{frame}{Cumulatieve verdelingsfunctie}
+    
+   {\small
+        \begin{center}
+            \begin{tabular}{*{11}{c}}
+                \toprule
+                    $x$     & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\
+                \midrule
+                    $F(x)$  & $0.10$ & $0.19$ & $0.31$ & $0.38$ & $0.53$ & $0.62$ & $0.70$ & $0.77$ & $0.87$ & $1$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+    \vfill
+    \begin{enumerate}
+        \item Wat is de kans dat er minimaal vijf patrouilles zijn?
+        \item Wat is de kans dat er minimaal twee en maximaal zes patrouilles zijn?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Cumulatieve verdelingsfunctie}
+    \textbf{Wat is de kans dat er minimaal vijf patrouilles zijn?}
+    {\small
+        \begin{center}
+            \begin{tabular}{*{11}{c}}
+                \toprule
+                    $x$     & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\
+                \midrule
+                    $F(x)$  & $0.10$ & $0.19$ & $0.31$ & $0.38$ & $0.53$ & $0.62$ & $0.70$ & $0.77$ & $0.87$ & $1$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+    \vfill
+    De kans die we willen berekenen is dan $P(X \geq 5)$.
+    \vfill\pause
+    Stel $A$ is de gebeurtenis \enquote{($X \ge 5$)}, dan is het complement $A'$ de gebeurtenis \enquote{($X < 5$)}, oftewel \enquote{($X \leq 4$)}.
+    \vfill\pause
+    Met de complementregel vinden we dan:
+    \[
+        P(X \geq 5) = 1 - P(X \leq 4) = 1 - F(4) = 1 - 0.53 = 0.47.
+    \]
+\end{frame}
+
+\begin{frame}{Cumulatieve verdelingsfunctie}
+    \textbf{Wat is de kans dat er minimaal twee en maximaal zes patrouilles zijn?}
+    {\small
+        \begin{center}
+            \begin{tabular}{*{11}{c}}
+                \toprule
+                    $x$     & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\
+                \midrule
+                    $F(x)$  & $0.10$ & $0.19$ & $0.31$ & $0.38$ & $0.53$ & $0.62$ & $0.70$ & $0.77$ & $0.87$ & $1$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+    \vfill
+    Stel $A$ is de gebeurtenis \enquote{$(X \leq 6)$}, dan is deze op te delen in gebeurtenissen \enquote{$(X \leq 1)$} ($B$) en \enquote{$(2 \leq X \leq 6)$} ($C$).
+    \vfill\pause
+    Omdat $B$ en $C$ een lege doorsnede hebben, geldt:
+    \[
+        P(X \leq 6) = P(X \leq 1) + P(2 \leq X \leq 6).
+    \]
+    \vfill\pause
+    Omschrijven geeft:
+    \[
+        P(2 \leq X \leq 6) = P(X \leq 6) - P(X \leq 1) = F(6) - F(1) = 0.70 - 0.19 = 0.51.
+    \]
+\end{frame}
+
+\begin{frame}{Samenvatting en vooruitblik}
+    \textbf{Volgend college:}
+    \begin{itemize}
+        \item Fundamenten en rekenregels van de kansrekening
+        \item Van kansexperimenten naar kansvariabelen
+    \end{itemize}
+    \vfill
+    \textbf{Volgend college:}
+    \begin{itemize}
+        \item Continue kansvariabelen
+        \item Normale verdeling en de centrale limietstelling
+        \item Introductie in de statistiek
+    \end{itemize}
 \end{frame}
 
 \end{document}

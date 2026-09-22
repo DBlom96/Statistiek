@@ -12,15 +12,15 @@
     \end{itemize}
 }
 
-\newenvironment{enquestion}[2] % #1 = points, #2 = question
-{%
-    \newpage
-    \refstepcounter{question}
-    \textbf{Problem \arabic{question} (#1 points)} {#2}
-    \begin{itemize}[label={}, left=1.5em, itemsep=1.5em]
-}{
-    \end{itemize}
-}
+% \newenvironment{enquestion}[2] % #1 = points, #2 = question
+% {%
+%     \newpage
+%     \refstepcounter{question}
+%     \textbf{Problem \arabic{question} (#1 points)} {#2}
+%     \begin{itemize}[label={}, left=1.5em, itemsep=1.5em]
+% }{
+%     \end{itemize}
+% }
 
 % Subquestion Command
 \renewenvironment{subquestion}[2]{% #1 = points, #2 = subquestion text
@@ -43,23 +43,23 @@
   \fi%
 }
 
-% Answer Box Environment
-\newcommand{\solution}[1]{%
-    \ifshowanswers
-        \begin{tcolorbox}[breakable,
-            colback=blue!5,
-            colframe=blue!40, 
-            coltext=green!50!black, 
-            before upper={\color{green!50!black}},
-            title=Uitwerking,
-            parskip=1em,      % ruimte tussen paragrafen binnen de box
-            before skip=1em,  % ruimte vóór de box
-            after skip=1em    % ruimte ná de box
-        ]
-            #1
-        \end{tcolorbox}
-    \fi
-}
+% % Answer Box Environment
+% \newcommand{\solution}[1]{%
+%     \ifshowanswers
+%         \begin{tcolorbox}[breakable,
+%             colback=blue!5,
+%             colframe=blue!40, 
+%             coltext=green!50!black, 
+%             before upper={\color{green!50!black}},
+%             title=Uitwerking,
+%             parskip=1em,      % ruimte tussen paragrafen binnen de box
+%             before skip=1em,  % ruimte vóór de box
+%             after skip=1em    % ruimte ná de box
+%         ]
+%             #1
+%         \end{tcolorbox}
+%     \fi
+% }
 
 \newcommand{\ensolution}[1]{%
     \ifshowanswers

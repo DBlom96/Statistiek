@@ -11,7 +11,7 @@
         Bereken de kritieke grenswaarde $g$ (in meters) waaronder een hoogtemeter wordt afgekeurd.
         Rond je antwoord af op één decimaal.
     }
-    \solution{
+    \answer{
         Er is gegeven dat de kansvariabele $X$ de hoogte meet waarop een willekeurige hoogtemeter uit de fabriek de kritieke luchtdruk meet, 
         en dat $X$ normaal verdeeld is met $\mu = 1200$ en $\sigma = 35$.
 
@@ -33,7 +33,7 @@
         Een hoogtemeter weigert dienst als deze een hoogte meet die lager is dan de zojuist in subvraag (a) berekende grenswaarde $g$.
         Bereken de kans dat een willekeurige hoogtemeter dienst weigert.
     }
-    \solution{
+    \answer{
         De kansvariabele $X$ is in dit geval normaal verdeeld is met $\mu = 1200$ en $\sigma = 25$.\rubric{1}
         De hoogtemeter weigert dienst als de hoogte $X$ waarop de exacte luchtdruk wordt gemeten kleiner dan de berekende grenswaarde $1131.4$ is, oftewel $P(X \leq 1131.4)$.\rubric{1}
         Dit kunnen we berekenen met de functie \enquote{normalcdf}:
@@ -49,7 +49,7 @@
         De commandant eist dat de kans dat er minstens één hoogtemeter dienst weigert binnen het peloton, hoogstens \SI{10}{\percent} mag zijn.
         Bepaal het maximale aantal parachutisten $n$ dat aan deze sprong mag deelnemen om nog aan de veiligheidseis van de commandant te voldoen.
     }
-    \solution{
+    \answer{
         Stel $Y$ is de kansvariabele die het aantal dienstweigerende hoogtemeters telt.
         Aangezien de hoogtemeters onafhankelijk van elkaar worden ingezet, is $Y$ een binomiale kansvariabele. \rubric{1}
         De parameters van deze binomiale verdeling zijn een onbekende $n$ en de succeskans $p \approx 0.0030$ (kans dat een hoogtemeter dienst weigert).\rubric{2}
@@ -74,7 +74,7 @@
         Stel dat de fabrikant de hoogtemeters nog verder doorontwikkelt, waardoor de kans op een dienstweigerende hoogtemeter nog verder daalt tot $0.001$.
         Bereken de verwachtingswaarde en de standaardafwijking van het aantal dienstweigerende hoogtemeters, gegeven het maximale aantal parachutisten zoals berekend bij subvraag (c).
     }
-    \solution{
+    \answer{
         In dat geval is het aantal dienstweigerende hoogtemeters $Y$ binomiaal verdeeld met parameters $n = 35$ en $p = 0.001$.\rubric{2}
 
         De formules voor de verwachtingswaarde $E(Y)$ en de standaardafwijking $\sigma(Y)$ zijn dan als volgt:

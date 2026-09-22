@@ -11,7 +11,7 @@
         \subquestion{4}{
             Toon met berekeningen en een schets van de grafiek van $f$ aan dat $f$ inderdaad voldoet aan de twee voorwaarden voor een kansdichtheidsfunctie.
         }
-        \solution{
+        \answer{
             Een functie $f$ kan dienen als een kansdichtheidsfunctie als geldt:
 
             \textbf{Voorwaarde 1:} de functie $f$ is niet-negatief voor alle waarden van $t$, oftewel \[f(t) \ge 0.\]
@@ -33,7 +33,7 @@
         \subquestion{8}{
             Bereken de verwachtingswaarde $E(T)$ en de standaardafwijking $\sigma(T)$ met behulp van de algemene formules op het formuleblad.
         }
-        \solution{
+        \answer{
             De verwachtingswaarde $E(T)$ berekenen we door middel van
             \begin{align*}
                 E(T) = \int_{-\infty}^{\infty} t\cdot f(t)\dt &= \int_{0}^{3} t \cdot \frac{4}{27}\cdot t^2 \cdot (3 - t)\dt \\
@@ -54,7 +54,7 @@
             Bereken de mediaan van $T$.\\
             {\scriptsize \textbf{Hint:} de mediaan van een kansverdeling is de uitkomst $m$ waarvoor geldt dat $P(T \le m) = P(T \ge m) = 0.5$.}
         }
-        \solution{
+        \answer{
             Om de mediaan van $T$ te vinden moeten we een grenswaarde $m$ bepalen waarvoor geldt $P(T \le m) = \int_{-\infty}^{m} f(t)\dt = 0.5$. \rubric{1}
             Deze vergelijking kunnen we oplossen door de \enquote{numeric solver} te gebruiken:
             \begin{align*}
@@ -74,7 +74,7 @@
         \subquestion{5}{
             Bereken het percentage dronezwermen dat binnen één minuut wordt gedetecteerd.
         }
-        \solution{
+        \answer{
             We starten door de kans $P(T < 1)$ te berekenen:
             \[
                 P(T < 1) = \int_{-\infty}^{1} f(t) \dt = \int_{0}^{1} \frac{4}{27} \cdot t^2 \cdot (3-t) \dt \approx 0.1111. \rubric{4}
@@ -87,7 +87,7 @@
             De missie is succesvol als er tenminste een zwerm drones is die meer dan één minuut onopgemerkt blijft.
             Hoe groot is de kans op succes in deze surveillancemissie?
         }
-        \solution{
+        \answer{
             Laat $Y$ nu het aantal dronezwermen zijn dat meer dan één minuut onopgemerkt blijft.
             In dat geval is $Y$ een binomiaal verdeelde kansvariabele met parameters $n = 6$ (aantal dronezwermen) en $p \approx 1-0.1111 = 0.8889$ (kans dat een dronezwerm langer dan een minuut onopgemerkt blijft).\rubric{2}
             De kans op een succesvolle missie is gelijk aan de kans dat minstens een zwerm drones langer dan één minuut onopgemerkt blijft, oftewel
