@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  17 SEP 2026 09:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  22 SEP 2026 10:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -996,19 +996,19 @@ Preview: PDFoutput 1
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 (venn_diagrams.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 110.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 94.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-Overfull \hbox (34.94304pt too wide) in paragraph at lines 110--110
+Overfull \hbox (77.62212pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
@@ -1016,7 +1016,7 @@ Preview: Tightpage 0 0 0 0
 [1{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 
-Overfull \hbox (34.94304pt too wide) in paragraph at lines 110--110
+Overfull \hbox (77.62212pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
@@ -1024,7 +1024,7 @@ Preview: Tightpage 0 0 0 0
 [2]
 
 
-Overfull \hbox (34.94304pt too wide) in paragraph at lines 110--110
+Overfull \hbox (77.62212pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
@@ -1032,7 +1032,7 @@ Preview: Tightpage 0 0 0 0
 [3]
 
 
-Overfull \hbox (34.94304pt too wide) in paragraph at lines 110--110
+Overfull \hbox (77.62212pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
@@ -1040,7 +1040,7 @@ Preview: Tightpage 0 0 0 0
 [4]
 
 
-Overfull \hbox (34.94304pt too wide) in paragraph at lines 110--110
+Overfull \hbox (77.62212pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
@@ -1065,17 +1065,17 @@ Package rerunfilecheck Info: File `venn_diagrams.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41934 strings out of 468133
- 1037054 string characters out of 5430719
+ 41922 strings out of 468133
+ 1036956 string characters out of 5430719
  1527335 words of memory out of 5000000
- 69632 multiletter control sequences out of 15000+600000
- 639721 words of font info for 86 fonts, out of 8000000 for 9000
+ 69628 multiletter control sequences out of 15000+600000
+ 638691 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 142i,11n,137p,1275b,888s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi17.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on venn_diagrams.pdf (5 pages, 52216 bytes).
+ 142i,11n,137p,1275b,909s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi17.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on venn_diagrams.pdf (5 pages, 37001 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  10 named destinations out of 1000 (max. 500000)
  47 words of extra memory for PDF output out of 10000 (max. 10000000)
 

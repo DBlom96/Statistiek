@@ -1,0 +1,107 @@
+\documentclass[tikz, beamer, preview]{standalone}
+\input{../styles/tikz_config.tex}
+\input{../styles/macros.tex}
+
+\begin{document}
+    \begin{standaloneframe}
+        \begin{tikzpicture}[scale=1.5]
+            \only<+>{
+                \node (start) at (0, 0) {};
+
+                \node (drone) at (3, 1.25) {\color{blue}$0.10$};
+                \node (nodrone) at (3, -1.25) {\color{blue}$1 - 0.10 = 0.90$};
+
+                \node[text width=3cm, anchor=west] (dronealarm) at (6, 1.75) {\quad\color{blue}$0.94$};
+                \node[text width=3cm, anchor=west] (dronenoalarm) at (6, 0.75) {\quad\color{blue}$1 - 0.94 = 0.06$};
+                \node[text width=3cm, anchor=west] (nodronealarm) at (6, -0.75) {\quad\color{blue}$1 - 0.05 = 0.95$};
+                \node[text width=3cm, anchor=west] (nodronenoalarm) at (6, -1.75) {\quad\color{blue}$0.05$};
+
+                % Draw edges
+
+                \draw (start.north east) -- node[midway, sloped, above] {Drone} (drone.south west);
+                \draw (start.south east) -- node[midway, sloped, below] {Geen drone} (nodrone.north west);
+
+                \draw (drone.north east) -- node[midway, sloped, above] {Alarm} (dronealarm.west);
+                \draw (drone.south east) -- node[midway, sloped, below] {Geen alarm} (dronenoalarm.west);
+                \draw (nodrone.north east) -- node[midway, sloped, above] {Alarm} (nodronealarm.west);
+                \draw (nodrone.south east) -- node[midway, sloped, below] {Geen alarm} (nodronenoalarm.west);
+            }
+
+            \only<+>{
+                \node (start) at (0, 0) {};
+
+                \node (drone) at (3, 1.25) {\color{highlightcolor}$0.10$};
+                \node (nodrone) at (3, -1.25) {\color{blue}$1 - 0.10 = 0.90$};
+
+                \node[text width=3cm, anchor=west] (dronealarm) at (6, 1.75) {\quad\color{highlightcolor}$0.94$};
+                \node[text width=3cm, anchor=west] (dronenoalarm) at (6, 0.75) {\quad\color{blue}$1 - 0.94 = 0.06$};
+                \node[text width=3cm, anchor=west] (nodronealarm) at (6, -0.75) {\quad\color{blue}$1 - 0.05 = 0.95$};
+                \node[text width=3cm, anchor=west] (nodronenoalarm) at (6, -1.75) {\quad\color{blue}$0.05$};
+
+                \node[right of=dronealarm, xshift=3cm] (probdronalarm) {\color{highlightcolor} Kans: $0.10 \cdot 0.94 = 0.094$};
+
+                % Draw edges
+
+                \draw[highlightcolor] (start.north east) -- node[midway, sloped, above] {Drone} (drone.south west);
+                \draw (start.south east) -- node[midway, sloped, below] {Geen drone} (nodrone.north west);
+
+                \draw[highlightcolor] (drone.north east) -- node[midway, sloped, above] {Alarm} (dronealarm.west);
+                \draw (drone.south east) -- node[midway, sloped, below] {Geen alarm} (dronenoalarm.west);
+                \draw (nodrone.north east) -- node[midway, sloped, above] {Alarm} (nodronealarm.west);
+                \draw (nodrone.south east) -- node[midway, sloped, below] {Geen alarm} (nodronenoalarm.west);
+            }
+
+            \only<+>{
+                \node (start) at (0, 0) {};
+
+                \node (drone) at (3, 1.25) {\color{highlightcolor}$0.10$};
+                \node (nodrone) at (3, -1.25) {$1 - 0.10 = 0.90$};
+
+                \node[text width=3cm, anchor=west] (dronealarm) at (6, 1.75) {\quad\color{highlightcolor}$0.94$};
+                \node[text width=3cm, anchor=west] (dronenoalarm) at (6, 0.75) {\quad\color{blue}$1 - 0.94 = 0.06$};
+                \node[text width=3cm, anchor=west] (nodronealarm) at (6, -0.75) {\quad$1 - 0.05 = 0.95$};
+                \node[text width=3cm, anchor=west] (nodronenoalarm) at (6, -1.75) {\quad\color{blue}$0.05$};
+
+                \node[right of=dronealarm, xshift=3cm] (probdronalarm) {\color{highlightcolor} Kans: $0.10 \cdot 0.94 = 0.094$};
+                % \node[right of=nodronealarm, xshift=3cm] (probdronalarm) {\color{highlightcolor} Kans: $0.90 \cdot 0.05 = 0.045$};
+
+
+                % Draw edges
+
+                \draw[highlightcolor] (start.north east) -- node[midway, sloped, above] {Drone} (drone.south west);
+                \draw (start.south east) -- node[midway, sloped, below] {Geen drone} (nodrone.north west);
+
+                \draw[highlightcolor] (drone.north east) -- node[midway, sloped, above] {Alarm} (dronealarm.west);
+                \draw (drone.south east) -- node[midway, sloped, below] {Geen alarm} (dronenoalarm.west);
+                \draw (nodrone.north east) -- node[midway, sloped, above] {Alarm} (nodronealarm.west);
+                \draw (nodrone.south east) -- node[midway, sloped, below] {Geen alarm} (nodronenoalarm.west);
+            }
+
+            \only<+>{
+                \node (start) at (0, 0) {};
+
+                \node (drone) at (3, 1.25) {\color{highlightcolor}$0.10$};
+                \node (nodrone) at (3, -1.25) {\color{highlightcolor}$1 - 0.10 = 0.90$};
+
+                \node[text width=3cm, anchor=west] (dronealarm) at (6, 1.75) {\quad\color{highlightcolor}$0.94$};
+                \node[text width=3cm, anchor=west] (dronenoalarm) at (6, 0.75) {\quad\color{blue}$1 - 0.94 = 0.06$};
+                \node[text width=3cm, anchor=west] (nodronealarm) at (6, -0.75) {\quad\color{highlightcolor}$1 - 0.05 = 0.95$};
+                \node[text width=3cm, anchor=west] (nodronenoalarm) at (6, -1.75) {\quad\color{blue}$0.05$};
+
+                \node[right of=dronealarm, xshift=3cm] (probdronalarm) {\color{highlightcolor} Kans: $0.10 \cdot 0.94 = 0.094$};
+                \node[right of=nodronealarm, xshift=3cm] (probdronalarm) {\color{highlightcolor} Kans: $0.90 \cdot 0.05 = 0.045$};
+
+
+                % Draw edges
+
+                \draw[highlightcolor] (start.north east) -- node[midway, sloped, above] {Drone} (drone.south west);
+                \draw[highlightcolor] (start.south east) -- node[midway, sloped, below] {Geen drone} (nodrone.north west);
+
+                \draw[highlightcolor] (drone.north east) -- node[midway, sloped, above] {Alarm} (dronealarm.west);
+                \draw (drone.south east) -- node[midway, sloped, below] {Geen alarm} (dronenoalarm.west);
+                \draw[highlightcolor] (nodrone.north east) -- node[midway, sloped, above] {Alarm} (nodronealarm.west);
+                \draw (nodrone.south east) -- node[midway, sloped, below] {Geen alarm} (nodronenoalarm.west);
+            }
+        \end{tikzpicture}
+    \end{standaloneframe}
+\end{document}

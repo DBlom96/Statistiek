@@ -1,0 +1,56 @@
+\documentclass[tikz, beamer, preview]{standalone}
+\input{../styles/tikz_config.tex}
+\input{../styles/macros.tex}
+
+\begin{document}
+    \begin{standaloneframe}
+        \def\shift{1}
+        \begin{tikzpicture}[scale=1.5]
+            \only<+>{
+                \node (start) at (-2, 0) {};
+                \node (stop) at (3.25, 0) {};
+
+                % Top branch nodes
+                \node[device] (A) at (0, 1) {$A$};
+                \node[device] (B) at (0, -1) {$B$};
+                \node[device] (C) at (2, 0) {$C$};
+                
+                \node (TL) at ($(A)+(-\shift,0)$) {};
+                \node (TR) at ($(A)+(\shift,0)$) {};
+                \node (BL) at ($(B)+(-\shift,0)$) {};
+                \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+                % Add connections
+                \draw (A.west) -- (TL.center) |- (start);
+                \draw (B.west) -- (BL.center) |- (start);
+                \draw (A.east) -- (TR.center) |- (C.west);
+                \draw (B.east) -- (BR.center) |- (C.west);
+                \draw (C.east) -- (stop);
+            }
+
+            \only<+>{
+                \node (start) at (-2, 0) {};
+                \node (stop) at (3.25, 0) {};
+
+                % Top branch nodes
+                \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
+                \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
+                \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
+                
+                \node (TL) at ($(A)+(-\shift,0)$) {};
+                \node (TR) at ($(A)+(\shift,0)$) {};
+                \node (BL) at ($(B)+(-\shift,0)$) {};
+                \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+                % Add connections
+                \draw (A.west) -- (TL.center) |- (start);
+                \draw (B.west) -- (BL.center) |- (start);
+                \draw (A.east) -- (TR.center) |- (C.west);
+                \draw (B.east) -- (BR.center) |- (C.west);
+                \draw (C.east) -- (stop);
+            }
+        \end{tikzpicture}
+    \end{standaloneframe}
+\end{document}

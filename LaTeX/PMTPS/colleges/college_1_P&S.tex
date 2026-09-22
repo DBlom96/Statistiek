@@ -51,7 +51,7 @@
         \end{tabular}
     \end{center}
     \vfill
-    \textbf{Locatie:} Kromhoutkazerne, gebouw K2 (Pontonnierszaal)
+    \textbf{Locatie:} raadpleeg het rooster in Eduflex
 \end{frame}
 
 \begin{frame}{Cursusdoelen}
@@ -84,108 +84,48 @@
     \end{center}
 \end{frame}
 
+\begin{frame}{Vandaag}
+    \begin{itemize}\setlength\itemsep{2em}
+        \item Militaire voorbeelden van kansrekening en onzekerheid
+        \item Fundamenten en rekenregels van de kansrekening
+        \item Introductie in kansvariabelen
+        \begin{itemize}
+            \item Kansmassafunctie (PMF)
+            \item Cumulatieve verdelingsfunctie (CDF)
+            \item Verwachtingswaarde, variantie en standaardafwijking
+        \end{itemize}
+    \end{itemize}
+    \vfill
+    \textbf{Dit komt ruwweg overeen met de inhoud van learning tasks 1 t/m 3.}
+\end{frame}
+
 \begin{frame}{Kansrekening in de militaire praktijk}
-    Een circuit van componenten is functioneel als geldt dat er een pad van werkende componenten van begin tot eind:
+    Een circuit van componenten is functioneel als er een pad bestaat van werkende componenten van links naar rechts:
     \vfill
     \textbf{Deterministisch:} iedere component functioneert met kans $1$.
     Wat is de kans dat het circuit functioneert?
     \vfill
     \begin{center}
-        \def\shift{1}
-        \begin{tikzpicture}[
-            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
-            line width=0.6pt
-        ]
-            \node (start) at (-2, 0) {};
-            \node (stop) at (4, 0) {};
-
-            % Top branch nodes
-            \node[device] (A) at (0, 1) {$A$};
-            \node[device] (B) at (0, -1) {$B$};
-            \node[device] (C) at (2, 0) {$C$};
-            
-            \node (TL) at ($(A)+(-\shift,0)$) {};
-            \node (TR) at ($(A)+(\shift,0)$) {};
-            \node (BL) at ($(B)+(-\shift,0)$) {};
-            \node (BR) at ($(B)+(\shift,0)$) {};
-
-
-            % Add connections
-            \draw (A.west) -- (TL.center) |- (start);
-            \draw (B.west) -- (BL.center) |- (start);
-            \draw (A.east) -- (TR.center) |- (C.west);
-            \draw (B.east) -- (BR.center) |- (C.west);
-            \draw (C.east) -- (stop);
-        \end{tikzpicture}
+        \includegraphics[page=1, width=0.5\textwidth]{../tikz/1_example_circuit.pdf}%
     \end{center}
     \vfill\pause
-    \textbf{Heel flauw voorbeeld: het circuit blijft met kans $1$ functioneren.}
+    \textbf{Flauw voorbeeld: het circuit functioneert met kans $1$ (geen uitval).}
 \end{frame}
 
 \begin{frame}{Kansrekening in de militaire praktijk}
     In de praktijk is er echter een hoop onzekerheid over het faalgedrag van componenten.
     \vfill
-    \textbf{Stochastisch:} voor iedere component is de kans op functioneren een getal op het interval $[0, 1]$ (zie getallen), onafhankelijk van elkaar.
+    \textbf{Stochastisch:} voor iedere component is de kans op functioneren een getal op het interval $[0, 1]$, onafhankelijk van elkaar.
     Wat is de kans dat het circuit functioneert?
     \vfill
     \begin{center}
-        \def\shift{1}
-        \begin{tikzpicture}[
-            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
-            line width=0.6pt
-        ]
-            \node (start) at (-2, 0) {};
-            \node (stop) at (4, 0) {};
-
-            % Top branch nodes
-            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
-            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
-            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
-            
-            \node (TL) at ($(A)+(-\shift,0)$) {};
-            \node (TR) at ($(A)+(\shift,0)$) {};
-            \node (BL) at ($(B)+(-\shift,0)$) {};
-            \node (BR) at ($(B)+(\shift,0)$) {};
-
-
-            % Add connections
-            \draw (A.west) -- (TL.center) |- (start);
-            \draw (B.west) -- (BL.center) |- (start);
-            \draw (A.east) -- (TR.center) |- (C.west);
-            \draw (B.east) -- (BR.center) |- (C.west);
-            \draw (C.east) -- (stop);
-        \end{tikzpicture}
+        \includegraphics[page=2, width=0.5\textwidth]{../tikz/1_example_circuit.pdf}%
     \end{center}
 \end{frame}
 
 \begin{frame}{Kansrekening in de militaire praktijk}
     \begin{center}
-        \def\shift{1}
-        \begin{tikzpicture}[
-            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
-            line width=0.6pt
-        ]
-            \node (start) at (-2, 0) {};
-            \node (stop) at (4, 0) {};
-
-            % Top branch nodes
-            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
-            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
-            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
-            
-            \node (TL) at ($(A)+(-\shift,0)$) {};
-            \node (TR) at ($(A)+(\shift,0)$) {};
-            \node (BL) at ($(B)+(-\shift,0)$) {};
-            \node (BR) at ($(B)+(\shift,0)$) {};
-
-
-            % Add connections
-            \draw (A.west) -- (TL.center) |- (start);
-            \draw (B.west) -- (BL.center) |- (start);
-            \draw (A.east) -- (TR.center) |- (C.west);
-            \draw (B.east) -- (BR.center) |- (C.west);
-            \draw (C.east) -- (stop);
-        \end{tikzpicture}
+        \includegraphics[page=2, width=0.5\textwidth]{../tikz/1_example_circuit.pdf}%
     \end{center}
     \vfill
     Dit stochastische geval is al lastiger. 
@@ -194,163 +134,44 @@
 
 \begin{frame}{Kansrekening in de militaire praktijk}
     In de militaire praktijk hebben we heel vaak te maken met onzekerheid.
-    \begin{itemize}\setlength\itemsep{2em}
-        \item Hoe kunnen we onze strategie coördineren bij zoeken en detecteren van vijandelijke onderzeeboten?
-        \item Hoe kunnen we de betrouwbaarheid van communicatiesystemen analyseren?
-        \item Hoeveel reserveonderdelen (\enquote{spare parts}) moeten we op een missie meenemen?
+    \begin{itemize}\setlength\itemsep{1.5em}
+        \item Strategie coördineren bij het zoeken naar vijandelijke onderzeeboten.
+        \item Betrouwbaarheid van communicatiesystemen analyseren.
+        \item Welke reserveonderdelen (\enquote{spare parts}) moeten we meenemen op een missie?
         \item Hoeveel slachtoffers krijgt de medische keten te verwerken bij een \enquote{mass casualty event}?
         \item Welke invloed hebben meteorologische verschijnselen op raketbanen?
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Kansexperiment: worp met twee dobbelstenen}
-    Wat voor eigenschappen heeft een dergelijk \textbf{\color{concept} kansexperiment}?\medskip
-
-    \pause
-    \only<+>{
+    Wat voor eigenschappen heeft een dergelijk \concept{kansexperiment}?
+    
+    \only<1>{
+       \color{white} De uitkomstenruimte (\emph{sample space}) is als volgt:\medskip
+    }
+    \only<2>{
         \begin{itemize}
-            \item De \textbf{\color{concept} uitkomstenruimte} (\emph{sample space}) is als volgt:\medskip
-            \begin{center}
-                \begin{tikzpicture}[scale=0.8]
-                    \def\xscale{1.5}
-
-                    \node at (0, 1) {\faDiceOne};
-                    \node at (0, 2) {\faDiceTwo};
-                    \node at (0, 3) {\faDiceThree};
-                    \node at (0, 4) {\faDiceFour};
-                    \node at (0, 5) {\faDiceFive};
-                    \node at (0, 6) {\faDiceSix};
-                    \node[align=center, rotate=90] at (-0.75, 3.5) {Dobbelsteen $1$};
-
-                    \node at (1, 0) {\faDiceOne};
-                    \node at (2, 0) {\faDiceTwo};
-                    \node at (3, 0) {\faDiceThree};
-                    \node at (4, 0) {\faDiceFour};
-                    \node at (5, 0) {\faDiceFive};
-                    \node at (6, 0) {\faDiceSix};
-                    \node[align=center] at (3.5, -0.75) {Dobbelsteen $2$};
-
-                    \foreach \x in {1, ..., 6}
-                    {
-                        \foreach \y in {1, ..., 6}
-                        {
-                            \node (\x-\y) at (\x, \y) {\scriptsize$(\x, \y)$};
-                        }
-                    }
-                    
-                    \foreach \x in {1, ..., 7}
-                    {
-                        \draw (\x-0.5, 0.5) -- (\x-0.5, 6.5);
-                    }
-
-
-                    \foreach \y in {1, ..., 7}
-                    {
-                        \draw (0.5, \y-0.5) -- (6.5, \y-0.5);
-                    }
-
-                \end{tikzpicture}
-            \end{center}
+            \item De \concept{uitkomstenruimte} (\emph{sample space}) is als volgt:
         \end{itemize}
     }
-
-    \only<+>{
+    \only<3>{
         \begin{itemize}
-            \item De \textbf{\color{concept} kansverdeling over de uitkomstenruimte} is als volgt:\medskip
-            \begin{center}
-                \begin{tikzpicture}[scale=0.8]
-                    \def\xscale{1.5}
-
-                    \node at (0, 1) {\faDiceOne};
-                    \node at (0, 2) {\faDiceTwo};
-                    \node at (0, 3) {\faDiceThree};
-                    \node at (0, 4) {\faDiceFour};
-                    \node at (0, 5) {\faDiceFive};
-                    \node at (0, 6) {\faDiceSix};
-                    \node[align=center, rotate=90] at (-0.75, 3.5) {Dobbelsteen $1$};
-
-                    \node at (1, 0) {\faDiceOne};
-                    \node at (2, 0) {\faDiceTwo};
-                    \node at (3, 0) {\faDiceThree};
-                    \node at (4, 0) {\faDiceFour};
-                    \node at (5, 0) {\faDiceFive};
-                    \node at (6, 0) {\faDiceSix};
-                    \node[align=center] at (3.5, -0.75) {Dobbelsteen $2$};
-
-                    \foreach \x in {1, ..., 6}
-                    {
-                        \foreach \y in {1, ..., 6}
-                        {
-                            \node (\x-\y) at (\x, \y) {\scriptsize$1/36$};
-                        }
-                    }
-                    
-                    \foreach \x in {1, ..., 7}
-                    {
-                        \draw (\x-0.5, 0.5) -- (\x-0.5, 6.5);
-                    }
-
-
-                    \foreach \y in {1, ..., 7}
-                    {
-                        \draw (0.5, \y-0.5) -- (6.5, \y-0.5);
-                    }
-
-                    % \draw (0.5, 0.5) grid[1.5] (9.5, 9.5);
-                \end{tikzpicture}
-            \end{center}
+            \item De \concept{kansverdeling over de uitkomstenruimte} is als volgt:
         \end{itemize}
     }
-
-    \only<+>{
+    \only<4>{
         \begin{itemize}
-            \item Exact één van de uitkomsten in de uitkomstenruimte wordt gerealiseerd (resultaat van een \textbf{\color{concept} trekking}):
-            \begin{center}
-                \begin{tikzpicture}[scale=0.8]
-                    \def\xscale{1.5}
-
-                    \node at (0, 1) {\faDiceOne};
-                    \node at (0, 2) {\faDiceTwo};
-                    \node at (0, 3) {\faDiceThree};
-                    \node at (0, 4) {\faDiceFour};
-                    \node at (0, 5) {\faDiceFive};
-                    \node at (0, 6) {\faDiceSix};
-                    \node[align=center, rotate=90] at (-0.75, 3.5) {Dobbelsteen $1$};
-
-                    \node at (1, 0) {\faDiceOne};
-                    \node at (2, 0) {\faDiceTwo};
-                    \node at (3, 0) {\faDiceThree};
-                    \node at (4, 0) {\faDiceFour};
-                    \node at (5, 0) {\faDiceFive};
-                    \node at (6, 0) {\faDiceSix};
-                    \node[align=center] at (3.5, -0.75) {Dobbelsteen $2$};
-
-                    \foreach \x in {1, ..., 6}
-                    {
-                        \foreach \y in {1, ..., 6}
-                        {
-                            \node (\x-\y) at (\x, \y) {\scriptsize$1/36$};
-                        }
-                    }
-                    \fill[blue!25] (2.5, 3.5) rectangle (3.5, 4.5);
-                    \node (3-4) at (3, 4) {\scriptsize$1/36$};
-                    
-                    \foreach \x in {1, ..., 7}
-                    {
-                        \draw (\x-0.5, 0.5) -- (\x-0.5, 6.5);
-                    }
-
-
-                    \foreach \y in {1, ..., 7}
-                    {
-                        \draw (0.5, \y-0.5) -- (6.5, \y-0.5);
-                    }
-
-                    % \draw (0.5, 0.5) grid[1.5] (9.5, 9.5);
-                \end{tikzpicture}
-            \end{center}
+            \item Exact één van de uitkomsten in de uitkomstenruimte wordt gerealiseerd (resultaat van een \concept{trekking}):
         \end{itemize}
     }
+    \begin{center}
+        \centering
+        \foreach \ov in {1,...,4}{% 
+            \only<\ov>{%
+                \includegraphics[page=\ov, width=0.5\textwidth]{../tikz/1_rolling_dice.pdf}%
+            }%
+        }%
+    \end{center}
 \end{frame}
 
 \begin{frame}{Kansexperiment}
@@ -373,12 +194,12 @@
     \textbf{Output:} \medskip
 
     \begin{itemize}
-        \item Precies één van de uitkomsten in de uitkomstenruimte (trekking)
+        \item Een trekking van exact één van de uitkomsten in de uitkomstenruimte
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Worp met twee dobbelstenen}
-    Vaak zijn er niet geïnteresseerd in de kans op één specifieke uitkomst, maar de kans op een \textbf{\color{concept} gebeurtenis} (\emph{event}), oftewel een samenstelling van meerdere uitkomsten:
+    Vaak zijn er niet geïnteresseerd in de kans op één specifieke uitkomst, maar de kans op een \concept{gebeurtenis} (\emph{event}), oftewel een samenstelling van meerdere uitkomsten:
 
     \begin{itemize}
         \item Gebeurtenis $A$: er wordt minstens één drie gegooid:
@@ -390,10 +211,13 @@
             B = \set{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)}
         \]
     \end{itemize}
+    \vfill
+    \textbf{Algemeen:} een gebeurtenis $E$ is een deelverzameling van de uitkomstenruimte (notatie: $E \subseteq S$). 
+    De kans $P(E)$ is dan de kans dat één van de uitkomsten in de deelverzameling $E$ wordt gerealiseerd.
 \end{frame}
 
 \begin{frame}{Samenstellingen van gebeurtenissen}
-    Gebeurtenissen kunnen we ook grafisch weergeven met behulp van \textbf{\color{concept} Venndiagrammen}:\medskip
+    Gebeurtenissen kunnen we ook grafisch weergeven met behulp van \concept{Venndiagrammen}:\medskip
 
     Hiermee kunnen we ook weer samenstellingen van gebeurtenissen bekijken:
     \vfill
@@ -401,35 +225,40 @@
         \centering
         \foreach \ov in {1,...,5}{% 
             \only<\ov>{%
-                \includegraphics[page=\ov, width=0.6\textwidth]{../tikz/venn_diagrams.pdf}%
+                \includegraphics[page=\ov, width=0.75\textwidth]{../tikz/venn_diagrams.pdf}%
             }%
         }%
     \end{center}
 \end{frame}
 
 \begin{frame}{Axioma's van de kansrekening}
-    Stel nu dat we een kansexperiment hebben met een uitkomstenruimte $S$, en een gebeurtenis $E \subseteq S$ ($E$ is een \enquote{deelverzameling} van de uitkomstenruimte).
+    Stel nu dat we een kansexperiment hebben met een uitkomstenruimte $S$, en een gebeurtenis $E \subseteq S$.
     \vfill
-    Een \textbf{\color{concept} kansfunctie} $P$ is een functie die aan iedere gebeurtenis $E$ een getal toekent zodat het volgende geldt:
+    Een \concept{kansfunctie} $P$ is een functie die aan iedere gebeurtenis $E$ een getal toekent zodat het volgende geldt:
     \begin{itemize}[<+->]
-        \item $P(S) = 1$
+        \item $P(S) = 1$.
         \item $0 \leq P(E) \leq 1$ voor iedere gebeurtenis $E$.
-        \item Als twee gebeurtenissen $E_1$ en $E_2$ geen overlap hebben ($E_1 \cap E_2 = \emptyset$), dan geldt $P(E_1 \cup E_2) = P(E_1) + P(E_2)$.
+        \item Als twee gebeurtenissen $E_1$ en $E_2$ een lege doorsnede hebben (notatie: $E_1 \cap E_2 = \emptyset$), dan geldt:
+        \[
+            P(E_1 \cup E_2) = P(E_1) + P(E_2).
+        \]
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Handige rekenregels voor kansrekening}
     Met deze axioma's kunnen we een aantal handige rekenregels afleiden:
-    \begin{itemize}\setlength\itemsep{4em}
-        \item Voor een gebeurtenis $E$ geldt voor iedere uitkomst $i$ dat $i$ onderdeel is van $E$ of van $\bar{E}$, oftewel $P(S) = P(E \cup \bar{E}) = P(E) + P(\bar{E}) = 1$:
-        \bigskip
-       
-        $P(E) = 1 - P(\bar{E})$ \hfill (\emph{complementregel})
-
-        \item Als we twee gebeurtenissen hebben $E_1$ en $E_2$ met een overlap, dan tellen we de overlap dubbel als we $P(E_1)$ en $P(E_2)$ optellen.
-        Met andere woorden: \bigskip
+    \begin{itemize}\setlength\itemsep{3em}
+        \item Voor een gebeurtenis $E$ geldt dat de uitkomstenruimte $S$ kan worden opgedeeld in $E$ en haar complement $E'$ ($S = E \cup E'$), oftewel 
+        \[
+            P(S) = P(E \cup E') = P(E) + P(E') = 1
+        \]
+        Hieruit volgt:\bigskip
         
-        $P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2)$ \hfill (\emph{algemene optelregel})
+        $P(E) = 1 - P(E')$ \hfill (\concept{complementregel})
+        
+        \item Als we de kansen van twee gebeurtenissen $E_1$ en $E_2$ optellen, dan wordt de doorsnede $E_1 \cap E_2$ dubbel geteld, oftewel:\bigskip
+        
+        $P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2)$ \hfill (\concept{algemene optelregel})
     \end{itemize}
 \end{frame}
 
@@ -463,7 +292,7 @@
         $B$ bestaat uit $6$ uitkomsten, dus $P(B) = \frac{6}{36}$.
         Met de complementregel vinden we dan 
         \begin{align*}
-            P(\bar{B})  &= 1 - P(B) \\
+            P(B')  &= 1 - P(B) \\
                         &= 1 - \frac{6}{36} \\
                         &= \frac{30}{36} = \frac{5}{6}.
         \end{align*}
@@ -489,18 +318,164 @@
     \only<+>{
         \textbf{Wat is de kans dat zowel $A$ als $C$ plaatsvindt?}\bigskip
 
-        Deze kans is gelijk aan $0$. 
+        Deze kans is gelijk aan $0$. \vfill
         
-        Gebeurtenis $C$ vindt alleen plaats als er een $2$ en een $5$ worden gegooid. 
+        Gebeurtenis $C$ (product gelijk aan $10$) vindt alleen plaats als er een $2$ en een $5$ worden gegooid. \vfill
         
-        In dat geval is er geen vier gegooid, dus kan $A$ niet tegelijkertijd met $C$ plaatsvinden.
+        Dat betekent dat $A$ (minstens één vier gooien) niet kan plaatsvinden, oftewel de gebeurtenissen $A$ en $C$ kunnen niet tegelijkertijd plaatsvinden.
     }
+\end{frame}
+
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
+    Het C-UAS peloton van 11 Luchtverdedigingsbatterij bewaakt een sector rond een tijdelijke operatiebasis.
+    Ze gebruiken een radar/RF-detectiesysteem dat automatisch alarm slaat wanneer het een mogelijk vijandelijke drone waarneemt.
+    Van alle objecten die door de lucht de basis naderen, blijkt \SI{6}{\percent} een vijandelijke drone te zijn.
+    Als er daadwerkelijk een vijandelijke drone is, wordt in \SI{94}{\percent} van de gevallen daadwerkelijk alarm geslagen.
+    Als het niet om een vijandelijke drone gaat, wordt in \SI{5}{\percent} van de gevallen alarm geslagen, bijvoorbeeld wanneer het systeem
+    niet kan onderscheiden van vogels of onwetende hobbydrones.
+    \vfill
+    \textbf{Wat is de kans dat het dronesysteem de verkeerde beslissing neemt bij een willekeurig naderend object?}
+\end{frame}
+
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
+    \begin{center}
+        \includegraphics[page=1, width=0.9\textwidth]{../tikz/1_cuas_system.pdf}%
+    \end{center}
+\end{frame}
+
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
+    We kunnen dit nu ook opschrijven in termen van gebeurtenissen:
+    \begin{itemize}
+        \item $A$ is de gebeurtenis dat alarm wordt geslagen.
+        \item $D$ is de gebeurtenis dat we met een vijandelijke drone te maken hebben.
+    \end{itemize}
+    \vfill
+    Merk op dat de kansen dat alarm wordt geslagen afhankelijk is van of we echt met een vijandelijke drone te maken hebben.
+    We werken hier dus met \concept{voorwaardelijke kansen}:
+    \begin{itemize}
+        \item Kans op een drone is $P(D) = 0.06$.
+        \item Kans op alarm gegeven dat het een drone is: $P(A | D) = 0.94$
+        \item Kans op alarm gegeven dat het niet een drone is $P(A | D') = 0.05$. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
+    Bekijk nu de bovenste tak:
+    \begin{center}
+        \includegraphics[page=2, width=\textwidth]{../tikz/1_cuas_system.pdf}%
+    \end{center}
+    In \SI{94}{\percent} van de \SI{10}{\percent} gevallen van een vijandelijke drone wordt ook alarm geslagen.
+    Met andere woorden:
+    \[
+        P(D \cap A) = P(D) \cdot P(A | D) \Rightarrow P(A | D) = \frac{P(D \cap A)}{P(D)}
+    \]
+\end{frame}
+
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
+    \textbf{In hoeveel procent van de gevallen wordt er alarm geslagen?}\pause\vfill
+    \begin{center}
+        \only<3>{%
+            \includegraphics[page=3, width=0.7\textwidth]{../tikz/1_cuas_system.pdf}%
+        }%
+        \only<4->{%
+            \includegraphics[page=4, width=0.7\textwidth]{../tikz/1_cuas_system.pdf}%
+        }
+    \end{center}
+    \begin{center}
+        \begin{tabular}{ll}
+            \uncover<3->{Alarm en drone:        & $P(A \cap D) = P(D) \cdot P(A | D) = 0.094$ \\}%
+            \uncover<4->{Alarm en geen drone:   & $P(A \cap D') = P(D') \cdot P(A | D') = 0.045$ \\}%
+        \end{tabular}
+    \end{center}
+    
+    \onslide<5->{
+        Totale kans op een alarm is dus:
+        \[
+            P(A) = P(A \cap D) + P(A \cap D') = 0.094 + 0.045 = 0.139.
+        \]
+    }
+\end{frame}
+
+\begin{frame}{Wet van de totale kans}
+    In algemene zin kunnen we de kans op één specifieke gebeurtenis bepalen aan de hand van een aantal voorwaardelijke kansen:
+    \vfill
+    Als we de uitkomstenruimte kunnen opdelen in gebeurtenissen $B_1, B_2, \ldots, B_n$, dan geldt:
+    \vfill
+    \begin{align*}
+        P(A)    &= P(A \cap B_1) + P(A \cap B_2) + \ldots + P(A \cap B_n) \\
+                &= P(B_1) \cdot P(A | B_1) + P(B_2) \cdot P(A | B_2) + \ldots + P(B_n) \cdot P(A | B_n)
+    \end{align*}
+    \vfill
+    \textbf{In ons specifieke geval hadden we twee gebeurtenissen: $D$ en $D'$!}
+\end{frame}
+
+\begin{frame}{Oefening: performance van een C-UAS systeem}
+    Het C-UAS peloton van 11 Luchtverdedigingsbatterij bewaakt een sector rond een tijdelijke operatiebasis.
+    Ze gebruiken een radar/RF-detectiesysteem dat automatisch alarm slaat wanneer het een mogelijk vijandelijke drone waarneemt.
+    Van alle objecten die door de lucht de basis naderen, blijkt \SI{6}{\percent} een vijandelijke drone te zijn.
+    Als er daadwerkelijk een vijandelijke drone is, wordt in \SI{94}{\percent} van de gevallen daadwerkelijk alarm geslagen.
+    Als het niet om een vijandelijke drone gaat, wordt in \SI{5}{\percent} van de gevallen alarm geslagen, bijvoorbeeld wanneer het systeem
+    niet kan onderscheiden van vogels of onwetende hobbydrones.
+    \vfill
+    \textbf{Wat is de kans dat het dronesysteem de verkeerde beslissing neemt bij een willekeurig naderend object?}
+    
+\end{frame}
+
+\begin{frame}{Onafhankelijkheid}
+    \textbf{Tot nu toe:} kans op een bepaalde gebeurtenis verandert zodra we extra informatie hebben (voorwaardelijke kansen).
+    \vfill
+    Maar wat als deze extra informatie geen verschil maakt?
+    \vfill
+    We noemen twee gebeurtenissen $A$ en $B$ \concept{onafhankelijk} als geldt:
+    \[
+        P(A | B) = P(A)
+    \]
+    Het gevolg hiervan is dat we kansen mogen vermenigvuldigen als we de doorsnede $A \cap B$ bekijken:
+    \[
+        P(A \cap B) = P(B) \cdot P(A | B) = P(B) \cdot P(A)
+    \]
+\end{frame}
+
+\begin{frame}{Recap: faalgedrag van componenten}
+    \begin{center}
+        \def\shift{1}
+        \begin{tikzpicture}[
+            device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
+            line width=0.6pt
+        ]
+            \node (start) at (-2, 0) {};
+            \node (stop) at (4, 0) {};
+
+            % Top branch nodes
+            \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
+            \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
+            \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
+            
+            \node (TL) at ($(A)+(-\shift,0)$) {};
+            \node (TR) at ($(A)+(\shift,0)$) {};
+            \node (BL) at ($(B)+(-\shift,0)$) {};
+            \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+            % Add connections
+            \draw (A.west) -- (TL.center) |- (start);
+            \draw (B.west) -- (BL.center) |- (start);
+            \draw (A.east) -- (TR.center) |- (C.west);
+            \draw (B.east) -- (BR.center) |- (C.west);
+            \draw (C.east) -- (stop);
+        \end{tikzpicture}
+    \end{center}
+    \vfill
+    Het circuit functioneert wanneer er een pad van links naar rechts is van functionerende componenten.
+    Per component is de faalkans weergegeven (kans dat de component niet functioneert) en de faalgedrag van componenten is onafhankelijk.\bigskip
+
+    \textbf{Bereken de kans dat het circuit functioneert.}
 \end{frame}
 
 \begin{frame}{Bereken de kans op functioneren van dit circuit}
     \begin{center}
         \def\shift{1}
-        \begin{tikzpicture}[scale=0.75,
+        \begin{tikzpicture}[scale=0.6,
             device/.style={draw, fill=blue!25, minimum width=1.1cm, minimum height=0.9cm, inner sep=0pt, font=\small},
             line width=0.6pt
         ]
@@ -531,25 +506,245 @@
     We willen dan $P\left((A\cup B) \cap C\right)$ berekenen:\pause
     \begin{itemize}[<+->]
         \item $P(A) = 0.95$, $P(B) = 0.88$ en $P(C) = 0.92$.
-        \item $P(A \cup B) = P(A) + P(B) - P(A \cap B) = P(A) + P(B) - P(A)\cdot P(B) =  0.95 + 0.88 - 0.95 \cdot 0.88 = 0.994$.
+        \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)
+                        = P(A) + P(B) - P(A) \cdot P(B)
+                        = 0.95 + 0.88 - 0.95 \cdot 0.88
+                        = 0.994.$
         \item $P((A\cup B) \cap C) = P(A \cup B) \cdot P(C) = 0.994 \cdot 0.92 = 0.91448$.
     \end{itemize}\pause
     \textbf{De kans dat het circuit blijft functioneren is dus $0.91448$.}
 \end{frame}
 
-\begin{frame}{Conditionele kansen}
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
     Het C-UAS peloton van 11 Luchtverdedigingsbatterij bewaakt een sector rond een tijdelijke operatiebasis.
     Ze gebruiken een radar/RF-detectiesysteem dat automatisch alarm slaat wanneer het een mogelijk vijandelijke drone waarneemt.
+    Van alle objecten die door de lucht de basis naderen, blijkt \SI{6}{\percent} een vijandelijke drone te zijn.
     Als er daadwerkelijk een vijandelijke drone is, wordt in \SI{94}{\percent} van de gevallen daadwerkelijk alarm geslagen.
-    Als het systeem alarm slaat, blijkt het in \SI{10}{\percent} vals alarm: dit komt door een vogel, onwetende hobbydronepiloten of andere ruis.
-    In \SI{10}{\percent} van de gevallen dat er een object de basis nadert is het een vijandelijke drone.
-
-    \textbf{Wat is de kans dat het dronesysteem de verkeerde beslissing neemt bij een willekeurig naderend object?}
-    
+    Als het niet om een vijandelijke drone gaat, wordt in \SI{5}{\percent} van de gevallen alarm geslagen, bijvoorbeeld wanneer het systeem
+    niet kan onderscheiden van vogels of onwetende hobbydrones.
+    \vfill
+    \textbf{Stel nu dat het alarm afgaat. Wat is de kans dat het nu echt gaat om een vijandelijke drone?}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Voorbeeld: performance van een C-UAS systeem}
+    \begin{center}
+        \includegraphics[page=1, width=0.65\textwidth]{../tikz/1_cuas_system.pdf}%
+    \end{center}
+    Uit het boomdiagram kunnen we een aantal kansen afleiden:
+    \begin{itemize}
+        \item $P(D) = 0.10$ en $P(D') = 0.90$.
+        \item $P(A | D) = 0.94$,  $P(A' | D) = 0.06$, $P(A | D') = 0.05$, $P(A | D') = 0.95$.
+    \end{itemize}
+    \vfill
+    \textbf{We willen echter de kans $P(D | A)$ berekenen! Hoe kunnen we dat doen?}
+\end{frame}
 
+\begin{frame}{Bayes' Rule}
+    Merk op dat we de kans $P(A \cap D)$ op twee manieren kunnen schrijven:
+    \begin{itemize}
+        \item $P(A \cap D) = P(A) \cdot P(D | A)$
+        \item $P(A \cap D) = P(D) \cdot P(A | D)$
+    \end{itemize}
+    Met andere woorden, de rechterkanten moeten hetzelfde zijn:
+    \[
+        P(A) \cdot P(D | A) = P(D) \cdot P(A | D)
+    \]
+    
+    Eerder hebben we berekend dat $P(A) = 0.139$, en $P(D) = 0.10$ en $P(A | D) = 0.94$:
+    \[
+        0.139 \cdot P(D | A) = 0.10 \cdot 0.94 \Rightarrow P(D | A) = \frac{0.10 \cdot 0.94}{0.139} = 0.6763.
+    \]
+\end{frame}
+
+\begin{frame}{Bayes' Rule}
+    Deze rekenregel, waarbij we voorwaardelijke kans kunnen \enquote{omdraaien}, noemen we ook wel \concept{Bayes' regel}:\vfill
+
+    Voor gebeurtenissen $A$ en $B$ waarbij $P(A) > 0$ geldt dat:
+    \[
+        P(B | A) = \frac{P(A | B) \cdot P(B)}{P(A)}
+    \]
+    (de voorwaarde $P(A) > 0$ is nodig, omdat anders gedeeld wordt door $0$).
+\end{frame}
+
+\begin{frame}{Kansvariabelen}
+    Tot nu toe hebben we vooral gerekend met eenvoudige gebeurtenissen:
+    \begin{itemize}
+        \item wel / niet falen van een component
+        \item wel / niet alarm slaan
+        \item wel / niet een vijandelijke drone
+    \end{itemize} 
+
+    Een commandant wil vaak niet alleen weten \emph{of} er een dreiging is, maar vooral ook deze dreiging \emph{kwantificeren} (bv. aantal vijandelijke drones per uur).
+    \vfill
+    Hiervoor bekijken we een \concept{kansvariabele}, oftewel een variabele $X$ waarvan de uitkomst afhangt van het toeval en de uitkomst van een kansexperiment.   
+\end{frame}
+
+\begin{frame}{Kansvariabelen}
+    Er zijn twee soorten kansvariabelen: \concept{discrete} en \concept{continue kansvariabelen}:
+    \vfill
+    \begin{center}
+        \begin{tabular}{lll}
+            \toprule
+                \textbf{Discrete kansvariabelen} & \textbf{Continue kansvariabelen} \\
+            \midrule
+                Losse, afzonderlijke getallen & Interval van getallen \\
+                Tellen of categoriseren       & Meten \\
+            \bottomrule       
+        \end{tabular}
+    \end{center}
+    \vfill
+    Vandaag: focus op \concept{discrete kansvariabelen}
+\end{frame}
+
+\begin{frame}{Discrete kansvariabelen}
+    Een \concept{discrete kansvariabele} is een variabele waarvan de uitkomst afhangt van het toeval en uit een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte komt.
+
+    \textbf{Voorbeelden:}
+    \begin{itemize}
+        \item Aantal succesvolle \enquote{hits} bij $10$ achtereenvolgende schoten op een doel ($0, 1, \ldots, 10$)
+        \item Aantal gedetecteerde onontplofte bommen uit de Tweede Wereldoorlog in Nederland in een week ($0, 1, \ldots$)
+        \item Aantal pogingen totdat een cyberaanval slaagt ($1, 2, \ldots$)
+        \item Wel of niet detecteren van een vijandelijke drone ($0$ (niet) of $1$ (wel))
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Discrete kansvariabelen: kansmassafunctie}
+    Een \concept{discrete kansvariabele} is een variabele waarvan de uitkomst afhangt van het toeval en uit een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte komt.
+    \vfill
+    De onzekerheid in de uitkomst die een discrete kansvariabele aanneemt kunnen we beschrijven met behulp van een kansmassafunctie:
+    \vfill
+    Voor iedere mogelijke uitkomst $x$ in de uitkomstenruimte $S$:
+    \[
+        f(x) = P(X = x) \qquad \text{ kans dat de discrete kansvariabele $X$ uitkomst $x$ aanneemt.}
+    \]
+\end{frame}
+
+\begin{frame}{Voorbeeld: nachtelijke infiltratie in vijandelijk gebied}
+    Een diepe verkenningspeloton infiltreert 's nachts vijandelijk terrein.
+    De inlichtingendienst kan niet met zekerheid zeggen hoeveel vijandelijke patrouilles het peloton zal kruisen.
+    \vfill
+
+    Op basis van eerdere satellietbeelden en drone-observaties kan de inlichtingendienst de volgende kansmassafunctie opstellen voor het aantal vijandelijke patrouilles $X$ dat het peloton doorkruist:
+    \vfill
+    
+    {\small
+        \begin{center}
+            \begin{tabular}{*{11}{c}}
+                \toprule
+                    $x$     & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\
+                \midrule    
+                    $f(x)$  & $0.10$ & $0.09$ & $0.12$ & $0.07$ & $0.15$ & $0.09$ & $0.08$ & $0.07$ & $0.10$ & $0.13$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+\end{frame}
+
+\begin{frame}{Kansmassafunctie}
+    De eigenschappen van een kansmassafunctie zijn gelijkaardig aan de axioma's voor kansrekening:
+    \vfill
+    \begin{itemize}
+        \item De kans op een bepaalde uitkomst is altijd een getal tussen $0$ en $1$:
+        \[
+            0 \leq f(x) \leq 1.
+        \]
+        \item De som van kansen over alle mogelijke uitkomsten $x$ in een uitkomstenruimte is gelijk aan $1$:
+        \[
+            \sum_{x \in S} f(x) = 1.
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Verwachtingswaarde}
+    De \concept{verwachtingswaarde} (\enquote{expected value}) van een discrete kansvariabele $X$ is de waarde die $X$ \enquote{gemiddeld genomen} zal aannemen:
+    \[
+        E(X) = \sum_{x \in S} x \cdot f(x) = \sum_{x \in S} x \cdot P(X = x)
+    \]
+    \vfill
+    \textbf{Intuitie: } gewogen gemiddelde van alle mogelijke uitkomsten $x$, met als weging per uitkomst $x$ de kans op die uitkomst $P(X=x)$.
+\end{frame}
+
+\begin{frame}{Voorbeeld: nachtelijke infiltratie in vijandelijk gebied}
+    
+    {\small
+        \begin{center}
+            \begin{tabular}{*{11}{c}}
+                \toprule
+                    $x$     & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\
+                \midrule    
+                    $f(x)$  & $0.10$ & $0.09$ & $0.12$ & $0.07$ & $0.15$ & $0.09$ & $0.08$ & $0.07$ & $0.10$ & $0.13$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+
+    We berekenen de verwachtingswaarde als volgt:
+    \begin{align*}
+        E(X)    &= \sum_{x \in S} x \cdot f(x) \\
+                &= 0 \cdot f(0) + 1 \cdot f(1) + \ldots + 9 \cdot f(9) \\
+                &= 0 \cdot 0.10 + 1 \cdot 0.09 + \ldots + 9 \cdot 0.13 \\
+                &= 4.53.
+    \end{align*}
+    \vfill
+    \textbf{Merk op:} de verwachtingswaarde hoeft geen geheel getal te zijn, het gaat om een \enquote{gemiddelde uitkomst} wanneer je dit hypothetische experiment heel vaak zou herhalen
+\end{frame}
+
+\begin{frame}{\enquote{Averages do not tell the whole story}}
+    \begin{center}
+        \includegraphics[width=\textwidth]{1_drowning_statistician.png}
+    \end{center}
+
+    Ook in de militaire context is het belangrijk om niet alleen naar gemiddelden te kijken, maar ook naar \concept{maten van spreiding}.
+\end{frame}
+
+\begin{frame}{Variantie}
+    De \concept{variantie} (\enquote{variance}) van een discrete kansvariabele $X$ is de \concept{kwadratische afstand} tot de verwachtingswaarde $E(X)$ die $X$ \enquote{gemiddeld genomen} zal aannemen:
+    \[
+        Var(X) = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x) = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot P(X = x)
+    \]
+    \vfill
+    \textbf{Intuitie: } gewogen gemiddelde van alle mogelijke kwadratische afstanden $(x - E(X))^2$, met als weging per uitkomst $x$ de kans op die uitkomst $P(X=x)$.
+\end{frame}
+
+\begin{frame}{Voorbeeld: nachtelijke infiltratie in vijandelijk gebied}
+    
+    {\small
+        \begin{center}
+            \begin{tabular}{*{11}{c}}
+                \toprule
+                    $x$     & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\
+                \midrule    
+                    $f(x)$  & $0.10$ & $0.09$ & $0.12$ & $0.07$ & $0.15$ & $0.09$ & $0.08$ & $0.07$ & $0.10$ & $0.13$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    }
+    We berekenen de variantie als volgt:
+    \begin{align*}
+        Var(X)    &= \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x) \\
+                &= \left(0 - E(X)\right)^2 \cdot f(0) + \ldots + \left(9 - E(X)\right)^2 \cdot f(9) \\
+                &= \left(0 - 4.53\right)^2 \cdot 0.10 + \ldots + \left(9 - 4.53\right)^2 \cdot 0.13 \\
+                &\approx 8.5691.
+    \end{align*}
+    \vfill
+    \textbf{Merk op:} de verwachtingswaarde hoeft geen geheel getal te zijn, het gaat om een \enquote{gemiddelde uitkomst} wanneer je dit hypothetische experiment heel vaak zou herhalen
+\end{frame}
+
+\begin{frame}{Standaardafwijking}
+    Het nadeel van de variantie is dat het vaak moeilijk te interpreteren is om de waarde groot of klein is, en dat de eenheid van de variantie niet hetzelfde is als de eenheid van de variabele.
+    \vfill
+    Om die reden wordt vaker de \concept{standaardafwijking} $\sigma(X)$ bestudeerd.
+    Deze vinden we door de wortel uit de variantie te nemen:
+    \[
+        \sigma(X) = \sqrt{Var(X)}.
+    \]\pause
+    \vfill
+    In ons voorbeeld krijgen we dan
+
+    \[
+        \sigma(X)  = \sqrt{Var(X)} = \sqrt{8.5691} \approx 2.9273.
+    \]
 \end{frame}
 
 \end{document}

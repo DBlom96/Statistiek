@@ -1,3 +1,8 @@
+% DEFINED COLORS
+\definecolor{octahedroncolor}{RGB}{104, 129, 174}
+\colorlet{highlightcolor}{green!80!black}
+\colorlet{conceptcolor}{cyan!80!black}
+
 % GENERAL COMMANDS
 \newcommand{\set}[1]{\left\{#1\right\}}
 
@@ -15,16 +20,15 @@
     \end{center}
 }
 
+\newcommand{\concept}[1]{\textbf{\color{conceptcolor} #1}}
+
 % THEOREMS
 \newtheorem{stelling}{Stelling}
 
 % MATH OPERATORS
 \DeclareMathOperator{\suchthat}{zodanig\;dat}
 
-% DEFINED COLORS
-\definecolor{octahedroncolor}{RGB}{104, 129, 174}
-\colorlet{highlight}{green!80!black}
-\colorlet{concept}{cyan!80!black}
+
 
 \setlength{\arraycolsep}{2pt}
 \renewcommand<>\cellcolor[1]{\only#2{\beameroriginal\cellcolor{#1}}}
