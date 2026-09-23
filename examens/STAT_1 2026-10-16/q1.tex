@@ -8,8 +8,9 @@
     \]
 }
         \subquestion{11}{
-            Teken een boxplot van de verplaatsingstijden.
-            Schrijf hierbij de stappen op die je hebt uitgevoerd om de vijf getallen voor de boxplot te kunnen bepalen.
+            Teken de boxplot van bovenstaande steekproef van verplaatsingstijden.
+            Beschrijf expliciet de stappen die je hebt uitgevoerd om de vijf getallen voor de boxplot te kunnen bepalen.
+            Geef tenslotte ook aan hoe je de uiteinden van de whiskers en de outliers (indien relevant) hebt bepaald.
         }
         \answer{
             Om de vijf getallen voor de boxplot te bepalen, volgen we de volgende stappen:
@@ -35,7 +36,7 @@
             De \enquote{whiskers} lopen van de kleinste niet-outlier boven $121 - 1.5 \times 26.5 = 81.25$ (oftewel $100$) tot de hoogste niet-outlier onder $147.5 + 1.5 \times 26.5 = 187.25$ (oftewel $165$).
             Er is één outlier, namelijk $200$. \rubric{1}
             \begin{center}
-                \includegraphics[width=\textwidth]{./20261016_exam_boxplot.png} \rubric{2}
+                \includegraphics[width=0.5\textwidth]{./20261016_exam_boxplot.png} \rubric{2}
             \end{center}
 
         }
@@ -52,24 +53,28 @@
             (Maximaal 2 punten indien het gemiddelde direct wordt uitgerekend en geen connectie met de boxplot wordt gelegd.)
         }
         \subquestion{2}{
-            % Noem één reden waarom deze steekproef mogelijk niet representatief is voor de reactietijden van alle militairen op de Trip van Zoudtlandtkazerne.
+            Men komt erachter dat de langzaamste cursist liefst $25$ minuten bij één van de checkpoints heeft moeten stilstaan om te wachten op een veiligheidsinstructie.
+            De instructeur overweegt om de tijd van deze cursist te reduceren met de wachttijd.
+            Beredeneer, zonder een berekening te maken, welke van de vijf kengetallen van een boxplot veranderen door deze aanpassing.
         }
         \answer{
-            % Een mogelijke reden waarom deze steekproef niet representatief is, is dat de reactietijden alleen zijn gemeten van één specifiek peloton.\rubric{1}
-            % De reactietijden kunnen variëren tussen verschillende pelotons vanwege verschillen in training, ervaring of andere factoren.
-            % Hierdoor zou de resultaten van deze steekproef mogelijk niet generaliseerbaar kunnen zijn naar alle militairen in de Trip van Zoudtlandtkazerne. \rubric{1}
+            Merk op dat de langzaamste cursist een tijd van $200$ minuten heeft gedaan over de oefening, en dat deze tijd nu tot $175$ minuten wordt gereduceerd.\rubric{1}
+            Dit verandert echter niets aan de volgorde van de gesorteerde verplaatsingstijden, aangezien $175$ minuten nog steeds langer is dan de tijd van de andere cursisten.\rubric{1}
+            Dit betekent dat het minimum, $Q_1$, mediaan en $Q_3$ hetzelfde blijven, en alleen het maximum verandert van $200$ naar $175$.\rubric{1}    
         }
 
-        \subquestion{5}{
-            % Tijdens de analyse ontdekt men dat er een fout is gemaakt bij het invoeren van de reactietijd van één van de militairen, en dat deze reactietijd eigenlijk $40$ seconden zou moeten zijn in plaats van $30$ seconden. 
-            % Geef aan wat er zou veranderen aan de boxplot als deze fout wordt gecorrigeerd.
+        \subquestion{4}{
+            Vervolgens blijkt dat het parcours van de oefening \SI{10}{\percent} te lang was uitgezet.
+            De instructeur besluit daarom ook om alle verplaatsingstijden met \SI{10}{\percent} te verlagen.
+            Beredeneer wat het effect is van deze verandering van de data op de vorm van de boxplot en de interkwartielafstand.
         }
         \answer{
-            % Als de fout wordt gecorrigeerd en de reactietijd van $30$ seconden wordt vervangen door $40$ seconden, zal dit de maximumwaarde in de dataset veranderen van $35$ naar $40$.\rubric{1}
-            % De minimumwaarde, het eerste kwartiel, de mediaan en het derde kwartiel zullen echter niet veranderen, omdat deze waarden niet worden beïnvloed door de hoogste waarde in de dataset.\rubric{2}
-            % De whisker aan de rechterkant van de boxplot zal nu lopen tot de hoogste niet-outlier onder $25.5 + 1.5 \times 5.5 = 33.75$, oftewel $28$, en er zullen nu twee outliers zijn: $35$ en $40$. \rubric{2}
-            % \begin{center}
-            %     \includegraphics[width=\textwidth]{./20260605_exam_boxplot2.png}
-            % \end{center}
+            Merk op dat de nieuwe dataset wordt verkregen door alle getallen te vermenigvuldigen met $0.9$.\rubric{1}
+            Hierdoor worden ook alle vijf kengetallen van de boxplot vermenigvuldigd met $0.9$.\rubric{1}
+            De vorm van de boxplot verandert dus niet, de boxplot wordt enkel horizontaal samengedrukt met \SI{10}{\percent}.\rubric{1}
+            De interkwartielafstand $\text{IQR} = Q_3 - Q_1$ wordt ook met een factor $0.9$ kleiner, omdat dit ook geldt voor $Q_1$ en $Q_3$.\rubric{1}
+            \begin{center}
+                \includegraphics[width=0.5\textwidth]{./20261016_exam_boxplot_90percent.png}
+            \end{center}
         }
 \end{question}
