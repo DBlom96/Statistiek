@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  22 SEP 2026 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  25 SEP 2026 17:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1799,39 +1799,71 @@ Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page2 used on input line 37
 [35
 
  <../tikz/1_cuas_system.pdf>]
+Overfull \hbox (8.42184pt too wide) in paragraph at lines 397--397
+ [] 
+ []
+
+
 
 [36
 
 ]
-
-[37
-
-]
-<../tikz/1_cuas_system.pdf, id=541, page=3, 482.18744pt x 172.14714pt>
+<../tikz/1_cuas_system.pdf, id=533, page=3, 482.18744pt x 172.14714pt>
 File: ../tikz/1_cuas_system.pdf Graphic file (type pdf)
 <use ../tikz/1_cuas_system.pdf, page 3>
 Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page3 used on input line 397.
 (pdftex.def)             Requested size: 239.60567pt x 85.54274pt.
 
+Overfull \hbox (8.42184pt too wide) in paragraph at lines 397--397
+ [] 
+ []
+
+
+Overfull \vbox (7.23854pt too high) detected at line 397
+ []
+
+
+
+[37
+
+ <../tikz/1_cuas_system.pdf>]
+<../tikz/1_cuas_system.pdf, id=555, page=4, 482.18744pt x 172.14714pt>
+File: ../tikz/1_cuas_system.pdf Graphic file (type pdf)
+<use ../tikz/1_cuas_system.pdf, page 4>
+Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page4 used on input line 397.
+(pdftex.def)             Requested size: 239.60567pt x 85.54274pt.
+
+Overfull \hbox (8.42184pt too wide) in paragraph at lines 397--397
+ [] 
+ []
+
+
+Overfull \vbox (7.23854pt too high) detected at line 397
+ []
+
+
 
 [38
 
  <../tikz/1_cuas_system.pdf>]
-<../tikz/1_cuas_system.pdf, id=562, page=4, 482.18744pt x 172.14714pt>
 File: ../tikz/1_cuas_system.pdf Graphic file (type pdf)
 <use ../tikz/1_cuas_system.pdf, page 4>
 Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page4 used on input line 397.
 (pdftex.def)             Requested size: 239.60567pt x 85.54274pt.
+
+Overfull \hbox (8.42184pt too wide) in paragraph at lines 397--397
+ [] 
+ []
+
+
+Overfull \vbox (7.23854pt too high) detected at line 397
+ []
+
 
 
 [39
 
- <../tikz/1_cuas_system.pdf>]
-File: ../tikz/1_cuas_system.pdf Graphic file (type pdf)
-<use ../tikz/1_cuas_system.pdf, page 4>
-Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page4 used on input line 397.
-(pdftex.def)             Requested size: 239.60567pt x 85.54274pt.
-
+]
 
 [40
 
@@ -1844,15 +1876,15 @@ Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page4 used on input line 39
 [42
 
 ]
-
-[43
-
-]
 File: ../tikz/1_example_circuit.pdf Graphic file (type pdf)
 <use ../tikz/1_example_circuit.pdf, page 2>
 Package pdftex.def Info: ../tikz/1_example_circuit.pdf , page2 used on input line 448.
 (pdftex.def)             Requested size: 171.14764pt x 108.59329pt.
 
+
+[43
+
+]
 
 [44
 
@@ -1869,15 +1901,15 @@ Package pdftex.def Info: ../tikz/1_example_circuit.pdf , page2 used on input lin
 [47
 
 ]
-
-[48
-
-]
 File: ../tikz/1_cuas_system.pdf Graphic file (type pdf)
 <use ../tikz/1_cuas_system.pdf, page 1>
 Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page1 used on input line 491.
 (pdftex.def)             Requested size: 222.48985pt x 108.62924pt.
 
+
+[48
+
+]
 
 [49
 
@@ -1914,10 +1946,6 @@ Package pdftex.def Info: ../tikz/1_cuas_system.pdf , page1 used on input line 49
 [57
 
 ]
-
-[58
-
-]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 593.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1936,13 +1964,17 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 593.
 
 
-[59
+[58
 
 ]
 
-[60
+[59
 
 {C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+
+[60
+
+]
 
 [61
 
@@ -1951,11 +1983,7 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
 [62
 
 ]
-
-[63
-
-]
-<../figures/1_drowning_statistician.png, id=793, 1027.84pt x 416.55624pt>
+<../figures/1_drowning_statistician.png, id=786, 1027.84pt x 416.55624pt>
 File: ../figures/1_drowning_statistician.png Graphic file (type png)
 <use ../figures/1_drowning_statistician.png>
 Package pdftex.def Info: ../figures/1_drowning_statistician.png  used on input line 651.
@@ -1968,9 +1996,13 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 651.
 
 
-[64
+[63
 
  <../figures/1_drowning_statistician.png>]
+
+[64
+
+]
 
 [65
 
@@ -2087,6 +2119,11 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 [93
 
 ]
+Overfull \hbox (1.64087pt too wide) detected at line 803
+\T1/lmss/m/sl/10.95 P\OT1/lmss/m/n/10.95 (\T1/lmss/m/n/10.95 2 \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/sl/10.95 X \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/n/10.95 6\OT1/lmss/m/n/10.95 ) = \T1/lmss/m/sl/10.95 P\OT1/lmss/m/n/10.95 (\T1/lmss/m/sl/10.95 X \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/n/10.95 6\OT1/lmss/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \T1/lmss/m/sl/10.95 P\OT1/lmss/m/n/10.95 (\T1/lmss/m/sl/10.95 X \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/n/10.95 1\OT1/lmss/m/n/10.95 ) = \T1/lmss/m/sl/10.95 F\OT1/lmss/m/n/10.95 (\T1/lmss/m/n/10.95 6\OT1/lmss/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \T1/lmss/m/sl/10.95 F\OT1/lmss/m/n/10.95 (\T1/lmss/m/n/10.95 1\OT1/lmss/m/n/10.95 ) = \T1/lmss/m/n/10.95 0\OML/lmm/m/it/10.95 :\T1/lmss/m/n/10.95 70 \OMS/lmsy/m/n/10.95 ^^@ \T1/lmss/m/n/10.95 0\OML/lmm/m/it/10.95 :\T1/lmss/m/n/10.95 19 \OT1/lmss/m/n/10.95 = \T1/lmss/m/n/10.95 0\OML/lmm/m/it/10.95 :\T1/lmss/m/n/10.95 51\OML/lmm/m/it/10.95 :
+ []
+
+
 
 [94
 
@@ -2109,17 +2146,8 @@ Overfull \hbox (1.64087pt too wide) detected at line 803
 [96
 
 ]
-Overfull \hbox (1.64087pt too wide) detected at line 803
-\T1/lmss/m/sl/10.95 P\OT1/lmss/m/n/10.95 (\T1/lmss/m/n/10.95 2 \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/sl/10.95 X \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/n/10.95 6\OT1/lmss/m/n/10.95 ) = \T1/lmss/m/sl/10.95 P\OT1/lmss/m/n/10.95 (\T1/lmss/m/sl/10.95 X \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/n/10.95 6\OT1/lmss/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \T1/lmss/m/sl/10.95 P\OT1/lmss/m/n/10.95 (\T1/lmss/m/sl/10.95 X \OMS/lmsy/m/n/10.95 ^^T \T1/lmss/m/n/10.95 1\OT1/lmss/m/n/10.95 ) = \T1/lmss/m/sl/10.95 F\OT1/lmss/m/n/10.95 (\T1/lmss/m/n/10.95 6\OT1/lmss/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \T1/lmss/m/sl/10.95 F\OT1/lmss/m/n/10.95 (\T1/lmss/m/n/10.95 1\OT1/lmss/m/n/10.95 ) = \T1/lmss/m/n/10.95 0\OML/lmm/m/it/10.95 :\T1/lmss/m/n/10.95 70 \OMS/lmsy/m/n/10.95 ^^@ \T1/lmss/m/n/10.95 0\OML/lmm/m/it/10.95 :\T1/lmss/m/n/10.95 19 \OT1/lmss/m/n/10.95 = \T1/lmss/m/n/10.95 0\OML/lmm/m/it/10.95 :\T1/lmss/m/n/10.95 51\OML/lmm/m/it/10.95 :
- []
-
-
 
 [97
-
-]
-
-[98
 
 ]
 \tf@nav=\write6
@@ -2140,17 +2168,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) ) ) 
 Here is how much of TeX's memory you used:
- 59667 strings out of 468133
- 1454926 string characters out of 5430719
+ 59669 strings out of 468133
+ 1454959 string characters out of 5430719
  1948464 words of memory out of 5000000
  86738 multiletter control sequences out of 15000+600000
- 763928 words of font info for 226 fonts, out of 8000000 for 9000
+ 764130 words of font info for 228 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,1268b,1111s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi17.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (98 pages, 1387395 bytes).
+Output written on main.pdf (97 pages, 1385329 bytes).
 PDF statistics:
- 1170 PDF objects out of 1200 (max. 8388607)
- 197 named destinations out of 1000 (max. 500000)
+ 1163 PDF objects out of 1200 (max. 8388607)
+ 195 named destinations out of 1000 (max. 500000)
  82577 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -46,7 +46,7 @@
                 \textbf{College 4} & 27 november 2026 & 9.20-16.40 uur \\
             \midrule
                 \textbf{Tentamen (\SI{100}{\percent})} & 4 december 2026 & n.n.b. \\
-                \textbf{Hertentamen} & 12 maart 2026 & n.n.b. \\
+                \textbf{Hertentamen} & 12 maart 2027 & n.n.b. \\
             \bottomrule
         \end{tabular}
     \end{center}
@@ -353,9 +353,9 @@
     Merk op dat de kansen dat alarm wordt geslagen afhankelijk is van of we echt met een vijandelijke drone te maken hebben.
     We werken hier dus met \concept{voorwaardelijke kansen}:
     \begin{itemize}
-        \item Kans op een drone is $P(D) = 0.06$.
-        \item Kans op alarm gegeven dat het een drone is: $P(A | D) = 0.94$
-        \item Kans op alarm gegeven dat het niet een drone is: $P(A | D') = 0.05$. 
+        \item Kans op een drone is $P(D) = 0.10$.
+        \item Kans op alarm gegeven dat het een vijandelijke drone is: $P(A | D) = 0.94$
+        \item Kans op alarm gegeven dat het niet een vijandelijke drone is: $P(A | D') = 0.05$. 
     \end{itemize}
 \end{frame}
 
@@ -374,21 +374,21 @@
 \begin{frame}{Voorbeeld: performance van een C-UAS systeem}
     \textbf{In hoeveel procent van de gevallen wordt er alarm geslagen?}\pause\vfill
     \begin{center}
-        \only<3>{%
+        \only<2>{%
             \includegraphics[page=3, width=0.7\textwidth]{../tikz/1_cuas_system.pdf}%
         }%
-        \only<4->{%
+        \only<3->{%
             \includegraphics[page=4, width=0.7\textwidth]{../tikz/1_cuas_system.pdf}%
         }
     \end{center}
     \begin{center}
         \begin{tabular}{ll}
-            \uncover<3->{Alarm en drone:        & $P(A \cap D) = P(D) \cdot P(A | D) = 0.094$ \\}%
-            \uncover<4->{Alarm en geen drone:   & $P(A \cap D') = P(D') \cdot P(A | D') = 0.045$ \\}%
+            \uncover<2->{Alarm en vijandelijke drone:        & $P(A \cap D) = P(D) \cdot P(A | D) = 0.094$ \\}%
+            \uncover<3->{Alarm en geen vijandelijke drone:   & $P(A \cap D') = P(D') \cdot P(A | D') = 0.045$ \\}%
         \end{tabular}
     \end{center}
     
-    \onslide<5->{
+    \onslide<4->{
         Totale kans op een alarm is dus:
         \[
             P(A) = P(A \cap D) + P(A \cap D') = 0.094 + 0.045 = 0.139.
@@ -442,7 +442,7 @@
     \end{center}
     \vfill
     Het circuit functioneert wanneer er een pad van links naar rechts is van functionerende componenten.
-    Per component is de faalkans weergegeven (kans dat de component niet functioneert) en de faalgedrag van componenten is onafhankelijk.\bigskip
+    Per component is de kans op functioneren weergegeven (kans dat de component niet faalt), en de faalgedrag van componenten is onafhankelijk.\bigskip
 
     \textbf{Bereken de kans dat het circuit functioneert.}
 \end{frame}
@@ -680,7 +680,7 @@
                 &\approx 8.5691.
     \end{align*}
     \vfill\pause
-    \textbf{Merk op:} de verwachtingswaarde hoeft geen geheel getal te zijn, het gaat om een \enquote{gemiddelde uitkomst} wanneer je dit hypothetische experiment heel vaak zou herhalen
+    \textbf{Merk op:} ook de variantie hoeft geen geheel getal te zijn, het gaat om een \enquote{gemiddelde kwadratische afstand tot $E(X)$} wanneer je dit hypothetische experiment heel vaak zou herhalen.
 \end{frame}
 
 \begin{frame}{Standaardafwijking}
@@ -803,7 +803,7 @@
 \end{frame}
 
 \begin{frame}{Samenvatting en vooruitblik}
-    \textbf{Volgend college:}
+    \textbf{Samenvatting:}
     \begin{itemize}
         \item Fundamenten en rekenregels van de kansrekening
         \item Van kansexperimenten naar kansvariabelen
