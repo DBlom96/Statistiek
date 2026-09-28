@@ -4,7 +4,7 @@
     Laat $X$ het aantal geregistreerde drone-aanvallen per dag zijn.
     Uit historische sensordata blijkt dat de kansverdeling van $X$ gemodelleerd kan worden met de volgende discrete kansfunctie:
     \begin{align*}
-        p(k) = P(X = k) 
+        p(k) = P(X = k) =
         \begin{cases}
             c \cdot \frac{2^k}{k!}, & \text{ voor } k = 0, 1, 2, 3, 4 \\
             0,                      & \text{ anders.}
@@ -49,6 +49,10 @@
         Teken een schets van de cumulatieve verdelingsfunctie (CDF) van $X$ op het interval $[-1, 5]$.
         Geef hierbij duidelijk aan wat de betekenis is van de assen.
         Gebruik vervolgens de grafiek om de mediaan van $X$ te bepalen.
+
+        {
+            \small\textbf{\underline{Hint}:} de mediaan van een discrete kansvariabele $X$ is de waarde $m$ waarvoor geldt dat $P(X \leq m - 1) < 0.5$ en $P(X \leq m) \geq 0.5$.
+        }
     }
     \answer{
         De cumulatieve verdelingsfunctie $F(k) = P(X \leq k)$ van een discrete kansvariabele bepalen we door voor $k=0,1,2,3,4$ de kansen op te tellen op uitkomsten kleiner dan of gelijk aan $k$:
@@ -86,8 +90,8 @@
         Om de standaardafwijking $\sigma(X)$ te berekenen, dienen we eerst de variantie $\Var{X}$ te berekenen:
         \begin{align*}
             \Var{X} &= \sum_{k=0}^{4} (k - E(X))^2 \cdot P(X=k) \\
-                    &= (0 - E(X))^2 \cdot P(X=0) + (1 - E(X))^2 \cdot P(X=1) + (2 - E(X))^2 \cdot P(X=2) + (3 - E(X))^2 \cdot P(X=3) + (4 - \E(X))^2 \cdot P(X=4) \\
-                    &= (0 - \frac{38}{21})^2 \cdot \frac{1}{7} + (1 - \frac{38}{21})^2 \cdot \frac{2}{7} + (2 - \frac{38}{21})^2 \cdot \frac{2}{7} + (3 - \frac{38}{21})^2 \cdot \frac{4}{21} + (4 - \frac{38}{21})^2 \cdot \frac{2}{21} \\
+                    &= \left(0 - E(X)\right)^2 \cdot P(X=0) + \ldots + \left(4 - E(X)\right)^2 \cdot P(X=4) \\
+                    &= \left(0 - \frac{38}{21}\right)^2 \cdot \frac{1}{7} + \ldots + \left(4 - \frac{38}{21}\right)^2 \cdot \frac{2}{21} \\
                     &\approx 1.3923. \rubric{3}
         \end{align*} 
         De standaardafwijking $\sigma(X)$ vinden we nu door de wortel uit de variantie te nemen:
