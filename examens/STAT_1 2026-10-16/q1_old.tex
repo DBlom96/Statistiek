@@ -1,0 +1,82 @@
+\begin{question}{21}{
+    Voor de bevoorrading van een vooruitgeschoven eenheid (Forward Operating Base) worden
+    logistieke konvooien ingezet over een risicovolle route.
+    
+    De tijd $T$ (in uren) voordat een konvooi wordt opgehouden door een vertraging of incident,
+    is een continue kansvariabele met de volgende kansdichtheidsfunctie:
+    \[
+        f(t) = \begin{cases} 
+                    \frac{3}{64}\cdot t^2\cdot (4-t), &\text{ als } 0 \le t \le 4, \\
+                                       0, &\text{ anders.} 
+                \end{cases}
+    \]
+}
+        \subquestion{4}{
+            Toon met berekeningen en een schets van de grafiek van $f$ aan dat $f$ inderdaad voldoet aan de twee voorwaarden voor een kansdichtheidsfunctie.
+        }
+        \answer{
+            Een functie $f$ kan dienen als een kansdichtheidsfunctie als geldt:
+
+            \textbf{Voorwaarde 1:} de functie $f$ is niet-negatief voor alle waarden van $t$, oftewel \[f(t) \ge 0.\]
+            
+            Op het interval $0 \le t \le 4$ geldt dat $f(t) = \frac{3}{64}\cdot t^2\cdot (4-t)$.
+            In dat geval geldt dat $t^2 \ge 0$ en $4 - t \ge 0$, en we hebben te maken met een vermenigvuldiging van niet-negatieve termen, dus $f(t) \ge 0$.
+            Buiten het interval $0 \le t \le 4$ is $f(t) = 0$, dus is ook voldaan aan $f(t) \ge 0$. \rubric{2}
+
+            \textbf{Voorwaarde 2:} de oppervlakte onder de grafiek van $f$ is gelijk aan 1, oftewel \[\int_{-\infty}^{\infty} f(t) \dt = 1.\]         
+            
+            Voor de tweede voorwaarde moeten we dus checken of de oppervlakte onder de grafiek van $f$ daadwerkelijk gelijk is aan 1:
+            \begin{align*}
+                \int_{-\infty}^{\infty} f(t)\dt   &= \int_{0}^{4} \frac{3}{64}\cdot t^2 \cdot (4 - t)\dt \\
+                                                    &= 1. \rubric{2}
+            \end{align*} 
+            Hiermee is aangetoond dat de gegeven functie $f$ voldoet aan de twee voorwaarden voor kansdichtheidsfuncties.
+        }
+
+        \subquestion{8}{
+            Bereken de verwachtingswaarde $E(T)$ en de standaardafwijking $\sigma(T)$ met behulp van de algemene formules op het formuleblad.
+        }
+        \answer{
+            De verwachtingswaarde $E(T)$ berekenen we door middel van
+            \begin{align*}
+                E(T) = \int_{-\infty}^{\infty} t\cdot f(t)\dt &= \int_{0}^{4} t \cdot \frac{3}{64}\cdot t^2 \cdot (4 - t)\dt \\
+                                                                &= \int_{0}^{4} \frac{3}{64}\cdot t^3 \cdot (4 - t)\dt \\   
+                                                                &= 2.4. \rubric{3}          
+            \end{align*}
+            De standaardafwijking $\sigma(T)$ berekenen we door eerst de variantie $\Var{T}$ te bepalen, en van het resultaat de wortel te nemen:
+            \begin{align*}
+                \Var{T} = \int_{-\infty}^{\infty} \left(t-E(T)\right)^2 \cdot f(t)\dt    &= \int_{0}^{4} (t-2.4)^2 \cdot \frac{3}{64}\cdot t^2 \cdot (4 - t)\dt \\
+                                                                                &= 0.64. \rubric{3}
+            \end{align*} 
+            \begin{align*}
+                \sigma(T) = \sqrt{\Var{T}} = \sqrt{0.64} = 0.8. \rubric{2}
+            \end{align*}
+        }
+
+        \subquestion{4}{
+            Bereken de kans dat een willekeurig konvooi binnen tweeënhalf uur een vertraging of incident te verduren krijgt.
+        }
+        \answer{
+            Hiervoor moeten we de kans $P(T < 2.5)$ berekenen:
+            \[
+                P(T < 2.5) = \int_{-\infty}^{2.5} f(t) \dt = \int_{0}^{2.5} \frac{3}{64} \cdot t^2 \cdot (4-t) \dt \approx 0.5188. \rubric{4}
+            \]
+        }
+
+        \subquestion{5}{
+            Stel dat op een gegeven moment vier logistieke konvooien onafhankelijk van elkaar vertrekken richting de FOB.
+            De bevoorradingsoperatie is succesvol als er minstens twee konvooien langer dan 1.5 uur onverstoord blijft rijden. 
+            Hoe groot is de kans op een succesvolle bevoorradingsoperatie?
+        }
+        \answer{
+            Laat $Y$ het aantal konvooien zijn dat langer dan 1.5 uur onverstoord blijft rijden.
+            $Y$ is binomiaal verdeeld met parameters $n = 4$ en $p = 1 - 0.5188 = 0.4812$ (de kans dat een konvooi langer dan 2.5 uur onverstoord blijft).\rubric{2}
+            De kans op succes is de kans dat minstens twee konvooien deze tijdsduur haalt:
+            \begin{align*}
+                P(Y \ge 2)  &= 1 - P(Y \leq 1) \\
+                            &= 1 - \binomcdf(n=4, p=0.4812, k=1) \\
+                            &\approx 0.6588. \rubric{3}
+            \end{align*}
+            De kans op een succesvolle operatie is hiermee ongeveer \SI{65.88}{\percent}.
+        }
+\end{question}
