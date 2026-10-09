@@ -20,7 +20,7 @@ for i in range(1, num_chapters + 1):
     
     # Write the includeonly list to the file
     with open("./enabled_chapters.tex", "w") as f:
-        f.write(f"\\foreach \\week in" + "{" + ", ".join(chapters) + "}\n")
+        f.write(f"\\foreach \\week in " + "{" + ", ".join(chapters) + "}\n")
         f.write("{\n")
         f.write("\t\\input{./huiswerk/week\\week.tex}\n")
         f.write("}\n")
@@ -34,7 +34,7 @@ for i in range(1, num_chapters + 1):
         subprocess.run(["pdflatex", "-interaction=nonstopmode", "./main.tex"], check=True)
     
     # Copy the resulting PDF (Moved inside the loop)
-    output_name = f"./uitwerkingen_week_0{i}.pdf" if i < 10 else f"./uitwerkingen_week_{i}.pdf"
+    output_name = f"./huiswerk/uitwerkingen_week_0{i}.pdf" if i < 10 else f"./huiswerk/uitwerkingen_week_{i}.pdf"
     
     # Use shutil.copy2 instead of os.replace so the original main.pdf isn't deleted
     import shutil

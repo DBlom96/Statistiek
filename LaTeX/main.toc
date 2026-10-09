@@ -8,7 +8,3 @@
 \contentsline {chapter}{\chapternumberline {6}De Poissonverdeling}{75}{chapter.6}%
 \contentsline {chapter}{\chapternumberline {7}Schatten en betrouwbaarheid (1/2)}{87}{chapter.7}%
 \contentsline {chapter}{\chapternumberline {8}Schatten en betrouwbaarheid (2/2)}{97}{chapter.8}%
-\contentsline {chapter}{\chapternumberline {9}Hypothesetoetsen}{115}{chapter.9}%
-\contentsline {chapter}{\chapternumberline {10}De chikwadraatverdeling}{129}{chapter.10}%
-\contentsline {chapter}{\chapternumberline {11}Verschiltoetsen}{149}{chapter.11}%
-\contentsline {chapter}{\chapternumberline {12}Correlatie en regressie}{167}{chapter.12}%
