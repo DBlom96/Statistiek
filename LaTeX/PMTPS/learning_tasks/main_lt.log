@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  8 SEP 2026 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  9 OCT 2026 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -73,18 +73,13 @@ LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) o
 *
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 12.
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/babel-dutch\dutch.ldf
+Language: dutch 2021/08/29 v3.8l Dutch support from the babel system
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/nl\babel-dutch.tex
+Package babel Info: Importing font and identification data for dutch
+(babel)             from babel-nl.ini. Reported on input line 12.
 )
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
+Package babel Info: Making " an active character on input line 127.
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
@@ -1118,7 +1113,7 @@ File: tikzlibrarytrees.code.tex 2023-01-15 v3.1.10 (3.1.10)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'english'.
+Package csquotes Info: Redefining alias 'default' -> 'dutch'.
 LaTeX Font Info:    Trying to load font information for T1+bch on input line 53.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
@@ -1181,12 +1176,14 @@ LaTeX Font Info:    ... okay on input line 53.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package babel Info: 'dutch' activates 'dutch' shorthands.
+(babel)             Reported on input line 53.
 \c@mv@tabular=\count458
 \c@mv@boldtabular=\count459
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
+File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 53.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 53.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count460
@@ -1250,7 +1247,7 @@ See the caption package documentation for explanation.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 150--151
-[]\T1/bch/m/n/10.95 Revisiting the semi-con-duc-tor ex-am-ple, we cal-cu-late $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 ([] \OMS/cmsy/m/n/10.95 j
+[]\T1/bch/m/n/10.95 Revisiting the se-mi-con-duc-tor example, we cal-cu-late $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 ([] \OMS/cmsy/m/n/10.95 j
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+bch on input line 163.
@@ -1265,19 +1262,23 @@ File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main_lt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54736 strings out of 468133
- 1347446 string characters out of 5430719
- 1911527 words of memory out of 5000000
- 82498 multiletter control sequences out of 15000+600000
+ 54771 strings out of 468133
+ 1347479 string characters out of 5430719
+ 1912423 words of memory out of 5000000
+ 82533 multiletter control sequences out of 15000+600000
  660272 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,131p,848b,1572s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,11n,131p,848b,1576s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main_lt.pdf (4 pages, 136009 bytes).
+Output written on main_lt.pdf (4 pages, 136001 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  22 named destinations out of 1000 (max. 500000)
