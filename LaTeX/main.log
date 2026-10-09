@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  9 OCT 2026 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  9 OCT 2026 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1840,7 +1840,27 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+Overfull \hbox (2.31596pt too wide) detected at line 11
+ \T1/bch/b/n/12 115
+ []
+
+
+Overfull \hbox (2.31596pt too wide) detected at line 12
+ \T1/bch/b/n/12 129
+ []
+
+
+Overfull \hbox (2.31596pt too wide) detected at line 13
+ \T1/bch/b/n/12 149
+ []
+
+
+Overfull \hbox (2.31596pt too wide) detected at line 14
+ \T1/bch/b/n/12 167
+ []
+
+)
 
 [1{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cantarell/a_5r5
 lpu.enc}]
@@ -1881,7 +1901,7 @@ File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
 
 [3]
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7c.png, id=126, 
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7c.png, id=146, 
 400.3758pt x 327.3831pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7c.png Grap
 hic file (type png)
@@ -1900,7 +1920,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [5 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7c.png>]
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7f.png, id=142, 
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7f.png, id=162, 
 496.4949pt x 393.8715pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7f.png Grap
 hic file (type png)
@@ -1914,7 +1934,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [6]) (huiswerk/week01/opgave_1.15.tex
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.15a.png, id=149,
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.15a.png, id=169,
  508.7808pt x 338.2236pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.15a.png Gra
 phic file (type png)
@@ -1928,7 +1948,7 @@ Underfull \vbox (badness 2065) has occurred while \output is active []
 
 
 [7 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.7f.png>]
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.15b.png, id=156,
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.15b.png, id=176,
  508.7808pt x 338.2236pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg1.15b.png Gra
 phic file (type png)
@@ -1966,7 +1986,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [15]
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg2.20a_comparison.p
-ng, id=226, 642.4803pt x 281.1303pt>
+ng, id=246, 642.4803pt x 281.1303pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg2.20a_compari
 son.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg2.20a_comparis
@@ -2019,7 +2039,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [26]) (huiswerk/week02/opgave_4.3.tex) (huiswerk/week02/opgave_4.4.tex
 
 [27]
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.4a.png, id=320, 
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.4a.png, id=340, 
 462.528pt x 346.896pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.4a.png Grap
 hic file (type png)
@@ -2027,7 +2047,7 @@ hic file (type png)
 Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
 es/opg4.4a.png  used on input line 22.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.4b.png, id=321, 
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.4b.png, id=341, 
 462.528pt x 346.896pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.4b.png Grap
 hic file (type png)
@@ -2089,7 +2109,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [38]
 Hoofdstuk 3.
 (huiswerk/week03/opgave_4.14.tex
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.14a_1.png, id=39
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.14a_1.png, id=41
 1, 447.3513pt x 327.3831pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.14a_1.png G
 raphic file (type png)
@@ -2097,7 +2117,7 @@ raphic file (type png)
 Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
 es/opg4.14a_1.png  used on input line 37.
 (pdftex.def)             Requested size: 447.3502pt x 327.3823pt.
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.14a_2.png, id=39
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.14a_2.png, id=41
 2, 555.7563pt x 327.3831pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.14a_2.png G
 raphic file (type png)
@@ -2119,7 +2139,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [41]
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_1.png, id
-=415, 1084.05pt x 578.16pt>
+=435, 1084.05pt x 578.16pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_1.pn
 g Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_1.png
@@ -2128,7 +2148,7 @@ Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
 es/opgave4.15a_1.png  used on input line 55.
 (pdftex.def)             Requested size: 1084.04736pt x 578.15858pt.
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_2.png, id
-=416, 1084.05pt x 578.16pt>
+=436, 1084.05pt x 578.16pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_2.pn
 g Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_2.png
@@ -2140,7 +2160,7 @@ es/opgave4.15a_2.png  used on input line 55.
 
 [42 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opgave4.15a_1.png
 >]
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.15b.png, id=425,
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.15b.png, id=445,
  1156.32pt x 361.35pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.15b.png Gra
 phic file (type png)
@@ -2161,7 +2181,7 @@ Underfull \vbox (badness 1831) has occurred while \output is active []
 
 [44 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.15b.png>])
 (huiswerk/week03/opgave_4.17.tex
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.17a.png, id=438,
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.17a.png, id=458,
  411.2163pt x 327.3831pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.17a.png Gra
 phic file (type png)
@@ -2175,7 +2195,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [45]
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.17.png, id=446, 
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.17.png, id=466, 
 578.16pt x 361.35pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg4.17.png Grap
 hic file (type png)
@@ -2247,7 +2267,7 @@ Hoofdstuk 5.
 
 [64]) (huiswerk/week05/opgave_5.m5.tex
 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/NumericSolverExample.
-png, id=572, 755.82375pt x 332.74312pt>
+png, id=592, 755.82375pt x 332.74312pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/NumericSolverExa
 mple.png Graphic file (type png)
 <use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/NumericSolverExam
@@ -2277,7 +2297,7 @@ Underfull \vbox (badness 1478) has occurred while \output is active []
 
 
 [67]) (huiswerk/week05/opgave_5.4.tex
-<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg5.4.png, id=597, 1
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg5.4.png, id=617, 1
 076.823pt x 354.123pt>
 File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg5.4.png Graph
 ic file (type png)
@@ -2374,4 +2394,630 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [95])) (huiswerk/week09.tex
 
 [96]
-Ho
+Hoofdstuk 8.
+(huiswerk/week09/opgave_8.m1.tex) (huiswerk/week09/opgave_8.m4.tex
+Overfull \hbox (8.76334pt too wide) in paragraph at lines 7--8
+[]\T1/bch/m/n/12 een nor-male ver-de-ling met ge-ge-ven stan-daard-de-vi-a-tie 
+en on-be-kende ver-wach-tings-waarde. 
+ []
+
+
+
+[97
+
+]) (huiswerk/week09/opgave_8.m5.tex) (huiswerk/week09/opgave_8.m6.tex
+
+[98]) (huiswerk/week09/opgave_8.2.tex
+
+[99]) (huiswerk/week09/opgave_8.6.tex
+
+[100]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[101]) (huiswerk/week09/opgave_8.7.tex
+Overfull \hbox (1.31851pt too wide) in paragraph at lines 4--4
+\T1/bch/m/n/12 per-so-nen aan-han-ger van een be-paalde po-li-tieke par-tij te 
+zijn. Geef een $\OT1/cmr/m/n/12 99$$%$\T1/bch/m/n/12 -betrouwbaarheids-
+ []
+
+
+
+[102]) (huiswerk/week09/opgave_8.8.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[103]
+
+[104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[105]) (huiswerk/week09/opgave_8.13.tex
+
+[106]) (huiswerk/week09/opgave_8.14.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[107]
+
+[108]) (huiswerk/week09/opgave_8.17.tex
+
+[109]) (huiswerk/week09/opgave_8.18.tex
+
+[110]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[111]) (huiswerk/week09/opgave_8.19.tex
+
+[112]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[113])) (huiswerk/week10.tex
+
+[114]
+Hoofdstuk 9.
+(huiswerk/week10/opgave_9.m1.tex) (huiswerk/week10/opgave_9.m2.tex
+
+[115
+
+]) (huiswerk/week10/opgave_9.m3.tex) (huiswerk/week10/opgave_9.m4.tex)
+(huiswerk/week10/opgave_9.m5.tex
+
+[116]) (huiswerk/week10/opgave_9.m6.tex
+
+[117]) (huiswerk/week10/opgave_9.3.tex
+
+[118]) (huiswerk/week10/opgave_9.5.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.5.png, id=985, 
+867.24pt x 542.025pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.5.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.5.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg_9.5.png  used on input line 27.
+(pdftex.def)             Requested size: 867.2379pt x 542.02367pt.
+
+Underfull \vbox (badness 1735) has occurred while \output is active []
+
+
+
+[119]) (huiswerk/week10/opgave_9.7.tex
+Overfull \hbox (10.79128pt too wide) detected at line 19
+[]
+ []
+
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.7.png, id=990, 
+867.24pt x 542.025pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.7.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.7.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg_9.7.png  used on input line 44.
+(pdftex.def)             Requested size: 867.2379pt x 542.02367pt.
+
+
+[120 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.5.png>]
+Overfull \hbox (10.79128pt too wide) detected at line 57
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (4\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 6 \OMS/cm
+sy/m/n/12 ^^T \OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^T \OT1/cmr/m/n/12 5\OML/cmm
+/m/it/12 :\OT1/cmr/m/n/12 4) = []([] = 4\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 6\OML
+/cmm/m/it/12 ; [] \OT1/cmr/m/n/12 = 5\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 4\OML/cm
+m/m/it/12 ; ^^V \OT1/cmr/m/n/12 = 4\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 7\OML/cmm/
+m/it/12 ; ^^[ \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 15) \OMS/cms
+y/m/n/12 ^^Y \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 7475\OML/cmm/m/
+it/12 :
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[121 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.7.png>])
+(huiswerk/week10/opgave_9.11.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.11.png, id=1004
+, 867.24pt x 542.025pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.11.png Gra
+phic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.11.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg_9.11.png  used on input line 46.
+(pdftex.def)             Requested size: 867.2379pt x 542.02367pt.
+
+
+[122]) (huiswerk/week10/opgave_9.18.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.18.png, id=1009
+, 867.24pt x 542.025pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.18.png Gra
+phic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.18.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg_9.18.png  used on input line 81.
+(pdftex.def)             Requested size: 867.2379pt x 542.02367pt.
+
+
+[123 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.11.png>]
+
+[124]) (huiswerk/week10/opgave_9.23.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23a.png, id=102
+0, 867.24pt x 542.025pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23a.png Gr
+aphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23a.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg_9.23a.png  used on input line 30.
+(pdftex.def)             Requested size: 867.2379pt x 542.02367pt.
+
+
+[125 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.18.png>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23b.png, id=102
+7, 867.24pt x 542.025pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23b.png Gr
+aphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23b.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg_9.23b.png  used on input line 54.
+(pdftex.def)             Requested size: 867.2379pt x 542.02367pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[126 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23a.png>])
+) (huiswerk/week11.tex
+
+[127 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_9.23b.png>]
+
+[128
+
+]
+Hoofdstuk 10.
+(huiswerk/week11/opgave_10.m1.tex) (huiswerk/week11/opgave_10.m2.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_10.m2.png, id=104
+3, 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_10.m2.png Gr
+aphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_10.m2.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg_10.m2.png  used on input line 34.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+
+[129]) (huiswerk/week11/opgave_10.m3.tex
+
+[130 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg_10.m2.png>])
+(huiswerk/week11/opgave_10.m4.tex) (huiswerk/week11/opgave_10.1.tex
+
+[131]
+
+[132]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[133]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.1.png, id=1088,
+ 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.1.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.1.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.1.png  used on input line 127.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+) (huiswerk/week11/opgave_10.5.tex
+
+[134 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.1.png>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.5.png, id=1095,
+ 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.5.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.5.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.5.png  used on input line 94.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+
+[135]) (huiswerk/week11/opgave_10.7.tex
+
+[136 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.5.png>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.7.png, id=1107,
+ 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.7.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.7.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.7.png  used on input line 102.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+
+[137]
+
+[138]) (huiswerk/week11/opgave_10.11.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.11.png, id=1116
+, 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.11.png Gra
+phic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.11.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.11.png  used on input line 116.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+
+[139 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.7.png>]
+
+[140]) (huiswerk/week11/opgave_10.12.tex
+
+[141 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.11.png>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_kritiek.png,
+ id=1132, 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_kritiek
+.png Graphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_kritiek.
+png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.12_kritiek.png  used on input line 106.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_p_waarde.png
+, id=1133, 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_p_waard
+e.png Graphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_p_waarde
+.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.12_p_waarde.png  used on input line 106.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+
+[142]
+
+[143 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_kritiek
+.png>]) (huiswerk/week11/opgave_10.13.tex
+
+[144 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.12_p_waard
+e.png>]
+Overfull \hbox (4.71916pt too wide) detected at line 125
+[]
+ []
+
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_kritiek.png,
+ id=1148, 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_kritiek
+.png Graphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_kritiek.
+png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.13_kritiek.png  used on input line 125.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_p_waarde.png
+, id=1149, 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_p_waard
+e.png Graphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_p_waarde
+.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg10.13_p_waarde.png  used on input line 125.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+
+
+[145]
+
+[146])) (huiswerk/week12.tex
+
+[147 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_kritiek
+.png> <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg10.13_p_waar
+de.png>]
+
+[148
+
+]
+Hoofdstuk 11.
+(huiswerk/week12/opgave_11.m1.tex
+
+[149]) (huiswerk/week12/opgave_11.m3.tex
+
+[150]) (huiswerk/week12/opgave_11.m6.tex
+
+[151]) (huiswerk/week12/opgave_11.1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+
+ []
+
+
+Underfull \vbox (badness 1168) has occurred while \output is active []
+
+
+
+[152]
+
+[153]) (huiswerk/week12/opgave_11.3.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[154]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[155]) (huiswerk/week12/opgave_11.5.tex
+Overfull \hbox (364.2913pt too wide) detected at line 79
+[]
+ []
+
+
+
+[156]
+
+[157]) (huiswerk/week12/opgave_11.7.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[158]
+
+[159]) (huiswerk/week12/opgave_11.12.tex
+Overfull \hbox (9.84554pt too wide) in paragraph at lines 141--141
+\T1/bch/m/n/12 De ge-ob-ser-veerde toet-sings-groot-heid $\OML/cmm/m/it/12 f \O
+T1/cmr/m/n/12 = 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 15$ \T1/bch/m/n/12 ligt dus 
+niet in het kri-tieke ge-bied $\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/
+n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1497)$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+
+ []
+
+
+
+[160
+
+]
+
+[161]
+
+[162]) (huiswerk/week12/opgave_11.13.tex
+Underfull \vbox (badness 2781) has occurred while \output is active []
+
+
+
+[163]
+
+[164]) (huiswerk/week12/opgave_11.14.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[165])) (huiswerk/week13.tex
+
+[166]
+Hoofdstuk 12.
+(huiswerk/week13/opgave_13.m1.tex) (huiswerk/week13/opgave_13.m2.tex
+
+[167
+
+]) (huiswerk/week13/opgave_13.m3.tex) (huiswerk/week13/opgave_13.m4.tex)
+(huiswerk/week13/opgave_13.m6.tex
+
+[168]) (huiswerk/week13/opgave_13.1.tex
+
+[169]) (huiswerk/week13/opgave_13.4.tex
+
+[170]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png, id=1299,
+ 462.528pt x 346.896pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.4.png  used on input line 78.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[171]
+
+[172]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[173 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.4.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[174]) (huiswerk/week13/opgave_13.5.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.5.png, id=1323,
+ 633.0852pt x 331.7193pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.5.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.5.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.5.png  used on input line 60.
+(pdftex.def)             Requested size: 633.08366pt x 331.71848pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[175]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[176 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.5.png>])
+(huiswerk/week13/opgave_13.9.tex
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9.png, id=1336,
+ 698.1282pt x 328.8285pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9.png Grap
+hic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.9.png  used on input line 63.
+(pdftex.def)             Requested size: 698.1265pt x 328.8277pt.
+
+
+[177]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[178 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9.png>]
+Overfull \hbox (32.16032pt too wide) in paragraph at lines 130--130
+\T1/bch/m/n/12 voorspellingsinterval wil-len be-pa-len (of-te-wel $\OML/cmm/m/i
+t/12  \OT1/cmr/m/n/12 = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 01$\T1/bch/m/n/12 )
+, geldt dat $\OML/cmm/m/it/12 z[] \OT1/cmr/m/n/12 = []([] =
+ []
+
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9c.png, id=1349
+, 578.16pt x 289.08pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9c.png Gra
+phic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9c.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.9c.png  used on input line 130.
+(pdftex.def)             Requested size: 578.15858pt x 289.07928pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[179]) (huiswerk/week13/opgave_13.15.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[180 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.9c.png>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15a.png, id=136
+0, 461.0826pt x 327.3831pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15a.png Gr
+aphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15a.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.15a.png  used on input line 34.
+(pdftex.def)             Requested size: 461.08147pt x 327.3823pt.
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png, id=136
+1, 650.43pt x 327.3831pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png Gr
+aphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.15b.png  used on input line 79.
+(pdftex.def)             Requested size: 650.4284pt x 327.3823pt.
+
+
+[181 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15a.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[182]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png, id=137
+3, 667.7748pt x 327.3831pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png Gr
+aphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.15c.png  used on input line 94.
+(pdftex.def)             Requested size: 667.77316pt x 327.3823pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[183 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15b.png> <
+C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15c.png>]
+<C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png, id=138
+3, 766.062pt x 331.7193pt>
+File: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png Gr
+aphic file (type png)
+<use C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png>
+Package pdftex.def Info: C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figur
+es/opg13.15e.png  used on input line 145.
+(pdftex.def)             Requested size: 766.06012pt x 331.71848pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[184])))
+
+[185 <C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/opg13.15e.png>]
+
+[186
+
+]
+No file main.bbl.
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+(main.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E718F10FAF1A85050C94B79E84994CC0;2323.
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 1 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 57366 strings out of 468133
+ 1371950 string characters out of 5430719
+ 1865323 words of memory out of 5000000
+ 84098 multiletter control sequences out of 15000+600000
+ 715699 words of font info for 117 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 102i,17n,131p,779b,2132s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/gnome
+/cantarell/Cantarell-Bold.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fon
+ts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiK
+TeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/Admin/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/
+Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admi
+n/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Us
+ers/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb>
+
+Output written on main.pdf (190 pages, 2179201 bytes).
+PDF statistics:
+ 1608 PDF objects out of 1728 (max. 8388607)
+ 643 named destinations out of 1000 (max. 500000)
+ 312 words of extra memory for PDF output out of 10000 (max. 10000000)
+
