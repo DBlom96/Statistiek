@@ -3,16 +3,16 @@
     Find the probability that a random sample of $n = 5$ sections of pipe will have a sample mean diameter greater than $\qty{2.560}{\cm}$ and less than $\qty{2.570}{\cm}$.
 }
 \enanswer{
-    Central Limit Theorem: $\bar{X} \approx N(\mu = 2.565, \sigma = 0.0027)$ \\
-    $0.9392$
+    Central Limit Theorem: $\bar{X} \sim N(\mu = 2.565, \sigma = 0.008 / \sqrt{5} \approx 0.0036)$ \\
+    $0.8377$
 }
 
 \enquestion{7.7}{
-    The compressive strength of concrete is normally distributed with $\mu = \qty{17237}{\kN/\metre\squared}$ and $\sigma = \qty{345}{\kN\per\metre\squared}$.
-    Find the probability that a random sample of $n = 5$ specimens will have a sample mean diameter that falls in the interval $\qty{17230}{\kN\per\metre\squared}$ to $\qty{17305}{\kN\per\metre\squared}$.
+    The compressive strength of concrete (in \si{\kN\per\metre\squared}) is normally distributed with $\mu = 17237$ and $\sigma = 345$.
+    Find the probability that a random sample of $n = 5$ specimens will have a sample mean compressive strength that falls in the interval $\qty{17230}{\kN\per\metre\squared}$ to $\qty{17305}{\kN\per\metre\squared}$.
 }
 \enanswer{
-    $\bar{X} \sim N(\mu = 17237, \sigma = 154.2887)$ \\
+    Central Limit Theorem: $\bar{X} \sim N(\mu = 17237, \sigma = 345 / \sqrt{5} \approx 154.2887)$ \\
     $0.1884$
 }
 
@@ -29,7 +29,8 @@
     Find the mean and variance of this quantity.
 }
 \enanswer{
-    Central Limit Theorem: $\bar{X} + \frac{1}{2} \approx N\left(\mu = 1, \sigma = \frac{1}{18}\right)$
+    Central Limit Theorem: $\bar{X} + 1/2 \sim N\left(\mu = 1, \sigma = 1/18 \right)$.
+    The mean is equal to $1$ and the variance equal to $\left(\frac{1}{18} \right)^2 = \frac{1}{324}$.
 }
 
 \enquestion{7.11}{
@@ -44,9 +45,10 @@
     Find the probability that the sample mean is greater than $2.3$ but less than $2.7$, assuming that the sample mean would be measured to the nearest tenth.
 }
 \enanswer{
-    $X_{\text{sum}} \sim N(\mu = 90, \sigma = \sqrt{45})$ \\
-    Correction for continuity, without rounding to one decimal: $P(83 \le X_{\text{sum}} \le 97) = 0.7364$ \\
-    Correction for continuity, rounded to one decimal: $P(85 \le X_{\text{sum}} \le 95) = 0.5877$
+    Central Limit Theorem: $\bar{X} \sim N(\mu = 2.5, \sigma = \frac{1}{12}\sqrt{5})$ \\
+    Correction for continuity, without rounding to one decimal: $P(2.3 < \bar{X} < 2.7) = 0.7169$ \\
+    Correction for continuity, rounded to one decimal (notice that we need to have unrounded values between $2.35$ and $2.65$, 
+    to get rounded values of $2.4$, $2.5$ or $2.6$): $P(2.35 < \bar{X} < 2.65) = 0.5792$
 }
 
 \enquestion{7.12}{
@@ -61,7 +63,7 @@
     \end{tabular}
 }
 \enanswer{
-    Central Limit Theorem: $\bar{X} \approx N(\mu = 8.2, \sigma = 1)$
+    Central Limit Theorem: $\bar{X} \sim N(\mu = 8.2, \sigma = 6/\sqrt{36} = 1)$
     
     \begin{tabular}{*{3}{m{0.3\textwidth}}}
         (a) $0.9641$ & (b) $0.9634$ & (c) $0.0139$
@@ -79,7 +81,8 @@
     \end{enumerate}
 }
 \enanswer{
-    $D = \bar{X}_{1} - \bar{X}_{2} \sim N(\mu = 5, \sigma = \sqrt{20})$
+    Central Limit Theorem: $\bar{X}_1 \sim N(\mu=75, \sigma = 8 / \sqrt{16} = 2)$ and $\bar{X}_2 \sim N(\mu=70, \sigma = 12 / \sqrt{9} = 4)$.
+    Therefore: $D = \bar{X}_{1} - \bar{X}_{2} \sim N(\mu = 75-70=5, \sigma = \sqrt{2^2+4^2}=\sqrt{20})$.
     \begin{enumerate}[label=(\alph*)]
         \item $0.5885$
         \item $0.2564$
