@@ -56,8 +56,8 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $\hat{\theta} = \frac{\sum_{i=1}^{n} X_{i}^{2}}{2n}$
-        \item $\hat{\theta} = \frac{\sum_{i=1}^{n} X_{i}^{2}}{2n}$, the maximum likelihood estimator is identical to the unbiased estimator in part (a).
+        \item $\hat{\theta} = \frac{\sum_{i=1}^{n} X_{i}^{2}}{2n} = \frac{\bar{X^2}}{2}$.
+        \item $\hat{\theta} = \frac{\sum_{i=1}^{n} X_{i}^{2}}{2n} = \frac{\bar{X^2}}{2}$, the maximum likelihood estimator is identical to the unbiased estimator in part (a).
     \end{enumerate}
 }
 
@@ -80,7 +80,7 @@
             \end{cases}
         \]  
         Use this result to show that the maximum likelihood estimator for $a$ is biased.
-        \item We have two unbiased estimator for $a$: the moment estimator $\hat{a}_1 = 2\bar{X}$ and $\hat{a}_2=[(n+1)/n]\max(X_i)$, where $\max(X_i)$ is the largest observation in a random sample of size $n$.
+        \item We have two unbiased estimators for $a$: the moment estimator $\hat{a}_1 = 2\bar{X}$ and $\hat{a}_2=[(n+1)/n]\max(X_i)$, where $\max(X_i)$ is the largest observation in a random sample of size $n$.
         It can be shown that $V(\hat{a}_1)=a^2/(3n)$ and that $V(\hat{a}_2)=a^2/[n(n+2)]$.
         Show that if $n>1$, $\hat{a}_2$ is a better estimator than $\hat{a}_1$.
         In what sense is it a better estimator of $a$?
@@ -91,7 +91,8 @@
         \item The largest observation is almost always less than $a$.
         \item Since $\frac{n}{n+1} < 1$, it consistently underestimates $a$. The bias is $\frac{na}{n+1} - a = -\frac{a}{n+1} \to 0$ as $n \to \infty$.
         \item $\hat{a} = \frac{n+1}{n} X_{\max}$
-        \item $F(y) = \left(\frac{y}{a}\right)^n \Rightarrow f(y) = \frac{ny^{n-1}}{a^n} \Rightarrow E(Y) = \frac{na}{n+1} \Leftrightarrow E\left(\frac{n+1}{n}Y\right) = a$, showing that $Y = \hat{a}_{\text{MLE}}$ is biased.
-        \item Since $n(n+2) > 3n \Leftrightarrow n < 0$ or $n > 1 \Leftrightarrow n > 1$, $V(\hat{a}_2) < V(\hat{a}_1)$ for $n > 1$. Thus, $\hat{a}_2$ is a better (i.e., more precise) estimator than $\hat{a}_1$.
+        \item $F(y) = \left(\frac{y}{a}\right)^n \Rightarrow f(y) = \frac{d}{dy} F(y) = \frac{ny^{n-1}}{a^n} \Rightarrow E(Y) = \frac{na}{n+1} \Leftrightarrow E\left(\frac{n+1}{n}Y\right) = a$, showing that $Y = \hat{a}_{\text{MLE}}$ is biased.
+        \item If $n > 1$, we have that $n(n+2) > 3n \Leftrightarrow V(\hat{a}_1)=a^2/(3n) > a^2 = V(\hat{a}_2)$.
+        Therefore, $\hat{a}_2$ has a smaller variance (i.e., is more precise) than $\hat{a}_1$.
     \end{enumerate}
 }
