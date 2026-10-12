@@ -59,17 +59,126 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    (a) The region outside circle $A$. \\
-    (b) Simplifies to $A$; the entire circle $A$ is shaded. \\
-    (c) The intersection region of $A$ and $B$, plus the entire circle $C$. \\
-    (d) The portion of circle $A$ that does not overlap with either $B$ or $C$. \\
-    (e) Everything outside the intersection of $A$ and $B$, plus the entire circle $C$.
+    \begin{tabular}{*{2}{m{0.45\textwidth}}}
+        (a) $A'$ is the region outside circle $A$:
+        
+        \begin{center}
+            \begin{tikzpicture}
+                \fill[red!30, even odd rule] (0, 0) rectangle (4, 4) (1.6, 2.8) circle (0.7cm);
+                \draw (0, 0) rectangle (4, 4);
+
+                \draw (2.4, 2.8) circle (0.7cm);
+                \draw (1.6, 2.8) circle (0.7cm);
+                \draw (2, 1) circle (0.7cm);
+
+                \node (A) at ($(1.6, 2.8)+(135:1cm)$) {\small$A$};
+                \node (B) at ($(2.4, 2.8)+(45:1cm)$) {\small$B$};
+                \node (A) at ($(2,1)+(315:1cm)$) {\small$C$};
+
+            \end{tikzpicture}
+        \end{center}
+    & (b) $(A \cap B) \cup (A \cap B')$ simplifies to $A$, so the entire circle $A$ is shaded:
+    
+        \begin{center}
+            \begin{tikzpicture}
+                \fill[red!30] (1.6, 2.8) circle (0.7cm);
+                \draw (0, 0) rectangle (4, 4);
+
+                \draw (2.4, 2.8) circle (0.7cm);
+                \draw (1.6, 2.8) circle (0.7cm);
+                \draw (2, 1) circle (0.7cm);
+
+                \node (A) at ($(1.6, 2.8)+(135:1cm)$) {\small$A$};
+                \node (B) at ($(2.4, 2.8)+(45:1cm)$) {\small$B$};
+                \node (A) at ($(2,1)+(315:1cm)$) {\small$C$};
+
+            \end{tikzpicture}
+        \end{center}
+    \\
+    (c) $(A \cap B) \cup C$ is the intersection of $A$ and $B$, plus the entire circle $C$:
+
+        \begin{center}
+            \begin{tikzpicture}
+                % Fill the intersection (A \cap B) using a clipping path
+                \begin{scope}
+                    \clip (1.6, 2.8) circle (0.7cm);
+                    \fill[red!30] (2.4, 2.8) circle (0.7cm);
+                \end{scope}
+
+                % Fill the entire circle C
+                \fill[red!30] (2, 1) circle (0.7cm);
+
+                % Draw the bounding box and the circles
+                \draw (0, 0) rectangle (4, 4);
+                \draw (1.6, 2.8) circle (0.7cm);
+                \draw (2.4, 2.8) circle (0.7cm);
+                \draw (2, 1) circle (0.7cm);
+
+                % Labels
+                \node at ($(1.6, 2.8)+(135:1cm)$) {\small$A$};
+                \node at ($(2.4, 2.8)+(45:1cm)$) {\small$B$};
+                \node at ($(2,1)+(315:1cm)$) {\small$C$};
+            \end{tikzpicture}
+        \end{center}
+    & (d) $A \cap (B \cup C)'$ is the portion of circle $A$ that is outside $B$ and $C$:
+
+    \begin{center}
+        \begin{tikzpicture}
+            % Clip to circle A, then shade its complement relative to B and C
+            \begin{scope}
+                \clip (1.6, 2.8) circle (0.7cm);
+                \fill[red!30, even odd rule] (0, 0) rectangle (4, 4) 
+                    (2.4, 2.8) circle (0.7cm) 
+                    (2, 1) circle (0.7cm);
+            \end{scope}
+
+            % Draw the bounding box and the circles
+            \draw (0, 0) rectangle (4, 4);
+            \draw (1.6, 2.8) circle (0.7cm);
+            \draw (2.4, 2.8) circle (0.7cm);
+            \draw (2, 1) circle (0.7cm);
+
+            % Labels
+            \node at ($(1.6, 2.8)+(135:1cm)$) {\small$A$};
+            \node at ($(2.4, 2.8)+(45:1cm)$) {\small$B$};
+            \node at ($(2,1)+(315:1cm)$) {\small$C$};
+        \end{tikzpicture}
+    \end{center}
+    \\
+    (e) $(A \cap B)' \cup C$ is everything outside the intersection of $A$ and $B$, plus the entire circle $C$:
+
+    \begin{center}
+        \begin{tikzpicture}
+            % Fill the entire bounding box
+            \fill[red!30] (0, 0) rectangle (4, 4);
+            
+            % "Punch out" (unfill) the intersection of A and B with white
+            \begin{scope}
+                \clip (1.6, 2.8) circle (0.7cm);
+                \fill[white] (2.4, 2.8) circle (0.7cm);
+            \end{scope}
+
+            % Draw the bounding box and the circles on top
+            \draw (0, 0) rectangle (4, 4);
+            \draw (1.6, 2.8) circle (0.7cm);
+            \draw (2.4, 2.8) circle (0.7cm);
+            \draw (2, 1) circle (0.7cm);
+
+            % Labels
+            \node at ($(1.6, 2.8)+(135:1cm)$) {\small$A$};
+            \node at ($(2.4, 2.8)+(45:1cm)$) {\small$B$};
+            \node at ($(2,1)+(315:1cm)$) {\small$C$};
+        \end{tikzpicture}
+    \end{center}
+    & \\
+\end{tabular}
+
 }
 
 \enquestion{2.29}{
     The rise time of a reactor is measured in minutes (and fractions of minutes). 
     Let the sample space be positive, real numbers. 
-    Define the events $A$ and $B$ as follows: $A = \{x \mid x < 65\}$ and $B = \{x \mid x > 45.5\}$.
+    Define the events $A$ and $B$ as follows: $A = \set{x \mid x < 65}$ and $B = \set{x \mid x > 45.5}$.
     
     Describe each of the following events:
 
@@ -80,8 +189,9 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    \begin{tabular}{*{8}{l}}
-        a. & $[65, \infty)$ & b. & $(0, 45.5]$ & c. & $(45.5, 65)$ & d. & $(,\infty)$
+    \begin{tabular}{*{2}{m{0.45\textwidth}}}
+        (a) $\set{x \mid x \geq 65}$ & (b) $\set{x \mid 0 < x \leq 45.5}$ \\
+        (c) $\set{x \mid 45.5 < x < 65}$ & (d) $\set{x \mid 0 < x < \infty}$
     \end{tabular}
 }
 
@@ -96,9 +206,9 @@ Describe any assumptions you make.
 
 \enanswer{
     \begin{tabular}{@{}l l}
-        a. & $S = \{gg, gm, gb, mg, mm, mb, bg, bm, bb\}$, \\
-           & where $g = \text{good}$, $m = \text{moderate}$ and $b = \text{bad}$ \\
-        b. & $\{gg, gm, gb, mg, mm, mb, bg, bm\}$
+        a. & $S = \set{gg, gm, gb, mg, mm, mb, bg, bm, bb}$, \\
+           & where $g = \text{good}$, $m = \text{minor}$ and $b = \text{bad}$ \\
+        b. & $S = \set{gg, gm, gb, mg, mm, mb, bg, bm}$
     \end{tabular}
 }
 
@@ -163,7 +273,7 @@ Describe any assumptions you make.
     \begin{enumerate}[label=(\alph*)]
         \item $0.7$
         \item $0.95$
-        \item No, because $P(A \cap B) = 0.70$. So $A \cap B \neq \varnothing$
+        \item No, because $P(A \cap B) = 0.70$. So $A \cap B \neq \emptyset$
     \end{enumerate}
 }
 
