@@ -12,7 +12,7 @@ locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
 vaknaam = "Statistiek deel 1 (vierde kans)"
 vakcode = "STA#1"
-datum = "20261016"
+datum = "20261120"
 tentamentijd = "13:30 - 16:30"
 examinator = "Dr. ir. D.A.M.P. Blom"
 peer_review = "Dr. A.J. Hoogstrate"
@@ -24,8 +24,8 @@ if formatted_date[0] == "0":
     formatted_date = formatted_date[1:]
 print(formatted_date)
 
-doc_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.docx"
-pdf_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}.pdf"
+doc_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}_vierdekans.docx"
+pdf_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}_vierdekans.pdf"
 
 # Replace placeholders
 replacements = {

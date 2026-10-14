@@ -36,15 +36,15 @@
 
     \subquestion{6}{
         Nadat een vrachtwagen door de scanpoort is gereden, rijdt de chauffeur naar de uitgang waar een geautomatiseerde slagboom staat.
-        De tijd $Y$ (in minuten) die een vrachtwagenchauffeur nodig heeft om bij de slagboom aan te komen is normaal verdeeld met $\mu(Y) = 7.0$ en $\sigma(Y) = 0.91$.
+        Deze rijtijd $Y$ (in minuten) is normaal verdeeld met $\mu(Y) = 7.0$ en $\sigma(Y) = 0.91$.
         
         Als de analyse van het röntgenbeeld nog niet voltooid is op het moment dat de vrachtwagen de slagboom bereikt,
         moet de chauffeur stoppen en wachten in een speciale bufferzone tot de scan is vrijgegeven.
         
-        Bereken de kans dat een willekeurige vrachtwagenchauffeur moet wachten in de bufferzone bij de slagboom.
+        Bereken de kans dat een willekeurige vrachtwagenchauffeur moet wachten in de bufferzone.
         
         {
-            \small\textbf{\underline{Hint}:} gebruik hiervoor de verschilvariabele $V = X - Y$: deze is normaal verdeeld met $\mu(V) = \mu(X) - \mu(Y)$ en $\sigma(V) = \sqrt{\sigma(X)^2 + \sigma(Y)^2}$.
+            \small\textbf{\underline{Hint}:} de verschilvariabele $V = X - Y$ is normaal verdeeld met $\mu(V) = \mu(X) - \mu(Y)$ en $\sigma(V) = \sqrt{\sigma(X)^2 + \sigma(Y)^2}$.
         }
     }
     \answer{
@@ -68,10 +68,8 @@
     }
 
     \subquestion{6}{
-        De tijd $Y$ die een willekeurige chauffeur nodig heeft om bij de slagboom aan te komen blijkt veel minder te variëren dan gedacht,
-        oftewel de standaardafwijking $\sigma(Y)$ is kleiner dan gedacht.
-
-        Neem aan dat de waarden van $\mu(X)$, $\mu(Y)$ en $\sigma(X)$ wel kloppen.
+        De rijtijd $Y$ blijkt veel minder te variëren dan gedacht, oftewel de standaardafwijking $\sigma(Y)$ is kleiner
+        dan verwacht. Neem aan dat de gegeven waarden van $\mu(X)$, $\mu(Y)$ en $\sigma(X)$ wel blijken te kloppen.
         Beredeneer, zonder berekening, of de kans dat een vrachtwagen in de bufferzone moet wachten groter dan / kleiner dan / gelijk aan de waarde berekend bij (b) is.
     }
     \answer{
@@ -90,14 +88,14 @@
     }
 
     \subquestion{7}{
-        De Rotterdamse haven wil de kans verkleinen dat er filevorming plaatsvindt bij de slagboom, en wil om die reden het analyseren van de röntgenbeelden uitbesteden aan een AI-systeem.
+        De Rotterdamse haven wil de kans verkleinen dat er filevorming plaatsvindt in de bufferzone, en wil om die reden het analyseren van de röntgenbeelden uitbesteden aan een AI-systeem.
         Dit AI-systeem moet ervoor zorgen dat de kans dat een vrachtwagen bij de slagboom moet wachten nog maar \SI{2}{\percent} is.
-        Bereken hoe groot de verwachte analysetijd $\mu(X)$ maximaal mag zijn.
-        Je mag aannemen dat de standaardafwijking $\sigma(X)$ gelijk blijft.
-
+        Bereken hoe groot de verwachte analysetijd $\mu(X)$ nu maximaal mag zijn.
+        Neem hierbij aan dat de standaardafwijking $\sigma(X)$ wel gelijk blijft.
     }
     \answer{
         We hebben in deze situatie weer te maken met twee kansvariabelen $X$ en $Y$, maar nu is de verwachtingswaarde $\mu(X)$ een te bepalen onbekende.\rubric{1}
+        
         Met andere woorden, de verschilvariabele $V = X - Y$ is nu normaal verdeeld met:
         \begin{align*}
             E(V)        &= \mu(X) - \mu(Y) = \mu(X) - 7.0 \rubric{1} \\
@@ -111,6 +109,7 @@
             E_2     &= 0.02. \rubric{2}  
         \end{align*}
         Hieruit volgt een waarde van $X \approx 3.8578$.\rubric{1}
+
         Dit betekent dat de gemiddelde analysetijd $\mu(X)$ maximaal $3$ minuten en $52$ seconden mag zijn.\rubric{1}
     }
    

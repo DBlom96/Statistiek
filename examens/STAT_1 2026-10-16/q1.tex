@@ -18,7 +18,7 @@
                 \item Sorteer de gegevens van laag naar hoog:
                 
                 {\scriptsize
-                    $100,\; 105,\; 110,\; 115,\; 120,\; 122,\; 125,\; 128,\; 130,\; 135,\; 138,\; 140,\; 142,\; 145,\; 150,\; 155,\; 160,\; 165,\; 200$.\rubric{2}
+                    $100,\; 105,\; 110,\; 115,\; 120,\; 122,\; 125,\; 128,\; 130,\; 135,\; 138,\; 140,\; 142,\; 145,\; 150,\; 155,\; 160,\; 165,\; 200$.\rubric{1}
                 }
                 \item De minimumwaarde is $100$ en de maximumwaarde is $200$.\rubric{1}
                 \item Aangezien het aantal waarden $n = 19$, dus $n$ is oneven, is de mediaan (tweede kwartiel) de middelste (tiende) waarde: $135$.\rubric{1}
@@ -32,9 +32,13 @@
                 \text{Minimum} = 100, \quad Q_1 = 121, \quad \text{Mediaan} = 135, \quad Q_3 = 147.5, \quad \text{Maximum} = 200. 
             \]
             
-            We tekenen de boxplot met \enquote{whiskers} van $Q_1 - 1.5 \times \IQR$ tot $Q_3 + 1.5 \times \IQR$, waarbij $\IQR = Q_3 - Q_1 = 147.5 - 121 = 26.5$. \rubric{1}
-            De \enquote{whiskers} lopen van de kleinste niet-outlier boven $121 - 1.5 \times 26.5 = 81.25$ (oftewel $100$) tot de hoogste niet-outlier onder $147.5 + 1.5 \times 26.5 = 187.25$ (oftewel $165$).
-            Er is één outlier, namelijk $200$. \rubric{1}
+            De interkwartielafstand $\IQR = Q_3 - Q_1 = 147.5 - 121 = 26.5$. \rubric{1}
+
+            We tekenen de boxplot met \enquote{whiskers} tussen de kleinste en grootste waarde in het interval
+            van $Q_1 - 1.5 \times \IQR = 121 - 1.5 \times 26.5 = 81.25$ tot $Q_3 + 1.5 \times \IQR = 147.5 + 1.5 \times 26.5 = 187.25$.\rubric{1}
+
+            De \enquote{whiskers} lopen dus van $100$ (kleinste niet-outlier) tot $165$ (hoogste niet-outlier), en verder is er één outlier, namelijk $200$. \rubric{1}
+
             \begin{center}
                 \includegraphics[width=0.5\textwidth]{./20261016_exam_boxplot.png} \rubric{2}
             \end{center}
@@ -46,20 +50,25 @@
         }
         \answer{
             De boxplot is bijna symmetrisch te noemen in de mediaan.\rubric{1}
-            Merk echter wel op dat er een extreem hoge waarde is van $200$, de enige outlier in deze boxplot\rubric{1}
+
+            Merk echter wel op dat er een extreem hoge waarde is van $200$, de enige outlier in deze boxplot.\rubric{1}
+
             Deze outlier trekt het gemiddelde in verhouding omhoog, terwijl deze niet of nauwelijks invloed heeft op de mediaan.\rubric{1}
+
             Daarom kunnen we concluderen dat het gemiddelde van de tijden hoger ligt dan de mediaan van $135$ seconden. \rubric{1}
 
             (Maximaal 2 punten indien het gemiddelde direct wordt uitgerekend en geen connectie met de boxplot wordt gelegd.)
         }
         \subquestion{3}{
-            Men komt erachter dat de langzaamste cursist liefst $25$ minuten bij één van de checkpoints heeft moeten stilstaan om te wachten op een veiligheidsinstructie.
-            De instructeur overweegt om de tijd van deze cursist te reduceren met de wachttijd.
+            Men komt erachter dat de langzaamste cursist liefst $25$ minuten bij één van de checkpoints heeft moeten wachten op een veiligheidsinstructie.
+            De instructeur overweegt om $25$ minuten van de tijd van deze cursist af te halen.
             Beredeneer, zonder een berekening te maken, welke van de vijf kengetallen van een boxplot veranderen door deze aanpassing.
         }
         \answer{
             Merk op dat de langzaamste cursist een tijd van $200$ minuten heeft gedaan over de oefening, en dat deze tijd nu tot $175$ minuten wordt gereduceerd.\rubric{1}
+
             Dit verandert echter niets aan de volgorde van de gesorteerde verplaatsingstijden, aangezien $175$ minuten nog steeds langer is dan de tijd van de andere cursisten.\rubric{1}
+            
             Dit betekent dat het minimum, $Q_1$, mediaan en $Q_3$ hetzelfde blijven, en alleen het maximum verandert van $200$ naar $175$.\rubric{1}    
         }
 
@@ -70,9 +79,13 @@
         }
         \answer{
             Merk op dat de nieuwe dataset wordt verkregen door alle getallen te vermenigvuldigen met $0.9$.\rubric{1}
+
             Hierdoor worden ook alle vijf kengetallen van de boxplot vermenigvuldigd met $0.9$.\rubric{1}
+
             De vorm van de boxplot verandert dus niet, de boxplot wordt enkel horizontaal samengedrukt met \SI{10}{\percent}.\rubric{1}
+
             De interkwartielafstand $\text{IQR} = Q_3 - Q_1$ wordt ook met een factor $0.9$ kleiner, omdat dit ook geldt voor $Q_1$ en $Q_3$.\rubric{1}
+            
             \begin{center}
                 \includegraphics[width=0.5\textwidth]{./20261016_exam_boxplot_90percent.png}
             \end{center}

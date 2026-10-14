@@ -1,0 +1,69 @@
+\documentclass[tikz, beamer, preview]{standalone}
+\input{../styles/tikz_config.tex}
+\input{../styles/macros.tex}
+
+\begin{document}
+    \begin{standaloneframe}
+        \def\shift{1}
+        \begin{tikzpicture}[scale=1.5]
+            \only<+>{
+                \node (start) at (-0.5, 0) {};
+                \node (stop) at (9, 0) {};
+
+                % Top branch nodes
+                \node[device,label={above:$0.91$}] (A) at (1, 1) {$A$};
+                \node[device,label={above:$0.87$}] (B) at (3, 1) {$B$};
+                \node[device,label={above:$0.94$}] (C) at (2, -1) {$C$};
+                \node[device,label={above:$0.92$}] (D) at (6, 1) {$D$};
+                \node[device,label={above:$0.93$}] (E) at (6, -1) {$E$};
+                \node[device,label={above:$0.96$}] (F) at (8, 0) {$F$};
+                
+                \coordinate (zero1) at (0,0);
+                \coordinate (zero2) at (4,0);
+                \coordinate (zero3) at (5,0);
+                \coordinate (zero4) at (7,0);
+
+                % Add connections
+                \draw (start) -- (zero1) |- (A.west);
+                \draw (zero1) |- (C.west);
+                \draw (A.east) -- (B.west);
+                \draw (B.east) -| (zero2);
+                \draw (C.east) -| (zero2);
+                \draw (zero2) -- (zero3);
+                \draw (zero3) |- (D.west);
+                \draw (zero3) |- (E.west);
+                \draw (D.east) -| (zero4);
+                \draw (E.east) -| (zero4);
+                \draw (zero4) -- (F.west) (F.east) -- (stop);
+
+                % \draw (B.west) -- (BL.center) |- (start);
+                % \draw (A.east) -- (TR.center) |- (C.west);
+                % \draw (B.east) -- (BR.center) |- (C.west);
+                % \draw (C.east) -- (stop);
+            }
+
+            % \only<+>{
+            %     \node (start) at (-2, 0) {};
+            %     \node (stop) at (3.25, 0) {};
+
+            %     % Top branch nodes
+            %     \node[device, label=above:$0.95$] (A) at (0, 1) {$A$};
+            %     \node[device, label=below:$0.88$] (B) at (0, -1) {$B$};
+            %     \node[device, label=above:$0.92$] (C) at (2, 0) {$C$};
+                
+            %     \node (TL) at ($(A)+(-\shift,0)$) {};
+            %     \node (TR) at ($(A)+(\shift,0)$) {};
+            %     \node (BL) at ($(B)+(-\shift,0)$) {};
+            %     \node (BR) at ($(B)+(\shift,0)$) {};
+
+
+            %     % Add connections
+            %     \draw (A.west) -- (TL.center) |- (start);
+            %     \draw (B.west) -- (BL.center) |- (start);
+            %     \draw (A.east) -- (TR.center) |- (C.west);
+            %     \draw (B.east) -- (BR.center) |- (C.west);
+            %     \draw (C.east) -- (stop);
+            % }
+        \end{tikzpicture}
+    \end{standaloneframe}
+\end{document}

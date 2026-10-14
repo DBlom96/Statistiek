@@ -1,24 +1,25 @@
 \begin{question}{25}{
-    Een militaire eenheid bewaakt een strategisch logistiek knooppunt in een conflictgebied. 
-    De basis wordt regelmatig doelwit van vijandelijke \emph{loitering munitions} (kamikazedrones).
-
+    Een militaire eenheid bewaakt een strategisch logistiek knooppunt in een conflictgebied.
+    De basis wordt regelmatig bestookt door kamikazedrones.
     Uit operationele data over de afgelopen periode blijkt dat er gemiddeld $\lambda = 16$ van dit soort drone-aanvallen per dag plaatsvinden volgens een Poissonproces.
-    
-    De basis is uitgerust met een geautomatiseerd Counter-UAS (Unmanned Aircraft Systems) verdedigingssysteem. 
+    De basis is uitgerust met een geautomatiseerd counter-droneverdedigingssysteem. 
     Dit systeem kan per dag maximaal $20$ drones effectief uitschakelen (beperkt door munitievoorraad en herlaadtijd). 
     Aanvallen boven deze capaciteit kunnen niet meer tijdig worden geneutraliseerd en leiden tot inslagen op de infrastructuur.
 }
+
     \subquestion{5}{
         Bereken de kans dat de basis in een willekeurige week ($7$ dagen) \emph{minimaal} $125$ drone-aanvallen registreert.
     }
     \answer{
         Laat $X$ het aantal aanvallen in een week ($7$ dagen) zijn. 
         Aangezien de meeteenheid in dagen is, geldt dat we meten over een periode van $t = 7$ meeteenheden. \rubric{1}
+
         Aangezien het daggemiddelde $\lambda = 16$ is, geldt voor de weekintensiteit:
         \[
             \mu = \lambda \cdot t = 16 \cdot 7 = 112. \rubric{1}
         \]
         Het aantal aanvallen per week $X$ is dus Poisson verdeeld met gemiddelde $\mu = 112$.\rubric{1}
+
         We zoeken de kans $P(X \geq 125)$, die we als volgt berekenen:
         \begin{align*}
             P(X \geq 125)   &= 1 - P(X \leq 124) \\
@@ -38,7 +39,6 @@
         
         De kans dat de volgende aanval binnen twee uur plaatsvindt is gelijk aan
         de kans dat er de komende twee uur minstens één aanval plaatsvindt: \rubric{1}
-
         \begin{align*}
             P(Y \geq 1) &= 1 - P(Y = 0) \\
                         &= 1 - \poissonpdf(\mu=1.3333, k=0) \\
@@ -56,7 +56,6 @@
                         &= 1 - \poissonpdf(\mu=16, k=20) \\
                         &= 0.1318. \rubric{2}
         \end{align*}
-
         Laat $Z$ het aantal dagen in een maand zijn waarop het systeem overbelast raakt.
         De drone-aanvallen zijn onafhankelijk van dag tot dag, omdat ze volgens een Poissonproces plaatsvinden. \rubric{1}
 
@@ -79,14 +78,15 @@
         Laat $C$ de gezochte capaciteit per dag zijn.
         Er moet gelden dat de kans op overbelasting kleiner is dan $0.001$:
         \[
-            P(Y > C) = 1 - \poissoncdf(\mu=16, k=C) < 0.001 \rubric{1}
+            P(Y > C) = 1 - \poissoncdf(\mu=16, k=C) < 0.001 \rubric{2}
         \]
-        Deze ongelijkheid kunnen we oplossen met behulp van de \emph{numerieke solver}:
+        Deze ongelijkheid kunnen we oplossen door in het functiescherm van de grafische rekenmachine in te vullen:
         \begin{align*}
             y_1 &= 1 - \poissoncdf(\mu=16, k=X) \\
-            y_2 &= 0.001 \rubric{2}
+            y_2 &= 0.001 \rubric{1}
         \end{align*}
         Aangezien de capaciteit $C$ een geheel getal moet zijn, zoeken we de kleinste waarde van $C$ waarvoor geldt dat $y_1 < y_2$.\rubric{1}
+
         Dit doen we door een tabel te maken voor opeenvolgende waarden van $C$:
         \begin{itemize}
             \item Voor $C = 29 \implies P(Y > 29) \approx 0.0011 > 0.001$ (voldoet nog niet)\rubric{1}
@@ -96,12 +96,13 @@
     }
     
     \subquestion{2}{
-        Door escalatie in het conflictgebied wordt de basis nu ook bestookt door een tweede vijandelijke eenheid, die gemiddeld $6$ drone-aanvallen uitvoert per dag volgens een Poissonproces.
+        Door escalatie in het conflict wordt de basis nu ook bestookt door een tweede vijandelijke eenheid, die gemiddeld $6$ drone-aanvallen uitvoert per dag volgens een Poissonproces.
         Leg uit met welke kansverdeling je nu het totale aantal aanvallen per dag kunt modelleren.
     }
     \answer{
         Het totale aantal aanvallen per dag kan worden gemodelleerd als een enkele Poissonverdeling.\rubric{1}
-        De som van twee onafhankelijke Poisson-processen is namelijk zelf ook weer een Poisson-proces, waarvan de parameter gelijk is aan de som van de individuele gemiddelden ($\lambda = 16 + 6 = 22$).\rubric{1}
+
+        De som van twee onafhankelijke Poisson-processen is namelijk zelf ook weer een Poissonproces, waarvan de parameter gelijk is aan de som van de individuele gemiddelden ($\lambda = 16 + 6 = 22$).\rubric{1}
     }
 
     

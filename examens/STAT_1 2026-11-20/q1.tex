@@ -26,10 +26,9 @@
             \textbf{Voorwaarde 2:} de oppervlakte onder de grafiek van $f$ is gelijk aan 1, oftewel \[\int_{-\infty}^{\infty} f(t) \dt = 1.\]         
             
             Voor de tweede voorwaarde moeten we dus checken of de oppervlakte onder de grafiek van $f$ daadwerkelijk gelijk is aan 1:
-            \begin{align*}
-                \int_{-\infty}^{\infty} f(t)\dt   &= \int_{0}^{4} \frac{3}{64}\cdot t^2 \cdot (4 - t)\dt \\
-                                                    &= 1. \rubric{2}
-            \end{align*} 
+            \[
+                \int_{-\infty}^{\infty} f(t)\dt = \int_{0}^{4} \frac{3}{64}\cdot t^2 \cdot (4 - t)\dt = 1. \rubric{2}
+            \] 
             Hiermee is aangetoond dat de gegeven functie $f$ voldoet aan de twee voorwaarden voor kansdichtheidsfuncties.
         }
 
@@ -43,11 +42,11 @@
                                                                 &= \int_{0}^{4} \frac{3}{64}\cdot t^3 \cdot (4 - t)\dt \\   
                                                                 &= 2.4. \rubric{3}          
             \end{align*}
-            De standaardafwijking $\sigma(T)$ berekenen we door eerst de variantie $\Var{T}$ te bepalen, en van het resultaat de wortel te nemen:
+            Om de standaardafwijking $\sigma(T)$ te berekenen, moeten we eerst de variantie $\Var{T}$ bepalen:
             \begin{align*}
-                \Var{T} = \int_{-\infty}^{\infty} \left(t-E(T)\right)^2 \cdot f(t)\dt    &= \int_{0}^{4} (t-2.4)^2 \cdot \frac{3}{64}\cdot t^2 \cdot (4 - t)\dt \\
-                                                                                &= 0.64. \rubric{3}
+                \Var{T} = \int_{-\infty}^{\infty} \left(t-E(T)\right)^2 \cdot f(t)\dt = \int_{0}^{4} (t-2.4)^2 \cdot \frac{3}{64}\cdot t^2 \cdot (4 - t)\dt = 0.64. \rubric{3}
             \end{align*} 
+            De standaardafwijking $\sigma(T)$ berekenen we dan door de wortel uit de variantie te nemen:
             \begin{align*}
                 \sigma(T) = \sqrt{\Var{T}} = \sqrt{0.64} = 0.8. \rubric{2}
             \end{align*}
@@ -65,7 +64,7 @@
 
         \subquestion{5}{
             Stel dat op een gegeven moment vier logistieke konvooien onafhankelijk van elkaar vertrekken richting de FOB.
-            De bevoorradingsoperatie is succesvol als er minstens twee konvooien langer dan 1.5 uur onverstoord blijft rijden. 
+            De bevoorradingsoperatie is succesvol als er minstens twee konvooien langer dan 2.5 uur onverstoord blijft rijden. 
             Hoe groot is de kans op een succesvolle bevoorradingsoperatie?
         }
         \answer{
