@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  14 OCT 2026 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  16 OCT 2026 15:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1299,7 +1299,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'dutch'.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 6.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 7.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux
@@ -1308,24 +1308,24 @@ Package babel Info: 'dutch' activates 'dutch' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1380,70 +1380,70 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 6.
+Package hyperref Info: Link coloring OFF on input line 7.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 6.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 6.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 6.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 6.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 7.
 \symnumbers=\mathgroup11
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 6.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 6.
+(Font)              `pureletters' in the math version `normal' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 6.
+(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 6.
+(Font)              `pureletters' in the math version `bold' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/m/it on input line 6.
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/m/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 6.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 6.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 6.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 7.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 7.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 6.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 6.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 6.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 7.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 6.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 6.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 6.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 7.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 6.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 6.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 6.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 6.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 6.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 6.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 6.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 6.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 6.
-LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 6.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 7.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `boldpureletters' in the math version `normal' on input line 6.
+(Font)              `boldpureletters' in the math version `normal' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `normal'
-(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 6.
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `boldpureletters' in the math version `bold' on input line 6.
+(Font)              `boldpureletters' in the math version `bold' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 6.
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 7.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-bibliography-dictionary-English.dict
@@ -1460,13 +1460,13 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen463
 \MT@vwid@rightmargin=\dimen464
-LaTeX Info: Redefining \microtypecontext on input line 6.
-Package microtype Info: Applying patch `item' on input line 6.
-Package microtype Info: Applying patch `toc' on input line 6.
-Package microtype Info: Applying patch `eqnum' on input line 6.
-Package microtype Info: Applying patch `footnote' on input line 6.
-Package microtype Info: Applying patch `verbatim' on input line 6.
-LaTeX Info: Redefining \microtypesetup on input line 6.
+LaTeX Info: Redefining \microtypecontext on input line 7.
+Package microtype Info: Applying patch `item' on input line 7.
+Package microtype Info: Applying patch `toc' on input line 7.
+Package microtype Info: Applying patch `eqnum' on input line 7.
+Package microtype Info: Applying patch `footnote' on input line 7.
+Package microtype Info: Applying patch `verbatim' on input line 7.
+LaTeX Info: Redefining \microtypesetup on input line 7.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1485,7 +1485,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
 File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 6.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 7.
 \c__nicematrix_shift_Ldots_last_row_dim=\dimen465
 \c__nicematrix_innersep_middle_dim=\dimen466
 
@@ -1499,8 +1499,12 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 
 [2
 
+] (main.toc)
+
+[3
+
 ]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 54.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 69.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1508,67 +1512,63 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 54.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 69.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 54.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 69.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 54.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 69.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 54.
+(Font)              <10.95> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 54.
+(Font)              <8> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 54.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+(Font)              <6> on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 54.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 54.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 54.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 54.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 69.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 69.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 54.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 54.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 54.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 69.
 
-
-[3
-
-{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [4
 
-{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [5
 
-]
+{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
 
 [6
 
@@ -1585,43 +1585,43 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
 [9
 
 ]
-<../tikz/2_example_circuit.pdf, id=102, 412.75105pt x 132.12762pt>
-File: ../tikz/2_example_circuit.pdf Graphic file (type pdf)
-<use ../tikz/2_example_circuit.pdf>
-Package pdftex.def Info: ../tikz/2_example_circuit.pdf  used on input line 101.
-(pdftex.def)             Requested size: 308.06367pt x 98.61563pt.
-
 
 [10
 
- <../tikz/2_example_circuit.pdf>]
+]
+<../tikz/2_example_circuit.pdf, id=144, 412.75105pt x 132.12762pt>
+File: ../tikz/2_example_circuit.pdf Graphic file (type pdf)
+<use ../tikz/2_example_circuit.pdf>
+Package pdftex.def Info: ../tikz/2_example_circuit.pdf  used on input line 116.
+(pdftex.def)             Requested size: 308.06367pt x 98.61563pt.
+
 
 [11
 
-]
+ <../tikz/2_example_circuit.pdf>]
 
 [12
 
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 153.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 153.
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 153.
-
+] (main.toc)
 
 [13
 
-{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+]
 
 [14
 
 ]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 170.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 170.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 170.
+
 
 [15
 
-]
+{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 [16
 
@@ -1654,70 +1654,70 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
 [23
 
 ]
-<../figures/2_mortar_grenades_hist_n=100_bins=10.png, id=241, 462.528pt x 346.896pt>
-File: ../figures/2_mortar_grenades_hist_n=100_bins=10.png Graphic file (type png)
-<use ../figures/2_mortar_grenades_hist_n=100_bins=10.png>
-Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100_bins=10.png  used on input line 198.
-(pdftex.def)             Requested size: 290.9531pt x 218.22275pt.
-
 
 [24
 
- <../figures/2_mortar_grenades_hist_n=100_bins=10.png>]
-File: ../figures/2_mortar_grenades_hist_n=100_bins=10.png Graphic file (type png)
-<use ../figures/2_mortar_grenades_hist_n=100_bins=10.png>
-Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100_bins=10.png  used on input line 208.
-(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
-<../figures/2_mortar_grenades_hist_n=1000_bins=30.png, id=253, 462.528pt x 346.896pt>
-File: ../figures/2_mortar_grenades_hist_n=1000_bins=30.png Graphic file (type png)
-<use ../figures/2_mortar_grenades_hist_n=1000_bins=30.png>
-Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=1000_bins=30.png  used on input line 208.
-(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
-<../figures/2_mortar_grenades_hist_n=10000_bins=50.png, id=254, 462.528pt x 346.896pt>
-File: ../figures/2_mortar_grenades_hist_n=10000_bins=50.png Graphic file (type png)
-<use ../figures/2_mortar_grenades_hist_n=10000_bins=50.png>
-Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=10000_bins=50.png  used on input line 208.
-(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
-<../figures/2_mortar_grenades_hist_n=100000_bins=100.png, id=255, 462.528pt x 346.896pt>
-File: ../figures/2_mortar_grenades_hist_n=100000_bins=100.png Graphic file (type png)
-<use ../figures/2_mortar_grenades_hist_n=100000_bins=100.png>
-Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100000_bins=100.png  used on input line 208.
-(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
-
-Overfull \vbox (14.65442pt too high) detected at line 208
- []
-
-
+]
 
 [25
 
- <../figures/2_mortar_grenades_hist_n=1000_bins=30.png> <../figures/2_mortar_grenades_hist_n=10000_bins=50.png> <../figures/2_mortar_grenades_hist_n=100000_bins=100.png>]
-<../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png, id=269, 462.528pt x 346.896pt>
-File: ../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png Graphic file (type png)
-<use ../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png>
-Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png  used on input line 215.
-(pdftex.def)             Requested size: 257.14363pt x 192.86015pt.
-
-Overfull \vbox (2.55179pt too high) detected at line 215
- []
-
+]
+<../figures/2_mortar_grenades_hist_n=100_bins=10.png, id=297, 462.528pt x 346.896pt>
+File: ../figures/2_mortar_grenades_hist_n=100_bins=10.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_hist_n=100_bins=10.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100_bins=10.png  used on input line 216.
+(pdftex.def)             Requested size: 290.9531pt x 218.22275pt.
 
 
 [26
 
- <../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 238.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+ <../figures/2_mortar_grenades_hist_n=100_bins=10.png>]
+File: ../figures/2_mortar_grenades_hist_n=100_bins=10.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_hist_n=100_bins=10.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100_bins=10.png  used on input line 226.
+(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
+<../figures/2_mortar_grenades_hist_n=1000_bins=30.png, id=309, 462.528pt x 346.896pt>
+File: ../figures/2_mortar_grenades_hist_n=1000_bins=30.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_hist_n=1000_bins=30.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=1000_bins=30.png  used on input line 226.
+(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
+<../figures/2_mortar_grenades_hist_n=10000_bins=50.png, id=310, 462.528pt x 346.896pt>
+File: ../figures/2_mortar_grenades_hist_n=10000_bins=50.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_hist_n=10000_bins=50.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=10000_bins=50.png  used on input line 226.
+(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
+<../figures/2_mortar_grenades_hist_n=100000_bins=100.png, id=311, 462.528pt x 346.896pt>
+File: ../figures/2_mortar_grenades_hist_n=100000_bins=100.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_hist_n=100000_bins=100.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100000_bins=100.png  used on input line 226.
+(pdftex.def)             Requested size: 137.14326pt x 102.85718pt.
+
+Overfull \vbox (14.65442pt too high) detected at line 226
+ []
+
+
 
 [27
 
-]
+ <../figures/2_mortar_grenades_hist_n=1000_bins=30.png> <../figures/2_mortar_grenades_hist_n=10000_bins=50.png> <../figures/2_mortar_grenades_hist_n=100000_bins=100.png>]
+<../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png, id=324, 462.528pt x 346.896pt>
+File: ../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png  used on input line 233.
+(pdftex.def)             Requested size: 257.14363pt x 192.86015pt.
+
+Overfull \vbox (2.55179pt too high) detected at line 233
+ []
+
+
 
 [28
 
-]
+ <../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 256.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
 [29
 
@@ -1726,33 +1726,395 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [30
 
 ]
-Overfull \hbox (22.7622pt too wide) detected at line 257
- [] 
- []
-
-
 
 [31
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 276.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 276.
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 276.
-
-Overfull \hbox (45.52441pt too wide) detected at line 276
- [] 
- []
-
-
-Overfull \vbox (27.96033pt too high) detected at line 276
- []
-
-
 
 [32
+
+]
+
+[33
+
+]
+<../figures/2_mortar_grenades_pdf.png, id=376, 1084.05pt x 578.16pt>
+File: ../figures/2_mortar_grenades_pdf.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_pdf.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_pdf.png  used on input line 281.
+(pdftex.def)             Requested size: 308.06367pt x 164.30092pt.
+
+
+[34
+
+ <../figures/2_mortar_grenades_pdf.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 300.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 300.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 300.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 300.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 300.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 300.
+
+
+[35
+
+]
+<../figures/2_mortar_grenades_prob.png, id=398, 1084.05pt x 578.16pt>
+File: ../figures/2_mortar_grenades_prob.png Graphic file (type png)
+<use ../figures/2_mortar_grenades_prob.png>
+Package pdftex.def Info: ../figures/2_mortar_grenades_prob.png  used on input line 308.
+(pdftex.def)             Requested size: 308.06367pt x 164.30092pt.
+
+
+[36
+
+ <../figures/2_mortar_grenades_prob.png>]
+
+[37
+
+]
+
+[38
+
+]
+
+[39
+
+]
+
+[40
+
+]
+
+[41
+
+]
+
+[42
+
+]
+
+[43
+
+]
+
+[44
+
+]
+
+[45
+
+]
+
+[46
+
+]
+
+[47
+
+]
+
+[48
+
+]
+
+[49
+
+]
+
+[50
+
+]
+
+[51
+
+]
+
+[52
+
+]
+
+[53
+
+] (main.toc)
+
+[54
+
+]
+
+[55
+
+]
+
+[56
+
+]
+
+[57
+
+]
+
+[58
+
+]
+
+[59
+
+]
+
+[60
+
+]
+<../figures/2_standard_normal_distribution.png, id=604, 722.7pt x 433.62pt>
+File: ../figures/2_standard_normal_distribution.png Graphic file (type png)
+<use ../figures/2_standard_normal_distribution.png>
+Package pdftex.def Info: ../figures/2_standard_normal_distribution.png  used on input line 495.
+(pdftex.def)             Requested size: 342.2953pt x 205.37614pt.
+
+Overfull \vbox (17.19695pt too high) detected at line 495
+ []
+
+
+
+[61
+
+ <../figures/2_standard_normal_distribution.png>]
+<../figures/2_binomial_distribution.png, id=616, 277.035pt x 234.1548pt>
+File: ../figures/2_binomial_distribution.png Graphic file (type png)
+<use ../figures/2_binomial_distribution.png>
+Package pdftex.def Info: ../figures/2_binomial_distribution.png  used on input line 509.
+(pdftex.def)             Requested size: 171.14764pt x 144.65639pt.
+
+
+[62
+
+ <../figures/2_binomial_distribution.png>]
+<../figures/2_poisson_distribution.png, id=627, 1011.78pt x 361.35pt>
+File: ../figures/2_poisson_distribution.png Graphic file (type png)
+<use ../figures/2_poisson_distribution.png>
+Package pdftex.def Info: ../figures/2_poisson_distribution.png  used on input line 519.
+(pdftex.def)             Requested size: 342.2953pt x 122.25085pt.
+
+
+[63
+
+ <../figures/2_poisson_distribution.png>]
+<../figures/2_normal_distribution.png, id=638, 722.7pt x 433.62pt>
+File: ../figures/2_normal_distribution.png Graphic file (type png)
+<use ../figures/2_normal_distribution.png>
+Package pdftex.def Info: ../figures/2_normal_distribution.png  used on input line 530.
+(pdftex.def)             Requested size: 256.72147pt x 154.0321pt.
+
+
+[64
+
+ <../figures/2_normal_distribution.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 538.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <24.88> on input line 538.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 538.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 538.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <24.88> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 538.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <20.74> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 538.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 538.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <24.88> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 538.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <20.74> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 538.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <17.28> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 538.
+
+
+[65
+
+]
+
+[66
+
+]
+
+[67
+
+]
+<../figures/2_invnorm_tails_mu=0_sigma=1.png, id=679, 722.7pt x 180.675pt>
+File: ../figures/2_invnorm_tails_mu=0_sigma=1.png Graphic file (type png)
+<use ../figures/2_invnorm_tails_mu=0_sigma=1.png>
+Package pdftex.def Info: ../figures/2_invnorm_tails_mu=0_sigma=1.png  used on input line 594.
+(pdftex.def)             Requested size: 342.2953pt x 85.57338pt.
+
+
+[68
+
+ <../figures/2_invnorm_tails_mu=0_sigma=1.png>] (main.toc)
+
+[69
+
+]
+
+[70
+
+]
+<../figures/2_boxer.jpg, id=713, 642.4pt x 481.8pt>
+File: ../figures/2_boxer.jpg Graphic file (type jpg)
+<use ../figures/2_boxer.jpg>
+Package pdftex.def Info: ../figures/2_boxer.jpg  used on input line 628.
+(pdftex.def)             Requested size: 136.91603pt x 102.68806pt.
+
+
+[71
+
+ <../figures/2_boxer.jpg>]
+
+[72
+
+]
+
+[73
+
+]
+
+[74
+
+]
+
+[75
+
+]
+
+[76
+
+]
+
+[77
+
+]
+
+[78
+
+]
+
+[79
+
+]
+
+[80
+
+] (main.toc)
+
+[81
+
+]
+
+[82
+
+]
+
+[83
+
+]
+
+[84
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 803.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 803.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 803.
+
+
+[85
+
+]
+
+[86
+
+]
+
+[87
+
+]
+
+[88
+
+]
+
+[89
+
+]
+
+[90
+
+]
+
+[91
+
+]
+
+[92
+
+]
+
+[93
+
+]
+
+[94
+
+]
+
+[95
+
+]
+
+[96
+
+]
+
+[97
+
+]
+
+[98
+
+]
+
+[99
+
+]
+
+[100
+
+]
+
+[101
+
+]
+
+[102
+
+]
+
+[103
 
 ]
 \tf@nav=\write6
@@ -1770,20 +2132,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 1C6D824641E6C220939FD461FD3170BC;912.
  ) ) ) 
 Here is how much of TeX's memory you used:
- 59292 strings out of 468133
- 1449763 string characters out of 5430719
- 1948402 words of memory out of 5000000
- 86525 multiletter control sequences out of 15000+600000
- 744999 words of font info for 193 fonts, out of 8000000 for 9000
+ 60040 strings out of 468133
+ 1463164 string characters out of 5430719
+ 1954402 words of memory out of 5000000
+ 86963 multiletter control sequences out of 15000+600000
+ 858457 words of font info for 328 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,1268b,1111s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (32 pages, 398753 bytes).
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (103 pages, 1768600 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 71759 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1131 PDF objects out of 1200 (max. 8388607)
+ 212 named destinations out of 1000 (max. 500000)
+ 142001 words of extra memory for PDF output out of 154059 (max. 10000000)
 

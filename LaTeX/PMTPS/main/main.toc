@@ -1,1 +1,6 @@
 \babel@toc {dutch}{}\relax 
+\beamer@sectionintoc {1}{Recap vorige les}{3}{0}{1}
+\beamer@sectionintoc {2}{Discrete en continue kansvariabelen}{13}{0}{2}
+\beamer@sectionintoc {3}{Veelgebruikte kansverdelingen}{54}{0}{3}
+\beamer@sectionintoc {4}{De centrale limietstelling}{69}{0}{4}
+\beamer@sectionintoc {5}{Gezamenlijke kansverdelingen}{81}{0}{5}

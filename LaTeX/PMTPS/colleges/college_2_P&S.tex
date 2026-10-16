@@ -3,276 +3,1034 @@
 \author{Dr. ir. D.A.M.P. Blom}
 \institute[NLDA]{Nederlandse Defensie Academie}
 \date{16 oktober 2026}
+
 \begin{document}
 
-\begin{frame}
-    \maketitle
-    % \begin{center}
-    %     \includegraphics[width=3cm]{1_marine}
-    %     \includegraphics[width=3cm]{1_luchtmacht}
-    %     \includegraphics[width=3cm]{1_landmacht}
-    % \end{center}
-\end{frame}
+    \AtBeginSection[]{
 
-%------------------------------------------------%	
-\begin{frame}{Agenda}
-    Vandaag: college van 9.20 tot 14.00 uur (daarna: inzage Calculus)
-    \vfill
-    \begin{itemize}
-        \item 9.20 - 10.00 uur: recap van vorige les
-        \item 10:15 - 11.00 uur: discrete en continue kansvariabelen
-        \item 11.15 - 12.00 uur: normale verdeling en de centrale limietstelling
-        \item 12.00 - 12.45 uur: lunchpauze
-        \item 12.45 - 14.00 uur: gezamenlijke kansverdelingen
-    \end{itemize}
-    \vfill
-    \textbf{Dit komt ruwweg overeen met de inhoud van learning tasks 4 t/m 10.}
-\end{frame}
+    \frame<beamer>{ 
 
-\begin{frame}{Kansexperiment}
-    \textbf{Input:} \medskip
+        \frametitle{Outline}   
 
-    \begin{itemize}
-        \item Uitkomstenruimte $S$
-        \item Onderliggende kansverdeling over $S$
-    \end{itemize}\medskip
+        \tableofcontents[currentsection,currentsubsection] 
 
-    \textbf{Experiment:} \medskip
-
-    \begin{itemize}
-        \item Lab-meting
-        \item Afname van een enquête
-        \item Simulatie
-        \item $\ldots$
-    \end{itemize}\medskip
-
-    \textbf{Output:} \medskip
-
-    \begin{itemize}
-        \item Een trekking van exact één van de uitkomsten in de uitkomstenruimte
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Gebeurtenissen}
-    Een \concept{gebeurtenis} (\emph{event}) in een kansexperiment is een deelverzameling van de uitkomstenruimte ($E \subseteq S$):
-    \begin{itemize}
-        \item $A$: er wordt minstens één keer een drie gegooid met twee dobbelstenen.
-        \[
-            A = \set{(3,1), (3,2), (3,3), \ldots, (4, 3), (5, 3), (6, 3)}
-        \]
-        \item $B$: de som van twee dobbelsteenworpen is gelijk aan $7$:
-        \[
-            B = \set{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)}
-        \]
-    \end{itemize}
-    Naast losse gebeurtenissen kunnen we ook kijken naar samenstellingen, zoals $A'$, $A \cup B$, $A \cap B$.
-\end{frame}
-
-\begin{frame}{Overzicht van rekenregels}
-    \begin{itemize}[<+->]
-        \item Complementregel (voor gebeurtenis $A$):
-        \[
-            P(A) = 1 - P(A').
-        \]
-        \item Algemene optelregel (voor gebeurtenissen $A$ en $B$):
-        \[
-            P(A \cup B) = P(A) + P(B) - P(A \cap B).
-        \]
-        \item Conditionele kansen:
-        \[
-            P(A | B) = \frac{P(A \cap B)}{P(B)}
-        \]
-        \item Bayes' regel:
-        \[
-            P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
-        \] 
-        \item Onafhankelijkheid:
-        \[
-            P(A \cap B) = P(A) \cdot P(B | A) = P(A) \cdot P(B)
-        \]
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Oefening: faalgedrag van componenten}
-    Wat is de kans dat het gehele circuit blijft functioneren?
-    \begin{center}
-        \includegraphics[width=0.9\textwidth]{../tikz/2_example_circuit.pdf}%
-    \end{center}
-\end{frame}
-
-\begin{frame}{Kansvariabelen}
-    Er zijn twee soorten kansvariabelen: \concept{discrete} en \concept{continue kansvariabelen}:
-    \vfill
-    \begin{center}
-        \begin{tabular}{lll}
-            \toprule
-                \textbf{Discrete kansvariabelen} & \textbf{Continue kansvariabelen} \\
-            \midrule
-                Losse, afzonderlijke getallen & Interval van getallen \\
-                Tellen of categoriseren       & Meten \\
-            \bottomrule       
-        \end{tabular}
-    \end{center}
-\end{frame}
-
-\begin{frame}{Discrete kansvariabelen}
-    Een \concept{discrete kansvariabele} is een kansvariabele met een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte van numerieke waarden.
-    \vfill
-    \textbf{Voorbeelden:}
-    \begin{itemize}
-        \item Aantal keer dat een doel wordt geraakt bij $10$ schoten ($0, 1, \ldots, 10$).
-        \item Aantal door EOD geruimde WO2-bommen in Nederland in een week ($0, 1, \ldots$).
-        \item Aantal pogingen totdat een cyberaanval slaagt ($1, 2, \ldots$).
-        \item Al dan niet detecteren van een vijandelijke drone ($0, 1$).
-    \end{itemize}
-
-\end{frame}
-
-\begin{frame}\frametitle{Samenvatting: discrete kansvariabelen}
-
-    {\scriptsize
-    \begin{center}
-        \begin{tabular}{m{0.3\textwidth}m{0.6\textwidth}}
-            \toprule
-                & \textbf{Discreet} \\
-            \midrule
-                \uncover<+->{\textbf{Uitkomstenruimte $S$:}  & eindig / aftelbaar oneindig} \\ \midrule
-                \uncover<+->{\textbf{Kansbegrip:}        & kansmassafunctie $f(x) = P(X = x)$: \begin{itemize} \item $f(x) \geq 0$ voor iedere uitkomst $x$ 
-                    \item $\sum_{x \in S} f(x) = 1$ \end{itemize}} \\ \midrule
-                \uncover<+->{\textbf{Verdelingsfunctie (CDF):} & $F(x) = P(X \leq x) = \sum_{y \leq x} f(y)$
-                \begin{itemize} \item $F$ is monotoon niet-dalend
-                                \item $\lim_{x \to \infty} F(x) = 0$ en $\lim_{x \to \infty} F(x) = 1$
-                            \end{itemize}} \\ \midrule
-                \uncover<+->{\textbf{Verwachtingswaarde:} & $E(X) = \sum_{x \in S} x \cdot f(x)$} \\ \midrule
-                \uncover<+->{\textbf{Variantie:} & $\Var{X} = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x)$} \\ \midrule
-                \uncover<+->{\textbf{Standaardafwijking:} & $\sigma(X) = \sqrt{\Var{X}}$} \\                 
-            \bottomrule
-        \end{tabular}   
-    \end{center}
     }
-\end{frame}
 
-\begin{frame}{Continue kansvariabelen}
-    Een \concept{continue kansvariabele} is een kansvariabele met een \emph{oneindige} uitkomstenruimte van numerieke waarden.
-    \vfill
-    \textbf{Voorbeelden:}
-    \begin{itemize}
-        \item Reactietijd van een F-35 vlieger.
-        \item Afgelegen afstand tijdens een coopertest.
-        \item Dikte van een pantserplaat bij een infanterievoertuig.
-        \item Waterdiepte bij een amfibische landingslocatie.
-    \end{itemize}
-    \vfill In plaats van losse, onderscheidbare \emph{discrete} waarden, hebben we hier te maken met een \emph{continu} spectrum van mogelijke uitkomsten.
-\end{frame}
+    }
 
-\begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
-    Bij een schietoefening met een mortierpeloton wordt gekeken hoe precies een doel op 3 km afstand kan worden beschoten. 
-    Bij een test met 81mm mortiergranaten wordt de afstand gemeten van het inslagpunt tot het beoogde doel.
-    \vfill
-    \textbf{Wat is de kans dat een willekeurige mortiergranaat op precies $56.12843926$ meter van het doel inslaat?}\\[1ex]
-    \pause
+    \begin{frame}
+        \maketitle
+        % \begin{center}
+        %     \includegraphics[width=3cm]{1_marine}
+        %     \includegraphics[width=3cm]{1_luchtmacht}
+        %     \includegraphics[width=3cm]{1_landmacht}
+        % \end{center}
+    \end{frame}
 
-    \emph{Die kans is nul!}
-    \pause\vfill
+    %------------------------------------------------%	
+    \begin{frame}{Agenda}
+        Vandaag van 9.20 tot 14.00 uur (daarna: inzage Calculus)
+        \vfill
+        \begin{itemize}
+            \item 9.20 - 10.00 uur: recap van vorige les
+            \item 10:15 - 11.00 uur: discrete en continue kansvariabelen
+            \item 11.15 - 12.00 uur: normale verdeling en de centrale limietstelling
+            \item 12.00 - 12.45 uur: lunchpauze
+            \item 12.45 - 14.00 uur: gezamenlijke kansverdelingen
+        \end{itemize}
+        \vfill
+        \textbf{Dit komt ruwweg overeen met de inhoud van learning tasks 4 t/m 10.}
+    \end{frame}
 
-    Toch weten we van kansexperimenten dat er uiteindelijk een uitkomst gerealiseerd wordt.
-    In de continue wereld betekent kans $0$ dus niet hetzelfde als \enquote{onmogelijk!}.
-\end{frame}
+\section{Recap vorige les}
 
-\begin{frame}\frametitle{Kansen bij continue kansvariabelen}
-    Om intuïtie te krijgen, helpt het om terug te werken naar de discrete wereld:
-    \begin{itemize}\setlength\itemsep{2em}
-        \item De uitkomstenruimte van ons voorbeeld is $S = \set{x \mid x \geq 0}$.
-        \item In plaats van kijken naar losse uitkomsten (zoals $56.12843926$ meter), gaan we $S$ opdelen in \emph{discrete klassen}, bijv.:
-        \[
-            [0, 1), [1, 2), \ldots
-        \] 
-        \item Als we data verzamelen uit het kansexperiment (mortiergranaten afvuren en afstand meten), kunnen we een \concept{histogram} maken van de discrete klassen.
-    \end{itemize}
-\end{frame}
+    \begin{frame}{Kansexperiment}
+        \textbf{Input:} \medskip
 
-\begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
-    \begin{center}
-        \includegraphics[width=0.85\textwidth]{../figures/2_mortar_grenades_hist_n=100_bins=10.png}
-    \end{center}
-\end{frame}
+        \begin{itemize}
+            \item Uitkomstenruimte $S$
+            \item Onderliggende kansverdeling over $S$
+        \end{itemize}\medskip
 
-\begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
-    Zodra je het aantal waarnemingen vergroot en het aantal bins (klassen):
-    \begin{center}
-        \begin{tabular}{cc}
-            \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=100_bins=10.png} & \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=1000_bins=30.png} \\
-            \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=10000_bins=50.png} & \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=100000_bins=100.png} \\
-        \end{tabular}
-    \end{center}
-\end{frame}
+        \textbf{Experiment:} \medskip
 
-\begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
-    Als het aantal waarnemingen heel groot is, lijkt de histogram steeds beter op een \enquote{vloeiende lijn}.
-    \begin{center}
-        \includegraphics[height=0.75\textheight]{../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png}
-    \end{center}
-\end{frame}
+        \begin{itemize}
+            \item Lab-meting
+            \item Afname van een enquête
+            \item Simulatie
+            \item $\ldots$
+        \end{itemize}\medskip
 
-\begin{frame}{Kansdichtheidsfunctie}
-    Deze vloeiende lijn noemen we de \concept{kansdichtheidsfunctie} $f(x)$ van een continue kansvariabele $X$.
-    De hoogte van deze functie wordt geschaald zodat: 
-    \begin{itemize}[<+->]
-        \item De oppervlakte onder $f(x)$ is gelijk aan $1$:
-        \[
-            \int_{x} f(x) \dx = 1
-        \]
-        \item De kansdichtheidsfunctie $f(x)$ is overal niet-negatief:
-        \[
-            f(x) \geq 0 \text{ voor alle } x
-        \]
-    \end{itemize}
+        \textbf{Output:} \medskip
 
-    \pause
-    \textbf{Let op: } $f(x)$ is \underline{niet} hetzelfde als $P(X = x)$, want $P(X=x) = 0$!
-    
-    We kunnen alleen kansen uitrekenen op een \emph{interval} van uitkomsten:
-    \[
-        P(a \leq X \leq b) = \int_a^b f(x) \dx
-    \]
-\end{frame}
+        \begin{itemize}
+            \item Een trekking van exact één van de uitkomsten in de uitkomstenruimte
+        \end{itemize}
+    \end{frame}
 
-\begin{frame}{Voorbeeld: inslagpunt van mortiergranaten}
-    Bij een schietoefening met een mortierpeloton wordt gekeken hoe precies een doel op 3 km afstand kan worden beschoten. 
-    Bij een test met 81mm mortiergranaten wordt de afstand gemeten van het inslagpunt tot het beoogde doel.
+    \begin{frame}{Gebeurtenissen}
+        Een \concept{gebeurtenis} (\emph{event}) in een kansexperiment is een deelverzameling van de uitkomstenruimte ($E \subseteq S$):
+        \begin{itemize}
+            \item $A$: er wordt minstens één keer een drie gegooid met twee dobbelstenen.
+            \[
+                A = \set{(3,1), (3,2), (3,3), \ldots, (4, 3), (5, 3), (6, 3)}
+            \]
+            \item $B$: de som van twee dobbelsteenworpen is gelijk aan $7$:
+            \[
+                B = \set{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)}
+            \]
+        \end{itemize}
+        Naast losse gebeurtenissen kunnen we ook kijken naar samenstellingen, zoals $A'$, $A \cup B$, $A \cap B$.
+    \end{frame}
 
-    De afstand $X$ (in honderden meters) volgt de volgende kansdichtheidsfunctie:
-    \[
-        f(x) = 
-        \begin{cases} 
-            c \cdot (4 - x^2 - 3x^4), & \text{ voor } -1 \leq x \leq 1, \\
-            0,                        & \text{ anders.}
-        \end{cases}
-    \]
+    \begin{frame}{Overzicht van rekenregels}
+        \begin{itemize}[<+->]
+            \item Complementregel (voor gebeurtenis $A$):
+            \[
+                P(A) = 1 - P(A').
+            \]
+            \item Algemene optelregel (voor gebeurtenissen $A$ en $B$):
+            \[
+                P(A \cup B) = P(A) + P(B) - P(A \cap B).
+            \]
+            \item Conditionele kansen:
+            \[
+                P(A | B) = \frac{P(A \cap B)}{P(B)}
+            \]
+            \item Bayes' regel:
+            \[
+                P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+            \] 
+            \item Onafhankelijkheid:
+            \[
+                P(A \cap B) = P(A) \cdot P(B | A) = P(A) \cdot P(B)
+            \]
+        \end{itemize}
+    \end{frame}
 
-    \begin{enumerate}[label=(\alph*)]
-        \item Bereken $c$ zodanig dat $f(x)$ een goed gedefinieerde kansdichtheidsfunctie is.
-        \item Wat is de kans dat de mortier binnen $30$ meter van het beoogde doel inslaat?
-    \end{enumerate}
-\end{frame}
+    \begin{frame}{Oefening: faalgedrag van componenten}
+        Wat is de kans dat het gehele circuit blijft functioneren?
+        \begin{center}
+            \includegraphics[width=0.9\textwidth]{../tikz/2_example_circuit.pdf}%
+        \end{center}
+    \end{frame}
 
-\begin{frame}{Bereken $c$ zodanig dat $f(x)$ een goed gedefinieerde kansdichtheidsfunctie is.}
-    Een goed gedefinieerde kansdichtheidsfunctie $f(x)$ voldoet aan twee eisen:
-    \begin{itemize}
-        \item De oppervlakte onder $f$ is gelijk aan $1$:
-        \begin{align*}
-            1 = \int_x f(x) \dx &= \int_{x=-1}^1 c \cdot (4 - x^2 - 3x^4) \dx \\
-                                &= c \cdot \int_{x=-1}^1 (4 - x^2 - 3x^4) \dx \\
-                                &= c \cdot [4x - \frac{1}{3}x^3 - \frac{3}{5}x^5|_{x=-1}^1 \\
-                                &= c \cdot ((4-\frac{1}{3}-\frac{3}{5})-(-4+\frac{1}{3}+\frac{3}{5})) \\
-                                &= c \cdot \frac{92}{15}
-        \end{align*}
-        Hieruit volgt dat $c = \frac{15}{92}$.
-        \item $f(x) \geq 0$ voor alle $x$:
+    \begin{frame}{Kansvariabelen}
+        We maken onderscheid in \concept{discrete} en \concept{continue} kansvariabelen:
+        \vfill
+        \begin{center}
+            \begin{tabular}{lll}
+                \toprule
+                    \textbf{Discrete kansvariabelen} & \textbf{Continue kansvariabelen} \\
+                \midrule
+                    Losse, afzonderlijke getallen & Interval van getallen \\
+                    Tellen of categoriseren       & Meten \\
+                \bottomrule       
+            \end{tabular}
+        \end{center}
+    \end{frame}
+
+\section{Discrete en continue kansvariabelen}
+
+    \begin{frame}{Discrete kansvariabelen}
+        Een \concept{discrete kansvariabele} is een kansvariabele met een \emph{eindige} of \emph{aftelbaar oneindige} uitkomstenruimte van numerieke waarden.
+        \vfill
+        \textbf{Voorbeelden:}
+        \begin{itemize}
+            \item Aantal keer dat een doel wordt geraakt bij $10$ schoten ($0, 1, \ldots, 10$).
+            \item Aantal door EOD geruimde WO2-bommen in Nederland in een week ($0, 1, \ldots$).
+            \item Aantal pogingen totdat een cyberaanval slaagt ($1, 2, \ldots$).
+            \item Al dan niet detecteren van een vijandelijke drone ($0, 1$).
+        \end{itemize}
+
+    \end{frame}
+
+    \begin{frame}\frametitle{Samenvatting: discrete kansvariabelen}
+
+        {\scriptsize
+        \begin{center}
+            \begin{tabular}{m{0.3\textwidth}m{0.6\textwidth}}
+                \toprule
+                    & \textbf{Discreet} \\
+                \midrule
+                    \uncover<+->{\textbf{Uitkomstenruimte $S$:}  & eindig / aftelbaar oneindig} \\ \midrule
+                    \uncover<+->{\textbf{Kansbegrip:}        & kansmassafunctie $f(x) = P(X = x)$: \begin{itemize} \item $f(x) \geq 0$ voor iedere uitkomst $x$ 
+                        \item $\sum_{x \in S} f(x) = 1$ \end{itemize}} \\ \midrule
+                    \uncover<+->{\textbf{Verdelingsfunctie (CDF):} & $F(x) = P(X \leq x) = \sum_{y \leq x} f(y)$
+                    \begin{itemize} \item $F$ is monotoon niet-dalend
+                                    \item $\lim_{x \to -\infty} F(x) = 0$ en $\lim_{x \to \infty} F(x) = 1$
+                                \end{itemize}} \\ \midrule
+                    \uncover<+->{\textbf{Verwachtingswaarde:} & $E(X) = \sum_{x \in S} x \cdot f(x)$} \\ \midrule
+                    \uncover<+->{\textbf{Variantie:} & $\Var{X} = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x)$} \\ \midrule
+                    \uncover<+->{\textbf{Standaardafwijking:} & $\sigma(X) = \sqrt{\Var{X}}$} \\                 
+                \bottomrule
+            \end{tabular}   
+        \end{center}
+        }
+    \end{frame}
+
+    \begin{frame}{Continue kansvariabelen}
+        Een \concept{continue kansvariabele} is een kansvariabele met een \emph{overaftelbaar oneindige} uitkomstenruimte van numerieke waarden,
+        oftewel er is geen gestructureerde manier om alle waarden op te sommen.
+        \vfill
+        \textbf{Voorbeelden:}
+        \begin{itemize}
+            \item Reactietijd van een F-35 vlieger.
+            \item Afgelegen afstand tijdens een coopertest.
+            \item Dikte van een pantserplaat bij een infanterievoertuig.
+            \item Waterdiepte bij een amfibische landingslocatie.
+        \end{itemize}
+        \vfill In plaats van losse, onderscheidbare \emph{discrete} waarden, hebben we hier te maken met een \emph{continu} spectrum van mogelijke uitkomsten.
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
+        Bij een schietoefening met een mortierpeloton wordt gekeken hoe precies een doel op 3 km afstand kan worden beschoten. 
+        Bij een test met 81mm mortiergranaten wordt de afstand gemeten van het inslagpunt tot het beoogde doel.
+        \vfill
+        \textbf{Wat is de kans dat een willekeurige mortiergranaat op precies $56.12843926$ meter van het doel inslaat?}\\[1ex]
+        \pause
+
+        \emph{Die kans is nul!}
+        \pause\vfill
+
+        Toch weten we van kansexperimenten dat er uiteindelijk een uitkomst gerealiseerd wordt.
+        In de continue wereld betekent kans $0$ dus niet hetzelfde als \enquote{onmogelijk!}.
+    \end{frame}
+
+    \begin{frame}\frametitle{Kansen bij continue kansvariabelen}
+        Om intuïtie te krijgen, helpt het om terug te werken naar de discrete wereld:
+        \begin{itemize}\setlength\itemsep{2em}
+            \item De uitkomstenruimte van ons voorbeeld is $S = \set{x \mid x \geq 0}$.
+            \item In plaats van kijken naar losse uitkomsten (zoals $56.12843926$ meter), gaan we $S$ opdelen in \emph{discrete klassen}, bijv.:
+            \[
+                [0, 1), [1, 2), \ldots
+            \] 
+            \item Als we data verzamelen uit het kansexperiment (mortiergranaten afvuren en afstand meten), kunnen we een \concept{histogram} maken van de discrete klassen.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
+        \begin{center}
+            \includegraphics[width=0.85\textwidth]{../figures/2_mortar_grenades_hist_n=100_bins=10.png}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
+        Zodra je het aantal waarnemingen vergroot en het aantal bins (klassen):
+        \begin{center}
+            \begin{tabular}{cc}
+                \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=100_bins=10.png} & \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=1000_bins=30.png} \\
+                \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=10000_bins=50.png} & \includegraphics[height=0.4\textheight]{../figures/2_mortar_grenades_hist_n=100000_bins=100.png} \\
+            \end{tabular}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: inslaglocatie van mortiergranaten}
+        Als het aantal waarnemingen heel groot is, lijkt de histogram steeds beter op een \enquote{vloeiende lijn}.
+        \begin{center}
+            \includegraphics[height=0.75\textheight]{../figures/2_mortar_grenades_hist_n=100000_bins=100_with_pdf.png}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Kansdichtheidsfunctie}
+        Deze vloeiende lijn noemen we de \concept{kansdichtheidsfunctie} $f(x)$ van een continue kansvariabele $X$.
+        De hoogte van deze functie wordt geschaald zodat: 
+        \begin{itemize}[<+->]
+            \item De oppervlakte onder $f(x)$ is gelijk aan $1$:
+            \[
+                \int_{x} f(x) \dx = 1
+            \]
+            \item De kansdichtheidsfunctie $f(x)$ is overal niet-negatief:
+            \[
+                f(x) \geq 0 \text{ voor alle } x
+            \]
+        \end{itemize}
+
+        \pause
+        \textbf{Let op: } $f(x)$ is \underline{niet} hetzelfde als $P(X = x)$, want $P(X=x) = 0$!
         
-        Merk op dat op het interval $[-1, 1]$, de term $4 - x^2 - 3x^4$ altijd groter dan of gelijk aan $0$ is. 
-        Als je dit vermenigvuldigt met $c = \frac{15}{92}$ blijft dat zo, oftewel $f(x) \geq 0$ voor alle $x$.
-    \end{itemize}
-\end{frame}
+        We kunnen alleen kansen uitrekenen op een \emph{interval} van uitkomsten:
+        \[
+            P(a \leq X \leq b) = P(a < X < b) = \int_a^b f(x) \dx
+        \]
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: inslagpunt van mortiergranaten}
+        Bij een schietoefening met een mortierpeloton wordt gekeken hoe precies een doel op 3 km afstand kan worden beschoten. 
+        Bij een test met 81mm mortiergranaten wordt de horizontale afwijking gemeten van het inslagpunt tot het beoogde doel.
+
+        De afstand $X$ (in honderden meters) volgt de volgende kansdichtheidsfunctie:
+        \[
+            f(x) = 
+            \begin{cases} 
+                c \cdot (4 - x^2 - 3x^4), & \text{ voor } -1 \leq x \leq 1, \\
+                0,                        & \text{ anders.}
+            \end{cases}
+        \]
+
+        \begin{enumerate}
+            \item Bereken $c$ zodanig dat $f(x)$ een goed gedefinieerde kansdichtheidsfunctie is.
+            \item Wat is de kans dat de mortier binnen $30$ meter van het beoogde doel inslaat?
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}{Uitwerking: vraag 1}
+        \begin{center}
+            \includegraphics[width=0.9\textwidth]{../figures/2_mortar_grenades_pdf.png}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Uitwerking: vraag 1}
+        Een goed gedefinieerde kansdichtheidsfunctie $f(x)$ voldoet aan twee eisen:
+        \begin{itemize}
+            \item \textbf{De oppervlakte onder $f$ is gelijk aan $1$:}
+            \begin{align*}
+                1 = \int_x f(x) \dx &= \int_{x=-1}^1 c \cdot (4 - x^2 - 3x^4) \dx \\
+                                    &= c \cdot \int_{x=-1}^1 (4 - x^2 - 3x^4) \dx \\
+                                    &= c \cdot \left[4x - \frac{1}{3}x^3 - \frac{3}{5}x^5\right|_{x=-1}^1 \\
+                                    % &= c \cdot ((4-\frac{1}{3}-\frac{3}{5})-(-4+\frac{1}{3}+\frac{3}{5})) \\
+                                    &= c \cdot \frac{92}{15} \Rightarrow c = \frac{15}{92}.
+            \end{align*}
+            \item \textbf{$f(x) \geq 0$ voor alle $x$:} 
+            \begin{itemize}
+                \item voor $-1 \leq x \leq 1$ geldt dat $f(x) = \frac{15}{92} \cdot (4 - x^2 - 3x^4) \geq 0$.
+                \item voor overige waarden van $x$ is $f(x) = 0$, oftewel ook $f(x) \geq 0$.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Uitwerking: vraag 2}
+        De kans dat een mortier binnen $30$ meter van het beoogde doel inslaat is gelijk aan $P(-0.3 \leq X \leq 0.3)$:
+
+        \begin{center}
+            \includegraphics[width=0.9\textwidth]{../figures/2_mortar_grenades_prob.png}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Uitwerking: vraag 2}
+        De kansdichtheidsfunctie is gegeven als 
+        \[
+            f(x) = \begin{cases}
+                \frac{15}{92} \cdot (4 - x^2 - 3x^4), & \text{ voor } -1 \leq x \leq 1 \\
+                0, & \text{ anders.}
+            \end{cases}
+        \]
+
+        De kans dat een mortier binnen $30$ meter (dus $x = 0.3$!) van het beoogde doel inslaat is dan gelijk aan
+        \begin{align*}
+            P(-0.3 \leq X \leq 0.3) &= \int_{-0.3}^{0.3} f(x) \dx \\
+                                    &= \int_{-0.3}^{0.3} \frac{15}{92} \cdot (4 - x^2 - 3x) \dx \\
+                                    &= \frac{15}{92} \left[ 4x - \frac{1}{3}x^3 - \frac{3}{5}x^5 \right|_{-0.3}^{0.3} \\
+                                    &\approx 0.3884.
+        \end{align*}
+    \end{frame}
+
+    \begin{frame}{Verwachtingswaarde}
+        De \concept{verwachtingswaarde} van een kansvariabele $X$ is de waarde die $X$ \enquote{gemiddeld genomen}
+        zal aannemen.
+        \vfill\pause
+        \begin{itemize}[<+->]\setlength\itemsep{1em}
+            \item \textbf{Discrete kansvariabelen:} 
+            \[
+                E(X) = \sum_{x \in S} x \cdot P(X=x)
+            \]
+            \item \textbf{Continue kansvariabelen:} in plaats van een som hebben we nu een integraal:
+            \[
+                E(X) = \int_{x \in S} x \cdot f(x) \dx.
+            \]
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Variantie}
+        De \concept{variantie} $\Var{X}$ van een kansvariabele $X$ is de \emph{kwadratische afstand tot het gemiddelde} die $X$ \enquote{gemiddeld genomen}
+        zal aannemen.
+        \vfill\pause
+        \begin{itemize}[<+->]\setlength\itemsep{1em}
+            \item \textbf{Discrete kansvariabelen:} 
+            \[
+                \Var{X} = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot P(X=x)
+            \]
+            \item \textbf{Continue kansvariabelen:} in plaats van een som hebben we nu een integraal:
+            \[
+                \Var{X} = \int_{x \in S} \left( x - E(X) \right)^2 \cdot f(x) \dx.
+            \]
+        \end{itemize}
+        \vfill\pause
+        \textbf{Merk op:} de variantie is de verwachtingswaarde van $\left(X - E(X)\right)^2$:
+        \[
+            \Var{X} = E\left[ \left(X - E(X)\right)^2\right]
+        \]
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: inslagpunt van mortiergranaten}
+        Bij een schietoefening met een mortierpeloton wordt gekeken hoe precies een doel op 3 km afstand kan worden beschoten. 
+        Bij een test met 81mm mortiergranaten wordt de afstand gemeten van het inslagpunt tot het beoogde doel.
+        De afstand $X$ (in honderden meters) volgt de volgende kansdichtheidsfunctie:
+        \[
+            f(x) = 
+            \begin{cases} 
+                c \cdot (4 - x^2 - 3x^4), & \text{ voor } -1 \leq x \leq 1, \\
+                0,                        & \text{ anders.}
+            \end{cases}
+        \]
+
+        \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item Wat is de verwachte horizontale afwijking van het inslagpunt tot het beoogde doel, en wat is de standaardafwijking?
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}\frametitle{Uitwerking: vraag 3}
+
+        {\scriptsize
+            \only<1->{
+                \textbf{Verwachtingswaarde $E(X)$:}
+                \begin{align*}
+                    E(X) = \int_{x} x \cdot f(x) \dx &= \int_{x=-1}^1 x \cdot \left( \frac{15}{92} \cdot (4 - x^2 - 3x^4) \right) \dx \\
+                                                    &= \int_{x=-1}^1 \left( \frac{15}{92} \cdot (4x - x^3 - 3x^5) \right) \dx \\
+                                                    &= \left[ \frac{15}{92} \cdot (2x^2 - \frac{1}{4}x^4 - \frac{1}{2}x^6)\right|_{x=-1}^1 = 0.
+                \end{align*}
+            }
+
+            \only<+->{
+                \textbf{Variantie $\Var{X}$:}
+                \begin{align*}
+                    \Var{X} = \int_{x} \left(x - E(X)\right)^2 \cdot f(x) \dx &= \int_{x=-1}^1 (x - 0)^2 \cdot \left( \frac{15}{92} \cdot (4 - x^2 - 3x^4) \right) \dx \\
+                            &= \int_{x=-1}^1 \left( \frac{15}{92} \cdot (4x^2 - x^4 - 3x^6) \right) \dx \\
+                            &= \left[ \frac{15}{92} \cdot (\frac{4}{3}x^3 - \frac{1}{5}x^5 - \frac{3}{7}x^7)\right|_{x=-1}^1 = \frac{37}{161} \approx 0.2298.
+                \end{align*}
+                De standaardafwijking $\sigma(X) = \sqrt{\Var{X}} = \sqrt{0.2298} \approx 0.4794$.
+            }
+        }
+    \end{frame}
+
+    \begin{frame}\frametitle{Samenvatting}
+
+        {\scriptsize
+        \begin{center}
+            \begin{tabular}{m{0.45\textwidth}m{0.45\textwidth}}
+                \toprule
+                    \textbf{Discrete kansvariabele} & \textbf{Continue kansvariabele}\\
+                \midrule
+                    \uncover<+->{$S$ bestaat uit losse, afzonderlijke waarden & $S$ is een spectrum van waarden} \\ \midrule
+                    \uncover<+->{kansmassafunctie $f(x) = P(X = x)$: \begin{itemize} \item $f(x) \geq 0$ voor iedere uitkomst $x$ 
+                        \item $\sum_{x \in S} f(x) = 1$ \end{itemize}
+                        & Kansdichtheidsfunctie $f(x)$: \begin{itemize} \item $f(x) \geq 0$ voor iedere uitkomst $x$
+                        \item $\int_{x \in S} f(x) \dx = 1$ \end{itemize}
+                        } \\ \midrule
+                    \uncover<+->{CDF $F(x) = P(X \leq x) = \sum_{y \leq x} f(y)$
+                    \begin{itemize} \item $F$ is monotoon niet-dalend
+                                    \item $\lim_{x \to -\infty} F(x) = 0$ en $\lim_{x \to \infty} F(x) = 1$
+                                \end{itemize}
+                                & CDF $F(x) = P(X \leq x) = \int_{-\infty}^x f(y) \dy$
+                    \begin{itemize}
+                        \item $F$ is monotoon niet-dalend
+                        \item $\lim_{x\to-\infty} F(x) = 0$ en $\lim_{x \to \infty} F(x) = 1$
+                    \end{itemize}} \\ \midrule
+                    \uncover<+->{$E(X) = \sum_{x \in S} x \cdot f(x)$ & $E(X) = \int_{x \in S} x \cdot f(x) \dx$} \\ \midrule
+                    \uncover<+->{$\Var{X} = \sum_{x \in S} \left(x - E(X)\right)^2 \cdot f(x)$ & $\Var{X} = \int_{x \in S} \left(x - E(X)\right)^2 \cdot f(x) \dx$} \\ \midrule
+                    \uncover<+->{$\sigma(X) = \sqrt{\Var{X}}$ & $\sigma(X) = \sqrt{\Var{X}}$} \\                 
+                \bottomrule
+            \end{tabular}   
+        \end{center}
+        }
+    \end{frame}
+
+\section{Veelgebruikte kansverdelingen}
+
+    \begin{frame}{Kansexperiment}
+        \textbf{Input:} \medskip
+
+        \begin{itemize}
+            \item Uitkomstenruimte $S$
+            \item {\color<2>{red} Onderliggende kansverdeling over $S$ \uncover<2->{$\Rightarrow$ deze is niet altijd bekend!}}
+        \end{itemize}\medskip
+
+        \textbf{Experiment:} \medskip
+
+        \begin{itemize}
+            \item Lab-meting
+            \item Afname van een enquête
+            \item Simulatie
+            \item $\ldots$
+        \end{itemize}\medskip
+
+        \textbf{Output:} \medskip
+
+        \begin{itemize}
+            \item Een trekking van exact één van de uitkomsten in de uitkomstenruimte
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}\frametitle{Veelgebruikte kansverdelingen}
+        Gelukkig zijn er bepaalde patronen die je bij veel kansexperimenten terug ziet komen:
+        \vfill\pause
+        \begin{itemize} \setlength\itemsep{1.5em}
+            \item \textbf{Normale verdeling:}
+            \begin{itemize}
+                \item Symmetrische verdeling rond een gemiddelde waarde
+                \item Waardes verder van het gemiddelde zijn steeds zeldzamer
+                \item De welbekende \emph{belkromme}
+            \end{itemize}\pause
+            \item \textbf{Binomiale verdeling:}
+            \begin{itemize}
+                \item Aantal \enquote{successen} uit $n$ aantal \emph{onafhankelijke} \enquote{pogingen}
+                \item Aantal militairen die de Defensie ConditieProef in één poging behalen.
+            \end{itemize}\pause
+            \item \textbf{Poissonverdeling:}
+            \begin{itemize}
+                \item Aantal \enquote{events} op een interval van tijd / ruimte / volume.
+                \item Aantal mensen die onbevoegd op de Kromhoutkazerne proberen te komen op een dag.
+                \item Aantal Iraanse zeemijnen op een segment van 20NM in de Straat van Hormuz.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Normale verdeling}
+        Veel grootheden in de natuur volgen een \concept{normale} verdeling.
+        \begin{center}
+            \includegraphics[width=\textwidth]{2_standard_normal_distribution.png}
+        \end{center}
+        \textbf{Parameters:} gemiddelde $\mu$ en standaardafwijking $\sigma$.
+    \end{frame}
+
+    \begin{frame}{Binomiale verdeling}
+        Een \emph{Galtonbord} is een visuele weergave van een \concept{binomiale} verdeling.
+        \vfill
+        Als we een balletje laten vallen, valt deze bij ieder puntje met kans $\frac{1}{2}$ naar links en kans $\frac{1}{2}$ naar rechts,
+        onafhankelijk van elkaar.
+        \vfill
+        \begin{center}
+            \includegraphics[width=0.5\textwidth]{2_binomial_distribution.png}
+            \tiny{https://wageningse-methode.nl/content/lj5-h-d-h06/lj5-h-d-h06-02/lj5-h-d-h06-02.html}
+        \end{center}
+        \textbf{Parameters:} aantal pogingen (levels) $n$ en succeskans (kans op \enquote{rechts}) $p$.
+
+    \end{frame}
+
+    \begin{frame}{Poissonverdeling}
+        Het aantal zeemijnen op een sector in de Straat van Hormuz is een voorbeeld van een \concept{Poissonverdeling}.
+        \vfill
+        Hierbij nemen we aan dat het aantal zeemijnen per nautische mijl een constante is, maar dat ze onafhankelijk van elkaar verspreid zijn over het gebied.
+        \vfill
+        \begin{center}
+            \includegraphics[width=\textwidth]{2_poisson_distribution.png}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Veelgebruikte kansverdelingen}
+        Een \concept{kansverdeling} vormt een \emph{familie van kansmodellen}. 
+        Zo bestaan er meerdere normale verdelingen, afhankelijk van het gemiddelde $\mu$ en de standaardafwijking $\sigma$ (notatie: $N(\mu, \sigma)$).
+        \vfill
+        \begin{center}
+            \includegraphics[width=0.75\textwidth]{../figures/2_normal_distribution.png}
+        \end{center}
+        \vfill
+        We noemen $\mu$ en $\sigma$ de \concept{parameters} van een normale verdeling $N(\mu, \sigma)$.
+    \end{frame}
+
+    \begin{frame}{Rekenen met de grafische rekenmachine}
+        Demonstratie met de online emulator van TI84 CE-T
+        \vfill
+        \begin{center}
+            \Huge\url{https://ti84calc.com}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{Rekenen met de grafische rekenmachine}
+        Gebruik hiervoor het menu \enquote{(2nd)+(VARS)}
+        \vfill
+        \textbf{Discrete kansen}
+        \begin{itemize}\setlength\itemsep{2em}
+            \item \textbf{Binomiale verdeling (met $n=10$ en $p=0.4$):}
+            \begin{align*}
+                P(X = 3)    &= \binompdf(\text{trials}: 10, p: 0.4, \text{$x$ value}: 3) \approx 0.2150 \\
+                P(X \leq 3) &= \binomcdf(\text{trials}: 10, p: 0.4, \text{$x$ value}: 3) \approx 0.3823
+            \end{align*}
+            \item \textbf{Poissonverdeling (met $\mu=5$):}
+            \begin{align*}
+                P(X = 3)    &= \poissonpdf(\mu: 5, \text{$x$ value}: 3) \approx 0.1404 \\
+                P(X \leq 3) &= \poissoncdf(\mu: 5, \text{$x$ value}: 3) \approx 0.2650
+            \end{align*}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Rekenen met de grafische rekenmachine}
+        Gebruik hiervoor het menu \enquote{(2nd)+(VARS)}
+        \vfill
+        \textbf{Normale verdeling (met $\mu = 4$ en $\sigma = 0.7$)}
+        \begin{itemize}\setlength\itemsep{2em}
+            \item Kansen uitrekenen:
+            \begin{align*}
+                &P(3.1 \leq X \leq 5.0) \\
+                &= \normalcdf(\lb=3.1, \ub=5.0, \mu=4, \sigma=0.7) \\
+                &\approx 0.8242.
+            \end{align*}
+            \item Grenswaarde $g$ uitrekenen zodat $P(X \leq g) = 0.05$:
+            \[
+                g = \invnorm(\opp=0.05, \mu=4, \sigma=0.7)
+            \]
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Optie Tail bij InvNorm}
+        \begin{center}
+            \includegraphics[width=\textwidth]{2_invnorm_tails_mu=0_sigma=1.png}
+        \end{center}
+        \vfill
+        Je kunt de grenswaarden standaard met de setting \enquote{Tail: LEFT} berekenen.
+        {\tiny
+            \begin{center}
+                \begin{tabular}{ccc}
+                    \toprule
+                        $P(X \leq g) = 0.05$ & $P(X \leq g_1) + P(X \geq g_2) = 0.05$ & $P(X \geq g) = 0.05$ \\
+                    \midrule
+                        \multirow{2}{*}{$g= \invnorm(\opp=0.05, \mu, \sigma)$} & $g_1 = \invnorm(\opp=0.05/2, \mu, \sigma)$ &  \multirow{2}{*}{$g= \invnorm(\opp=1 - 0.05, \mu, \sigma)$} \\
+                        & $g_2 = \invnorm(\opp=1-0.05/2, \mu, \sigma)$ & \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }
+    \end{frame}
+
+\section{De centrale limietstelling}
+
+    \begin{frame}{Voorbeeld: logistiek konvooi in Litouwen}
+        Een logistiek officier bereidt een NAVO konvooi voor van $50$ Boxer-pantservoertuigen die een
+        missie uitvoeren over een traject van $100$ km door gevarieerd terrein in Litouwen.
+        \vfill
+        Op basis van eerdere missies is bekend dat het brandstofverbruik per voertuig per $100$ km
+        gemiddeld $85$ liter bedraagt, met een standaardafwijking van $12$ liter.
+        Het verbruik per voertuig is onafhankelijk van andere voertuigen.
+        \vfill
+        De officier moet beslissen hoeveel brandstof er wordt meegenomen, zodat het konvooi niet met
+        een tekort aan brandstof komt te zitten. 
+        \vfill
+        \textbf{Hoeveel brandstof dient het konvooi mee te nemen?}
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: logistiek konvooi in Litouwen}
+        Laat $X_i$ met $i=1,2,\ldots,50$ de \emph{continue} kansvariabele zijn die het brandstofverbruik meet van Boxer $i$.\\[1.5ex]
+        \begin{itemize}
+            \item Verwachtingswaarde $E(X_i) = 85$ liter.
+            \item Standaardafwijking $\sigma(X_i) = 12$ liter.
+        \end{itemize}
+        \vfill
+        \begin{center}
+            \includegraphics[width=0.4\textwidth]{../figures/2_boxer.jpg}
+        \end{center}
+        \vfill
+        We weten verder niets over de kansverdeling van $X_i$.
+
+        {\bfseries
+            Kunnen we toch iets zeggen over het totale brandstofverbruik?
+        }
+    \end{frame}
+
+    \begin{frame}{De centrale limietstelling}
+        Voor \concept{onafhankelijke en gelijk verdeelde} kansvariabelen $X_1, X_2, \ldots, X_n$ met verwachtingswaarde $\mu$ en standaardafwijking $\sigma$ geldt het volgende:
+        \vfill
+        \begin{enumerate}
+            \item De som $\sum_{i=1}^n X_i$ is \emph{bij benadering} normaal verdeeld met verwachtingswaarde $n \cdot \mu$ en standaardafwijking $\sqrt{n} \cdot \sigma$:
+            \[
+                \sum_{i=1}^n X_i \sim N\left(n \cdot \mu, \sqrt{n} \cdot \sigma\right)
+            \]
+            \item Het gemiddelde $\overline{X} = \frac{X_1+X_2+\ldots+X_n}{n}$ is \emph{bij benadering} normaal verdeeld met verwachtingswaarde $\mu$ en standaardafwijking $\frac{\sigma}{\sqrt{n}}$:
+            \[
+                \overline{X} = \frac{X_1+X_2+\ldots+X_n}{n} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right)
+            \]
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}{De centrale limietstelling}
+        \textbf{Hoeveel brandstof moet het konvooi meenemen zodat de kans op een tekort hooguit \SI{1}{\percent} is?}
+        \pause\vfill
+        De centrale limietstelling zegt dat het totale brandstofverbruik bij benadering normaal verdeeld is:
+        \[
+            T = \sum_{i=1}^n X_i \sim N\left(n \cdot \mu = 50 \cdot 85 = 4250, \sqrt{n} \cdot \sigma = \sqrt{50} \cdot 12 \approx 84.8528\right)
+        \]
+        \vfill\pause
+        We willen nu een hoeveelheid brandstof $g$ bepalen zodanig dat $P(T \geq g) = 0.01$:
+        \[
+            g = \invnorm(\opp=1 - 0.01, \mu=4250, \sigma=84.8528) \approx 4447.3972 \text{ liter.}
+        \]
+    \end{frame}
+
+    \begin{frame}{Demonstratie: de centrale limietstelling}
+        \begin{center}
+            \Huge\url{https://interactive-cls.streamlit.app}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}{De centrale limietstelling}
+        \textbf{Waarom is de centrale limietstelling zo krachtig?}
+        \begin{itemize}\setlength\itemsep{2em}
+            \item De centrale limietstelling is voor alle kansverdelingen te gebruiken:
+            \begin{itemize}
+                \item De enige eis is dat we gemiddelde en standaardafwijking weten.
+            \end{itemize}\pause
+            \item Exacte kansen van sommen / gemiddelden vergt het berekenen van $n$-voudige integralen.\pause
+            \item Meer steekproefdata levert een voordeel op (zij het marginaal)
+            \begin{itemize}
+                \item Standaardafwijking bevat factor $\frac{1}{\sqrt{n}}$ voor gemiddelden.
+            \end{itemize} \pause
+            \item Veel van de statistische methoden later in dit vak leunen op de schouders van de CLS.
+            \begin{itemize}
+                \item \concept{Populatie}parameters aan de hand van \concept{steekproef}data.
+                \item Denk aan betrouwbaarheidsintervallen, hypothesetoetsen, regressie, $\ldots$
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+\section{Gezamenlijke kansverdelingen}
+
+    \begin{frame}{Voorbeeld: patrouille van een LCF-fregat}
+        Een Luchtverdediging- en Commandofregat (LCF) patrouilleert in een risicovol kustgebied.
+        We definiëren twee kansvariabelen: 
+        \begin{itemize}
+            \item $X$: het aantal gedetecteerde onbekende vaartuigen op de radar
+            \item $Y$: het aantal actieve vuurleidingskanalen
+        \end{itemize}
+
+        De gezamenlijke kansverdeling kan worden beschreven als volgt:
+        {\small
+            \begin{center}
+                \begin{tabular}{c|ccc}
+                    \toprule
+                            & $Y=1$ & $Y=2$ & $Y=3$ \\
+                    \midrule
+                        $X=0$   & 0.35 & 0.05 & 0.00 \\
+                        $X=1$   & 0.10 & 0.15 & 0.05 \\
+                        $X=2$   & 0.02 & 0.08 & 0.10 \\
+                        $X=3$   & 0.00 & 0.02 & 0.08 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }
+    \end{frame}
+
+    \begin{frame}\frametitle{Gezamenlijke kansverdeling}
+        {\small
+            \begin{center}
+                \begin{tabular}{c|ccc}
+                    \toprule
+                            & $Y=1$ & $Y=2$ & $Y=3$ \\
+                    \midrule
+                        $X=0$   & 0.35 & 0.05 & 0.00 \\
+                        $X=1$   & 0.10 & 0.15 & 0.05 \\
+                        $X=2$   & 0.02 & 0.08 & 0.10 \\
+                        $X=3$   & 0.00 & 0.02 & 0.08 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }
+        Deze tabel beschrijft een \concept{gezamenlijke kansmassafunctie} 
+        \[
+            f_{X,Y}(x,y) = P(X = x, Y = y)
+        \]
+
+        \vfill
+
+        \textbf{Voorbeeld:} $f_{X,Y}(2, 1) = P(X=2, Y=1) = 0.02$.       
+
+    \end{frame}
+
+    \begin{frame}\frametitle{Gezamenlijke kansverdeling}
+        {\small
+            \begin{center}
+                \begin{tabular}{c|ccc}
+                    \toprule
+                            & $Y=1$ & $Y=2$ & $Y=3$ \\
+                    \midrule
+                        $X=0$   & 0.35 & 0.05 & 0.00 \\
+                        $X=1$   & 0.10 & 0.15 & 0.05 \\
+                        $X=2$   & 0.02 & 0.08 & 0.10 \\
+                        $X=3$   & 0.00 & 0.02 & 0.08 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }
+        
+        \begin{enumerate}
+            \item Bepaal de kansmassafunctie $f_X(x)$ van $X$.
+            \item Bepaal de kansmassafunctie $f_{Y|X=2}(y)$ van $Y$, gegeven dat $X = 2$.
+            \item Bepaal de verwachtingswaarde van $XY$.
+        \end{enumerate}
+
+    \end{frame}
+
+    \begin{frame}\frametitle{Bepaal de kansmassafunctie $f_X(x)$ van $X$.}
+        \only<1,2>{
+            \begin{center}
+                \begin{tabular}{c|ccc}
+                    \toprule
+                            & $Y=1$ & $Y=2$ & $Y=3$ \\
+                    \midrule
+                        $X=0$   & 0.35 & 0.05 & 0.00 \\
+                        $X=1$   & 0.10 & 0.15 & 0.05 \\
+                        $X=2$   & 0.02 & 0.08 & 0.10 \\
+                        $X=3$   & 0.00 & 0.02 & 0.08 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }
+
+        \only<3>{
+            \begin{center}
+                \begin{tabular}{c|cccc}
+                    \toprule
+                            & $Y=1$ & $Y=2$ & $Y=3$  & {\color{highlightcolor} $f_X(x)$}\\
+                    \midrule
+                        $X=0$   & 0.35 & 0.05 & 0.00 & {\color{highlightcolor} $0.40$}\\
+                        $X=1$   & 0.10 & 0.15 & 0.05 & {\color{highlightcolor} $0.30$}\\
+                        $X=2$   & 0.02 & 0.08 & 0.10 & {\color{highlightcolor} $0.20$}\\
+                        $X=3$   & 0.00 & 0.02 & 0.08 & {\color{highlightcolor} $0.10$}\\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }
+        
+        \onslide<2->{
+            Voor iedere waarde $x$, is de kansmassafunctie $f_X(x)$ gelijk aan de rijsom:
+            \[
+                f_X(x) = P(X = x) = \sum_{y=1}^3 P(X=x, Y=y)
+            \]
+            % Dit geeft ons de volgende kansmassafunctie $f_X(x)$:
+        }
+        \only<3->{
+            We noemen $f_X(x)$ ook wel de \concept{marginale verdeling} van $X$.
+        }
+    \end{frame}
+
+    \begin{frame}\frametitle{Bepaal de kansmassafunctie $f_{Y|X=2}(y)$ van $Y | X = 2$}
+        \only<1>{
+            \small
+            \begin{center}
+                \begin{tabular}{c|ccc}
+                    \toprule
+                            & $Y=1$ & $Y=2$ & $Y=3$ \\
+                    \midrule
+                        $X=0$   & 0.35 & 0.05 & 0.00 \\
+                        $X=1$   & 0.10 & 0.15 & 0.05 \\
+                        $X=2$   & 0.02 & 0.08 & 0.10 \\
+                        $X=3$   & 0.00 & 0.02 & 0.08 \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }
+
+        \only<2>{
+            \small
+            \begin{center}
+                \begin{tabular}{c|cccc}
+                    \toprule
+                                        & $Y=1$ & $Y=2$ & $Y=3$  & $f_X(x)$ \\
+                    \midrule
+                        $X=0$           & 0.35 & 0.05 & 0.00     & $0.40$   \\
+                        $X=1$           & 0.10 & 0.15 & 0.05     & $0.30$   \\
+                        \color{highlightcolor} $X=2$           & \color{highlightcolor}0.02 
+                        & \color{highlightcolor}0.08 & \color{highlightcolor}0.10     & \color{highlightcolor}$0.20$   \\
+                        $X=3$           & 0.00 & 0.02 & 0.08     & $0.10$   \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }      
+
+        \only<3>{
+            \small
+            \begin{center}
+                \begin{tabular}{c|cccc}
+                    \toprule
+                                        & $Y=1$ & $Y=2$ & $Y=3$  & $f_X(x)$    \\
+                    \midrule
+                        $X=0$           & 0.35 & 0.05 & 0.00     & $0.40$       \\
+                        $X=1$           & 0.10 & 0.15 & 0.05     & $0.30$       \\
+                        $X=2$           & 0.02 & 0.08 & 0.10     & $0.20$       \\
+                        $X=3$           & 0.00 & 0.02 & 0.08     & $0.10$       \\
+                    \midrule
+\color{highlightcolor} $f_{Y|X=2}(y)$ & \color{highlightcolor} $\frac{0.02}{0.20} = 0.10$
+& \color{highlightcolor} $\frac{0.08}{0.20} = 0.40$ & \color{highlightcolor}$\frac{0.10}{0.20} = 0.50$ \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }               
+        
+        \onslide<2->{
+            Voor iedere waarde $y$, is de kansmassafunctie $f_{Y|X=2}(y)$ gelijk aan de proporties beperkt tot de rij $X=2$:
+            \[
+                f_{Y|X=2}(y) = P(Y = y | X = 2) = \frac{P(Y=y, X=2)}{P(X=2)}
+            \]
+            % Dit geeft ons de volgende kansmassafunctie $f_X(x)$:
+        }
+        \only<3->{
+            We noemen $f_{Y|X=2}(y)$ ook wel de \concept{conditionele verdeling} van $Y|X=2$.
+        }
+    \end{frame}
+
+    \begin{frame}\frametitle{Bepaal de verwachtingswaarde van $XY$}
+        \only<1>{
+            \small
+            \begin{center}
+                \begin{tabular}{c|cccc}
+                    \toprule
+                                        & $Y=1$ & $Y=2$ & $Y=3$  & $f_X(x)$    \\
+                    \midrule
+                        $X=0$           & 0.35 & 0.05 & 0.00     & $0.40$       \\
+                        $X=1$           & 0.10 & 0.15 & 0.05     & $0.30$       \\
+                        $X=2$           & 0.02 & 0.08 & 0.10     & $0.20$       \\
+                        $X=3$           & 0.00 & 0.02 & 0.08     & $0.10$       \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }               
+        
+        \onslide<2->{
+            De verwachtingswaarde van $XY$ berekenen we als volgt:
+            \begin{align*}
+                E(XY)   &= \sum_{x=0}^3 \sum_{y=1}^3 x\cdot y \cdot f_{X,Y}(x,y) \\
+                        &= 0 \cdot 1 \cdot 0.35 + 0 \cdot 2 \cdot 0.05 + \ldots + 3 \cdot 3 \cdot 0.08  \\
+                        &=2.35.
+            \end{align*}
+        }
+    \end{frame}
+
+    \begin{frame}{Covariantie}
+        Bij gezamenlijke kansverdelingen kunnen we bepalen in hoeverre twee kansvariabelen samenhangen.
+
+        Hiervoor kunnen we de \concept{covariantie} berekenen:
+        \[
+            \Cov{X}{Y} = E[(X - E(X)) \cdot (Y - E(Y))] = E(XY) - E(X)\cdot E(Y)
+        \]
+        \begin{itemize}[<+->]\setlength\itemsep{2em}
+            \item Als $\Cov{X}{Y} > 0 \Rightarrow$ zodra $X$ een grote waarde aanneemt, stijgt ook de kans op een grote waarde voor $Y$ (positief verband).
+            \item Als $\Cov{X}{Y} < 0 \Rightarrow$ zodra $X$ een grote waarde aanneemt, daalt de kans op een grote waarde voor $Y$ (negatief verband).
+            \item Als $\Cov{X}{Y} = 0 \Rightarrow$ $X$ en $Y$ zijn \underline{niet} \concept{gecorreleerd}.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Voorbeeld: covariantie}
+        \only<1>{
+            \scriptsize
+            \begin{center}
+                \begin{tabular}{c|ccc}
+                    \toprule
+                                        & $Y=1$ & $Y=2$ & $Y=3$ \\
+                    \midrule
+                        $X=0$           & 0.35 & 0.05 & 0.00    \\
+                        $X=1$           & 0.10 & 0.15 & 0.05    \\
+                        $X=2$           & 0.02 & 0.08 & 0.10    \\
+                        $X=3$           & 0.00 & 0.02 & 0.08    \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }    
+
+        \only<2>{
+            \scriptsize
+            \begin{center}
+                \begin{tabular}{c|cccc}
+                    \toprule
+                                        & $Y=1$ & $Y=2$ & $Y=3$  & {\color{highlightcolor}$f_X(x)$}      \\
+                    \midrule
+                        $X=0$           & 0.35 & 0.05 & 0.00     & {\color{highlightcolor} $0.40$}       \\
+                        $X=1$           & 0.10 & 0.15 & 0.05     & {\color{highlightcolor} $0.30$}       \\
+                        $X=2$           & 0.02 & 0.08 & 0.10     & {\color{highlightcolor} $0.20$}       \\
+                        $X=3$           & 0.00 & 0.02 & 0.08     & {\color{highlightcolor} $0.10$}       \\
+                    \midrule
+                        {\color{highlightcolor}$f_Y(y)$}        & {\color{highlightcolor}0.47} & {\color{highlightcolor}0.30} & {\color{highlightcolor}0.23}     & 1            \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }        
+
+        \only<3->{
+            \scriptsize
+            \begin{center}
+                \begin{tabular}{c|cccc}
+                    \toprule
+                                        & $Y=1$ & $Y=2$ & $Y=3$  & $f_X(x)$      \\
+                    \midrule
+                        $X=0$           & 0.35 & 0.05 & 0.00     & $0.40$       \\
+                        $X=1$           & 0.10 & 0.15 & 0.05     & $0.30$       \\
+                        $X=2$           & 0.02 & 0.08 & 0.10     & $0.20$       \\
+                        $X=3$           & 0.00 & 0.02 & 0.08     & $0.10$       \\
+                    \midrule
+                        $f_Y(y)$     & 0.47 & 0.30 & 0.23     & 1            \\
+                    \bottomrule
+                \end{tabular}
+            \end{center}
+        }        
+        
+        \normalsize
+        \only<2>{
+            \textbf{Stap 1:} Bereken eerst de marginale kansverdelingen $f_X(x)$ en $f_Y(y)$.
+        }
+
+        \only<3>{
+            \textbf{Stap 2:} Bereken de verwachtingswaarden $E(X)$ en $E(Y)$.
+            \begin{align*}
+                E(X)    &=  \sum_{x=0}^3 x \cdot f_X(x) = 0 \cdot 0.40 + 1 \cdot 0.30 + 2 \cdot 0.20 + 3 \cdot 0.10 = 1.20 \\
+                E(Y)    &=  \sum_{y=1}^3 y \cdot f_Y(y) = 1 \cdot 0.47 + 2 \cdot 0.30 + 3 \cdot 0.23 = 1.76
+            \end{align*}
+        }
+
+        \only<4>{
+            \textbf{Stap 3:} Bereken de verwachtingswaarde $E(XY)$.
+            \begin{align*}
+                E(XY)   &= \sum_{x=0}^3 \sum_{y=1}^3 x\cdot y \cdot f_{X,Y}(x,y) \\
+                        &= 0 \cdot 1 \cdot 0.35 + 0 \cdot 2 \cdot 0.05 + \ldots + 3 \cdot 3 \cdot 0.08  \\
+                        &=2.35.
+            \end{align*}
+        }
+
+        \only<5>{
+            \textbf{Stap 4:} Bereken de covariantie:
+            \[
+                \Cov{X}{Y} = E(XY) - E(X)\cdot E(Y) = 2.35 - 1.20 \cdot 1.76 = 0.238
+            \]
+        }
+
+        \only<6>{
+            \textbf{Algemene opmerking:} gegeven twee kansvariabelen $X$ en $Y$ geldt:
+            \[
+                \text{Als $X$ en $Y$ onafhankelijke kansvariabelen zijn, dan geldt $\Cov{X}{Y} = 0$}
+            \]\vfill
+            Omdat $\Cov{X}{Y} \neq 0$, zijn $X$ en $Y$ \underline{niet} onafhankelijk van elkaar!
+        }      
+    \end{frame}
+
+    \begin{frame}{Correlatie}
+        De waarde van de covariantie is moeilijk te interpreteren, en hangt ook af van de meeteenheid van $X$ en $Y$.
+        \begin{itemize}
+            \item Als je tijd meet in seconden in plaats van uren: covariantie wordt $60 \times$ zo groot.
+        \end{itemize}
+
+        Om die reden wordt vaak gekeken naar de \concept{correlatiecoëfficiënt}, een \emph{gestandaardiseerde} variant van de covariantie,
+        waarbij de meeteenheid geen rol meer speelt:
+        \begin{align*}
+            \rho(X, Y) = \frac{\Cov{X}{Y}}{\sigma(X)\cdot \sigma(Y)}
+        \end{align*}
+        Doordat door de standaardafwijkingen $\sigma(X)$ en $\sigma(Y)$, wordt de invloed van meeteenheid weggewerkt.
+        \vfill
+        De correlatiecoëfficiënt $\rho(X, Y)$ ligt altijd tussen $-1$ en $1$!
+    \end{frame}
+
+    \begin{frame}{Samenvatting}
+        \textbf{Vandaag:}
+        \begin{itemize}
+            \item Recap van vorige les: kansexperimenten
+            \item Discrete en continue kansvariabelen
+            \item Veelgebruikte kansverdelingen
+            \item De centrale limietstelling
+            \item Gezamenlijke kansverdelingen
+        \end{itemize}
+        \vfill
+        \textbf{Volgende les:}
+        \begin{itemize}
+            \item Schattingsmethoden (zuivere schatters, maximum likelihood)
+            \item Betrouwbaarheidsintervallen
+            \item Hypothesetoetsen: van data naar schattingen over $\mu$
+        \end{itemize}
+    \end{frame}
 
 \end{document}
