@@ -10,11 +10,24 @@
     \end{enumerate}
 }
 \enanswer{
+    Whenever we want a symmetric $100 \cdot (1 - \alpha)$ \% confidence interval for the mean $\mu$ (in case $\sigma$ is known), we use the formula
+    \[
+        [\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+    \]
+    Here, if we want a \SI{95}{\percent} confidence interval, that means $100 \cdot (1 - \alpha) = 95$, or $\alpha = 0.05$.
+    The corresponding value of $z_{\alpha/2} = z_{0.025}$ can be found by taking the $1-\alpha/2$-percentile of the standard normal distribution $N(\mu=0, \sigma=1)$:
+    \[
+        z_{0.025} = \invnorm(\opp=1-\alpha/2 = 0.975, \mu=0, \sigma=1) \approx 1.9600.
+    \]
+    Similarly, for \SI{99}{\percent} confidence intervals ($\alpha = 0.01$), we find:
+    \[
+        z_{0.005} = \invnorm(\opp=1-\alpha/2 = 0.995, \mu=0, \sigma=1) \approx 2.5758.
+    \]
     \begin{enumerate}[label=(\alph*)]
-        \item $[984.5051, 1015.4949]$
-        \item $[990.2002, 1009.7998]$
-        \item $[979.6363, 1020.3637]$
-        \item $[987.1209, 1012.8791]$
+        \item Filling in $\overline{x} = 1000$, $\sigma = 25$, $n = 10$, $\alpha=0.05$ gives $[984.5051, 1015.4949]$
+        \item Filling in $\overline{x} = 1000$, $\sigma = 25$, $n = 25$, $\alpha=0.05$ gives $[990.2002, 1009.7998]$
+        \item Filling in $\overline{x} = 1000$, $\sigma = 25$, $n = 10$, $\alpha=0.01$ gives $[979.6363, 1020.3637]$
+        \item Filling in $\overline{x} = 1000$, $\sigma = 25$, $n = 25$, $\alpha=0.01$ gives $[987.1209, 1012.8791]$
         \item Increasing the sample size $n$ decreases the length of the CI, whereas increasing the confidence level increases the length of the CI.
     \end{enumerate}
 }
@@ -27,9 +40,20 @@
     \end{enumerate}
 }
 \enanswer{
+    Notice that the length of a confidence interval can be computed by 
+    \begin{align*}
+        \text{length}    &= \text{upper bound} - \text{lower bound} \\
+                        &= (\overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}) - (\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}) \\
+                        &= 2 \cdot z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}.
+    \end{align*}
+    If we want to constrain the length of a confidence interval to a value $L$, we need to bound this quantity from above:
+    \begin{align*}
+        2 \cdot z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} \leq L \Rightarrow n \geq \left(\frac{z_{\alpha/2} \cdot \sigma}{\frac{1}{2}L} \right)^2.
+    \end{align*}
+
     \begin{enumerate}[label=(\alph*)]
-        \item $n \ge 11$
-        \item $n \ge 19$
+        \item Filling in $z_{\alpha/2} = 1.9600$, $\sigma = 25$ and $L = 30$ gives $n \ge 11$ (notice that the sample size $n$ is always an integer, so to satisfy the guarantee we need to round up to the nearest integer.)
+        \item Filling in $z_{\alpha/2} = 2.5758$, $\sigma = 25$ and $L = 30$ gives $n \ge 19$
     \end{enumerate}
 }
 
@@ -46,8 +70,11 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item Longer
-        \item No, when the construction of a \SI{95}{\percent}-confidence interval for $\mu$ is repeated a large number of times, the true mean will belong to the calculated interval in \SI{95}{\percent} of the cases.
+        \item A confidence interval with a higher level of confidence always has to be longer if the other factors at play stay the same.
+        \item No, we cannot speak of probabilities, as $\mu$ is a parameter and therefore has a deterministic value.
+        The problem here is that people often confuse \enquote{a parameter with a unknown, but fixed value} with \enquote{a random variable}.
+        Correct interpretation: when a large number of samples is collected and a \SI{95}{\percent}-confidence interval for $\mu$ is constructed, independently for each of this samples,
+        then the true mean $\mu$ will lie inside (approximately) \SI{95}{\percent} of the computed intervals.
         \item Yes, see explanation part (b).
     \end{enumerate}
 }
@@ -59,7 +86,11 @@
     Find a \SI{95}{\percent} two-sided confidence interval on the true mean yield.
 }
 \enanswer{
-    $[87.5084, 92.7676]$
+    This question requires the additional step that we first need to compute the sample mean of the sample:
+    \[
+        \overline{x} = \frac{91.6 + 87.34 + 90.8 + 89.65 + 91.3}{5} = 90.138.
+    \]
+    Filling in $\overline{x} = 90.138$, $\sigma=3$, $n = 5$ and $\alpha = 0.05$ gives $[87.5084, 92.7676]$.
 }
 
 \enquestion{8.17}{
@@ -68,7 +99,7 @@
     What sample size should be used?
 }
 \enanswer{
-    $n \ge 171$
+    Filling in $z_{\alpha/2} = 1.9600$, $\sigma = 20$ and $L = 6$ gives $n \geq 171$ (notice that the sample size $n$ is always an integer, so to satisfy the guarantee we need to round up to the nearest integer).
 }
 
 \enquestion{8.29}{
@@ -78,7 +109,7 @@
     Find a \SI{95}{\percent} CI on the mean volume of syrup dispensed.
 }
 \enanswer{
-    $[29.8040, 30.1960]$
+    Filling in $\overline{x} = 30$, $\sigma = 0.5$, $n = 25$, $\alpha=0.05$ gives $[29.8040, 30.1960]$.
 }
 
 \enquestion{7.63}{
@@ -92,11 +123,19 @@
     \]
     Setting the derivative with respect to $\theta$ equal to zero:
     \[
-        \frac{d \ln L(\theta)}{d\theta} = -\frac{n}{\theta} - \frac{1}{\theta^2} \sum_{i=1}^n \ln(x_i) = 0 \implies \hat{\Theta} = -\frac{1}{n} \sum_{i=1}^n \ln(X_i)
+        \frac{\mathrm{d} \left(\ln L(\theta)\right)}{\mathrm{d} \theta} = -\frac{n}{\theta} - \frac{1}{\theta^2} \sum_{i=1}^n \ln(x_i) = 0 \implies \hat{\Theta} = -\frac{1}{n} \sum_{i=1}^n \ln(X_i)
     \]
-    To show it is unbiased, let $Y = -\ln(X)$. The CDF of $Y$ for $y > 0$ is $P(-\ln(X) \le y) = P(X \ge e^{-y}) = 1 - e^{-y/\theta}$, so $Y \sim \text{Exponential}(\theta)$ with $E(Y) = \theta$. Thus:
+    Next, we compute the expectation of the natural log of $X_i$:
+    for this, we need to perform partial integration, with $f(x) = -\ln x \Rightarrow f'(x) = -\frac{1}{x}$ and $g'(x) = x^{\frac{1-\theta}{\theta}} \Rightarrow g(x) = x^{\frac{1}{\theta}}$.
+    \begin{align*}
+        E(-\ln X_i)  &= \int_{x=0}^1 \ln x \cdot \frac{1}{\theta} x^{\frac{1-\theta}{\theta}} \dx \\
+                    &= \left[-\ln x \cdot x^{\frac{1}{\theta}}\right|_{x=0}^1 - \int_{x=0}^1 x^{\frac{1-\theta}{\theta}} \dx \\
+                    &= \left(0 - 0\right) - \left[\theta x^{\frac{1}{\theta}}\right|_{x=0}^1 \\
+                    &= \theta.
+    \end{align*}
+    We can use this result to show that $\hat{\Theta}$ is indeed an unbiased estimator:
     \[
-        E(\hat{\Theta}) = E\left(\frac{1}{n} \sum_{i=1}^n Y_i\right) = \frac{1}{n} \cdot n\theta = \theta
+        E(\hat{\Theta}) = E\left(\frac{1}{n} \sum_{i=1}^n -\ln X_i\right) = \frac{1}{n} \sum_{i=1}^n E\left(-\ln X_i\right) = \frac{1}{n} \cdot (\theta + \theta + \ldots + \theta) = \theta.
     \]
     Hence, $\hat{\Theta}$ is an unbiased estimator for $\theta$.
 }

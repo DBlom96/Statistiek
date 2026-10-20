@@ -4,7 +4,18 @@
     Find a \SI{95}{\percent} CI on the mean volume of syrup dispensed.
 }
 \enanswer{
-    $[29.7936, 30.2064]$
+    Whenever we want a two-sided $100 \cdot (1 - \alpha)$ \% confidence interval for the mean $\mu$ (in case $\sigma$ is unknown), we use the formula
+    \[
+        [\overline{x} - t_{\alpha/2; n-1} \cdot \frac{s}{\sqrt{n}}, \overline{x} + t_{\alpha/2; n-1} \cdot \frac{s}{\sqrt{n}}]
+    \]
+    Notice that we also do not have access to the value of $\sigma$, so we also have to estimate $\sigma$ with the sample standard deviation $s$.
+    Here, if we want a \SI{95}{\percent} confidence interval, that means $100 \cdot (1 - \alpha) = 95$, or $\alpha = 0.05$.
+    The corresponding value of $t_{\alpha/2; n-1}$ can be found by taking the $1-\alpha/2$-percentile of the $t$-distribution with
+    $\df=n-1=24$ degrees of freedom:
+    \[
+        t_{\alpha/2; n-1} = t_{0.025; 24} = \invt(\opp=1-\alpha/2 = 0.975, \df=24) \approx 2.0639.
+    \]
+    Filling in $\overline{x} = 30$, $s = 0.5$, $n = 25$ and $\alpha = 0.05$ gives $[29.7936, 30.2064]$.
 }
 
 \enquestion{8.37}{
@@ -33,8 +44,32 @@
             \includegraphics[scale=0.7]{../../figures/opg8.37a.png}
         \end{center}
         The points lie reasonably close to a straight line, indicating that the compressive strength data can be assumed to be normally distributed.
-        \item $[2228.5546, 2281.2454]$
-        \item $[2233.5513,\infty)$
+        \item First, we need to compute the sample mean $\overline{x}$ and the sample standard deviation $s$:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 2216 + 2237 + \ldots + 2255 }{ 10 } \approx 2254.9000.
+        \end{align*}
+    
+
+        To compute the sample standard deviation $s$, we first compute the sample variance $s^2$:
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (2216 - 2254.9000)^2 + (2237 - 2254.9000)^2 + \ldots + (2255 - 2254.9000)^2 }{ 10 - 1 } \\
+                &\approx 1356.3222.
+        \end{align*}
+    
+
+        The sample standard deviation $s$ is obtained by taking the square root of the sample variance $s^2$:
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 1356.3222 } \approx 36.8283.
+        \end{align*}
+        Filling in $\overline{x} = 2254.9$, $s = 36.8283$, $n = 10$ and $\alpha = 0.05$ gives $[2228.5546, 2281.2454]$.
+        \item For a lower confidence bound on the mean strength, we can compute a different type of interval.
+        This time it is not symmetric around the sample mean $\overline{x}$, but using the following formula:
+        \[
+            [\overline{x} - t_{\alpha; n-1} \cdot \frac{s}{\sqrt{n}}, \infty)
+        \]
+        Notice the difference in the subscript for the $t$-value: we now use the $\alpha$-th percentile instead of the $\alpha/2$-th percentile.
+        Filling in $\overline{x} = 2254.9$, $s = 36.8283$, $n = 10$ and $\alpha = 0.05$ gives $[2233.5513,\infty)$.
     \end{enumerate}
 }
 
@@ -65,8 +100,33 @@
         \end{center}
         The points approximate a straight line, showing that the speedup is normally distributed.
 
-        \item $[4.0517, 4.5748]$
-        \item $[4.0993, \infty)$
+        \item 
+        First, we need to compute the sample mean $\overline{x}$ and the sample standard deviation $s$:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 3.775302 + 3.350679 + \ldots + 4.600101 }{ 13 } \approx 4.3132.
+        \end{align*}
+    
+
+        To compute the sample standard deviation $s$, we first compute the sample variance $s^2$:
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (3.775302 - 4.3132)^2 + (3.350679 - 4.3132)^2 + \ldots + (4.600101 - 4.3132)^2 }{ 13 - 1 } \\
+                &\approx 0.1873.
+        \end{align*}
+    
+
+        The sample standard deviation $s$ is obtained by taking the square root of the sample variance $s^2$:
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 0.1873 } \approx 0.4328.
+        \end{align*}
+        Filling in $\overline{x} = 4.3132$, $s = 0.4328$, $n = 13$ and $\alpha = 0.05$ gives $[4.0517, 4.5748]$.
+        \item For a lower confidence bound on the mean strength, we can compute a different type of interval.
+        This time it is not symmetric around the sample mean $\overline{x}$, but using the following formula:
+        \[
+            [\overline{x} - t_{\alpha; n-1} \cdot \frac{s}{\sqrt{n}}, \infty)
+        \]
+        Notice the difference in the subscript for the $t$-value: we now use the $\alpha$-th percentile instead of the $\alpha/2$-th percentile.
+        Filling in $\overline{x} = 4.3132$, $s = 0.4328$, $n = 10$ and $\alpha = 0.05$ gives $[4.0993, \infty)$
     \end{enumerate}
 }
 
@@ -82,13 +142,34 @@
     \begin{enumerate}[label=(\alph*)]
         \item Use a normal probability plot to check the normality assumption.
         \item Find a \SI{99}{\percent} two-sided confidence interval on the mean percentage of enrichment.
-        Are you comfortable with the statement that the mean percentage of enrichment is $2.95\%$?
+        Are you comfortable with the statement that the mean percentage of enrichment is \SI{2.95}{\percent}?
         Why?
     \end{enumerate}
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
         \item The data appear to be normally distributed.
-        \item $[2.8126, 2.9907]$, yes, because $2.95 \in \text{CI}$.
+        \item First, we need to compute the sample mean $\overline{x}$ and the sample standard deviation $s$:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 2.94 + 3.0 + \ldots + 3.05 }{ 12 } \approx 2.9017.
+        \end{align*}
+    
+
+        To compute the sample standard deviation $s$, we first compute the sample variance $s^2$:
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (2.94 - 2.9017)^2 + (3.0 - 2.9017)^2 + \ldots + (3.05 - 2.9017)^2 }{ 12 - 1 } \\
+                &\approx 0.0099.
+        \end{align*}
+    
+
+        The sample standard deviation $s$ is obtained by taking the square root of the sample variance $s^2$:
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 0.0099 } \approx 0.0993.
+        \end{align*}
+        Filling in $\overline{x} = 2.9017$, $s = 0.0993$, $n = 12$ and $\alpha = 0.01$ gives $[2.8126, 2.9907]$.
+        
+        We are comfortable with the statement that the mean percentage of enrichment is \SI{2.95}{\percent},
+        as this value lies inside the confidence interval.
     \end{enumerate}
 }

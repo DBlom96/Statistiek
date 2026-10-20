@@ -1,5 +1,5 @@
 \enquestion{9.42}{
-    A melting point test of $n = 15$ samples of a binder used in manufacturing a rocket propellant resulted in $\bar{x} = 68^\circ\text{C}$.
+    A melting point test of $n = 15$ samples of a binder used in manufacturing a rocket propellant resulted in $\overline{x} = 68^\circ\text{C}$.
     Assume that the melting point is normally distributed with $\sigma = 0.83^\circ\text{C}$.
     \begin{enumerate}[label=(\alph*)]
         \item Test $H_{0}: \mu = 68.3$ versus $H_{1}: \mu \ne 68.3$ using $\alpha = 0.01$.
@@ -9,9 +9,41 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $z_0 = -1.40 \notin (-\infty, -2.576] \cup [2.576, \infty)$, do not reject $H_0$.
-        \item $0.1616$
-        \item $0.0000$
+        \item Notice that the mean melting point of $15$ samples is normally distributed: $\overline{X} \sim N(\mu=\text{?}, \sigma=\frac{0.83}{\sqrt{15}})$.
+        We perform a two-sided hypothesis test with $H_{0}: \mu = 68.3$ versus $H_{1}: \mu \ne 68.3$.
+        Under the null hypothesis, we assume that $\mu = 68.3$ and check how probable is the sample mean value $\overline{x} = 68$.
+        The critical region is of the form $Z = (-\infty, C_L] \cup [C_R, \infty)$, where 
+        \begin{align*}
+            C_L &= \invnorm(\opp=\alpha/2=0.005, \mu=68.3, \sigma=\frac{0.83}{\sqrt{15}}) \approx 67.7480. \\
+            C_R &= \invnorm(\opp=1-\alpha/2=0.995, \mu=68.3, \sigma=\frac{0.83}{\sqrt{15}}) \approx 68.8520.
+        \end{align*}
+        The sample mean $\overline{x} = 68$ does not lie in the critical region, hence we fail to reject $H_0$.
+        Based on this sample, there is not evidence to reject the claim that the true mean is $\mu=68.3$.\\[2ex]
+
+        \textbf{Alternative:} we can also consider the $z$-score of the sample mean and compute the critical region in terms of the standard normal distribution.
+        In that case, the $z$-score of the sample mean equals $z = \frac{\overline{x} - \mu_0}{\sigma/\sqrt{n}} = \frac{68-68.3}{0.83/\sqrt{15}} \approx -1.3999$.
+        The critical region is of the form $Z = (-\infty, C_L] \cup [C_R, \infty)$, where 
+        \begin{align*}
+            C_L &= \invnorm(\opp=\alpha/2=0.005, \mu=0, \sigma=1) \approx -2.5758. \\
+            C_R &= \invnorm(\opp=1-\alpha/2=0.995, \mu=0, \sigma=1) \approx 2.5758.
+        \end{align*}
+        The $z$-score of the sample mean $z = -1.3999$ does not lie in the critical region, hence we fail to reject $H_0$.
+        Based on this sample, there is not evidence to reject the claim that the true mean is $\mu=68.3$.\\[2ex]
+
+        \item First, note that the sample mean $\overline{x} = 68$ is smaller than the assumed null mean $\mu_0 = 68.3$.
+        The $p$-value (the probability that we get an observed sample mean further from $68.3$ than $\mu_0=68$) can therefore be computed as follows:
+        \begin{align*}
+            p = 2 \cdot P(\overline{X} \leq \overline{x})   &= \normalcdf(\lb=-\GRinfinity, \ub=68, \mu=68.3, \sigma=\frac{0.83}{\sqrt{15}}) \\
+                                                            &\approx 0.1616.
+        \end{align*}
+        \item The $\beta$-error (probability of not rejecting $H_0$ when $H_1$ is true) can be computed by the probability of observing a sample mean in the acceptance region,
+        given the true mean $\mu = 65.5$:
+        \begin{align*}
+            \beta = P(H_0 \mid H_1)    &= P(C_L \leq \overline{X} \leq C_R \mid \mu=65.5) \\
+                                    &= P(67.7480 \leq \overline{X} \leq 68.8520 \mid \mu=65.5) \\
+                                    &= \normalcdf(\lb=67.7480, \ub=68.8520, \mu=65.5, \sigma=\frac{0.83}{\sqrt{15}}) \\
+                                    &\approx 4.9268 \cdot 10^{-26}.
+        \end{align*}
     \end{enumerate}
 }
 
@@ -30,14 +62,35 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $z_0 = 1.77 \in [1.6449, \infty)$, reject $H_0$.
-        \item $0.0385$
-        \item $1.0000$
+        \item Notice that the mean battery life of $50$ battery packs is normally distributed: $\overline{X} \sim N(\mu=\text{?}, \sigma=\frac{0.2}{\sqrt{50}})$.
+        We perform a right-sided hypothesis test with $H_{0}: \mu = 4$ versus $H_{1}: \mu > 4$.
+        Under the null hypothesis, we assume that $\mu = 4$ and check how probable is the sample mean value $\overline{x} = 4.05$.
+        The critical region is of the form $Z = [C_R, \infty)$, where 
+        \begin{align*}
+            C_R &= \invnorm(\opp=1-\alpha=0.95, \mu=4, \sigma=\frac{0.2}{\sqrt{50}}) \approx 4.0465.
+        \end{align*}
+        The sample mean $\overline{x} = 4.05$ lies inside the critical region, hence we reject $H_0$.
+        Based on this sample, there is enough evidence to support the claim that the mean battery life indeed exceeds four hours.
+        \item First, note that we consider a right-sided hypothesis test, therefore the $p$-value
+        (the probability that we will observe a sample mean even larger than $4.05$) can be computed as follows:
+        \begin{align*}
+            p = P(\overline{X} \geq \overline{x}) = \normalcdf(\lb=4.05, \ub=\GRinfinity, \mu=4, \sigma=\frac{0.2}{\sqrt{50}}) \approx 0.0385.
+        \end{align*}
+        \item The power of a hypothesis test is $1 - \beta$, where $\beta$ is the type II error probability (probability of not rejecting $H_0$ when $H_1$ is true).
+        With other words, the power is the probability of observing a sample mean in the acceptance region,
+        given the true (alternative) mean $\mu = 4.5$:
+        \begin{align*}
+            1 - \beta = P(H_1 \mid H_1) &= P(\overline{X} \geq C_R \mid \mu=4.5) \\
+                                     &= P(\overline{X} \geq 4.0465 \mid \mu=4.5) \\
+                                     &= \normalcdf(\lb=4.0465, \ub=\GRinfinity, \mu=4.5, \sigma=\frac{0.2}{\sqrt{50}}) \\
+                                     &= 1.
+        \end{align*}
     \end{enumerate}
 }
 
 \enquestion{9.51}{
-    For the hypothesis test $H_{0}: \mu = 7$ against $H_{1}: \mu \ne 7$ with variance unknown and $n = 25$, approximate the $p$-value for each of the following test statistics.
+    For the hypothesis test $H_{0}: \mu = 7$ against $H_{1}: \mu \ne 7$ with variance unknown and $n = 25$,
+    approximate the $p$-value for each of the following test statistics.
     
     \begin{center}
         \begin{tabular}{*{3}{m{0.3\textwidth}}}
@@ -46,9 +99,40 @@
     \end{center}
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.0514$ & (b) $0.0782$ & (c) $0.6927$
-    \end{tabular}
+    In all three cases, we consider a two-sided hypothesis test for the mean $\mu$ of a normal distribution (with unknown $\sigma$).
+    Therefore, we need to resort to the $t$-distribution.
+
+    The test statistic we are working with is 
+    \[
+        T = \frac{\overline{X} - \mu}{S / \sqrt{n}},
+    \]
+    where $\overline{X}$ is the sample mean and $S$ is the sample standard deviation.
+    This test statistic follows a $t$-distribution with $\df = n - 1 = 24$ degrees of freedom.
+
+    As we consider two-sided tests, the $p$-values of given $t_0$-values can be computed as follows:
+    \begin{align*}
+        p 
+        = 
+        \begin{cases} 
+            2 \cdot P(T \geq t_{0}) = \tcdf(\lb=t_0, \ub=\GRinfinity, \df=24), & \text{ if } t_0 \geq 0 \\
+            2 \cdot P(T < t_0) = \tcdf(\lb=-\GRinfinity, \ub=t_0, \df=24), & \text{ otherwise.}
+        \end{cases}
+    \end{align*}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Filling in $t_0 = 2.05$ gives
+        \[
+            p = 2 \cdot P(T \geq 2.05) = \tcdf(\lb=2.05, \ub=\GRinfinity, \df=24) \approx 0.0514.
+        \]
+        \item Filling in $t_0 = -1.84$ gives
+        \[
+            p = 2 \cdot P(T < -1.84) = \tcdf(\lb=-\GRinfinity, \ub=-1.84, \df=24) \approx 0.0782.
+        \]
+        \item Filling in $t_0 = 0.4$ gives
+        \[
+            p = 2 \cdot P(T \geq 0.4) = \tcdf(\lb=0.4, \ub=\GRinfinity, \df=24) \approx 0.6927.
+        \]
+    \end{enumerate}
 }
 
 \enquestion{9.59}{
@@ -62,8 +146,51 @@
 }
 \enanswer{
     \begin{enumerate}
-        \item[(a)] $t = -3.4849 \in (-\infty, -2.064] \cup [2.064, \infty)$, reject $H_0$. $p = 0.0019 \le \alpha = 0.05$, reject $H_0$.
-        \item[(e)] $\mu = 98.6 \notin [98.065, 98.463]$, reject $H_0$.
+        \item[(a)] 
+        We consider a two-sided $t$-test for the mean $\mu$ of a normal distribution, as the standard deviation $\sigma$ is unknown.
+        First, we need to compute the sample mean $\overline{x}$ and the sample standard deviation $s$ of the given sample:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 97.8 + 97.2 + \ldots + 99.0 }{ 25 } \approx 98.2640.
+        \end{align*}
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (97.8 - 98.2640)^2 + (97.2 - 98.2640)^2 + \ldots + (99.0 - 98.2640)^2 }{ 25 - 1 } \\
+                &\approx 0.2324.
+        \end{align*}
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 0.2324 } \approx 0.4821.
+        \end{align*}
+    
+        The test statistic for the $t$-test is then computed as
+        \[
+            t_0 = \frac{\overline{x} - \mu}{s / \sqrt{n}} = \frac{98.2640 - 98.6}{0.4821 / \sqrt{25}} \approx -3.4849.
+        \]
+
+        The critical region ($\alpha = 0.05$, two-sided $t$-test) is of the form $Z = (-\infty, C_L] \cup [C_R, \infty)$, where:
+        \begin{align*}
+            C_L &= \invt(\opp=\alpha/2 = 0.025, \df=24) \approx -2.0639, \\
+            C_R &= \invt(\opp=1-\alpha/2 = 0.975, \df=24) \approx 2.0639.
+        \end{align*}
+        The observed test statistic $t_0$ lies inside the critical region, therefore we reject $H_0$.
+
+        Alternatively, we could have computed the $p$-value corresponding to $t_0$:
+        \begin{align*}
+            p &= 2 \cdot P(T \leq -3.4849)  &= 2 \cdot \tcdf(\lb=-\GRinfinity, \ub=-3.4849, \df=24) \\
+                                            &\approx 0.0019.
+        \end{align*}
+        As $p < \alpha$, we again decide to reject $H_0$.
+        There is enough evidence to assume that the mean female body temperature significantly differs from $98.6^\circ F$.
+        \item[(e)] A two-sided confidence interval for the mean $\mu$ can be computed as follows:
+        \begin{align*}
+            &[\overline{x} - t_{\alpha/2;n-1} \cdot \frac{s}{\sqrt{n}}, \overline{x} + t_{\alpha/2;n-1} \cdot \frac{s}{\sqrt{n}}] \\
+        \end{align*}
+        Here, $\overline{x} = 98.2640$, $s = 0.4821$, $n=25$ and
+        \[
+            t_{\alpha/2,n-1} = \invt(\opp=1-\alpha/2=0.975, \df=n-1=24) \approx 2.0639.
+        \]
+        Filling in this information in the formula gives an interval $[98.0650, 98.4630]$.
+        Notice that $98.6$ does not lie inside this confidence interval, hence it is very unlikely that $98.6$ is the true value of the mean $\mu$.
+        Therefore, we can again decide to reject $H_0$.
     \end{enumerate}
 }
 
@@ -71,16 +198,61 @@
     Cloud seeding has been studied for many decades as a weather modification procedure (for an interesting study of this subject, see the article in \textit{Technometrics}, \enquote{A Bayesian Analysis of a Multiplicative Treatment Effect in Weather Modification,} Vol. 17, pp. 161–166).
     The rainfall in cubic-meters from $20$ clouds that were selected at random and seeded with silver nitrate follows: $22.2 \times 10^{3}$, $37.9 \times 10^{3}$, $24.4 \times 10^{3}$, $33.4 \times 10^{3}$, $27.5 \times 10^{3}$, $23.2 \times 10^{3}$, $39.2 \times 10^{3}$, $28.9 \times 10^{3}$, $26.1 \times 10^{3}$, $34.4 \times 10^{3}$, $39.3 \times 10^{3}$, $33.4 \times 10^{3}$, $30.8 \times 10^{3}$, $30.4 \times 10^{3}$, $33.2 \times 10^{3}$, $26.9 \times 10^{3}$, $36.2 \times 10^{3}$, $42.9 \times 10^{3}$, $32.9 \times 10^{3}$, and $38.9 \times 10^{3}$.
     \begin{enumerate}
-        \item[(a)] Can you support a claim that the mean rainfall from seeded clouds exceeds $30 \times 10^3\text{ m}^3$?
+        \item[(a)] Can you support a claim that the mean rainfall from seeded clouds exceeds \SI{30e3}{\cubic\metre}?
         Use $\alpha = 0.01$.
         Find the $p$-value.
-        \item[(e)] Explain how the question in part (a) could be answered by constructing a one-sided confidence bound on the mean diameter.
+        \item[(e)] Explain how the question in part (a) could be answered by constructing a one-sided confidence bound on the mean rainfall in cubic metres.
     \end{enumerate}
 }
 \enanswer{
     \begin{enumerate}
-        \item[(a)] $t = 1.5953 \notin [2.539, \infty)$, don't reject $H_0$. $p = 0.0636 > \alpha = 0.05$, don't reject $H_0$.
-        \item[(e)] $\mu = 30 \in [28.754, \infty)$, don't reject $H_0$.
+        \item[(a)]
+        We consider a right-sided $t$-test for the mean $\mu$ of a normal distribution, as the standard deviation $\sigma$ is unknown.
+        First, we need to compute the sample mean $\overline{x}$ and the sample standard deviation $s$ of the given sample:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 22.2 + 37.9 + \ldots + 38.9 }{ 20 } \approx 32.1050.
+        \end{align*}
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (22.2 - 32.1050)^2 + (37.9 - 32.1050)^2 + \ldots + (38.9 - 32.1050)^2 }{ 20 - 1 } \\
+                &\approx 34.8226.
+        \end{align*}
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 34.8226 } \approx 5.9011.
+        \end{align*}
+    
+        The test statistic for the $t$-test is then computed as
+        \[
+            t_0 = \frac{\overline{x} - \mu}{s / \sqrt{n}} = \frac{32.1050 - 30}{5.9011 / \sqrt{20}} \approx 1.5953.
+        \]
+
+        The critical region ($\alpha = 0.01$, right-sided $t$-test) is of the form $Z = [C_R, \infty)$, where:
+        \begin{align*}
+            C_R &= \invt(\opp=1-\alpha = 0.99, \df=19) \approx 2.5395.
+        \end{align*}
+        The observed test statistic $t_0 \approx 1.5953$ does not lie inside the critical region, therefore we fail to reject $H_0$.
+
+        Alternatively, we could have computed the $p$-value corresponding to $t_0$:
+        \begin{align*}
+            p &= P(T \geq 1.5953) = \normalcdf(\lb=1.5953, \ub=\GRinfinity, \df=19) \approx 0.0636.
+        \end{align*}
+        As $p > \alpha = 0.05$, we again fail to reject $H_0$.
+        There is not enough evidence to assume that the mean rainfall from a random cloud
+        significantly exceeds \SI{30e3}{\cubic\metre}.
+        
+        \item[(e)] An alternative way of answering part (a) is through a one-sided confidence interval for the mean $\mu$.
+        As we consider a right-sided hypothesis test, this means that the confidence interval is of the form $[\overline{x} - t_{\alpha,n-1} \cdot s / \sqrt{n}, \infty)$,
+        In this case, $n = 20$ and $\alpha = 0.01$, so
+        \begin{align*}
+            t_{\alpha,n-1} = \invt(\opp=1 - \alpha=0.99, \df=n-1=19) \approx 2.5395.
+        \end{align*}
+        The one-sided confidence interval is therefore equal to
+        \[
+            [\overline{x} - t_{\alpha,n-1} \cdot s / \sqrt{n}, \infty) = [32.1050 - 2.5395 \cdot 5.9011 / \sqrt{20}, \infty) = [28.7540,\infty).
+        \]
+        Notice that $\mu = 30$ is inside this confidence interval, hence we fail to reject $H_0$.
+        There is not enough evidence to assume that the mean rainfall from a random cloud
+        significantly exceeds \SI{30e3}{\cubic\metre}.
     \end{enumerate}
 }
 
@@ -108,10 +280,41 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $n = 18$, $\sigma = 1.7$, ignore StDev and SE Mean, $z_0 = 1.3502$, $p = .0885$
-        \item One-sided
-        \item $p = 0.0885 > \alpha = 0.05$, don't reject $H_0$
-        \item $[25.7557, 27.3263]$
+        \item From the given information, we can derive the following missing descriptive statistics:
+        \begin{itemize}
+            \item Notice that the standard error for the mean (SE Mean) follows from the formula
+            \[
+                \text{SE Mean} = \frac{\sigma}{\sqrt{n}},
+            \]
+            or alternatively $n = \left(\frac{\sigma}{\text{SE Mean}}\right)^2 = \left(\frac{1.7}{0.401}\right) = 18$.
+            \item The $z$-score corresponding to a sample with sample mean $26.541$, $\sigma = 1.7$ and $n=18$ is equal to:
+            \[
+                z = \frac{\overline{x} - \mu}{\sigma / \sqrt{n}} = \frac{26.541 - 26}{1.7 / \sqrt{18}} \approx 1.3502.
+            \]
+            \item The $p$-value corresponding to this sample is equal to
+            \begin{align*}
+                p &= P(\overline{X} \geq \overline{x}=26.541) \\
+                &= \normalcdf(\lb=26.541, \ub=\GRinfinity, \mu=26, \sigma=1.7/\sqrt{18}) \\
+                &\approx 0.0885.
+            \end{align*}
+        \end{itemize}
+        \item This is a one-sided hypothesis test (specifically, a right-sided test), as the alternative hypothesis is of the form \enquote{$>$}.
+        \item If the significance level $\alpha = 0.05$, we have that $p = 0.0885 > \alpha = 0.05$, hence we fail to reject $H_0$.
+        There is not enough evidence to reject the claim that the true mean $\mu = 26$.
+        \item A two-sided \SI{95}{\percent} ($\alpha = 0.05$) confidence interval for the mean $\mu$ can be computed as follows:
+        \begin{align*}
+            &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}]
+        \end{align*}
+        Here, $\overline{x} = 26.541$, $\sigma = 1.7$, $n=18$ and
+        \[
+            z_{\alpha/2} = \invnorm(\opp=1-\alpha/2=0.975, \mu=0, \sigma=1) \approx 1.9600.
+        \]
+        Filling in this information in the formula gives an interval 
+        \begin{align*}
+            &[\overline{x} - z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}, \overline{x} + z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}] \\
+            &=[26.541 - 1.9600 \cdot \frac{1.7}{\sqrt{18}}, 26.541 + 1.9600 \cdot \frac{1.7}{\sqrt{18}}] \\
+            &=[25.7556, 27.3264].
+        \end{align*}
     \end{enumerate}
 }
 
@@ -139,9 +342,51 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $15$
-        \item $\text{SE} = 1.1525$, $\text{CI} = [95.8735, 100.7865]$, $t_0 = -1.4490$, $p = .1679$
-        \item $p = .1679 > \alpha = 0.01$, don't reject $H_0$
-        \item $t_0 = -1.4490 \notin [2.6025, \infty)$, $p = .9160 > \alpha = .01$, don't reject $H_0$
+        \item The number of degrees of freedom equals $\df = n - 1$, where $n = 16$ is the sample size.
+        Therefore, $\df = 15$.
+        \item From the given information, we can derive the following missing descriptive statistics:
+        \begin{itemize}
+            \item Notice that the standard error for the mean (SE Mean) follows from the formula
+            \[
+                \text{SE Mean} = \frac{\text{StDev}}{\sqrt{n}} = \frac{4.61}{\sqrt{16}} \approx 1.1525.
+            \]
+            \item A two-sided \SI{95}{\percent} ($\alpha = 0.05$) confidence interval for the mean $\mu$ can be computed as follows:
+            \begin{align*}
+                &[\overline{x} - t_{\alpha/2,n-1} \cdot \frac{\sigma}{\sqrt{n}}, \overline{x} + t_{\alpha/2,n-1} \cdot \frac{\sigma}{\sqrt{n}}]
+            \end{align*}
+            Here, $\overline{x} = 98.33$, $s = 4.61$, $n=16$ and
+            \[
+                t_{\alpha/2,n-1} = \invt(\opp=1-\alpha/2=0.975, \df=15) \approx 2.1314.
+            \]
+            Filling in this information in the formula gives an interval 
+            \begin{align*}
+                &[\overline{x} - t_{\alpha/2,n-1} \cdot \frac{s}{\sqrt{n}}, \overline{x} + t_{\alpha/2,n-1} \cdot \frac{s}{\sqrt{n}}] \\
+                &=[98.33 - 2.1314 \cdot \frac{4.61}{\sqrt{16}}, 98.33 + 2.1314 \cdot \frac{4.61}{\sqrt{16}}] \\
+                &=[95.8735, 100.7865].
+            \end{align*}
+            \item The $t$-score corresponding to a sample with $\overline{x}=98.33$, $s = 4.61$, $\mu=100$ and $n=16$ is equal to:
+            \[
+                t = \frac{\overline{x} - \mu}{s / \sqrt{n}} = \frac{98.33 - 100}{4.61 / \sqrt{16}} \approx -1.4490.
+            \]
+            \item The $p$-value corresponding to this sample is equal to
+            \[
+                p = 2 \cdot P(T \leq t) = 2 \cdot \tcdf(\lb=-\GRinfinity, \ub=-1.4490, \df=15) \approx 0.1679.
+            \]
+        \end{itemize}
+        \item If the significance level $\alpha = 0.01$, we have that $p = 0.1679 > \alpha = 0.01$, hence we fail to reject $H_0$.
+        There is not enough evidence to reject the claim that the true mean $\mu = 100$.
+        \item Suppose now we consider a right-sided hypothesis test.
+        In that case, the critical region ($\alpha = 0.01$, right-sided $t$-test) is of the form $Z = [C_R, \infty)$, where:
+        \begin{align*}
+            C_R &= \invt(\opp=1-\alpha = 0.99, \df=15) \approx 2.6025.
+        \end{align*}
+        The observed test statistic $t_0 \approx -1.4490$ does not lie inside the critical region, therefore we fail to reject $H_0$.
+
+        Alternatively, we could have computed the $p$-value corresponding to $t_0$:
+        \begin{align*}
+            p &= P(T \geq -1.4490) = \tcdf(\lb=-1.4490, \ub=\GRinfinity, \df=15) \approx 0.9160.
+        \end{align*}
+        As $p > \alpha = 0.01$, we again fail to reject $H_0$.
+        There is not enough evidence to assume that the true mean is significantly larger than $100$.
     \end{enumerate}
 }

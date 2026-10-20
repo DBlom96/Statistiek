@@ -1,15 +1,25 @@
 \enquestion{9.42}{
     A melting point test of $n = 15$ samples of a binder used in manufacturing a rocket propellant resulted in $\bar{x} = 68^\circ\text{C}$.
     Assume that the melting point is normally distributed with $\sigma = 0.83^\circ\text{C}$.
+    We test $H_0: \mu = 68.3^\circ C$ versus $H_1: \mu \neq 68.3^\circ C$.
     \begin{enumerate}
         \item[(d)] What value of $n$ would be required if we want $\beta < 0.1$ when $\mu = 65.5$?
         Assume that $\alpha = 0.01$.
     \end{enumerate}
 }
 \enanswer{
-    \begin{enumerate}
-        \item[(d)] $2$
-    \end{enumerate}
+    We consider a two-sided hypothesis test for the mean $\mu$ with hypotheses $H_0: \mu = 68.3^\circ C$ versus $H_1: \mu \neq 68.3^\circ C$.
+    As $\mu_0 = 68.3$ and $\mu_1 = \mu_0 + \delta = 65.5$, we have $\delta = 65.5 - 68.3 = -2.8$.
+    Furthermore, we have $\alpha = 0.01$ and $\beta = 0.1$ and therefore
+    \begin{align*}
+        z_{\alpha/2} &= \invnorm(\opp=1-\alpha/2=0.995, \mu=0, \sigma=1) \approx 2.5758,\\
+        z_{\beta} &= \invnorm(\opp=1-\beta=0.9, \mu=0, \sigma=1) \approx 1.2816.
+    \end{align*}
+    The minimum required sample size $n$ in order to guarantee the type II error probability $\beta < 0.1$ equals:
+    \begin{align*}
+        n \geq \left( \frac{(z_{\alpha/2} + z_\beta) \cdot \sigma}{\delta}\right)^2 \approx \left( \frac{(2.5758 + 1.2816) \cdot 0.83}{-2.8}\right)^2 \approx 1.8979.
+    \end{align*}
+    As the sample size should be an integer, in order to bound $\beta$ by $0.1$, we need a sample size $n \geq 2$.
 }
 
 \enquestion{9.47}{
@@ -18,6 +28,8 @@
     A random sample of $50$ battery packs is selected and subjected to a life test.
     The average life of these batteries is $4.05\text{ h}$.
     Assume that battery life is normally distributed with standard deviation $\sigma = 0.2\text{ h}$.
+    We test $H_0: \mu = 4$ versus $H_1: \mu > 4$ with $\alpha = 0.05$.
+
     \begin{enumerate}
         \item[(d)] What sample size would be required to detect a true mean battery life of $4.5\text{ h}$ if you wanted the power of the test to be at least $0.9$?
         \item[(e)] Is there evidence to support the claim that mean battery life exceeds $4$ hours? 
@@ -26,8 +38,29 @@
 }
 \enanswer{
     \begin{enumerate}
-        \item[(d)] $2$
-        \item[(e)] $4 \notin [4.0035, \infty) \implies \text{reject } H_0$
+        \item[(d)] We consider a right-sided hypothesis test for the mean $\mu$ with hypotheses $H_0: \mu = 4$ versus $H_1: \mu > 4$.
+        As $\mu_0 = 4$ and $\mu_1 = \mu_0 + \delta = 4.5$, we have $\delta = 4.5 - 4 = 0.5$.
+        Furthermore, we have $\alpha = 0.05$ and $1 - \beta = 0.9$ and therefore
+        \begin{align*}
+            z_{\alpha} &= \invnorm(\opp=1-\alpha=0.95, \mu=0, \sigma=1) \approx 1.6449,\\
+            z_{\beta} &= \invnorm(\opp=1-\beta=0.9, \mu=0, \sigma=1) \approx 1.2816.
+        \end{align*}
+        The minimum required sample size $n$ in order to guarantee the power $1 - \beta \geq 0.9$ equals:
+        \begin{align*}
+            n \geq \left( \frac{(z_{\alpha/2} + z_\beta) \cdot \sigma}{\delta}\right)^2 \approx \left( \frac{(1.6449 + 1.2816) \cdot 0.2}{0.5}\right)^2 \approx 1.3702.
+        \end{align*}
+        As the sample size should be an integer, in order to bound $\beta$ by $0.1$, we need a sample size $n \geq 2$.
+        \item[(e)] A one-sided confidence bound on the mean $\mu$ can be computed as follows:
+        \begin{align*}
+            &[\overline{x} - z_{\alpha} \cdot \frac{\sigma}{\sqrt{n}}, \infty) \\
+        \end{align*}
+        Here, $\overline{x} = 4.05$, $\sigma=0.2$, $n=50$ and
+        \[
+            z_{\alpha} = \invnorm(\opp=1-\alpha=0.95, \mu=0, \sigma=1) \approx 1.6449.
+        \]
+        Filling in this information in the formula gives a one-sided confidence bound $[4.0035, \infty)$.
+        Notice that $4$ does not lie inside this confidence interval, hence it is very unlikely that $4$ is the true value of the mean $\mu$.
+        Therefore, we can again decide to reject $H_0$.
     \end{enumerate}
 }
 
@@ -39,7 +72,7 @@
             \toprule
                 \multicolumn{7}{l}{\textbf{One-Sample $T$:}} \\                
                 \multicolumn{7}{l}{Test of $\mu = 85$ vs $\mu<85$} \\
-                Variable & $n$ & Mean & StDev & SE Mean & $Z$ & $p$ \\
+                Variable & $n$ & Mean & StDev & SE Mean & $T$ & $p$ \\
                 $X$ & $31$ & $84.331$ & ? & $0.631$ & ? & ? \\
             \bottomrule
         \end{tabular}
@@ -55,11 +88,46 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $30$
-        \item $s = 3.5133$, $t_0 = -1.0602$, $p = .1488$
-        \item $p = 0.1488 > \alpha = 0.05$, don't reject $H_0$
-        \item $\mu < 85.4020$
-        \item $t_0 = -24.8320 \notin [1.6973, \infty)$, don't reject $H_0$
+        \item As the sample size $n = 31$, the number of degrees of freedom on the $t$-statistic is $\df = n - 1 = 30$.
+        \item From the given information, we can derive the following missing descriptive statistics:
+        \begin{itemize}
+            \item Notice that the standard error for the mean (SE Mean) follows from the formula
+            \[
+                \text{SE Mean} = \frac{s}{\sqrt{n}},
+            \]
+            hence the sample standard deviation $s = \text{SE Mean} \cdot \sqrt{n} = 0.631 \cdot \sqrt{31} \approx 3.5133$.
+            \item The $t$-score corresponding to a sample with sample mean $\overline{x} = 84.331$, sample standard deviation
+            $s = 3.5133$ and $n=31$ is equal to:
+            \[
+                t = \frac{\overline{x} - \mu}{s / \sqrt{n}} = \frac{84.331 - 85}{3.5133 / \sqrt{31}} \approx -1.0602.
+            \]
+            \item The $p$-value corresponding to this sample (left-sided $t$-test) is equal to
+            \begin{align*}
+                p &= P(T \leq t = -1.0602) \\
+                &= \tcdf(\lb=-\GRinfinity, \ub=-1.0602, \df = 30) \\
+                &\approx 0.1488.
+            \end{align*}
+        \end{itemize}
+        \item If we work with $\alpha = 0.05$, we have that $p = 0.1488 > \alpha = 0.05$, hence we fail to reject $H_0$.
+        \item A one-sided confidence bound on the mean $\mu$ can be computed as follows:
+        \begin{align*}
+            &(-\infty, \overline{x} + t_{\alpha,n-1} \cdot \frac{s}{\sqrt{n}}] \\
+        \end{align*}
+        Here, $\overline{x} = 4.05$, $\sigma=0.2$, $n=50$ and
+        \[
+            t_{\alpha, n-1} = \invnorm(\opp=1-\alpha=0.95, \df=n-1=30) \approx 1.6973.
+        \]
+        Filling in this information in the formula gives a one-sided confidence bound $(-\infty, 85.4020]$.
+        \item Suppose now we consider a right-sided hypothesis test with $H_{0}: \mu = 100$ versus $H_{0}: \mu > 100$.
+        In that case, the critical region ($\alpha = 0.05$, right-sided $t$-test) is of the form $Z = [1.6973, \infty)$.
+        The $t$-score corresponding to a sample with sample mean $\overline{x} = 84.331$, $\mu=100$, sample standard deviation
+        $s = 3.5133$ and $n=31$ is equal to:
+        \[
+            t = \frac{\overline{x} - \mu}{s / \sqrt{n}} = \frac{84.331 - 100}{3.5133 / \sqrt{31}} \approx -24.8320.
+        \]
+        Notice that the observed $t$-score does not lie inside the critical region,
+        hence we fail to reject $H_0$.
+        There is not enough evidence to assume that the mean is significantly larger than $100$.        
     \end{enumerate}
 }
 
@@ -69,21 +137,63 @@
     The paper described a number of interesting experiments.
     Results on the time to signal (in seconds) for one such experiment with pine stick fuel in an open bedroom using photoelectric smoke alarms are as follows: $220$, $225$, $297$, $315$, $282$, and $313$.
     \begin{enumerate}[label=(\alph*)]
-        \item Is there sufficient evidence to support a claim that the mean time to signal is less than $285$ seconds?
+        \item Is there sufficient evidence to support a claim that the mean time to signal is less than $285$ seconds? Use $\alpha=0.05$.
         \item Is there practical concern about the assumption of a normal distribution as a model for the time-to-signal data?
         \item Find a \SI{95}{\percent} two-sided CI on the mean time to signal.
     \end{enumerate}
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $t_0 = -.5550 \notin (-\infty, -2.0150]$, $p = .3014 > \alpha = .05$, don't reject $H_0$
-        \item Yes, the sample size is small, also, the imaginary pencil must be very fat:
-        
+        \item We consider a left-sided $t$-test for the mean $\mu$ of a normal distribution, 
+        as the standard deviation $\sigma$ is unknown.
+        First, we need to compute the sample mean $\overline{x}$ and the sample standard deviation $s$ of the given sample:
+        \begin{align*}
+            \overline{x} = \frac{x_1+x_2+\ldots+x_n}{n} = \frac{ 220 + 225 + \ldots + 313 }{ 6 } \approx 275.3333.
+        \end{align*}
+        \begin{align*}
+            s^2 &= \frac{ (x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2 }{ n - 1 } \\
+                &= \frac{ (220 - 275.3333)^2 + (225 - 275.3333)^2 + \ldots + (313 - 275.3333)^2 }{ 6 - 1 } \\
+                &\approx 1820.2667.
+        \end{align*}
+        \begin{align*}
+            s = \sqrt{ s^2 } = \sqrt{ 1820.2667 } \approx 42.6646.
+        \end{align*}
+    
+        The test statistic for the $t$-test is then computed as
+        \[
+            t_0 = \frac{\overline{x} - \mu}{s / \sqrt{n}} = \frac{275.3333 - 285}{42.6646 / \sqrt{6}} \approx -0.5550.
+        \]
+
+        The critical region ($\alpha = 0.01$, left-sided $t$-test) is of the form $Z = (-\infty, C_L]$, where:
+        \begin{align*}
+            C_L &= \invt(\opp=\alpha=0.05, \df=5) \approx -2.0150.
+        \end{align*}
+        The observed test statistic $t_0 \approx -0.5550$ does not lie inside the critical region, therefore we fail to reject $H_0$.
+
+        Alternatively, we could have computed the $p$-value corresponding to $t_0$:
+        \begin{align*}
+            p &= P(T \leq -0.5550) = \tcdf(\lb=-\GRinfinity, \ub=-0.5550, \df=5) \approx 0.3014.
+        \end{align*}
+        As $p > \alpha = 0.05$, we again fail to reject $H_0$.
+        There is not enough evidence to assume that the mean time to signal is significantly less than $285$ milliseconds.
+        \item Yes, the sample size is small, also, the points do not perfectly line up (the imaginary pencil must be very fat):
         \begin{center}
             \includegraphics[scale=0.7]{opg9.130b.png}
         \end{center}
-
-        \item $[230.5596, 320.1071]$
+        \item A two-sided \SI{95}{\percent} ($\alpha = 0.05$) confidence interval for the mean $\mu$ can be computed as follows:
+        \begin{align*}
+            &[\overline{x} - t_{\alpha/2,n-1} \cdot \frac{s}{\sqrt{n}}, \overline{x} + t_{\alpha/2,n-1} \cdot \frac{s}{\sqrt{n}}]
+        \end{align*}
+        Here, $\overline{x} = 275.3333$, $s = 42.6646$, $n=6$ and
+        \[
+            t_{\alpha/2,n-1} = \invt(\opp=1-\alpha/2=0.975, \df=n-1=5) \approx 2.5706.
+        \]
+        Filling in this information in the formula gives an interval 
+        \begin{align*}
+            &[\overline{x} - t_{\alpha/2,n-1} \cdot \frac{s}{\sqrt{n}}, \overline{x} + t_{\alpha/2,n-1} \cdot \frac{s}{\sqrt{n}}] \\
+            &=[275.3333 - 2.5706 \cdot \frac{42.6646}{\sqrt{6}}, 275.3333 + 2.5706 \cdot \frac{42.6646}{\sqrt{6}}] \\
+            &=[230.5596, 320.1071].
+        \end{align*}
     \end{enumerate}
 }
 
@@ -100,8 +210,40 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $.9764$, $.9556$, $.8591$, $.2033$
-        \item $.3661$, $.2660$, $.1056$, $.0008$, significant at $\alpha = .01$ when $n = 2550$
-        \item When $n = 30, 100$ or $400$: don't reject $H_0$, but $\beta = P(H_0 \mid H_1)$ is large, so there is a large type II error
+        \item For a test right-sided hypothesis test for $H_{0}: \mu = 85$ versus the alternative $H_{1}: \mu > 85$, with $\sigma=16$ and $\alpha = 0.01$,
+        the critical region is of the form $Z = [C_R, \infty)$, where
+        \begin{align*}
+            C_R &= \invnorm(\opp=1-\alpha = 0.99, \mu=85, \sigma=16/\sqrt{n}).
+        \end{align*}
+        The type I error probability $\beta$ can then be computed as
+        \begin{align*}
+            \beta = P(H_0 \mid H_1) &=  P(\overline{X} \leq C_R \mid \mu = \mu_1) \\
+                                    &=  \normalcdf(\lb=-\GRinfinity, \ub=C_R, \mu = \mu_1, \sigma = 16/\sqrt{n})
+        \end{align*}
+        This leads to the following values:
+        \begin{itemize}
+            \item $n = 30$: critical region $Z = [91.7957,\infty)$ and $\beta = 0.9764$
+            \item $n = 100$: critical region $Z = [88.7222,\infty)$ and $\beta = 0.9556$
+            \item $n = 400$: critical region $Z = [86.8611,\infty)$ and $\beta = 0.8591$
+            \item $n = 2550$: critical region $Z = [85.7371,\infty)$ and $\beta = 0.2033$
+        \end{itemize}
+
+        \item The $p$-values corresponding to the sample average $\overline{x} = 86$ can be computed as
+        \begin{align*}
+            p &= P(\overline{X} \geq 86) = \normalcdf(\lb=86, \ub=\GRinfinity, \mu=85, \sigma=16/\sqrt{n}).
+        \end{align*}
+        This leads to the following values for different sample sizes $n$:
+        \begin{itemize}
+            \item $n = 30$: $p = 0.3661$.
+            \item $n = 100$: $p = 0.2660$.
+            \item $n = 400$: $p = 0.1056$.
+            \item $n = 2550$: $p = 0.0008$.
+        \end{itemize}
+        The data would be statistically significant only in the case of $n = 2550$, as then the $p$-value is smaller than the significance level $\alpha$.
+
+        \item Whenever the sample size is small ($n = 30, 100$ or $400$), we fail to reject $H_0$ due to a small significance level $\alpha = 0.01$.
+        The downside of this is that the type II error probabilities in these cases are very large, therefore the power of the hypothesis tests is
+        low in case the sample size is small.
+        For $n = 2550$, we see that $\beta$ is drastically smaller, hence the power $1 - \beta$ is much bigger whenever the sample size is larger (more data means more confidence about our conclusion!)
     \end{enumerate}
 }

@@ -3,18 +3,25 @@
     \begin{center}
         \begin{tabular}{*{2}{m{.45\textwidth}}}
             (a) $H_{0}: \mu = 25$, $H_{1}: \mu \ne 25$ & (b) $H_{0}: \sigma > 10$, $H_{1}: \sigma = 10$ \\
-            (c) $H_{0}: \bar{x} = 50$, $H_{1}: \bar{x} \ne 50$ & (d) $H_{0}: p = 0.1$, $H_{1}: p = 0.5$ \\
+            (c) $H_{0}: \overline{x} = 50$, $H_{1}: \overline{x} \ne 50$ & (d) $H_{0}: p = 0.1$, $H_{1}: p = 0.5$ \\
             (e) $H_{0}: s = 20$, $H_{1}: s < 20$ &
         \end{tabular}
     \end{center}
 }
 \enanswer{
+    Notice that correctly stated hypotheses have to satisfy the following properties:
+    \begin{itemize}
+        \item $H_0$ and $H_1$ are statements about the value of a certain distribution parameter (e.g., the value of $\mu$ or $\sigma$ in a normal distribution, the success probability $p$ in a binomial distribution, $\ldots$).
+        \item $H_0$ is of the form \enquote{$=$}, while $H_1$ is of the form \enquote{$<$ / $\neq$ / $>$}.
+    \end{itemize}
+
     \begin{enumerate}[label=(\alph*)]
         \item Correct.
-        \item Incorrect, swap $H_0$ and $H_1$.
-        \item Incorrect, $\bar{x}$ is a sample statistic, not a population parameter.
-        \item $H_1$ is incorrect, $H_1: p \ne 0.1$ is correct.
-        \item Incorrect, $s$ is a sample statistic, not a population parameter.
+        \item Incorrect, but would have been correct if $H_0$ and $H_1$ were swapped.
+        \item Incorrect, as $H_0$ and $H_1$ say something about the value of the sample statistic $\overline{x}$, not the population parameter $\mu$.
+        \item Incorrect, as the alternative hypothesis $H_1$ is not of the right form.
+        It would have been a correctly stated hypothesis testing problem if $H_1: p \ne 0.1$.
+        \item Incorrect, as again $H_0$ and $H_1$ say something about the value of a sample statistic $s$, not the population parameter $\sigma$.
     \end{enumerate}
 }
 
@@ -28,11 +35,26 @@
     \end{enumerate}
 }
 \enanswer{
-    Note: Calculations use $\sigma = 0.5\text{ kg}$.
     \begin{enumerate}[label=(\alph*)]
-        \item $0.0228$
-        \item $0.1587$
-        \item $0.5000$
+        \item Under the null hypothesis, we assume that the thread elongation $X \sim N(\mu=12, \sigma=1.5)$.
+        With other words, the mean thread elongation is normally distributed with $\mu = 12$ en $\sigma = \frac{1.5}{\sqrt{4}} = 0.75$.
+        If the critical region is defined as $\overline{x} < 11.5$, that means the type I error probability $\alpha$ (the probability we reject $H_0$ while it is true) is equal to
+        \begin{align*}
+            \alpha  &= P(\overline{X} < 11.5 | \mu = 12) \\
+                    &= \normalcdf(\lb=-\GRinfinity, \ub=11.5, \mu=12, \sigma=0.75) \\
+                    &\approx 0.2525.
+        \end{align*}
+        \item We compute $\beta$ (type II error probability) as the probability that $H_0$ will NOT be rejected, while $H_1$ is true (some given value of $\mu_1$ satisfying $H_1$).
+        Notice that $\mu_1 = 11.25$ satisfies $H_1: \mu < 12$.
+        We reject the null hypothesis if the sample mean $\overline{x} < 11.5$, or alternatively, we fail to reject $H_0$ if $\overline{x} \geq 11.5$:
+        \begin{align*}
+            \beta   &= P(\overline{X} \geq 11.5 | \mu_1 = 11.25) \\
+                    &= \normalcdf(\lb=11.5, \ub=\GRinfinity, \mu=11.25, \sigma=0.75) \\
+                    &\approx 0.3694.
+        \end{align*}
+        \item Notice that this given value of $\mu_1 = 11.5$ is equal to the boundary value of the critical region.
+        That means that under this true mean, the probability of a value inside the critical region is \SI{50}{\percent}, and also for the acceptance region. 
+        This means that we can directly tell that $\beta = 0.5$.
     \end{enumerate}
 }
 
@@ -46,9 +68,22 @@
     \end{center}
 }
 \enanswer{
-    \begin{tabular}{*{4}{C{.22\textwidth}}}
-        (a) $11.4798$ & (b) $11.6322$ & (c) $11.7399$ & (d) $11.8161$
-    \end{tabular}
+    Notice that the hypothesis test of Exercise 9.5 can be formulated as $H_0: \mu = 12$ versus $H_1: \mu < 12$.
+    That means that we are considering a left-sided hypothesis test.
+
+    In a hypothesis testing, we assume $H_0$ is true unless the evidence of the sample gives us significant reason to reject it.
+    Under assumption of $H_0$, the mean thread elongation $\overline{X}$ is normally distributed with $\mu = 12$ and $\sigma = \frac{1.5}{\sqrt{n}}$.
+    In a left sided test, that means that the critical region is of the form $(-\infty, g]$, where $g$ is the $\alpha$-th percentile of this normal distribution:
+    \begin{align*}
+        g = \invnorm(\opp=\alpha, \mu=12, \sigma=\frac{1.5}{\sqrt{n}})
+    \end{align*}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Filling in $\alpha = 0.01$ and $n = 5$ gives $g \approx 10.4394$
+        \item Filling in $\alpha = 0.05$ and $n = 5$ gives $g \approx 10.8966$
+        \item Filling in $\alpha = 0.01$ and $n = 20$ gives $g \approx 11.2197$ 
+        \item Filling in $\alpha = 0.05$ and $n = 20$ gives $g \approx 11.4483$
+    \end{enumerate}
 }
 
 \enquestion{9.9}{
@@ -60,9 +95,22 @@
     \end{center}
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.0013$ & (b) $0.000032$ & (c) $0.1587$
-    \end{tabular}
+    Notice that the hypothesis test of Exercise 9.5 can be formulated as $H_0: \mu = 12$ versus $H_1: \mu < 12$.
+    That means that we are considering a left-sided hypothesis test.
+
+    In a hypothesis testing, we assume $H_0$ is true unless the evidence of the sample gives us significant reason to reject it.
+    Under assumption of $H_0$, the mean thread elongation $\overline{X}$ is normally distributed with $\mu = 12$ and $\sigma = \frac{1.5}{\sqrt{n}}$.
+    In a left-sided test, that means that the $p$-value (the probability that the test statistic $\overline{X}$ takes an even more extreme value than the observed value $\overline{x}$)
+    is computed as $P(\overline{X} < \overline{x})$:
+    \begin{align*}
+        p = \normalcdf(\lb=-\GRinfinity, \ub=\overline{x}, \mu=12, \sigma=\frac{1.5}{\sqrt{4}}=0.75)
+    \end{align*}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Filling in $\overline{x} = 11.25$ gives $p \approx 0.1587$.
+        \item Filling in $\overline{x} = 11.0$ gives $p \approx 0.0912$.
+        \item Filling in $\overline{x} = 11.75$ gives $p \approx 0.3694$.
+    \end{enumerate}
 }
 
 \enquestion{9.15}{
@@ -70,16 +118,30 @@
     Foam height is approximately normally distributed and has a standard deviation of $25\text{ mm}$.
     The company wishes to test $H_{0}: \mu = 175\text{ mm}$ versus $H_{1}: \mu > 175\text{ mm}$, using the results of $n = 15$ samples.
     \begin{enumerate}[label=(\alph*)]
-        \item Find the type I error probability $\alpha$ if the critical region is $\bar{x} > 185$.
+        \item Find the type I error probability $\alpha$ if the critical region is $\overline{x} > 185$.
         \item What is the probability of type II error if the true mean foam height is $185\text{ mm}$?
         \item Find $\beta$ for the true mean of $195\text{ mm}$.
     \end{enumerate}
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $0.0607$
-        \item $0.5$
-        \item $0.0607$
+        \item Under the null hypothesis, we assume that the foam height $X \sim N(\mu=175, \sigma=25)$.
+        With other words, the mean foam height of $15$ samples is normally distributed with $\mu = 175$ en $\sigma = \frac{25}{\sqrt{15}} \approx 6.4550$.
+        If the critical region is defined as $\overline{x} > 185$, that means the type I error probability $\alpha$ (the probability we reject $H_0$ while it is true) is equal to
+        \begin{align*}
+            \alpha = P(\overline{X} > 185 | \mu = 175) = \normalcdf(\lb=185, \ub=\GRinfinity, \mu=175, \sigma=6.4550) \approx 0.0607.
+        \end{align*}
+        \item Notice that this given value of $\mu_1 = 185$ is equal to the boundary value of the critical region.
+        That means that under this true mean, the probability of a value inside the critical region is \SI{50}{\percent}, and also for the acceptance region. 
+        This means that we can directly tell that $\beta = 0.5$.
+        \item We compute $\beta$ (type II error probability) as the probability that $H_0$ will NOT be rejected, while $H_1$ is true (some given value of $\mu_1$ satisfying $H_1$).
+        Notice that $\mu_1 = 195$ satisfies $H_1: \mu > 175$.
+        We reject the null hypothesis if the sample mean $\overline{x} > 185$, or alternatively, we fail to reject $H_0$ if $\overline{x} \leq 185$:
+        \begin{align*}
+            \beta &= P(\overline{X} \leq 185 | \mu_1 = 195) = \normalcdf(\lb=-\GRinfinity, \ub=185, \mu=195, \sigma=6.4550) \approx 0.0607.
+        \end{align*}
+        Notice that this is the same answer as for (a), as $P(\overline{X} > 185 | \mu = 175) = P(\overline{X} < 185 | \mu = 175)$.
+        This makes sense, as in both cases the mean $\mu$ is exactly $10$ apart from the boundary value of the probability to be computed. 
     \end{enumerate}
 }
 
@@ -90,7 +152,16 @@
     \end{enumerate}
 }
 \enanswer{
-    $193.3914$
+    Notice that the hypothesis test of Exercise 9.15 can be formulated as $H_0: \mu = 175$ versus $H_1: \mu > 175$.
+    That means that we are considering a right-sided hypothesis test.
+
+    In a hypothesis testing, we assume $H_0$ is true unless the evidence of the sample gives us significant reason to reject it.
+    Under assumption of $H_0$, the mean foam height $\overline{X}$ is normally distributed with $\mu = 175$ and $\sigma = \frac{25}{\sqrt{n}}$.
+    In a right-sided test, that means that the critical region is of the form $[g, \infty)$, where $g$ is the $(1-\alpha)$-th percentile of this normal distribution:
+    \begin{align*}
+        g = \invnorm(\opp=1-\alpha, \mu=175, \sigma=\frac{25}{\sqrt{n}})
+    \end{align*}
+    Filling in $\alpha = 0.01$ and $n = 10$ gives $g \approx 193.3914$.
 }
 
 \enquestion{9.19}{
@@ -102,13 +173,26 @@
     \end{center}
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.2193$ & (b) $0.0101$ & (c) $0.7807$
-    \end{tabular}
+    Notice that the hypothesis test of Exercise 9.15 can be formulated as $H_0: \mu = 175$ versus $H_1: \mu > 175$.
+    That means that we are considering a right-sided hypothesis test.
+
+    In a hypothesis testing, we assume $H_0$ is true unless the evidence of the sample gives us significant reason to reject it.
+    Under assumption of $H_0$, the mean foam height $\overline{X}$ is normally distributed with $\mu = 175$ and $\sigma = \frac{25}{\sqrt{n}}$.
+    In a right-sided test, that means that the $p$-value (the probability that the test statistic $\overline{X}$ takes an even more extreme value than the observed value $\overline{x}$)
+    is computed as $P(\overline{X} > \bar{x})$:
+    \begin{align*}
+        p = \normalcdf(\lb=\overline{x}, \ub=\GRinfinity, \mu=175, \sigma=\frac{25}{\sqrt{15}})
+    \end{align*}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Filling in $\bar{x} = 180$ gives $p \approx 0.2193$.
+        \item Filling in $\bar{x} = 190$ gives $p \approx 0.0101$.
+        \item Filling in $\bar{x} = 170$ gives $p \approx 0.7807$.
+    \end{enumerate}
 }
 
 \enquestion{9.31}{
-    A hypothesis will be used to test that a population mean equals $4$ against the alternative that the population mean is more than $4$ with known variance $\sigma$.
+    A hypothesis will be used to test that a population mean equals $4$ against the alternative that the population mean is more than $4$ with known standard deviation $\sigma$.
     What is the critical value for the test statistic $Z_{0}$ for the following significance levels?
     \begin{center}
         \begin{tabular}{*{3}{m{.3\textwidth}}}
@@ -117,9 +201,18 @@
     \end{center}
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $2.3263$ & (b) $1.6449$ & (c) $1.2816$
-    \end{tabular}
+    We consider a hypothesis test with $H_0: \mu = 4$ versus $H_1: \mu > 4$ with a known standard deviation $\sigma$.
+    As we work with a right-sided hypothesis test, the critical $Z_{0}$ value is found at the $(1 - \alpha)$-th percentile of the standard normal distribution, 
+    where $\alpha$ is the significance level of the hypothesis test:
+    \[
+        Z_{0} = \invnorm(\opp=1-\alpha, \mu=0, \sigma=1).
+    \]
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Filling in $\alpha = 0.01$ gives $Z_{0} = 2.3263$
+        \item Filling in $\alpha = 0.05$ gives $Z_{0} = 1.6449$
+        \item Filling in $\alpha = 0.10$ gives $Z_{0} = 1.2816$
+    \end{enumerate}
 }
 
 \enquestion{9.33}{
@@ -131,7 +224,26 @@
     \end{center}
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.0404$ & (b) $0.0658$ & (c) $0.6892$
-    \end{tabular}
+
+    We consider a hypothesis test with $H_0: \mu = 6$ versus $H_1: \mu \ne 6$ with a known standard deviation $\sigma$.
+    That means that we are considering a two-sided hypothesis test.
+
+    In a hypothesis testing, we assume $H_0$ is true unless the evidence of the sample gives us significant reason to reject it.
+    Under assumption of $H_0$, the $p$-value (the probability that $\overline{X}$ takes value that lies even further from
+    $\mu_0 = 6$ than the observed value $\overline{x}$).
+    If $\overline{x}$ is smaller than $\mu_0 = 6$, this $p$-value equals $2 \cdot P(\overline{X} < \overline{x} | \mu = 6)$, whereas
+    the $p$-value is computed as $2 \cdot P(\overline{X} > \overline{x} | \mu = 6)$ if $\overline{x} > \mu$.
+
+    This time, we do not look directly at the sample mean $\overline{X}$, but the corresponding $z$-value (transformed value to the standard normal distribution).
+    The $p$-value can then be computed as:
+    \begin{align*}
+        p = \begin{cases} 2 \cdot P(\overline{Z} > z_{0}) = \normalcdf(\lb=z_0, \ub=\GRinfinity, \mu=0, \sigma=1), & \text{ if } z \geq 0 \\
+            2 \cdot P(\overline{Z} < z_{0}) = \normalcdf(\lb=-\GRinfinity, \ub=z_0, \mu=0, \sigma=1), & \text{ otherwise.} \end{cases}
+    \end{align*}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item Filling in $z_{0} = 2.05$ gives $p = P(\overline{Z} > 2.05) = \normalcdf(\lb=2.05, \ub=\GRinfinity, \mu=0, \sigma=1)  \approx 0.0404$.
+        \item Filling in $z_{0} = -1.84$ gives $p = P(\overline{Z} < -1.84) = \normalcdf(\lb=-\GRinfinity, \ub=-1.84, \mu=0, \sigma=1)  \approx 0.0658$.
+        \item Filling in $z_{0} = 0.4$ gives $p = P(\overline{Z} > 0.4) = \normalcdf(\lb=0.4, \ub=\GRinfinity, \mu=0, \sigma=1)  \approx 0.6892$.
+    \end{enumerate}
 }
