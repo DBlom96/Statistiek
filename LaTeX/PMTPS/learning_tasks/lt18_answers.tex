@@ -15,37 +15,51 @@
     \end{enumerate}
 }
 \enanswer{
-    \begin{enumerate}[label=(\alph*)]
-        \item To perform the $\chi^2$ goodness-of-fit test, we first calculate the expected frequencies for each value of $X$ using the Poisson distribution with mean $\lambda = 1.5$. The expected frequencies are calculated as follows:
-        \begin{tabular}{lrr}
+    \begin{enumerate}
+        \item Notice that in this exercise, the value of the Poisson parameter $\mu = 1.5$ is given, so we do not need to estimate it.
+        The hypotheses in this test are as follows:
+        \begin{align*}
+            &H_0: \text{$X$ follows a Poisson distribution with mean $\mu = 1.5$.} \\
+            &H_1: \text{$X$ does not follow a Poisson distribution with mean $\mu = 1.5$.}
+        \end{align*}
+        We calculate the expected frequencies of the value $0$, $1$, $2$, $3$ and $4$ using the $\poissonpdf$ function:
+
+        \begin{tabular}{ccc}
             \toprule
-                \textbf{Categorie} & \textbf{Observed} & \textbf{Expected} \
+                \textbf{Categorie ($i$)} & \textbf{Observed ($O_i$)} & \textbf{Expected ($E_i$)} \\
             \midrule
-                $0$ & $24$ & $100 \cdot \poissonpdf(\mu=1.5, k=0) \approx 22.3130 $ \\
-                $1$ & $30$ & $100 \cdot \poissonpdf(\mu=1.5, k=1) \approx 33.4695$ \\
-                $2$ & $31$ & $100 \cdot \poissonpdf(\mu=1.5, k=2) \approx 25.1021$ \\
-                $3$ & $11$ & $100 \cdot \poissonpdf(\mu=1.5, k=3) \approx 12.5511$ \\
-                $4$ & $4$ & $100 - 22.3130 - 33.4695 - 25.1021 - 12.5511 \approx 6.5642$ \\
+                0        & $24$ & $100\cdot\poissonpdf(\mu=1.5, k=0)\approx22.3130$ \\
+                1        & $30$ & $100\cdot\poissonpdf(\mu=1.5, k=1)\approx33.4695$ \\
+                2        & $31$ & $100\cdot\poissonpdf(\mu=1.5, k=2)\approx25.1021$ \\
+                3        & $11$ & $100\cdot\poissonpdf(\mu=1.5, k=3)\approx12.5511$ \\
+                $\geq 4$ & $4$  & $100\cdot(1-\poissoncdf(\mu=1.5, k=3))\approx6.5642$ \\
             \bottomrule
-        \end{tabular} '
-        The $\chi^2$ test statistic is then calculated as:
+        \end{tabular}
+
+        The $\chi^2$ test statistic can then be computed as follows:
         \begin{align*}
-            \chi^2 &= \sum_{i=0}^4 \left( \frac{(O_i - E_i)^2}{E_i}\right)^2 \\
-                    &= \frac{ (24 - 22.3130)^2 }{ 22.3130 } + \ldots + \frac{ (4 - 6.5642)^2 }{ 6.5642 } \\
-                    &\approx 3.0663
+            \chi^2 &= \frac{(O_{0} - E_{0})^2}{E_{0}} + \frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \frac{(O_{3} - E_{3})^2}{E_{3}} + \frac{(O_{\geq 4} - E_{\geq 4})^2}{E_{\geq 4}}\\
+                    &= \frac{(24 - 22.3130)^2}{22.3130} + \ldots + \frac{(4 - 6.5642)^2}{6.5642}\\
+                    &\approx 3.0663.
         \end{align*}
-        The critical region for a chi-square test with $\alpha = 0.05$ is $Z = [C_R, \infty)$, where the value of $C_R$ can be calculated using the \enquote{numeric solver}:
+        Under assumption of $H_0$, the test statistic comes from a chi-square distribution with $\df = n - p - 1 = 5 - 0 - 1 = 4$ degrees of freedom,
+        where $n$ is the number of categories and $p$ the number of estimated parameters.
+        The critical region ($\alpha = 0.05$, $\chi^2$-test) is $Z = [C_R, \infty)$, and we can determine the value of $C_R$
+        using the \enquote{numeric solver}:
         \begin{align*}
-            y_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=5-0-1 = 4) \\
-            y_2 &= \alpha = 0.05
+            y_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=5-0-1 = 4), \\
+            y_2 &= \alpha = 0.05.
         \end{align*}
-        The numeric solver gives a value $C_R \approx 9.4877$.
-        Notice that $\chi^2 = 3.0663$ does not lie in the critical region, hence we fail to reject $H_0$.
-        There is not enough evidence to conclude that the Poisson distribution with a mean of $1.5$ is not an appropriate model for these data.
-        \item The $p$-value corresponding to $\chi^2 = 3.0663$ is
-        \[
-            p = P(X^2 \geq 3.0663) = \chi^2\text{cdf}(\lb=3.0663, \ub=\GRinfinity, \df=4) \approx 0.5468.
-        \]
+        The numeric solver returns a value $C_R \approx 9.4877$.
+        As $\chi^2 = 3.0663$ does not lie in the critical region, we fail to reject $H_0$.
+
+        \item The $p$-value corresponding to $\chi^2 = 3.0663$ is 
+        \begin{align*}
+            p = P(X^2 \geq 3.0663)  &= \chi^2\text{cdf}(\lb=3.0663, \ub=\GRinfinity, \df=n-p-1 = 4) \\
+                                    &\approx 0.5468.
+        \end{align*}
+        As $p > \alpha = 0.05$, we again fail to reject $H_0$.
+        There is not enough evidence to reject the claim that the data comes from a Poisson distribution with mean $\mu=1.5$.
     \end{enumerate}
 }
 
@@ -68,55 +82,7 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item To perform the $\chi^2$ goodness-of-fit test, we first have to estimate the value of the Poisson parameter $\lambda$:
-        \[
-            \hat{\lambda} = \frac{1}{n} \sum_{i=1}^n x_i = \frac{1 \cdot 1 + \ldots + 8 \cdot 9}{75} = \frac{1 + \ldots + 72}{75} = \frac{368}{75} \approx 4.9067.
-        \] 
-        Next, we calculate the expected frequencies for each value of $X$ using the Poisson distribution with mean $\lambda = 4.9067$. The expected frequencies are calculated as follows:
-        \begin{tabular}{lrr}
-            \toprule
-                \textbf{Categorie} & \textbf{Observed} & \textbf{Expected} \
-            \midrule
-                1 & $1$ & $75 \cdot \poissonpdf(\mu=4.9067, k=1) \approx 2.7221$ \\
-                2 & $11$ & $75 \cdot \poissonpdf(\mu=4.9067, k=2) \approx 6.6783$ \\
-                3 & $8$ & $75 \cdot \poissonpdf(\mu=4.9067, k=3) \approx 10.9227$ \\
-                4 & $13$ & $75 \cdot \poissonpdf(\mu=4.9067, k=4) \approx 13.3986$ \\
-                5 & $11$ & $75 \cdot \poissonpdf(\mu=4.9067, k=5) \approx 13.1484$ \\
-                6 & $12$ & $75 \cdot \poissonpdf(\mu=4.9067, k=6) \approx 10.7525$ \\
-                7 & $10$ & $75 \cdot \poissonpdf(\mu=4.9067, k=7) \approx 7.5370$ \\
-                8 & $9$ & $75 - 2.7221 - \ldots - 7.5370 \approx 9.8403$ \\
-            \bottomrule
-        \end{tabular}
-        We combine the first two categories to ensure that all expected frequencies are at least $5$. The new table is as follows:
-        \begin{tabular}{lrr}
-            \toprule
-                \textbf{Categorie} & \textbf{Observed} & \textbf{Expected} \
-            \midrule
-                $[1,2]$ & $12$ & $9.4004$ \\
-                3 & $8$ & $10.9227$ \\
-                4 & $13$ & $13.3986$ \\
-                5 & $11$ & $13.1484$ \\
-                6 & $12$ & $10.7525$ \\
-                7 & $10$ & $7.5370$ \\
-                8 & $9$ & $75 - 2.7221 - \ldots - 7.5370 \approx 9.8403$ \\
-            \bottomrule
-        \end{tabular}
-        The $\chi^2$ test statistic is then calculated as:
-        \begin{align*}
-            \chi^2 &= \sum_{i=1}^8 \left( \frac{(O_i - E_i)^2}{E_i}\right)^2 \\
-                    &= \frac{ (12 - 9.4004)^2 }{ 9.4004 } + \ldots + \frac{ (9 - 9.8403)^2 }{ 9.8403 } \\
-                    &\approx 6.4741.
-        \end{align*}
-        The critical region for a chi-square test with $\alpha = 0.05$ is $Z = [C_R, \infty)$, where the value of $C_R$ can be calculated using the \enquote{numeric solver}:
-        \begin{align*}
-            y_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=5-0-1 = 4) \\
-            y_2 &= \alpha = 0.05
-        \end{align*}
-        The numeric solver gives a value $C_R \approx 9.4877$.
-        Notice that $\chi^2 = 3.0663$ does not lie in the critical region, hence we fail to reject $H_0$.
-        There is not enough evidence to conclude that the Poisson distribution with a mean of $1.5$ is not an appropriate model for these data.
-        
-        $\chi^2 = 6.4741 \notin [16.81, \infty) \implies \text{don't reject } H_0$
+        \item $\chi^2 = 6.4741 \notin [16.81, \infty) \implies \text{don't reject } H_0$
         \item $p = 0.3722 > \alpha = 0.01 \implies \text{don't reject } H_0$
     \end{enumerate}
 }
@@ -135,6 +101,56 @@
     \end{enumerate}
 }
 \enanswer{
+    \begin{enumerate}
+        \item Notice that in this exercise, the values of the binomial parameters $n=6$ and $p-0.25$ are given,
+        so we do not need to estimate it.
+        The hypotheses in this test are as follows:
+        \begin{align*}
+            &H_0: \text{$X$ follows a binomial distribution with $n=6$ and $p-0.25$.} \\
+            &H_1: \text{$X$ does not follow a binomial distribution with $n=6$ and $p-0.25$.}
+        \end{align*}
+        We calculate the expected frequencies of the value $0$, $1$, $2$, $3$ and $4$ using the $\binompdf$ function:
+
+        \begin{tabular}{ccc}
+            \toprule
+                \textbf{Categorie ($i$)} & \textbf{Observed ($O_i$)} & \textbf{Expected ($E_i$)} \\
+            \midrule
+                0        & $4$  & $100\cdot\binompdf(n=6, p=0.25, k=0)\approx 8.8989$ \\
+                1        & $14$ & $100\cdot\binompdf(n=6, p=0.25, k=1)\approx 17.7979$ \\
+                2        & $10$ & $100\cdot\binompdf(n=6, p=0.25, k=2)\approx 14.8315$ \\
+                3        & $20$ & $100\cdot\binompdf(n=6, p=0.25, k=3)\approx 6.5918$ \\
+                4        & $2$  & $100 - 8.8989 - \ldots \approx 1.6479$ \\
+            \bottomrule
+        \end{tabular}
+        We need to combine the categories $3$ and $4$ to get an observed frequency of $20+2 = 22$ expected frequency of $6.5918 + 1.6479 = 8.4717$.
+        We only have four categories left.
+
+        The $\chi^2$ test statistic can then be computed as follows:
+        \begin{align*}
+            \chi^2 &= \sum_{i=1}^4 \left( \frac{(O_i - E_i)^2}{E_i}\right)^2 \\
+                    &= \frac{ (4 - 8.8989)^2 }{ 8.8989 } + \ldots + \frac{ (22 - 8.4717)^2 }{ 8.4717 } \\
+                    &\approx 26.6844
+        \end{align*}
+        Under assumption of $H_0$, the test statistic comes from a chi-square distribution with $\df = 4 - 0 - 1 = 3$ degrees of freedom,
+        where $n$ is the number of categories and $p$ the number of estimated parameters.
+        The critical region ($\alpha = 0.05$, $\chi^2$-test) is $Z = [C_R, \infty)$, and we can determine the value of $C_R$
+        using the \enquote{numeric solver}:
+        \begin{align*}
+            y_1 &= \chi^2\text{cdf}(\lb=X, \ub=\GRinfinity, \df=4-0-1 = 3), \\
+            y_2 &= \alpha = 0.05.
+        \end{align*}
+        The numeric solver returns a value $C_R \approx 7.8147$.
+        As $\chi^2 = 26.6844$ lies in the critical region, we reject $H_0$.
+
+        \item The $p$-value corresponding to $\chi^2 = 26.6844$ is 
+        \begin{align*}
+            p = P(X^2 \geq 26.6844)  &= \chi^2\text{cdf}(\lb=26.6844, \ub=\GRinfinity, \df=4-0-1 = 3) \\
+                                     &\approx 0.0000.
+        \end{align*}
+        As $p < \alpha = 0.05$, we again reject $H_0$.
+        There is enough evidence to reject the claim that the data comes from a binomial distribution with $n=6$ and $p=0.25$.
+    \end{enumerate}
+
     \begin{enumerate}[label=(\alph*)]
         \item $\chi^2 = 32.3778 \in [9.49, \infty) \implies \text{reject } H_0$
         \item $p = 0.000002 \le \alpha = 0.05 \implies \text{reject } H_0$
