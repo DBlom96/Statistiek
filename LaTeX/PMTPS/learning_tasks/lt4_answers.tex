@@ -10,12 +10,17 @@
     \end{center}
 }
 \enanswer{
-    \begin{center}
-        \begin{tabular}{*{2}{m{.45\textwidth}}}
-            (a) $0.9298$ & (b) $9.1 \cdot 10^{-9}$ \\
-            (c) $0.0015$ & (d) $0.0016$
-        \end{tabular}
-    \end{center}
+    We can use the graphical calculator to calculate the following probabilities:
+    \begin{enumerate}[label=(\alph*)]
+        \item $P(X \leq 2) = \binomcdf(n=10, p=0.1, k=2) \approx 0.9298$.
+        \item $P(X > 8) = 1 - P(X \leq 8) = 1- \binomcdf(n=10, p=0.1, k=8) \approx 9.1 \cdot 10^{-9}$.
+        \item $P(X = 5) = \binompdf(n=10, p=0.1, k=5) \approx 0.0015$.
+        \item \begin{align*}
+        P(5 \le X \le 7)    &= P(X \le 7) - P(X \le 4) \\
+                            &= \binomcdf(n=10, p=0.1, k=7) - \binomcdf(n=10, p=0.1, k=4) \\
+                            &\approx 0.0016.
+        \end{align*}
+    \end{enumerate}
 }
 
 \enquestion{3.91}{
@@ -44,7 +49,8 @@
     \end{center}
     (Source: Kaspersky Labs).
 
-    Suppose that 20 malicious software instances are reported. Assume that the malicious sources can be assumed to be independent.
+    Suppose that 20 malicious software instances are reported. 
+    Assume that the malicious sources can be assumed to be independent.
     \begin{enumerate}[label=(\alph*)]
         \item What is the probability that at least $3$ instances is \enquote{Klez}?
         \item What is the probability that $7$ or more instances are \enquote{Klez}?
@@ -52,10 +58,17 @@
     \end{enumerate}
 }
 \enanswer{
+    Let $X$ be the random variable counting the number of reported instances that are \enquote{Klez}.
+    Then $X$ follows a binomial distribution with $n=20$ and $p = 0.6122$.
+    We can use the graphical calculator to calculate the following probabilities:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.999997$
-        \item $0.9953$
-        \item $E(X) = 12.244, \quad \sigma(X) = 2.1790$
+        \item $P(X \geq 3) = 1 - P(X \leq 2) = 1 - \binomcdf(n=20, p=0.6122, k=2) \approx 0.999997$.
+        \item $P(X \geq 7) = 1 - P(X \leq 6) = 1 - \binomcdf(n=20, p=0.6122, k=6) \approx 0.9953$.
+        \item The mean and standard deviation of a binomial distribution with parameters $n$ and $p$ can be computed as follows:
+        \begin{align*}
+            E(X) &= n \cdot p = 20 \cdot 0.6122 = 12.244. \\
+            \sigma(X) &= \sqrt{n \cot p \cdot (1 - p)} = \sqrt{20 \cdot 0.6122 \cdot (1 - 0.6122)} \approx 2.1790.
+        \end{align*}
     \end{enumerate}
 }
 
@@ -68,9 +81,18 @@
     \end{enumerate}
 }
 \enanswer{
+    Let $X$ be the random variable counting the number of passengers showing up for their reserved seat.
+    Then $X$ follows a binomial distribution with $n = 130$ and $p = 0.90$.
+    We can use the graphical calculator to calculate the following probabilities:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.8479$
-        \item $0.7619$
+        \item The probability that every passenger who shows up can take the flight is the probability that at most $120$ people show up:
+        \begin{align*}
+            P(X \leq 120) = \binomcdf(n=130, p=0.90, k=120) \approx 0.8479.
+        \end{align*}
+        \item The probability that the flight departs with empty seat is the probability that strictly fewer than $120$ people show up:
+        \begin{align*}
+            P(X < 120) = P(X \leq 119) = \binomcdf(n=130, p=0.90, k=119) \approx 0.7619.
+        \end{align*}            
     \end{enumerate}
 }
 
@@ -83,8 +105,11 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $4$
-        \item $4$
+        \item The number of trials $Y$ to obtain the first success is a geometrically distributed random variable with parameter $p = 0.25$.
+        The expected value $E(Y) = \frac{1}{p} = \frac{1}{0.25} = 4$.
+        \item Since each of the trials is independent of each other, the information of past trials does not change the probabilities and hence expected value
+        of the number of trials to obtain the next future success. 
+        Therefore, this expected number of trials is once again equal to $4$.
     \end{enumerate}
 }
 
@@ -98,10 +123,12 @@
     \end{enumerate}
 }
 \enanswer{
+    The number of trials $X$ for a succesful optical alignment is a geometric random variable with $p = 0.7$.
+    We can compute the following probabilities using the graphical calculator:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.0189$
-        \item $0.9919$
-        \item $0.027$
+        \item $P(X = 4) = \geometpdf(p=0.7, k=4) = 0.0189$.
+        \item $P(X \leq 4) = \geometcdf(p=0.7, k=4) = 0.9919$.
+        \item $P(X \geq 4) = 1 - P(X \leq 3) = 1 - \geometcdf(p=0.7, k=3) = 0.027$.
     \end{enumerate}
 }
 
@@ -116,12 +143,13 @@
     \end{center}
 }
 \enanswer{
-    \begin{center}
-        \begin{tabular}{*{2}{m{0.45\textwidth}}}
-            (a) $0.0067$ & (b) $0.1247$ \\
-            (c) $0.1755$ & (d) $0.0653$
-        \end{tabular}
-    \end{center}
+    We can use the graphical calculator to compute this probabilities:
+    \begin{enumerate}[label=(\alph*)]
+        \item $P(X = 0) = \poissonpdf(\mu=5, k=0) \approx 0.0067$.
+        \item $P(X \leq 2) = \poissoncdf(\mu=5, k=2) \approx 0.1247$.
+        \item $P(X = 4) = \poissonpdf(\mu=5, k=4) \approx 0.1755$.
+        \item $P(X = 8) = \poissonpdf(\mu=5, k=8) \approx 0.0653$.
+    \end{enumerate}
 }
 
 \enquestion{3.133}{
