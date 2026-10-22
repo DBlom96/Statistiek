@@ -2,7 +2,9 @@
     If $P(A \mid B) = 0.6$, $P(B) = 0.8$, and $P(A) = 0.5$, are the events $A$ and $B$ independent?
 }
 \enanswer{
-    No, because $P(A) = 0.5 \neq P(A \mid B) = 0.6$
+    By definition, events $A$ and $B$ are independent if $P(A \mid B) = P(A)$.
+    However, $P(A) = 0.5$ and $P(A \mid B) = 0.6$, so $P(A \mid B) \neq P(A)$.
+    Therefore, events $A$ and $B$ are not independent.
 }
 
 \enquestion{2.129}{
@@ -15,10 +17,20 @@
     \end{enumerate}
 }
 \enanswer{
+    As the samples are independent, we can multiply probabilities.
+    Let $X$ be the number of samples with high levels of contamination.
     \begin{enumerate}[label=(\alph*)]
-        \item $0.6561$
-        \item $0.2916$
-        \item $0.3439$
+        \item $P(X = 0) = 0.90 \cdot 0.90 \cdot 0.90 \cdot 0.90 = 0.90^4 = 0.6561$.
+        \item There are four options in this case: only the first sample is highly contaminated, only the second, only the third or only the fourth,
+        each with equal probability $0.90^3 \cdot 0.10$.
+        Therefore:
+        \[
+            P(X = 1) = 4 \cdot 0.90^3 \cdot 0.10 = 0.2916.
+        \]
+        \item By using the complement rule, we find:
+        \[
+            P(X \geq 1) = 1 - P(X \leq 0) = 1 - P(X = 0) = 1 - 0.6561 = 0.3439.
+        \]
     \end{enumerate}
 }
 
@@ -65,7 +77,20 @@
     \end{center}
 }
 \enanswer{
-    $0.9053$
+    The circuit operates if there is a path of functional devices from left to right.
+    Define the events $T$ and $B$ indicating if the top or bottom line of devices all function properly.
+    The probabilities $P(T)$ and $P(B)$ can be calculated as follows:
+    \begin{align*}
+        P(T) &= 0.8 \cdot 0.7 \cdot 0.6 = 0.336, \\
+        P(B) &= 0.95 \cdot 0.95 \cdot 0.95 = 0.857375.
+    \end{align*}
+    We want to find the probability that either $T$ or $B$ occurs, i.e.
+    \begin{align*}
+        P(T \cup B) &= P(T) + P(B) - P(T \cap B) \\
+                    &= P(T) + P(B) - P(T) \cdot P(B) \\
+                    &= 0.336 + 0.857375 - 0.336 \cdot 0.857375 \\
+                    &\approx 0.9053.
+    \end{align*}
 }
 
 \enquestion{2.137}{
@@ -116,7 +141,20 @@
     \end{center}
 }
 \enanswer{
-    $0.9483$
+    The circuit operates if there is a path of functional devices from left to right.
+    Define the events $S_1, S_2, S_3$ indicating if either of the two parallel devices in stage $1, 2$ or $3$ function properly.
+    The probabilities $P(S_1)$, $P(S_2)$ and $P(S_3)$ can be calculated as follows:
+    \begin{align*}
+        P(S_1) &= 1 - P(S_1') = 1 - 0.15\cdot 0.05 = 0.9925, \\
+        P(S_2) &= 1 - P(S_2') = 1 - 0.1\cdot 0.25 = 0.975, \\
+        P(S_3) &= 1 - P(S_3') = 1 - 0.2\cdot 0.1 = 0.98
+    \end{align*}
+    We want to find the probability that $S_1$, $S_2$ and $S_3$ all occur, i.e.
+    \begin{align*}
+        P(S_1 \cap S_2 \cap S_3)    &= P(S_1) \cdot P(S_2) \cdot P(S_3) \\
+                                    &= 0.9925 \cdot 0.975 \cdot 0.98 \\
+                                    &\approx 0.9483.
+    \end{align*}
 }
 
 \enquestion{2.147}{
@@ -134,10 +172,41 @@
     \end{enumerate}
 }
 \enanswer{
+    Let us define the following events:
+    \begin{itemize}
+        \item $G = \set{\text{the product has received good reviews}}$, 
+        \item $H = \set{\text{the product is highly successful}}$, 
+        \item $M = \set{\text{the product is moderately successful}}$,
+        \item $B = \set{\text{the product is poor (bad)}}$.
+    \end{itemize}
+    We can derive the following probabilities from the text:
+
+    \begin{center}
+        \begin{tabular}{*{3}{c}}
+            $P(G \mid H) = 0.95$ & $P(G \mid M) = 0.60$ & $P(G \mid P) = 0.10$ \\
+            $P(H) = 0.45$ &  $P(M)=0.30$ & $P(B)= 0.25$
+        \end{tabular}
+    \end{center}
+
     \begin{enumerate}[label=(\alph*)]
-        \item $0.6325$
-        \item $0.6759$ 
-        \item $0.0612$
+        \item The probability that a product attains a good review is computed using the law of total probability:
+        \begin{align*}
+            P(G)    &= P(G \mid H) \cdot P(H) + P(G \mid M) \cdot P(M) + P(G \mid B) \cdot P(B) \\
+                    &= 0.95 \cdot 0.45 + 0.60 \cdot 0.30 + 0.10 \cdot 0.25 \\
+                    &= 0.6325.
+        \end{align*}
+        \item The probability that a product is highly successful given a good review can be computed using Bayes' Rule:
+        \begin{align*}
+            P(H \mid G)    &= \frac{P(G \mid H) \cdot P(H)}{P(G)} \\
+                           &=\frac{0.95 \cdot 0.45}{0.6325} \\
+                           &\approx 0.6759.
+        \end{align*}
+        \item The probability that a product is highly successful given NOT a good review can again be computed using Bayes' Rule:
+        \begin{align*}
+            P(H \mid G')   &= \frac{P(G' \mid H) \cdot P(H)}{P(G')} \\
+                           &=\frac{(1 - 0.95) \cdot 0.45}{(1- 0.6325)} \\
+                           &\approx 0.0612.
+        \end{align*}
     \end{enumerate}
 }
 
@@ -156,9 +225,32 @@
     \end{enumerate}
 }
 \enanswer{
+    Define the following events:
+    \begin{itemize}
+        \item $O = \set{\text{sample is contaminated with organic pollutants}}$,
+        \item $V = \set{\text{sample is contaminated with volatile solvents}}$,
+        \item $C = \set{\text{sample is contaminated with chlorinated compounds}}$,
+        \item $A = \set{\text{the test signals (alarm)}}$.
+    \end{itemize}
+    From the text, we can derive the following probabilities:
+    \begin{center}
+        \begin{tabular}{*{3}{c}}
+            $P(A \mid O) = 0.997$ & $P(A \mid V) = 0.9995$ & $P(A \mid C) = 0.897$ \\
+            \multicolumn{3}{c}{$P(A \mid O') = P(A \mid V') = P(A \mid C') = 0$} \\
+            $P(O) = 0.6$ & $P(V) = 0.27$ & $P(C) = 0.13$
+        \end{tabular}
+    \end{center}
     \begin{enumerate}[label=(\alph*)]
-        \item $0.9847$ 
-        \item $0.1184$
+        \item The probability that the test will signal can be calculated using the law of total probability:
+        \begin{align*}
+            P(A)    &= P(A \mid O) \cdot P(O) +  P(A \mid V) \cdot P(V) +  P(A \mid C) \cdot P(C) \\
+                    &= 0.997 \cdot 0.6 + 0.9995 \cdot 0.27 + 0.897 \cdot 0.13 \\
+                    &= 0.9847.
+        \end{align*}
+        \item The probability that chlorinated compounds are present given a test signal can be calculated using Bayes' Rule:
+        \begin{align*}
+            P(C \mid A) = \frac{P(A \mid C) \cdot P(C)}{P(A)} = \frac{0.897 \cdot 0.13}{0.9847} \approx 0.1184.
+        \end{align*}
     \end{enumerate}
 }
 
@@ -177,7 +269,9 @@
     \end{enumerate}
 }
 \enanswer{
-    \begin{enumerate}
+    Discrete values are those variables used for \enquote{counting} and continuous variables are used for \enquote{measuring}.
+    Therefore:
+    \begin{enumerate}[label=(\alph*)]
         \item continuous
         \item discrete
         \item continuous
@@ -232,7 +326,19 @@
     \end{center}
 }
 \enanswer{
-    $0.9970$
+    The circuit operates if there is a path of functional devices from left to right.
+    Define the events $S_1, S_2$ indicating if either the subsystems of stage $1, 2$ or $3$ function properly.
+    The probabilities $P(S_1)$ and $P(S_2)$ can be calculated as follows, where we split each subsystem in a top part and a bottom part $T_i$ and $B_i$:
+    \begin{align*}
+        P(S_1) &= P(T_1) + P(B_1) \cdot P(T_1 \cap B_1) = \left(0.99 \cdot 0.99\right) + 0.9 - \left(0.99 \cdot 0.99 \cdot 0.9\right) = 0.99801, \\
+        P(S_2) &= P(T_2) + P(B_2) \cdot P(T_2 \cap B_2) = 0.99 + 0.9 - 0.99\cdot 0.9 = 0.999.
+    \end{align*}
+    We want to find the probability that $S_1$, $S_2$ and $S_3$ all occur, i.e.
+    \begin{align*}
+        P(S_1 \cap S_2) &= P(S_1) \cdot P(S_2) \\
+                        &= 0.99801 \cdot 0.999 \\
+                        &\approx 0.9970.
+    \end{align*}
 }
 
 \newpage
@@ -287,5 +393,19 @@
     \end{center}
 }
 \enanswer{
-    $4.7524 \cdot 10^{-6}$
+    The circuit does not operate if either of the four paths fails.
+    Define the events $F_1, F_2, F_3, F_4$ as either of four paths failing.
+    The probabilities $P(F_1)$ up to and including $P(F_4)$ can be calculated as follows:
+    \begin{align*}
+        P(F_1) &= 0.02, \\
+        P(F_2) &= 1 - P(F_2') = 1 - 0.99 \cdot 0.9 = 0.109, \\
+        P(F_3) &= 1 - P(F_3') = 1 - 0.99 \cdot 0.9 = 0.109, \\
+        P(F_4) &= 0.02.
+    \end{align*}
+    We want to find the probability that all four paths fail, i.e.
+    \begin{align*}
+        P(F_1 \cap F_2 \cap F_3 \cap F_4) &= P(F_1) \cdot P(F_2) \cdot P(F_3) \cdot P(F_4) \\
+                        &= 0.02 \cdot 0.109 \cdot 0.109 \cdot 0.02 \\
+                        &\approx 4.7524 \cdot 10^{-6}.
+    \end{align*}
 }

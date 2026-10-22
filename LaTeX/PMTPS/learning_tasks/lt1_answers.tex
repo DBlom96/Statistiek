@@ -7,7 +7,11 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    $S = \{aaa, aab, aba, baa, abb, bab, bba, bbb\}$, where $a = \text{above}$ and $b = \text{below}$
+    The sample space can be described as 
+    \[
+        S = \set{aaa, aab, aba, baa, abb, bab, bba, bbb},
+    \]
+    where $a = \text{above}$ and $b = \text{below}$.
 }
 
 \enquestion{2.8}{
@@ -20,7 +24,11 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    $S = \{(1,1), (1,2), \dots, (1,5), (2,1), \dots, (5,5)\}$; $n_S = 25$
+    The sample space can be described as 
+    \[
+        S = \{(1,1), (1,2), \dots, (1,5), (2,1), \dots, (5,5)\}
+    \]
+    The number of possible outcomes in $S$ equals $n_S = 5 \cdot 5 = 25$.
 }
 
 \enquestion{2.17}{
@@ -28,7 +36,11 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    $S = \{c, bc, bbc, bbbc, \dots\}$, where $b = \text{busy}$ and $c = \text{connect}$
+    The sample space can be described as 
+    \[
+        S = \set{c, bc, bbc, bbbc, \dots},
+    \]
+    where $b = \text{busy}$ and $c = \text{connect}$.
 }
 
 \enquestion{2.20}{
@@ -224,10 +236,13 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.5$   & (b) $0.7$ & (c) $0.5$ \\
-        (d) $1$     & (e) $0.2$ &
-    \end{tabular}
+    \begin{enumerate}
+        \item $P(A) = P(a) + P(b) + P(c) = 0.2 + 0.1 + 0.2 = 0.5$
+        \item $P(B) = P(c) + P(d) + P(e) = 0.2 + 0.3 + 0.2 = 0.7$
+        \item $P(A') = 1 - P(A) = 1 - 0.5 = 0.5$
+        \item Notice that $A \cup B = \set{a,b,c,d,e} = S$, therefore $P(A \cup B) = 1$.
+        \item Notice that $A \cap B = \set{c}$, therefore $P(A \cap B) = P(c) = 0.2$.
+    \end{enumerate}
 }
 
 \enquestion{2.74}{
@@ -240,10 +255,14 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.6$ & (b) $0.5$ & (c) $0.1$ \\
-        (d) $0.3$ & (e) $0.5$ & (f) $0.7$ 
-    \end{tabular}
+    \begin{enumerate}
+        \item $P(A') = 1 - P(A) = 1 - 0.4 = 0.6$
+        \item $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.4 + 0.2 - 0.1 = 0.5$
+        \item $P(A' \cap B) = P(B) - P(A \cap B) = 0.2 - 0.1 = 0.1$
+        \item $P(A \cap B') = P(A) - P(A \cap B) = 0.4 - 0.1 = 0.3$
+        \item $P[(A \cup B)'] = 1 - P(A \cup B) = 1 - 0.5 = 0.5$
+        \item $P(A' \cup B) = P(A') + P(B) - P(A' \cap B) = 0.6 + 0.2 - 0.1 = 0.7$. 
+    \end{enumerate}
 }
 
 \enquestion{2.77}{
@@ -271,9 +290,18 @@ Describe any assumptions you make.
 
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $0.7$
-        \item $0.95$
-        \item No, because $P(A \cap B) = 0.70$. So $A \cap B \neq \emptyset$
+        \item Of the $100$ disks, there are exactly $70$ with high scratch resistance and high shock resistance (left top cell).
+        Therefore the probability of picking such a disk is 
+        \[
+            \frac{\text{number of favorable outcomes}}{\text{total number of outcomes}} = \frac{70}{100} = 0.7.
+        \]
+        \item Of the $100$ disks, there are exactly $70 + 10 + 15 = 95$ with high scratch resistance or high shock resistance (all cells in left column or top row).
+        Therefore the probability of picking such a disk is 
+        \[
+            \frac{\text{number of favorable outcomes}}{\text{total number of outcomes}} = \frac{95}{100} = 0.95.
+        \]
+        \item Let $A$ be the event of high scratch resistance, and $B$ the event of high shock resistance.
+        We have that $P(A \cap B) = 0.7 > 0$, hence $A$ and $B$ are not mutually exclusive.
     \end{enumerate}
 }
 
@@ -302,10 +330,28 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    \begin{tabular}{*{2}{m{0.45\textwidth}}}
-        (a) $0.85$ & (b) $0.8$ \\
-        (c) $0.875$ & (d) $0.8235$
-    \end{tabular}
+    \begin{enumerate}
+        \item Of the $100$ disks, there are exactly $70+15=85$ with high shock resistance (left column).
+        Therefore:
+        \[
+            P(A) = \frac{\text{number of favorable outcomes}}{\text{total number of outcomes}} = \frac{85}{100} = 0.85.
+        \]
+        \item Of the $100$ disks, there are exactly $70+10=80$ with high shock resistance (top row).
+        Therefore: 
+        \[
+            P(B) = \frac{\text{number of favorable outcomes}}{\text{total number of outcomes}} = \frac{80}{100} = 0.80.
+        \]
+        \item Of the $80$ disks with high scratch resistance, there are exactly $70$ with high shock resistance (top left cell).
+        Therefore:
+        \[
+            P(A \mid B) = \frac{\text{number of favorable outcomes}}{\text{total number of outcomes}} = \frac{70}{80} = 0.875.
+        \]
+        \item Of the $85$ disks with high shock resistance, there are exactly $70$ with high scratch resistance (top left cell).
+        Therefore:
+        \[
+            P(B \mid A) = \frac{\text{number of favorable outcomes}}{\text{total number of outcomes}} = \frac{70}{85} = 0.8235.
+        \]
+    \end{enumerate}
 }
 
 \enquestion{2.91}{
@@ -331,10 +377,15 @@ Describe any assumptions you make.
 }
 
 \enanswer{
+    Let us define the events 
+    \begin{align*}
+        A = \set{\text{Coating weight is high}}, B = \set{\text{Surface roughness is high}}.
+    \end{align*}
+    The requested probabilities are as follows:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.24$
-        \item $0.6923$
-        \item $0.2297$
+        \item $P(B \mid A) = \frac{P(B \cap A)}{P(A)} = \frac{36}{36+114} = 0.24$.
+        \item $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{36}{36+16} = 0.6923$.
+        \item $P(A' \mid B') = \frac{P(A' \cap B)}{P(B')} = \frac{34}{34+114} = 0.2297$.
     \end{enumerate}
 }
 
@@ -344,11 +395,15 @@ Describe any assumptions you make.
 }
 
 \enanswer{
-    $0.27$
+    By the complement rule, we have that $P(B') = 1 - P(B) = 1 - 0.8 = 0.2$.
+    Using the law of total probability, we get:
+    \[
+        P(A) = P(A \mid B) \cdot P(B) + P(A \mid B') \cdot P(B') = 0.25 \cdot 0.8 + 0.35 \cdot 0.2 = 0.27.
+    \]
 }
 
 \enquestion{2.113}{
-    A batch of 30 injection-molded parts contains 6 parts that have suffered excessive shrinkage.
+    A batch of $30$ injection-molded parts contains 6 parts that have suffered excessive shrinkage.
     \begin{enumerate}[label=(\alph*)]
         \item If two parts are selected at random, and without replacement, what is the probability that the second part selected is one with excessive shrinkage?
         \item If three parts are selected at random, and without replacement, what is the probability that the third part selected is one with excessive shrinkage?
@@ -356,8 +411,37 @@ Describe any assumptions you make.
 }
 
 \enanswer{
+    Let us define for $i=1,2,3$ the events $S_i = \set{\text{the $i$-th part has excessive shrinkage}}$.
+    We know that $P(S_1) = \frac{6}{30}=\frac{1}{5}$ and can find the probabilities $P(S_2)$ and $P(S_3)$ as follows:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.2$
-        \item $0.2$
+        \item To compute $P(S_2)$, we can split it in two cases (based on whether or not $S_1$ occurred):
+        \begin{itemize}
+            \item If $S_1$ occurred, then for the second pick we have $30-1=29$ options of which $6-1=5$ have excessive shrinkage.
+            With other words: $P(S_2 | S_1) = \frac{5}{29}$.
+            \item If $S_1$ did not occur, then for the second pick we have $30-1=29$ options of which $6-0=6$ have excessive shrinkage.
+            With other words: $P(S_2 | S_1') = \frac{6}{29}$.
+        \end{itemize}
+        Using the law of total probability, we get:
+        \[
+            P(S_2) = P(S_2 \mid S_1) \cdot P(S_1) + P(S_2 \mid S_1') \cdot P(S_1') = \frac{5}{29} \cdot \frac{1}{5} + \frac{6}{29} \cdot \frac{4}{5} = \frac{29}{145} = 0.2.
+        \]
+        \item To compute $P(S_3)$, we can split it in four cases (based on whether or not $S_1$ and/or $S_2$ occurred):
+        \begin{itemize}
+            \item If $S_1$ and $S_2$ occurred, then for the third pick we have $30-2=28$ options of which $6-2=4$ have excessive shrinkage.
+            With other words: $P(S_3 | S_1 \cap S_2) = \frac{4}{28}$.
+            \item If $S_1$ did not occur, but $S_2$ did, then for the third pick we have $30-2=28$ options of which $6-1=5$ have excessive shrinkage.
+            With other words: $P(S_3 | S_1' \cap S_2) = \frac{5}{28}$.
+            \item If $S_1$ occurred, but $S_2$ did not, then for the third pick we have $30-2=28$ options of which $6-1=5$ have excessive shrinkage.
+            With other words: $P(S_3 | S_1 \cap S_2') = \frac{5}{28}$.
+            \item If neither $S_1$ nor $S_2$ occurred, then for the third pick we have $30-2=28$ options of which $6-0=6$ have excessive shrinkage.
+            With other words: $P(S_3 | S_1' \cap S_2') = \frac{6}{28}$.
+        \end{itemize}
+        Using the law of total probability, we get:
+        \begin{align*}
+            P(S_3)  &= P(S_3 \mid S_1 \cap S_2) \cdot P(S_1 \cap S_2) + P(S_3 \mid S_1' \cap S_2) \cdot P(S_1' \cap S_2) \\
+            &\qquad+ P(S_3 \mid S_1 \cap S_2') \cdot P(S_1 \cap S_2') + P(S_3 \mid S_1' \cap S_2') \cdot P(S_1' \cap S_2') \\
+                    &= \left(\frac{4}{28} \cdot \frac{6}{30} \cdot \frac{5}{29}\right) + \left(\frac{5}{28} \cdot \frac{24}{30} \cdot \frac{6}{29}\right) + \left(\frac{5}{28} \cdot \frac{6}{30} \cdot \frac{24}{29}\right) + \left(\frac{6}{28} \cdot \frac{24}{30} \cdot \frac{23}{29}\right) \\
+                    &= 0.2.
+        \end{align*}
     \end{enumerate}
 }
