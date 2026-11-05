@@ -2,7 +2,7 @@ import subprocess
 import os
 
 # Configuration
-LATEX_PATH = "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/"
+LATEX_PATH = "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX"
 num_chapters = 13
 chapters = []
 
@@ -21,10 +21,10 @@ for i in range(1, num_chapters + 1):
         chapters.append(str(i))
     
     # Write the includeonly list to the file
-    with open(LATEX_PATH + "enabled_chapters.tex", "w") as f:
+    with open(f"{LATEX_PATH}/huiswerk/enabled_chapters.tex", "w") as f:
         f.write(f"\\foreach \\week in " + "{" + ", ".join(chapters) + "}\n")
         f.write("{\n")
-        f.write(f"\t\\input{{{LATEX_PATH}huiswerk/week\\week.tex}}\n")
+        f.write(f"\t\\input{{{LATEX_PATH}/huiswerk/week\\week.tex}}\n")
         f.write("}\n")
 
     
@@ -36,7 +36,7 @@ for i in range(1, num_chapters + 1):
         subprocess.run(["pdflatex", "-interaction=nonstopmode", f"{LATEX_PATH}/main.tex"], check=True)
     
     # Copy the resulting PDF (Moved inside the loop)
-    output_name = f"{LATEX_PATH}huiswerk/uitwerkingen_week_0{i}.pdf" if i < 10 else f"{LATEX_PATH}huiswerk/uitwerkingen_week_{i}.pdf"
+    output_name = f"{LATEX_PATH}/huiswerk/uitwerkingen_week_0{i}.pdf" if i < 10 else f"{LATEX_PATH}/huiswerk/uitwerkingen_week_{i}.pdf"
     
     # Use shutil.copy2 instead of os.replace so the original main.pdf isn't deleted
     import shutil
