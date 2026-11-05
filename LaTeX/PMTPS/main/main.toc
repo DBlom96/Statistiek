@@ -1,6 +1,10 @@
 \babel@toc {dutch}{}\relax 
 \beamer@sectionintoc {1}{Recap vorige les}{3}{0}{1}
-\beamer@sectionintoc {2}{Discrete en continue kansvariabelen}{13}{0}{2}
-\beamer@sectionintoc {3}{Veelgebruikte kansverdelingen}{54}{0}{3}
-\beamer@sectionintoc {4}{De centrale limietstelling}{69}{0}{4}
-\beamer@sectionintoc {5}{Gezamenlijke kansverdelingen}{81}{0}{5}
+\beamer@sectionintoc {2}{Lineariteit van de verwachtingswaarde}{35}{0}{2}
+\beamer@sectionintoc {3}{Introductie: schatters en schattingsmethoden}{62}{0}{3}
+\beamer@sectionintoc {4}{Zuivere schatters en efficiëntie}{76}{0}{4}
+\beamer@sectionintoc {5}{Betrouwbaarheidsintervallen: $\sigma $ bekend}{98}{0}{5}
+\beamer@sectionintoc {6}{Betrouwbaarheidsintervallen: $\sigma $ onbekend}{131}{0}{6}
+\beamer@sectionintoc {7}{Hypothesetoetsen: deel 1}{169}{0}{7}
+\beamer@sectionintoc {8}{Hypothesetoetsen: deel 2}{209}{0}{8}
+\beamer@sectionintoc {9}{Samenvatting}{233}{0}{9}

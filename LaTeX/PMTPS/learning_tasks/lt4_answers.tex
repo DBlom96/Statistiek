@@ -158,7 +158,13 @@
     Determine the mean and variance of $X$.
 }
 \enanswer{
-    $E(X) = V(X) = \ln 10 \approx 2.3025$.
+    Notice that for a Poisson random variable $X$, we have that 
+    \begin{align*}
+        P(X = 0) = e^{-\mu} \cdot \frac{\mu^0}{0!} = e^{-\mu}.
+    \end{align*}
+    As $P(X = 0) = 0.1$, we have that $e^{-\mu} = 0.1$, or $-\mu = \ln{0.1} \Rightarrow \mu = \ln{10}$.
+    The mean and variance of a random variable $X \sim \text{Poisson}(\mu)$ is equal to $\mu$ and $\mu$ respectively.
+    Therefore $E(X) = V(X) = \ln 10 \approx 2.3025$.
 }
 
 \enquestion{3.134}{
@@ -172,11 +178,13 @@
     \end{enumerate}
 }
 \enanswer{
+    The number of telephone calls $X$ is Poisson distributed with mean $\mu = 8$ per hour, so $\mu = 16$ per two hours and $\mu = 4$ per $30$ minutes.
+    We can calculate the probabilities using the graphical calculator:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.0916$
-        \item $0.0424$
-        \item $0.0992$
-        \item $0.1563$
+        \item $P(X = 5 \mid \mu = 8) = \poissonpdf(\mu=8, k=5) \approx 0.0916$,
+        \item $P(X \leq 3 \mid \mu = 8) = \poissoncdf(\mu=8, k=3) \approx 0.0424$,
+        \item $P(X = 15 \mid \mu = 16) = \poissonpdf(\mu=16, k=15) \approx 0.0992$,
+        \item $P(X = 5 \mid \mu = 4) = \poissonpdf(\mu=4, k=5) \approx 0.1563$.
     \end{enumerate}
 }
 
@@ -190,10 +198,13 @@
     \end{enumerate}
 }
 \enanswer{
+    The number of surface flaws $X$ is a Poisson random variable with $\mu = 0.5$ per square meter (or per car).
+    Therefore, the mean $\mu = 5$ per 10 cars.
+    We can calculate the probabilities using the graphical calculator:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.6065$
-        \item $0.0067$
-        \item $0.0404$
+        \item $P(X = 0 \mid \mu = 0.5) = \poissonpdf(\mu=0.5, k=0) \approx 0.6065$,
+        \item $P(X = 0 \mid \mu = 5) = \poissonpdf(\mu=8, k=3) \approx 0.0067$,
+        \item $P(X \leq 1 \mid \mu = 5) = \poissoncdf(\mu=4, k=1) \approx 0.0404$.
     \end{enumerate}
 }
 
@@ -212,6 +223,9 @@
     \]
 }
 \enanswer{
+    In order to determine the probability mass function for the random variable with this CDF, we need to consider the boundary values for the cases in the CDF,
+    so $x = 2$, $x = 5.7$, $x=6.5$ and $x=8.5$, and see how large the difference is for the two cases they are involved in.
+    This gives us the following probability mass function:
     \[
         f(x) =
         \begin{cases}

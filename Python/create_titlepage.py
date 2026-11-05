@@ -7,15 +7,16 @@ import comtypes.client
 import locale
 
 # Load template
-doc = Document(fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\Tentamenvoorblad.docx")
+PATH = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\titelbladen"
+doc = Document(PATH + fr"\Tentamenvoorblad.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
-vaknaam = "Statistiek deel 1 (vierde kans)"
-vakcode = "STA#1"
-datum = "20261120"
+vaknaam = "Statistiek deel 2 (herkansing / vierde kans)"
+vakcode = "STA#2"
+datum = "20261106"
 tentamentijd = "13:30 - 16:30"
 examinator = "Dr. ir. D.A.M.P. Blom"
-peer_review = "Dr. A.J. Hoogstrate"
+peer_review = "Dr. M. van Ee"
 aantal_opgaven = "4"
 aantal_paginas = "4"
 
@@ -24,8 +25,8 @@ if formatted_date[0] == "0":
     formatted_date = formatted_date[1:]
 print(formatted_date)
 
-doc_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}_vierdekans.docx"
-pdf_path = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\FMW_titelblad_{datum}_vierdekans.pdf"
+doc_path = PATH + fr"\FMW_titelblad_{datum}.docx"
+pdf_path = PATH + fr"\FMW_titelblad_{datum}.pdf"
 
 # Replace placeholders
 replacements = {

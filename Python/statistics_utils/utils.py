@@ -22,7 +22,8 @@ critical_color = "C3" # tab:red
 # Transparency of shaded areas
 opacity_level = 0.3
 
-FIGURE_PATH = "../../../LaTeX/figures/"
+STAT_FIGURE_PATH = "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/figures/"
+PMTPS_FIGURE_PATH = "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/PMTPS/figures/"
 
 def pretty_print(x, num_decimals = 4):
     """Formatteer floats netjes, zonder overbodige nullen."""

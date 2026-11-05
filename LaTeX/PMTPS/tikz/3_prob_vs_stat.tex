@@ -1,0 +1,36 @@
+\documentclass[tikz, beamer, preview]{standalone}
+\input{../styles/tikz_config.tex}
+\input{../styles/macros.tex}
+
+\begin{document}
+
+\begin{center}
+\begin{tikzpicture}[
+    % Stijlen voor de boxen en pijlen
+    box/.style={
+        rectangle, 
+        draw, 
+        thick, 
+        align=center, 
+        text width=4.2cm, 
+        inner sep=6pt
+    },
+    arrowlabel/.style={
+        font=\small, 
+        midway, 
+        auto
+    }
+]
+    \def\shift{0.55}
+    % Bovenste rij (Kansrekening: Model -> Data)
+    \node[box] (model1) at (0, 0) {\textbf{Model} \\ Kansverdeling \\ Parameters};
+    \node[box] (data1)  at (7, 0) {\textbf{Data} \\ Waarnemingen \\ $x_1, \ldots, x_n$};
+
+    % Pijl 1: Van links naar rechts (Kansrekening)
+    \draw[->, thick, >=stealth] ($(model1.east)+(0,\shift)$) -- node[above] {kansrekening} ($(data1.west)+(0,\shift)$);
+    \draw[->, thick, >=stealth] ($(data1.west)-(0,\shift)$) -- node[below] {statistiek} ($(model1.east)-(0,\shift)$);
+
+\end{tikzpicture}
+\end{center}
+
+\end{document}

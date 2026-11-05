@@ -9,11 +9,22 @@
     \end{tabular}
 }
 \enanswer{
-    \begin{tabular}{*{2}{m{.45\textwidth}}}
-        (a) $1.2816$ & (b) $0$ \\
-        (c) $1.2816$ & (d) $-1.2816$ \\
-        (e) $1.2831$ & \\
-    \end{tabular}
+    We can determine these boundary values $z$ using the graphical calculator using either the function \enquote{invnorm} (using Tail: Left if not specified) or the \enquote{numeric solver}:
+    \begin{enumerate}[label=(\alph*)]
+        \item $P(Z < z) = 0.9$ holds for $z = \invnorm(\opp=0.9, \mu=0, \sigma=1) \approx 1.2816$.
+        \item $P(Z < z) = 0.5$ holds for $z = \invnorm(\opp=0.5, \mu=0, \sigma=1) = 0$ (notice that the standard normal distribution is symmetric in $x=0$).
+        \item $P(Z > z) = 0.1$ holds for $z = \invnorm(\opp=0.1, \mu=0, \sigma=1, \text{Tail}=\text{Right}) \approx 1.2816$.
+        \item $P(Z > z) = 0.9$ holds for $z = \invnorm(\opp=0.9, \mu=0, \sigma=1, \text{Tail}=\text{Right}) \approx -1.2816$.
+        \item We can rewrite this equation as follows:
+        \begin{align*}  
+            P(Z < z) - P(Z < -1.28) &= 0.8 \Rightarrow P(Z < z) = 0.8 + P(Z < -1.28)
+        \end{align*}
+        This gives us
+        \begin{align*}
+            P(Z < z) &= 0.8 + \normalcdf(\lb=-\GRinfinity, \ub=-1.28, \mu=0, \sigma=1) \approx 0.9003 \\
+                    &\Rightarrow z = \invnorm(\opp=0.9003, \mu=0,\sigma=1) \approx 1.2831.            
+        \end{align*}
+    \end{enumerate}
 }
 
 \enquestion{4.55}{
@@ -26,10 +37,14 @@
     \end{tabular}
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.9332$ & (b) $0.7734$ & (c) $0.3829$ \\
-        (d) $0.8013$ & (e) $0.5467$ & \\
-    \end{tabular}
+    The following probabilities can be calculated using the function \enquote{normalcdf} on the graphical calculator:
+    \begin{enumerate}[label=(\alph*)]
+        \item $P(X < 11) = \normalcdf(\lb=-\GRinfinity, \ub=11, \mu=5, \sigma=4) \approx 0.9332$.
+        \item $P(X > 2) = \normalcdf(\lb=2, \ub=\GRinfinity, \mu=5, \sigma=4) \approx 0.7734$.
+        \item $P(3 < X < 7) = \normalcdf(\lb=3, \ub=7, \mu=5, \sigma=4) \approx 0.3829$.
+        \item $P(-2 < X < 9) = \normalcdf(\lb=-2, \ub=9, \mu=5, \sigma=4) \approx 0.8013$.
+        \item $P(2 < X < 8) = \normalcdf(\lb=2, \ub=8, \mu=5, \sigma=4) \approx 0.5467$.
+    \end{enumerate}
 }
 
 \enquestion{4.56}{
@@ -43,11 +58,35 @@
     \end{tabular}
 }
 \enanswer{
-    \begin{tabular}{*{2}{m{.45\textwidth}}}
-        (a) $5$ & (b) $-1.5794$ \\
-        (c) $4.9144$ & (d) No solution for $x$ \\
-        (e) $10.3033$ & \\
-    \end{tabular}
+    We can determine these boundary values $x$ using the graphical calculator using either the function \enquote{invnorm} (using Tail: Left if not specified) or the \enquote{numeric solver}:
+    \begin{enumerate}[label=(\alph*)]
+        \item $P(X > x) = 0.5$ holds for $x$ equal to the mean, so $x = 5$.
+        \item $P(X > x) = 0.95$ holds for $x = \invnorm(\opp=0.95, \mu=5, \sigma=4, \text{Tail}=\text{Right}) \approx -1.5794$.
+        \item We can rewrite this equation as follows:
+        \begin{align*}  
+            P(X < 7) - P(X < x) = 0.2   &\Rightarrow P(X < x) = P(X < 7) - 0.2.
+        \end{align*}
+        This gives us
+        \begin{align*}
+            P(X < x)    &= \normalcdf(\lb=-\GRinfinity, \ub=7, \mu=5, \sigma=4) - 0.2 \approx 0.4915. \\
+                        &\Rightarrow z = \invnorm(\opp=0.4915, \mu=5,\sigma=4) \approx 4.9144.   
+        \end{align*}         
+        \item We can rewrite this equation as follows:
+        \begin{align*}  
+            P(X < x) - P(X < 3) = 0.95  &\Rightarrow P(X < x) = 0.95 + P(X < 3).
+        \end{align*}
+        This gives us
+        \begin{align*}
+            P(X < x) = 0.95 + \normalcdf(\lb=-\GRinfinity, \ub=3, \mu=5, \sigma=4) \approx 1.2585.
+        \end{align*}
+        Notice that this equation is ill-defined, as a probability cannot be larger than one.
+        \item $P(Z > z) = 0.9$ holds for $z = \invnorm(\opp=0.9, \mu=0, \sigma=1, \text{Tail}=\text{Right}) \approx -1.2816$.
+        \item Notice that $X - 5$ is normally distributed with mean $0$ and variance $4$.
+        In that case, $-x$ should be at the $0.5$-th percentile of the distribution and $x$ at the $99.5$-th percentile:
+        \[
+            x = \invnorm(\opp=0.995, \mu=0, \sigma=4) \approx 10.3033.
+        \]
+    \end{enumerate}
 }
 
 \enquestion{4.63}{
@@ -58,9 +97,22 @@
     \end{enumerate}
 }
 \enanswer{
+    The fill volume $X$ is normally distributed with mean $x$ and standard deviation $5$.
     \begin{enumerate}[label=(\alph*)]
-        \item $380.4513$
-        \item $371.1805$
+        \item We want to solve for $x$ the equation $P(X > 365) = 0.999$.
+        As the mean is unknown, we need to use the numeric solver for this:
+        \begin{align*}
+            E_1 &= \normalcdf(\lb=365, \ub=\GRinfinity, \mu=X, \sigma=5) \\
+            E_2 &= 0.995
+        \end{align*}
+        The numeric solver gives us a mean $x \approx 380.4513$.
+        \item We want to solve for $x$ the equation $P(X > 365) = 0.999$.
+        As the mean is unknown, we need to use the numeric solver for this:
+        \begin{align*}
+            E_1 &= \normalcdf(\lb=365, \ub=\GRinfinity, \mu=X, \sigma=2) \\
+            E_2 &= 0.995
+        \end{align*}
+        The numeric solver gives us a mean $x \approx 371.1805$.
     \end{enumerate}
 }
 
@@ -74,9 +126,21 @@
 }
 \enanswer{
     \begin{enumerate}[label=(\alph*)]
-        \item $0.0478$
-        \item $6013$
-        \item $0.125$
+        \item The probability that a laser fails before $6000$ hours is equal to
+        \begin{align*}
+            P(X < 6000) &= \normalcdf(\lb=-\GRinfinity, \ub=6000, \mu=7000, \sigma=600) \\
+            &\approx 0.0478.
+        \end{align*}
+        \item The life in hours that \SI{95}{\percent} of the lasers exceed is the value $x$ for which $P(X > x) = 0.95$.
+        We can find $x$ by using the \enquote{invnorm} function:
+        \[
+            x = \invnorm(\opp=0.95, \mu=7000, \sigma=600, \text{Tail}=\text{Right}) \approx 6013
+        \]
+        \item The probability that a single laser still operates after $7000$ hours is equal to
+        \[
+            P(X > 7000) = \normalcdf(\lb=7000, \ub=\GRinfinity, \mu=7000, \sigma=600) = 0.5.
+        \]
+        Then, if we assume all three lasers fail independently, the probability that all three still operates after $7000$ hours is $0.5 \cdot 0.5 \cdot 0.5 = 0.125$.
     \end{enumerate}
 }
 
@@ -90,10 +154,18 @@
     \end{tabular}
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.3679$   & (b) $0.1353$     & (c) $0.9502$ \\
-        \multicolumn{3}{l}{(d) $23.0259$} \\
-    \end{tabular}
+    For a random variable $X$ that is exponentially distributed with mean $10$ (i.e., parameter $\lambda = \frac{1}{10}$), we have that
+    \[
+        P(X > x) = e^{-\lambda x} = e^{-\frac{1}{10} x}
+    \]
+    We can calculate the desired probabilities given this formula:
+    \begin{enumerate}[label=(\alph*)]
+        \item $P(X > 10) = e^{-\frac{1}{10} \cdot 10} = e^{-1} \approx 0.3679$.
+        \item $P(X > 20) = e^{-\frac{1}{10} \cdot 20} = e^{-2} \approx 0.1353$.
+        \item $P(X < 30) = 1 - P(X > 30) = 1 - e^{-\frac{1}{10} \cdot 30} = 1 - e^{-3} \approx 0.9502$.
+        \item $P(X < x) = 0.90$ means $P(X > x) = e^{-\frac{1}{10} \cdot x} = 0.10$.
+        Therefore $-\frac{1}{10} \cdot x = \ln{0.10} = -\ln{10}\Rightarrow x = 10 \ln{10} \approx 23.0259$.  
+    \end{enumerate}
 }
 
 \enquestion{4.103}{
@@ -107,12 +179,30 @@
     \end{enumerate}
 }
 \enanswer{
+    For a random variable $X$ that is exponentially distributed with mean $400$ (i.e., parameter $\lambda = \frac{1}{400}$), we have that
+    \[
+        P(X > x) = e^{-\lambda x} = e^{-\frac{1}{400} x}
+    \]
+    We can calculate the desired probabilities given this formula:
     \begin{enumerate}[label=(\alph*)]
-        \item $0.3935$
-        \item $0.2865$
-        \item $0.2212$
-        \item $0.9179$
-        \item $0.2336$
+        \item $P(X < 200) = 1 - P(X > 200) = 1 - e^{-\frac{1}{400} \cdot 200} = 1 - e^{-1/2} \approx 0.3935$.
+        \item $P(X > 500) = e^{-\frac{1}{400} \cdot 500} = e^{-5/4} \approx 0.2865$.
+        \item As the exponential distribution has the memoryless property, this probability is just
+        \[
+            P(X < 100) = 1 - P(X > 100) = 1 - e^{-\frac{1}{400} \cdot 100} = 1 - e^{-1/4} \approx 0.2212.
+        \]
+        \item Introduce a new variable counting the number of failing assemblies out of $10$ within $100$ hours.
+        Then $Y$ is binomially distributed with $n = 10$ and $p = P(X < 100) = 0.2212$.
+        The probability that at least one fails is Then
+        \[
+            P(Y \geq 1) = 1 - P(Y = 0) = 1 - \binompdf(n=10, p=0.2212, k=0) \approx 0.9179.
+        \]
+        \item Introduce a new variable counting the number of failing assemblies out of $10$ within $100$ hours.
+        Then $Y$ is binomially distributed with $n = 10$ and $p = P(X < 800) = 1 - e^{-\frac{1}{400} \cdot 800} = 1 - e^{-2} \approx 0.8647$.
+        The probability that all have failed by $800$ hours:
+        \[
+            P(Y = 10) = \binompdf(n=10, p=0.8647, k=10) \approx 0.2336.
+        \]
     \end{enumerate}
 }
 
@@ -127,9 +217,50 @@
     \end{tabular}    
 }
 \enanswer{
-    \begin{tabular}{*{3}{m{.3\textwidth}}}
-        (a) $0.0625$   & (b) $0.75$     & (c) $0.5$ \\
-        \multicolumn{3}{l}{(d) $F(x) = \begin{cases} 0, & x \le 2 \\ 0.25x^2 - x + 1, & 2 < x < 4 \\ 1, & x \ge 4 \end{cases}$} \\
-        \multicolumn{3}{l}{(e) $E(X) = 3.3333, \quad V(X) = 0.2222$} \\
-    \end{tabular}
+    We start with taking the antiderivative of $f(x)$ to obtain the cumulative distribution function (CDF):
+    \begin{align*}
+        P(X \leq x) = \int_{y=2}^x 0.5y-1 \dy &= \left[ 0.25y^2 - y \right|_{y=2}^x \\
+                                                     &= \left(0.25x^2 - x\right) - \left( 1 - 2 \right) \\
+                                                     &= 0.25x^2 - x + 1
+    \end{align*}
+    The cumulative distribution function (question (d)) $F(x)$ can then be given as
+    \[
+        F(x) = \begin{cases} 
+            0, & \text{ for } x \leq 2 \\ 
+            0.25x^2 - x + 1, & \text{ for } 2 < x < 4 \\ 
+            1, & \text{ for } x \geq 4 \\ 
+        \end{cases}
+    \]
+    We can use this CDF to compute the desired probabilities:
+    \begin{enumerate}
+        \item[(a)] $P(X < 2.5) = P(X \leq 2.5) = F(2.5) = 0.25 \cdot (2.5)^2 - 2.5 + 1 = 0.0625$
+        \item[(b)] $P(X > 3) = 1 - P(X \leq 3) = 1 - F(3) = 1 - 0.25 \cdot 3^2 - 3 + 1 = 0.75$
+        \item[(c)] 
+        \begin{align*}
+            P(2.5 < X < 3.5) &= P(X \leq 3.5) - P(X \leq 2.5) \\
+            &= F(3.5) - F(2.5) \\ 
+            &= \left(0.25 \cdot (3.5)^2 - 3.5 + 1\right) - \left(0.25 \cdot (2.5)^2 - 2.5 + 1\right)\\
+            &= 0.5
+        \end{align*}
+        \item[(e)] We can compute the mean of this random variable as follows:
+        \begin{align*}
+        E(X) = \int_{x=-\infty}^{\infty} x \cdot f(x) \dx &= \int_{x=2}^{4} x \cdot (0.5x-1) \dx \\
+                                                        &= \int_{x=2}^{4} \cdot 0.5x^2-x \dx \\
+                                                        &= \left[ \frac{1}{6}x^3 - \frac{1}{2}x^2\right|_{x=2}^4 \\
+                                                        &= \left(\frac{32}{3} - 8\right) - \left(\frac{4}{3} - 2\right) \\
+                                                        &= \frac{10}{3}.
+        \end{align*}
+        For the variance, we first compute $E(X^2)$:
+        \begin{align*}
+            E(X^2) = \int_{x=-\infty}^{\infty} x^2 \cdot f(x) \dx &= \int_{x=2}^{4} x^2 \cdot (0.5x-1) \dx \\
+                                                            &= \int_{x=2}^{4} 0.5x^3-x^2 \dx \\
+                                                            &= \left[ \frac{1}{8}x^4 - \frac{1}{3}x^3\right|_{x=2}^4 \\
+                                                            &= \left(32 - \frac{64}{3}\right) - \left(2 - \frac{8}{3}\right) \\
+                                                            &= \frac{34}{3}.
+        \end{align*}
+        We now use the identity $V(X) = E(X^2) - (E(X))^2$:
+        \begin{align*}
+            V(X) = E(X^2) - (E(X))^2 = \frac{34}{3} - \left(\frac{10}{3}\right)^2 = \frac{2}{9}.
+        \end{align*}
+    \end{enumerate}
 }
