@@ -1,0 +1,46 @@
+import subprocess
+import os
+
+# Configuration
+LATEX_PATH = "C:/Users/Admin/Documents/GitHub/Statistiek/LaTeX"
+num_chapters = 13
+chapters = []
+
+
+for i in range(1, num_chapters + 1):
+    print(f"COMPILING WEEK {i}")
+    
+    # Skip week 7
+    if i == 7:
+        continue
+
+    # Build the chapter string
+    if i < 10:
+        chapters.append(f"0{i}")
+    else:
+        chapters.append(str(i))
+    
+    # Write the includeonly list to the file
+    with open(f"{LATEX_PATH}/huiswerk/enabled_chapters.tex", "w") as f:
+        f.write(f"\\foreach \\week in " + "{" + ", ".join(chapters) + "}\n")
+        f.write("{\n")
+        f.write(f"\t\\input{{{LATEX_PATH}/huiswerk/week\\week.tex}}\n")
+        f.write("}\n")
+
+    
+    print(f"--- Compiling step {i} ---")
+    
+    # Run pdflatex (run twice for TOC/references)
+    subprocess.run(["pdflatex", "-interaction=nonstopmode", f"{LATEX_PATH}/main.tex"], check=True)
+    if i > 1:
+        subprocess.run(["pdflatex", "-interaction=nonstopmode", f"{LATEX_PATH}/main.tex"], check=True)
+    
+    # Copy the resulting PDF (Moved inside the loop)
+    output_name = f"{LATEX_PATH}/huiswerk/uitwerkingen_week_0{i}.pdf" if i < 10 else f"{LATEX_PATH}/huiswerk/uitwerkingen_week_{i}.pdf"
+    
+    # Use shutil.copy2 instead of os.replace so the original main.pdf isn't deleted
+    import shutil
+    shutil.copy2(f"{LATEX_PATH}/main.pdf", output_name)
+    print(f"Saved: {output_name}")
+
+print("Build complete.")
