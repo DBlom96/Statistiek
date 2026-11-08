@@ -1,4 +1,5 @@
 import numpy as np
+import itertools as it
 from scipy import stats
 
 DISTS = {
@@ -24,9 +25,9 @@ def compute_critical_region(dist_type, alpha=0.05, test_type='two-sided', **kwar
     assert dist_type in ["norm", "t", "chi2", "f"]
     dist = DISTS[dist_type]
     
-    if dist == t or dist == chi2:
+    if dist == stats.t or dist == stats.chi2:
         assert "df" in kwargs
-    if dist == f:
+    if dist == stats.f:
         assert "dfn" in kwargs and "dfd" in kwargs
         
     if test_type == 'two-sided':
@@ -94,7 +95,7 @@ class HypothesisTestRunner:
         p_val = compute_p_value('norm', z_stat, test_type=test_type)
         crit = compute_critical_region('norm', alpha=alpha, test_type=test_type)
         
-        return {"test": "$z$-toets", "statistic": z_stat, "p_value": p_val, "x_bar": x_bar, "n": n, **crit}
+        return {"test": "z-test", "test_type": test_type, "statistic": z_stat, "p_value": p_val, "alpha": alpha, "x_bar": x_bar, "n": n, **crit}
 
     @staticmethod
     def t_test_one_sample(mu_0, alpha=0.05, test_type='two-sided', sample=None, x_bar=None, s=None, n=None):
@@ -121,21 +122,21 @@ class HypothesisTestRunner:
         p_val = compute_p_value('t', t_stat, test_type=test_type, df=df)
         crit = compute_critical_region('t', alpha=alpha, test_type=test_type, df=df)
         
-        return {"test": "one-sample $t$-test", "statistic": t_stat, "p_value": p_val, "df": df, "x_bar": x_bar, "s": s, "n": n, **crit}
+        return {"test": "one-sample t-test", "test_type": test_type, "statistic": t_stat, "p_value": p_val, "alpha": alpha, "df": df, "x_bar": x_bar, "s": s, "n": n, **crit}
 
     @staticmethod
     def t_test_two_sample(sample1=None, xbar1=None, s1=None, n1=None, sample2=None, xbar2=None, s2=None, 
                               n2=None, equal_var=True, alpha=0.05, test_type='two-sided'):
 
-        if sample1 is not None:
+        if sample1 is not None and sample2 is not None:
             sample1, sample2 = np.array(sample1), np.array(sample2)
             x_bar1, x_bar2 = np.mean(sample1), np.mean(sample2)
-            s1, s2 = np.std(sample1, ddof=1), np.std(sample, ddof=1)  # Sample standard deviation (Bessel's correction, ddof=1)
+            s1, s2 = np.std(sample1, ddof=1), np.std(sample2, ddof=1)  # Sample standard deviation (Bessel's correction, ddof=1)
             n1, n2 = len(sample1), len(sample2)
-        elif x_bar is not None and s is not None and n is not None:
+        elif x_bar1 is not None and s1 is not None and n1 is not None and x_bar2 is not None and s2 is not None and n2 is not None:
             pass  # Use provided summary stats directly
         else:
-            raise ValueError("You must provide either two raw samples 'sample1' and 'sample2' OR all six summary stats: 'x_bar1', 's1', 'n1',
+            raise ValueError("You must provide either two raw samples 'sample1' and 'sample2' OR all six summary stats: 'x_bar1', 's1', 'n1', \
                                 'x_bar2', 's2', 'n2'.")
 
         if equal_var:
@@ -148,8 +149,8 @@ class HypothesisTestRunner:
         
         p_val = compute_p_value('t', t_stat, test_type=test_type, df=df)
         crit = compute_critical_region('t', alpha=alpha, test_type=test_type, df=df)
-        test_name = "two-sample $t$-test (equal variances)" if equal_var else "two-sample $t$-test (unequal variances)"
-        return {"test": test_name, "statistic": t_stat, "p_value": p_val, "df": df, **crit}
+        test_name = "two-sample t-test (equal variances)" if equal_var else "two-sample $t$-test (unequal variances)"
+        return {"test": test_name, "test_type": test_type, "statistic": t_stat, "p_value": p_val, "alpha": alpha, "df": df, **crit}
 
     @staticmethod
     def chi_square_gof(observed, expected, num_estimated_parameters = 0, alpha=0.05):
@@ -160,7 +161,7 @@ class HypothesisTestRunner:
         # Goodness of fit is inherently right-tailed
         p_val = compute_p_value('chi2', chi2_stat, test_type='right-sided', df=df)
         crit = compute_critical_region('chi2', alpha=alpha, test_type='right-sided', df=df)
-        return {"test": "chi-square goodness-of-fit test", "statistic": chi2_stat, "p_value": p_val, "df": df, **crit}
+        return {"test": "chi-square goodness-of-fit test", "test_type": test_type, "statistic": chi2_stat, "p_value": p_val, "alpha": alpha, "df": df, **crit}
 
     @staticmethod
     def chi_square_independence(observed, expected, alpha=0.05):
@@ -171,7 +172,7 @@ class HypothesisTestRunner:
         # Test of independence is right-tailed
         p_val = compute_p_value('chi2', chi2_stat, test_type='right-sided', df=df)
         crit = compute_critical_region('chi2', alpha=alpha, test_type='right-sided', df=df)
-        return {"test": "chi-square independence test", "statistic": chi2_stat, "p_value": p_val, "df": df, **crit}
+        return {"test": "chi-square independence test", "test_type": test_type, "statistic": chi2_stat, "p_value": p_val, "alpha": alpha, "df": df, **crit}
 
     @staticmethod
     def f_test_variances(sample1, sample2, alpha=0.05, test_type='two-sided'):
@@ -183,4 +184,4 @@ class HypothesisTestRunner:
         
         p_val = compute_p_value('f', f_stat, test_type=test_type, dfn=dfn, dfd=dfd)
         crit = compute_critical_region('f', alpha=alpha, test_type=test_type, dfn=dfn, dfd=dfd)
-        return {"test": "$f$-test for equal variances", "statistic": f_stat, "p_value": p_val, "df": (dfn, dfd), **crit}
+        return {"test": "f-test for equal variances", "test_type": test_type, "statistic": f_stat, "p_value": p_val, "alpha": alpha, "df": (dfn, dfd), **crit}
