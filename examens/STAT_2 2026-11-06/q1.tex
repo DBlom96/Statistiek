@@ -58,6 +58,7 @@
         \end{align*}
         Aangezien de steekproefomvang $n$ een geheel getal moet zijn en we met grotere $n$ steeds nauwkeuriger kunnen schatten met dezelfde betrouwbaarheid,
         moeten we dit antwoord afronden naar boven. \rubric{1}
+
         We hebben dus minstens $n = 152$ accu's nodig. \rubric{1}
     }
 
@@ -88,12 +89,11 @@
         $\overline{x} = 35.5$. 
 
         \subsubsection*{Stap 4: bereken de toetsingsgrootheid.}
-        De theoretische toetsingsgrootheid (hoofdletter!) bij een $z$-toets ($\sigma = 3.0$ is bekend!) is gelijk aan
-        \[
-            \overline{X}, \rubric{1}
-        \]
-        en volgt onder $H_0$ een normale verdeling met $\mu = 36$ en $\sigma = \frac{3.0}{\sqrt{36}} = 0.5$. \rubric{1}
-        De geobserveerde toetsingsgrootheid (kleine letter!) is gelijk aan $\overline{x} = 35.5$
+        De theoretische toetsingsgrootheid (hoofdletter!) bij een $z$-toets ($\sigma = 3.0$ is bekend!) is gelijk aan het steekproefgemiddelde $\overline{X}$. \rubric{1}
+    
+        Deze toetsingsgrootheid volgt onder $H_0$ een normale verdeling met $\mu = 36$ en $\sigma = \frac{3.0}{\sqrt{36}} = 0.5$. \rubric{1}
+        
+        De geobserveerde toetsingsgrootheid (kleine letter!) is gelijk aan $\overline{x} = 35.5$.
         
         \subsubsection*{Stap 5: bepaal de toetsuitslag (met behulp van het kritieke gebied).}
 
@@ -101,16 +101,17 @@
         \[
             g = \invnorm(\opp=\alpha=0.04, \mu=36, \sigma=0.5) \approx 35.1247.
         \]        
-        Het kritieke gebied is dus gelijk aan $(-\infty, 35.1247)$. \rubric{4}
+        Het kritieke gebied is dus gelijk aan $(-\infty, 35.1247)$. \rubric{3}
+
         De geobserveerde toetsingsgrootheid $x = 35.5$ ligt niet in het kritieke gebied,
         dus we besluiten om $H_0$ niet te verwerpen.\rubric{1}
 
         \subsubsection*{Stap 6: vertaal de toetsuitslag terug naar de originele context van het probleem.}
         Er is onvoldoende reden om op basis van deze steekproef aan te nemen dat de gemiddelde gebruiksduur $\mu$
-        van accu's van de tweede leverancier significant kleiner dan $36$ uur is.
+        van accu's van de tweede leverancier significant kleiner dan $36$ uur is.\rubric{1}
         \begin{center}
             \resizebox{0.9\textwidth}{!}{
-                \includegraphics{../../LaTeX/figures/exam20261106_q1c.png} 
+                \includegraphics{../../LaTeX/figures/exam20261106_q1c.png}
             }
         \end{center}
     }

@@ -27,6 +27,7 @@
     \solution{
         Om te bepalen of er een statistisch significant effect is van het al dan niet volgen van de cyber-awarenesstraining voor het adequaat reageren
         op een nep-e-mail, dienen we een chikwadraattoets voor onafhankelijkheid uit te voeren. \rubric{1}
+
         De nulhypothese $H_0$ en de alternatieve hypothesetoets $H_1$ kunnen dan als volgt worden geformuleerd:
         \begin{itemize}
             \item[$H_0$:] er is sprake van onafhankelijkheid tussen het wel/niet volgen van de training en het type reactie op de nep-e-mail.\rubric{1}
@@ -46,7 +47,7 @@
         Voordat we de toetsingsgrootheid kunnen berekenen, moeten we dus de verwachte frequenties $E_{ij}$ bepalen.
         Dit doen we aan de hand van de volgende formule:
         \[
-            E_{ij} = \frac{(\text{rijtotaal}_i) \cdot (\text{kolomtotaal}_j)}{\text{totaal}} \rubric{1}
+            E_{ij} = \frac{(\text{rijtotaal}_i) \cdot (\text{kolomtotaal}_j)}{\text{totaal}}. \rubric{1}
         \]
         We berekenen de verwachte frequenties voor elke cel in de tabel:
         \par\medskip
@@ -77,7 +78,8 @@
         Bereken met deze kansverdeling de $p$-waarde behorende bij de geobserveerde toetsingsgrootheid.
     }
     \solution{
-        De theoretische toetsingsgrootheid $X^2$ volgt onder de nulhypothese een chikwadraatverdeling met $\df = (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (2-1)\cdot(3-1) = 2$ vrijheidsgraden. \rubric{2}
+        De theoretische toetsingsgrootheid $X^2$ volgt onder de nulhypothese een chikwadraatverdeling met $\df = (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (2-1)\cdot(3-1) = 2$ vrijheidsgraden.\rubric{2}
+
         De $p$-waarde is de kans dat de theoretische toetsingsgrootheid $X^2$ een \enquote{nog extremere} uitkomst aanneemt dan de geobserveerde toetsingsgrootheid $\chi^2$. \rubric{1}
         
         Aangezien een chikwadraattoets voor onafhankelijkheid altijd rechtszijdig is, is de $p$-waarde gelijk aan
@@ -119,8 +121,10 @@
 
     \solution{
         Van de $300$ medewerkers naar wie de link is verstuurd, hebben $30+44 = 74$ medewerkers op de link gedrukt (steekproef!).\rubric{1}
+        
         Ervan uitgaande dat iedere medewerker onafhankelijk van elkaar wel of niet op de klik drukt, is het aantal medewerkers dat op
         de link drukt een binomiale kansvariabele $X$ met $n = 300$ en een onbekende succeskans $p = \text{ ?}$. \rubric{1}
+        
         Op basis van deze aantallen gaan we een betrouwbaarheidsinterval bepalen voor de kans $p$ dat een willekeurige medewerker
         op de link drukt (populatieparameter!).
         Omdat de gewenste betrouwbaarheid \SI{95}{\percent} is, geldt dat $\alpha = 0.05$.

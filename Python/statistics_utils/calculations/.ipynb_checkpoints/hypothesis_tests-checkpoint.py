@@ -9,18 +9,9 @@ DISTS = {
     "f": stats.f
 }
 
-def compute_critical_region(dist_type, alpha=0.05, test_type='two-sided', **kwargs):
+def compute_critical_region(dist_type, alpha=0.05, test_type='tweezijdig', **kwargs):
     """
     Generic method to compute statistical critical regions.
-    
-    Args:
-        dist_type (str): 'norm', 't', 'chi2', or 'f'
-        alpha (float): Significance level
-        test_type (str): 'two-sided', 'left-sided', or 'right-sided'
-        **kwargs: Distribution parameters (e.g., df, df1, df2)
-        
-    Returns:
-        dict: Critical values and formatted string representation of the critical region.
     """
     assert dist_type in ["norm", "t", "chi2", "f"]
     dist = DISTS[dist_type]
@@ -30,24 +21,23 @@ def compute_critical_region(dist_type, alpha=0.05, test_type='two-sided', **kwar
     if dist == stats.f:
         assert "dfn" in kwargs and "dfd" in kwargs
         
-    if test_type == 'two-sided':
+    if test_type == 'tweezijdig':
         critical_value_left = dist.ppf(alpha / 2, **kwargs)
         critical_value_right = dist.ppf(1 - alpha / 2, **kwargs)
         region_str = f"Critical region: $(-\\infty, {critical_value_left:.4f}] \\cup [{critical_value_right:.4f}, \\infty)$"
         return {"critical_value_left": critical_value_left, "critical_value_right": critical_value_right, "region": region_str}
-    elif test_type == 'right-sided':
+    elif test_type == 'rechtszijdig':
         critical_value_right = dist.ppf(1 - alpha, **kwargs)
         region_str = f"Critical region: $[{critical_value_right:.4f}, \\infty)$"
         return {"critical_value_right": critical_value_right, "region": region_str}
-    else:  # 'left-sided'
+    else:  # 'linkszijdig'
         critical_value_left = dist.ppf(alpha, **kwargs)
         region_str = f"Critical region: $(-\\infty, {critical_value_left:.4f}]$"
         return {"critical_value_left": critical_value_left, "region": region_str}    
 
-def compute_p_value(dist_type, stat, test_type='two-sided', **kwargs):
+def compute_p_value(dist_type, stat, test_type='tweezijdig', **kwargs):
     """
     Generic method to compute p-values corresponding to given test statistic "stat". 
-    For two-sided tests, uses min(left-tail, right-tail) probability.
     """
     assert dist_type in DISTS
     dist = DISTS[dist_type]
@@ -57,131 +47,277 @@ def compute_p_value(dist_type, stat, test_type='two-sided', **kwargs):
     if dist == stats.f:
         assert "dfn" in kwargs and "dfd" in kwargs, "Parameters 'dfn' and 'dfd' are required."
         
-    cdf_val = dist.cdf(stat, **kwargs) # left-tail probability
-    survival_val = 1 - cdf_val  # right-tail probability
+    cdf_val = dist.cdf(stat, **kwargs)        # left-tail probability
+    survival_val = 1 - cdf_val                # right-tail probability
     
-    if test_type == 'two-sided':
-        # Minimum of less-equal-than and greater-equal-than probabilities * 2
-        return min(cdf_val, survival_val)
-    elif test_type == 'right-sided':
+    if test_type == 'tweezijdig':
+        return min(1.0, 2 * min(cdf_val, survival_val))
+    elif test_type == 'rechtszijdig':
         return survival_val
-    elif test_type == 'left-sided':
+    elif test_type == 'linkszijdig':
         return cdf_val
     else:
         raise ValueError(f"Unsupported test_type: {test_type}")
 
-
 class HypothesisTestRunner:
+    def __init__(self):
+        self.test_name = None
+        self.test_type = "tweezijdig"
+        self.H0 = None
+        self.H1 = None
+        self.alpha = 0.05
+        self.sample_statistics = {}
+        self.test_statistic = {}
+        self.critical_region = {}
+        self.pvalue = None
+        self.reject_H0 = False
 
-    @staticmethod
-    def z_test(mu_0, sigma, alpha=0.05, test_type='two-sided', sample=None, x_bar=None, n=None):
+    def _reset_state(self, test_name, test_type, alpha, h0, h1):
+        """Helper to cleanly reset instance attributes before running a new test."""
+        self.test_name = test_name
+        self.test_type = test_type
+        self.alpha = alpha
+        self.H0 = h0
+        self.H1 = h1
+        self.sample_statistics = {}
+        self.test_statistic = {}
+        self.critical_region = {}
+        self.pvalue = None
+        self.reject_H0 = False
+
+    def z_test(self, mu_0, sigma, alpha=0.05, test_type='tweezijdig', sample=None, sample_mean=None, sample_size=None):
         """
-        Performs a one-sample Z-test. 
-        Accepts either raw data via `sample` OR pre-computed summary statistics (`x_bar` and `n`).
+        Performs a one-sample Z-test.
         """
+        h0 = "\\mu = \\mu_0" if test_type == "tweezijdig" else ("\\mu \\leq \\mu_0" if test_type == "rechtszijdig" else "\\mu \\geq \\mu_0")
+        h1 = "\\mu \\neq \\mu_0" if test_type == "tweezijdig" else ("\\mu > \\mu_0" if test_type == "rechtszijdig" else "\\mu < \\mu_0")
+        self._reset_state("$z$-toets", test_type, alpha, h0, h1)
+        
         if sample is not None:
-            sample = np.array(sample)
-            x_bar = np.mean(sample)
-            n = len(sample)
-        elif x_bar is not None and n is not None:
-            pass  # Use provided summary stats directly
+            arr = np.array(sample)
+            self.sample_statistics["sample"] = arr
+            self.sample_statistics["sample_mean"] = np.mean(arr)
+            self.sample_statistics["sample_size"] = len(arr)
+        elif sample_mean is not None and sample_size is not None:
+            self.sample_statistics["sample_mean"] = sample_mean
+            self.sample_statistics["sample_size"] = sample_size
         else:
-            raise ValueError("You must provide either a raw 'sample' (list/array) OR both 'x_bar' and 'n'.")
+            raise ValueError("You must provide either a raw 'sample' (list/array) OR both 'sample_mean' and 'sample_size'.")
             
-        # Compute test statistic
-        z_stat = (x_bar - mu_0) / (sigma / np.sqrt(n))
-        
-        # Compute p-value and critical region using your generic helpers
-        p_val = compute_p_value('norm', z_stat, test_type=test_type)
-        crit = compute_critical_region('norm', alpha=alpha, test_type=test_type)
-        
-        return {"test": "z-test", "test_type": test_type, "statistic": z_stat, "p_value": p_val, "alpha": alpha, "x_bar": x_bar, "n": n, **crit}
+        self.sample_statistics["mu_0"] = mu_0
+        self.sample_statistics["sigma"] = sigma   
 
-    @staticmethod
-    def t_test_one_sample(mu_0, alpha=0.05, test_type='two-sided', sample=None, x_bar=None, s=None, n=None):
+        z_stat = (sample_mean - mu_0) / (sigma / np.sqrt(sample_size))
+        self.test_statistic = {
+            "upper": "Z",
+            "upper_formula": f"\\frac{{\\overline{{X}} - \\mu_0}}{{\\sigma / \\sqrt{{n}}}}",
+            "lower": "z",
+            "lower_formula": f"\\frac{{\\overline{{x}} - \\mu_0}}{{\\sigma / \\sqrt{{n}}}}",
+            "lower_formula_filled": f"\\frac{{{self.sample_statistics["sample_mean"]} - {mu_0}}}{{{sigma} / \\sqrt{{{self.sample_statistics["sample_size"]}}}}}",
+            "value": z_stat,
+            "distribution": "N(0,1)"
+        }
+        self.pvalue = compute_p_value('norm', z_stat, test_type=test_type)
+        self.critical_region = compute_critical_region('norm', alpha=alpha, test_type=test_type)
+        self.reject_H0 = (self.pvalue < self.alpha/2) if test_type == "tweezijdig" else (self.pvalue < self.alpha)
+
+        return self
+
+    def t_test_one_sample(self, mu_0, alpha=0.05, test_type='tweezijdig', sample=None, sample_mean=None, sample_std=None, sample_size=None):
         """
         Performs a one-sample Student's t-test.
-        Accepts either raw data via `sample` OR summary statistics (`x_bar`, `s`, and `n`).
         """
-        if sample is not None:
-            sample = np.array(sample)
-            x_bar = np.mean(sample)
-            s = np.std(sample, ddof=1)  # Sample standard deviation (Bessel's correction, ddof=1)
-            n = len(sample)
-        elif x_bar is not None and s is not None and n is not None:
-            pass  # Use provided summary stats directly
-        else:
-            raise ValueError("You must provide either a raw 'sample' OR all three summary stats: 'x_bar', 's', and 'n'.")
-            
-        df = n - 1
-        
-        # Compute t test statistic
-        t_stat = (x_bar - mu_0) / (s / np.sqrt(n))
-        
-        # Compute p-value and critical region using your generic helpers
-        p_val = compute_p_value('t', t_stat, test_type=test_type, df=df)
-        crit = compute_critical_region('t', alpha=alpha, test_type=test_type, df=df)
-        
-        return {"test": "one-sample t-test", "test_type": test_type, "statistic": t_stat, "p_value": p_val, "alpha": alpha, "df": df, "x_bar": x_bar, "s": s, "n": n, **crit}
+        h0 = "\\mu = \\mu_0" if test_type == "tweezijdig" else ("\\mu \\leq \\mu_0" if test_type == "rechtszijdig" else "\\mu \\geq \\mu_0")
+        h1 = "\\mu \\neq \\mu_0" if test_type == "tweezijdig" else ("\\mu > \\mu_0" if test_type == "rechtszijdig" else "\\mu < \\mu_0")
+        self._reset_state("$t$-toets (één steekproef)", test_type, alpha, h0, h1)
 
-    @staticmethod
-    def t_test_two_sample(sample1=None, xbar1=None, s1=None, n1=None, sample2=None, xbar2=None, s2=None, 
-                              n2=None, equal_var=True, alpha=0.05, test_type='two-sided'):
+        if sample is not None:
+            arr = np.array(sample)
+            self.sample_statistics["sample"] = arr
+            self.sample_statistics["sample_mean"] = np.mean(arr)
+            self.sample_statistics["sample_std"] = np.std(arr, ddof=1)
+            self.sample_statistics["sample_size"] = len(arr)
+        elif sample_mean is not None and sample_std is not None and sample_size is not None:
+            self.sample_statistics["sample_mean"] = sample_mean
+            self.sample_statistics["sample_std"] = sample_std
+            self.sample_statistics["sample_size"] = sample_size
+        else:
+            raise ValueError("You must provide either a raw 'sample' OR all three summary stats: 'sample_mean', 'sample_std', and 'sample_size'.")
+            
+        self.sample_statistics["mu_0"] = mu_0
+        
+        mean_val = self.sample_statistics["sample_mean"]
+        std_val = self.sample_statistics["s"]
+        n_val = self.sample_statistics["n"]
+        df = n_val - 1
+        t_stat = (sample_mean - mu_0) / (sample_std / np.sqrt(sample_size))
+        
+        self.test_statistic = {
+            "upper": "T",
+            "lower": t_stat,
+            "distribution": f"t(\\df=n-1)",
+        }
+        self.pvalue = compute_p_value('t', t_stat, test_type=test_type, df=df)
+        self.critical_region = compute_critical_region('t', alpha=alpha, test_type=test_type, df=df)
+        self.reject_H0 = (self.pvalue < self.alpha/2) if test_type == "tweezijdig" else (self.pvalue < self.alpha)
+
+        return self
+
+    def t_test_two_sample(self, sample1=None, sample_mean1=None, sample_std1=None, sample_size1=None, sample2=None, sample_mean2=None, sample_std2=None, sample_size2=None, equal_var=True, alpha=0.05, test_type='tweezijdig'):
+        """
+        Performs an independent two-sample Student's t-test.
+        """
+        name = "$t$-toets (twee steekproeven, gelijke varianties)" if equal_var else "$t$-toets (twee steekproeven, ongelijke varianties)"
+        h0 = "\\mu_1 = \\mu_2" if test_type == "tweezijdig" else ("\\mu_1 \\leq \\mu_2" if test_type == "rechtszijdig" else "\\mu_1 \\geq \\mu_2")
+        h1 = "\\mu_1 \\neq \\mu_2" if test_type == "tweezijdig" else ("\\mu_1 > \\mu_2" if test_type == "rechtszijdig" else "\\mu_1 < \\mu_2")
+        self._reset_state(name, test_type, alpha, h0, h1)
 
         if sample1 is not None and sample2 is not None:
-            sample1, sample2 = np.array(sample1), np.array(sample2)
-            x_bar1, x_bar2 = np.mean(sample1), np.mean(sample2)
-            s1, s2 = np.std(sample1, ddof=1), np.std(sample2, ddof=1)  # Sample standard deviation (Bessel's correction, ddof=1)
-            n1, n2 = len(sample1), len(sample2)
-        elif x_bar1 is not None and s1 is not None and n1 is not None and x_bar2 is not None and s2 is not None and n2 is not None:
-            pass  # Use provided summary stats directly
+            arr1, arr2 = np.array(sample1), np.array(sample2)
+            self.sample_statistics["sample1"] = arr1
+            self.sample_statistics["sample2"] = arr2
+            self.sample_statistics["sample_mean1"], self.sample_statistics["sample_mean2"] = np.mean(arr1), np.mean(arr2)
+            self.sample_statistics["sample_std1"], self.sample_statistics["sample_std2"] = np.std(arr1, ddof=1), np.std(arr2, ddof=1)
+            self.sample_statistics["sample_size1"], self.sample_statistics["sample_size2"] = len(arr1), len(arr2)
+        elif all(v is not None for v in [sample_mean1, sample_std1, sample_size1, sample_mean2, sample_std2, sample_size2]):
+            self.sample_statistics["sample_mean1"], self.sample_statistics["sample_mean2"] = sample_measample_size1, sample_measample_size2
+            self.sample_statistics["sample_std1"], self.sample_statistics["sample_std2"] = sample_std1, sample_std2
+            self.sample_statistics["sample_size1"], self.sample_statistics["sample_size2"] = sample_size1, sample_size2
         else:
-            raise ValueError("You must provide either two raw samples 'sample1' and 'sample2' OR all six summary stats: 'x_bar1', 's1', 'n1', \
-                                'x_bar2', 's2', 'n2'.")
+            raise ValueError("You must provide either two raw samples 'sample1' and 'sample2' OR all six summary stats: 'sample_mean1', 'sample_std1', 'sample_size1', 'sample_mean2', 'sample_std2', 'sample_size2'.")
+
+        self.sample_statistics["equal_var"] = equal_var
+
+        m1, m2 = self.sample_statistics["sample_mean1"], self.sample_statistics["sample_mean2"]
+        sd1, sd2 = self.sample_statistics["sample_std1"], self.sample_statistics["sample_std2"]
+        cnt1, cnt2 = self.sample_statistics["sample_size1"], self.sample_statistics["sample_size2"]
 
         if equal_var:
-            pooled_variance = ((n1 - 1) * (s1 ** 2) + (n2 - 1) * (s2 ** 2)) / (n1+n2-2)
-            t_stat = ((x_bar1 - x_bar2) - 0) / (np.sqrt(pooled_variance / n1 + pooled_variance / n2))
-            df = n1 + n2 - 2
+            pooled_var = ((cnt1 - 1) * (sd1 ** 2) + (cnt2 - 1) * (sd2 ** 2)) / (cnt1 + cnt2 - 2)
+            self.sample_statistics["pooled_variance"] = pooled_var
+            t_stat = (m1 - m2) / np.sqrt(pooled_var / cnt1 + pooled_var / cnt2)
+            df = cnt1 + cnt2 - 2
         else:
-            t_stat = ((x_bar1 - x_bar2) - 0) / (np.sqrt( (s1 ** 2) / n1 + (s2 ** 2) / n2))
-            df = min(n1-1, n2-1)
+            t_stat = (m1 - m2) / np.sqrt((sd1 ** 2) / cnt1 + (sd2 ** 2) / cnt2)
+            df = min(cnt1 - 1, cnt2 - 1)
+            
+        self.test_statistic = {
+            "upper": "T",
+            "lower": t_stat,
+            "distribution": f"t(\\df=n+m-2={df})" if equal_var else f"t(\\df=\\min(n-1,m-1)={df})"
+        }
+        self.pvalue = compute_p_value('t', t_stat, test_type=test_type, df=df)
+        self.critical_region = compute_critical_region('t', alpha=alpha, test_type=test_type, df=df)
+        self.reject_H0 = (self.pvalue < self.alpha/2) if test_type == "tweezijdig" else (self.pvalue < self.alpha)
+
+        return self
+
+    def chi_square_gof(self, observed, expected, num_estimated_parameters=0, alpha=0.05):
+        """
+        Performs a Chi-square Goodness-of-Fit test (always rechtszijdig).
+        """
+        obs_arr = np.array(observed)
+        exp_arr = np.array(expected)
+        assert len(obs_arr) == len(exp_arr)
+
+        h0 = "\\text{De data volgt de veronderstelde verdeling}"
+        h1 = "\\text{De data volgt niet de veronderstelde verdeling}"
+        self._reset_state("$\\chi^2$ goodness-of-fit test", "rechtszijdig", alpha, h0, h1)
+
+        self.sample_statistics["observed"] = obs_arr
+        self.sample_statistics["expected"] = exp_arr
+        self.sample_statistics["num_estimated_parameters"] = num_estimated_parameters
+
+        chi2_stat = sum((oi - ei) ** 2 / ei for (oi, ei) in zip(obs_arr, exp_arr))
+        df = len(obs_arr) - num_estimated_parameters - 1
         
-        p_val = compute_p_value('t', t_stat, test_type=test_type, df=df)
-        crit = compute_critical_region('t', alpha=alpha, test_type=test_type, df=df)
-        test_name = "two-sample t-test (equal variances)" if equal_var else "two-sample $t$-test (unequal variances)"
-        return {"test": test_name, "test_type": test_type, "statistic": t_stat, "p_value": p_val, "alpha": alpha, "df": df, **crit}
-
-    @staticmethod
-    def chi_square_gof(observed, expected, num_estimated_parameters = 0, alpha=0.05):
-        assert len(observed) == len(expected)
-        chi2_stat = sum( (oi - ei) ** 2 / ei for (oi, ei) in zip(observed, expected))
-        chi2_stat, _ = stats.chisquare(f_obs=observed, f_exp=expected)
-        df = len(observed) - num_estimated_parameters - 1
-        # Goodness of fit is inherently right-tailed
-        p_val = compute_p_value('chi2', chi2_stat, test_type='right-sided', df=df)
-        crit = compute_critical_region('chi2', alpha=alpha, test_type='right-sided', df=df)
-        return {"test": "chi-square goodness-of-fit test", "test_type": test_type, "statistic": chi2_stat, "p_value": p_val, "alpha": alpha, "df": df, **crit}
-
-    @staticmethod
-    def chi_square_independence(observed, expected, alpha=0.05):
-        assert observed.shape == expected.shape
-        nrows, ncols = observed.shape
-        chi2_stat = sum((observed[r,c] - expected[r,c]) ** 2 / (expected[r,c]) for (r,c) in it.product(range(nrows), range(ncols)))
-        df = (nrows-1)*(ncols-1)
-        # Test of independence is right-tailed
-        p_val = compute_p_value('chi2', chi2_stat, test_type='right-sided', df=df)
-        crit = compute_critical_region('chi2', alpha=alpha, test_type='right-sided', df=df)
-        return {"test": "chi-square independence test", "test_type": test_type, "statistic": chi2_stat, "p_value": p_val, "alpha": alpha, "df": df, **crit}
-
-    @staticmethod
-    def f_test_variances(sample1, sample2, alpha=0.05, test_type='two-sided'):
-        var1 = np.var(sample1, ddof=1)
-        var2 = np.var(sample2, ddof=1)
-        f_stat = var1 / var2
-        dfn = len(sample1) - 1
-        dfd = len(sample2) - 1
+        self.test_statistic = {
+            "upper": "X^2",
+            "lower": chi2_stat,
+            "distribution": f"\\chi^2(\\df=n-p-1={df})",
+        }
+        self.pvalue = compute_p_value('chi2', chi2_stat, test_type='rechtszijdig', df=df)
+        self.critical_region = compute_critical_region('chi2', alpha=alpha, test_type='rechtszijdig', df=df)
+        self.reject_H0 = (self.pvalue < self.alpha/2) if test_type == "tweezijdig" else (self.pvalue < self.alpha)
         
-        p_val = compute_p_value('f', f_stat, test_type=test_type, dfn=dfn, dfd=dfd)
-        crit = compute_critical_region('f', alpha=alpha, test_type=test_type, dfn=dfn, dfd=dfd)
-        return {"test": "f-test for equal variances", "test_type": test_type, "statistic": f_stat, "p_value": p_val, "alpha": alpha, "df": (dfn, dfd), **crit}
+        return self
+
+    def chi_square_independence(self, observed, expected=None, alpha=0.05):
+        """
+        Performs a Chi-square test of independence (always rechtszijdig).
+        Computes expected frequencies automatically if not provided.
+        """
+        obs_arr = np.array(observed)
+        if expected is None:
+            row_sums = obs_arr.sum(axis=1, keepdims=True)
+            col_sums = obs_arr.sum(axis=0, keepdims=True)
+            exp_arr = (row_sums @ col_sums) / obs_arr.sum()
+        else:
+            exp_arr = np.array(expected)
+            
+        assert obs_arr.shape == exp_arr.shape
+
+        h0 = "\\text{De twee variabelen zijn onafhankelijk}"
+        h1 = "\\text{De twee variabelen zijn afhankelijk}"
+        self._reset_state("$\\chi^2$-onafhankelijkheidstoets", "rechtszijdig", alpha, h0, h1)
+
+        self.sample_statistics["observed"] = obs_arr
+        self.sample_statistics["expected"] = exp_arr
+
+        nrows, ncols = obs_arr.shape
+        chi2_stat = sum((obs_arr[r, c] - exp_arr[r, c]) ** 2 / exp_arr[r, c] for (r, c) in it.product(range(nrows), range(ncols)))
+        df = (nrows - 1) * (ncols - 1)
+        
+        self.test_statistic = {
+            "upper": "\\chi^2",
+            "lower": chi2_stat,
+            "distribution": f"\\chi^2({df})",
+            "dist_type": "chi2",
+            "dist_params": {"df": df}
+        }
+        self.pvalue = compute_p_value('chi2', chi2_stat, test_type='rechtszijdig', df=df)
+        self.critical_region = compute_critical_region('chi2', alpha=alpha, test_type='rechtszijdig', df=df)
+        self.reject_H0 = (self.pvalue < self.alpha/2) if test_type == "tweezijdig" else (self.pvalue < self.alpha)
+
+        return self
+
+    def f_test_variances(self, sample1=None, sample_var1=None, sample_size1=None, sample2=None, sample_var2=None, sample_size2=None, alpha=0.05, test_type='tweezijdig'):
+        """
+        Performs an F-test for equality of two variances.
+        Accepts either raw samples OR summary variances and sample sizes.
+        """
+        h0 = "\\sigma_A^2 = \\sigma_B^2" if test_type == "tweezijdig" else ("\\sigma_A^2 \\leq \\sigma_B^2" if test_type == "rechtszijdig" else "\\sigma_A^2 \\geq \\sigma_B^2")
+        h1 = "\\sigma_A^2 \\neq \\sigma_B^2" if test_type == "tweezijdig" else ("\\sigma_A^2 > \\sigma_B^2" if test_type == "rechtszijdig" else "\\sigma_A^2 < \\sigma_B^2")
+        self._reset_state("$F$-toets voor gelijke varianties", test_type, alpha, h0, h1)
+
+        if sample1 is not None and sample2 is not None:
+            arr1, arr2 = np.array(sample1), np.array(sample2)
+            self.sample_statistics["sample1"] = arr1
+            self.sample_statistics["sample2"] = arr2
+            self.sample_statistics["sample_var1"] = np.var(arr1, ddof=1)
+            self.sample_statistics["sample_var2"] = np.var(arr2, ddof=1)
+            self.sample_statistics["sample_size1"] = len(arr1)
+            self.sample_statistics["sample_size2"] = len(arr2)
+        elif all(v is not None for v in [sample_var1, sample_size1, sample_var2, sample_size2]):
+            self.sample_statistics["sample_var1"] = var1
+            self.sample_statistics["sample_var2"] = var2
+            self.sample_statistics["sample_size1"] = n1
+            self.sample_statistics["sample_size2"] = n2
+        else:
+            raise ValueError("You must provide either 'sample1' and 'sample2' OR all four summary stats: 'sample_var1', 'sample_size1', 'sample_var2', 'sample_size2'.")
+
+        v1, v2 = self.sample_statistics["sample_var1"], self.sample_statistics["sample_var2"]
+        dfn = self.sample_statistics["sample_size1"] - 1
+        dfd = self.sample_statistics["sample_size2"] - 1
+        f_stat = v1 / v2
+        
+        self.test_statistic = {
+            "upper": "F",
+            "lower": f_stat,
+            "distribution": f"F(\\df_1={dfn}, \\df_2={dfd})",
+        }
+        self.pvalue = compute_p_value('f', f_stat, test_type=test_type, dfn=dfn, dfd=dfd)
+        self.critical_region = compute_critical_region('f', alpha=alpha, test_type=test_type, dfn=dfn, dfd=dfd)
+        self.reject_H0 = (self.pvalue < self.alpha/2) if test_type == "tweezijdig" else (self.pvalue < self.alpha)
+
+        return self

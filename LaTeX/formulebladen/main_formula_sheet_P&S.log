@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  15 OCT 2026 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  12 NOV 2026 14:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/main_formulebladen_PMTPS.tex
-(c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/main_formulebladen_PMTPS.tex
+**c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/main_formula_sheet_P&S.tex
+(c:/Users/Admin/Documents/GitHub/Statistiek/LaTeX/formulebladen/main_formula_sheet_P&S.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -1058,36 +1058,36 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'dutch'.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 20.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 23.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count456
-) (main_formulebladen_PMTPS.aux
+) (main_formula_sheet_P&S.aux
 Package babel Info: 'dutch' activates 'dutch' shorthands.
 (babel)             Reported on input line 9.
 )
-\openout1 = `main_formulebladen_PMTPS.aux'.
+\openout1 = `main_formula_sheet_P&S.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1128,11 +1128,11 @@ LaTeX Font Info:    ... okay on input line 20.
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
 File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 20.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 23.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 20.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 23.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count459
@@ -1164,103 +1164,134 @@ Package caption Info: End \AtBeginDocument code.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 20.
-(main_formulebladen_PMTPS.out) (main_formulebladen_PMTPS.out)
+Package hyperref Info: Link coloring OFF on input line 23.
+(main_formula_sheet_P&S.out) (main_formula_sheet_P&S.out)
 \@outlinefile=\write4
-\openout4 = `main_formulebladen_PMTPS.out'.
+\openout4 = `main_formula_sheet_P&S.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 72.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
+Overfull \hbox (0.46584pt too wide) in paragraph at lines 28--39
+ [] 
+ []
+
+
+Overfull \hbox (3.14458pt too wide) in paragraph at lines 50--50
+[]|\T1/bch/b/n/10.95 Application:| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 52.
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\T1/bch/b/n/10.95 Standard
+ []
+
+
+Overfull \hbox (11.53589pt too wide) in paragraph at lines 44--63
+ [] 
+ []
+
+
 
 [1
 
 {C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (0.76814pt too wide) in paragraph at lines 91--118
- [][] 
+Overfull \hbox (1.10333pt too wide) in paragraph at lines 73--73
+[]|\T1/bch/b/n/10 Mean| 
+ []
+
+
+Overfull \hbox (12.79413pt too wide) in paragraph at lines 71--102
+ [] 
  []
 
 
 
 [2]
-<../../LaTeX/figures/linkszijdig.png, id=30, 1156.32pt x 650.43pt>
+
+[3]
+<../../LaTeX/figures/linkszijdig.png, id=45, 1084.05pt x 433.62pt>
 File: ../../LaTeX/figures/linkszijdig.png Graphic file (type png)
 <use ../../LaTeX/figures/linkszijdig.png>
-Package pdftex.def Info: ../../LaTeX/figures/linkszijdig.png  used on input line 156.
-(pdftex.def)             Requested size: 161.40483pt x 90.78168pt.
-<../../LaTeX/figures/tweezijdig.png, id=32, 1156.32pt x 650.43pt>
+Package pdftex.def Info: ../../LaTeX/figures/linkszijdig.png  used on input line 219.
+(pdftex.def)             Requested size: 161.40483pt x 64.55719pt.
+<../../LaTeX/figures/tweezijdig.png, id=47, 1084.05pt x 433.62pt>
 File: ../../LaTeX/figures/tweezijdig.png Graphic file (type png)
 <use ../../LaTeX/figures/tweezijdig.png>
-Package pdftex.def Info: ../../LaTeX/figures/tweezijdig.png  used on input line 156.
-(pdftex.def)             Requested size: 161.40483pt x 90.78168pt.
-<../../LaTeX/figures/rechtszijdig.png, id=33, 1156.32pt x 650.43pt>
+Package pdftex.def Info: ../../LaTeX/figures/tweezijdig.png  used on input line 219.
+(pdftex.def)             Requested size: 161.40483pt x 64.55719pt.
+<../../LaTeX/figures/rechtszijdig.png, id=48, 1084.05pt x 433.62pt>
 File: ../../LaTeX/figures/rechtszijdig.png Graphic file (type png)
 <use ../../LaTeX/figures/rechtszijdig.png>
-Package pdftex.def Info: ../../LaTeX/figures/rechtszijdig.png  used on input line 156.
-(pdftex.def)             Requested size: 161.40483pt x 90.78168pt.
+Package pdftex.def Info: ../../LaTeX/figures/rechtszijdig.png  used on input line 219.
+(pdftex.def)             Requested size: 161.40483pt x 64.55719pt.
 
-Overfull \hbox (10.08647pt too wide) in paragraph at lines 151--158
-[][] 
+Overfull \hbox (10.08647pt too wide) in paragraph at lines 214--221
+ [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
 []|\T1/bch/b/n/10.95 Probability
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
 \T1/bch/b/n/10.95 dis-tri-bu-tion
  []
 
 
-Overfull \hbox (6.41962pt too wide) in paragraph at lines 167--168
-[]|[]| 
+
+[4 <../../LaTeX/figures/linkszijdig.png> <../../LaTeX/figures/tweezijdig.png> <../../LaTeX/figures/rechtszijdig.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
+[]|\T1/bch/b/n/10.95 Probability
  []
 
 
-Overfull \hbox (1.1148pt too wide) in paragraph at lines 163--178
- [][] 
- []
-
-
-
-[3 <../../LaTeX/figures/linkszijdig.png> <../../LaTeX/figures/tweezijdig.png> <../../LaTeX/figures/rechtszijdig.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
-[]|\T1/bch/b/n/10.95 Probability dis-tri-bu-tion
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
+\T1/bch/b/n/10.95 dis-tri-bu-tion
  []
 
 
 
-[4] (main_formulebladen_PMTPS.aux)
+[5] (main_formula_sheet_P&S.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
-Package rerunfilecheck Info: File `main_formulebladen_PMTPS.out' has not changed.
+Package rerunfilecheck Info: File `main_formula_sheet_P&S.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52192 strings out of 468133
- 1271451 string characters out of 5430719
- 1812979 words of memory out of 5000000
- 80055 multiletter control sequences out of 15000+600000
- 650342 words of font info for 74 fonts, out of 8000000 for 9000
+ 52215 strings out of 468133
+ 1271565 string characters out of 5430719
+ 1822878 words of memory out of 5000000
+ 80066 multiletter control sequences out of 15000+600000
+ 671130 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,26n,131p,858b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main_formulebladen_PMTPS.pdf (4 pages, 263386 bytes).
+ 102i,20n,131p,856b,1224s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main_formula_sheet_P&S.pdf (5 pages, 323568 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
