@@ -3,7 +3,7 @@ import numpy as np
 from scipy.stats import chi2, f, norm, t
 
 # Importeer jouw reeds bestaande class uit het berekeningsbestand
-from statistics_utils.calculations.hypothesis_tests import HypothesisTestRunner
+from statistics_utils.calculations.hypothesis_tests_calc import HypothesisTestRunner
 
 # ==========================================
 # STYLING & CONFIGURATIE
@@ -32,52 +32,50 @@ def plot_hypothesis_test(
     runner, display_mode="both", filename="toets_resultaat.png"
 ):
     """Genereert de visualisatie op basis van een geinstantieerde HypothesisTestRunner."""
-    test_name = runner["test"]
-    test_type = runner["test_type"] 
-    test_statistic = runner["statistic"]
-    p_value = runner["p_value"]
-    alpha = runner["alpha"]
-    critical_value_left = runner.get("critical_value_left", -np.inf)
-    critical_value_right = runner.get("critical_value_right", np.inf)
-    critical_region = runner["region"]
+    test_name = runner.test_name
+    test_type = runner.test_type
+    test_statistic = runner.test_statistic["value"]
+    dist_params = runner.test_statistic["dist_params"]
+    left, right, p_value = runner.pvalue.values()
+    alpha = runner.alpha
+    critical_value_left, critical_value_right, critical_region = runner.critical_region.values()
 
-    if "z-test" in test_name:
+    if "z-toets" in test_name:
         dist_type = "norm"
         dist = norm
         pdf_params = {"loc": 0, "scale": 1}
         df = None
-    elif "t-test" in test_name:
+    elif "t-toets" in test_name:
         dist_type = "t"
         dist = t
-        df = runner["df"]
-        pdf_params = {"df": df}
-    elif "chi-square" in test_name:
+        df = dist_params["df"]
+        pdf_params = dist_params
+    elif "chikwadraat" in test_name:
         dist_type = "chi2"
         dist = chi2
-        df = runner["df"]
-        pdf_params = {"df": df}
-    elif "f-test" in test_name:
+        df = dist_params["df"]
+        pdf_params = dist_params
+    elif "$F$-toets voor gelijke varianties" in test_name:
         dist_type = "f"
         dist = f
-        dfn, dfd = runner["df"]
-        pdf_params = {"dfn": dfn, "dfd": dfd}
+        dfn, dfd = dist_params["dfn"], dist_params["dfd"]
+        pdf_params = dist_params
     else:
         raise ValueError(f"Onbekend toetstype in runner: {test_name}")
-
-    
         
     fig, ax = plt.subplots(figsize=(16, 9))
     buffer = 1.3
 
     # Bepaal het x-domein op basis van de distributie in de runner
-    if test_name == "z-test":
+    if test_name == "z-toets":
         xmin, xmax = -4, 4
-    elif "t-test" in test_name:
+        print("hello")
+    elif "t-toets" in test_name:
         xmin = max(buffer * t.ppf(alpha / 2, df=df), -5)
         xmax = -xmin
-    elif "chi-square" in test_name:
+    elif "chikwadraat" in test_name:
         xmin, xmax = 0, max(critical_value_right * buffer, test_statistic * buffer, 10)
-    elif "f-test" in test_name:
+    elif "$F$-toets" in test_name:
         xmin, xmax = 0, max(critical_value_right * buffer, test_statistic * buffer, 5)
 
     x = np.linspace(xmin, xmax, 1_000)
@@ -116,18 +114,19 @@ def plot_hypothesis_test(
         pdf_stat = dist.pdf(test_statistic, **pdf_params)
 
         ax.plot([test_statistic, test_statistic], [0, pdf_stat], color=PRIMARY_PLOT_COLOR, linestyle="--", linewidth=1)
-        ax.text(test_statistic,ytest_stat, f"${TOETSINGSGROOTHEID_LABEL[dist_type]["lower"]}\\approx{test_statistic:.4f}$", color=PRIMARY_PLOT_COLOR, fontsize=TEXT_FONT_SIZE, ha="center")
 
-        p_left = dist.cdf(test_statistic, **pdf_params)
-        p_right = 1 - dist.cdf(test_statistic, **pdf_params)
-
-        if dist_type in ["chi2", "f"]:
-            p_val = p_right
-            where_cond = x >= test_statistic
+        if xmin <= test_statistic <= xmax:
+            ax.text(test_statistic,ytest_stat, f"${TOETSINGSGROOTHEID_LABEL[dist_type]["lower"]}\\approx{test_statistic:.4f}$", color=PRIMARY_PLOT_COLOR, fontsize=TEXT_FONT_SIZE, ha="center")
+        elif test_statistic < xmin:
+            ax.text(xmin, ytest_stat, f"$\\leftarrow{TOETSINGSGROOTHEID_LABEL[dist_type]["lower"]}\\approx{test_statistic:.4f}$", color=PRIMARY_PLOT_COLOR, fontsize=TEXT_FONT_SIZE, ha="left")
         else:
-            p_val = (p_left * 2 if test_type == "tweezijdig" else (p_left if test_type == "linkszijdig" else p_right))
-        where_cond = ((x <= test_statistic) if test_statistic <= 0 else (x >= test_statistic))
-        ax.fill_between(x, 0, pdf_H0, where=where_cond, color=PRIMARY_PLOT_COLOR, alpha=OPACITY_LEVEL, label=f"$p$-waarde = {p_val:.4f}")
+            ax.text(xmax, ytest_stat, f"${TOETSINGSGROOTHEID_LABEL[dist_type]["lower"]}\\approx{test_statistic:.4f}\\rightarrow$", color=PRIMARY_PLOT_COLOR, fontsize=TEXT_FONT_SIZE, ha="right")
+
+        if test_type == "linkszijdig" or (test_type == "tweezijdig" and p_value == left):
+            where_cond = (x <= test_statistic)
+        else:
+            where_cond = (x >= test_statistic)
+        ax.fill_between(x, 0, pdf_H0, where=where_cond, color=PRIMARY_PLOT_COLOR, alpha=OPACITY_LEVEL, label=f"$p$-waarde = {p_value:.4f}")
 
     ax.legend(prop={"size": 12})
     plt.xticks(fontsize=TEXT_FONT_SIZE)
