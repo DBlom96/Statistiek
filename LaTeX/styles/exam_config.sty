@@ -12,15 +12,15 @@
     \end{itemize}
 }
 
-% \newenvironment{enquestion}[2] % #1 = points, #2 = question
-% {%
-%     \newpage
-%     \refstepcounter{question}
-%     \textbf{Problem \arabic{question} (#1 points)} {#2}
-%     \begin{itemize}[label={}, left=1.5em, itemsep=1.5em]
-% }{
-%     \end{itemize}
-% }
+\renewenvironment{enquestion}[2] % #1 = points, #2 = question
+{%
+    \newpage
+    \refstepcounter{question}
+    \textbf{Problem \arabic{question} (#1 points)} {#2}
+    \begin{itemize}[label={}, left=1.5em, itemsep=1.5em]
+}{
+    \end{itemize}
+}
 
 % Subquestion Command
 \renewenvironment{subquestion}[2]{% #1 = points, #2 = subquestion text

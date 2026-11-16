@@ -1,0 +1,110 @@
+\begin{enquestion}{20}{
+    A military unit uses small unmanned aerial vehicles (UAVs) for reconnaissance missions.
+    One important component has a random operational range $X$, measured in kilometers.
+    Based on previous experience, the lifetime is modelled by a continuous uniform distribution with probability density function
+    \begin{align*}
+        f(x; \theta)
+        =
+        \begin{cases}
+            \frac{1}{\theta}, & 0 \leq x \leq \theta \\
+            0, & \text{otherwise.},
+        \end{cases}
+    \end{align*}
+    where $\theta > 0$ is an unknown parameter representing the maximum operational range.
+    Suppose now a sample $X_1, X_2, \ldots, X_n$ of $n$ independent components is tested.
+    An analist considers two estimators for the maximal operational range $\theta$:
+    \[  \hat{\Theta}_1 = 2 \overline{X} \qquad \qquad \hat{\Theta}_2 = \max\{X_1, \ldots, X_n\} = X_{(n)} \]
+}
+
+    \subquestion{4}{
+        Derive the maximum likelihood estimator (MLE) $\hat{\Theta}_{\textrm{MLE}}$ of $\theta$.
+        Show explicitly the steps of your derivation.
+    }
+    \solution{
+        The likelihood function can be written as follows:
+        \begin{align*}
+            L(x_{1}, x_{2}, \ldots, x_{n}; \theta) &= f(x_{1}; \theta) \cdot  f(x_{2}; \theta) \ldots \cdot f(x_{n}; \theta) \\
+                                                   &= \begin{cases}
+                                                        \left( \frac{1}{\theta} \right)^n, & 0 \leq x_i \leq \theta \text{ for all } i=1,2,\ldots, n\\
+                                                        0, & \text{otherwise.}\rubric{2}
+                                                   \end{cases}                                        
+        \end{align*}
+        Specifically, this likelihood function is strictly decreasing in $\theta$, so the maximum is attained for the smallest possible $\theta$ that is larger than or equal to all $x_i$, i.e., the maximum of the $x_i$'s.\rubric{1}
+        In particular, this means that $\hat{\Theta}_{\textrm{MLE}} = \max\{X_1, X_2, \ldots, X_n\} = X_{(n)}$ is the maximum likelihood estimator of $\theta$.\rubric{1}
+    }
+
+    \subquestion{6}{
+        Show for both suggested estimators whether or not it is an unbiased estimator.
+        You can use the following facts:
+        \begin{itemize}
+            \item As $X_1, X_2, \ldots, X_n$ is an independent sample, we have $F_{X_{(n)}} = P(X_{(n)} \leq x) = P(X_1\leq x)\cdot P(X_2 \leq x) \cdot \ldots 
+            P(X_n\leq x)$. 
+            \item The expected value of a nonnegative continuous random variable $Y$ can be computed as
+            \[
+                E(Y) = \int_{0}^{\infty} (1 - F(y)) \dy.
+            \]
+        \end{itemize}
+    }
+    \solution{
+        An estimator $\hat{\Theta}$ for a population parameter $\theta$ is \emph{unbiased} whenever it holds that $E(\hat{\Theta}) = \theta$.
+        For the first estimator $\hat{\Theta}_1$, we have   
+        \begin{align*}
+            E(\hat{\Theta}_1) = E(2\overline{X}) = 2 E(\overline{X}) = 2 \frac{(\theta-0)}{2} = \theta. \rubric{1}
+        \end{align*}
+        Therefore, the first estimator $\hat{\Theta}_1$ is unbiased.\rubric{1}
+
+        For the second estimator $\hat{\Theta}_2$, we use the first fact to find that the CDF of the maximum $X_{(n)}$ is equal to
+        \begin{align*}
+            F_{X_{(n)}}(x) = P(X_1\leq x)\cdot P(X_2 \leq x) \cdot \ldots P(X_n\leq x) = \begin{cases} \left( \frac{x}{\theta} \right)^n, & 0 \leq x \leq \theta,\\ 0, & \text{otherwise.}\end{cases}  \rubric{1}
+        \end{align*}
+
+        Consequently, we can apply the second fact for the random variable $Y = X_{(n)}$ to get
+        \begin{align*}
+            E(\hat{\Theta}_2) = E(X_{(n)}) &= \int_{0}^{\infty} (1 - F(y)) \dy \\
+                                           &= \int_0^\theta (1 - \left(\frac{y}{\theta}\right)^n) \dy \\
+                                           &= \left[y - \frac{1}{\theta^n} \frac{y^{n+1}}{n+1}\right]_0^\theta \\
+                                           &= \theta - \frac{1}{\theta^n} \frac{\theta^{n+1}}{n+1} \\
+                                           &= \frac{n}{n+1}\theta.\rubric{2}
+        \end{align*}
+        Therefore, the second estimator $\hat{\Theta}_1$ is not unbiased, as it has a bias of $\frac{1}{n+1}\theta$.\rubric{1}
+        (\emph{However, we can use this result to say that $\hat{\Theta} = \frac{n+1}{n}X_{(n)}$ is an unbiased estimator.})
+    }
+
+    \subquestion{7}{
+        Compute the variance of both suggested estimators.
+        Explain with a calculation why the second estimator has the smallest variance.
+        You can use the fact that $E(\overline{X}^2) = \frac{3n+1}{12n}\theta^2$ and $E(X_{(n)}^2) = \frac{n\theta^2}{n+2}$.
+    }
+    \solution{
+        To compute the variances of both estimators, we can use the shortcut formula $V(X) = E(X^2) - [E(X)]^2$.\rubric{1}
+
+        As we are given that $E(\overline{X}^2) = \frac{3n+1}{12n}\theta^2$, we have for the first estimator that
+        \begin{align*}
+            V(2\overline{X})    &= E((2\overline{X})^2) - [E(2\overline{X})]^2 \\
+                                &= E(4\overline{X}^2) - [E(2\overline{X})]^2 \\
+                                &= 4 E(4\overline{X}^2)- [E(2\overline{X})]^2 \\
+                                &= 4 \frac{3n+1}{12n}\theta^2 - \theta^2 \\
+                                &= 4 \frac{3n+1}{12n}\theta^2 - \theta^2 \\
+                                &= \frac{3}{n}\theta^2.\rubric{2}
+        \end{align*}
+        For the second estimator $\hat{\Theta}_2 = X_{(n)}$, we have   
+        \begin{align*}
+            V(X_{(n)})          &= E(X_{(n)}^2) - [E(X_{(n)})]^2 \\
+                                &= \frac{n\theta^2}{n+2} - \left(\frac{n}{n+1}\theta\right)^2 \\
+                                &= \frac{n(n+1)^2 - n^2(n+2)}{(n+2)(n+1)^2}\theta^2 \\
+                                &= \frac{n}{(n+1)^2(n+2)}\theta^2\rubric{2}
+        \end{align*}
+        If we compare variances, we see that $\frac{3}{n}\theta^2 > \frac{n}{(n+1)^2(n+2)}\theta^2$ even for small values of $n$.\rubric{1}
+        Therefore, the maximum $\hat{\Theta}_2 = X_{(n)}$ is the estimator with the smaller variance compared to twice the sample mean $\hat{\Theta}_1 = 2 \overline{X}$.\rubric{1}
+    }
+
+    \subquestion{3}{
+        Explain why it practically makes sense that the second estimator has a smaller variance.
+    }
+    \solution{
+        Notice that for the second estimator, the sample maximum $X_{(n)}$ captures all the information that the sample contains about the population parameter $\theta$.\rubric{1}
+        The smaller values do not add additional information, but this is included in the first estimator, which involves the sample mean.\rubric{1}
+        Averaging over all these smaller values only injects unnecessary noise in the estimator.\rubric{1}
+    }
+
+\end{enquestion}

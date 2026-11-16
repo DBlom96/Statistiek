@@ -366,7 +366,7 @@ Voordat we de toetsingsgrootheid kunnen berekenen, hebben we eerst de verwachte 
         \\toprule
             \\textbf{{Uitkomst $i$}} & \\textbf{{Observed}} ($o_i$) & \\textbf{{Expected}} ($e_i$) \\\\
         \\midrule
-            {"\n".join(f"{i} & {observed[i]:.4f} & {expected[i]:.4f}" for i in range(len(observed)))}
+            {"\n".join(f"            {i} & {observed[i]:.4f} & {expected[i]:.4f}" for i in range(len(observed)))}
         \\bottomrule
     \\end{{tabular}}
 \\end{{center}}
@@ -375,7 +375,7 @@ De toetsingsgrootheid is:
 \\begin{{align*}}
     X^2 = \\sum \\frac{{(O_i - E_i)^2}}{{E_i}},
 \\end{{align*}}
-en volgt onder $H_0$ een $\\chi^2$-verdeling met $\\df = {df}$ (altijd rechtszijdig).
+en volgt onder $H_0$ een $\\chi^2$-verdeling met $\\df = {df}$ vrijheidsgraden (altijd rechtszijdig).
     """
     
     observed_calc = f"""

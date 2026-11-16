@@ -366,7 +366,7 @@ Voordat we de toetsingsgrootheid kunnen berekenen, hebben we eerst de verwachte 
         \\toprule
             \\textbf{{Uitkomst $i$}} & \\textbf{{Observed}} ($o_i$) & \\textbf{{Expected}} ($e_i$) \\\\
         \\midrule
-            {"\n".join(f"{i} & {observed[i]:.4f} & {expected[i]:.4f}" for i in range(len(observed)))}
+            {"\n".join(f"            {i} & {observed[i]:.4f} & {expected[i]:.4f}" for i in range(len(observed)))}
         \\bottomrule
     \\end{{tabular}}
 \\end{{center}}

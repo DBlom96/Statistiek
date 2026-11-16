@@ -7,18 +7,19 @@ import comtypes.client
 import locale
 
 # Load template
-PATH = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\titelbladen"
-doc = Document(PATH + fr"\Tentamenvoorblad.docx")
+PATH = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\templates"
+doc = Document(PATH + fr"\Tentamenvoorblad_engels.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
-vaknaam = "Statistiek deel 2 (herkansing / vierde kans)"
-vakcode = "STA#2"
-datum = "20261106"
-tentamentijd = "13:30 - 16:30"
+vaknaam = "Probability & Statistics"
+vakcode = "P&S - PMTPS"
+datum = "20261204"
+tentamentijd = "9:20-12:20"
 examinator = "Dr. ir. D.A.M.P. Blom"
-peer_review = "Dr. M. van Ee"
-aantal_opgaven = "4"
-aantal_paginas = "4"
+peer_review = "Dr. N.A.C. Levering"
+aantal_opgaven = "5"
+aantal_paginas = "5"
+aantal_punten = "100"
 
 formatted_date = datetime.strptime(datum, "%Y%m%d").strftime("%d %B %Y")
 if formatted_date[0] == "0":
@@ -37,7 +38,9 @@ replacements = {
     "{{vakcode}}": vakcode,
     "{{tentamentijd}}": tentamentijd,
     "{{peer_review}}": peer_review,
-    "{{num_opgaves}}": aantal_opgaven
+    "{{num_opgaves}}": aantal_opgaven,
+    "{{num_points}}": aantal_punten,
+    "{{num_points/10}}": ("10" if aantal_punten == "100" else str(int(aantal_punten)/10))
 }
 
 def replace_text(paragraphs):
