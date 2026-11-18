@@ -1,88 +1,124 @@
-\begin{enquestion}{23}{
-    During CBRN readiness training, military standards require that personnel are able to don full protective gear in no more than $6.0$ minutes.
-    A commander collects data from a random sample of twelve soldiers. 
-    The sample mean donning time is $6.3$ minutes.
-    Assume donning times are normally distributed with a population standard deviation of $0.4$ minutes.
+\begin{enquestion}{20}{
+    The Royal Netherlands Army Command (CLAS) is testing a new type of battery for portable communication devices.
+    The manufacturer claims an average service life of $\mu_0 = 36$ hours per fully charged battery.
+    From previous production runs, it is known that the service life is normally distributed.
+    A test batch of $n = 25$ batteries yields a mean of $35.6$ hours and a standard deviation of $3.04$ hours.
 }
-    
+
     \subquestion{5}{
-        Construct a \SI{95}{\percent}-confidence interval for the true mean donning time $\mu$. 
-        Interpret the result in context.
-    }
-    \solution{
-        As the true standard deviation $\sigma = 0.4$, we can use the normal distribution to compute the confidence interval. \rubric{1}
-        The $z$-value corresponding to a \SI{95}{\percent} confidence level, i.e., $\alpha = 0,05$, is (in case of two-sided confidence intervals) equal to:
-        \begin{align*}
-            z_{\alpha/2}   &= \invnorm(\text{area}=1-\alpha/2; \mu=0; \sigma=1) \\
-                &= \invnorm(\text{area}=0.975; \mu=0; \sigma=1) \\
-                &\approx 1,96. \rubric{1}
-        \end{align*}
-        The \SI{95}{\percent}-confidence interval is then given by
-        \begin{align*}
-            &[\overline{x} - z_{\alpha/2} \cdot \frac{ \sigma }{ \sqrt{ n } }; \overline{x} + z_{\alpha/2} \cdot \frac{ \sigma }{ \sqrt{ n } }] \\
-            &= [6.3 - 1.96 \cdot \frac{ 0.4 }{ \sqrt{ 12 } }; 6.3 + 1.96 \cdot \frac{ 0.4 }{ \sqrt{ 12 } }] \\
-            &= [6.0737; 6.5263]. \rubric{2}
-        \end{align*}
-
-        As the interval does not contain the value $6.0$, with \SI{95}{\percent} confidence we can say that the true average donning time is longer than $6.0$ minutes. \rubric{1}
+        Calculate a two-sided \SI{96}{\percent}-confidence interval for the mean service life $\mu$ based on the given sample data.
+        Round the boundaries to one decimal place in such a way that the confidence level is guaranteed.
+        Is there a reason to believe that the mean service life differs significantly from $36$ hours?
     }
 
-    \subquestion{4}{
-        What is the minimum sample size required to estimate the true mean donning time $\mu$ within $\pm 0.1$ minutes, with \SI{95}{\percent} confidence?
-    }
-    \solution{
-        As the population standard deviation $\sigma = 0.4$ is known, we can use the normal distribution to compute the minimum sample size. \rubric{1}
-        Furthermore, we know that $\alpha = 0,05$ and the deviation is at most $a = 0,1$.
-        The minimum required sample size is then equal to
-        \begin{align*}
-            n \ge \left( \frac{ z_{\alpha/2} \cdot \sigma }{ a } \right)^2 = \left( \frac{ 1.96 \cdot 0.4 }{ 0.1 }\right)^2 \approx 61.4633. \rubric{2}
-        \end{align*}
-        Notice that we need to round up to the nearest integer.
-        At least $62$ soldiers must be sampled to estimate the mean donning time within $\pm 0.1$ minutes with \SI{95}{\percent} confidence, assuming the standard deviation remains at 0.4 minutes.\rubric{1}
-    }
+    \ensolution{
+        The problem states that $\mu_0 = 36$ hours, the sample mean
+        $\samplemeanx = 35.6$ hours, the sample standard deviation
+        $s = 3.04$ hours, and the sample size $n = 25$.
 
-    We would like to test if the true mean donning time is indeed up to military standards.
-    For that purpose, a hypothesis test needs to be conducted.
-    From the following questions onwards, we assume that the \textbf{sample} standard deviation (based on the twelve soldiers) is equal to $0.4$ minutes, and the true standard deviation $\sigma$ is unknown.
-    Use a significance level $\alpha = 0,05$.
-    \subquestion{4}{
-        State the null and alternative hypothesis of the hypothesis test.
-        Explain your choice on the type of hypothesis test (left-sided, two-sided or right-sided).
-    }
-    \solution{
-        In this hypothesis test, we want to test a claim on the true mean donning time $\mu$.
-        The null hypothesis $H_0$ and the alternative hypothesis $H_1$ can be formulated as follows:
-        \begin{align*}
-            H_{0}: \mu &\le 6.0 \tag{mean donning time conform military standard} \\ \rubric{2}
-            H_{1}: \mu &> 6.0 \tag{mean donning time violate military standard} \rubric{1}
-        \end{align*}
-
-        In this case, we work with a right-sided test (alternative hypothesis has sign $>$), since we take the military standard (within $6.0$ minutes) as default setting and only reject the claim of satisfying this standard if the sample mean donning time is significantly larger than $6.0$ minutes.\rubric{1}    }
-
-    \subquestion{10}{
-        Perform the hypothesis test and state your conclusion based on the critical region.
-    }
-
-    \solution{
-        We use the null hypothesis $H_0$ and the alternative hypothesis $H_1$ from the previous subquestion.
-        Furthermore, the sample mean $\overline{x} = 6.3$ and $s = 0.4$ are given, as well as the significance level $\alpha=0,05$.
+        The service life $X$ of an arbitrary battery is normally distributed with $\mu = \text{ ?}$ and $\sigma = \text{ ?}$. 
+        We want to calculate a confidence interval for the unknown $\mu$ based on the sample data. 
         
-        As we work with a right-sided test, the critical region is of the form $[g, \infty)$.\rubric{1}
-        We want to compute the smallest value $g$ such that the probability of a type-I error (rejecting $H_0$ while it is true) is equal to $\alpha=0,05$.\rubric{1}
-
-        Under the null hypothesis, the true mean donning time $\overline{X}$ of twelve arbitrarily soldiers is normally distributed with $\mu = 6.0$ en standard deviation $\frac{\sigma}{\sqrt{12}}$.\rubric{1}
-        As $\sigma$ is unknown and $n = 12 < 30$, we need to resort to the $t$-distribution, using the estimation $s = 0.4$. \rubric{1}
-        As we have a right-sided test, the corresponding $t$-value is equal to 
-        \[
-            t = \invt(opp=1-\alpha; df=n-1) = \invt(opp=0,95; df=11) \approx 1,7959. \rubric{1}
-        \]
+        Since the standard deviation $\sigma$ is unknown, we need to resort to the $t$-distribution for computing a confidence interval and use the sample standard deviation as an estimate.\rubric{1}
         
-        The associated boundary value $g$ is then equal to
+        Furthermore, $\alpha = 0.04$, because we want to calculate a \SI{96}{\percent} confidence interval.
+        The corresponding $t$-value is equal to
         \[
-            g = \mu + t \cdot \frac{s}{\sqrt{12}} = 6.0 + 1,7959 \cdot \frac{0.4}{\sqrt{12}} \approx 6.2074. \rubric{2}
+            t_{n-1, \alpha/2} = \invnorm(\opp=1-\alpha/2=0.98, \df=n-1=24) \approx 2.1715.\rubric{1}
         \]
+        The \SI{96}{\percent} confidence interval is then given by
+        \begin{align*}
+            &\phantom{=}[\samplemeanx - t_{n-1, \alpha/2} \cdot \frac{ s }{ \sqrt{ n } }, \samplemeanx + t_{n-1, \alpha/2} \cdot \frac{ s }{ \sqrt{ n } }] \\
+            &= [35.6 - 2.1715 \cdot \frac{ 3.04 }{ \sqrt{ 25 } }, 35.6 + 2.1715 \cdot \frac{ 3.04 }{ \sqrt{ 25 } }] \\
+            &= [34.2797, 36.9203].\rubric{2}
+        \end{align*}
+        Since the original value $\mu_0 = 36$ hours lies within the confidence interval, there is insufficient evidence to say that the mean service life differs significantly from $36$ hours.\rubric{1}
+    }
 
-        The sample mean $\overline{x} = 6.3$ is larger than this boundary value $g \approx 6.2074$, so $\overline{x}$ lies in the critical region.
-        Therefore, under this significance level $\alpha$, the null hypothesis will be rejected. \rubric{1}
-        Based on the given sample, there is enough evidence that the true mean donning time is significantly longer than $6.0$ minutes, therefore violating military standards.\rubric{2}    }
+    \subquestion{7}{
+        The manufacturer wants to estimate the mean service life more precisely, namely with a maximum deviation of $\pm 0.5$ hours at a 
+        \SI{96}{\percent} confidence level.
+        What is the minimum required sample size $n$ to estimate with this precision?
+    }
+
+    \ensolution{
+        Our first step is to obtain an initial value for $n$ by pretending that $\sigma$ is equal to the estimate $s$.
+        If $\sigma$ would be known, we could use the corresponding $z$-value:
+        \[
+            z_{\alpha/2} = \invnorm(\opp=1-\alpha/2, \mu=0, \sigma=1) \approx 2.0537.\rubric{1}
+        \]
+        In that case, we can use the following formula:
+        \begin{align*}
+            n   &\geq \left( \frac{z_{\alpha/2} \cdot \sigma}{E} \right)^2. \\
+                &= \left( \frac{2.0537 \cdot 3.04}{0.5} \right)^2 \\
+                &\approx 155.9126. \rubric{2}
+        \end{align*}
+        We can therefore use $n = 156$ as an initial value for our search.
+
+        Now, make a table on the graphical calculator of the expression:
+        \[
+            y_1 = \invt(\opp=1-\alpha/2=0.98, \df=X-1) \cdot 3.04 / \sqrt{X},
+        \]
+        and set the table range from $n=156$ to $n=165$ (most of the time the outcomes will only be slightly larger than the initial value).\rubric{1}
+        We get:
+        \begin{align*}
+            X = 158: &\quad \frac{3.04}{\sqrt{158}} \cdot \invt(\opp=0.98, \df=158-1) \approx 0.5009. \\
+            X = 159: &\quad \frac{3.04}{\sqrt{159}} \cdot \invt(\opp=0.98, \df=159-1) \approx 0.4993. \rubric{2}
+        \end{align*}
+        With other words, we need a sample with at least $n = 159$ batteries to be able to construct a \SI{96}{\percent}-confidence interval with error margin at most $\pm 0.5$ hours.\rubric{1}
+    }
+
+    \subquestion{8}{
+        CLAS is not satisfied with the quality of the batteries from this supplier, and therefore places an order with a second supplier.
+        For a test, a batch of $n = 64$ batteries are ordered from this new supplier.
+        From this sample, it is determined that the mean service life is equal to $36.5$ hours and a standard deviation of $3.67$ hours.
+        
+        CLAS is primarily interested in whether the batteries last \emph{longer} than $36$ hours on average.
+        Perform an appropriate hypothesis test and determine the test result using the critical region.
+        Use a significance level of $\alpha = 0.04$.        
+    }
+
+    \ensolution{
+        \subsubsection*{Step 1: formulate the null hypothesis $H_0$ and the alternative hypothesis $H_1$.}
+        For a test of whether the mean $\mu$ of a normal distribution is larger than $\mu_0=36$, we use the following hypotheses
+        \begin{align*}
+            H_0: \quad \mu \leq 36\\
+            H_1: \quad \mu > 36 \rubric{1}
+        \end{align*}
+
+        \subsubsection*{Step 2: determine the significance level $\alpha$.}
+        The problem states that we may work with a significance level of $\alpha=0.04$.
+        
+        \subsubsection*{Step 3: gather data for calculating the test statistic.}
+        Furthermore, sample data has already been gathered in the problem for the population of batteries from the second supplier, namely
+        $\overline{x} = 36.5$, $s = 3.67$ hours and $n = 64$. 
+
+        \subsubsection*{Step 4: calculate the test statistic.}
+        The theoretical test statistic (capital letter!) for a $t$-test ($\sigma$ is unknown!) is 
+        \[
+            T = \frac{\overline{X}-\mu_0}{S / \sqrt{n}}. \rubric{1}
+        \]
+    
+        Under $H_0$, this test statistic follows a $t$-distribution with $\df = n - 1 = 63$ degrees of freedom. \rubric{1}
+        
+        The observed test statistic (lowercase letter!) is equal to
+        \begin{align*}
+            t = \frac{\overline{x} - \mu_0}{s / \sqrt{n}} = \frac{36.5 - 36}{3.67 / \sqrt{64}} \approx 1.0899.\rubric{1}
+        \end{align*}    
+        
+        \subsubsection*{Step 5: determine the test result (using the critical region).}
+
+        Since we are performing a right-sided test, the critical region is of the form $(g, \infty)$, where
+        \begin{align*}
+            g = \invt(\opp=1-\alpha=0.96, \df=63) \approx 1.7794.
+        \end{align*}       
+        Thus, the critical region is equal to $(1.7794, \infty)$. \rubric{2}
+
+        The observed test statistic $x = 36.5$ does not lie in the critical region,
+        so we decide not to reject $H_0$.\rubric{1}
+
+        \subsubsection*{Step 6: translate the test result back to the original context of the problem.}
+        There is insufficient reason based on this sample to assume that the mean service life $\mu$
+        of batteries from the second supplier is significantly longer than $36$ hours.\rubric{1}
+    }
 \end{enquestion}

@@ -20,12 +20,12 @@
         Derive the maximum likelihood estimator (MLE) $\hat{\Theta}_{\textrm{MLE}}$ of $\theta$.
         Show explicitly the steps of your derivation.
     }
-    \solution{
+    \ensolution{
         The likelihood function can be written as follows:
         \begin{align*}
             L(x_{1}, x_{2}, \ldots, x_{n}; \theta) &= f(x_{1}; \theta) \cdot  f(x_{2}; \theta) \ldots \cdot f(x_{n}; \theta) \\
                                                    &= \begin{cases}
-                                                        \left( \frac{1}{\theta} \right)^n, & 0 \leq x_i \leq \theta \text{ for all } i=1,2,\ldots, n\\
+                                                        \left( \frac{1}{\theta} \right)^n, & \text{if } \theta \geq x_i \text{ for all } i=1,2,\ldots, n,\\
                                                         0, & \text{otherwise.}\rubric{2}
                                                    \end{cases}                                        
         \end{align*}
@@ -45,7 +45,7 @@
             \]
         \end{itemize}
     }
-    \solution{
+    \ensolution{
         An estimator $\hat{\Theta}$ for a population parameter $\theta$ is \emph{unbiased} whenever it holds that $E(\hat{\Theta}) = \theta$.
         For the first estimator $\hat{\Theta}_1$, we have   
         \begin{align*}
@@ -75,17 +75,16 @@
         Explain with a calculation why the second estimator has the smallest variance.
         You can use the fact that $E(\overline{X}^2) = \frac{3n+1}{12n}\theta^2$ and $E(X_{(n)}^2) = \frac{n\theta^2}{n+2}$.
     }
-    \solution{
+    \ensolution{
         To compute the variances of both estimators, we can use the shortcut formula $V(X) = E(X^2) - [E(X)]^2$.\rubric{1}
 
         As we are given that $E(\overline{X}^2) = \frac{3n+1}{12n}\theta^2$, we have for the first estimator that
         \begin{align*}
             V(2\overline{X})    &= E((2\overline{X})^2) - [E(2\overline{X})]^2 \\
                                 &= E(4\overline{X}^2) - [E(2\overline{X})]^2 \\
-                                &= 4 E(4\overline{X}^2)- [E(2\overline{X})]^2 \\
-                                &= 4 \frac{3n+1}{12n}\theta^2 - \theta^2 \\
-                                &= 4 \frac{3n+1}{12n}\theta^2 - \theta^2 \\
-                                &= \frac{3}{n}\theta^2.\rubric{2}
+                                &= 4 E(\overline{X}^2)- [E(2\overline{X})]^2 \\
+                                &= 4 \left(\frac{3n+1}{12n}\right)\theta^2 - \theta^2 \\
+                                &= \frac{\theta^2}{3n}.\rubric{2}
         \end{align*}
         For the second estimator $\hat{\Theta}_2 = X_{(n)}$, we have   
         \begin{align*}
@@ -94,17 +93,19 @@
                                 &= \frac{n(n+1)^2 - n^2(n+2)}{(n+2)(n+1)^2}\theta^2 \\
                                 &= \frac{n}{(n+1)^2(n+2)}\theta^2\rubric{2}
         \end{align*}
-        If we compare variances, we see that $\frac{3}{n}\theta^2 > \frac{n}{(n+1)^2(n+2)}\theta^2$ even for small values of $n$.\rubric{1}
+        If we compare variances, we see that $\frac{1}{3n}\theta^2 > \frac{n}{(n+1)^2(n+2)}\theta^2$ even for small values of $n$.\rubric{1}
+        
         Therefore, the maximum $\hat{\Theta}_2 = X_{(n)}$ is the estimator with the smaller variance compared to twice the sample mean $\hat{\Theta}_1 = 2 \overline{X}$.\rubric{1}
     }
 
     \subquestion{3}{
         Explain why it practically makes sense that the second estimator has a smaller variance.
     }
-    \solution{
+    \ensolution{
         Notice that for the second estimator, the sample maximum $X_{(n)}$ captures all the information that the sample contains about the population parameter $\theta$.\rubric{1}
+        
         The smaller values do not add additional information, but this is included in the first estimator, which involves the sample mean.\rubric{1}
+        
         Averaging over all these smaller values only injects unnecessary noise in the estimator.\rubric{1}
     }
-
 \end{enquestion}

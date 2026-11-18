@@ -1,98 +1,99 @@
-\begin{enquestion}{22}{
-    In a joint project between physical training instructors of the Royal Military Academy (KMA) and the medical service, the relationship is investigated
-    between average sleep duration of a cadet (in hours) and the recovery time after intense physical exertion (in hours).
-    
-    Recovery time is measured using a muscle soreness index; a cadet is considered fully recovered when this index falls below a certain threshold.
-
-    For nine cadets, the average sleep duration and recovery time after intense exertion are measured.
-    
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{c|ccccccccc}
-            \toprule
-                \textbf{Sleep duration (in hours)} & $4,0$ & $4,5$ & $5,0$ & $5,5$ & $6,0$ & $6,5$ & $7,0$ & $7,5$ & $8,0$ \\
-                \textbf{Recovery time (in hours)} & $66$ & $61$ & $63$ & $62$ & $65$ & $64$ & $57$ & $59$ & $60$ \\
-            \bottomrule
-        \end{tabular}
-    \end{table}
-}
-    
-    \subquestion{2}{
-        If we want to perform a regression analysis, which variable would be the dependent variable $Y$ and which variable the independent variable $X$?
-    }
-    \solution{
-        In regression analysis, it makes the most sense to take sleep time as the independent variable $X$ and recovery time as the dependent variable $Y$.
-        A longer recovery time does not explain why someone sleeps longer, but the other way around might make sense.\rubric{2}
-    }
-    \subquestion{5}{
-        Draw the corresponding scatter plot based on your answer to subquestion (a).
-    }
-    \solution{
+\begin{enquestion}{20}{
+    A military research team is evaluating the relationship between the weight of a battle tank and the time it takes to deploy the vehicle in combat situations (in hours).
+    The team collects the following data on 10 different vehicles:
+    {\par\bigskip
         \begin{center}
-            \resizebox{0.9\textwidth}{!}{
-                \includegraphics{20250825_scatterplot_q4.png}
+            \begin{tabular}{c|cccccccccc}
+                \toprule
+                    \textbf{Vehicle weight (in tons)} & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$ & $12$ & $13$ & $14$ \\
+                \midrule
+                    \textbf{Deployment time (hours)} & $4.2$ & $4.8$ & $5.1$ & $5.3$ & $5.9$ & $6.0$ & $6.7$ & $6.8$ & $7.2$ & $7.4$ \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \par\bigskip}
+    The research team believes that there is a linear relationship between the weight of the vehicle and the deployment time.
+}
+
+    \subquestion{4}{
+        Draw a scatter plot based on the sample given above.
+        Please indicate explicitly for both axes which variable it represents.
+    }
+    \ensolution{
+        The $x$-axis indicates the independent variable, in this case the weight of the vehicle in tons.
+
+        The $y$-axis indicates the dependent variable, in this case the deployment time in hours.\rubric{2}
+        \begin{center}
+            \resizebox{\textwidth}{!}{
+                \includegraphics{exam20261204-scatterplot.png} \rubric{2}
             }
         \end{center}
     }
-
+    
     \subquestion{8}{
-        Calculate Pearson's correlation coefficient $r(x,y)$.
-        What can you conclude about the relationship between the two variables?
+        Calculate the least-squares estimate of the regression line $Y = \beta_0 + \beta_1 X$.
     }
-    \solution{
-        We start by calculating Pearson's correlation coefficient:
-        \begin{align*}
-            r(x, y) = \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\sqrt{(\overline{x^2} - \overline{x}^2)\cdot(\overline{y^2} - \overline{y}^2) }}
-        \end{align*}
-        We use the following table to find the necessary values:
+
+    \ensolution{
+        We start by generating a table based on the data, the sample sums and means can then be used to calculate the least-squares estimated $\hat{\beta}_0$ and $\hat{\beta}_{1}$:
         \begin{center}
             \begin{tabular}{ccccc}
-                \toprule
-                    $x$ & $y$ & $xy$ & $x^2$ & $y^2$ \\
-                \midrule
-    		        $4$ & $66$ & $264$ & $16$ & $4356$ \\
-                    $4,5$ & $61$ & $274,5$ & $20,25$ & $3721$ \\
-                    $5$ & $63$ & $315$ & $25$ & $3969$ \\
-                    $5,5$ & $62$ & $341$ & $30,25$ & $3844$ \\
-                    $6$ & $65$ & $390$ & $36$ & $4225$ \\
-                    $6,5$ & $64$ & $416$ & $42,25$ & $4096$ \\
-                    $7$ & $57$ & $399$ & $49$ & $3249$ \\
-                    $7,5$ & $59$ & $442,5$ & $56,25$ & $3481$ \\
-                    $8$ & $60$ & $480$ & $64$ & $3600$ \\
-                \midrule
-                    $\overline{x} = 6$ & $\overline{y} = 61,8889$ & $\overline{xy} = 369,1111$ & $\overline{x^2} = 37,6667$ & $\overline{y^2} = 3837,8889$ \\
-                \bottomrule
-            \end{tabular} \rubric{4}
+            	\toprule
+            		$X$ & $Y$ & $XY$ & $X^2$ & $Y^2$ \\
+            	\midrule
+            		$5$ & $4.2$ & $21.0$ & $25$ & $17.64$ \\ 
+            		$6$ & $4.8$ & $28.8$ & $36$ & $23.04$ \\ 
+            		$7$ & $5.1$ & $35.7$ & $49$ & $26.01$ \\ 
+            		$8$ & $5.3$ & $42.4$ & $64$ & $28.09$ \\ 
+            		$9$ & $5.9$ & $53.1$ & $81$ & $34.81$ \\ 
+            		$10$ & $6.0$ & $60.0$ & $100$ & $36.0$ \\ 
+            		$11$ & $6.7$ & $73.7$ & $121$ & $44.89$ \\ 
+            		$12$ & $6.8$ & $81.6$ & $144$ & $46.24$ \\ 
+            		$13$ & $7.2$ & $93.6$ & $169$ & $51.84$ \\ 
+            		$14$ & $7.4$ & $103.6$ & $196$ & $54.76$ \\ 
+            	\midrule
+            		$\sum X = 95$ & $\sum Y = 59.4$ & $\sum XY = 593.5$ & $\sum X^2 = 985$ & $\sum Y^2 = 363.32$ \\ 
+            		$\overline{X} = 9.5$ & $\overline{Y} = 5.94$ & $\overline{XY} = 59.35$ & $\overline{X^2} = 98.5$ & $\overline{Y^2} = 36.332$ \rubric{3} \\ 
+            	\bottomrule
+            \end{tabular}
         \end{center}
-        \vspace{1ex}
-        Now we compute Pearson's correlation coefficient as follows:
+        
+        
+        Using the standard formulas for the least-squares estimates, we get
         \begin{align*}
-            r(x,y)  &= \frac{ \overline{x \cdot y} - \overline{x} \cdot \overline{y} }{ \sqrt{ (\overline{x}^2 - \overline{x^2}) \cdot (\overline{y}^2 - \overline{y^2}) } }\\
-                    &= \frac{ 369,1111 - 6 \cdot 61,8889 }{ \sqrt{ (6^2 - 37,6667) \cdot (61,8889^2 - 3837,8889) } } \\
-                    &= \frac{-2,2222}{3,5717} \\
-                    &\approx -0,6222.\rubric{3}
-        \end{align*}
-        The correlation coefficient is clearly negative and not close to zero, indicating a fairly strong negative trend.
-        However, there is still some uncertainty in the exact linear relationship. \rubric{1}
+            \hat{\beta}_1 &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
+              &= \frac{59.3500 - 9.5000 \cdot 5.9400}{98.5000 - (9.5000)^2} \\
+              &= \frac{2.9200}{8.2500} \approx 0.3539 \rubric{2} \\
+            \hat{\beta}_0 &= \overline{y} - \hat{\beta}_1 \cdot \overline{x} \\
+              &= 5.9400 - 0.3539 \cdot 9.5000 \\
+              &\approx 2.5776. \rubric{2}
+        \end{align*}        
+        The equation of the regression line is thus equal to $Y = 2.5776 + 0.3539X$. \points{1}
+    }
+    
+    \subquestion{3}{
+        Interpret the slope $\beta_{1}$ of the regression model in the context of this exercise. 
+        What does the slope suggest about the relationship between vehicle weight and deployment time?
     }
 
-    \subquestion{7}{
-        Calculate the regression line $Y = a + b \cdot X$ by computing the coefficients $a$ and $b$.
-        Based on this regression line, give a statistically sound prediction for the recovery time of a cadet who has slept for $6$ hours and $45$ minutes.
+    \ensolution{
+        In the context of this question, the slope $\beta_{1}$ of the regression tells us how much more time it takes to deploy a vehicle in combat situations if the weight of the vehicle increases (by one ton). \rubric{1}
+
+        Since the least-squares estimate $\hat{\beta}_1$ of the slope is positive, this suggests that the deployment time increases whenever the vehicle weight increases. \rubric{2}
     }
-    \solution{
-        In order to compute the coefficients $a$ and $b$, we reuse the table from subquestion (a).
-        We have that
+
+    \subquestion{5}{
+        Calculate the correlation coefficient $r(x,y)$ between the vehicle weight and deployment time. 
+        Based on the value of the correlation coefficient, what can you conclude about the strength and direction of the relationship between the two variables?}
+
+    \ensolution{
+        The correlation coefficient $r(x,y)$ can be computed as follows:
         \begin{align*}
-            b &= \frac{\overline{xy} - \overline{x} \cdot \overline{y}}{\overline{x^2} - (\overline{x})^2} \\
-              &= \frac{369,1111 - 6 \cdot 61,8889}{37,6667 - (6)^2} \\
-              &= \frac{-2,2222}{1,6667} \approx -1,3333 \\ \rubric{2}
-            a &= \overline{y} - b \cdot \overline{x} \\
-              &= 61,8889 - (-1,3333 \cdot 6) \\ 
-              &\approx 69,8889.\rubric{2}
+            r(x,y) = \frac{\Cov{x}{y}}{\sqrt{s_{X}^2\cdot s_{Y}^2}} &= \frac{\sum_{i=1}^n x_iy_i - n \cdot \overline{x} \cdot \overline{y}}{\sqrt{(\sum_{i=1}^n x_{i}^2 - n \cdot \overline{x}^2) \cdot (\sum_{i=1}^n y_{i}^2 - n \cdot \overline{y}^2)}}   \\
+            &= \frac{593.5 - 10 \cdot 9.5 \cdot 5.94}{\sqrt{(985 - 10 \cdot 9.5^2) \cdot (363.32 - 10 \cdot 5.94^2)}} \\
+            &\approx 0.9929 \rubric{3}
         \end{align*}
-        The formula of the regression line is equal to $Y = 69,8889 - 1,3333 \cdot X$. \rubric{1}
-        A statistically sound prediction of the recovery time of a cadet who slept for $6$ hours and $45$ minutes is found by filling in $X = 6,75$:
-        This results in a predicted recovery time of $Y = 69,8889 - 1,3333 \cdot 6,75 = 60,88887$ hours, or just under $61$ hours. \rubric{2} 
+        
+        The value of the correlation coefficient is very close to 1, which suggests a very strong positive correlation between vehicle weight and deployment time in a combat situation. \rubric{2}
     }
 \end{enquestion}

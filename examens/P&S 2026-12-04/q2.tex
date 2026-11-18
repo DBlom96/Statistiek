@@ -5,7 +5,7 @@
     After monitoring $N = 250$ salvos under gusty crosswinds, the range safety officer records the following data:
     \begin{table}[htbp!]
         \centering
-        \begin{tabular}{cc}
+        \begin{tabular}{ccc}
             \toprule
                 \textbf{Number of hits in a salvo} & \textbf{Frequencies} & \textbf{Theoretical probability} \\
             \midrule
@@ -25,7 +25,7 @@
         What kind of hypothesis test would be suitable for testing whether or not the wind conditions altered the hit distribution.
         Formulate the corresponding null hypothesis $H_0$ and the alternative hypothesis $H_1$ for this test.    
     }
-    \solution{
+    \ensolution{
         In order to test whether the wind conditions have significantly altered the hit distribution, we need to perform a chi-square goodness-of-fit test.\rubric{1}
 
         The null hypothesis $H_0$ and the alternative hypothesis $H_1$ can then be formulated as follows:
@@ -35,166 +35,83 @@
         \end{itemize}
     }
 
-    \solution{
-        Om te bepalen of er een statistisch significant effect is van het al dan niet volgen van de cyber-awarenesstraining voor het adequaat reageren
-        op een nep-e-mail, dienen we een chikwadraattoets voor onafhankelijkheid uit te voeren. \rubric{1}
-
-        De nulhypothese $H_0$ en de alternatieve hypothesetoets $H_1$ kunnen dan als volgt worden geformuleerd:
-        \begin{itemize}
-            \item[$H_0$:] er is sprake van onafhankelijkheid tussen het wel/niet volgen van de training en het type reactie op de nep-e-mail.\rubric{1}
-            \item[$H_1$:] er is GEEN sprake van onafhankelijkheid tussen het wel/niet volgen van de training en het type reactie op de nep-e-mail. \rubric{1}
-        \end{itemize}
+    \subquestion{6}{
+        What is the theoretical test statistic for this hypothesis test?
+        Compute the test statistic based on the sample data given in the table above.
     }
-
-    \subquestion{8}{
-        Wat is de theoretische toetsingsgrootheid van deze hypothesetoets?
-        Bereken de geobserveerde toetsingsgrootheid met behulp van de data in bovenstaande tabel.
-    }
-    \solution{
-        De (theoretische) toetsingsgrootheid voor een chikwadraattoets voor onafhankelijkheid is gelijk aan
+    \ensolution{
+        The (theoretical) test statistic for a chi-square goodness-of-fit test is 
         \[
-            X^2 = \sum_{i,j} \frac{(O_{ij}-E_{ij})^2}{E_{ij}}.\rubric{1}
+            X^2 = \sum_{i} \frac{(O_{i}-E_{i})^2}{E_{i}},
         \]    
-        Voordat we de toetsingsgrootheid kunnen berekenen, moeten we dus de verwachte frequenties $E_{ij}$ bepalen.
-        Dit doen we aan de hand van de volgende formule:
+        where $O_{i}$ indicates the \emph{observed frequency} of outcome $i$ and $E_{i}$ the \emph{expected frequency} under the probability distribution specified in $H_0$.\rubric{1}
+        
+        Before we can compute the test statistic based on the sample, we need to determine the expected frequencies $E_{i}$.
+        Using the theoretical probability distribution under $H_0$, we get:
         \[
-            E_{ij} = \frac{(\text{rijtotaal}_i) \cdot (\text{kolomtotaal}_j)}{\text{totaal}}. \rubric{1}
+            E_{i} = 250 \cdot p_{i}, \rubric{1}
         \]
-        We berekenen de verwachte frequenties voor elke cel in de tabel:
+        where $p_i$ is the probability of outcome $i$.
+
+        This gives us the following expected frequencies:
         \par\medskip
-        \begin{center}
-            \renewcommand{\arraystretch}{1}
-            \begin{tabular}{m{0.28\textwidth}|ccc|c}
-                \toprule
-                    & \textbf{Meldt e-mail} & \textbf{Negeert e-mail} & \textbf{Klikt op link} & \textbf{Totaal} \\
-                \midrule
-                \textbf{Cybertraining} & $70.1267$ & $48.1467$ & $38.7267$ & $157$ \\ 
-            \textbf{Geen cybertraining} & $63.8733$ & $43.8533$ & $35.2733$ & $143$ \\ 
-                \midrule
-                    \textbf{Totaal} & $134$ & $92$ & $74$ & $300$ \rubric{3} \\
-                \bottomrule
-            \end{tabular}
-        \end{center}
-        \par\medskip
-        Vervolgens berekenen we de geobserveerde toetsingsgrootheid $\chi^2$ als volgt:
-        \begin{align*}
-            \chi^2 &= \frac{(o_{1, 1} - e_{1,1})^2}{e_{1, 1}} + \frac{(o_{1, 2} - e_{1,2})^2}{e_{1, 2}} + \ldots + \frac{(o_{2, 3} - e_{2,3})^2}{e_{2, 3}} \\
-                    &= \frac{(72 - 70.1267)^2}{70.1267} + \frac{(55 - 48.1467)^2}{48.1467} + \ldots + \frac{(44 - 35.2733)^2}{35.2733} \\
-                    &\approx 6.2770. \rubric{3}
-        \end{align*}
-    }
-
-    \subquestion{5}{
-        Wat is de kansverdeling van de theoretische toetsingsgrootheid onder $H_0$? 
-        Bereken met deze kansverdeling de $p$-waarde behorende bij de geobserveerde toetsingsgrootheid.
-    }
-    \solution{
-        De theoretische toetsingsgrootheid $X^2$ volgt onder de nulhypothese een chikwadraatverdeling met $\df = (\#\text{rijen}-1)\cdot(\#\text{kolommen}-1) = (2-1)\cdot(3-1) = 2$ vrijheidsgraden.\rubric{2}
-
-        De $p$-waarde is de kans dat de theoretische toetsingsgrootheid $X^2$ een \enquote{nog extremere} uitkomst aanneemt dan de geobserveerde toetsingsgrootheid $\chi^2$. \rubric{1}
-        
-        Aangezien een chikwadraattoets voor onafhankelijkheid altijd rechtszijdig is, is de $p$-waarde gelijk aan
-        \begin{align*}
-            p   &= P(\chi^2 > 6.2770) \\ 
-                &= \chi^2\text{cdf}(\lb=6.2770; \ub=10^{99}, \df=2) \\
-                &\approx 0.0433.  \rubric{2} 
-        \end{align*}
-
-        \begin{center}
-            \resizebox{0.9\textwidth}{!}{
-                \includegraphics{exam20261106-chi2-pvalue.png} 
-            }
-        \end{center}
-    }
-
-    \subquestion{4}{
-        Bepaal de toetsuitslag op basis van de berekende $p$-waarde en vertaal deze terug naar de originele probleemcontext.
-        Gebruik hiervoor een significantieniveau $\alpha = 0.05$.
-        Geef een verklaring voor de toetsuitslag met behulp van de tabel van geobserveerde en verwachte frequenties.
-    }
-    \solution{
-        Aangezien de $p$-waarde $p \approx 0.0433$ strikt kleiner is dan het significantieniveau $\alpha = 0.05$,
-        besluiten we om de nulhypothese $H_0$ te verwerpen. \rubric{1}
-
-        Er is voldoende reden om aan te nemen dat het gevolgd hebben van een cyber-awarenesstraining
-        significant effect heeft op de manier waarop op een nep-e-mail wordt gereageerd. \rubric{1}
-        
-        Als we kijken naar de tabellen van geobserveerde en verwachte frequenties,
-        dan zien we dat voor de cellen met kenmerk \enquote{klikt op e-mail} de groep die geen training gevolgd heeft vaker dan verwacht (onder onafhankelijkheid) op de link heeft geklikt,
-        terwijl dit bij de groep die wel training gevolgd heeft andersom is.\rubric{2}
-    }
-
-    \subquestion{3}{
-        State the null hypothesis $H_0$ and the alternative hypothesis $H_1$ of the hypothesis test.
-        What does rejecting $H_0$ tell us about the distribution of the number of detected drones?
-    }
-    \solution{
-        The null hypothesis $H_0$ and the alternative hypothesis $H_1$ of this test can be formulated as follows:
-        \begin{align*}
-            H_0&: \text{The number of detected drones follows a binomial distribution} \\
-            &\qquad \qquad \text{with $n=4$ and $p=0,7$.} \rubric{1} \\
-            H_1&: \text{The number of detected drones does not follow a binomial distribution} \\
-            &\qquad \qquad \text{with $n=4$ and $p=0,7$.} \rubric{1}
-        \end{align*}
-        Rejecting the null hypothesis only tells us that the number of detected drones does not follow this specific distribution. 
-        It can still be binomially distributed, but possibly with a different value for the success probability $p$. \rubric{1}
-    }
-
-    \subquestion{3}{
-        Calculate the expected frequencies for each under the null hypothesis $H_0$.
-    }
-    \solution{
-        We can evaluate the expected frequencies (under $H_0$) by using the total of $500$ independent trials and the binomial distribution with parameters $n=4$ and $p=0,7$.
         \begin{center}
             \begin{tabular}{ccc}
                 \toprule
-                    \textbf{Number of} & \textbf{Observed} & \textbf{Expected} \\
-                    \textbf{detected drones} & \textbf{frequencies} & \textbf{frequencies}\\
+                    \textbf{Outcome $i$} & \textbf{Observed} ($o_i$) & \textbf{Expected} ($e_i$) \\
                 \midrule
-                    $0$ & $15$  & $1000 \cdot \binompdf(n=4; p=0,7; k=0) \approx 8,1$  \\
-                    $1$ & $105$ & $1000 \cdot \binompdf(n=4; p=0,7; k=1) \approx 75,6$ \\
-                    $2$ & $290$ & $1000 \cdot \binompdf(n=4; p=0,7; k=2) \approx 264,6$ \\
-                    $3$ & $360$ & $1000 \cdot \binompdf(n=4; p=0,7; k=3) \approx 411,6$\\
-                    $4$ & $230$ & $1000 \cdot \binompdf(n=4; p=0,7; k=4) \approx 240,1$ \\
-                \midrule
-                    \textbf{Total:} & $1000$ & $1000$  \\ 
+                    $0$ & $18$ & $250 \cdot 0.04 = 10$ \\
+                    $1$ & $38$ & $250 \cdot 0.12 = 30$ \\
+                    $2$ & $64$ & $250 \cdot 0.24 = 60$ \\
+                    $3$ & $68$ & $250 \cdot 0.30 = 75$ \\
+                    $4$ & $36$ & $250 \cdot 0.18 = 45$ \\
+                    $5$ & $18$ & $250 \cdot 0.08 = 20$ \\
+                    $6$ &  $8$ & $250 \cdot 0.04 = 10$ \rubric{2} \\ 
                 \bottomrule
-            \end{tabular}\rubric{3}
+            \end{tabular}
         \end{center}
-    }
 
-    \subquestion{9}{
-        Perform the hypothesis test at a significance level $\alpha = 0,05$ by computing the $p$-value.
-    }
-    \solution{
-        The test statistic for a chi-square goodness-of-fit test is given by:
-
+        We can then compute the observed test statistic $\chi^2$ as follows:
         \begin{align*}
-            X^2 &= \frac{(O_{0} - E_{0})^2}{E_{0}} + \frac{(O_{1} - E_{1})^2}{E_{1}} + \frac{(O_{2} - E_{2})^2}{E_{2}} + \frac{(O_{3} - E_{3})^2}{E_{3}} + \frac{(O_{4} - E_{4})^2}{E_{4}} \rubric{1}
+            \chi^2 &= \sum \frac{(o_i - e_i)^2}{e_i} \\
+                    &= \frac{(18-10)^2}{10} + \ldots + \frac{(8-10)^2}{10}
+                    &\approx 11.8533.\rubric{2}
         \end{align*}
-        where $O_i$ and $E_i$ are respectively the observed and expected frequencies for value $i = 0, 1, 2, 3, 4$.
-        We can use the table of observed and expected frequencies to calculate the observed test statistic
-        \begin{align*}
-            \chi^2 &= \frac{(15 - 8,1)^2}{8,1} + \ldots + \frac{(230 - 240,1)^2}{240,1} \\
-                   &\approx 26,643. \rubric{3}
-        \end{align*}
-    
-        Under the null hypothesis, the test statistic $X^2$ follows a chi-square distribution with $\text{df}= 5 - 1 = 4$ degrees of freedom. \rubric{1}
-        Hence, we can calculate the $p$-value as the probability of observing a test statistic larger than $\chi^2$:
-        \begin{align*}
-            p = P(\chi^2 > 26,643) &= \chi^2\text{cdf}(\text{lower}=26,643; \text{upper}=10^{99}; \text{df}=4) \\
-                                             &\approx 2,3471 \cdot 10^{-5}.  \rubric{2}
-        \end{align*}
-        As the $p$-value is (much) smaller than the significance level $\alpha$, we reject the null hypothesis.
-        There is ample evidence that the number of detected drones does not follow a binomial distribution with $n=4$ and $p=0,8$. \rubric{2}
     }
 
-    \subquestion{3}{
-        Interpret the result of the hypothesis test using data from the tables of observed and expected frequencies.
+    \subquestion{7}{
+        What is the probability distribution (under $H_0$) of the theoretical test statistic?
+        Explain how you determine the value of the parameter(s) of this distribution as well.
+        Using this probability distribution, compute the $p$-value corresponding to the observed test statistic.
     }
-    \solution{
-        If we consider the table of observed and expected frequencies, we see that the observed frequencies are higher than expected for $0$, $1$ or $2$ detected drones, and lower than expected for $3$ or $4$ detected drones. \rubric{2}
-        It is therefore likely that the success probability of the radar is smaller than what the manufacturer claims it to be. \rubric{1}
+    \ensolution{
+        We did not need to incorporate estimations of probability distribution parameters, so the number of estimated parameters $p = 0$ and furtheremore the number of outcomes $n = 7$.\rubric{2}
+        
+        Under the null hypothesis $H_0$, the theoretical test statistic $X^2$ follows a chi-square distribution with $\df = n - p - 1 = 7 - 0 - 1 = 6$ degrees of freedom.\rubric{2}
+
+        The $p$-value corresponding to an observed test statistic $\chi^2$ is the probability that the theoretical test statistic $X^2$ will take an \enquote{even more extreme} value
+        than $\chi^2$ for a random sample. \rubric{1}
+        
+        A chi-square goodness-of-fit test is always right-sided, therefore the $p$-value can be computed as
+        \begin{align*}
+            p   &= P(X^2 \geq \chi^2 \approx 11.8533) \\
+                &= \chi^2\textrm{cdf}(\lb=11.8533, \ub=\GRinfinity, \df=6) \\
+                &\approx 0.0653.  \rubric{2} 
+        \end{align*}
     }
 
+    \subquestion{4}{
+        Determine the test result based on the computed $p$-value and translate it back to the original problem context.
+        You can use a significance level $\alpha = 0.05$.
+        Explain the test result based on the table of observed and expected frequencies.
+    }
+    \ensolution{
+        As the computed $p \approx 0.0653$ is strictly larger than the significance level $\alpha = 0.05$,
+        we fail to reject the null hypothesis $H_0$.\rubric{1}
+
+        That means that there is insufficient evidence against the claim that the true hit distribution under gusty wind conditions follows the specified discrete probability distribution.\rubric{1}
+
+        Looking at the tables of observed and expected frequencies, this makes sense as for each number of hits, the observed and expected frequencies are not too far apart.
+        There are some differences between $o_i$ and $e_i$, but not that high that it cannot be the result of the randomness in the sample.\rubric{2}
+    }
 \end{enquestion}

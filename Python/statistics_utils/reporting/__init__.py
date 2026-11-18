@@ -1,2 +1,4 @@
-from .latex import pretty_print
-from .descriptive import latex_sample_mean, latex_sample_variance, latex_sample_std
+def pretty_print(x, num_decimals=4):
+    """Formatteer floats netjes, zonder overbodige nullen."""
+    pretty_x = (f"%.{num_decimals}f" % x).rstrip(".")
+    return pretty_x

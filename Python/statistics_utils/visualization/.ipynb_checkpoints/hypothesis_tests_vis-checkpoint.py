@@ -99,14 +99,13 @@ def plot_hypothesis_test(
             ax.fill_between(x, 0, pdf_H0, where=(x < critical_value_left), color=CRITICAL_COLOR, alpha=OPACITY_LEVEL, label=critical_region)
             ax.hlines(ylines, xmin, critical_value_left, color=CRITICAL_COLOR, linewidth=5)
             ax.text((critical_value_left + xmin) / 2, ytext, "Verwerp $H_0$", color=CRITICAL_COLOR, fontsize=TEXT_FONT_SIZE, ha="center")
-
         if critical_value_right < xmax:
             ax.fill_between(x, 0, pdf_H0, where=(x > critical_value_right), color=CRITICAL_COLOR, alpha=OPACITY_LEVEL)
             ax.hlines(ylines, critical_value_right, xmax, color=CRITICAL_COLOR, linewidth=5)
             ax.text((critical_value_right + xmax) / 2, ytext, "Verwerp $H_0$", color=CRITICAL_COLOR, fontsize=TEXT_FONT_SIZE, ha="center")
 
-            ax.hlines(ylines, max(xmin, critical_value_left), min(xmax, critical_value_right), color=ACCEPTABLE_COLOR, linewidth=5)
-            ax.text((max(xmin, critical_value_left) + min(xmax, critical_value_right)) / 2, ytext, "Accepteer $H_0$", color=ACCEPTABLE_COLOR, fontsize=TEXT_FONT_SIZE, ha="center")
+        ax.hlines(ylines, max(xmin, critical_value_left), min(xmax, critical_value_right), color=ACCEPTABLE_COLOR, linewidth=5)
+        ax.text((max(xmin, critical_value_left) + min(xmax, critical_value_right)) / 2, ytext, "Accepteer $H_0$", color=ACCEPTABLE_COLOR, fontsize=TEXT_FONT_SIZE, ha="center")
 
     # 2. P-waarde & toetsingsgrootheid (indien gevraagd)
     if display_mode in ["p_value", "both"]:
