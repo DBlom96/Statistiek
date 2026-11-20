@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  14 OCT 2026 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.19)  19 NOV 2026 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1057,7 +1057,6 @@ Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
 )
 \c@question=\count456
 \c@subquestion=\count457
-\c@tcb@cnt@definition=\count458
 )) (C:/Users/Admin/Documents/Github/Statistiek/LaTeX/styles/statistics-macros.sty)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1068,7 +1067,7 @@ LaTeX Font Info:    Trying to load font information for T1+bch on input line 13.
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count459
+\l__color_backend_stack_int=\count458
 ) (exam_20261120.aux
 Package babel Info: 'dutch' activates 'dutch' shorthands.
 (babel)             Reported on input line 9.
@@ -1095,16 +1094,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count460
+\scratchcounter=\count459
 \scratchdimen=\dimen433
 \scratchbox=\box160
-\nofMPsegments=\count461
-\nofMParguments=\count462
+\nofMPsegments=\count460
+\nofMParguments=\count461
 \everyMPshowfont=\toks66
-\MPscratchCnt=\count463
+\MPscratchCnt=\count462
 \MPscratchDim=\dimen434
-\MPnumerator=\count464
-\makeMPintoPDFobject=\count465
+\MPnumerator=\count463
+\makeMPintoPDFobject=\count464
 \everyMPtoPDFconversion=\toks67
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1154,18 +1153,18 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count466
-\c@mv@boldtabular=\count467
+\c@mv@tabular=\count465
+\c@mv@boldtabular=\count466
 (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-dutch.trsl
 File: translations-basic-dictionary-dutch.trsl (dutch translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `dutch'. on input line 13.
 \c__nicematrix_shift_Ldots_last_row_dim=\dimen435
 \c__nicematrix_innersep_middle_dim=\dimen436
-\c@tabularnotesi=\count468
-\enitdp@tabularnotes=\count469
-\c@tabularnotes*i=\count470
-\enitdp@tabularnotes*=\count471
+\c@tabularnotesi=\count467
+\enitdp@tabularnotes=\count468
+\c@tabularnotes*i=\count469
+\enitdp@tabularnotes*=\count470
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1177,56 +1176,56 @@ Package hyperref Info: Link coloring OFF on input line 13.
 \@outlinefile=\write4
 \openout4 = `exam_20261120.out'.
 
-<C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, id=6, 845.07718pt x 1194.98447pt>
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf  used on input line 16.
+<C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, id=6, 845.07718pt x 1194.98447pt>
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf  used on input line 16.
 (pdftex.def)             Requested size: 845.07512pt x 1194.98155pt.
-<C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, id=8, page=1, 845.07718pt x 1194.98447pt>
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 1>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page1 used on input line 16.
+<C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, id=8, page=1, 845.07718pt x 1194.98447pt>
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page1 used on input line 16.
 (pdftex.def)             Requested size: 845.07512pt x 1194.98155pt.
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 1>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page1 used on input line 16.
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page1 used on input line 16.
 (pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 1>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page1 used on input line 16.
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page1 used on input line 16.
 (pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 1>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page1 used on input line 16.
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page1 used on input line 16.
 (pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 
 
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 1>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page1 used on input line 16.
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 1>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page1 used on input line 16.
 (pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 [1
 
 
- <C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf>]
-<C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, id=45, page=2, 845.07718pt x 1194.98447pt>
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 2>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page2 used on input line 16.
+ <C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf>]
+<C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, id=45, page=2, 845.07718pt x 1194.98447pt>
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page2 used on input line 16.
 (pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 2>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page2 used on input line 16.
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page2 used on input line 16.
 (pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 
 
-File: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf Graphic file (type pdf)
-<use C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf, page 2>
-Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf , page2 used on input line 16.
+File: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf Graphic file (type pdf)
+<use C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf, page 2>
+Package pdftex.def Info: C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf , page2 used on input line 16.
 (pdftex.def)             Requested size: 562.6527pt x 795.62111pt.
 [2
 
- <C:/Users/Admin/Documents/Github/Statistiek/Python/FMW_titelblad_20261120_vierdekans.pdf>]
+ <C:/Users/Admin/Documents/Github/Statistiek/Python/templates/FMW_titelblad_20261120.pdf>]
 <C:/Users/Admin/Documents/Github/Statistiek/LaTeX/formulebladen/Formuleblad_STA1_2026.pdf, id=58, 597.50829pt x 845.0471pt>
 File: C:/Users/Admin/Documents/Github/Statistiek/LaTeX/formulebladen/Formuleblad_STA1_2026.pdf Graphic file (type pdf)
 <use C:/Users/Admin/Documents/Github/Statistiek/LaTeX/formulebladen/Formuleblad_STA1_2026.pdf>
@@ -1283,17 +1282,306 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) (q2.tex
+)
+Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be 143.657pt on input line 33.
+Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be 422.56737pt on input line 33.
 
-[5{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (q3.tex
 
-[6]
+[5{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+Package marginnote Info: right page because not two side mode on input line 53.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 53.
+Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 53.
+Package marginnote Info: right page because not two side mode on input line 53.
+Package marginnote Info: xpos seems to be 342.55138pt on input line 53.
+Package marginnote Info: right page because not two side mode on input line 53.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 53.
+Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 53.
+Package marginnote Info: right page because not two side mode on input line 53.
+Package marginnote Info: xpos seems to be 516.93497pt on input line 53.
+Package marginnote Info: right page because not two side mode on input line 53.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 53.
+Package marginnote Info: Margin note 6.6 is on absolute page 6 on input line 53.
+Package marginnote Info: right page because not two side mode on input line 53.
+Package marginnote Info: xpos seems to be 403.27863pt on input line 53.
+Package marginnote Info: Margin note 6.7 is on absolute page 6 on input line 63.
+Package marginnote Info: right page because not two side mode on input line 63.
+Package marginnote Info: xpos seems to be 476.63739pt on input line 63.
+Package marginnote Info: Margin note 6.8 is on absolute page 7 on input line 80.
+Package marginnote Info: right page because not two side mode on input line 80.
+Package marginnote Info: xpos seems to be 364.90622pt on input line 80.
+Package marginnote Info: right page because not two side mode on input line 80.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 80.
+Package marginnote Info: Margin note 6.10 is on absolute page 7 on input line 80.
+Package marginnote Info: right page because not two side mode on input line 80.
+Package marginnote Info: xpos seems to be 288.1709pt on input line 80.
 
-[7]) (q4.tex
 
-[8])
+[6]) (q2.tex
 
-[9] (exam_20261120.aux)
+[7]
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 46.
+Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 46.
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be 380.3528pt on input line 46.
+Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 46.
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be 450.29361pt on input line 46.
+Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 46.
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be 366.8301pt on input line 46.
+Package marginnote Info: Margin note 8.5 is on absolute page 9 on input line 46.
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be 211.73132pt on input line 46.
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 46.
+Package marginnote Info: Margin note 8.7 is on absolute page 9 on input line 46.
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be 325.45802pt on input line 46.
+Package marginnote Info: Margin note 8.8 is on absolute page 9 on input line 46.
+Package marginnote Info: right page because not two side mode on input line 46.
+Package marginnote Info: xpos seems to be 521.66034pt on input line 46.
+
+
+[8]
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 80.
+Package marginnote Info: right page because not two side mode on input line 80.
+Package marginnote Info: xpos seems to be 415.30272pt on input line 80.
+<./20261016_discrete_CDF.png, id=177, 462.528pt x 346.896pt>
+File: ./20261016_discrete_CDF.png Graphic file (type png)
+<use ./20261016_discrete_CDF.png>
+Package pdftex.def Info: ./20261016_discrete_CDF.png  used on input line 80.
+(pdftex.def)             Requested size: 225.29602pt x 168.97481pt.
+Package marginnote Info: Margin note 9.2 is on absolute page 10 on input line 80.
+Package marginnote Info: right page because not two side mode on input line 80.
+Package marginnote Info: xpos seems to be 433.46352pt on input line 80.
+Package marginnote Info: Margin note 9.3 is on absolute page 10 on input line 80.
+Package marginnote Info: right page because not two side mode on input line 80.
+Package marginnote Info: xpos seems to be 497.90488pt on input line 80.
+Package marginnote Info: Margin note 9.4 is on absolute page 10 on input line 80.
+Package marginnote Info: right page because not two side mode on input line 80.
+Package marginnote Info: xpos seems to be 518.83798pt on input line 80.
+
+
+[9]
+Package marginnote Info: right page because not two side mode on input line 105.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 105.
+Package marginnote Info: Margin note 10.2 is on absolute page 10 on input line 105.
+Package marginnote Info: right page because not two side mode on input line 105.
+Package marginnote Info: xpos seems to be 166.98447pt on input line 105.
+Package marginnote Info: right page because not two side mode on input line 105.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 105.
+Package marginnote Info: Margin note 10.4 is on absolute page 11 on input line 105.
+Package marginnote Info: right page because not two side mode on input line 105.
+Package marginnote Info: xpos seems to be 237.27248pt on input line 105.
+Package marginnote Info: right page because not two side mode on input line 105.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 105.
+Package marginnote Info: Margin note 10.6 is on absolute page 11 on input line 105.
+Package marginnote Info: right page because not two side mode on input line 105.
+Package marginnote Info: xpos seems to be 420.23965pt on input line 105.
+
+
+[10 <./20261016_discrete_CDF.png>]
+Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 127.
+Package marginnote Info: right page because not two side mode on input line 127.
+Package marginnote Info: xpos seems to be 424.21815pt on input line 127.
+Package marginnote Info: Margin note 11.2 is on absolute page 11 on input line 127.
+Package marginnote Info: right page because not two side mode on input line 127.
+Package marginnote Info: xpos seems to be 129.68005pt on input line 127.
+Package marginnote Info: Margin note 11.3 is on absolute page 11 on input line 127.
+Package marginnote Info: right page because not two side mode on input line 127.
+Package marginnote Info: xpos seems to be 444.4144pt on input line 127.
+Package marginnote Info: right page because not two side mode on input line 127.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 127.
+Package marginnote Info: Margin note 11.5 is on absolute page 12 on input line 127.
+Package marginnote Info: right page because not two side mode on input line 127.
+Package marginnote Info: xpos seems to be 294.15138pt on input line 127.
+
+
+[11]) (q3.tex
+
+[12]
+Package marginnote Info: Margin note 13.1 is on absolute page 13 on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be 399.07147pt on input line 35.
+Package marginnote Info: Margin note 13.2 is on absolute page 13 on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be 385.52708pt on input line 35.
+Package marginnote Info: Margin note 13.3 is on absolute page 13 on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be 339.4912pt on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 35.
+Package marginnote Info: Margin note 13.6 is on absolute page 13 on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be 410.86069pt on input line 35.
+Package marginnote Info: Margin note 13.7 is on absolute page 13 on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be 449.9836pt on input line 35.
+Package marginnote Info: Margin note 13.8 is on absolute page 13 on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be 372.44762pt on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 35.
+Package marginnote Info: Margin note 13.10 is on absolute page 13 on input line 35.
+Package marginnote Info: right page because not two side mode on input line 35.
+Package marginnote Info: xpos seems to be 237.04929pt on input line 35.
+
+
+[13]
+Package marginnote Info: Margin note 14.1 is on absolute page 14 on input line 68.
+Package marginnote Info: right page because not two side mode on input line 68.
+Package marginnote Info: xpos seems to be 133.11626pt on input line 68.
+Package marginnote Info: Margin note 14.2 is on absolute page 14 on input line 68.
+Package marginnote Info: right page because not two side mode on input line 68.
+Package marginnote Info: xpos seems to be 216.01917pt on input line 68.
+Package marginnote Info: right page because not two side mode on input line 68.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 68.
+Package marginnote Info: Margin note 14.4 is on absolute page 14 on input line 68.
+Package marginnote Info: right page because not two side mode on input line 68.
+Package marginnote Info: xpos seems to be 457.07492pt on input line 68.
+Package marginnote Info: right page because not two side mode on input line 68.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 68.
+Package marginnote Info: Margin note 14.6 is on absolute page 14 on input line 68.
+Package marginnote Info: right page because not two side mode on input line 68.
+Package marginnote Info: xpos seems to be 238.826pt on input line 68.
+
+
+[14]
+Package marginnote Info: Margin note 15.1 is on absolute page 15 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 294.19334pt on input line 88.
+Package marginnote Info: Margin note 15.2 is on absolute page 15 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 375.79579pt on input line 88.
+Package marginnote Info: Margin note 15.3 is on absolute page 15 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 387.16855pt on input line 88.
+Package marginnote Info: Margin note 15.4 is on absolute page 15 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 406.33025pt on input line 88.
+Package marginnote Info: Margin note 15.5 is on absolute page 15 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 370.79678pt on input line 88.
+Package marginnote Info: Margin note 15.6 is on absolute page 15 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 231.02332pt on input line 88.
+Package marginnote Info: Margin note 15.7 is on absolute page 16 on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be 402.94641pt on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 114.
+Package marginnote Info: Margin note 15.9 is on absolute page 16 on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be 366.2538pt on input line 114.
+Package marginnote Info: Margin note 15.10 is on absolute page 16 on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be 142.42738pt on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 114.
+Package marginnote Info: Margin note 15.12 is on absolute page 16 on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be 200.84856pt on input line 114.
+Package marginnote Info: Margin note 15.13 is on absolute page 16 on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be 312.25685pt on input line 114.
+Package marginnote Info: Margin note 15.14 is on absolute page 16 on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be 141.98341pt on input line 114.
+
+
+[15]) (q4.tex
+
+[16]
+Package marginnote Info: Margin note 17.1 is on absolute page 17 on input line 30.
+Package marginnote Info: right page because not two side mode on input line 30.
+Package marginnote Info: xpos seems to be 474.91444pt on input line 30.
+Package marginnote Info: Margin note 17.2 is on absolute page 17 on input line 30.
+Package marginnote Info: right page because not two side mode on input line 30.
+Package marginnote Info: xpos seems to be 379.86212pt on input line 30.
+Package marginnote Info: Margin note 17.3 is on absolute page 17 on input line 30.
+Package marginnote Info: right page because not two side mode on input line 30.
+Package marginnote Info: xpos seems to be 526.09364pt on input line 30.
+Package marginnote Info: right page because not two side mode on input line 30.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 30.
+Package marginnote Info: Margin note 17.5 is on absolute page 17 on input line 30.
+Package marginnote Info: right page because not two side mode on input line 30.
+Package marginnote Info: xpos seems to be 309.86441pt on input line 30.
+Package marginnote Info: Margin note 17.6 is on absolute page 18 on input line 47.
+Package marginnote Info: right page because not two side mode on input line 47.
+Package marginnote Info: xpos seems to be 371.89417pt on input line 47.
+Package marginnote Info: Margin note 17.7 is on absolute page 18 on input line 47.
+Package marginnote Info: right page because not two side mode on input line 47.
+Package marginnote Info: xpos seems to be 400.5592pt on input line 47.
+Package marginnote Info: right page because not two side mode on input line 47.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 47.
+Package marginnote Info: Margin note 17.9 is on absolute page 18 on input line 47.
+Package marginnote Info: right page because not two side mode on input line 47.
+Package marginnote Info: xpos seems to be 300.90825pt on input line 47.
+
+
+[17]
+Package marginnote Info: right page because not two side mode on input line 71.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 71.
+Package marginnote Info: Margin note 18.2 is on absolute page 18 on input line 71.
+Package marginnote Info: right page because not two side mode on input line 71.
+Package marginnote Info: xpos seems to be 311.69408pt on input line 71.
+Package marginnote Info: Margin note 18.3 is on absolute page 18 on input line 71.
+Package marginnote Info: right page because not two side mode on input line 71.
+Package marginnote Info: xpos seems to be 187.27135pt on input line 71.
+Package marginnote Info: Margin note 18.4 is on absolute page 18 on input line 71.
+Package marginnote Info: right page because not two side mode on input line 71.
+Package marginnote Info: xpos seems to be 290.82153pt on input line 71.
+Package marginnote Info: right page because not two side mode on input line 71.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 71.
+Package marginnote Info: Margin note 18.6 is on absolute page 18 on input line 71.
+Package marginnote Info: right page because not two side mode on input line 71.
+Package marginnote Info: xpos seems to be 284.97128pt on input line 71.
+
+
+[18]
+Package marginnote Info: Margin note 19.1 is on absolute page 19 on input line 96.
+Package marginnote Info: right page because not two side mode on input line 96.
+Package marginnote Info: xpos seems to be 452.2568pt on input line 96.
+Package marginnote Info: right page because not two side mode on input line 96.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 96.
+Package marginnote Info: Margin note 19.3 is on absolute page 19 on input line 96.
+Package marginnote Info: right page because not two side mode on input line 96.
+Package marginnote Info: xpos seems to be 280.84094pt on input line 96.
+Package marginnote Info: Margin note 19.4 is on absolute page 19 on input line 96.
+Package marginnote Info: right page because not two side mode on input line 96.
+Package marginnote Info: xpos seems to be 271.39125pt on input line 96.
+Package marginnote Info: Margin note 19.5 is on absolute page 19 on input line 96.
+Package marginnote Info: right page because not two side mode on input line 96.
+Package marginnote Info: xpos seems to be 465.7061pt on input line 96.
+Package marginnote Info: Margin note 19.6 is on absolute page 19 on input line 96.
+Package marginnote Info: right page because not two side mode on input line 96.
+Package marginnote Info: xpos seems to be 441.26215pt on input line 96.
+Package marginnote Info: Margin note 19.7 is on absolute page 19 on input line 96.
+Package marginnote Info: right page because not two side mode on input line 96.
+Package marginnote Info: xpos seems to be 198.37137pt on input line 96.
+Package marginnote Info: Margin note 19.8 is on absolute page 20 on input line 106.
+Package marginnote Info: right page because not two side mode on input line 106.
+Package marginnote Info: xpos seems to be 580.2229pt on input line 106.
+
+Overfull \hbox (35.77937pt too wide) in paragraph at lines 106--106
+\T1/bch/m/n/12 Het to-tale aan-tal aan-val-len per dag kan wor-den ge-mo-del-leerd als een en-kele Poissonverdeling.|[] 
+ []
+
+Package marginnote Info: Margin note 19.9 is on absolute page 20 on input line 106.
+Package marginnote Info: right page because not two side mode on input line 106.
+Package marginnote Info: xpos seems to be 189.50702pt on input line 106.
+
+
+[19])
+
+[20] (exam_20261120.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
@@ -1302,17 +1590,17 @@ Package rerunfilecheck Info: File `exam_20261120.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52264 strings out of 468133
- 1262458 string characters out of 5430719
- 1767770 words of memory out of 5000000
- 80088 multiletter control sequences out of 15000+600000
+ 52386 strings out of 468133
+ 1265105 string characters out of 5430719
+ 1778770 words of memory out of 5000000
+ 80199 multiletter control sequences out of 15000+600000
  652057 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 112i,17n,145p,862b,1315s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on exam_20261120.pdf (9 pages, 356157 bytes).
+ 112i,19n,145p,862b,1685s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on exam_20261120.pdf (20 pages, 421548 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

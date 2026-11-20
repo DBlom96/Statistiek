@@ -8,17 +8,17 @@ import locale
 
 # Load template
 PATH = fr"C:\Users\Admin\Documents\GitHub\Statistiek\Python\templates"
-doc = Document(PATH + fr"\Tentamenvoorblad_engels.docx")
+doc = Document(PATH + fr"\Tentamenvoorblad.docx")
 locale.setlocale(locale.LC_TIME, "nl_NL.UTF-8")
 
-vaknaam = "Probability & Statistics"
-vakcode = "P&S - PMTPS"
-datum = "20261204"
-tentamentijd = "9:20-12:20"
+vaknaam = "Statistiek (deel 1)"
+vakcode = "STA#1"
+datum = "20261120"
+tentamentijd = "9:00-12:00"
 examinator = "Dr. ir. D.A.M.P. Blom"
-peer_review = "Dr. N.A.C. Levering"
-aantal_opgaven = "5"
-aantal_paginas = "5"
+peer_review = "Dr. A.J. Hoogstrate"
+aantal_opgaven = "4"
+aantal_paginas = "4"
 aantal_punten = "100"
 
 formatted_date = datetime.strptime(datum, "%Y%m%d").strftime("%d %B %Y")

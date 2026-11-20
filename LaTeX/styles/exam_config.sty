@@ -30,54 +30,18 @@
 }
 {}
 
-% Solution Toggle (to show/hide solutions)
-\newif\ifshowanswers
-\showanswerstrue % Toggle this to hide / show solutions
+% % Solution Toggle (to show/hide solutions)
+% \newif\ifshowanswers
+% % \showanswerstrue % Toggle this to hide / show solutions
 % \showanswersfalse % Toggle this to hide / show solutions
 
-% Rubric command
-\newcommand{\rubric}[1]{%
-  \ifshowanswers%
-    \marginnote{ \small(#1pt) }
-    % \marginnote{\small{(#1pt)}}%
-  \fi%
-}
-
-% Answer Box Environment
-\newcommand{\solution}[1]{%
-    \ifshowanswers
-        \begin{tcolorbox}[breakable,
-            colback=blue!5,
-            colframe=blue!40, 
-            coltext=green!50!black, 
-            before upper={\color{green!50!black}},
-            title=Uitwerking,
-            parskip=1em,      % ruimte tussen paragrafen binnen de box
-            before skip=1em,  % ruimte vóór de box
-            after skip=1em    % ruimte ná de box
-        ]
-            #1
-        \end{tcolorbox}
-    \fi
-}
-
-\newcommand{\ensolution}[1]{%
-    \ifshowanswers
-        \begin{tcolorbox}[
-            breakable, 
-            colback=blue!5, 
-            colframe=blue!40, 
-            coltext=green!50!black, 
-            title=Solution,
-            parskip=1em,      % ruimte tussen paragrafen binnen de box
-            before skip=1em,  % ruimte vóór de box
-            after skip=1em    % ruimte ná de box
-        ]
-
-            #1
-        \end{tcolorbox}
-    \fi
-}
+% % Rubric command
+% \newcommand{\rubric}[1]{%
+%   \ifshowanswers%
+%     \marginnote{ \small(#1pt) }
+%     % \marginnote{\small{(#1pt)}}%
+%   \fi%
+% }
 
 \newcommand{\multilinecell}[1]{
     \begin{tabular}{@{}c@{}} #1 \end{tabular}
